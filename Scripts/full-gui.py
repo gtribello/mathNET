@@ -4,15 +4,15 @@ import webbrowser
 import basicgraph
 from topic import topiclist
 import module
-import Tkinter
+import tkinter
 import addLinkGui
 import classifyResourceGui
 import os
 
-class maingui(Tkinter.Tk):
+class maingui(tkinter.Tk):
     # Constructor
     def __init__(self,parent):
-        Tkinter.Tk.__init__(self,parent)
+        tkinter.Tk.__init__(self,parent)
         self.parent = parent
         self.loaded=0
 
@@ -20,11 +20,11 @@ class maingui(Tkinter.Tk):
     def initialize(self):
         self.loaded=1
         self.grid()
-        b1 = Tkinter.Button(self,text="add link", height=10, width=30, command=self.addLink )
+        b1 = tkinter.Button(self,text="add link", height=10, width=30, command=self.addLink )
         b1.grid(column=0, row=0, padx=10 )
-        b2 = Tkinter.Button(self,text="classify new resources", height=10, width=30, command=self.classifyNewResources )
+        b2 = tkinter.Button(self,text="classify new resources", height=10, width=30, command=self.classifyNewResources )
         b2.grid(column=0, row=1, padx=10 )
-        b3 = Tkinter.Button(self,text="rebuild website", height=10, width=30, command=self.buildFullWebsite )
+        b3 = tkinter.Button(self,text="rebuild website", height=10, width=30, command=self.buildFullWebsite )
         b3.grid(column=0, row=2, padx=10 )
 
         # Do create stuff

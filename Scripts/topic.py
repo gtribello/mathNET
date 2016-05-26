@@ -54,6 +54,7 @@ class topic(object) :
      linesin = ifile.readlines()
      indesc=0
      foundend=0
+     inlearn=0
      explanation = ""
      intro_table = ""
      exercise_table = ""
@@ -61,13 +62,23 @@ class topic(object) :
      for line in linesin :
          if "DESCRIPTION:" in line :
             indesc=1
-         elif "END:" in line :
+         elif "LEARNINGOUTCOMES:" in line :
             if indesc!=1 :
-               sys.error("found END: before DESCRIPTION:")
+               sys.error("found LEARNINGOUTCOMES: before DESCRIPTION:")
+            inlearn=1
             indesc=0
+            explanation += "<H4> Learning outcomes </H4> \n"
+            explanation += "<ul> \n"
+         elif "END:" in line :
+            if inlearn!=1 :
+               sys.error("found END: before LEARNINGOUTCOMES:")
+            inlearn=0
             foundend=1
+            explanation += "</ul> \n" 
          elif indesc==1 :
             explanation += line
+         elif (inlearn==1) & (line[0]=="-") :
+            explanation += '<li type="square">' + line[1:] + '</li> \n' 
          elif( foundend==1 ):
             if len(line.split())>4 :
                if line.split()[0]!=self.name :

@@ -1,0 +1,25 @@
+TITLE: Conditional probability
+
+DESCRIPTION:
+
+If we have two random variables $X$ and $Y$ we can define the conditional probability that $X=x$ given that $Y=y$ as follows:
+
+$$
+ P(X=x|Y=y) = \frac{ P(X=x \wedge Y=y)}{ P(Y=y) }
+$$
+
+If you have a pair of random variables $X$ and $Y$ then you can calculate the probabilty that
+$X$ takes on a particular value $x$ using:
+$$
+P(X=x) = \sum_{i=0}^\infty P(X=x|Y=y_i)P(P=y_i)
+$$
+
+LEARNINGOUTCOMES:
+
+- You should be able to explain the definition of conditional probability.
+- You should be able to explain in terms of conditional probability what it means when we state that two events are concurrent and what it means when we state that two events are mutually exclusive.
+- You should be able to explain how the the probability that a random variable, $X$, takes on a particular value by using the probability mass function for a random variable $Y$ and a set of conditional probabilities of the form $P(X=x|Y=y)$. The second formula in the description above explains how this is done.
+
+END:
+
+

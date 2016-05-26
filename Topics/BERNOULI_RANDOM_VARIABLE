@@ -1,0 +1,28 @@
+TITLE: Bernoulli random variable
+
+DESCRIPTION:
+
+The Bernoulli random variable is a discrete random variable that is often used to model experiments that have only two outcomes.
+These types of experiments are sometimes called trials.  The probability mass function for the Bernoulli random variable is:
+
+$$
+f_X(x) = P(X=x) = \begin{cases}
+ 1-p  & \textrm{if} \quad x=0 \\
+ p & \textrm{if} \quad x=1 \\
+ 0 & \textrm{otherwise}
+\end{cases}
+$$
+
+The expectation for a Bernoulli random variable, $X$, is $\mathbb{E}(X) = p$ and the variance is $\textrm{var}(X) = p(1-p)$. 
+
+LEARNINGOUTCOMES:
+
+- You should be able to explain what types of phenomena can be modelled using the Bernoulli random variable.
+- You should be able to write out the probability mass function for the Bernoulli random variable.
+- You should be able to sketch the probability distribution function for this random variable.
+- You should be able to prove that the probability mass function for the Bernoulli random variable is properly normalized.
+- You should be able to derive expressions for the expectation and variance of this random variable.
+
+END:
+
+

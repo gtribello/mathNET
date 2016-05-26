@@ -1,0 +1,28 @@
+TITLE: The law of large numbers
+
+DESCRIPTION:
+
+The law of large numbers states that for a set of independent and 
+identically distributed random variables, $X_1$, $X_2$, $\dots$ the following 
+holds:
+
+\begin{equation}
+ \lim_{n\rightarrow \infty} P\left( \left| \frac{S_n}{n} - \mathbb{E}(X) \right| >
+\epsilon \right) = 0
+\nonumber
+\end{equation}
+
+\noindent where $n$ is the number of random variables, $S_n = X_1 + X_2 + \dots$ and $\epsilon$
+is a small number.
+
+\noindent This expression cannot be used if your random variable has $\mathbb{E}(X) = \infty$
+
+LEARNINGOUTCOMES:
+
+- You should be able to write down the law of large numbers without the proof.
+- You should be able to explain why the the expectation of random variables are useful by making reference to the law of large numbers.
+- You should be able to explain the random variables for which the law of large numbers does not hold.
+
+END:
+
+

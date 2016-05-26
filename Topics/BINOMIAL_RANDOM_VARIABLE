@@ -1,0 +1,27 @@
+TITLE: Binomial random variable
+
+DESCRIPTION:
+
+The binomial random variable is a discrete random variable that is used to model the outcome from 
+a set of $n$ identical experiments that have one of two possible outcomes which are often referred to as sucess and 
+failure.  The Binomial random variable tells you the number of sucessful experiments that were performed.
+
+The probability mass function for the Binomial random variable is given by:
+
+$$
+f(X=x) = P(X=x) = \binom{n}{x} p^{x} (1-p)^{n-x}
+$$
+
+The expectation for this variable is $\mathbb{E}(X)=np$ and the variance is $\textrm{var}(X) = np(1-p)$.
+
+LEARNINGOUTCOMES:
+
+- You should be able to explain what types of phenomena can be modelled using the binomial random variable.
+- You should be able to write out the probability mass function for the Binomial random variable and explain how this expression is derived by using a tree diagram.
+- You should be able to calculate the elements of the probability distribution function for the Binomial random variable from the probability mass function.
+- You should be able to show that the probability mass function for the binomial random variable is properly normalised.
+- You should be able to derive the moment generating functions for the binomial random variable and hence obtain the expectation and variances for this random variable.
+
+END:
+
+

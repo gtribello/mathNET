@@ -1,0 +1,18 @@
+TITLE: Chain Rule
+
+DESCRIPTION:
+
+The derivative of a function of a function, i.e. $f(x) = g[h(x)]$, with respect to $x$ is given by the chain rule:
+$$
+\frac{\textrm{d}f(x)}{\textrm{d}x} = \frac{\textrm{d}g[h(x)]}{\textrm h(x)} \frac{\textrm{d}h(x)}{\textrm{x}}
+$$
+
+LEARNINGOUTCOMES:
+
+- You should be able to write out the chain rule.
+- You should be able to use the chain rule to find the derivatives of functions of functions.
+- You should be able to use the chain rule in tandem with the product rule to find the derivatives of complicated function.
+
+END:
+
+

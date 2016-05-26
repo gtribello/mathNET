@@ -1,0 +1,29 @@
+TITLE: The geometric random variable
+
+DESCRIPTION:
+
+The geometric random variable is used when one is modelling a series of experiments that have one
+of two possible outcomes - sucess or failure.  The geometric random variable tells you the number of
+experiments that were performed before obtaining a sucess.  This random variable can thus take values 
+of 1, 2, 3, ...
+
+The probability mass function for the geometric random variable is given by:
+
+$$
+f_X(x) = P(X=x) = (1-p)^{x-1} p
+$$
+
+The expectation and variance for this random variable are $\mathbb{E}(X) = \frac{1}{p}$ 
+and $\textrm{var}(X) = \frac{1-p}{p^2}$ respectively.
+
+LEARNINGOUTCOMES:
+
+- You should be able to explain what types of phenomena can be modelled using the geometric random variable.
+- You should be able to write out the probability mass function for the geometric random variable and explain how this expression is derived by using a tree diagram.
+- You should be able to calculate the elements of the probability distribution function for the geometric random variable from the probability mass function.
+- You should be able to show that the probability mass function for the geometric random variable is properly normalised.
+- You should be able to derive expressions for the mean and the variance of the geometric random variable using the condition expectation theorem.
+
+END:
+
+

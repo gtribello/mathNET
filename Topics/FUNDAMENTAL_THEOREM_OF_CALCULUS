@@ -1,0 +1,26 @@
+TITLE: Fundamental theorem of calculus
+
+DESCRIPTION:
+
+If $f(x)$ is the derivative of the function 
+$F(x)$ i.e.
+$$
+f(x) = {dF(x) \over dx} 
+$$
+then:
+$$
+F(b)-F(a)=\int_{a}^{b} f(x) \ dx  
+$$
+Furthermore, for any constant, $a$:
+$$
+   {d \over dx} \int_{a}^{x} f(t) dt = f(x)  \quad .
+$$
+
+LEARNINGOUTCOMES:
+
+- You should be able to write out the fundamental theorem of calculus
+- You should be able to find the definite and indefinite integration of $x^n$ and $e^{\lambda x}$.
+
+END:
+
+

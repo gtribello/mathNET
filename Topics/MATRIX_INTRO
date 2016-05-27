@@ -1,8 +1,27 @@
-TITLE:
+TITLE: Introduction to matrices
 
 DESCRIPTION:
 
+An $m \times n$ matrix, $\mathbf{A}$,  is a rectangular array of numbers like
+this:
+$$
+A = 
+\left(
+\begin{matrix}
+a_{11} & a_{12} & \cdots  &   a_{1n} \\
+a_{21} &      &    \cdots  & a_{2n}  \\
+\vdots  &  \vdots   &   &  \vdots \\
+a_{m1} & a_{m2} &  \cdots & a_{mn} \\
+\end{matrix}
+\right)
+$$
+
 LEARNINGOUTCOMES:
+
+- When given a matrix you should be able to determine the number of rows and columns it has.
+- You should be able to explain what it means when we say that a matrix is square.
+- When given a matrix you should be able to find the value of element $(i,j)$.
+- You should be able to write python programs involving matrices using numpy arrays.
 
 END:
 

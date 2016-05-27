@@ -1,8 +1,23 @@
-TITLE:
+TITLE: Transient and recurrent states in Markov chains
 
 DESCRIPTION:
 
+A state in a Markov chain is said to be transient if:
+$$
+P(R_i \le \infty ) < 1
+$$
+and recurrent if
+$$
+P(R_i \le \infty ) = 1
+$$
+Here $R_i$ is the return time to state $i$, which is random as this quantity measures the number of steps in a loop that starts and 
+end in state $i$.
+
 LEARNINGOUTCOMES:
+
+- You should be able to write out and explain what makes states in a Markov chain recurrent and what makes them transient.
+- You should be able to classify the states in a Markov chain as transient or recurrent.
+- You should be able to describe the limiting behavior of a Markov chain by examining the transition graph.
 
 END:
 

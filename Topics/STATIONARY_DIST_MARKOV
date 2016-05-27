@@ -1,8 +1,28 @@
-TITLE:
+TITLE: Ergodic Markov chains
 
 DESCRIPTION:
 
+A Markov chain is said to be ergodic if it has a limiting stationary distribution.
+This limiting stationary distribution tells one the probability that you will be in 
+each of the states of the Markov chain.  Hence, for an ergodic Markov chain with $n$ states
+the stationary distribution is an $n$-dimensional vector of probabilities.  
+
+The stationary distribution of a Markov chain can be found by finding the top (left) eigenvector of 
+the one-step transition probability matrix using Gaussian elimination.  In addition, the elements of 
+this matrix satisfy the ergodic theorem:
+$$
+\lim_{n \rightarrow \infty} \frac{M_i(n)}{n} = \frac{1}{\mathbb{E}(T_i)}
+$$
+where $M_i$ is the number of visits to state $i$ if there have been $n$ steps in your Markov chain and $\mathbb{E}(T_i)$
+is the expectation of the return time to state $i$. 
+
 LEARNINGOUTCOMES:
+
+- You should be able to explain the properties that characterise an ergodic markov chain.
+- You should be able to determine whether or not a Markov chain has a limiting stationary distribution.
+- You should be able to explain the significance of the limiting stationary distribution.
+- You should be able to calculate the limiting stationary distribution of a Markov chain using Gaussian elimination.
+- You should be able to use the ergodic theorem to calculate return times from limiting stationary distribution.
 
 END:
 

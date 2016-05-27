@@ -1,8 +1,30 @@
-TITLE:
+TITLE: The Chapman Kolmogorov Relation
 
 DESCRIPTION:
 
+The Chapman Kolmogorov relation is an important result in the theory of (discrete) Markov chains as
+it provides a method for calculating the $n$-step transition probability matrix 
+of a Markov chain from the 1-step transition probability matrix of a Markov chain.  The Chapman-Kolmogorov
+relation can be written as follows:
+$$
+\mathbf{P}^{n+m} = \mathbf{P}^n\mathbf{P}^m
+$$
+Here $\mathbf{P}^{n+m}$ is the $n+m$-step transition probability matrix, $\mathbf{P}^{n}$ is the $n$-step transition probability matrix
+and $\mathbf{P}^{m}$ is the $m$-step transition probability matrix.
+
+The above equation holds for discrete Markov chains.  For continuous time Markov chains the elements of the transition probability matrix
+are written as a function of time.  For continuous time Markov chains the Chapman Komogorov relation is written as:
+$$
+\mathbf{P}(t + s ) = \mathbf{P}(t)\mathbf{P}(s)
+$$
+
 LEARNINGOUTCOMES:
+
+- You should be able to derive the Chapman Kolmogorov relation for a discrete Markov chain.
+- You should be able to explain what the Chapman Kolmogorov relation allows you to calculate.
+- You should be able to write out the Chapman Kolmogorov relation in both the discrete and continuous cases.
+- You should be able to use the Chapman Kolmogorov relation to calculate 2 and 3 step transition probabilities from the one step transition probability matrix of a discrete time Markov chain.
+- You should be able to explain how the Chapman Kolmogorov relation is used in the derivation of the Kolmogorov relation for continuous time Markov chains.
 
 END:
 

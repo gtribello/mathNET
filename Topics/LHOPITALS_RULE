@@ -1,8 +1,24 @@
-TITLE:
+TITLE: l'Hopital's Rule
 
 DESCRIPTION:
 
+l'Hopital's rule is a way of solving limits for functions of the form:
+$$
+lim_{x \rightarrow a} \frac{f(x)}{g(x)}
+$$
+l'Hopital's rule is derived by performing a Taylor series expansion of the functions in the numerator and denominator 
+($f(x)$ and $g(x)$ in the example above) around the limit (around $a$ for the above example).  The $f(a)$ and $g(a)$
+terms in these expansions will be zero (this, after all, is why we are solving the limit in the first place.  You then
+consider only the leading terms in the expansion and thus arrive at l'Hopital's Rule:
+$$
+lim_{x \rightarrow a} \frac{f(x)}{g(x)} = lim_{x \rightarrow a} \frac{f'(x)}{g'(x)}
+$$
+
 LEARNINGOUTCOMES:
+
+- You should be able to write down l'Hoptial's rule.
+- You should be able to solve limits by applying l'Hopital's rule.
+- You should know what to do to solve the limit $\lim_{x \rightarrow a} \frac{f(x)}{g(x)}$ when $f'(x)$ and $g'(x)$ are both equal to zero.
 
 END:
 

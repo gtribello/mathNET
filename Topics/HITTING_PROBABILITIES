@@ -1,8 +1,28 @@
-TITLE:
+TITLE: Hitting time and hitting probability
 
 DESCRIPTION:
 
+If a Markov chain has a combination of recurrent and transient states it has no limiting stationary distribution.  The limiting behavior of
+these chains is to move away from the transient states and in to one or a subset of the recurrent states.  If states are absorbing (or parts of the 
+chain are absorbing) we can calculate the probability that we will finish in each of the absorbing parts using:
+$$
+\mathbf{H} = ( \mathbf{I} - \mathbf{Q} )^{-1} \mathbf{R}
+$$
+where here $\mathbf{H}$ is a matrix known as the hitting probability matrix, $\mathbf{I}$ is the identity matrix, $\mathbf{Q}$ is the part of the 1-step transition probability 
+matrix that concerns transition between transient states and $\mathbf{R}$ is the part of the transition matrix that tells you about transitions between transient and 
+recurrent states.  
+
+The time it takes to move out of the transient states and into an absorbing part of the Markov chain is a random variable.  We can calculate this by computing
+the hitting times using:
+$$
+\mathbf{h} = ( \mathbf{I} - \mathbf{Q} )^{-1} \mathbf{1}
+$$
+Here $\mathbf{1}$ is a column vector containing all ones.
+
 LEARNINGOUTCOMES:
+
+- You should be able to calculate hitting times and hitting probabilities for Markov chains that have at most three transient and three absorbing (recurrent) states using pen and paper.
+- You should be able to write computer programs that will calculate hitting times and hitting probabilities for larger matrices.
 
 END:
 

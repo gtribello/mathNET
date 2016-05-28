@@ -2,7 +2,7 @@ TITLE: Basic set theory
 
 DESCRIPTION:
 
-Set theory is the branch of mathematical logic that studies set, which informally are
+Set theory is the branch of mathematical logic that studies sets, which informally are
 collections of objects.  This theory begins by introducing a fundamental binary relation between an
 object $o$ and a set $A$.  We write that $o \in A$ if the object $o$ is in the set $A$ and
 $o \notin A$ if the object $o$ is not in the set $A$.  If all the members of the set $B$ are 

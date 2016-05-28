@@ -19,7 +19,7 @@ class topic(object) :
      self.label =  mystr.replace("TITLE: ", "").rstrip('\n') 
 
   def addResource(self,location,programming,module,resource_name,description):
-     f = open("Topics/" + self.name, "w")
+     f = open("Topics/" + self.name, "r")
      lines = f.readlines()
      inresources=0
      for line in lines : 
@@ -35,7 +35,8 @@ class topic(object) :
      f = open("Topics/" + self.name, "a+")
      f.write( self.name + " " + location + " " + programming + " " + module + " " + resource_name + " " +  description + "\n" )
      f.close()
-     printTopicPage( self )
+     os.remove("html/" + self.name + ".html" )
+     self.printTopicPage()
      return 1
 
   def printTopicPage( self ):
@@ -114,4 +115,12 @@ class topiclist(object) :
   def get( self, name ) :
      ind=self.topiclist.index(name)
      return self.tlist[ind]
+
+  def strip( self, page ) :
+     splitup = page.split("/")
+     mytopic = splitup[ len(splitup)-1 ].replace(".html","")
+     if mytopic not in self.topiclist :
+        return "invalid"
+     return mytopic 
+
 

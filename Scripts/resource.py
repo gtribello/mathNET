@@ -41,7 +41,7 @@ class resource(object) :
             if( self.loc=="EXERCISE"):
                 table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>'
             else:
-                table += '<td></td><td><i class="fa fa-book fa-3x"></i></td><td>'
+                table += '<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td>'
 
             table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'
 

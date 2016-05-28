@@ -24,8 +24,10 @@ class UrlInput(QLineEdit):
 class mainWindow(QWidget):
    def __init__(self):
        QWidget.__init__(self)
-       # Create the window that is used for adding links to pages
+       # Create the window that is used for adding links to external pages
        self.addLinkDialogue = addLinkGui.AddLinkDialogue(self)
+       # Create the window that is used for adding links to stuff in the resources directory
+       self.addResourceDialogue = classifyResourceGui.AddResourceDialogue(self) 
        # This ensures the whole website is not rebuilt on the first call 
        self.loaded=0
 
@@ -73,9 +75,13 @@ class mainWindow(QWidget):
        self.browser.load( QUrl(self.url_input.text()) )
 
    def nbuttonHandle(self):
-       app = classifyResourceGui.classify_resources(None)
-       app.title('Add resource link')
-       app.mainloop()
+       if self.addResourceDialogue.setCurrentPage( self.url_input.text() ) :
+          self.addResourceDialogue.exec_()
+       # Refresh page now that it has new content
+       self.browser.load( QUrl(self.url_input.text()) )
+       # app = classifyResourceGui.classify_resources(None)
+       # app.title('Add resource link')
+       # app.mainloop()
 
    def rbuttonHandle(self):
        self.buildFullWebsite()

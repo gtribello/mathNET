@@ -67,7 +67,7 @@ class AddLinkDialogue(QDialog):
           return 
        # Check something has been put in the description
        if self.textBrowser.toPlainText()=="" :
-          error.showMessage("Text was not set")
+          error.showMessage("Description was not set")
           error.exec_()
           return
        # Generate topic list

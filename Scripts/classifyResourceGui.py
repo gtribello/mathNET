@@ -1,107 +1,127 @@
-import tkinter
-import tkinter.messagebox as messagebox
 from topic import topiclist
 import os 
+from PyQt4.QtGui import *
+from PyQt4.QtCore import *
 
+class AddResourceDialogue(QDialog):
+   def __init__(self, parent=None):
+       super(AddResourceDialogue, self).__init__(parent) 
+       grid = QGridLayout()
+       # Create an entry for the page we are linking to
+       label = QLabel("Adding link to page about")
+       grid.addWidget( label, 1, 0 )
+       self.onpage = QTextEdit(self)
+       self.onpage.setMaximumHeight(label.sizeHint().height()*2)
+       self.onpage.setReadOnly(True) 
+       grid.addWidget( self.onpage, 1, 1 )
+       # Add module box
+       label = QLabel("Module")
+       grid.addWidget( label, 1, 2 )
+       self.modbox = QComboBox(self)
+       self.modbox.addItem("unset")
+       for item in os.listdir("Modules") :
+           self.modbox.addItem(item)
+       self.modbox.setCurrentIndex(0)
+       grid.addWidget( self.modbox, 1, 3 )  
+       # Add resource entry
+       label = QLabel("Resource")
+       grid.addWidget( label, 2, 0 ) 
+       # Entry for filename
+       self.resource = QTextEdit(self)
+       self.resource.setMaximumHeight(label.sizeHint().height()*2)
+       self.resource.setReadOnly(True) 
+       grid.addWidget( self.resource, 2, 1, 1, 2 )
+       # Add browse button
+       self.browse = QPushButton('browse', self )
+       self.browse.clicked.connect(self.browsefiles)
+       grid.addWidget( self.browse, 2, 3 )
+       # Descrition
+       label = QLabel("Description")
+       grid.addWidget( label, 3, 0 )
+       self.textBrowser = QTextEdit(self)
+       grid.addWidget( self.textBrowser, 4, 0, 1, 4 )
+       # Type dropdown
+       label = QLabel("Type")
+       grid.addWidget( label, 3, 2 )
+       self.typebox = QComboBox(self)
+       self.typebox.addItem("unset")
+       self.typebox.addItem("INTRO")
+       self.typebox.addItem("EXERCISE")
+       self.typebox.setCurrentIndex(0)
+       grid.addWidget( self.typebox, 3, 3 ) 
+       # And go button
+       self.gobutton = QPushButton('save', self ) 
+       self.gobutton.clicked.connect(self.save)
+       grid.addWidget( self.gobutton, 5, 3 )
+       self.setLayout(grid)
 
-class classify_resources(tkinter.Tk):
-    # Constructor
-    def __init__(self,parent):
-        tkinter.Tk.__init__(self,parent)
-        self.parent = parent
-        self.initialize()
+   def setCurrentPage( self, page ):
+       mytopics = topiclist()
+       mypage = mytopics.strip( page )
+       self.onpage.setText(mypage)
+       if( mypage=="invalid" ) :
+           return False
+       return True
 
-    # Initialize and create window
-    def initialize(self):
-        self.grid()
+   def browsefiles( self ):
+       filename = QFileDialog.getOpenFileName(self, 'Add resource file', 'Resources', "Files (*.ipynb *.pdf *.ghtml)" )
+       splitup = filename.split("/")
+       if splitup[len(splitup)-2] != "Resources" : 
+          error = QErrorMessage(self)
+          error.showMessage("Cannot add file that is not in Resources directory")
+          error.exec_()
+          return
+       self.resource.setText( splitup[len(splitup)-1] )
 
-# Create a label
-        rlabel = tkinter.Label(self, text='Select resource', anchor='w')
-        rlabel.grid(column=0, row=0, sticky='w', padx=10)
-        ResourceList = os.listdir("Resources")
-        ResourceList.insert(0,"unset")
-        self.resource = tkinter.StringVar()
-        self.resource.set(ResourceList[0])
-        menu = tkinter.OptionMenu(self, self.resource, *ResourceList)
-        menu.grid(column=2,row=0, sticky='W', padx=10)
-         
-        self.exercise=1
-        wbox = tkinter.Checkbutton(self, text="Notes", variable=self.exercise, onvalue=0, offvalue=1, height=5, width=20)
-        wbox.grid(column=0,row=1,sticky='W',padx=10)
-        vbox = tkinter.Checkbutton(self, text="Exercise", variable=self.exercise, onvalue=1, offvalue=0, height=5, width=20)
-        vbox.grid(column=1,row=1,sticky='W',padx=10)
-
-# Create choice for exercise type
-        elabel = tkinter.Label(self, text='Type', anchor="w")
-        elabel.grid(column=2,row=1,sticky='W',padx=10)
-        EtypeList = [ "unset", "PDF", "IPYTHON", "HTML" ]
-        self.programming = tkinter.StringVar()
-        self.programming.set(EtypeList[0])
-        menu = tkinter.OptionMenu(self, self.programming, *EtypeList)
-        menu.grid(column=3,row=1, sticky='W', padx=10) 
-
-# Add entry for topic
-        tlabel = tkinter.Label(self, text='Topic', anchor="w")
-        tlabel.grid(column=0,row=2,sticky='EW',padx=10)
-        TopicList = os.listdir("Topics")
-        TopicList.insert(0,"unset")
-        self.topic = tkinter.StringVar()
-        self.topic.set(TopicList[0])
-        menu = tkinter.OptionMenu(self, self.topic, *TopicList)
-        menu.grid(column=1,row=2, sticky='W', padx=10) 
-
-# Add entry for module
-        mlabel = tkinter.Label(self, text='Module', anchor="w")
-        mlabel.grid(column=2,row=2,sticky='EW',padx=10)
-        ModuleList = os.listdir("Modules")
-        ModuleList.insert(0,"unset")
-        self.module = tkinter.StringVar()
-        self.module.set(ModuleList[0])
-        menu = tkinter.OptionMenu(self, self.module, *ModuleList)
-        menu.grid(column=3,row=2, sticky='W',padx=10)
-
-# Add stuff to enter description
-        dlabel = tkinter.Label(self, text='Description', anchor="w")
-        dlabel.grid(column=0,row=3,sticky='W',padx=10)
-# And text box for description
-        self.description = tkinter.Text(self, width=100, height=10 )
-        self.description.grid(column=0,row=4,columnspan=4,sticky='W',padx=10)
-
-# Add button to create resource
-        saveb = tkinter.Button(self,text="save", command=self.OnSaveClick )
-        saveb.grid(column=5, row=5, padx=10 )
-
-        # Do create stuff
-        self.grid_columnconfigure(0,weight=1)
-        self.resizable(True,True)
-
-# This saves everything to the file
-    def OnSaveClick(self):
-        # Check topic was set  
-        if self.topic.get()=="unset" :
-           messagebox.showerror("Topic was not set")
-           return
-        # Check module was set
-        if self.module.get()=="unset" :
-           messagebox.showerror("Topic was not set")
-           return
-        # Check if type was set
-        if self.programming.get()=="unset" :
-           messagebox.showerror("Resource type was not set") 
-           return
-        # Check that something has been put in the description
-        if self.description.get('1.0','end-1c')=="" :
-           messagebox.showerror("No descrption was provided")
-           return
-        # Generate teh link stuff
-        location = "INTRO"
-        if( self.exercise==1 ) :
-            location = "EXERCISE" 
-        mytopics = topiclist()
-        if( mytopics.get( self.topic.get() ).addResource( location, self.programming.get(), self.module.get(), self.resource.get(), self.description.get('1.0','end-1c') )==0 ):
-            tkMessageBox.showerror("Resource has already been added to this topic")
-            return
-        # Regenerate this page
-        os.remove("html/" + self.topic.get() + ".html" )
-        mytopics.get( self.topic.get() ).printTopicPage()
-        self.destroy()
+   def save( self ):
+       error = QErrorMessage(self)
+       # Check module was set
+       if self.modbox.currentText()=="unset" :
+          error.showMessage("Module for resource was not set")
+          error.exec_()
+          return
+       # Check resource was set
+       if self.resource.toPlainText()=="" :
+          error.showMessage("Resource was not set")
+          error.exec_()
+          return
+       # Check if type was set
+       if self.typebox.currentText()=="unset" :
+          error.showMessage("Type for resource was not set")
+          error.exec_()
+          return
+       # Check that something has been put in the description
+       if self.textBrowser.toPlainText()=="" :
+          error.showMessage("Description was not set")
+          error.exec_()
+          return
+       # Put this information in the topic list
+       mytopics = topiclist()
+       thistopic = self.onpage.toPlainText()
+       # Get extension of file
+       myfile = self.resource.toPlainText()
+       splitup = myfile.split(".")
+       ext = splitup[len(splitup)-1]
+       ftype = "HTML"
+       if ext=="ipynb" :
+          ftype = "IPYTHON"
+       elif ext=="pdf" :
+          ftype = "PDF"
+       elif ext=="ghtml" :
+          pass
+       else :
+          error.showMessage("Invalid extension on input resource file")
+          error.exec_()
+          return
+       # And add the resource to the page
+       if mytopics.get(thistopic).addResource( self.typebox.currentText(), ftype, self.modbox.currentText(), myfile, self.textBrowser.toPlainText())==0 :
+          error.showMessage("This resource has already been added to this page")
+          error.exec_()
+          return
+       # Clear all input data
+       self.resource.setText("")
+       self.modbox.setCurrentIndex(0)
+       self.typebox.setCurrentIndex(0) 
+       self.textBrowser.setText("")
+       # Close the window
+       self.close()

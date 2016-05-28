@@ -26,21 +26,18 @@ class module(object):
       if( self.wasread==0 ):
          sys.error("Cannot get name as module was not read")
 # Now open the file ane read in the lines
-      mfile = open( "Modules/" + self.name, 'r')
+      mfile = open( "Modules/" + self.name, 'r' )
       mtlist = mfile.readlines()
       mfile.close()
 # This does the generation of the graph
       for j in range(1,len(mtlist)):
-        clista = mtlist[j-1].split()
-        clistb = mtlist[j].split()
-
-        for start in clista:
-            assert( start in nodelist )
-            for end in clistb:
-                assert( end in nodelist )
-                graph[ nodelist.index(start), nodelist.index(end) ]=1
-                self.mygraph[ nodelist.index(start), nodelist.index(end) ]=1
-
+         clista = mtlist[j-1].split()
+         clistb = mtlist[j].split()
+         if (len(clista)>0) & (len(clistb)>0) :
+            assert( (len(clista)==1) & (len(clistb)==1) )
+            assert( (clista[0] in nodelist) & (clistb[0] in nodelist) )
+            graph[ nodelist.index(clista[0]), nodelist.index(clistb[0]) ] += 1
+            self.mygraph[ nodelist.index(clista[0]), nodelist.index(clistb[0]) ]=1
       return graph
 
    def printModulePage(self):

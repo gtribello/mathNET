@@ -90,9 +90,11 @@ class module(object):
 
       # Get relevant resources for each topic in module
       topictab = ""
+      reslist = []
       mytopics = topic.topiclist()
       for t in utopics :
-          topictab += mytopics.get(t).getResourceForModule( self.name )
+          tstring, reslist = mytopics.get(t).getResourceForModule( self.name, reslist )
+          topictab += tstring 
       
       outfilecontents = outfilecontents.replace("INSERT FULL DESCRIPTION", desc )
       outfilecontents = outfilecontents.replace("INSERT LEARNING OUTCOMES", learning + "</ul>\n" )    

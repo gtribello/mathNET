@@ -104,7 +104,7 @@ class topic(object) :
      ofile.write( outfilecontents )
      ofile.close()
 
-  def getResourceForModule(self,modname):
+  def getResourceForModule(self,modname,reslist):
     ifile = open( "Topics/" + self.name, 'r' )
     linesin = ifile.readlines()
     ifile.close()
@@ -114,13 +114,15 @@ class topic(object) :
     for line in linesin :
         if (foundend==1) & (len(line.split())>4) :
            res = resource.resource(line)
-           if (res.module==modname) & (res.loc=="INTRO") :
-              intro_table += res.getResourceHTML( 2 )
-           elif (res.module==modname) & (res.loc=="EXERCISE") :
-              ex_table += res.getResourceHTML( 2 )
+           if res.linkb not in reslist :
+              reslist.append(res.linkb)
+              if (res.module==modname) & (res.loc=="INTRO") :
+                 intro_table += res.getResourceHTML( 2 )
+              elif (res.module==modname) & (res.loc=="EXERCISE") :
+                 ex_table += res.getResourceHTML( 2 )
         elif "END:" in line :
            foundend=1
-    return intro_table + ex_table
+    return intro_table + ex_table, reslist
 
 class topiclist(object) :
   def __init__(self) :

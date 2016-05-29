@@ -1,3 +1,26 @@
+TITLE: Stochastic Processes and Risk
+
+DESCRIPTION:
+
+The theory of stochastic process is used to model the future behavior of systems in fields ranging from finance to weather forecasing. 
+In stochastic models the future behavior of the system is modelled using random variables and probability.  One can thus obtain information
+on the likelihood that the future will transpire in a particular way.
+
+In this module we focus primarily on probabilistic models that have the Markov property.  In these models the probability of the future transpiring in a 
+particular way depends only on the present state of the system and not on what happened in the past. These models find application in physics, quantitative
+finance and machine learning.  A particularly important application of Markov processes is the method of Monte Carlo integration.  We will thus finish by 
+studying this technique and its application to problems in Bayesian inference.
+
+LEARNINGOUTCOMES:
+
+- You should be able to calculate expectations and variances directly, using the moment generating function and by using the conditional expectation theorem.  You should also be able to explain what predictions can be made given the expectation and/or the variance.
+
+- You should be able to recognise which type of random variable is appropriate for modelling a given phenomenon, identify the assumptions that they have made in constructing this model and critically assess their validity. 
+
+- You should be able to explain what it means when we state that a time dependent process has independent and stationary increments and how this differs from a Markov process.  By using your understanding of this distinction you should be able to construct probabilistic models for time dependent phenomena, explain the assumptions that have been made in the constructing these models and critically assess their validity.
+
+GRAPH:
+
 VENN_DIAGRAMS
 INCLUSION_EXCLUSION
 SET_PARTITIONS

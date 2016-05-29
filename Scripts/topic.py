@@ -18,7 +18,7 @@ class topic(object) :
      ifile.close()
      self.label =  mystr.replace("TITLE: ", "").rstrip('\n') 
 
-  def addResource(self,location,programming,module,resource_name,description):
+  def addResource(self,location,programming,modname,resource_name,description):
      f = open("Topics/" + self.name, "r")
      lines = f.readlines()
      inresources=0
@@ -33,10 +33,13 @@ class topic(object) :
                   return 0
      
      f = open("Topics/" + self.name, "a+")
-     f.write( self.name + " " + location + " " + programming + " " + module + " " + resource_name + " " +  description + "\n" )
+     f.write( self.name + " " + location + " " + programming + " " + modname + " " + resource_name + " " +  description + "\n" )
      f.close()
      os.remove("html/" + self.name + ".html" )
      self.printTopicPage()
+     os.remove("html/" + modname + ".html" )
+     mymodules = module.listofmodules()
+     mymodules.get(modname).printModulePage()
      return 1
 
   def printTopicPage( self ):
@@ -53,6 +56,7 @@ class topic(object) :
 # Find the description
      ifile = open( "Topics/" + self.name, 'r' )
      linesin = ifile.readlines()
+     ifile.close()
      indesc=0
      foundend=0
      inlearn=0
@@ -80,17 +84,16 @@ class topic(object) :
             explanation += line
          elif (inlearn==1) & (line[0]=="-") :
             explanation += '<li type="square">' + line[1:] + '</li> \n' 
-         elif( foundend==1 ):
-            if len(line.split())>4 :
-               if line.split()[0]!=self.name :
-                  sys.error("found dubious line in input file") 
-               res = resource.resource(line)
-               if res.loc=="INTRO" :
-                  intro_table += res.getResourceHTML( 1 )
-               elif res.loc=="EXERCISE" :
-                  exercise_table += res.getResourceHTML( 1 )
-               else :
-                  external_table += res.getResourceHTML( 0 ) 
+         elif (foundend==1) &  (len(line.split())>4) :
+            if line.split()[0]!=self.name :
+               sys.error("found dubious line in input file") 
+            res = resource.resource(line)
+            if res.loc=="INTRO" :
+               intro_table += res.getResourceHTML( 1 )
+            elif res.loc=="EXERCISE" :
+               exercise_table += res.getResourceHTML( 1 )
+            else :
+               external_table += res.getResourceHTML( 0 ) 
      # And insert the tables into the html
      outfilecontents = outfilecontents.replace("INSERT INTRODUCTORY TABLE", intro_table)
      outfilecontents = outfilecontents.replace("INSERT EXERCISES TABLE", exercise_table)
@@ -100,6 +103,24 @@ class topic(object) :
      outfilecontents = outfilecontents.replace("INSERT FULL DESCRIPTION", explanation )
      ofile.write( outfilecontents )
      ofile.close()
+
+  def getResourceForModule(self,modname):
+    ifile = open( "Topics/" + self.name, 'r' )
+    linesin = ifile.readlines()
+    ifile.close()
+    foundend=0
+    intro_table = ""
+    ex_table = ""
+    for line in linesin :
+        if (foundend==1) & (len(line.split())>4) :
+           res = resource.resource(line)
+           if (res.module==modname) & (res.loc=="INTRO") :
+              intro_table += res.getResourceHTML( 2 )
+           elif (res.module==modname) & (res.loc=="EXERCISE") :
+              ex_table += res.getResourceHTML( 2 )
+        elif "END:" in line :
+           foundend=1
+    return intro_table + ex_table
 
 class topiclist(object) :
   def __init__(self) :

@@ -1,5 +1,6 @@
 import numpy as np
 import shutil
+import topic
 import os
 
 class module(object):
@@ -57,7 +58,9 @@ class module(object):
       indesc = 0
       desc = ""
       inlearn = 0
+      ingraph = 0
       learning = "<ul> \n"
+      utopics = []
       for item in mtlist : 
           if "TITLE:" in item :
              outfilecontents = outfilecontents.replace("INSERT FULL NAME", item.replace("TITLE:","") )
@@ -68,19 +71,34 @@ class module(object):
              inlearn = 1
           elif indesc==1 :
              desc += item 
+          elif "GRAPH:" in item  :
+             if inlearn!=1 :
+                sys.error("found GRAPH: before LEARNINGOUTCOMES:")
+             ingraph=1
+             inlearn=0
           elif (inlearn==1) & (item[0]=="-") :
              learning += '<li type="square">' + item[1:] + '</li> \n'
           elif "DESCRIPTION:" in item :
              indesc=1
-          elif "GRAPH:" in item  :
-             if inlearn!=1 :
-                sys.error("found GRAPH: before LEARNINGOUTCOMES:")
-             break
+          elif ingraph==1 :
+             clista = item.split()
+             # Make list of topics in module
+             if len(clista)>0 :
+                 assert( len(clista)==1 )
+                 if clista[0] not in utopics :
+                    utopics.append(clista[0]) 
+
+      # Get relevant resources for each topic in module
+      topictab = ""
+      mytopics = topic.topiclist()
+      for t in utopics :
+          topictab += mytopics.get(t).getResourceForModule( self.name )
       
       outfilecontents = outfilecontents.replace("INSERT FULL DESCRIPTION", desc )
       outfilecontents = outfilecontents.replace("INSERT LEARNING OUTCOMES", learning + "</ul>\n" )    
       outfilecontents = outfilecontents.replace("INSERT MODULE LABEL", self.name)
       outfilecontents = outfilecontents.replace("INSERT MODULE LIST", self.inlist.getModuleMenu() )
+      outfilecontents = outfilecontents.replace("INSERT STUDY GUIDE", topictab )
       outfile = open('html/' + self.name + '.html', 'w' )
       outfile.write( outfilecontents )
       outfile.close()

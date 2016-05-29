@@ -54,8 +54,10 @@ class resource(object) :
 
             table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'
 
-       if( printmodule>0 ):
-            table += '<td><a href="' + self.module +'.html">' + self.module + "</a></td>"    # Ideally this would be a link to the module
+       if( printmodule==1 ):
+            table += '<td><a href="' + self.module +'.html">' + self.module + "</a></td>"    
+       elif( printmodule==2 ):
+            table += '<td><a href="' + self.topic +'.html">' + self.topic + "</a></td>"
 
        table += "</tr> \n"
        return table

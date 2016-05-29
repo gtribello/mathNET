@@ -79,9 +79,6 @@ class mainWindow(QWidget):
           self.addResourceDialogue.exec_()
        # Refresh page now that it has new content
        self.browser.load( QUrl(self.url_input.text()) )
-       # app = classifyResourceGui.classify_resources(None)
-       # app.title('Add resource link')
-       # app.mainloop()
 
    def rbuttonHandle(self):
        self.buildFullWebsite()

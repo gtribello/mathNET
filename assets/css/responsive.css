@@ -1,0 +1,46 @@
+/* #Tablet (Landscape)
+================================================== */
+
+@media only screen and (max-width: 1024px) {
+
+.wrapper960, .content_background, #header {margin: 0 auto;}
+
+/* Disable CSS animations */
+.animated {
+    -webkit-animation-duration: 0;
+    animation-duration: 0;
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+}
+
+/* #Tablet (Portrait)
+================================================== */
+    
+@media only screen and (max-width: 959px) {
+
+
+}
+
+/* #Mobile (Landscape)
+================================================== */
+
+@media only screen and (max-width: 767px) {
+
+/* Slogan Adjust */
+p.site-slogan {
+    right: 0px;
+}
+
+}
+
+/*  #Mobile (Portrait)
+================================================== */
+
+@media only screen and (max-width: 440px) {
+
+	
+}
+
+

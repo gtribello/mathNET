@@ -2,7 +2,7 @@ TITLE: Joint probability distribution
 
 DESCRIPTION:
 
-If you have a pair of random variables $X$ and $Y$ the joint probability distribution function, $F_{XY}(x,y) tells you the following probability.
+If you have a pair of random variables $X$ and $Y$ the joint probability distribution function, $F_{XY}(x,y)$ tells you the following probability.
 $$
 F_{XY}(x,y) = P( X \le x \wedge Y \le y )
 $$

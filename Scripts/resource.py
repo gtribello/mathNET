@@ -1,6 +1,7 @@
 import os
 import shutil
 import generate_html_exercise
+import generate_video_page
 
 class resource(object) :
   def __init__(self,description) :
@@ -19,9 +20,11 @@ class resource(object) :
 
   def getResourceHTML(self,printmodule):
        table = "<tr> \n"
-       if( self.rtype=="VIDEO" ):
+       if( self.rtype=="VIDEO" ): 
+            assert( self.loc=="EXTERNAL" )
             table += '<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="' + self.linkb + '" >' + self.description + '</a></td>'
        elif( self.rtype=="WEBSITE" ):
+            assert( self.loc=="EXTERNAL" )
             table += '<td></td><td><i class="fa fa-external-link fa-3x"></i></td><td><a href="' + self.linkb + '" >' + self.description + '</a></td>'
        elif( self.rtype=="PDF" ):
             if not os.path.isfile("html/resources/" + self.linkb):
@@ -29,18 +32,24 @@ class resource(object) :
             if( self.loc=="EXERCISE"):
                 table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>'
             else:
+                assert( self.loc=="INTRO" ) 
                 table += '<td></td><td><i class="fa fa-book fa-3x"></i></td><td>'
 
             table += '<a href="resources/' + self.linkb + '">' + self.description + '</a></td>'
        elif( self.rtype=="IPYTHON"):
+            assert( self.loc=="EXERCISE" )
             if not os.path.isfile("html/resources/" + self.linkb):
                shutil.copy("Resources/" + self.linkb, "html/resources/" + self.linkb)
             table += '<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td>' + '<a href="resources/' + self.linkb + '" download="' + self.linkb + '"> ' + self.description + '</a></td>'
        elif( self.rtype=="HTML"):
-            generate_html_exercise.convert_exercise_to_html( self.linkb )
             if( self.loc=="EXERCISE"):
+                if not os.path.isfile("html/" + self.linkb + ".html") :
+                   generate_html_exercise.convert_exercise_to_html( self.linkb )
                 table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>'
             else:
+                assert( self.loc=="INTRO" )
+                if not os.path.isfile("html/" + self.linkb + ".html") :
+                   generate_video_page.convert_video_to_html( self.linkb )
                 table += '<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td>'
 
             table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'

@@ -108,7 +108,7 @@ class AddResourceDialogue(QDialog):
        elif ext=="pdf" :
           ftype = "PDF"
        elif ext=="ghtml" :
-          pass
+          myfile=myfile.replace(".ghtml","")
        else :
           error.showMessage("Invalid extension on input resource file")
           error.exec_()

@@ -1,5 +1,6 @@
 import numpy as np
 import shutil
+import math
 import webbrowser
 from graphviz import Source
 import os
@@ -32,13 +33,31 @@ class basicgraph:
       graphstr += node + ' [style="bold,rounded" color=blue label=<' + label + '> URL="' + node + '.html" target="_top"];\n' 
 # Write nodes with forward and backwards connections
       i = self.nodes.index(node)
+      forwardnodes = []
+      backnodes = []
       for j in range(0,len(self.nodes)):
           if self.graph[ i, j ] == 1 :
              graphstr += self.nodes[j] + ' [label=<' + self.labels[j] + '> URL="' + self.nodes[j] + '.html" target="_top"];\n' 
+             graphstr += "edge[style=solid]; \n"
              graphstr += node + " -> " + self.nodes[j] + '\n'
+             if (len(forwardnodes)>0) & (len(forwardnodes)%2==0) :
+                 graphstr += "edge[style=invis];\n"
+                 graphstr += forwardnodes[len(forwardnodes)-2] + " -> " + self.nodes[j] + '\n'
+             forwardnodes.append(self.nodes[j])
           if self.graph[ j, i ] == 1 :
              graphstr += self.nodes[j] + ' [label=<' + self.labels[j] + '> URL="' + self.nodes[j] + '.html" target="_top"];\n' 
+             graphstr += "edge[style=solid]; \n"
              graphstr += self.nodes[j] + " -> " + node + '\n'
+             if (len(backnodes)>0) & (len(backnodes)%2==0) :
+                 graphstr += "edge[style=invis];\n"
+                 graphstr += backnodes[len(backnodes)-2] + " -> " + self.nodes[j] + '\n'
+             backnodes.append(self.nodes[j])
+      for i in range(0,math.floor(len(forwardnodes)/2)+1) :
+          if len(forwardnodes)>2*i+2 :  
+             graphstr += "{ rank=same; " + forwardnodes[2*i] + ";" + forwardnodes[2*i+1] + "; } \n" 
+      for i in range(0,math.floor(len(backnodes)/2)+1) :
+          if len(backnodes)>2*i+2 : 
+             graphstr += "{ rank=same; " + backnodes[2*i] + ";" + backnodes[2*i+1] + "; } \n"
       graphstr += "}" 
       src = Source( graphstr, format='svg' )
       src.render("html/" + node) 

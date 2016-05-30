@@ -91,7 +91,11 @@ class mainWindow(QWidget):
 
    def buildFullWebsite(self):
        if( self.loaded==1 ):
-           shutil.rmtree('html')
+           for ff in os.listdir('html') :
+               if (ff.endswith(".html")) | (ff.endswith(".svg")) :
+                  os.remove("html/" + ff)
+           shutil.rmtree('html/resources')
+           shutil.rmtree('html/assets')
 
        # See if the html directory is there and create it 
        # if it isnt

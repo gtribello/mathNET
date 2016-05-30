@@ -13,7 +13,7 @@ Poisson process and the $D_i$ values are independent and identially distributed 
 function for the $D_i$ random variables is independent of $N(t)$.  It is possible to show that the mean and variance for 
 $Y(t)$ are given by:
 $$
-\mathbb{E}[Y(t)] = \mu \lambda t  \qquad \qquad \qquad \textrm{var}[Y(t)] = \lambda t( \simga^2 + \mu^2 )
+\mathbb{E}[Y(t)] = \mu \lambda t  \qquad \qquad \qquad \textrm{var}[Y(t)] = \lambda t( \sigma^2 + \mu^2 )
 $$
 where $\mu$ and $\sigma$ are the expectation and variance for the random variable $D_i$.  $\lambda$ is the parameter for the Poisson process $N(t)$.
 

@@ -1,8 +1,26 @@
-TITLE:
+TITLE: Compound Poisson Process
 
 DESCRIPTION:
 
+A compound Poisson process is a continuous time (random) stochastic process with jumps.  The jumps arrive randomly 
+according to a Poisson process and the size of the jumps is random.  We can write the following expression for the 
+``value" of the process at time $t$.
+$$
+Y(t) = \sum_{i=1}^{N(t)} D_i
+$$ 
+Notice that in this expression $N(t)$ and all the $D_i$ values are random variables so $Y(t)$ is thus random.  $N(t)$ is a 
+Poisson process and the $D_i$ values are independent and identially distributed random variables.  Furthermore, the probability distribution 
+function for the $D_i$ random variables is independent of $N(t)$.  It is possible to show that the mean and variance for 
+$Y(t)$ are given by:
+$$
+\mathbb{E}[Y(t)] = \mu \lambda t  \qquad \qquad \qquad \textrm{var}[Y(t)] = \lambda t( \simga^2 + \mu^2 )
+$$
+where $\mu$ and $\sigma$ are the expectation and variance for the random variable $D_i$.  $\lambda$ is the parameter for the Poisson process $N(t)$.
+
 LEARNINGOUTCOMES:
+
+- You should be able to explain what types of processes can be modelled using a compound Poisson process.
+- You should be able to derive expressions for the expectation and variance of a random variable, $Y(t)$, if its value can be modelled using a Poisson process.  This derivation should be done using the conditional expectation theorem.
 
 END:
 

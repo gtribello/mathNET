@@ -35,7 +35,7 @@ LEARNINGOUTCOMES:
 - You should be able to derive the probability distribution function for the exponential random variable by solving the Kolmogorov forward equation.
 - You should be able to write out the probability distribution function and the probability density function for the exponential random variable.
 - You should be able to obtain expressions for the expectation and variance of an exponential random variable by means of integration by parts.
-
+- You should be able to calculate the probability that event $X$ happens before event $Y$ given that the arrival time of both $X$ and $Y$ are independent random variables that can be described using exponential random variables.  
 END:
 
 

@@ -1,8 +1,46 @@
-TITLE:
+TITLE: Gamblers ruin
 
 DESCRIPTION:
 
+Gamblers ruin is a problem involving a particular discrete time Markov chain.
+The transition matrix for the Gamblers ruin problem is the following $(N+1) \times (N+1)$ 
+square matrix:
+$$
+M = \left(
+\begin{matrix}
+1 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 0 \\
+q & r & p & 0 & 0 & \dots & 0 & 0 & 0 \\ 
+0 & q & r & p & 0 & \dots & 0 & 0 & 0 \\
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+0 & 0 & 0 & 0 & 0 & \dots & q & r & p \\
+0 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 1
+\end{matrix}
+\right)
+$$
+where $q + r + p = 1$.  This chain has ($N-1$) transient states and two recurrent states so 
+solving this problem ammounts to finding hitting times and hitting probabilities.  What makes
+this particular chain interesting is that the symmetry of the matrix ensures that it is possible to 
+find the hitting probabilities by solving a homogeneous difference equation.  Furthermore, we can find the 
+hitting times by solving an inhomogenous difference equation.   When these two probelms are solved we find that
+the conditional probability, $\pi_k$, of finishing in state $0$ given that we start in state $k$ is given by:
+$$
+\pi_k = \frac {\left( \frac{q}{p}\right)^k - \frac{q}{p}\right)^N }{ 1 - \frac{q}{p}\right)^N } 
+$$
+The expected time to arrival in either state $0$ or state $N$ given that we start in state $k$ is by contrast:
+$$
+d_k = \frac{k}{q-p} - \frac{N\pi_k}{q-p}
+$$
+Notice that these equations are NOT valid in the limit when $q=p$ and that l'Hopital's rule must be used to find
+the probabilities in this limit. 
+
 LEARNINGOUTCOMES:
+
+- You should be able to write out the transition graph and the transition matrix for the gamblers ruin problem.
+- You should be able to classify the states in the gamblers ruin problem as transient/recurrent.
+- You should be able to derive an expression for the probability of ruin in the gamblers run problem.
+- You should be able to calculate the probability of ruin in the limit of equal forward and backward jump probabilities ($p=q$) using l'Hopital's rule.
+- You should be able to use condition expectation to obtain a difference equation the solution of which tells one the length of the game in gamblers ruin.
+- You should be able to solve the difference equation for the length of the game to find an expression for the expected length of the game.
 
 END:
 

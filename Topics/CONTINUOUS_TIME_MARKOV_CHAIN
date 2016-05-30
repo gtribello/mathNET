@@ -1,8 +1,30 @@
-TITLE:
+TITLE: Markov chains in continuous time
 
 DESCRIPTION:
 
+The central equation in the theory of continuous time Markov chains is the Kolmogorov equation:
+$$
+\frac{\textrm{d} \mathbf{P}(t)}{\textrm{d}t} = \mathbf{P(t)}\mathbf{Q}
+$$
+In this equation $\mathbf{Q}$ is the so called jump rate matrix, which is the following matrix of limits.
+$$
+\lim_{\delta t \rightarrow 0} \frac{P(\delta t) - \mathbf{I}}{\delta t}
+$$
+The first of these two equations has the differential of a matrix of probabilities on the left hand side.  
+A continuous time Markov chain thus has a limiting stationary distribution $\pi$ if there is any non-zero 
+vector that satisfies:
+$$
+\pi \mathbf{Q} = 0
+$$
+This equation comes about by setting $\frac{\textrm{d} \mathbf{P}(t)}{\textrm{d}t}=0$ in the first equation.
+
 LEARNINGOUTCOMES:
+
+- You should be able to explain why the Chapman-Kolmogorov relation is particularly useful in the context of continuous time Markov chains.
+- You should be able to explain what is meant by the jump-rate matrix for a continuous time Markov chain.
+- You should be able to derive the Kolmogorov relation for continuous-time Markov chains.
+- You should be able to show that the exponential of the jump rate matrix multiplied by time is the solution of the Kolmogorov relation
+- You should be able to explain what conditions must be satisfied by the jump rate matrix of a continuous time Markov chain in order for it to have a stationary distribution.
 
 END:
 

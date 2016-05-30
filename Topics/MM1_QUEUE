@@ -1,8 +1,52 @@
-TITLE:
+TITLE: The M/M/1 Queue 
 
 DESCRIPTION:
 
+The M/M/1 Queue is the simplest stochastic process that can be used to model a queue.  
+In this model the arrival of customers in the Queue is modelled using a Poisson process 
+and the length of time each person takes to be served is modelled using an exponential 
+random variable.  The jump rate matrix for an M/M/1 queue with infinite capacity is thus:
+$$
+Q = \left(
+\begin{matrix}
+-\lambda & \lambda & 0 & 0 & 0 & \dots & 0 & 0 \\
+\mu & -\lambda-\mu & \lambda & 0 & 0 & \dots & 0 & 0 \\ 
+0 & \mu & -\lambda-\mu & \lambda & 0 & \dots & 0 & 0 \\ 
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots 
+\end{matrix}
+\right)
+$$
+while the jump rate matrix for an M/M/1 queue with finite capacity is:
+$$
+Q = \left(
+\begin{matrix}
+-\lambda & \lambda & 0 & 0 & 0 & \dots & 0 & 0 \\
+\mu & -\lambda-\mu & \lambda & 0 & 0 & \dots & 0 & 0 \\ 
+0 & \mu & -\lambda-\mu & \lambda & 0 & \dots & 0 & 0 \\ 
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+0 & 0 & 0 & 0 & 0 & \dots & -\mu & \mu 
+\end{matrix}
+$$
+Both these processes have a limiting stationary distribution when $\frac{\lambda}{\mu}<1$.  
+This stationary distribution is only valid when the average rate at which people arrive in the queue
+$\lambda$ is less the average time it takes to serve a customer $\frac{1}{\lambda}$.  The elements of
+this stationary distribution, $\pi_k$, tell us the probability that there will be $k$ people in the queue
+at any given time.  For the infinite capacity case these probabilities are:
+$$
+\pi_k = \left( 1 - \frac{\lambda}{\mu} \right) \left(\frac{\lambda}{\mu} \right)^k
+$$
+while in the finite capacity case these probabilities are:
+$$
+\pi_k = \frac{\left( 1 - \frac{\lambda}{\mu} \right) \left(\frac{\lambda}{\mu} \right)^k}{ 1 - \frac{\lambda}{\mu} \right)^{N+1} }
+$$
+where in this second expression $N$ is the maximum capacity of the queue.
+
 LEARNINGOUTCOMES:
+
+- You should be able to write out transition graphs for an M/M/1 queue with finite capacity and an M/M/1 queue with infinite capacity.
+- You should be able to write out jump rate matrices for an M/M/1 queue with finite capacity and an M/M/1 queue with infinite capacity.
+- You should be able to explain what conditions must be satisfied for an M/M/1 queue to have a limiting stationary distribution and what the limiting behavior of the system is when these conditions are not satisfied.
+- You should be able to derive an expression for the stationary distribution for a MM1 Queue with infinite capacity and for an MM1 Queue with finite capacity.
 
 END:
 

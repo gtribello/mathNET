@@ -1,0 +1,11 @@
+TITLE: The Chapman-Kolmogorov Relation
+
+VIDEO: https://www.youtube.com/embed/W5P4kCpdhho
+
+QUESTIONS:
+
+- Explain what the Chapman-Kolmogorov relation can be used to compute.
+- Explain how the probability that $P(T_3=b \wedge T_2=c | T_1=a )$ is computed from elements of the 1-step transition probablity matrix and the justification for calculating this quantity in this way.
+- Hence, explain how the probability that P(T_3=b| T_1=a )$ is computed from the elements of the 1-step transition probability matrix and the justication for calculating this quantity in this way.
+- Give a statement of the Chapman-Kolmogorov relation
+- Give what you have learnt in this video write an expression for the conditional probability $P(T=4=a | T_1=a)$ using summation notation.  Hint: there will be two summation signs in your expression.

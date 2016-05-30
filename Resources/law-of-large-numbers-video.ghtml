@@ -1,0 +1,13 @@
+TITLE: The law of large numbers
+
+VIDEO: https://www.youtube.com/embed/wCdcPSkqgUk
+
+QUESTIONS:
+
+- What does the law of large numbers state?  What are all the terms in the expression you have written down equal to.
+- What does the law of large numbers imply about the cumulative outcome for an infinite number of identical experiments? 
+- At school you will have learnt that when we repeat experiments we have to carefully ensure that the conditions in each experiment are identical.  Why do we have to control everything so carefully given what this video has just taught you about the law of large numbers?
+- Suppose that I perform $n$ identical experiments.  In each of these experiment I measure a value $X_i$.  At the end of these experiments I compute the mean $\mu = \frac{1}{n} \sum_{i=1}^n X_i$.  By making reference to the law of large numbers explain what I have assumed about the expectation, $\mathbb{E}(X)$, of the random variable $X$ that underlies these experiments when I state that $\mu$ is a meaningful quantity.
+- It is almost impossible to ensure that two experiments are identical.  Given this how do we justify using probability models that are parameterised by performing repeated experiments to predict the future?
+
+

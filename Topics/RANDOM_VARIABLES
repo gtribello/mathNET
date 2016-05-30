@@ -31,3 +31,6 @@ END:
 
 
 RANDOM_VARIABLES EXERCISE IPYTHON SOR3012 sor3012-1-coins-and-dice.ipynb Write a program to generate random variables
+RANDOM_VARIABLES INTRO HTML SOR3012 classical_probability_video The classical interpretation of probability explained
+RANDOM_VARIABLES INTRO HTML SOR3012 non-classical-probability-video An introduction to the cumulative probability distribution function
+RANDOM_VARIABLES INTRO HTML SOR3012 probability-functions An introduction to the probability mass and probabillity density

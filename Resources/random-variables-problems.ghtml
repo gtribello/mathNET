@@ -4,7 +4,7 @@ DESCRIPTION:
 
 A simple example problem involving the construction of random variables together with a simple varient on the problem for you to try.
 
-EXAMPLE_PROBLEM:
+EXAMPLE_QUESTION:
 
 An urn contains 3 balls a red one, a green one and a blue one. Consider an
 experiment in which balls are drawn at random and then replaced. Define the sample space for
@@ -13,13 +13,18 @@ space?
 
 WORKED_SOLUTION:
 
-The sample space is
+The sample space is:
+<br/><br/> 
 
 <table>
-<tr><td> red </td><td> red </td><td> red </td><td> green </td><td> red </td><td> blue </td></tr>
-<tr><td> green </td><td> red </td><td> green </td><td> green </td><td> green </td><td> blue </td></tr>
-<tr><td> blue </td><td> red </td><td> blue </td><td> green </td><td> blue </td><td> blue </td></tr>
-</table>
+<col width="100">
+<col width="100">
+<col width="100">
+<tr><td> red red </td><td> red green </td><td> red blue </td></tr>
+<tr><td> green red </td><td> green green </td><td> green blue </td></tr>
+<tr><td> blue red </td><td> blue green </td><td> blue blue </td></tr>
+</table> 
+<br/> 
 
 The classical interpretation of probability means all combinations are equally likely.  Hence:
 

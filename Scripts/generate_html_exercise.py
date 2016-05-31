@@ -19,6 +19,7 @@ def convert_exercise_to_html( infile ):
     html_string = ""
     insolution=0
     inquestion=0
+    egcount=0
     iq=0 
     foundexamples=0
     foundproblems=0
@@ -30,6 +31,7 @@ def convert_exercise_to_html( infile ):
               sys.error("DESCRIPTION SHOULD APPEAR BEFORE EXAMPLES IN INPUT FILE " + infile)
            html_string += "<H1> Introduction </H1>\n"
         elif "EXAMPLE_QUESTION:" in item :
+           egcount += 1
            if foundexamples==0 : 
               html_string += "<H1> Worked examples </H1>\n"
               html_string += "<p> Click on the problems to reveal the solution </p> \n" 
@@ -41,6 +43,7 @@ def convert_exercise_to_html( infile ):
               html_string +='</div>\n'
            inquestion=1
            insolution=0
+           html_string += '<h4> Problem ' + str(egcount) + '</h4>'
            html_string += '<div id="accordion" class="panel-group"> \n'
            html_string += '<!-- Start of introductory panel -->\n'
            html_string += '<div class="panel panel-default">\n'

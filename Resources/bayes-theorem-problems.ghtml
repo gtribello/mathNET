@@ -41,7 +41,7 @@ $$
 P(D=1|T=1) = \frac{P(T=1|D=1)P(D=1)}{P(T=1)} = \frac{0.99 \times 0.001}{0.005985} \approx 0.165
 $$
 
-EXAMPLE_QUESTIONs
+EXAMPLE_QUESTION:
 
 Two production lines produce the same part. Line 1 produces 1,000 parts per week of
 which 100 are defective. Line 2 produces 2,000 parts per week of which 150 are defective. If you
@@ -70,12 +70,12 @@ $$
 
 EXAMPLE_QUESTION:
 
-You are selling a product in an area where 30 \% of the people live in the city
-and the rest live in the suburbs.  Currently 20 \% of the city dwellers user
-your product and 10 \% of the suburbanites use your product.  You are presented
+You are selling a product in an area where 30 % of the people live in the city
+and the rest live in the suburbs.  Currently 20 % of the city dwellers user
+your product and 10 % of the suburbanites use your product.  You are presented
 with two new sales strategies the first will increase your market share in the
-suburbs to 15 \%.  The second will increase your market share in the city to 25
-\%. Which strategy should you adopt? What percentage of the people who own your
+suburbs to 15 %.  The second will increase your market share in the city to 25
+%. Which strategy should you adopt? What percentage of the people who own your
 product are city dwellers before your new sales drive?
 
 WORKED_SOLUTION:

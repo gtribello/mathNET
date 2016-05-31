@@ -1,0 +1,13 @@
+TITLE: The ergodic theorem
+
+VIDEO: https://www.youtube.com/embed/JZnzQ8YzVZg
+
+QUESTIONS:
+
+- Explain the meaning of the word ergodic in the context of Markov chains.
+- Why can't an ergodic Markov chain have transient states?
+- Give a statement of the ergodic theorem ensuring that you define all the terms in the equation.
+- Explain how you can calculate the expected return time to a state if you are given the stationary distribution.
+- Explain what is meant by the period of a state in the context of Markov chains.
+- What is the greatest common divisor for the following sets of numbers $\{2,4,6,8\}$, $\{4,8,12\}$, $\{4,5,8,12\}$ and $\{4,8,12,14\}$
+- Draw the transition graph for a Markov chain involving 5 states in which every state has a period of 5 and a transition graph for a 5 state Markov chain in which every state has a period of 3.

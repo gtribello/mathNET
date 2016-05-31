@@ -1,0 +1,15 @@
+TITLE: Hitting times and hitting probabilities
+
+VIDEO: https://www.youtube.com/embed/kAuZf1MLQHc
+
+QUESTIONS:
+
+- BEFORE WATCHING THE VIDEO: Write down the partition theorem and the conditional expectation theorem
+- BEFORE WATCHING THE VIDEO: Explain the meaning of the term geometric series and write an expression for the sum of a geometric series.
+- The first idea that is introduced in the video is the notion of partitioning the transition matrix. Use what is taught in this part of the video to complete the following sentence: The matrix $\mathbf{Q}$ describes transitions between states that are ... and states that are ...  Now write similar sentences for $\mathbf{R}$, $\mathbf{0}$ and $\mathbf{I}$.
+- Think about all the Markov chains we have encountered in this course and imagine partitioning them using the methods described in this course.  Can you conceive of a chain in which the bottom right hand corner of the partitioned matrix is not the identify?  Can you conceive of a chain in which the bottom left hand corner of the partitioned matrix is not a matrix of zeros? 
+- Explain in your own words why the matrix of hitting probabilities, $\mathbf{H}$, can be calculated using $\mathbf{H} = \mathbf{I} - \mathbf{Q})^{-1} \mathbf{R}$
+- Suppose I have a Markov chain with 40 recurrent (absorbing) states and 100 transient states.  How many rows and columns would the hitting probability matrix have?
+- Explain why the hitting times are given in a vector and not in a matrix.  Why can I not calculate the expected time to arrival one particular recurrent (absorbing) state?
+- Explain in your own words why the hitting probability vector can be calculated using $\mathbf{h} = (\mathbf{I} - \mathbf{Q})^{-1}$\mathbf{1} and the meaning of the symbol $\mathbf{1}$ in this expression.  
+- How many components are there in the hitting probability vector for my markov chain with 40 recurrent (absorbing) states and 100 transient states?

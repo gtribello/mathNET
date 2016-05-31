@@ -1,0 +1,33 @@
+TITLE: Random variables
+
+DESCRIPTION: 
+
+A simple example problem involving the construction of random variables together with a simple varient on the problem for you to try.
+
+EXAMPLE_PROBLEM:
+
+An urn contains 3 balls a red one, a green one and a blue one. Consider an
+experiment in which balls are drawn at random and then replaced. Define the sample space for
+such an experiment if this is done twice. What is the probability for each element in the sample
+space? 
+
+WORKED_SOLUTION:
+
+The sample space is
+
+<table>
+<tr><td> red </td><td> red </td><td> red </td><td> green </td><td> red </td><td> blue </td></tr>
+<tr><td> green </td><td> red </td><td> green </td><td> green </td><td> green </td><td> blue </td></tr>
+<tr><td> blue </td><td> red </td><td> blue </td><td> green </td><td> blue </td><td> blue </td></tr>
+</table>
+
+The classical interpretation of probability means all combinations are equally likely.  Hence:
+
+$$
+P = \frac{1}{9} \nonumber
+$$
+
+EXERCISE: Exercise 1
+
+Consider the problem described in the example but now suppose that the balls are not replaced.  Enumerate the 
+possible outcomes and calculate the probabilities.

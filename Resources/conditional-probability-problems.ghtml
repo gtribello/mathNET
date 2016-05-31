@@ -1,0 +1,89 @@
+TITLE: Conditional probability
+
+DESCRIPTION:
+
+All the problems below require you to think about whether you are calculating conditional 
+or absolute probabilities.  As you do them rember that the conditional probability that the 
+random variable $X=1$ given that the random variable $Y=9$ is calculated using:
+$$
+P(X=1|Y=9) = \frac{P(X=1 \wedge Y=9)}{P(Y=9)}
+$$
+
+EXAMPLE_PROBLEM:
+
+You get through to the final round of a television game show. The host offers you
+three boxes one of which contains a fabulous prize. You are asked to select a box.
+The host then opens one of the two boxes that you did not select and offers you the
+opportunity to stick with your original choice or to change. What is the best thing
+to do?
+
+WORKED_SOLUTION:
+
+This is an example of the famous Monty Hall problem. The answer in short is that it is always
+better to change as this increases the likelihood that you will win the prize. Many people find this
+counter intuitive when they first encounter this result so it is worth taking some time to think
+about why this is the result.
+
+Lets begin by thinking of all the way the game can play out.  We begin by introducing a Bernoulli 
+random variable, $X$, that equals one if you select the door with the prize and zero otherwise. 
+Now obviously we know that:
+
+$$
+P(X=1)=\frac{1}{3} \qquad \qquad \textrm{and} \qquad \qquad P(X=0)=\frac{2}{3}
+$$
+
+Lets now introduce a second random variable, $Y$, that describes which door the host opens.  This is 
+the critical part of the problem.  <b> The random variable $Y$ is not independent of the random variable
+$X$ </b>.  This is intuitively obvious - the host will not open the door that has the prize behind it and 
+he/she will not open the door that you picked - consequently the value of $X$ affects the value of $Y$ so 
+these variables are not independent.  The reason people go wrong is connected to the fact that it is difficult
+to work out what implication this intuitively obvious realization has on the mathematics.
+
+To make the nomenclature simpler in what follows we note that $Y$ - the random variable that describes 
+the door the host opens - can only take one of two values, $0$ or $1$.  This is the case because the host 
+cannot open the door the contestant selected - there are thus only two doors remaining for him/her to choose from.  Now, 
+given that $X$ and $Y$ are not independent we must work out values for the conditional probabilities:
+$P(Y=1|X=0)$, $P(Y=0|X=0)$, $P(Y=1|X=1)$ and $P(Y=0|X=1)$.  These <b> conditional </b> probabilities are:
+$$
+P(Y=1|X=0)=1 \qquad P(Y=0|X=0)=0 \qquad P(Y=1|X=1)=\frac{1}{2} \qquad P(Y=0|X=1)=\frac{1}{2}
+$$  
+The values of $P(Y=1|X=1)$ and $P(Y=0|X=1)$ are as we expect.  There are two doors and the host is free 
+to open either of them so the classical interpretation of probability tells us that the probability here is
+$\frac{1}{2}$.  The host is only free to open either door, however, because $X=1$.  That is to say the host is only 
+free to open either door because prize is behind the door the contestant selected initially.  When this is not the case (i.e. when $X=0$) the host 
+is forced to open one particular door as doing otherwise would reveal the prize.  This is why we have 
+$P(Y=1|X=0)=1$ and $(Y=0|X=0)=0$.  We are now in a position to work out absolute probabilities for all the various 
+(mutually exclusive) ways the game could play out using the definition of conditional probabilty.  This gives us the following:
+$$
+\begin{aligned}
+P(Y=0 \wedge X=0 ) & = P(Y=0|X=0)P(X=0) = 0 \times \frac{2}{3} = 0 \\
+P(Y=1 \wedge X=0 ) & = P(Y=1|X=0)P(X=0) = 1 \times \frac{2}{3} = \frac{2}{3} \\
+P(Y=0 \wedge X=1 ) & = P(Y=0|X=1)P(X=1) = \frac{1}{2} \times \frac{1}{3} = \frac{1}{6} \\
+P(Y=1 \wedge X=1 ) & = P(Y=1|X=1)P(X=1) = \frac{1}{2} \times \frac{1}{3} = \frac{1}{6} 
+\end{aligned}
+$$
+
+EXAMPLE_PROBLEM:
+
+You are on a game show in which there is a prize behind one of $n$ 
+doors.  At the start of this game you select one door.  The host then opens 
+$k<n-1$ of the remaining doors and shows you that there is no prize behind any 
+of them.  You are then offered the chance to stick with your original choice of 
+door or to change.  Determine the probability that you will win the game if you 
+stick with your original choice of door and determine the probability that you 
+win the game when you change to one of the unopened doors.
+
+WORKED_SOLUTION:
+
+$$
+P = \frac{n-1}{n(n-1-k)}
+$$
+
+EXERCISE: Exercise 1
+
+If two cards are drawn from a deck of cards calculate the probability
+that (a) they are both spades and (b) they both belong to the same suit.  (a
+deck of cards consists of 52 cards each one of which belongs to one of four
+suits. The number of cards in each of these suits is equal to 13)
+
+

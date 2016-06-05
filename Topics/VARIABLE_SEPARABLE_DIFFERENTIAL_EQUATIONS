@@ -8,6 +8,8 @@ $$
 \textrm{d}f = G(x) \textrm{d}x
 $$
 
+The general solution to these types of differential equations are:
+
 LEARNINGOUTCOMES:
 
 - You should be able to recognize when a differential equation can be solved by separation of variables.

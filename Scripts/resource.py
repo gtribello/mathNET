@@ -1,5 +1,6 @@
 import os
 import shutil
+import topic
 import generate_html_exercise
 import generate_video_page
 
@@ -57,7 +58,8 @@ class resource(object) :
        if( printmodule==1 ):
             table += '<td><a href="' + self.module +'.html">' + self.module + "</a></td>"    
        elif( printmodule==2 ):
-            table += '<td><a href="' + self.topic +'.html">' + self.topic + "</a></td>"
+            mytopics = topic.topiclist()
+            table += '<td><a href="' + self.topic +'.html">' + mytopics.get(self.topic).label + "</a></td>"
 
        table += "</tr> \n"
        return table

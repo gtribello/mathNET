@@ -3,7 +3,7 @@ TITLE: The matrix inverse
 DESCRIPTION:
 
 The inverse of a square matrix $\mathbf{A}$ (if it exists) is the matrix $\mathbf{A}^{-1}$ which satisfies:
-$
+$$
 \mathbf{A}^{-1}\mathbf{A}=\mathbf{A} \mathbf{A}^{-1}=\mathbf{I}
 $$
 where $\mathbf{I}$ is the unit matrix:

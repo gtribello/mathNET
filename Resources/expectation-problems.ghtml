@@ -1,0 +1,61 @@
+TITLE: Expectation 
+
+DESCRIPTION:
+
+In the following problems the aim is (almost) always to find the expectation for a random variable.
+Remember that for discrete random variable the expectation is given by:
+$$
+\mathbb{E}(X) = \sum_{x_i=0}^\infty x_i P(X=x_i) = \sum_{x_i=0}^\infty x_i f_X(x_i) 
+$$ 
+where $f_X(x)$ is used to denote the probability mass function.  For a continuous random variable
+the expectation is:
+$$
+\mathbb{E}(X) = \int_{-\infty}^\infty x f_X(x) \textrm{d}x
+$$
+where $f_X(x)$ is the probability density.  If the expectation of a function of a random variable $\mathbb{E}[g(X)]$
+is required then this can be calculated using:
+$$
+\mathbb{E}[g(X)] = \sum_{x_i=0}^\infty g(x_i) f_X(x_i)
+$$
+in the discrete case and using:
+$$
+\mathbb{E}[g(X)] = \int_{-\infty}^\infty g(x) f_X(x) \textrm{d}x
+$$
+in the continuous case.
+
+EXERCISE: Exercise 1
+
+The discrete random variable, $X$, has the values: $X \in \{ 0,1,2,3\}$,
+with a probability mass given by:
+$$
+f_X(x) = P(X=x) =k x (x-1) \quad , \quad x=0,1,2,3 \quad .
+$$
+where $k$ is a constant.  Find the value of $k$ and then find the expectation, $\mathbb{E}(X)$, and variance, $\textrm{var}(X)$, of this
+random variable.
+
+EXERCISE: Financial maths problem
+
+Suppose that the value/price of an asset (for example a share in 
+a company)  changes randomly over time. In the geometric Brownian motion model,
+its value, $S$, at a 
+time, $t$, is given by  
+$$
+S(t)=S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t +\sigma X  \sqrt{t} \right)
+\qquad ,
+$$
+where $\mu$ is the drift rate, $\sigma$, the volatility, and where
+ $X$ is a random variable, with the standard distribution, $N(0,1)$. 
+ Clearly, $S_{0}$, is the initial ($t=0$) value of the asset.
+
+Show that the expected value of the asset, after a time $t$, is given by:
+$$
+\mathbb{E}[S(t)] = \frac{ S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t \right) }{\sqrt{2 \pi}}
+\int_{-\infty}^\infty \exp\left( \sigma x \sqrt{t} - \frac{x^2}{2} \right) \textrm{d}x
+$$
+Then use the fact that $\sigma x \sqrt{t} - \frac{x^2}{2} = -\frac{1}{2}(x-\sigma\sqrt{t})^2 + \frac{1}{2}\sigma^2 t$,
+the substitution $y = x - \sigma \sqrt{t}$ and the fact that $\int_{-\infty}^\infty e^{-y^2/2} \textrm{d}y = \sqrt{2\pi}$
+to show that the value of the above integral is nothing more than:
+$$
+\mathbb{E}[S(t)] = S_0 \exp(\mu t)
+$$
+

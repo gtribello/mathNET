@@ -1,0 +1,37 @@
+TITLE: Binomial random variable
+
+DESCRIPTION:
+
+The problems below all involve the binomial random variable in some way.  Remember that this
+random variable is used to model the number of successes in a set of $n$ Bernoulli trials and that
+the probability mass function for this random variable is:
+$$
+f_X(x) = \binom{n}{x} (1-p)^{n-x} p^x
+$$
+
+EXERCISE: Binomial to Poisson
+
+Consider the binomially-distributed, discrete random variable, $X$, with
+probability mass function:
+$$
+ P(X=x) = f_X(x) = 
+ \begin{cases}
+  \binom{n}{x} p^x(1-p)^{n-x} & x=0,1,2,\dots,n \\
+  0 & \textrm{otherwise}
+ \end{cases}
+$$
+By making the substitution $p=\frac{\lambda}{n}$ and by recalling that
+$\lim_{ n\rightarrow \infty} \frac{n!}{(n-x)!}=\lim_{n\rightarrow \infty} n^x$
+show how the above probability mass function becomes that of the Poisson
+Distribution:
+$$
+ P(X=x) = f_X(x) = 
+ \begin{cases}
+  \frac{\lambda^x}{x!} e^{-\lambda}  & x=0,1,2,\dots,n \\
+  0 & \textrm{otherwise}
+ \end{cases}
+ \nonumber
+$$
+in the limit as $n \rightarrow \infty$ 
+
+

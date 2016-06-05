@@ -1,0 +1,60 @@
+TITLE: Central limit theorem
+
+DESCRIPTION:
+
+The central limit theorem states that for a set of independent and
+identically distributed random variables, $X_1$, $X_2$, $\dots$ the following
+holds: 
+$$
+ \lim_{N \rightarrow \infty} P\left( \frac{S_n/N - 
+\mu}{\sigma/\sqrt{N}} \le z \right) = \Phi(z)
+$$
+where $N$ is the number of random variables and $S_n = X_1 + X_2 + \dots$.
+In the above expression $\mu=\mathbb{E}(X)$ and 
+$\sigma^2=\textrm{var}(X)$ so obviously this expression cannot be used if your
+random variable has either $\mathbb{E}(X)=\infty$ or $\textrm{var}(X)=\infty$.
+
+In doing the following exercises you will learn how to extract probabilistic
+information about the sums of independent and identical random variables 
+using the central limit theorem.
+
+EXERCISE: Exercise 1
+
+Consider a sequence of discrete random variables, $\{X_1,X_2, \dots , X_n \}$, that 
+are independent, identically-distributed, each with mean $\mu$ and 
+variance $\sigma^2$. Recall that the central limit theorem, for the sample
+variable, $S_n$, where: $S_n=X_1+X_2+ \cdots + X_n$, can be expressed as:
+ $$
+ \lim_{n \rightarrow \infty}
+ P \left( {S_n/n -\mu  \over \sigma /\sqrt{n}} \leq x \right) = \Phi(x)  \quad ,
+ $$
+ where $\Phi(x)$ is the standard normal probability distribution function.
+
+<ul>
+<li> Analysis of commuter travel  shows that the number of passenger per car, $X$, 
+is a discrete random variable with independent, identical distributions, such that 
+$\mathbb{E}(X)=1.2$ and $\textrm{var}(X) = 1.0$.  Use the central-limit theorem  to estimate 
+the probability that, in a sample of $n=100$ cars, the total number of passengers is 140 or fewer. </li>
+<li> The share price of SOR plc  varies in  a random manner, such that 
+the price increase each minute is described by a discrete 
+random variable  $X$ (measured in pounds), with the following probability mass:
+$$
+f_{X}(x) =
+\left\{
+\begin{array}{ll}
+0.5   & \quad , \quad  x=+0.05  \\ 
+0.2  & \quad , \quad x=\ \ \ 0.00  \\
+0.3   & \quad , \quad  x=-0.05  \\
+\end{array}
+\right.
+$$
+Calculate $\mathbb{E}(X)=\mu$ and $\sqrt{\textrm{var}(X)}=\sigma$ and hence use the central limit 
+theorem to estimate the probability  that the price will increase by £1.20 , or more,  after 3  hours. </li>
+</ul>
+
+EXERCISE: Exercise 2
+
+During the course of a single season a particular football player has 213 penalty attempts and scores 175 of them. 
+Given this information calculate the probability he will score during his next penalty attempt and explain the 
+assumptions that you have made in your calculation. Please give appropriate error bars for a 95 % confidence 
+level on your numerical estimate.

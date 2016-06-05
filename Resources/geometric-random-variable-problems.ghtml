@@ -1,0 +1,30 @@
+TITLE: Geometric random variable
+
+DESCRIPTION:
+
+The problems below all involve the geometric random variable in some way.  Remember that this 
+random variable is used to model the number of Bernoulli trials you have to perform before you 
+get a positive result and that the probability mass function for this random variable is:
+$$
+f_X(x) = (1-p)^{x-1} p
+$$
+
+EXERCISE: Exericse 1
+
+The probability I get a head when I toss a particular kind of coin is equal to $p$. C
+alculate the probability, $P(X = n)$, that I get my first head only once I have tossed 
+the coin $n$ times. You may assume that each toss of the coin is independent. In addition,
+show that:
+$$
+\sum_{n=1}^\infty P(X=n) = 1 
+$$
+
+EXERCISE: Exercise 2
+
+A group of $n$ players, $J_1$, $J_2$,...,$J_n$, sit round a table, and each player in turn, 
+starting with $J_1$, rolls a fair die. The die is passed around the table (making more than 
+one circuit of the table if necessary) until a player throws a six and thereby wins the game. 
+Show that the probability that $J_i$ (the ith player to play) wins the game is given by:
+$$
+p = \frac{ \frac{1}{6} \left( \frac{5}{6} \right)^{i-1} }{ 1 - \left(\frac{5}{6}\right)^n}
+$$

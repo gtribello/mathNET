@@ -39,3 +39,4 @@ END:
 
 
 EXPECTATION INTRO HTML SOR3012 expectation-video Introducing the expectation
+EXPECTATION EXERCISE HTML SOR3012 expectation-problems Exercises involving the calculation of the expectation for a random variable

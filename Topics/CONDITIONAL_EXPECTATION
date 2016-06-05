@@ -34,3 +34,4 @@ END:
 
 
 CONDITIONAL_EXPECTATION INTRO HTML SOR3012 conditional-expectation-video Using the conditional expectation theorem to calculate the expectation and variance of the geometric random variable
+CONDITIONAL_EXPECTATION EXERCISE HTML SOR3012 conditional-expectation-problems Problems involving using the conditional expectation theorem to calculate expectation values.

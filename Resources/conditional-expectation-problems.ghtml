@@ -1,0 +1,73 @@
+TITLE: Conditional Expectation
+
+DESCRIPTION:
+
+The conditional expectation theorem states that the expectation for a discrete random variable can
+be calculated using:
+$$
+\mathbb{E}(X) = \sum_{i=0}^\infty \mathbb{E}(X|Y=y_i)P(Y=y_i)
+$$
+The following exercises should teach you when it is appropriate to use the conditional expectation 
+theroem to calculate expectations and when it is not appropriate as well as how to use the theorem.
+
+EXERCISE: Exercise 1
+
+Your tutorial operates with the following rules. You are trapped in a classroom with an infinite amount of work
+to do.  At the beginning of the class, and every 5 minutes thereafter, you are
+offered the chance to escape based on the roll of a fair dice.  If you get a 6
+you are allowed to leave immediately, if you get a 1 you miss your next turn
+so have to wait 10 minutes for your next chance to escape, if you roll any
+other number you get a turn in 5 minutes.  Calculated the expected time you
+will spend in the tutorial.
+
+EXERCISE: Exercise 2 
+
+In a game show, there are 4 identical boxes, each containing a prize. 
+The boxes contain 50, 100, 200 and 500 pounds.  You are asked to choose one box
+and are allowed to keep the contents as your prize.  What is the expected value
+of your prize?
+
+EXERCISE: Exercise 3
+
+A disorientated  explorer reaches a clearing in the jungle. There are three
+paths leading from the clearing. Path 1 will takes him into deep forest that forces him 
+to return to  the clearing after 2 hours.  Path 2 is also a dead-end that forces him to return after 3 hours 
+of walking. Path 3 takes him to the village after 1 hour.
+
+<ul>
+<li> Assume the explorer will always select paths 1,2, and 3 with equal probabilities, irrespective of whether he 
+found it to be a dead-end.  Calculate the expected value and standard deviation for the number of hours to reach the village.</li>
+<li> Assume that the explorer chooses the path at random, with equal probabilities, but will not choose a path that he has already 
+ established is a dead-end.  Calculate the expected time for him to reach the village, in this case. </li>
+</ul>
+
+EXERCISE: Exercise 4
+
+A coin is tossed repeatedly.  The probability of heads occurring is $p$.
+
+<ul>
+<li> Let $X_{1}$ denote the number of tosses required for the first
+'heads' 
+to occur. Show that:
+$$
+\mathbb{E}(X_{1}) = {1 \over p} \qquad .
+$$ 
+</li>
+<li> Let $X_{n}$ denote the number of tosses required to get a consecutive sequence of $n$ heads.  
+Show that the conditional expectation $\mathbb{E}(X_n |X_{n-1}=k)$ is equal to:
+$$
+\mathbb{E}(X_n|X_{n-1}=k) = k + 1 + ( 1-p)\mathbb{E}(X_n)
+$$
+</li>
+<li> By ' conditioning on' $X_{n-1}$, show that:
+$$
+\mathbb{E}(X_{n}) = {1 \over p} \left(   1+ \mathbb{E}(X_{n-1})      \right)  
+\qquad .
+$$
+</li>
+<li> Hence show that,
+$$
+\mathbb{E}(X_{n}) = \sum_{i=1}^{n} {1 \over p^{i}}  \qquad .
+$$
+</li>
+</ul>

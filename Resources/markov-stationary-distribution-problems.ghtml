@@ -1,0 +1,69 @@
+TITLE: Finding the stationary distribution of a Markov chain
+
+DESCRIPTION:
+
+The following problems all involve Markov chains with a limiting 
+stationary distribution.  The purpose in doing these problems is for you 
+to come to understand how to set up the chain 
+and how to find the stationary distribution by finding the top eigenvector
+of the transition matrix.
+
+EXERCISE: A class of Markov chains
+
+A Markov chain is described by the following transition matrix:
+$$
+ \left( 
+ \begin{matrix}
+  1 - 4p & 4p & 0 \\
+  2p & 1 - 4p & 2p \\
+  0 & 2p & 1 - 2p
+ \end{matrix}
+ \right)
+$$
+Determine the range of values which $p$ is allowed to take and the 
+range of values of $p$ for which the matrix has a limiting stationary
+distribution.  Then find the limiting stationary distribution for this
+chain.
+
+EXERCISE: Markov's glazers
+
+A double glazing firm employs staff to cold call clients and try to sell
+them new windows for their home. There are three levels of staff pay: Level 1
+(£50), Level 2 (£75) or Level 3 (£100).  The amount a
+person is paid in a given evening is determined by their performance
+that evening and their performance on the previous evening.  A staff member who
+was paid at level 1 on the previous day is moved to level 2 if they are
+amongst the top 80% of sellers that evening. Similarly a staff member on level
+2 the previous evening is moved to level 3 if they are amongst the top 80% this evening. Members of staff in the bottom 20% have their pay reduced by
+at least one level.  If they are in level 2 their pay falls to that of
+level 1.  If they are in level 3 they fall to level 1 if they are in the bottom
+5% and level 2 otherwise. If the company employs
+$n$ members of staff, calculate the average amount they would expect to pay out
+in salaries each evening.  You may assume that the performance of any given
+member of the sales team is random and hence that the ordering of
+staff performances is random. 
+
+EXERCISE: Markov's magazine
+
+A magazine has print and ipad editions and 100,000 subscribers. These
+subscribers can subscribe to the magazine in
+one of three ways. They can buy the print magazine only, they can buy an ipad
+subscription only or they can buy both an ipad and a print subscription to the
+magazine.  The magazine is constantly changing its content and there is not
+always a complete overlap between the features in the ipad and print versions of
+the magazine.  As a consequence people are continuously changing their
+subscription package. In any given week no one ever changes from a
+purely print subscription to the ipad edition and vice versa.  However, every
+week a constant fraction, $p$, of the subscribers on a print only subscription
+change to the ipad+print subscription.  Similarly $p$ subscribers on
+an ipad only subscription change to the ipad+print subscription every week. Of
+those subscribers on the ipad+print subscription a fraction, $2p$, of them
+decide which version of the magazine they prefer in any given week and adjust
+their subscription accordingly. Subscribers are split 50/50 on which version of
+the magazine they prefer so $p$ change to ipad only, while the other $p$ 
+change to print only.  Explain why the level of subscription a person has to
+the magazine is a Markov process, draw the transition graph and write down the
+transition matrix for the random variable. Calculate the average number of
+magazines
+that need to be printed each week in order to satisfy the demand for printed
+editions.

@@ -1,0 +1,62 @@
+TITLE: Detailed Balance
+
+DESCRIPTION:
+
+In solving the following problems you will use the detailed balance condition:
+$$
+\pi_i p_{ij} = \pi_j p_{ji}
+$$
+to find the limiting staionary distribution for a Markov chain.  Markov chains 
+with limiting stationary distributions don't always satisfy detailed balance 
+so you need to take care when using this method for finding the stationary distribution.
+If you are in any doubt use the method based on finding the top eigenvector.  
+
+EXERCISE: A first problem
+
+Consider the  reversible  Markov chain, between the states 
+$X=0,1,2,3$,  represented  by  the following transition matrix. 
+$$
+P=
+\left(
+\begin{matrix}
+0.5   &  0.5  & 0 &    0  \\
+ 0.05 &  0.45 & 0.5 & 0 \\
+0     &  0.1 &  0.5 &  0.4  \\
+0 & 0 &  0.3  &  0.7 \\
+\end{matrix}
+\right) \qquad .
+$$
+Draw the {\em transition graph} for this process and use the 
+detailed balance condition to find the stationary distribution, $\pi$.
+Once you have calculated $\pi$ use it to verify that this is the 
+stationary distribution by showing that $\pi P = \pi$.  Then use
+the ergodic theorem to calculate the recurrence time (expected return time) 
+for state $X=2$.
+
+EXERCISE: A big chain
+
+Consider the  reversible  Markov chain, between the 
+states $X=0,1,2,3,4,5,6,7,8$,  represented  by  the following matrix. 
+$$
+P=
+\left(
+\begin{matrix}
+ 0& 1/2& 0& 0& 0& 1/2& 0& 0& 0\\ 
+ 1/3 & 0 &1/3& 0& 1/3& 0& 0& 0& 0 \\
+ 0& 1/2 &0 &1/2& 0& 0& 0& 0& 0 \\
+ 0 &0 & 1/3& 0 &1/3& 0 &0 &0 &1/3\\ 
+ 0& 1/4& 0 &1/4& 0& 1/4& 0& 1/4 &0\\ 
+ 1/3& 0 &0& 0& 1/3& 0& 1/3& 0& 0 \\
+ 0& 0 &0 &0 &0 &1/2& 0& 1/2& 0 \\
+ 0& 0 &0& 0& 1/3 &0 &1/3& 0 &1/3\\ 
+ 0 &0& 0& 1/2& 0& 0& 0& 1/2& 0   \\
+\end{matrix}
+\right) \qquad .
+$$
+Draw the transition graph for this process (hint: start by drawing a 3 x 3 grid
+of nodes with 0, 5 and 6 on the top row 1,4 and 7 on the second row and 2,3 and
+8 on the bottom row).  Then use the detailed balance condition to find the 
+stationary state and the ergodic theorem to calculate the fraction of time that the system spends 
+in state $X=6$ and the expected return time for state 3. That is, the expected number of 
+steps, starting from state $X=3$, until the system returns to state 3 
+for the first time.

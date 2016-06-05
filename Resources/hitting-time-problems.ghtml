@@ -1,0 +1,89 @@
+TITLE: Discrete markov chains with absorbing states
+
+DESCRIPTION:
+
+In these exercises we consider Markov chains that have a mixture of transient and 
+absorbing states.  In problems of this type the aim is almost always to calculate the
+probability of finishing in each of the absorbing states and to calculate the expected
+number of steps till absorbtion.
+
+EXERCISE: Time to absorbtion
+
+A discrete random variable, $X$, can take the values $X \in \{0,1,2\}$
+according to a discrete Markov Process described by the transition matrix:
+$$
+\mathbf{P} = \left(
+\begin{matrix}
+ 0.6 & 0.1 & 0.3 \\
+ 0.2 & 0.2 & 0.6 \\
+ 0 & 0 & 1 
+\end{matrix}
+\right)
+\nonumber
+$$
+Find the hitting times for each of the transient states in this
+chain. That is find the expected number of steps required until absorption
+occurs. 
+
+EXERCISE: Multiple absorbing states
+
+A Markov chain, between the states $X=0,1,2,3,4$,
+ is  described by the following  transition matrix:
+$$
+\left(
+\begin{matrix}
+0.1 & 0.2 & 0.3 & 0.4 & 0  \\
+0 & 1 & 0 & 0  & 0 \\
+0.2 & 0.1 & 0.4 & 0.2 & 0.1\\
+0 & 0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 0 & 1 \\
+\end{matrix}
+\right) 
+$$
+Draw the transition graph for this chain, and show that $X=0,2$ are transient states.
+Once you have done this Partition the transition matrix so that
+$$
+P =
+\left(
+\begin{matrix}
+Q & R \\
+0  & I \\
+\end{matrix}
+\right) 
+\qquad ,
+$$ 
+with $Q$  connecting the transient states so that you can Calculate the  
+hitting probability matrix:
+$$
+h = (I-Q)^{-1}R \qquad ,
+$$
+and the hitting times.  These hitting times should tell you the expected number of steps 
+starting from the transient states, until absorption occurs.
+
+EXERCISE: Markov university 
+
+A university introduces a new mathematics degree structure. The course is
+only two years long but students have to resit a year if they fail their final
+examinations.  Students also have the option to resit the first and second
+years if they feel they did particularly poorly during year 2.  In any given
+year students perform as follows in the two years:
+
+<table align="center">
+<col width="200">
+<col width="200">
+<col width="200">
+<col width="200">
+<tr><td> </td><td> Fraction passed </td><td> Fraction failed </td><td> Fraction dropped out </tr>
+<tr><td> Year 1 </td><td> 0.1 </td><td> 0.6 </td><td> 0.3 </td></tr> 
+</table>
+
+<br/>
+
+<table align="center"> 
+<col width="200">
+<col width="200">
+<col width="200">
+<col width="200">
+<tr><td></td><td>  Fraction passed </td><td> Fraction repeat year 1 </td><td> Fraction repeat year 2 </td></tr> 
+<tr><td> Year 2 </td><td> 0.6 </td><td> 0.2 </td><td> 0.2 </td></tr>
+</table> 

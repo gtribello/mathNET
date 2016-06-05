@@ -1,0 +1,55 @@
+TITLE: Transient and Recurrent state
+
+DESCRIPTION:
+
+In the following exercises you will have practise in drawing transition graphs 
+for Markov chains from the transition matrix and in classifying states as transient
+or recurrent.  Remember that a state is transient if:
+$$
+P(R_i \le \infty ) < 1
+$$
+and that is recurrent if:
+$$
+P(R_i \le \infty ) = 1
+$$
+Here $R_i$ is the return time to state $i$, which is random as this quantity measures the number of steps in a loop that starts and
+end in state $i$.
+
+EXERCISE: Classifying states in chains
+
+Consider the following transition matrices for three Markov chains. 
+
+In each case, (a) draw the transition diagram, and (b) classify 
+the subsets of states (equivalence classes)  into transient states 
+and recurrent states.
+$$
+{\rm (i)} \quad 
+\left(  
+\begin{matrix}
+0.1 &   0.8  &  0 & 0.1 \\
+0    &   1  &  0  &  0  \\
+0   & 0 & 0 & 1 \\
+0   &   0  &  0.4  & 0.6\\
+\end{matrix}
+\right)
+\qquad {\rm (ii)} \quad 
+\left(  
+\begin{matrix}
+0  &   0.5  &  0.5 \\
+0  &   0.4  &  0.6 \\
+1  &   0  &  0 \\
+\end{matrix}
+\right)
+\qquad {\rm (iii)} \quad 
+\left(  
+\begin{matrix}
+0.1 &  0 & 0.3 & 0.6 \\
+0.2 & 0.2 & 0.6 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 1 \\
+\end{matrix}
+\right)
+\qquad .
+$$
+
+

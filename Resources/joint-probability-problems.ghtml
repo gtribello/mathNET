@@ -1,0 +1,32 @@
+TITLE: Joint probability distribution function
+
+DESCRIPTION:
+
+A pair of discrete random variables $X$ and $Y$ has a joint probability mass function in which
+$$
+f_{XY}(x,y) = P(X=x \wedge Y=y)
+$$
+The following exercises get you to manipulate these objects and to extract marginal distributions
+from joint distributions.
+
+EXERCISE: Exercise 1
+
+Consider the two random variables $X$ and $Y$ with $X \in \{0,1,2\}$ and $Y \in
+\{1,2,4\}$.  The following table gives the join probability mass for the variables (with $X$ along the top):
+<br/>
+<table align="center">
+<col width="100">
+<col width="100">
+<col width="100">
+<col width="100">
+<tr> <td> $f_{XY}(x,y)$ </td><td> 0 </td><td> 1 </td><td> 2 </td></tr>
+<tr> <td> 1 </td><td> 0.1 </td><td> 0.1 </td><td> 0.0 </td></tr> 
+<tr> <td> 2 </td><td> 0.2 </td><td> 0.1 </td><td> 0.1 </td></tr> 
+<tr> <td> 4 </td><td> 0.0 </td><td> 0.2 </td><td> 0.2 </td></tr> 
+</table>
+<br/>
+Calculate the values of (i) $\mathbb{E}(X)$, (ii) $\mathbb{E}(Y)$ and (iii) $\textrm{cov}(X,Y)$.  Then
+calculate a table of values for the conditional probability mass $f_{X|Y}(x,y)$ and use these conditional
+probabilities to calculate the values of $\mathbb{E}(X|Y)$ for $y=1,2,4$.  Use all the values you have 
+obtained to verify the conditional expectation theorem.
+

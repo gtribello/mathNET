@@ -1,0 +1,18 @@
+TITLE: Poisson Random Variable
+
+DESCRIPTION:
+
+The problems below all involve the Poisson random variable.  Remember that the probablity mass function 
+for this random variable is:
+$$
+f_X(x) = P(X=x) = \frac{\lambda^x}{x!} e^{-\lambda}
+$$
+where $\lambda$ is a parameter.
+
+EXERCISE: Normalisation
+
+Prove that the Poisson Distribution is properly normalised.
+
+EXERCISE: Moment generating function
+
+Calculate the moment generating function for the Poisson Distribution and hence calculate the expectation and variance of this random variable. 

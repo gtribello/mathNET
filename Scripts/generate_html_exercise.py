@@ -68,11 +68,16 @@ def convert_exercise_to_html( infile ):
               html_string +='      </div>\n'
               html_string +='   </div>\n'
               html_string +='</div>\n'
+              insolution=0
            if foundproblems==0 :
               html_string += '<H1> Problems for you to try </H1> \n'
+              html_string += '<div id="accordion" class="panel-group"> \n' 
               foundproblems=1
+           elif foundproblems==1 :
+              html_string +='         </div>\n'
+              html_string +='      </div>\n'
+              html_string +='   </div>\n'
            iq+=1
-           html_string += '<div id="accordion" class="panel-group"> \n'
            html_string += '    <div class="panel panel-default">\n'
            html_string += '        <div class="panel-heading">\n'
            html_string += '            <h4 class="panel-title">\n'

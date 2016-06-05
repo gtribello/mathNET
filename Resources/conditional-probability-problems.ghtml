@@ -45,13 +45,16 @@ person two wins <b> given that person one looses </b>.
 Lets now consider the third person.  For him to win the first two people must loose 
 and he must then pick the winning box.  We thus have:
 $$
-p_3 = p(\textrm{first person looses}) \times p(\textrm{second person looses}) \times p(\textrm{third person wins}|\textrm{first and second person loose}) = \frac{n-1}{n}{\frac{n-2}{n-1} \frac{1}{n-2} = \frac{1}{n}
+\begin{aligned}
+p_3 & = p(\textrm{first person looses}) \times p(\textrm{second person looses}|\textrm{first person looses}) \times p(\textrm{third person wins}|\textrm{first and second person loose}) \\
+    & = \frac{n-1}{n}\frac{n-2}{n-1}\frac{1}{n-2} = \frac{1}{n}
+\end{aligned}
 $$
 Continuing in this vain and considering the fourth, fifth, ... person is rather boring so we will instead 
 consider the $k$th person in the queue and deal with all these individuals in one fell swoop.  For this $k$th person to win the first $k-1$ people in the queue must all loose
 and the $k$th person must win.  We can write an expression for this using the product notation as follows:
 $$
-p_k = p(k\textrm{th person wins}) \times \product_{i=1}^{k-1} p(i\textrm{th person looses}|\textrm{all} $i-1$ \textrm{people before him loose}) = \frac{1}{n-k} \product_{i=1}^{k-1} \frac{n-i}{n-i+1} = \frac{1}{n-k} \frac{n-k}{n} = \frac{1}{n} 
+p_k = p(k\textrm{th person wins}) \times \prod_{i=1}^{k-1} p(i\textrm{th person looses}|\textrm{all } i-1 \textrm{ people before him loose}) = \frac{1}{n-k} \prod_{i=1}^{k-1} \frac{n-i}{n-i+1} = \frac{1}{n-k} \frac{n-k}{n} = \frac{1}{n} 
 $$ 
 The value of $p_k$ is thus the same for all the people in the queue so Bob's reasoning is fallacious.  
 

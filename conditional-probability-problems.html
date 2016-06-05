@@ -88,6 +88,69 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
 
+There are $n$ boxes, one with a prize of £100, the others are empty. 
+A group of $n$ people are asked to form a  queue  and choose a box (at random) 
+each in turn. Bob complains that this gives an unfair advantage to those first
+in the queue.  
+Calculate the probability that the 1st person in the queue wins, the
+probability that the 2nd person in the queue wins and the probability that the
+$r$th person in the queue wins,and hence prove that Bob is wrong
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-0" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+It is possible to show that Bob's logic is wrong here by using conditional 
+probability.  We can see how by considering the events that must occur for
+each person in the queue to win the prize.  We can then work out probabilities 
+and conditional probabilities for these events and thus show that everyone has an 
+equal chance of winning the prize.  Without further ado then lets begin by calculating
+the probability that the first person in the queue wins.  This is straightforward: 
+there are $n$ boxes, the prize is equally likely to be in any one of them so this 
+probability is:
+$$
+p_1 = \frac{1}{n}
+$$
+Now lets move to the second one.  It is tempting at this stage to say that the probability
+is $\frac{1}{n-1}$ as there are now only $n-1$ boxes remaining for this second person to 
+choose from.  This is wrong, however, as it neglects the fact that for the first person in the queue
+must loose before the second person even gets their turn.  The probability for the second person to 
+win is thus:
+$$
+p_2 = p(\textrm{first person looses}) \times p(\textrm{second person wins}|\textrm{first person looses}) = \frac{n-1}{n} \frac{1}{n-1} = \frac{1}{n}
+$$
+The key point is that the value $\frac{1}{n-1}$ is actually a conditional probability - it is the probability that 
+person two wins <b> given that person one looses </b>.
+Lets now consider the third person.  For him to win the first two people must loose 
+and he must then pick the winning box.  We thus have:
+$$
+\begin{aligned}
+p_3 & = p(\textrm{first person looses}) \times p(\textrm{second person looses}|\textrm{first person looses}) \times p(\textrm{third person wins}|\textrm{first and second person loose}) \\
+    & = \frac{n-1}{n}\frac{n-2}{n-1}\frac{1}{n-2} = \frac{1}{n}
+\end{aligned}
+$$
+Continuing in this vain and considering the fourth, fifth, ... person is rather boring so we will instead 
+consider the $k$th person in the queue and deal with all these individuals in one fell swoop.  For this $k$th person to win the first $k-1$ people in the queue must all loose
+and the $k$th person must win.  We can write an expression for this using the product notation as follows:
+$$
+p_k = p(k\textrm{th person wins}) \times \prod_{i=1}^{k-1} p(i\textrm{th person looses}|\textrm{all } i-1 \textrm{ people before him loose}) = \frac{1}{n-k} \prod_{i=1}^{k-1} \frac{n-i}{n-i+1} = \frac{1}{n-k} \frac{n-k}{n} = \frac{1}{n} 
+$$ 
+The value of $p_k$ is thus the same for all the people in the queue so Bob's reasoning is fallacious.  
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+
 You get through to the final round of a television game show. The host offers you
 three boxes one of which contains a fabulous prize. You are asked to select a box.
 The host then opens one of the two boxes that you did not select and offers you the
@@ -97,7 +160,7 @@ to do?
         </a>
         </h4>
     </div>
-    <div id="collapse-0" class="accordion-body collapse">
+    <div id="collapse-1" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 
@@ -153,19 +216,19 @@ thus two times more likely to win if we change.
 What the above explanation shows is that the Monty Hall problem is equivalent to the following question.
 You get through to the final round of a television game show.  The host offers you three boxes one of which contains a fabulour prize.
 You are offered the opportunity to select one box or two boxes.  If you pick one box you win if the prize is in it.  If you pick two 
-boxes you win if the prize is in either of the two boxes you selected.  What is the best thing to do?  
-
+boxes you win if the prize is in either of the two boxes you selected.  What is the best thing to do?  The logic here is similar to the 
+logic we used in the first worked example where we looked at the queue of people and the prize.
 
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
+<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
 
 You are on a game show in which there is a prize behind one of $n$ 
 doors.  At the start of this game you select one door.  The host then opens 
@@ -178,7 +241,7 @@ win the game when you change to one of the unopened doors.
         </a>
         </h4>
     </div>
-    <div id="collapse-1" class="accordion-body collapse">
+    <div id="collapse-2" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 
@@ -196,13 +259,13 @@ $$
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+               <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
                   Exercise 1
 
                </a>
             </h4>
         </div>
-        <div id="collapse-3" class="accordion-body collapse in">
+        <div id="collapse-4" class="accordion-body collapse in">
             <div class="panel-body">
                <div class="row">
 
@@ -210,8 +273,6 @@ If two cards are drawn from a deck of cards calculate the probability
 that (a) they are both spades and (b) they both belong to the same suit.  (a
 deck of cards consists of 52 cards each one of which belongs to one of four
 suits. The number of cards in each of these suits is equal to 13)
-
-
          </div>
       </div>
    </div>

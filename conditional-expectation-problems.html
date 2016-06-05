@@ -1,0 +1,258 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Title -->
+	<title>Conditional Expectation
+ : Exercise</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<!-- Favicon -->
+	<link href="favicon.html" rel="shortcut icon">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+</head>
+<body>
+	<div id="pre_header" class="visible-lg"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="index.html" title="">
+					<img src="assets/img/logo.png" alt="Logo" />
+				</a>
+			</div>
+			<!-- End Logo -->
+			<!-- Top Menu -->
+			<div class="col-md-12 margin-top-30">
+				<div id="hornav" class="pull-right visible-lg">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+                                                <li><span>Modules</span>
+                                                <ul>
+                                                  <li><span><a href="SOR3012.html">SOR3012</a></span></li>
+
+					        </ul>				</div>
+				</div>
+				<div class="clear"></div>
+				<!-- End Top Menu -->
+			</div>
+		</div>
+		<!-- === END HEADER === -->
+		<!-- === BEGIN CONTENT === -->
+		<div id="content" class="container">
+                    <div class="panel panel-blue">
+                      <div class="panel-heading">
+                          <h1 class="panel-title"> Conditional Expectation
+ : Exercises</h1>
+                      </div>
+                      
+<H1> Introduction </H1>
+
+The conditional expectation theorem states that the expectation for a discrete random variable can
+be calculated using:
+$$
+\mathbb{E}(X) = \sum_{i=0}^\infty \mathbb{E}(X|Y=y_i)P(Y=y_i)
+$$
+The following exercises should teach you when it is appropriate to use the conditional expectation 
+theroem to calculate expectations and when it is not appropriate as well as how to use the theorem.
+
+<H1> Problems for you to try </H1> 
+<div id="accordion" class="panel-group"> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+               <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+                  Exercise 1
+
+               </a>
+            </h4>
+        </div>
+        <div id="collapse-1" class="accordion-body collapse in">
+            <div class="panel-body">
+               <div class="row">
+
+Your tutorial operates with the following rules. You are trapped in a classroom with an infinite amount of work
+to do.  At the beginning of the class, and every 5 minutes thereafter, you are
+offered the chance to escape based on the roll of a fair dice.  If you get a 6
+you are allowed to leave immediately, if you get a 1 you miss your next turn
+so have to wait 10 minutes for your next chance to escape, if you roll any
+other number you get a turn in 5 minutes.  Calculated the expected time you
+will spend in the tutorial.
+
+         </div>
+      </div>
+   </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+               <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+                  Exercise 2 
+
+               </a>
+            </h4>
+        </div>
+        <div id="collapse-2" class="accordion-body collapse in">
+            <div class="panel-body">
+               <div class="row">
+
+In a game show, there are 4 identical boxes, each containing a prize. 
+The boxes contain 50, 100, 200 and 500 pounds.  You are asked to choose one box
+and are allowed to keep the contents as your prize.  What is the expected value
+of your prize?
+
+         </div>
+      </div>
+   </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+               <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+                  Exercise 3
+
+               </a>
+            </h4>
+        </div>
+        <div id="collapse-3" class="accordion-body collapse in">
+            <div class="panel-body">
+               <div class="row">
+
+A disorientated  explorer reaches a clearing in the jungle. There are three
+paths leading from the clearing. Path 1 will takes him into deep forest that forces him 
+to return to  the clearing after 2 hours.  Path 2 is also a dead-end that forces him to return after 3 hours 
+of walking. Path 3 takes him to the village after 1 hour.
+
+<ul>
+<li> Assume the explorer will always select paths 1,2, and 3 with equal probabilities, irrespective of whether he 
+found it to be a dead-end.  Calculate the expected value and standard deviation for the number of hours to reach the village.</li>
+<li> Assume that the explorer chooses the path at random, with equal probabilities, but will not choose a path that he has already 
+ established is a dead-end.  Calculate the expected time for him to reach the village, in this case. </li>
+</ul>
+
+         </div>
+      </div>
+   </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+               <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
+                  Exercise 4
+
+               </a>
+            </h4>
+        </div>
+        <div id="collapse-4" class="accordion-body collapse in">
+            <div class="panel-body">
+               <div class="row">
+
+A coin is tossed repeatedly.  The probability of heads occurring is $p$.
+
+<ul>
+<li> Let $X_{1}$ denote the number of tosses required for the first
+'heads' 
+to occur. Show that:
+$$
+\mathbb{E}(X_{1}) = {1 \over p} \qquad .
+$$ 
+</li>
+<li> Let $X_{n}$ denote the number of tosses required to get a consecutive sequence of $n$ heads.  
+Show that the conditional expectation $\mathbb{E}(X_n |X_{n-1}=k)$ is equal to:
+$$
+\mathbb{E}(X_n|X_{n-1}=k) = k + 1 + ( 1-p)\mathbb{E}(X_n)
+$$
+</li>
+<li> By ' conditioning on' $X_{n-1}$, show that:
+$$
+\mathbb{E}(X_{n}) = {1 \over p} \left(   1+ \mathbb{E}(X_{n-1})      \right)  
+\qquad .
+$$
+</li>
+<li> Hence show that,
+$$
+\mathbb{E}(X_{n}) = \sum_{i=1}^{n} {1 \over p^{i}}  \qquad .
+$$
+</li>
+</ul>
+         </div>
+      </div>
+   </div>
+</div>
+ 
+                    </div> 
+		</div>
+	</div>
+	<!-- === END CONTENT === -->
+	<!-- === BEGIN FOOTER === -->
+	<div id="base">
+		<div class="container padding-vert-30">
+			<div class="row">
+					<!-- Contact Details -->
+					<div class="col-md-3 margin-bottom-20">
+						<h3 class="margin-bottom-10">Contact Details</h3>
+						<p>School of Mathematics and Physics,<br />
+						Queen's University Belfast,<br />
+						Belfast,<br />
+						BT14 7EN</p>
+						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+					</div>
+					<!-- End Contact Details -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Menu -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="col-md-4">
+						<p>(c) 2016 Gareth Tribello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->

@@ -1,0 +1,262 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Title -->
+	<title>Using integrating factors
+ : Exercise</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<!-- Favicon -->
+	<link href="favicon.html" rel="shortcut icon">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+</head>
+<body>
+	<div id="pre_header" class="visible-lg"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="index.html" title="">
+					<img src="assets/img/logo.png" alt="Logo" />
+				</a>
+			</div>
+			<!-- End Logo -->
+			<!-- Top Menu -->
+			<div class="col-md-12 margin-top-30">
+				<div id="hornav" class="pull-right visible-lg">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+                                                <li><span>Modules</span>
+                                                <ul>
+                                                  <li><span><a href="SOR3012.html">SOR3012</a></span></li>
+
+					        </ul>				</div>
+				</div>
+				<div class="clear"></div>
+				<!-- End Top Menu -->
+			</div>
+		</div>
+		<!-- === END HEADER === -->
+		<!-- === BEGIN CONTENT === -->
+		<div id="content" class="container">
+                    <div class="panel panel-blue">
+                      <div class="panel-heading">
+                          <h1 class="panel-title"> Using integrating factors
+ : Exercises</h1>
+                      </div>
+                      
+<H1> Introduction </H1>
+
+When we use integrating factors we exploit the product rule to solve differential equations 
+of the form:
+$$
+\frac{\textrm{d}f(x)}{\textrm{d}x} + p(x) f(x) = q(x)
+$$
+In the integrating factor method we multiply the above equation by an integrating factor of
+$e^{\int p(x) \textrm{d}x}$.  This gives us:
+$$
+e^{\int p(x) \textrm{d}x} \frac{\textrm{d}f(x)}{\textrm{d}x} + e^{\int p(x) \textrm{d}x} p(x) f(x) = e^{\int p(x) \textrm{d}x}q(x)
+$$
+We then recognize that:
+$$
+e^{\int p(x) \textrm{d}x} \frac{\textrm{d}f(x)}{\textrm{d}x} + e^{\int p(x) \textrm{d}x} p(x) f(x) = \frac{\textrm{d}[e^{\int p(x) \textrm{d}x} f(x)]}{\textrm{d}x}
+$$
+which you can proove by calculating the derivative on the right hand side using the product rule.  
+We thus arrive at the following variable separable differential equation:
+$$
+\frac{\textrm{d}[e^{\int p(x) \textrm{d}x} f(x)]}{\textrm{d}x} = e^{\int p(x) \textrm{d}x}q(x)
+$$
+A worked example is provided below and some practise problems using this method follow.
+
+<H1> Worked examples </H1>
+<p> Click on the problems to reveal the solution </p> 
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
+
+Solve the following differential equation:
+$$
+\frac{1}{\lambda} \frac{\textrm{d}f(x)}{\textrm{d}x} + f(x) = e^{-\lambda x} \quad \textrm{with} \quad f(0) = 0
+$$
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-0" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+By comparing the equation in the problem with the equation in the description of the method above we see that in this
+case $p(x)=\lambda$,  which we can arrive at by multiplying all the terms in our first 
+equation by a factor of $\lambda$.  To solve we now proceed as follows:
+
+<ol>
+<li> We first calculate the integrating factor $e^{\int p(x) \textrm{d}x}$.  For the problem here this is:
+ $$
+ e^{\int p(x) \textrm{d}x} = e^{\int \lambda \textrm{d}x} = A e^{\lambda x + C} = A e^{\lambda x}
+ $$
+ where we have introduced the multiplicative constant $A=e^C$ to deal with the factor that we have the exponential of an indefinite integral. </li>
+ 
+<li> Next we multiply all the terms in our differential equation by the integrating factor.
+$$
+ A e^{\lambda x} \frac{\textrm{d}f(x)}{\textrm{d}x} +  A e^{\lambda x} \lambda f(x) =  A e^{\lambda x} \lambda e^{-\lambda x} \qquad \rightarrow \qquad e^{\lambda x} 
+\frac{\textrm{d}f(x)}{\textrm{d}x} +  e^{\lambda x} \lambda f(x) = \lambda
+$$
+In the second step here we cancel the factor of $A$ by dividing all terms by $A$.  In addition, $e^{\lambda x}e^{-\lambda x} = e^{\lambda x -\lambda x} = e^0 =1$ </li>
+
+<li> In our next step we recognise that 
+$$
+\frac{\textrm{d}f(x)}{\textrm{d}x} +  e^{\lambda x} \lambda f(x) = \frac{\textrm{d}[e^{\lambda x} f(x)]}{\textrm{d}x}
+$$
+which you can proove by calculating the derivative on the right hand side using the product rule. </li>
+
+<li> Combining everything we arrive at the following variable separable differential equation:
+$$
+\frac{\textrm{d}[e^{\lambda x} f(x)]}{\textrm{d}x} = \lambda
+$$
+We prooceed as we did with the variable separable equations we did on page one.  We thus place all terms in $e^{\lambda x} f(x)$ on the left hand side of the equation and all terms in $x$ on the 
+right hand side:
+$$
+\textrm{d}[e^{\lambda x} f(x)] = \lambda \textrm{d}x
+$$
+We then integrate both sides:
+$$
+\int \textrm{d}[e^{\lambda x} f(x)] = \int \lambda \textrm{d}x \qquad \rightarrow \qquad e^{\lambda x} f(x) = \lambda x + C \qquad \rightarrow \qquad f(x) = (\lambda x + C)e^{-\lambda x}
+$$
+In the last step we multiplied both side by $e^{-\lambda x}$.  Everything else is precisely as we did it in the previous section.
+</li>
+<li> Finally we use the boundary conditions to find the value of the additive constant $C$.
+$$
+0 f(0) = (\lambda \times 0 + C)e^{0} = C \qquad \rightarrow \qquad C = 0 
+$$
+</li>
+</ol>
+
+         </div>
+      </div>
+   </div>
+</div>
+<H1> Problems for you to try </H1> 
+<div id="accordion" class="panel-group"> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+               <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+                  Exercise 1
+
+               </a>
+            </h4>
+        </div>
+        <div id="collapse-2" class="accordion-body collapse in">
+            <div class="panel-body">
+               <div class="row">
+
+Solve the following differential equations using the integrating factor method.  If no boundary condition is provided skip the last step in the above description.
+<br><br>
+<table align="center">
+<col width="450">
+<col width="300">
+<col width="300">
+<tr><td>
+ (i) $\frac{\textrm{d}f(x)}{\textrm{d}x} + 2xf(x) = 2e^{-x^2} \quad \textrm{with} \quad f(0)=1$ </td><td> (ii) $\frac{\textrm{d}f(x)}{\textrm{d}x} + 3f(x) = e^{-3x}$ </td><td> (iii) $x\frac{\textrm{d}f(x)}{\textrm{d}x} + f(x) = x^3$ </td></tr><tr><td>  
+
+(iv) $\frac{\textrm{d}f(x)}{\textrm{d}x} + f(x) = e^x$ </td><td> (v) $\frac{\textrm{d}f(x)}{\textrm{d}x} - f(x) = e^x$ </td><td> (vi) $x \frac{\textrm{d}f(x)}{\textrm{d}x} - 3f(x) = x^4 \quad \textrm{with} \quad 
+f(1)=2$ </td></tr><tr><td>
+(vii) $\frac{\textrm{d}f(x)}{\textrm{d}x}  + 2f(x) \tan x = \sin x \quad \textrm{with} \quad f\left(\frac{\pi}{3}\right)=0$ </td><td> (viii) $\frac{\textrm{d}f(x)}{\textrm{d}x}  + \frac{2f(x)}{x} = 
+\frac{\sin x}{x^2}$ </td><td> 
+(ix) $\frac{\textrm{d}f(x)}{\textrm{d}x} - \frac{f(x)}{x} = -xe^{-x}$ </td></tr><tr><td>
+
+(x) $\frac{\textrm{d}f(x)}{\textrm{d}x} + 2xf(x) = x$ </td><td> (xi) $\frac{\textrm{d}f(x)}{\textrm{d}x} - \frac{2f(x)}{x} = 3x^3$ </td><td> (xii) $\frac{\textrm{d}f(x)}{\textrm{d}x} + \frac{3f(x)}{x} = 
+\frac{e^x}{x^3}$ </td></tr><tr><td> 
+(xiii) $\frac{\textrm{d}f(x)}{\textrm{d}x} - \frac{3f(x)}{x+1} = (x+1)^4$ </td><td> (xiv) $x \frac{\textrm{d}f(x)}{\textrm{d}x} + 2f(x) = x^2 - x + 1$ </td><td></td></tr>  
+<tr><td> (xvi) $x \frac{\textrm{d}f(x)}{\textrm{d}x} - 2f(x) = - t^3 + 4t^4$ </td><td> (xvii) $\frac{\textrm{d}f(x)}{\textrm{d}x} - \cos(x)f(x) = \cos(x)$ 
+</td></tr> 
+</table>
+         </div>
+      </div>
+   </div>
+</div>
+ 
+                    </div> 
+		</div>
+	</div>
+	<!-- === END CONTENT === -->
+	<!-- === BEGIN FOOTER === -->
+	<div id="base">
+		<div class="container padding-vert-30">
+			<div class="row">
+					<!-- Contact Details -->
+					<div class="col-md-3 margin-bottom-20">
+						<h3 class="margin-bottom-10">Contact Details</h3>
+						<p>School of Mathematics and Physics,<br />
+						Queen's University Belfast,<br />
+						Belfast,<br />
+						BT14 7EN</p>
+						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+					</div>
+					<!-- End Contact Details -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Menu -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="col-md-4">
+						<p>(c) 2016 Gareth Tribello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->

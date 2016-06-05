@@ -32,26 +32,29 @@ There are two things to notice here:
 $\ln f(x) + B$ and the right hand side should read $-\lambda t + D$.   We have combined these two constants into a single constant $C=D-B$, however.
 [ii] The constant $A$ is equal to $e^{C}$ as in the last step we have taken antilogs of both sides.  For the right hand side we thus have: $e^{-\lambda x + C} = e^Ce^{-\lambda x}$ 
 </li>
-<li> :In the final step we use the boundary condition $f(0)=1$ to solve for $A$.  We thus have:
+<li> In the final step we use the boundary condition $f(0)=1$ to solve for $A$.  We thus have:
 $$
 f(0) = Ae^{0} = 1 \qquad \rightarrow \qquad A \times 1 = 1 \qquad \rightarrow \qquad A=1
 $$
 </li>
 </ol>
 
-EXERCISE: 
+EXERCISE: Exercise 1
 
 Solve the following differential equations.  If no boundary condition is provided skip the third step that was described in the worked example.
-
-<table>
+<br><br>
+<table align="center">
+<col width="300">
+<col width="300">
+<col width="300">
 <tr><td>
 (i) $\frac{\textrm{d}f(x)}{\textrm{d}x} \tan x  = f(x)$ </td><td> (ii) $\frac{\textrm{d}f(x)}{\textrm{d}x} + f(x) = 1$ </td><td>  (iii) $\frac{\textrm{d}f(x)}{\textrm{d}x} = ax(1-x) \quad \textrm{with} \quad 
-f(0)=\frac{1}{2}$ \\[0.5cm] 
+f(0)=\frac{1}{2}$ </td></tr><tr><td>
 (iv) $\frac{\textrm{d}f(x)}{\textrm{d}x} = e^{-f(x)} \sin x \quad \textrm{with} \quad f(0)=0$ </td><td> (v) $\frac{\textrm{d}f(x)}{\textrm{d}x}  = x\tan f(x)$ </td><td> (vi) $\frac{\textrm{d}f(x)}{\textrm{d}x} = 3 
-- 2f(x) \quad \textrm{with} \quad y(0)=1$ \\[0.5cm]
+- 2f(x) \quad \textrm{with} \quad y(0)=1$ </td></tr><tr><td>
 (vii) $\frac{\textrm{d}f(x)}{\textrm{d}x} = \frac{\ln x}{2f(x)} \quad \textrm{with} \quad f(1) = 0$ </td><td> (viii) $\frac{\textrm{d}f(x)}{\textrm{d}x} = \frac{f(x)}{x}$  </td><td> </tr><tr><td>  
 (x) $\frac{\textrm{d}f(x)}{\textrm{d}x} = g - kf(x) \quad \textrm{with} \quad f(0)=0$ </td><td> (xi) $\frac{\textrm{d}f(x)}{\textrm{d}x} = \frac{f(x)+1}{x-1}$ </td><td> (xii) $[f(x)]^2 
-\frac{\textrm{d}f(x)}{\textrm{d}x} = x \quad \textrm{with} \quad f(0)=1$ \\[0.5cm]
+\frac{\textrm{d}f(x)}{\textrm{d}x} = x \quad \textrm{with} \quad f(0)=1$ </td></tr><tr><td>
 (xiii) $\frac{\textrm{d}f(x)}{\textrm{d}x} = e^{2x+y} \quad \textrm{with} \quad f(0)=0$ </td><td> (xiv) $\frac{\textrm{d}f(x)}{\textrm{d}x} = \frac{xf(x)}{x+1}$ </td></tr><tr><td> 
 (xvi) $\frac{\textrm{d}f(x)}{\textrm{d}x} = -2x \tan f(x)$ </td><td> (xvii) $(1+x^2) \frac{\textrm{d}f(x)}{\textrm{d}x} + xy = 0$  </td></tr><tr><td> (xx) $\frac{1}{f(x)}\frac{\textrm{d}f(x)}{\textrm{d}x} = 
 \frac{x}{x^2 + 1}$ </td><td> (xxi) $\frac{\textrm{d}f(x)}{\textrm{d}x} = 

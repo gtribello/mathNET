@@ -32,6 +32,7 @@ install:
     - make
     - sudo make install
     - popd
+    - popd
     # Graphviz
     - "pip install graphviz"
 

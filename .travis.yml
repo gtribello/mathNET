@@ -16,6 +16,7 @@ install:
     - sh -e /etc/init.d/xvfb start
     - sudo apt-get install -y libqt4-dev
     - sudo apt-get install -y mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
+    - sudo apt-get install -y graphviz
     # Qt4
     - pushd /builds 
     # SIP

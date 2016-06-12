@@ -32,8 +32,8 @@ install:
     - make
     - sudo make install
     - popd
-# Graphviz
-  - "pip install graphviz"
+    # Graphviz
+    - "pip install graphviz"
 
 script:
   - python Scripts/build-website.py

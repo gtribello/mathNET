@@ -90,7 +90,7 @@ class mainWindow(QWidget):
        self.browser.load(QUrl(url)) 
 
    def buildFullWebsite(self):
-       if( self.loaded==1 ):
+       if (self.loaded==1) & (os.path.exists('html')):
            for ff in os.listdir('html') :
                if (ff.endswith(".html")) | (ff.endswith(".svg")) :
                   os.remove("html/" + ff)

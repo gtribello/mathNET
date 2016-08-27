@@ -11,73 +11,73 @@
 <!-- POISSON_RANDOM_VARIABLE -->
 <g id="node1" class="node"><title>POISSON_RANDOM_VARIABLE</title>
 <a xlink:href="POISSON_RANDOM_VARIABLE.html" xlink:title="The poisson random variable" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="337,-108 145,-108 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M145,-108C139,-108 133,-102 133,-96"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="133,-96 133,-84 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M133,-84C133,-78 139,-72 145,-72"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="145,-72 337,-72 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M337,-72C343,-72 349,-78 349,-84"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="349,-84 349,-96 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M349,-96C349,-102 343,-108 337,-108"/>
-<text text-anchor="start" x="141.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">The poisson random variable</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="310,-108 118,-108 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M118,-108C112,-108 106,-102 106,-96"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="106,-96 106,-84 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M106,-84C106,-78 112,-72 118,-72"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="118,-72 310,-72 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M310,-72C316,-72 322,-78 322,-84"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="322,-84 322,-96 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M322,-96C322,-102 316,-108 310,-108"/>
+<text text-anchor="start" x="114.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">The poisson random variable</text>
 </a>
 </g>
 <!-- POISSON_PROCESS -->
-<g id="node6" class="node"><title>POISSON_PROCESS</title>
+<g id="node4" class="node"><title>POISSON_PROCESS</title>
 <a xlink:href="POISSON_PROCESS.html" xlink:title="Poisson Process" target="_top">
-<polyline fill="none" stroke="black" points="291,-36 191,-36 "/>
-<path fill="none" stroke="black" d="M191,-36C185,-36 179,-30 179,-24"/>
-<polyline fill="none" stroke="black" points="179,-24 179,-12 "/>
-<path fill="none" stroke="black" d="M179,-12C179,-6 185,-1.70759e-14 191,-1.63883e-14"/>
-<polyline fill="none" stroke="black" points="191,-1.63883e-14 291,-4.92796e-15 "/>
-<path fill="none" stroke="black" d="M291,-4.92796e-15C297,-4.24034e-15 303,-6 303,-12"/>
-<polyline fill="none" stroke="black" points="303,-12 303,-24 "/>
-<path fill="none" stroke="black" d="M303,-24C303,-30 297,-36 291,-36"/>
-<text text-anchor="start" x="187" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Poisson Process</text>
+<polyline fill="none" stroke="black" points="264,-36 164,-36 "/>
+<path fill="none" stroke="black" d="M164,-36C158,-36 152,-30 152,-24"/>
+<polyline fill="none" stroke="black" points="152,-24 152,-12 "/>
+<path fill="none" stroke="black" d="M152,-12C152,-6 158,-1.70759e-14 164,-1.63883e-14"/>
+<polyline fill="none" stroke="black" points="164,-1.63883e-14 264,-4.92796e-15 "/>
+<path fill="none" stroke="black" d="M264,-4.92796e-15C270,-4.24034e-15 276,-6 276,-12"/>
+<polyline fill="none" stroke="black" points="276,-12 276,-24 "/>
+<path fill="none" stroke="black" d="M276,-24C276,-30 270,-36 264,-36"/>
+<text text-anchor="start" x="160" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Poisson Process</text>
 </a>
 </g>
 <!-- POISSON_RANDOM_VARIABLE&#45;&gt;POISSON_PROCESS -->
-<g id="edge6" class="edge"><title>POISSON_RANDOM_VARIABLE&#45;&gt;POISSON_PROCESS</title>
-<path fill="none" stroke="black" d="M241,-71.8314C241,-64.131 241,-54.9743 241,-46.4166"/>
-<polygon fill="black" stroke="black" points="244.5,-46.4132 241,-36.4133 237.5,-46.4133 244.5,-46.4132"/>
-</g>
-<!-- MOMENT_GENERATING_FUNCTION -->
-<g id="node2" class="node"><title>MOMENT_GENERATING_FUNCTION</title>
-<a xlink:href="MOMENT_GENERATING_FUNCTION.html" xlink:title="The moment generating function" target="_top">
-<polyline fill="none" stroke="black" points="234,-180 12,-180 "/>
-<path fill="none" stroke="black" d="M12,-180C6,-180 8.28967e-14,-174 6.63173e-14,-168"/>
-<polyline fill="none" stroke="black" points="6.63173e-14,-168 3.31587e-14,-156 "/>
-<path fill="none" stroke="black" d="M3.31587e-14,-156C1.65793e-14,-150 6,-144 12,-144"/>
-<polyline fill="none" stroke="black" points="12,-144 234,-144 "/>
-<path fill="none" stroke="black" d="M234,-144C240,-144 246,-150 246,-156"/>
-<polyline fill="none" stroke="black" points="246,-156 246,-168 "/>
-<path fill="none" stroke="black" d="M246,-168C246,-174 240,-180 234,-180"/>
-<text text-anchor="start" x="8.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">The moment generating function</text>
-</a>
-</g>
-<!-- MOMENT_GENERATING_FUNCTION&#45;&gt;POISSON_RANDOM_VARIABLE -->
-<g id="edge2" class="edge"><title>MOMENT_GENERATING_FUNCTION&#45;&gt;POISSON_RANDOM_VARIABLE</title>
-<path fill="none" stroke="black" d="M152.776,-143.831C167.869,-134.622 186.376,-123.33 202.534,-113.471"/>
-<polygon fill="black" stroke="black" points="204.52,-116.359 211.233,-108.163 200.874,-110.384 204.52,-116.359"/>
+<g id="edge4" class="edge"><title>POISSON_RANDOM_VARIABLE&#45;&gt;POISSON_PROCESS</title>
+<path fill="none" stroke="black" d="M214,-71.8314C214,-64.131 214,-54.9743 214,-46.4166"/>
+<polygon fill="black" stroke="black" points="217.5,-46.4132 214,-36.4133 210.5,-46.4133 217.5,-46.4132"/>
 </g>
 <!-- BINOMIAL_RANDOM_VARIABLE -->
-<g id="node4" class="node"><title>BINOMIAL_RANDOM_VARIABLE</title>
+<g id="node2" class="node"><title>BINOMIAL_RANDOM_VARIABLE</title>
 <a xlink:href="BINOMIAL_RANDOM_VARIABLE.html" xlink:title="Binomial random variable" target="_top">
-<polyline fill="none" stroke="black" points="444,-180 276,-180 "/>
-<path fill="none" stroke="black" d="M276,-180C270,-180 264,-174 264,-168"/>
-<polyline fill="none" stroke="black" points="264,-168 264,-156 "/>
-<path fill="none" stroke="black" d="M264,-156C264,-150 270,-144 276,-144"/>
-<polyline fill="none" stroke="black" points="276,-144 444,-144 "/>
-<path fill="none" stroke="black" d="M444,-144C450,-144 456,-150 456,-156"/>
-<polyline fill="none" stroke="black" points="456,-156 456,-168 "/>
-<path fill="none" stroke="black" d="M456,-168C456,-174 450,-180 444,-180"/>
-<text text-anchor="start" x="272" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Binomial random variable</text>
+<polyline fill="none" stroke="black" points="180,-180 12,-180 "/>
+<path fill="none" stroke="black" d="M12,-180C6,-180 5.92119e-14,-174 4.73695e-14,-168"/>
+<polyline fill="none" stroke="black" points="4.73695e-14,-168 2.36848e-14,-156 "/>
+<path fill="none" stroke="black" d="M2.36848e-14,-156C1.18424e-14,-150 6,-144 12,-144"/>
+<polyline fill="none" stroke="black" points="12,-144 180,-144 "/>
+<path fill="none" stroke="black" d="M180,-144C186,-144 192,-150 192,-156"/>
+<polyline fill="none" stroke="black" points="192,-156 192,-168 "/>
+<path fill="none" stroke="black" d="M192,-168C192,-174 186,-180 180,-180"/>
+<text text-anchor="start" x="8" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Binomial random variable</text>
 </a>
 </g>
 <!-- BINOMIAL_RANDOM_VARIABLE&#45;&gt;POISSON_RANDOM_VARIABLE -->
-<g id="edge4" class="edge"><title>BINOMIAL_RANDOM_VARIABLE&#45;&gt;POISSON_RANDOM_VARIABLE</title>
-<path fill="none" stroke="black" d="M329.971,-143.831C314.75,-134.622 296.087,-123.33 279.792,-113.471"/>
-<polygon fill="black" stroke="black" points="281.387,-110.345 271.019,-108.163 277.763,-116.334 281.387,-110.345"/>
+<g id="edge2" class="edge"><title>BINOMIAL_RANDOM_VARIABLE&#45;&gt;POISSON_RANDOM_VARIABLE</title>
+<path fill="none" stroke="black" d="M125.776,-143.831C140.869,-134.622 159.376,-123.33 175.534,-113.471"/>
+<polygon fill="black" stroke="black" points="177.52,-116.359 184.233,-108.163 173.874,-110.384 177.52,-116.359"/>
+</g>
+<!-- MOMENT_GENERATING_FUNCTION -->
+<g id="node6" class="node"><title>MOMENT_GENERATING_FUNCTION</title>
+<a xlink:href="MOMENT_GENERATING_FUNCTION.html" xlink:title="The moment generating function" target="_top">
+<polyline fill="none" stroke="black" points="444,-180 222,-180 "/>
+<path fill="none" stroke="black" d="M222,-180C216,-180 210,-174 210,-168"/>
+<polyline fill="none" stroke="black" points="210,-168 210,-156 "/>
+<path fill="none" stroke="black" d="M210,-156C210,-150 216,-144 222,-144"/>
+<polyline fill="none" stroke="black" points="222,-144 444,-144 "/>
+<path fill="none" stroke="black" d="M444,-144C450,-144 456,-150 456,-156"/>
+<polyline fill="none" stroke="black" points="456,-156 456,-168 "/>
+<path fill="none" stroke="black" d="M456,-168C456,-174 450,-180 444,-180"/>
+<text text-anchor="start" x="218.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">The moment generating function</text>
+</a>
+</g>
+<!-- MOMENT_GENERATING_FUNCTION&#45;&gt;POISSON_RANDOM_VARIABLE -->
+<g id="edge6" class="edge"><title>MOMENT_GENERATING_FUNCTION&#45;&gt;POISSON_RANDOM_VARIABLE</title>
+<path fill="none" stroke="black" d="M302.971,-143.831C287.75,-134.622 269.087,-123.33 252.792,-113.471"/>
+<polygon fill="black" stroke="black" points="254.387,-110.345 244.019,-108.163 250.763,-116.334 254.387,-110.345"/>
 </g>
 </g>
 </svg>

@@ -42,7 +42,7 @@
 <polygon fill="black" stroke="black" points="168.605,-38.4628 158.262,-36.1628 164.913,-44.4102 168.605,-38.4628"/>
 </g>
 <!-- STATIONARY_DIST_MARKOV -->
-<g id="node6" class="node"><title>STATIONARY_DIST_MARKOV</title>
+<g id="node8" class="node"><title>STATIONARY_DIST_MARKOV</title>
 <a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title="Ergodic Markov chains" target="_top">
 <polyline fill="none" stroke="black" points="434,-36 288,-36 "/>
 <path fill="none" stroke="black" d="M288,-36C282,-36 276,-30 276,-24"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge6" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<g id="edge8" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV</title>
 <path fill="none" stroke="black" d="M274.272,-71.8314C289.109,-62.6221 307.302,-51.3301 323.186,-41.4706"/>
 <polygon fill="black" stroke="black" points="325.087,-44.4102 331.738,-36.1628 321.395,-38.4628 325.087,-44.4102"/>
 </g>
@@ -80,7 +80,7 @@
 <polygon fill="black" stroke="black" points="215.18,-116.992 221.035,-108.163 210.951,-111.414 215.18,-116.992"/>
 </g>
 <!-- MATRIX_INTRO -->
-<g id="node8" class="node"><title>MATRIX_INTRO</title>
+<g id="node6" class="node"><title>MATRIX_INTRO</title>
 <a xlink:href="MATRIX_INTRO.html" xlink:title="Introduction to matrices" target="_top">
 <polyline fill="none" stroke="black" points="421,-180 261,-180 "/>
 <path fill="none" stroke="black" d="M261,-180C255,-180 249,-174 249,-168"/>
@@ -94,7 +94,7 @@
 </a>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
-<g id="edge8" class="edge"><title>MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
+<g id="edge6" class="edge"><title>MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
 <path fill="none" stroke="black" d="M316.775,-143.831C304.837,-134.878 290.274,-123.956 277.394,-114.295"/>
 <polygon fill="black" stroke="black" points="279.317,-111.363 269.217,-108.163 275.117,-116.963 279.317,-111.363"/>
 </g>

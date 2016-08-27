@@ -22,28 +22,28 @@
 <text text-anchor="start" x="171" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Variance </text>
 </a>
 </g>
-<!-- CENTRAL_LIMIT_THEOREM -->
-<g id="node6" class="node"><title>CENTRAL_LIMIT_THEOREM</title>
-<a xlink:href="CENTRAL_LIMIT_THEOREM.html" xlink:title="The central limit theorem" target="_top">
+<!-- BERNOULI_RANDOM_VARIABLE -->
+<g id="node2" class="node"><title>BERNOULI_RANDOM_VARIABLE</title>
+<a xlink:href="BERNOULI_RANDOM_VARIABLE.html" xlink:title="Bernoulli random variable" target="_top">
 <polyline fill="none" stroke="black" points="182,-36 12,-36 "/>
-<path fill="none" stroke="black" d="M12,-36C6,-36 4.73695e-14,-30 3.78956e-14,-24"/>
-<polyline fill="none" stroke="black" points="3.78956e-14,-24 1.89478e-14,-12 "/>
-<path fill="none" stroke="black" d="M1.89478e-14,-12C9.4739e-15,-6 6,-1.73241e-14 12,-1.68845e-14"/>
+<path fill="none" stroke="black" d="M12,-36C6,-36 7.10543e-14,-30 5.68434e-14,-24"/>
+<polyline fill="none" stroke="black" points="5.68434e-14,-24 2.84217e-14,-12 "/>
+<path fill="none" stroke="black" d="M2.84217e-14,-12C1.42109e-14,-6 6,-1.73241e-14 12,-1.68845e-14"/>
 <polyline fill="none" stroke="black" points="12,-1.68845e-14 182,-4.43174e-15 "/>
 <path fill="none" stroke="black" d="M182,-4.43174e-15C188,-3.99222e-15 194,-6 194,-12"/>
 <polyline fill="none" stroke="black" points="194,-12 194,-24 "/>
 <path fill="none" stroke="black" d="M194,-24C194,-30 188,-36 182,-36"/>
-<text text-anchor="start" x="8.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The central limit theorem</text>
+<text text-anchor="start" x="8" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Bernoulli random variable</text>
 </a>
 </g>
-<!-- VARIANCE&#45;&gt;CENTRAL_LIMIT_THEOREM -->
-<g id="edge6" class="edge"><title>VARIANCE&#45;&gt;CENTRAL_LIMIT_THEOREM</title>
+<!-- VARIANCE&#45;&gt;BERNOULI_RANDOM_VARIABLE -->
+<g id="edge2" class="edge"><title>VARIANCE&#45;&gt;BERNOULI_RANDOM_VARIABLE</title>
 <path fill="none" stroke="black" d="M176.252,-71.8314C162.945,-62.7927 146.684,-51.7476 132.363,-42.0198"/>
 <polygon fill="black" stroke="black" points="133.979,-38.8864 123.74,-36.1628 130.045,-44.677 133.979,-38.8864"/>
 </g>
-<!-- BERNOULI_RANDOM_VARIABLE -->
-<g id="node8" class="node"><title>BERNOULI_RANDOM_VARIABLE</title>
-<a xlink:href="BERNOULI_RANDOM_VARIABLE.html" xlink:title="Bernoulli random variable" target="_top">
+<!-- CENTRAL_LIMIT_THEOREM -->
+<g id="node8" class="node"><title>CENTRAL_LIMIT_THEOREM</title>
+<a xlink:href="CENTRAL_LIMIT_THEOREM.html" xlink:title="The central limit theorem" target="_top">
 <polyline fill="none" stroke="black" points="394,-36 224,-36 "/>
 <path fill="none" stroke="black" d="M224,-36C218,-36 212,-30 212,-24"/>
 <polyline fill="none" stroke="black" points="212,-24 212,-12 "/>
@@ -52,16 +52,16 @@
 <path fill="none" stroke="black" d="M394,-4.43174e-15C400,-3.99222e-15 406,-6 406,-12"/>
 <polyline fill="none" stroke="black" points="406,-12 406,-24 "/>
 <path fill="none" stroke="black" d="M406,-24C406,-30 400,-36 394,-36"/>
-<text text-anchor="start" x="220" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Bernoulli random variable</text>
+<text text-anchor="start" x="220.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The central limit theorem</text>
 </a>
 </g>
-<!-- VARIANCE&#45;&gt;BERNOULI_RANDOM_VARIABLE -->
-<g id="edge8" class="edge"><title>VARIANCE&#45;&gt;BERNOULI_RANDOM_VARIABLE</title>
+<!-- VARIANCE&#45;&gt;CENTRAL_LIMIT_THEOREM -->
+<g id="edge8" class="edge"><title>VARIANCE&#45;&gt;CENTRAL_LIMIT_THEOREM</title>
 <path fill="none" stroke="black" d="M229.748,-71.8314C243.055,-62.7927 259.316,-51.7476 273.637,-42.0198"/>
 <polygon fill="black" stroke="black" points="275.955,-44.677 282.26,-36.1628 272.021,-38.8864 275.955,-44.677"/>
 </g>
 <!-- RANDOM_VARIABLES -->
-<g id="node2" class="node"><title>RANDOM_VARIABLES</title>
+<g id="node4" class="node"><title>RANDOM_VARIABLES</title>
 <a xlink:href="RANDOM_VARIABLES.html" xlink:title="Random variables" target="_top">
 <polyline fill="none" stroke="black" points="191,-180 75,-180 "/>
 <path fill="none" stroke="black" d="M75,-180C69,-180 63,-174 63,-168"/>
@@ -75,12 +75,12 @@
 </a>
 </g>
 <!-- RANDOM_VARIABLES&#45;&gt;VARIANCE -->
-<g id="edge2" class="edge"><title>RANDOM_VARIABLES&#45;&gt;VARIANCE</title>
+<g id="edge4" class="edge"><title>RANDOM_VARIABLES&#45;&gt;VARIANCE</title>
 <path fill="none" stroke="black" d="M150.664,-143.831C158.973,-135.285 169.026,-124.944 178.092,-115.62"/>
 <polygon fill="black" stroke="black" points="180.637,-118.023 185.098,-108.413 175.618,-113.143 180.637,-118.023"/>
 </g>
 <!-- EXPECTATION -->
-<g id="node4" class="node"><title>EXPECTATION</title>
+<g id="node6" class="node"><title>EXPECTATION</title>
 <a xlink:href="EXPECTATION.html" xlink:title="Expectation " target="_top">
 <polyline fill="none" stroke="black" points="313,-180 233,-180 "/>
 <path fill="none" stroke="black" d="M233,-180C227,-180 221,-174 221,-168"/>
@@ -94,7 +94,7 @@
 </a>
 </g>
 <!-- EXPECTATION&#45;&gt;VARIANCE -->
-<g id="edge4" class="edge"><title>EXPECTATION&#45;&gt;VARIANCE</title>
+<g id="edge6" class="edge"><title>EXPECTATION&#45;&gt;VARIANCE</title>
 <path fill="none" stroke="black" d="M255.336,-143.831C247.027,-135.285 236.974,-124.944 227.908,-115.62"/>
 <polygon fill="black" stroke="black" points="230.382,-113.143 220.902,-108.413 225.363,-118.023 230.382,-113.143"/>
 </g>

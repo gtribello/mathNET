@@ -11,73 +11,73 @@
 <!-- TRANSIENT_RECURRENT_STATES -->
 <g id="node1" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
 <a xlink:href="TRANSIENT_RECURRENT_STATES.html" xlink:title="Transient and recurrent states in Markov chains" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="363,-108 39,-108 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M39,-108C33,-108 27,-102 27,-96"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="27,-96 27,-84 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M27,-84C27,-78 33,-72 39,-72"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="39,-72 363,-72 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M363,-72C369,-72 375,-78 375,-84"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="375,-84 375,-96 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M375,-96C375,-102 369,-108 363,-108"/>
-<text text-anchor="start" x="35.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Transient and recurrent states in Markov chains</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="407,-108 83,-108 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M83,-108C77,-108 71,-102 71,-96"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="71,-96 71,-84 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M71,-84C71,-78 77,-72 83,-72"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="83,-72 407,-72 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M407,-72C413,-72 419,-78 419,-84"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="419,-84 419,-96 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M419,-96C419,-102 413,-108 407,-108"/>
+<text text-anchor="start" x="79.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Transient and recurrent states in Markov chains</text>
 </a>
-</g>
-<!-- STATIONARY_DIST_MARKOV -->
-<g id="node4" class="node"><title>STATIONARY_DIST_MARKOV</title>
-<a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title="Ergodic Markov chains" target="_top">
-<polyline fill="none" stroke="black" points="158,-36 12,-36 "/>
-<path fill="none" stroke="black" d="M12,-36C6,-36 7.10543e-14,-30 5.68434e-14,-24"/>
-<polyline fill="none" stroke="black" points="5.68434e-14,-24 2.84217e-14,-12 "/>
-<path fill="none" stroke="black" d="M2.84217e-14,-12C1.42109e-14,-6 6,-1.7262e-14 12,-1.67604e-14"/>
-<polyline fill="none" stroke="black" points="12,-1.67604e-14 158,-4.55583e-15 "/>
-<path fill="none" stroke="black" d="M158,-4.55583e-15C164,-4.05427e-15 170,-6 170,-12"/>
-<polyline fill="none" stroke="black" points="170,-12 170,-24 "/>
-<path fill="none" stroke="black" d="M170,-24C170,-30 164,-36 158,-36"/>
-<text text-anchor="start" x="8" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Ergodic Markov chains</text>
-</a>
-</g>
-<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge4" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M171.728,-71.8314C156.891,-62.6221 138.698,-51.3301 122.814,-41.4706"/>
-<polygon fill="black" stroke="black" points="124.605,-38.4628 114.262,-36.1628 120.913,-44.4102 124.605,-38.4628"/>
 </g>
 <!-- HITTING_PROBABILITIES -->
-<g id="node6" class="node"><title>HITTING_PROBABILITIES</title>
+<g id="node2" class="node"><title>HITTING_PROBABILITIES</title>
 <a xlink:href="HITTING_PROBABILITIES.html" xlink:title="Hitting time and hitting probability" target="_top">
-<polyline fill="none" stroke="black" points="434,-36 200,-36 "/>
-<path fill="none" stroke="black" d="M200,-36C194,-36 188,-30 188,-24"/>
-<polyline fill="none" stroke="black" points="188,-24 188,-12 "/>
-<path fill="none" stroke="black" d="M188,-12C188,-6 194,-1.74331e-14 200,-1.71026e-14"/>
-<polyline fill="none" stroke="black" points="200,-1.71026e-14 434,-4.21368e-15 "/>
-<path fill="none" stroke="black" d="M434,-4.21368e-15C440,-3.8832e-15 446,-6 446,-12"/>
-<polyline fill="none" stroke="black" points="446,-12 446,-24 "/>
-<path fill="none" stroke="black" d="M446,-24C446,-30 440,-36 434,-36"/>
-<text text-anchor="start" x="196.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Hitting time and hitting probability</text>
+<polyline fill="none" stroke="black" points="246,-36 12,-36 "/>
+<path fill="none" stroke="black" d="M12,-36C6,-36 9.4739e-14,-30 7.57912e-14,-24"/>
+<polyline fill="none" stroke="black" points="7.57912e-14,-24 3.78956e-14,-12 "/>
+<path fill="none" stroke="black" d="M3.78956e-14,-12C1.89478e-14,-6 6,-1.74331e-14 12,-1.71026e-14"/>
+<polyline fill="none" stroke="black" points="12,-1.71026e-14 246,-4.21368e-15 "/>
+<path fill="none" stroke="black" d="M246,-4.21368e-15C252,-3.8832e-15 258,-6 258,-12"/>
+<polyline fill="none" stroke="black" points="258,-12 258,-24 "/>
+<path fill="none" stroke="black" d="M258,-24C258,-30 252,-36 246,-36"/>
+<text text-anchor="start" x="8.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Hitting time and hitting probability</text>
 </a>
 </g>
 <!-- TRANSIENT_RECURRENT_STATES&#45;&gt;HITTING_PROBABILITIES -->
-<g id="edge6" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;HITTING_PROBABILITIES</title>
-<path fill="none" stroke="black" d="M230.272,-71.8314C245.109,-62.6221 263.302,-51.3301 279.186,-41.4706"/>
-<polygon fill="black" stroke="black" points="281.087,-44.4102 287.738,-36.1628 277.395,-38.4628 281.087,-44.4102"/>
+<g id="edge2" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;HITTING_PROBABILITIES</title>
+<path fill="none" stroke="black" d="M215.728,-71.8314C200.891,-62.6221 182.698,-51.3301 166.814,-41.4706"/>
+<polygon fill="black" stroke="black" points="168.605,-38.4628 158.262,-36.1628 164.913,-44.4102 168.605,-38.4628"/>
+</g>
+<!-- STATIONARY_DIST_MARKOV -->
+<g id="node6" class="node"><title>STATIONARY_DIST_MARKOV</title>
+<a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title="Ergodic Markov chains" target="_top">
+<polyline fill="none" stroke="black" points="434,-36 288,-36 "/>
+<path fill="none" stroke="black" d="M288,-36C282,-36 276,-30 276,-24"/>
+<polyline fill="none" stroke="black" points="276,-24 276,-12 "/>
+<path fill="none" stroke="black" d="M276,-12C276,-6 282,-1.7262e-14 288,-1.67604e-14"/>
+<polyline fill="none" stroke="black" points="288,-1.67604e-14 434,-4.55583e-15 "/>
+<path fill="none" stroke="black" d="M434,-4.55583e-15C440,-4.05427e-15 446,-6 446,-12"/>
+<polyline fill="none" stroke="black" points="446,-12 446,-24 "/>
+<path fill="none" stroke="black" d="M446,-24C446,-30 440,-36 434,-36"/>
+<text text-anchor="start" x="284" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Ergodic Markov chains</text>
+</a>
+</g>
+<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV -->
+<g id="edge6" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<path fill="none" stroke="black" d="M274.272,-71.8314C289.109,-62.6221 307.302,-51.3301 323.186,-41.4706"/>
+<polygon fill="black" stroke="black" points="325.087,-44.4102 331.738,-36.1628 321.395,-38.4628 325.087,-44.4102"/>
 </g>
 <!-- CHAPMAN_KOLMOGOROV_RELATION -->
-<g id="node2" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
+<g id="node4" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
 <a xlink:href="CHAPMAN_KOLMOGOROV_RELATION.html" xlink:title="The Chapman Kolmogorov Relation" target="_top">
-<polyline fill="none" stroke="black" points="318,-180 84,-180 "/>
-<path fill="none" stroke="black" d="M84,-180C78,-180 72,-174 72,-168"/>
-<polyline fill="none" stroke="black" points="72,-168 72,-156 "/>
-<path fill="none" stroke="black" d="M72,-156C72,-150 78,-144 84,-144"/>
-<polyline fill="none" stroke="black" points="84,-144 318,-144 "/>
-<path fill="none" stroke="black" d="M318,-144C324,-144 330,-150 330,-156"/>
-<polyline fill="none" stroke="black" points="330,-156 330,-168 "/>
-<path fill="none" stroke="black" d="M330,-168C330,-174 324,-180 318,-180"/>
-<text text-anchor="start" x="80" y="-159.233" font-family="Times Roman,serif" font-size="14.00">The Chapman Kolmogorov Relation</text>
+<polyline fill="none" stroke="black" points="362,-180 128,-180 "/>
+<path fill="none" stroke="black" d="M128,-180C122,-180 116,-174 116,-168"/>
+<polyline fill="none" stroke="black" points="116,-168 116,-156 "/>
+<path fill="none" stroke="black" d="M116,-156C116,-150 122,-144 128,-144"/>
+<polyline fill="none" stroke="black" points="128,-144 362,-144 "/>
+<path fill="none" stroke="black" d="M362,-144C368,-144 374,-150 374,-156"/>
+<polyline fill="none" stroke="black" points="374,-156 374,-168 "/>
+<path fill="none" stroke="black" d="M374,-168C374,-174 368,-180 362,-180"/>
+<text text-anchor="start" x="124" y="-159.233" font-family="Times Roman,serif" font-size="14.00">The Chapman Kolmogorov Relation</text>
 </a>
 </g>
 <!-- CHAPMAN_KOLMOGOROV_RELATION&#45;&gt;TRANSIENT_RECURRENT_STATES -->
-<g id="edge2" class="edge"><title>CHAPMAN_KOLMOGOROV_RELATION&#45;&gt;TRANSIENT_RECURRENT_STATES</title>
-<path fill="none" stroke="black" d="M201,-143.831C201,-136.131 201,-126.974 201,-118.417"/>
-<polygon fill="black" stroke="black" points="204.5,-118.413 201,-108.413 197.5,-118.413 204.5,-118.413"/>
+<g id="edge4" class="edge"><title>CHAPMAN_KOLMOGOROV_RELATION&#45;&gt;TRANSIENT_RECURRENT_STATES</title>
+<path fill="none" stroke="black" d="M245,-143.831C245,-136.131 245,-126.974 245,-118.417"/>
+<polygon fill="black" stroke="black" points="248.5,-118.413 245,-108.413 241.5,-118.413 248.5,-118.413"/>
 </g>
 </g>
 </svg>

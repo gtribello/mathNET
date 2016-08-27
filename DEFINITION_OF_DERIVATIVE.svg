@@ -11,112 +11,112 @@
 <!-- DEFINITION_OF_DERIVATIVE -->
 <g id="node1" class="node"><title>DEFINITION_OF_DERIVATIVE</title>
 <a xlink:href="DEFINITION_OF_DERIVATIVE.html" xlink:title="Differentiation" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="357,-180 263,-180 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M263,-180C257,-180 251,-174 251,-168"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="251,-168 251,-156 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M251,-156C251,-150 257,-144 263,-144"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="263,-144 357,-144 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M357,-144C363,-144 369,-150 369,-156"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="369,-156 369,-168 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M369,-168C369,-174 363,-180 357,-180"/>
-<text text-anchor="start" x="259" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Differentiation</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="495,-180 401,-180 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M401,-180C395,-180 389,-174 389,-168"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="389,-168 389,-156 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M389,-156C389,-150 395,-144 401,-144"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="401,-144 495,-144 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M495,-144C501,-144 507,-150 507,-156"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="507,-156 507,-168 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M507,-168C507,-174 501,-180 495,-180"/>
+<text text-anchor="start" x="397" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Differentiation</text>
 </a>
-</g>
-<!-- CHAIN_RULE -->
-<g id="node2" class="node"><title>CHAIN_RULE</title>
-<a xlink:href="CHAIN_RULE.html" xlink:title="Chain Rule" target="_top">
-<polyline fill="none" stroke="black" points="80,-108 12,-108 "/>
-<path fill="none" stroke="black" d="M12,-108C6,-108 3.55271e-14,-102 2.84217e-14,-96"/>
-<polyline fill="none" stroke="black" points="2.84217e-14,-96 1.42109e-14,-84 "/>
-<path fill="none" stroke="black" d="M1.42109e-14,-84C7.10543e-15,-78 6,-72 12,-72"/>
-<polyline fill="none" stroke="black" points="12,-72 80,-72 "/>
-<path fill="none" stroke="black" d="M80,-72C86,-72 92,-78 92,-84"/>
-<polyline fill="none" stroke="black" points="92,-84 92,-96 "/>
-<path fill="none" stroke="black" d="M92,-96C92,-102 86,-108 80,-108"/>
-<text text-anchor="start" x="8.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Chain Rule</text>
-</a>
-</g>
-<!-- DEFINITION_OF_DERIVATIVE&#45;&gt;CHAIN_RULE -->
-<g id="edge2" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;CHAIN_RULE</title>
-<path fill="none" stroke="black" d="M250.719,-147.747C211.026,-137.959 157.425,-124.273 101.816,-108.159"/>
-<polygon fill="black" stroke="black" points="102.727,-104.779 92.1473,-105.338 100.767,-111.499 102.727,-104.779"/>
 </g>
 <!-- CONTINUOUS_TIME_MARKOV_CHAIN -->
 <g id="node4" class="node"><title>CONTINUOUS_TIME_MARKOV_CHAIN</title>
 <a xlink:href="CONTINUOUS_TIME_MARKOV_CHAIN.html" xlink:title="Markov chains in continuous time" target="_top">
-<polyline fill="none" stroke="black" points="346,-108 122,-108 "/>
-<path fill="none" stroke="black" d="M122,-108C116,-108 110,-102 110,-96"/>
-<polyline fill="none" stroke="black" points="110,-96 110,-84 "/>
-<path fill="none" stroke="black" d="M110,-84C110,-78 116,-72 122,-72"/>
-<polyline fill="none" stroke="black" points="122,-72 346,-72 "/>
-<path fill="none" stroke="black" d="M346,-72C352,-72 358,-78 358,-84"/>
-<polyline fill="none" stroke="black" points="358,-84 358,-96 "/>
-<path fill="none" stroke="black" d="M358,-96C358,-102 352,-108 346,-108"/>
-<text text-anchor="start" x="118" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Markov chains in continuous time</text>
+<polyline fill="none" stroke="black" points="236,-108 12,-108 "/>
+<path fill="none" stroke="black" d="M12,-108C6,-108 6.86858e-14,-102 5.21065e-14,-96"/>
+<polyline fill="none" stroke="black" points="5.21065e-14,-96 1.89478e-14,-84 "/>
+<path fill="none" stroke="black" d="M1.89478e-14,-84C2.36848e-15,-78 6,-72 12,-72"/>
+<polyline fill="none" stroke="black" points="12,-72 236,-72 "/>
+<path fill="none" stroke="black" d="M236,-72C242,-72 248,-78 248,-84"/>
+<polyline fill="none" stroke="black" points="248,-84 248,-96 "/>
+<path fill="none" stroke="black" d="M248,-96C248,-102 242,-108 236,-108"/>
+<text text-anchor="start" x="8" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Markov chains in continuous time</text>
 </a>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN -->
 <g id="edge4" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN</title>
-<path fill="none" stroke="black" d="M290.822,-143.831C281.641,-135.134 270.499,-124.578 260.522,-115.127"/>
-<polygon fill="black" stroke="black" points="262.839,-112.499 253.172,-108.163 258.024,-117.581 262.839,-112.499"/>
-</g>
-<!-- PRODUCT_RULE -->
-<g id="node6" class="node"><title>PRODUCT_RULE</title>
-<a xlink:href="PRODUCT_RULE.html" xlink:title="Product Rule" target="_top">
-<polyline fill="none" stroke="black" points="256,-36 176,-36 "/>
-<path fill="none" stroke="black" d="M176,-36C170,-36 164,-30 164,-24"/>
-<polyline fill="none" stroke="black" points="164,-24 164,-12 "/>
-<path fill="none" stroke="black" d="M164,-12C164,-6 170,-1.69437e-14 176,-1.61239e-14"/>
-<polyline fill="none" stroke="black" points="176,-1.61239e-14 256,-5.19243e-15 "/>
-<path fill="none" stroke="black" d="M256,-5.19243e-15C262,-4.37257e-15 268,-6 268,-12"/>
-<polyline fill="none" stroke="black" points="268,-12 268,-24 "/>
-<path fill="none" stroke="black" d="M268,-24C268,-30 262,-36 256,-36"/>
-<text text-anchor="start" x="172" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Product Rule</text>
-</a>
-</g>
-<!-- DEFINITION_OF_DERIVATIVE&#45;&gt;PRODUCT_RULE -->
-<g id="edge6" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;PRODUCT_RULE</title>
-<path fill="none" stroke="black" d="M335.225,-143.73C357.515,-125.301 384.041,-96.1926 367,-72 356.146,-56.5906 314.532,-42.3754 277.733,-32.4018"/>
-<polygon fill="black" stroke="black" points="278.571,-29.0031 268.008,-29.8318 276.782,-35.7708 278.571,-29.0031"/>
+<path fill="none" stroke="black" d="M388.95,-148.878C340.394,-138.087 270.767,-122.615 215.075,-110.239"/>
+<polygon fill="black" stroke="black" points="215.723,-106.798 205.202,-108.045 214.205,-113.631 215.723,-106.798"/>
 </g>
 <!-- TAYLOR_SERIES -->
-<g id="node9" class="node"><title>TAYLOR_SERIES</title>
+<g id="node6" class="node"><title>TAYLOR_SERIES</title>
 <a xlink:href="TAYLOR_SERIES.html" xlink:title="One dimensional Taylor Series" target="_top">
-<polyline fill="none" stroke="black" points="626,-108 426,-108 "/>
-<path fill="none" stroke="black" d="M426,-108C420,-108 414,-102 414,-96"/>
-<polyline fill="none" stroke="black" points="414,-96 414,-84 "/>
-<path fill="none" stroke="black" d="M414,-84C414,-78 420,-72 426,-72"/>
-<polyline fill="none" stroke="black" points="426,-72 626,-72 "/>
-<path fill="none" stroke="black" d="M626,-72C632,-72 638,-78 638,-84"/>
-<polyline fill="none" stroke="black" points="638,-84 638,-96 "/>
-<path fill="none" stroke="black" d="M638,-96C638,-102 632,-108 626,-108"/>
-<text text-anchor="start" x="422" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">One dimensional Taylor Series</text>
+<polyline fill="none" stroke="black" points="478,-108 278,-108 "/>
+<path fill="none" stroke="black" d="M278,-108C272,-108 266,-102 266,-96"/>
+<polyline fill="none" stroke="black" points="266,-96 266,-84 "/>
+<path fill="none" stroke="black" d="M266,-84C266,-78 272,-72 278,-72"/>
+<polyline fill="none" stroke="black" points="278,-72 478,-72 "/>
+<path fill="none" stroke="black" d="M478,-72C484,-72 490,-78 490,-84"/>
+<polyline fill="none" stroke="black" points="490,-84 490,-96 "/>
+<path fill="none" stroke="black" d="M490,-96C490,-102 484,-108 478,-108"/>
+<text text-anchor="start" x="274" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">One dimensional Taylor Series</text>
 </a>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE&#45;&gt;TAYLOR_SERIES -->
-<g id="edge10" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;TAYLOR_SERIES</title>
-<path fill="none" stroke="black" d="M364.227,-143.924C393.884,-134.039 430.804,-121.732 461.882,-111.373"/>
-<polygon fill="black" stroke="black" points="463.371,-114.566 471.751,-108.083 461.157,-107.925 463.371,-114.566"/>
+<g id="edge6" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;TAYLOR_SERIES</title>
+<path fill="none" stroke="black" d="M430.336,-143.831C422.027,-135.285 411.974,-124.944 402.908,-115.62"/>
+<polygon fill="black" stroke="black" points="405.382,-113.143 395.902,-108.413 400.363,-118.023 405.382,-113.143"/>
 </g>
-<!-- CHAIN_RULE&#45;&gt;PRODUCT_RULE -->
+<!-- PRODUCT_RULE -->
+<g id="node8" class="node"><title>PRODUCT_RULE</title>
+<a xlink:href="PRODUCT_RULE.html" xlink:title="Product Rule" target="_top">
+<polyline fill="none" stroke="black" points="361,-36 281,-36 "/>
+<path fill="none" stroke="black" d="M281,-36C275,-36 269,-30 269,-24"/>
+<polyline fill="none" stroke="black" points="269,-24 269,-12 "/>
+<path fill="none" stroke="black" d="M269,-12C269,-6 275,-1.69437e-14 281,-1.61239e-14"/>
+<polyline fill="none" stroke="black" points="281,-1.61239e-14 361,-5.19243e-15 "/>
+<path fill="none" stroke="black" d="M361,-5.19243e-15C367,-4.37257e-15 373,-6 373,-12"/>
+<polyline fill="none" stroke="black" points="373,-12 373,-24 "/>
+<path fill="none" stroke="black" d="M373,-24C373,-30 367,-36 361,-36"/>
+<text text-anchor="start" x="277" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Product Rule</text>
+</a>
+</g>
+<!-- DEFINITION_OF_DERIVATIVE&#45;&gt;PRODUCT_RULE -->
+<g id="edge8" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;PRODUCT_RULE</title>
+<path fill="none" stroke="black" d="M470.589,-143.96C491.304,-125.202 516.331,-95.3688 499,-72 484.886,-52.9697 428.473,-38.0141 382.888,-28.7143"/>
+<polygon fill="black" stroke="black" points="383.539,-25.2754 373.049,-26.7591 382.175,-32.1412 383.539,-25.2754"/>
+</g>
+<!-- CHAIN_RULE -->
+<g id="node11" class="node"><title>CHAIN_RULE</title>
+<a xlink:href="CHAIN_RULE.html" xlink:title="Chain Rule" target="_top">
+<polyline fill="none" stroke="black" points="626,-108 558,-108 "/>
+<path fill="none" stroke="black" d="M558,-108C552,-108 546,-102 546,-96"/>
+<polyline fill="none" stroke="black" points="546,-96 546,-84 "/>
+<path fill="none" stroke="black" d="M546,-84C546,-78 552,-72 558,-72"/>
+<polyline fill="none" stroke="black" points="558,-72 626,-72 "/>
+<path fill="none" stroke="black" d="M626,-72C632,-72 638,-78 638,-84"/>
+<polyline fill="none" stroke="black" points="638,-84 638,-96 "/>
+<path fill="none" stroke="black" d="M638,-96C638,-102 632,-108 626,-108"/>
+<text text-anchor="start" x="554.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Chain Rule</text>
+</a>
+</g>
+<!-- DEFINITION_OF_DERIVATIVE&#45;&gt;CHAIN_RULE -->
+<g id="edge12" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;CHAIN_RULE</title>
+<path fill="none" stroke="black" d="M484.337,-143.831C503.34,-134.33 526.776,-122.612 546.925,-112.537"/>
+<polygon fill="black" stroke="black" points="548.545,-115.641 555.924,-108.038 545.414,-109.38 548.545,-115.641"/>
+</g>
 <!-- LIMITS -->
-<g id="node11" class="node"><title>LIMITS</title>
+<g id="node2" class="node"><title>LIMITS</title>
 <a xlink:href="LIMITS.html" xlink:title="Limit of a function" target="_top">
-<polyline fill="none" stroke="black" points="369,-252 251,-252 "/>
-<path fill="none" stroke="black" d="M251,-252C245,-252 239,-246 239,-240"/>
-<polyline fill="none" stroke="black" points="239,-240 239,-228 "/>
-<path fill="none" stroke="black" d="M239,-228C239,-222 245,-216 251,-216"/>
-<polyline fill="none" stroke="black" points="251,-216 369,-216 "/>
-<path fill="none" stroke="black" d="M369,-216C375,-216 381,-222 381,-228"/>
-<polyline fill="none" stroke="black" points="381,-228 381,-240 "/>
-<path fill="none" stroke="black" d="M381,-240C381,-246 375,-252 369,-252"/>
-<text text-anchor="start" x="247" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Limit of a function</text>
+<polyline fill="none" stroke="black" points="507,-252 389,-252 "/>
+<path fill="none" stroke="black" d="M389,-252C383,-252 377,-246 377,-240"/>
+<polyline fill="none" stroke="black" points="377,-240 377,-228 "/>
+<path fill="none" stroke="black" d="M377,-228C377,-222 383,-216 389,-216"/>
+<polyline fill="none" stroke="black" points="389,-216 507,-216 "/>
+<path fill="none" stroke="black" d="M507,-216C513,-216 519,-222 519,-228"/>
+<polyline fill="none" stroke="black" points="519,-228 519,-240 "/>
+<path fill="none" stroke="black" d="M519,-240C519,-246 513,-252 507,-252"/>
+<text text-anchor="start" x="385" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Limit of a function</text>
 </a>
 </g>
 <!-- LIMITS&#45;&gt;DEFINITION_OF_DERIVATIVE -->
-<g id="edge12" class="edge"><title>LIMITS&#45;&gt;DEFINITION_OF_DERIVATIVE</title>
-<path fill="none" stroke="black" d="M310,-215.831C310,-208.131 310,-198.974 310,-190.417"/>
-<polygon fill="black" stroke="black" points="313.5,-190.413 310,-180.413 306.5,-190.413 313.5,-190.413"/>
+<g id="edge2" class="edge"><title>LIMITS&#45;&gt;DEFINITION_OF_DERIVATIVE</title>
+<path fill="none" stroke="black" d="M448,-215.831C448,-208.131 448,-198.974 448,-190.417"/>
+<polygon fill="black" stroke="black" points="451.5,-190.413 448,-180.413 444.5,-190.413 451.5,-190.413"/>
 </g>
+<!-- CONTINUOUS_TIME_MARKOV_CHAIN&#45;&gt;PRODUCT_RULE -->
 </g>
 </svg>

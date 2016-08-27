@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- GAMBLERS_RUIN -->
-<g id="node2" class="node"><title>GAMBLERS_RUIN</title>
+<g id="node6" class="node"><title>GAMBLERS_RUIN</title>
 <a xlink:href="GAMBLERS_RUIN.html" xlink:title="Gamblers ruin" target="_top">
 <polyline fill="none" stroke="black" points="352,-36 262,-36 "/>
 <path fill="none" stroke="black" d="M262,-36C256,-36 250,-30 250,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- HITTING_PROBABILITIES&#45;&gt;GAMBLERS_RUIN -->
-<g id="edge2" class="edge"><title>HITTING_PROBABILITIES&#45;&gt;GAMBLERS_RUIN</title>
+<g id="edge6" class="edge"><title>HITTING_PROBABILITIES&#45;&gt;GAMBLERS_RUIN</title>
 <path fill="none" stroke="black" d="M307,-71.8314C307,-64.131 307,-54.9743 307,-46.4166"/>
 <polygon fill="black" stroke="black" points="310.5,-46.4132 307,-36.4133 303.5,-46.4133 310.5,-46.4132"/>
 </g>
 <!-- TRANSIENT_RECURRENT_STATES -->
-<g id="node4" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
+<g id="node2" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
 <a xlink:href="TRANSIENT_RECURRENT_STATES.html" xlink:title="Transient and recurrent states in Markov chains" target="_top">
 <polyline fill="none" stroke="black" points="336,-180 12,-180 "/>
 <path fill="none" stroke="black" d="M12,-180C6,-180 1.42109e-13,-174 1.13687e-13,-168"/>
@@ -56,12 +56,12 @@
 </a>
 </g>
 <!-- TRANSIENT_RECURRENT_STATES&#45;&gt;HITTING_PROBABILITIES -->
-<g id="edge4" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;HITTING_PROBABILITIES</title>
+<g id="edge2" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;HITTING_PROBABILITIES</title>
 <path fill="none" stroke="black" d="M207.562,-143.831C224.888,-134.452 246.206,-122.911 264.654,-112.924"/>
 <polygon fill="black" stroke="black" points="266.321,-116.002 273.449,-108.163 262.989,-109.846 266.321,-116.002"/>
 </g>
 <!-- MATRIX_INVERSE -->
-<g id="node6" class="node"><title>MATRIX_INVERSE</title>
+<g id="node4" class="node"><title>MATRIX_INVERSE</title>
 <a xlink:href="MATRIX_INVERSE.html" xlink:title="The matrix inverse" target="_top">
 <polyline fill="none" stroke="black" points="502,-180 378,-180 "/>
 <path fill="none" stroke="black" d="M378,-180C372,-180 366,-174 366,-168"/>
@@ -75,7 +75,7 @@
 </a>
 </g>
 <!-- MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES -->
-<g id="edge6" class="edge"><title>MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES</title>
+<g id="edge4" class="edge"><title>MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES</title>
 <path fill="none" stroke="black" d="M406.438,-143.831C389.112,-134.452 367.794,-122.911 349.346,-112.924"/>
 <polygon fill="black" stroke="black" points="351.011,-109.846 340.551,-108.163 347.679,-116.002 351.011,-109.846"/>
 </g>

@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- STATIONARY_DIST_MARKOV -->
-<g id="node2" class="node"><title>STATIONARY_DIST_MARKOV</title>
+<g id="node4" class="node"><title>STATIONARY_DIST_MARKOV</title>
 <a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title="Ergodic Markov chains" target="_top">
 <polyline fill="none" stroke="black" points="158,-36 12,-36 "/>
 <path fill="none" stroke="black" d="M12,-36C6,-36 7.10543e-14,-30 5.68434e-14,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge2" class="edge"><title>EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<g id="edge4" class="edge"><title>EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV</title>
 <path fill="none" stroke="black" d="M85,-71.8314C85,-64.131 85,-54.9743 85,-46.4166"/>
 <polygon fill="black" stroke="black" points="88.5001,-46.4132 85,-36.4133 81.5001,-46.4133 88.5001,-46.4132"/>
 </g>
 <!-- GAUSSIAN_ELIMINATION -->
-<g id="node4" class="node"><title>GAUSSIAN_ELIMINATION</title>
+<g id="node2" class="node"><title>GAUSSIAN_ELIMINATION</title>
 <a xlink:href="GAUSSIAN_ELIMINATION.html" xlink:title="Gaussian Elimination" target="_top">
 <polyline fill="none" stroke="black" points="154,-180 16,-180 "/>
 <path fill="none" stroke="black" d="M16,-180C10,-180 4,-174 4,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- GAUSSIAN_ELIMINATION&#45;&gt;EIGENVECTORS -->
-<g id="edge4" class="edge"><title>GAUSSIAN_ELIMINATION&#45;&gt;EIGENVECTORS</title>
+<g id="edge2" class="edge"><title>GAUSSIAN_ELIMINATION&#45;&gt;EIGENVECTORS</title>
 <path fill="none" stroke="black" d="M85,-143.831C85,-136.131 85,-126.974 85,-118.417"/>
 <polygon fill="black" stroke="black" points="88.5001,-118.413 85,-108.413 81.5001,-118.413 88.5001,-118.413"/>
 </g>

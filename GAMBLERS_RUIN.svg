@@ -11,74 +11,74 @@
 <!-- GAMBLERS_RUIN -->
 <g id="node1" class="node"><title>GAMBLERS_RUIN</title>
 <a xlink:href="GAMBLERS_RUIN.html" xlink:title="Gamblers ruin" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="211,-36 121,-36 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M121,-36C115,-36 109,-30 109,-24"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="109,-24 109,-12 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M109,-12C109,-6 115,-1.70156e-14 121,-1.62677e-14"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="121,-1.62677e-14 211,-5.04859e-15 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M211,-5.04859e-15C217,-4.30065e-15 223,-6 223,-12"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="223,-12 223,-24 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M223,-24C223,-30 217,-36 211,-36"/>
-<text text-anchor="start" x="117" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Gamblers ruin</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="260,-36 170,-36 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M170,-36C164,-36 158,-30 158,-24"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="158,-24 158,-12 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M158,-12C158,-6 164,-1.70156e-14 170,-1.62677e-14"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="170,-1.62677e-14 260,-5.04859e-15 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M260,-5.04859e-15C266,-4.30065e-15 272,-6 272,-12"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="272,-12 272,-24 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M272,-24C272,-30 266,-36 260,-36"/>
+<text text-anchor="start" x="166" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Gamblers ruin</text>
 </a>
 </g>
-<!-- DIFFERENCE_EQUATIONS -->
-<g id="node2" class="node"><title>DIFFERENCE_EQUATIONS</title>
-<a xlink:href="DIFFERENCE_EQUATIONS.html" xlink:title="Difference equations" target="_top">
-<polyline fill="none" stroke="black" points="148,-180 12,-180 "/>
-<path fill="none" stroke="black" d="M12,-180C6,-180 7.10543e-14,-174 5.68434e-14,-168"/>
-<polyline fill="none" stroke="black" points="5.68434e-14,-168 2.84217e-14,-156 "/>
-<path fill="none" stroke="black" d="M2.84217e-14,-156C1.42109e-14,-150 6,-144 12,-144"/>
-<polyline fill="none" stroke="black" points="12,-144 148,-144 "/>
-<path fill="none" stroke="black" d="M148,-144C154,-144 160,-150 160,-156"/>
-<polyline fill="none" stroke="black" points="160,-156 160,-168 "/>
-<path fill="none" stroke="black" d="M160,-168C160,-174 154,-180 148,-180"/>
-<text text-anchor="start" x="8" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Difference equations</text>
+<!-- HITTING_PROBABILITIES -->
+<g id="node2" class="node"><title>HITTING_PROBABILITIES</title>
+<a xlink:href="HITTING_PROBABILITIES.html" xlink:title="Hitting time and hitting probability" target="_top">
+<polyline fill="none" stroke="black" points="246,-180 12,-180 "/>
+<path fill="none" stroke="black" d="M12,-180C6,-180 9.4739e-14,-174 7.57912e-14,-168"/>
+<polyline fill="none" stroke="black" points="7.57912e-14,-168 3.78956e-14,-156 "/>
+<path fill="none" stroke="black" d="M3.78956e-14,-156C1.89478e-14,-150 6,-144 12,-144"/>
+<polyline fill="none" stroke="black" points="12,-144 246,-144 "/>
+<path fill="none" stroke="black" d="M246,-144C252,-144 258,-150 258,-156"/>
+<polyline fill="none" stroke="black" points="258,-156 258,-168 "/>
+<path fill="none" stroke="black" d="M258,-168C258,-174 252,-180 246,-180"/>
+<text text-anchor="start" x="8.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Hitting time and hitting probability</text>
 </a>
 </g>
-<!-- DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN -->
-<g id="edge2" class="edge"><title>DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN</title>
-<path fill="none" stroke="black" d="M80.3118,-143.782C81.408,-124.608 85.389,-94.188 99,-72 106.097,-60.4315 116.594,-50.2734 127.184,-41.9815"/>
-<polygon fill="black" stroke="black" points="129.292,-44.7757 135.246,-36.012 125.126,-39.15 129.292,-44.7757"/>
+<!-- HITTING_PROBABILITIES&#45;&gt;GAMBLERS_RUIN -->
+<g id="edge2" class="edge"><title>HITTING_PROBABILITIES&#45;&gt;GAMBLERS_RUIN</title>
+<path fill="none" stroke="black" d="M129.312,-143.782C130.408,-124.608 134.389,-94.188 148,-72 155.097,-60.4315 165.594,-50.2734 176.184,-41.9815"/>
+<polygon fill="black" stroke="black" points="178.292,-44.7757 184.246,-36.012 174.126,-39.15 178.292,-44.7757"/>
 </g>
 <!-- LHOPITALS_RULE -->
 <g id="node6" class="node"><title>LHOPITALS_RULE</title>
 <a xlink:href="LHOPITALS_RULE.html" xlink:title="l&#39;Hopital&#39;s Rule" target="_top">
-<polyline fill="none" stroke="black" points="212,-108 120,-108 "/>
-<path fill="none" stroke="black" d="M120,-108C114,-108 108,-102 108,-96"/>
-<polyline fill="none" stroke="black" points="108,-96 108,-84 "/>
-<path fill="none" stroke="black" d="M108,-84C108,-78 114,-72 120,-72"/>
-<polyline fill="none" stroke="black" points="120,-72 212,-72 "/>
-<path fill="none" stroke="black" d="M212,-72C218,-72 224,-78 224,-84"/>
-<polyline fill="none" stroke="black" points="224,-84 224,-96 "/>
-<path fill="none" stroke="black" d="M224,-96C224,-102 218,-108 212,-108"/>
-<text text-anchor="start" x="116" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">l&#39;Hopital&#39;s Rule</text>
+<polyline fill="none" stroke="black" points="261,-108 169,-108 "/>
+<path fill="none" stroke="black" d="M169,-108C163,-108 157,-102 157,-96"/>
+<polyline fill="none" stroke="black" points="157,-96 157,-84 "/>
+<path fill="none" stroke="black" d="M157,-84C157,-78 163,-72 169,-72"/>
+<polyline fill="none" stroke="black" points="169,-72 261,-72 "/>
+<path fill="none" stroke="black" d="M261,-72C267,-72 273,-78 273,-84"/>
+<polyline fill="none" stroke="black" points="273,-84 273,-96 "/>
+<path fill="none" stroke="black" d="M273,-96C273,-102 267,-108 261,-108"/>
+<text text-anchor="start" x="165" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">l&#39;Hopital&#39;s Rule</text>
 </a>
 </g>
-<!-- DIFFERENCE_EQUATIONS&#45;&gt;LHOPITALS_RULE -->
-<!-- HITTING_PROBABILITIES -->
-<g id="node4" class="node"><title>HITTING_PROBABILITIES</title>
-<a xlink:href="HITTING_PROBABILITIES.html" xlink:title="Hitting time and hitting probability" target="_top">
-<polyline fill="none" stroke="black" points="424,-180 190,-180 "/>
-<path fill="none" stroke="black" d="M190,-180C184,-180 178,-174 178,-168"/>
-<polyline fill="none" stroke="black" points="178,-168 178,-156 "/>
-<path fill="none" stroke="black" d="M178,-156C178,-150 184,-144 190,-144"/>
-<polyline fill="none" stroke="black" points="190,-144 424,-144 "/>
+<!-- HITTING_PROBABILITIES&#45;&gt;LHOPITALS_RULE -->
+<!-- DIFFERENCE_EQUATIONS -->
+<g id="node4" class="node"><title>DIFFERENCE_EQUATIONS</title>
+<a xlink:href="DIFFERENCE_EQUATIONS.html" xlink:title="Difference equations" target="_top">
+<polyline fill="none" stroke="black" points="424,-180 288,-180 "/>
+<path fill="none" stroke="black" d="M288,-180C282,-180 276,-174 276,-168"/>
+<polyline fill="none" stroke="black" points="276,-168 276,-156 "/>
+<path fill="none" stroke="black" d="M276,-156C276,-150 282,-144 288,-144"/>
+<polyline fill="none" stroke="black" points="288,-144 424,-144 "/>
 <path fill="none" stroke="black" d="M424,-144C430,-144 436,-150 436,-156"/>
 <polyline fill="none" stroke="black" points="436,-156 436,-168 "/>
 <path fill="none" stroke="black" d="M436,-168C436,-174 430,-180 424,-180"/>
-<text text-anchor="start" x="186.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Hitting time and hitting probability</text>
+<text text-anchor="start" x="284" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Difference equations</text>
 </a>
 </g>
-<!-- HITTING_PROBABILITIES&#45;&gt;GAMBLERS_RUIN -->
-<g id="edge4" class="edge"><title>HITTING_PROBABILITIES&#45;&gt;GAMBLERS_RUIN</title>
-<path fill="none" stroke="black" d="M293.814,-143.835C279.733,-124.974 256.285,-95.0585 233,-72 222.493,-61.5954 210.096,-51.1643 198.84,-42.2824"/>
-<polygon fill="black" stroke="black" points="200.935,-39.4779 190.889,-36.1113 196.643,-45.0077 200.935,-39.4779"/>
+<!-- DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN -->
+<g id="edge4" class="edge"><title>DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN</title>
+<path fill="none" stroke="black" d="M342.814,-143.835C328.733,-124.974 305.285,-95.0585 282,-72 271.493,-61.5954 259.096,-51.1643 247.84,-42.2824"/>
+<polygon fill="black" stroke="black" points="249.935,-39.4779 239.889,-36.1113 245.643,-45.0077 249.935,-39.4779"/>
 </g>
 <!-- LHOPITALS_RULE&#45;&gt;GAMBLERS_RUIN -->
 <g id="edge6" class="edge"><title>LHOPITALS_RULE&#45;&gt;GAMBLERS_RUIN</title>
-<path fill="none" stroke="black" d="M166,-71.8314C166,-64.131 166,-54.9743 166,-46.4166"/>
-<polygon fill="black" stroke="black" points="169.5,-46.4132 166,-36.4133 162.5,-46.4133 169.5,-46.4132"/>
+<path fill="none" stroke="black" d="M215,-71.8314C215,-64.131 215,-54.9743 215,-46.4166"/>
+<polygon fill="black" stroke="black" points="218.5,-46.4132 215,-36.4133 211.5,-46.4133 218.5,-46.4132"/>
 </g>
 </g>
 </svg>

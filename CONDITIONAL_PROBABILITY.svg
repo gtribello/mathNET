@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- MARKOV_PROPERTY -->
-<g id="node2" class="node"><title>MARKOV_PROPERTY</title>
+<g id="node4" class="node"><title>MARKOV_PROPERTY</title>
 <a xlink:href="MARKOV_PROPERTY.html" xlink:title="The Markov Property" target="_top">
 <polyline fill="none" stroke="black" points="150,-108 12,-108 "/>
 <path fill="none" stroke="black" d="M12,-108C6,-108 5.92119e-14,-102 4.73695e-14,-96"/>
@@ -37,7 +37,7 @@
 </a>
 </g>
 <!-- CONDITIONAL_PROBABILITY&#45;&gt;MARKOV_PROPERTY -->
-<g id="edge2" class="edge"><title>CONDITIONAL_PROBABILITY&#45;&gt;MARKOV_PROPERTY</title>
+<g id="edge4" class="edge"><title>CONDITIONAL_PROBABILITY&#45;&gt;MARKOV_PROPERTY</title>
 <path fill="none" stroke="black" d="M200.625,-143.831C179.321,-134.245 153.002,-122.401 130.479,-112.266"/>
 <polygon fill="black" stroke="black" points="131.64,-108.95 121.084,-108.038 128.767,-115.333 131.64,-108.95"/>
 </g>
@@ -79,9 +79,8 @@
 <path fill="none" stroke="black" d="M276.435,-143.884C289.834,-135.033 303.62,-123.014 311,-108 318.058,-93.6409 319.36,-85.6419 311,-72 302.811,-58.6382 290.164,-48.4533 276.421,-40.7357"/>
 <polygon fill="black" stroke="black" points="277.759,-37.4877 267.268,-36.012 274.549,-43.7082 277.759,-37.4877"/>
 </g>
-<!-- MARKOV_PROPERTY&#45;&gt;INDEPENDENT_RANDOM_VARIABLES -->
 <!-- RANDOM_VARIABLES -->
-<g id="node4" class="node"><title>RANDOM_VARIABLES</title>
+<g id="node2" class="node"><title>RANDOM_VARIABLES</title>
 <a xlink:href="RANDOM_VARIABLES.html" xlink:title="Random variables" target="_top">
 <polyline fill="none" stroke="black" points="223,-252 107,-252 "/>
 <path fill="none" stroke="black" d="M107,-252C101,-252 95,-246 95,-240"/>
@@ -95,10 +94,11 @@
 </a>
 </g>
 <!-- RANDOM_VARIABLES&#45;&gt;CONDITIONAL_PROBABILITY -->
-<g id="edge4" class="edge"><title>RANDOM_VARIABLES&#45;&gt;CONDITIONAL_PROBABILITY</title>
+<g id="edge2" class="edge"><title>RANDOM_VARIABLES&#45;&gt;CONDITIONAL_PROBABILITY</title>
 <path fill="none" stroke="black" d="M184.178,-215.831C193.359,-207.134 204.501,-196.578 214.478,-187.127"/>
 <polygon fill="black" stroke="black" points="216.976,-189.581 221.828,-180.163 212.161,-184.499 216.976,-189.581"/>
 </g>
+<!-- MARKOV_PROPERTY&#45;&gt;INDEPENDENT_RANDOM_VARIABLES -->
 <!-- VENN_DIAGRAMS -->
 <g id="node11" class="node"><title>VENN_DIAGRAMS</title>
 <a xlink:href="VENN_DIAGRAMS.html" xlink:title="Basic set theory" target="_top">

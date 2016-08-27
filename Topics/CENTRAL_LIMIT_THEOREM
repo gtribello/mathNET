@@ -32,3 +32,4 @@ END:
 
 
 CENTRAL_LIMIT_THEOREM EXERCISE HTML SOR3012 central-limit-theorem-problems Exercises in which the central limit theorem is used to estimate probabilities
+CENTRAL_LIMIT_THEOREM EXERCISE IPYTHON SOR3012 sor3012-confidence-limits.ipynb A programming exercise on confidence limits

@@ -28,3 +28,4 @@ END:
 
 
 JOINT_PROBABILITY_DISTRIBUTION EXERCISE HTML SOR3012 joint-probability-problems Exercises involving joint probability distributions
+JOINT_PROBABILITY_DISTRIBUTION EXERCISE IPYTHON SOR3012 sor3012-pairs-of-random-varaiables.ipynb An exercise on simulating correlated variables.

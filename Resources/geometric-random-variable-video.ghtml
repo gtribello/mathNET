@@ -1,0 +1,10 @@
+TITLE: The geometric random variable 
+
+VIDEO: https://www.youtube.com/embed/R3fFiKN8GVw
+
+QUESTIONS:
+
+- Suppose that $X$ is a geometric random variable and draw a tree diagram that illustrates how the benrnoulli trials that compose this random variable pan out for $X=1$, $X=2$ and $X=3$
+- Assuming that the probability of sucess in each individual trial is equal to $p$ write out expressions for $P(X=0)$, $P(X=1)$, $P(X=2)$ and $P(X=3)$ if $X$ is a geometric random variable.
+- Write out an expression for the geometric random variable.
+- Explain what range of values a geometric random variable $X$ can take.

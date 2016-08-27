@@ -1,0 +1,12 @@
+TITLE: The binomial random variable 
+
+VIDEO: https://www.youtube.com/embed/sQqiR9fQdIM
+
+QUESTIONS:
+
+- Draw a tree diagram that illustrates the outcomes that could be obtained from three bernoulli trials
+- Illustrate on your tree diagrams, which outcomes correspdond to the $X=0$, $X=1$, $X=2$ and $X=3$ outcomes for a Binomial random variable.
+- Hence, calculate the probabilities $P(X=0)$, $P(X=1)$, $P(X=2)$ and $P(X=3)$ where $X$ is a binomial random variable
+- Write out the probability mass function for a binomial random variable with paraemter $p$ and number of trials $N$.
+- How many ways are there of arraning $N$ distinguishable objects.
+- How many ways are there of arranging $N$ objects of type 1 and $M$ objects of type 2.

@@ -29,3 +29,4 @@ END:
 
 GEOMETRIC_RANDOM_VARIABLE EXERCISE IPYTHON SOR3012 sor3012-2-binomial-geometric.ipynb Write a program to generate binomial and geometric random variables
 GEOMETRIC_RANDOM_VARIABLE EXERCISE HTML SOR3012 geometric-random-variable-problems Problems involving the geometric random variable
+GEOMETRIC_RANDOM_VARIABLE INTRO HTML SOR3012 geometric-random-variable-video A video explaining the derivation of the geometric random variable

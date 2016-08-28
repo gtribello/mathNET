@@ -1,0 +1,10 @@
+TITLE: The compound poisson process
+
+VIDEO: https://www.youtube.com/embed/phFuC5DjGpI 
+
+QUESTIONS:
+
+- Explain why the amount of money spent by the customers of Amazon can not be modelled using the Poisson process that we have learnt about thus far.
+- Explain what we assume about the amount of money spent by each of the customers at Amazon when we use the compound Poisson process to model the total amount of money spent as a function of time.
+- Give an expression for the expected amount of money spent by time $t$ if the process of spending money can be modelled using a compound Poisson process.  Explain how this expression can be derived.
+- Give an expression for the variance of this quantity and explain how this expression is derived. 

@@ -64,7 +64,7 @@ class AddResourceDialogue(QDialog):
        return True
 
    def browsefiles( self ):
-       filename = QFileDialog.getOpenFileName(self, 'Add resource file', 'Resources', "Files (*.ipynb *.pdf *.ghtml)" )
+       filename = QFileDialog.getOpenFileName(self, 'Add resource file', 'Resources', "Files (*.ipynb *.pdf *.ghtml *.zip)" )
        splitup = filename.split("/")
        if splitup[len(splitup)-2] != "Resources" : 
           error = QErrorMessage(self)
@@ -103,8 +103,10 @@ class AddResourceDialogue(QDialog):
        splitup = myfile.split(".")
        ext = splitup[len(splitup)-1]
        ftype = "HTML"
-       if ext=="ipynb" :
+       if ext=="ipynb" : 
           ftype = "IPYTHON"
+       elif ext=="zip" :
+          ftype = "IPYTHON" 
        elif ext=="pdf" :
           ftype = "PDF"
        elif ext=="ghtml" :

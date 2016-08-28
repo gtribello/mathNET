@@ -30,3 +30,4 @@ LAW_OF_LARGE_NUMBERS EXERCISE IPYTHON SOR3012 sor3012-3-law-of-large-numbers.ipy
 LAW_OF_LARGE_NUMBERS INTRO HTML SOR3012 law-of-large-numbers-video Introducing the law of large numbers
 LAW_OF_LARGE_NUMBERS EXERCISE IPYTHON SOR3012 sor3012-calculating-histograms.ipynb A programming exercise on calculating histograms
 LAW_OF_LARGE_NUMBERS INTRO HTML SOR3012 histogram-video A video explaining how the law of large numbers is used when calculating a histogram
+LAW_OF_LARGE_NUMBERS EXERCISE IPYTHON SOR3012 Betrand-paradox.ipynb.zip An exercise that will help you to understand why the cumulative probability distribution function is necessary.

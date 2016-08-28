@@ -28,3 +28,5 @@ END:
 
 
 STATIONARY_DIST_MARKOV EXERCISE HTML SOR3012 markov-stationary-distribution-problems Problems on finding the stationary distribution of ergodic Markov chians
+STATIONARY_DIST_MARKOV EXERCISE IPYTHON SOR3012 Ergodic-markov-chains.ipynb.zip A programming exercise in which you will simulate an ergodic markov chain
+STATIONARY_DIST_MARKOV EXERCISE IPYTHON SOR3012 sor3012-ehrenfest-urns.ipynb A programming exercise that involves simulating a more complex discrete time Markov chain.

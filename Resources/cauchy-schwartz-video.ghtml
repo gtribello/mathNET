@@ -1,0 +1,10 @@
+TITLE: The Cauchy-Schwartz Inequality
+
+VIDEO: https://www.youtube.com/embed/pR-RwDXCqe0 
+
+QUESTIONS:
+
+- Give the expression we would to express the correlation between a random variable $Z$ and a random variable $X$.  Explain the role of the third random variable $Y$ in your expression.
+- Complete the following sentence: If $Z=X$ the random variables $X$ and $$$ are ...
+- Complete the following sentence: If $Z=-X$ the random variables $X$ and $Z$ are ...
+- Reproduce the proof of the Cauchy-Schwartz Inequality in full. 

@@ -1,0 +1,13 @@
+TITLE: The Inhomogeneous Poisson Process
+
+VIDEO: https://www.youtube.com/embed/q2843QDkb1Q
+
+QUESTIONS:
+
+- Explain how the inhomogeneous Poisson process differs from the poisson process (the homogeneous one) that we introduced in previous videos.
+- Give an expression for the probability $P(N(t)=0)$ if $N(t)$ is given by an inhomogeneous Poisson process with rate function $\lambda(t)$.
+- State the fundamental theorem of calculus.
+- Give an expression for the probability $P(N(t)=1)$ if $N(t)$ is given by an inhomogeneous Poisson process with rate function $\lambda(t)$.
+- Try to derive an expression for $P(N(t)=2)$ if $N(t)$ is given by an inhomogeneous Poisson process with rate function $\lambda(t)$.
+
+

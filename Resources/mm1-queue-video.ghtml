@@ -1,0 +1,12 @@
+TITLE: The M/M/1 Queue
+
+VIDEO: https://www.youtube.com/embed/TlHUxvCo3Sg
+
+QUESTIONS:
+
+- Write out the transition graph for an M/M/1 Queue with finite capacity
+- Write out the jump rate matrix for an M/M/1 Queue with infinite capacity
+- How do you determine the stationary distribution of a continuous time Markov chain.
+- Explain why the Poisson process does not have a stationary distribution.
+- Calculate the fourth element of the stationary distribution vector $\pi$ for an M/M/1 Queue.
+- Explain why the zeroth element of the stationary distributin vector $\pi_0$ is given by $\pi_0 = \left( 1 - \frac{\lambda}{\mu} \right)$.

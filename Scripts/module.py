@@ -57,25 +57,33 @@ class module(object):
       mfile.close()
       indesc = 0
       desc = ""
+      inweeks = 0
       inlearn = 0
       ingraph = 0
       learning = "<ul> \n"
       utopics = []
+      nweeks = 0
+      weeks = []
       for item in mtlist : 
           if "TITLE:" in item :
              outfilecontents = outfilecontents.replace("INSERT FULL NAME", item.replace("TITLE:","") )
           elif "LEARNINGOUTCOMES:" in item :
              if indesc!=1 :
                 sys.error("found LEARNINGOUTCOMES: before DESCRIPTION:")
-             indesc = 0
-             inlearn = 1
+             indesc, inlearn = 0, 1
+          elif "NWEEKS:" in item :
+             inlearn, inweeks = 0, 1
+             nweeks = int( item.replace("NWEEKS: ","") )
+          elif (inweeks!=0) & ("WEEK" + str(inweeks) + ":" in item) :
+             newi = item.replace("WEEK" + str(inweeks) + ":", "")
+             weeks.append( newi.split() )
+             inweeks += 1 
           elif indesc==1 :
-             desc += item 
+             desc += item
           elif "GRAPH:" in item  :
-             if inlearn!=1 :
-                sys.error("found GRAPH: before LEARNINGOUTCOMES:")
-             ingraph=1
-             inlearn=0
+             if inweeks!=(nweeks+1) :
+                sys.error("found GRAPH: before WEEKS FINISHED")
+             ingraph, inweeks = 1, 0
           elif (inlearn==1) & (item[0]=="-") :
              learning += '<li type="square">' + item[1:] + '</li> \n'
           elif "DESCRIPTION:" in item :
@@ -89,12 +97,18 @@ class module(object):
                     utopics.append(clista[0]) 
 
       # Get relevant resources for each topic in module
-      topictab = ""
-      reslist = []
-      mytopics = topic.topiclist()
-      for t in utopics :
-          tstring, reslist = mytopics.get(t).getResourceForModule( self.name, reslist )
-          topictab += tstring 
+      reslist, topictab = [], ""
+      mytopics = topic.topiclist() 
+      for i in range(0,nweeks):
+          topictab += '<tr><td></td><td></td><td><b> WEEK ' + str(i+1) +' </b></td><td></td></tr>\n' 
+          for top in weeks[i] :
+              tstring, reslis = mytopics.get(top).getResourceForModule( self.name, reslist )
+              topictab += tstring
+     #  reslist = []
+     #  mytopics = topic.topiclist()
+     #  for t in utopics :
+     #      tstring, reslist = mytopics.get(t).getResourceForModule( self.name, reslist )
+     #      topictab += tstring 
       
       outfilecontents = outfilecontents.replace("INSERT FULL DESCRIPTION", desc )
       outfilecontents = outfilecontents.replace("INSERT LEARNING OUTCOMES", learning + "</ul>\n" )    

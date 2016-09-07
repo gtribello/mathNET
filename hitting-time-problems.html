@@ -115,12 +115,54 @@ occurs.
         <div class="panel-heading">
             <h4 class="panel-title">
                <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-                  Multiple absorbing states
+                  More hitting times
 
                </a>
             </h4>
         </div>
         <div id="collapse-2" class="accordion-body collapse in">
+            <div class="panel-body">
+               <div class="row">
+
+Consider a Markov chain with the following transition graph.  Write
+out the transition matrix for this chain.
+%
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node
+distance=3cm,thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
+
+\node[main node] (1) {$1$};
+\node[main node] (2) [right of=1] {$2$};
+\node[main node] (3) [below of=1] {$3$};
+
+ \path[every node/.style={font=\sffamily\small}]
+    (1) edge node [above] {1/3} (2)
+        edge node [left] {1/3} (3)
+        edge [loop left] node [left] {1/3} (1)
+    (2) edge node [right] {1/2} (3)
+        edge [loop right] node [right] {1/2} (2)
+    (3) edge [loop below] node [below] {1} (3);
+
+\end{tikzpicture}
+\end{center}
+%
+Which of the states in this graph is
+absorbing and what is the expected time till absorption if my initial state is
+selected at random.
+
+         </div>
+      </div>
+   </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+               <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+                  Multiple absorbing states
+
+               </a>
+            </h4>
+        </div>
+        <div id="collapse-3" class="accordion-body collapse in">
             <div class="panel-body">
                <div class="row">
 
@@ -163,13 +205,13 @@ starting from the transient states, until absorption occurs.
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+               <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
                   Markov university 
 
                </a>
             </h4>
         </div>
-        <div id="collapse-3" class="accordion-body collapse in">
+        <div id="collapse-4" class="accordion-body collapse in">
             <div class="panel-body">
                <div class="row">
 

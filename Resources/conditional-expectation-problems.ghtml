@@ -71,3 +71,21 @@ $$
 $$
 </li>
 </ul>
+
+EXERCISE: Exercise 5
+
+Niall and Simone play backgammon every day and Niall wins a
+fraction $p$ of these games.  Assume that the each game of backgammon is
+independent and use the conditional expectation theorem to show that the expected
+number of games that they will play, $\mathbb{E}(X_n)$, before Niall has a set
+of $n$ consecutive victories is given
+by:
+\begin{equation}
+\mathbb{E}(X_n) = \frac{1}{p}( 1 + \mathbb{E}(X_{n-1}) ) \label{eqn:niall}
+\end{equation}
+where $\mathbb{E}(X_{n-1})$ is the expected number of games they play before Niall
+has $n-1$ consecutive victories.  Solve equation \ref{eqn:niall} and show that:
+\[
+\mathbb{E}(X_n) = \sum_{i=1}^n \frac{1}{p^i}
+\]
+

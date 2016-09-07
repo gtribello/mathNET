@@ -67,3 +67,22 @@ transition matrix for the random variable. Calculate the average number of
 magazines
 that need to be printed each week in order to satisfy the demand for printed
 editions.
+
+EXERCISE: Markov's Umbrellas
+
+I own 4 umbrellas and keep some in my home and some in my
+office.  I keep moving between my home and office and only take one of my
+umbrellas with me if it rains.  Obviously, if it does not rain I do not take an
+umbrella. The probability of rain on any given day is equal to $p$. Explain
+why the number of umbrellas in my current location, $S$, is a Markov process,
+draw the transition graph for this variable and write out the transition matrix.
+When doing this remember that if there are 3 umbrellas in my office, $S_i=3$,
+and it doesn't rain there will be 1 umbrella available for me once I get home,
+$S_{i+1}=1$, and set out to the office once more.  
+
+Now use the Markov chain you have drawn to solve the following problem:  
+If I am in my office/home when it rains and there are no
+umbrellas available I will get wet as I walk to home/work.  Using the
+detailed balance condition or otherwise show that if $p=0.6$ the probability
+this will occur is approximately 5.4 \%.  How many umbrellas should I buy if I
+want the probability of getting wet to be less than 1 \%.

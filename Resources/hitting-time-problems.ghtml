@@ -25,6 +25,34 @@ Find the hitting times for each of the transient states in this
 chain. That is find the expected number of steps required until absorption
 occurs. 
 
+EXERCISE: More hitting times
+
+Consider a Markov chain with the following transition graph.  Write
+out the transition matrix for this chain.
+%
+\begin{center}
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node
+distance=3cm,thick,main node/.style={circle,draw,font=\sffamily\Large\bfseries}]
+
+\node[main node] (1) {$1$};
+\node[main node] (2) [right of=1] {$2$};
+\node[main node] (3) [below of=1] {$3$};
+
+ \path[every node/.style={font=\sffamily\small}]
+    (1) edge node [above] {1/3} (2)
+        edge node [left] {1/3} (3)
+        edge [loop left] node [left] {1/3} (1)
+    (2) edge node [right] {1/2} (3)
+        edge [loop right] node [right] {1/2} (2)
+    (3) edge [loop below] node [below] {1} (3);
+
+\end{tikzpicture}
+\end{center}
+%
+Which of the states in this graph is
+absorbing and what is the expected time till absorption if my initial state is
+selected at random.
+
 EXERCISE: Multiple absorbing states
 
 A Markov chain, between the states $X=0,1,2,3,4$,

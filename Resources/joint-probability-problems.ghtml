@@ -30,3 +30,22 @@ calculate a table of values for the conditional probability mass $f_{X|Y}(x,y)$ 
 probabilities to calculate the values of $\mathbb{E}(X|Y)$ for $y=1,2,4$.  Use all the values you have 
 obtained to verify the conditional expectation theorem.
 
+EXERCISE: Exercise 2
+
+Consider a pair of discrete random variables $X$ and $Y$.  What formulae would you use to calculate the conditional probability $P(X=4|Y=1)$ and the conditional
+expectation $\mathbb{E}(X|Y=1)$
+
+EXERCISE: Exercise 3
+
+The random variables $X$ and $Y$ are independent and have probability
+masses given by:
+\[
+\begin{aligned}
+P(X=1) &= 0.2 \quad P(X=2) = 0.2 \quad P(X=3) = 0.6 \\
+P(Y=0) &= 0.4 \quad P(Y=1)=0.3 \quad P(Y=2) = 0.3
+\end{aligned}
+\]
+Calculate the values of $\mathbb{E}(X)$, $\mathbb{E}(Y)$ and $\mathbb{E}(XY)$.
+
+
+

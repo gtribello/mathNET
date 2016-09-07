@@ -52,4 +52,10 @@ $$
 \qquad .
 $$
 
+EXERCISE: Inventing Markov chains
+
+Draw a transition graph for a Markov chain that has three recurrent
+states and two transient states.   Draw a second transition graph.  This time your Markov chain should have five states all
+of which have period 3.  Does this Markov chain have a limiting stationary distribution?
+
 

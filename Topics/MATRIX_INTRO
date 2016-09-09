@@ -27,3 +27,5 @@ END:
 
 
 MATRIX_INTRO EXERCISE HTML SOR3012 intro-matrix-problems Problems on matrix addition and the multiplication of matrices by scalars
+MATRIX_INTRO EXTERNAL WEBSITE module https://en.wikipedia.org/wiki/Matrix_(mathematics) Wikipedia article on matrices
+MATRIX_INTRO EXTERNAL VIDEO module https://www.khanacademy.org/math/precalculus/precalc-matrices/intro-to-matrices/v/introduction-to-the-matrix Videos on matrices from the kahn academy

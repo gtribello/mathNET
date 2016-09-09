@@ -2,7 +2,7 @@ TITLE: Matrix multiplication
 
 DESCRIPTION:
 
-\noindent The $ij$ element of the product of two matrices $A$ and $B$ is calculated using:
+The $ij$ element of the product of two matrices $A$ and $B$ is calculated using:
 $$
 (A B)_{ij} = \sum_{k=1}^N A_{ik}B_{kj}
 $$

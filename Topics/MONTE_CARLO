@@ -1,0 +1,18 @@
+TITLE: Monte Carlo Simulation
+
+DESCRIPTION:
+
+Monte Carlo is one of a very small number of integration algorithms that can be used to 
+calculate integrals over large numbers of variables.
+
+This method is used widely in atomistic simulation, where it used to calculate ensemble averages,
+and also in statistics where it can be used to calculate expectations for particular complex random 
+variables.
+
+LEARNINGOUTCOMES:
+
+- You should be able to explain and implement the metropolis sampling algorithm.
+- You should be able to explain how ensemble averages can be computed using Monte Carlo simulations.
+- You should be able to explain how problems with ergodicity affect the accuracy of the ensemble averages calculated using Monte Carlo
+
+END:

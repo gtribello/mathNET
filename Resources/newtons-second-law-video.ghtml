@@ -1,0 +1,9 @@
+TITLE: Newton's second law
+
+VIDEO: https://www.youtube.com/embed/HP9YlrunS-M
+
+QUESTIONS:
+
+- What does Newton's second law state?
+- Give a formula that allows one to calculate the derivative $\frac{\textrm{d}f}{\textrm{d}x}$ of the function $f(x)$ as a limit.
+- By solving the limit that you wrote down in answer to the previous question show that the derivative of the function $f(x)=x^3$ is equal to $3x^2$.

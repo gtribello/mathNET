@@ -1,0 +1,11 @@
+TITLE: The information contained in non-uniform distributions
+ 
+VIDEO: https://www.youtube.com/embed/OfpOSq0ChYk
+
+QUESTIONS:
+
+- Complete the following sentence: To find the information content of a non-uniform distribution, $p$, we generate an extended sample space in which ...
+- Explain in your own words how conditional probabilities are used in constructing this extended sample space.
+- Explain in your own words the steps in the derivation presented in the video that were taken in going from $I(p \otimes q) = I(p) + I(q)$ to $I(p \otimes q) = I(p) + \sum_i p_i I(w_i)$
+- Explain what the symbol $w_i$ represents in the formula in the previous question.
+- State the formula for the information contained in a non-uniform probability distribution, $p$ and explain the final steps involved in going from the formula $I(p \otimes q) = I(p) + \sum_i p_i I(w_i)$ to this result.

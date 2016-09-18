@@ -1,0 +1,15 @@
+TITLE: Entropy in statistical mechanics
+
+VIDEO: https://www.youtube.com/embed/mtQtcDA_7sI
+
+QUESTIONS:
+
+- How are the entropy and the information related
+- Fill in the blank in the following sentence: The uniform distribution has ... entropy.
+- Give an expression for the entropy if the distribution is uniform and define all terms.
+- Give an expression for $\log P_j$ given that $P_j = \frac{e^{-\sum_k \lambda_k B_j^{(k)}}}{e^{\Phi}}$.
+- Hence, show that: $S = k_B \sum_i P_i \sum_k \lambda_k B_i^{(k)} + k_B \sum_i P_i \Psi$ to do this you will need to note how entropy, $S$, and information are related and to remember the formula that gives you the information contained in a distribution.
+- What is $\sum_i P_i$ equal to
+- What is $\sum_i P_i B_i^{(k)}$ equal to
+- Give an expression for the entropy for a generalised distribution and explain how the results above are used in the derivation of this result.
+

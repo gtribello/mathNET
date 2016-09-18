@@ -1,0 +1,27 @@
+TITLE: Information theory 
+
+DESCRIPTION:
+
+We define a quantity $I$ (the information) contained in a prob- ability distribution by requiring that this quantity has the following properties (Khinchine)
+
+- The information depends only on the probability distribution 
+- The uniform distribution contains the minimum information.
+- If we enhance the sample space with impossible events the information does not increase.
+- Information is additive
+
+It is possible to show, starting from these axioms, that the information contained in a 
+probability distribution that has $N$ possible outcomes in the sample space, $\Omega$, that 
+have probabilities given by the vector $\mathbf{p}$, is equal to:
+$$
+I(\mathbf{p}) = k \sum_{i=1}^N p_i \ln p_i
+$$
+
+LEARNINGOUTCOMES:
+
+- You should be able to state the Khinchine axioms of information theory
+- You should be able to give an expression for the information contained in a uniform distribution.
+- You should be able to give an expression for the information contained in a non-uniform distribution.
+
+END:
+INFORMATION_THEORY INTRO HTML PHY9038 info-theory-video1 A video on the Khinchine axioms for information theory in which the information contained in a uniform distribution is derived.
+INFORMATION_THEORY INTRO HTML PHY9038 info-theory-video2 A video in which the information contained in a non-uniform distribution is derived.

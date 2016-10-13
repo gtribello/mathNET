@@ -158,3 +158,18 @@ $$
 \int_{-\infty}^\infty e^{-y^2/2} \textrm{d}y = \frac{S_0 \exp\left( \mu t
 \right) }{\sqrt{2\pi}} \sqrt{2\pi} = S_0 \exp\left( \mu t \right)
 $$
+
+It is worth noting something about this problem and its final solution.  This problem is typical of the sort of thing that appears in 
+financial maths.  As discussed in the question this particular random variable appears in the context of modelling the value/price of an asset.  Now the value of an asset changes for two reasons (1) the value increases geometrically because of compound interest and (2) the value 
+changes randomly because of the various random factors that affect the assets price.  The model has therefore been constructed so that <b> on average </b> it 
+increases geometrically.   There might, however, be some random fluctuations around this average.  As such many of the terms that appear in the original random variable:
+$$
+S(t)=S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t +\sigma X  \sqrt{t} \right)
+$$
+(particularly the $-\frac{1}{2}\sigma^2 t$ that appears in the exponential) are there so that the expectation comes out as:
+$$
+\mathbb{E}[S(t)] = S_0 \exp\left( \mu t \right)
+$$
+
+I mention all this stuff because it is interesting and because we often don't get students to think about how we might (when modelling)
+set up ``problems" so that the solution comes out in a particular way. 

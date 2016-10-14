@@ -9,7 +9,7 @@ $$
 f_X(x) = \binom{n}{x} (1-p)^{n-x} p^x
 $$
 
-EXERCISE: Binomial to Poisson
+EXAMPLE_QUESTION: 
 
 Consider the binomially-distributed, discrete random variable, $X$, with
 probability mass function:
@@ -34,4 +34,34 @@ $$
 $$
 in the limit as $n \rightarrow \infty$ 
 
+WORKED_SOLUTION:
 
+Let's being by rewriting the binomial distribution in terms of $\lambda$
+$$
+f_X(x) = \binom{n}{x} \left( \frac{\lambda}{n} \right)^x \left( 1 -
+\frac{\lambda}{n} \right)^{n-x} = \frac{n!}{x!(n-x)!} \left( \frac{\lambda}{n}
+\right)^x \left( 1 -
+\frac{\lambda}{n} \right)^{n-x}  
+$$ 
+And now lets use the limit from the question:
+$$
+ \begin{aligned}
+  \lim_{n \rightarrow \infty} \frac{n!}{x!(n-x)!} \left( \frac{\lambda}{n}
+\right)^x \left( 1 - \frac{\lambda}{n} \right)^{n-x} & = \lim_{n \rightarrow
+\infty} \frac{\lambda^x n^x}{n^x x!} \left( 1- \frac{\lambda}{n} \right)^{n-x}
+\\
+& = \frac{\lambda^x}{x!} \lim_{n\rightarrow \infty} \left( 1- \frac{\lambda}{n}
+\right)^n \\
+& = \frac{\lambda^x}{x!} e^{-\lambda}
+\end{aligned}
+$$
+In the last line here we need to use the Euler limit definition of exponential function
+$e^{-\lambda} = \lim_{n\rightarrow \infty} \left( 1- \frac{\lambda}{n} \right)^n$ 
+
+Notice that in answering this question we have had to use a result from the algebra
+of limits.  In particular, we have had to use the fact that if $\lim_{x\rightarrow a} f(x) = L_f$ 
+and $\lim_{x\rightarrow a} g(x) = L_g$ then:
+$$
+\lim_{x\rightarrow a} f(x)g(x) = \lim_{x\rightarrow a} f(x)\lim_{x\rightarrow a} g(x) = L_f L_g
+$$
+ 

@@ -9,17 +9,67 @@ $$
 f_X(x) = (1-p)^{x-1} p
 $$
 
-EXERCISE: Exericse 1
+EXAMPLE_QUESTION: 
 
-The probability I get a head when I toss a particular kind of coin is equal to $p$. C
-alculate the probability, $P(X = n)$, that I get my first head only once I have tossed 
+The probability I get a head when I toss a particular kind of coin is equal to $p$. Calculate the probability, $P(X = n)$, that 
+I get my first head only once I have tossed 
 the coin $n$ times. You may assume that each toss of the coin is independent. In addition,
 show that:
 $$
 \sum_{n=1}^\infty P(X=n) = 1 
 $$
 
-EXERCISE: Exercise 2
+WORKED_SOLUTION:
+
+In this question we are being asked to derive the probability mass function for the geometric random variable.  This mass function
+is given at the top of this page in the short description of the geometric random variable.  One way to answer this question would 
+thus be to explain why the experiment described in the question can be modelled using a geometric random variable.  Another way 
+involves carefully thinking about the process of tossing a coin till you get a head.  Lets suppose that you want the probability that
+you get a head on the first flip.  This is given by:
+$$
+P(X=1) = p
+$$
+which we are told in the question.  Now suppose that you want the first head on the second flip.  This implies that the first toss of the
+coin gives tails.  The probability of getting tails on this first flip is $(1-p)$ and the probability of getting heads on the second flip 
+is $p$.  Furthermore, the outcome of any toss of the coin is independent of any other and as such we can get the probability of both these
+events by multiplying.  As such:
+$$
+P(X=2) = (1-p)p
+$$
+Now suppose we want the probability that $X=3$.  To get $X=3$ we need to get a tails, followed by tails again followed by heads.  As these 
+three outcomes are indepdent the probability of this sequence is: 
+$$
+P(X=3) = (1-p)^2 p
+$$
+We can see the following pattern emerging here:
+$$
+P(X=n) = (1-p)^{n-1} p
+$$
+and hopefully it is clear why from the logic given in the previous paragraphs.
+
+In the second part of the question we are asked to prove that:
+$$
+\sum_{n=1}^\infty P(X=n) = 1
+$$
+In this question this means manipulating the following series as follows
+$$
+\sum_{n=1}^\infty (1-p)^{n-1} p = p \sum_{n=1}^\infty (1-p)^{n-1}
+$$
+We now replace $n$ in the summation with $k=n-1$.  This gives us:
+$$
+p \sum_{n=1}^\infty (1-p)^{n-1} = p \sum_{k=0}^\infty (1-p)^{k}
+$$
+Notice the change in the lower limit for the summation here.  We now exploit the fact that the summation here is a geometric series
+and note that:
+$$
+\sum_{k=0}^\infty (1-p)^{k} = \frac{1}{1-(1-p)} \qquad \textrm{if} \quad (1-p)<1
+$$
+The last inequality here, $(1-p)<1$, most definitely holds (as $p$ is a probability) so we can thus write:
+$$
+p \sum_{k=0}^\infty (1-p)^{k} = p \frac{1}{1-(1-p)} = \frac{p}{p} = 1
+$$
+
+EXAMPLE_QUESTION: 
 
 A group of $n$ players, $J_1$, $J_2$,...,$J_n$, sit round a table, and each player in turn, 
 starting with $J_1$, rolls a fair die. The die is passed around the table (making more than 
@@ -27,4 +77,43 @@ one circuit of the table if necessary) until a player throws a six and thereby w
 Show that the probability that $J_i$ (the ith player to play) wins the game is given by:
 $$
 p = \frac{ \frac{1}{6} \left( \frac{5}{6} \right)^{i-1} }{ 1 - \left(\frac{5}{6}\right)^n}
+$$
+
+WORKED_SOLUTION:
+
+Start by considering the probability player $J_i$ wins <b>in the first round</b> $P_1(J_i)$. The 
+random variable in this question follows a geometric distribution so 
+the probability that the $J_i$th player wins during the first round is:
+
+$$
+ P_1( J_i ) = \left( \frac{5}{6}\right)^{i-1} \frac{1}{6} 
+$$
+
+The probability player $J_i$ wins during the second round is:
+
+$$
+P_2( J_i ) = \left( \frac{5}{6} \right)^n \left( \frac{5}{6}\right)^{i-1} \frac{1}{6} 
+$$
+
+The factor of $\left( \frac{5}{6} \right)^n$ appears here as for player $J_i$ to win on the second round everyone 
+must loose during the first round. 
+
+We can generalise this insight and write the probability that player $J_i$ wins during the $k$th round as:
+$$
+ P_k( J_i ) = \left( \frac{5}{6} \right)^{kn} \left( \frac{5}{6}\right)^{i-1} \frac{1}{6} 
+$$
+
+The total probability player $J_i$ wins is sum of probability player $J_i$ wins in all rounds.  In other words, 
+the total probabiliy that player $J$ wins is given by: 
+$$
+  P(J_i) = P_1(J_i) + P_2(J_i) + P_3(J_i) + \dots = \sum_{k=0}^\infty P_k(J_i)
+$$
+Inserting the information from previous parts into this expression and doing 
+do some manipulations involving the geometric series gets us to the final result
+$$
+ P(J_i) = \sum_{k=0}^\infty \left( \frac{5}{6} \right)^{kn} \left(
+\frac{5}{6}\right)^{i-1} \frac{1}{6} = \left(\frac{1}{6} \right)
+\left(\frac{5}{6}\right)^{i-1} \sum_{k=0}^\infty \left( \frac{5}{6}\right)^{kn}
+= \frac{ \left(\frac{1}{6} \right) \left(\frac{5}{6}\right)^{i-1} }{ 1 -
+\left(\frac{5}{6}\right)^n }
 $$

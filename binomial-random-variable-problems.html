@@ -80,20 +80,14 @@ $$
 f_X(x) = \binom{n}{x} (1-p)^{n-x} p^x
 $$
 
-<H1> Problems for you to try </H1> 
-<div id="accordion" class="panel-group"> 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-                  Binomial to Poisson
-
-               </a>
-            </h4>
-        </div>
-        <div id="collapse-1" class="accordion-body collapse in">
-            <div class="panel-body">
-               <div class="row">
+<H1> Worked examples </H1>
+<p> Click on the problems to reveal the solution </p> 
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
 
 Consider the binomially-distributed, discrete random variable, $X$, with
 probability mass function:
@@ -118,7 +112,42 @@ $$
 $$
 in the limit as $n \rightarrow \infty$ 
 
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-0" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
 
+Let's being by rewriting the binomial distribution in terms of $\lambda$
+$$
+f_X(x) = \binom{n}{x} \left( \frac{\lambda}{n} \right)^x \left( 1 -
+\frac{\lambda}{n} \right)^{n-x} = \frac{n!}{x!(n-x)!} \left( \frac{\lambda}{n}
+\right)^x \left( 1 -
+\frac{\lambda}{n} \right)^{n-x}  
+$$ 
+And now lets use the limit from the question:
+$$
+ \begin{aligned}
+  \lim_{n \rightarrow \infty} \frac{n!}{x!(n-x)!} \left( \frac{\lambda}{n}
+\right)^x \left( 1 - \frac{\lambda}{n} \right)^{n-x} & = \lim_{n \rightarrow
+\infty} \frac{\lambda^x n^x}{n^x x!} \left( 1- \frac{\lambda}{n} \right)^{n-x}
+\\
+& = \frac{\lambda^x}{x!} \lim_{n\rightarrow \infty} \left( 1- \frac{\lambda}{n}
+\right)^n \\
+& = \frac{\lambda^x}{x!} e^{-\lambda}
+\end{aligned}
+$$
+In the last line here we need to use the Euler limit definition of exponential function
+$e^{-\lambda} = \lim_{n\rightarrow \infty} \left( 1- \frac{\lambda}{n} \right)^n$ 
+
+Notice that in answering this question we have had to use a result from the algebra
+of limits.  In particular, we have had to use the fact that if $\lim_{x\rightarrow a} f(x) = L_f$ 
+and $\lim_{x\rightarrow a} g(x) = L_g$ then:
+$$
+\lim_{x\rightarrow a} f(x)g(x) = \lim_{x\rightarrow a} f(x)\lim_{x\rightarrow a} g(x) = L_f L_g
+$$
+ 
          </div>
       </div>
    </div>

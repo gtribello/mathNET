@@ -18,24 +18,28 @@ In doing the following exercises you will learn how to extract probabilistic
 information about the sums of independent and identical random variables 
 using the central limit theorem.
 
-EXERCISE: Exercise 1
+EXAMPLE_QUESTION:
 
-Consider a sequence of discrete random variables, $\{X_1,X_2, \dots , X_n \}$, that 
-are independent, identically-distributed, each with mean $\mu$ and 
-variance $\sigma^2$. Recall that the central limit theorem, for the sample
-variable, $S_n$, where: $S_n=X_1+X_2+ \cdots + X_n$, can be expressed as:
- $$
- \lim_{n \rightarrow \infty}
- P \left( {S_n/n -\mu  \over \sigma /\sqrt{n}} \leq x \right) = \Phi(x)  \quad ,
- $$
- where $\Phi(x)$ is the standard normal probability distribution function.
-
-<ul>
-<li> Analysis of commuter travel  shows that the number of passenger per car, $X$, 
+Analysis of commuter travel  shows that the number of passenger per car, $X$, 
 is a discrete random variable with independent, identical distributions, such that 
 $\mathbb{E}(X)=1.2$ and $\textrm{var}(X) = 1.0$.  Use the central-limit theorem  to estimate 
-the probability that, in a sample of $n=100$ cars, the total number of passengers is 140 or fewer. </li>
-<li> The share price of SOR plc  varies in  a random manner, such that 
+the probability that, in a sample of $n=100$ cars, the total number of passengers is 140 or fewer. 
+
+WORKED_SOLUTION:
+
+Just substuting the numbers from the question into the central limit theorem here gives:
+$$
+ x = \frac{ S_n / n - \mu }{ \sigma / \sqrt{n} } = \frac{ 140/100 - 1.2 }{
+1.0/\sqrt{100} } = \frac{1.4 - 1.2}{ 0.1 } = \frac{ 0.2 }{0.1} = 2 \nonumber
+$$
+Thus:
+$$
+ P( N \le 140 ) \approx \Phi(x) \approx \Phi(2) \approx 0.9772 \nonumber
+$$
+
+EXAMPLE_QUESTION:
+
+The share price of SOR plc  varies in  a random manner, such that 
 the price increase each minute is described by a discrete 
 random variable  $X$ (measured in pounds), with the following probability mass:
 $$
@@ -49,17 +53,135 @@ f_{X}(x) =
 \right.
 $$
 Calculate $\mathbb{E}(X)=\mu$ and $\sqrt{\textrm{var}(X)}=\sigma$ and hence use the central limit 
-theorem to estimate the probability  that the price will increase by £1.20 , or more,  after 3  hours. </li>
-</ul>
+theorem to estimate the probability  that the price will increase by £1.20 , or more,  after 3  hours. 
 
-EXERCISE: Exercise 2
+WORKED_SOLUTION:
+
+WE are given information on a random variable in the question.  We can use this information to 
+calcualte the expectation as shown below:
+$$
+ \mathbb{E}(X) = [(-0.05) \times 0.3]  + [0.0 \times 0.2] + [0.05 \times 0.5] =
+0.2 \times 0.05 = 0.01 
+$$
+
+We can also use this information to calcualte the variance.
+$$
+\begin{aligned}
+ \mathbb{E}[(X - \mu)^2] &= (-0.05 - 0.01)^2 \times 0.3 + (0.0 - 0.01)^2 \times
+0.2 + ( 0.05 - 0.01 )^2 \times 0.5 \\
+ & = 0.0019
+\end{aligned}
+\nonumber
+$$
+And the square root of the variance.
+$$
+ \sigma = \sqrt{ \mathbb{E}[(X - \mu)^2] } = \sqrt{0.0019}  = 0.0436  \nonumber
+$$
+
+We now use the central limit theorem to determine how the share price changes.  We want to look
+at what happens after 3 hours.  Our random variable tells us how the share price changes each minute.
+What we are thus calculating is the sum of 180 of these random variables.  Substituting this into the
+central limit theorem we find that:
+$$
+ x = \frac{ S_n / n - \mu }{ \sigma / \sqrt{n} } = \frac{ 1.2 / 180 - 0.01 }{
+0.0436 / \sqrt{180} } \approx \frac{ -0.00333 }{ 0.00325 } = -1.025
+$$
+and thus:
+$$
+P( s \le 1.2 ) =  \Phi(x) = \Phi(-1.025) = 0.15625 \nonumber 
+$$
+
+We want the probability that $s>1.2$, however, which is just:
+$$
+ P( s > 1.2 ) = 1 - P( s \le 1.2 ) = 1 - 0.15625 = 0.844 \nonumber 
+$$
+
+EXAMPLE_QUESTION:
 
 During the course of a single season a particular football player has 213 penalty attempts and scores 175 of them. 
 Given this information calculate the probability he will score during his next penalty attempt and explain the 
 assumptions that you have made in your calculation. Please give appropriate error bars for a 95 % confidence 
 level on your numerical estimate.
 
-EXERCISE: Exercise 3
+WORKED_SOLUTION:
+
+We will assume that each penalty attempt is the generation of a random number
+from a Bernoulli random variable, $X$.  In other words for every penalty we
+assume that the underlying probability of the footballer scoring is the same.
+The number of goals is the sum of many of these random numbers.  That is to say it
+is: $S_n = X_1 + X_2 + X_3 + \dots + X_n$ 
+
+We can thus estimate the parameter $p$, which is the mean of the Bernoulli
+random variable, by assuming the Law of Large Numbers holds:
+$$
+ p = \frac{ \textrm{Number of goals scored} }{ \textrm{Number of attempts} } =
+\frac{175}{213} = 0.822  
+$$
+(a more correct method here is to note that $S_n$ is a binomially distributed
+random variable with parameter $p$ and to calculate the parameter using maximum
+likelihood).
+
+We can use the central limit theorem to get error bars for this estimate.  We
+want to be able to state the following about the probability distribution for
+the sum of the Bernoulli random variables (penalty attempts):
+
+$$
+\begin{aligned}
+P\left( \frac{ - \epsilon}{ \sigma / \sqrt{n} } \le \frac{ S_n / n -
+\mu }{\sigma/\sqrt{n}} \le \frac{\epsilon}{ \sigma / \sqrt{n} } \right) & =
+0.95 \\
+\Phi\left( \frac{\epsilon}{ \sigma / \sqrt{n} } \right) -  \Phi\left( - 
+\frac{\epsilon}{ \sigma / \sqrt{n} } \right) & = 0.95 \\
+\Phi\left( \frac{\epsilon}{ \sigma / \sqrt{n} } \right) - \left[ 1 - \Phi\left(
+\frac{\epsilon}{ \sigma / \sqrt{n} } \right) \right] & = 0.90 \\
+2\Phi\left( \frac{\epsilon}{ \sigma / \sqrt{n} } \right) - 1 &=0.95
+\end{aligned}
+$$
+
+In the second line here we use the central limit theorem, which we know is the
+probability distribution for the sum of random variables.  In the third line we
+use the fact that the normal distribution function is an odd function.
+Rearranging the above tells us that our error bars are given by:
+
+$$
+ \epsilon = \frac{\sigma}{\sqrt{n}} \Phi^{-1}\left( \frac{1.95}{2} \right)
+$$
+
+The variance ($\sigma^2$) for a Bernoulli random variable is given by
+$\sigma^2=p(1-p)$.  So in our case this is 0.146.  Substituting this and the
+value of $n$ into the above gives:
+$$
+\epsilon = \frac{\sqrt{0.146}}{\sqrt{213}} \Phi^{-1}\left( \frac{1.95}{2} \right) \approx 0.0262*1.9600 \approx 0.05135
+$$
+
+EXAMPLE_QUESTION:
 
 In the Smoky Mountains National Park 55 % of the hawks are female.  Estimate the number of birds, $n$, that you would have to catch for there to be
 a probability of 0.9 of at least 50 % female birds in your sample.  Explain any assumptions you make in your derivation.
+
+WORKED_SOLUTION:
+
+When we select a bird we are generating a Bernoulli random variable.
+This assumes that the genders of our selected birds are all independent.
+</br>
+We can use the central limit theorem to estimate the value of $n$ such that:
+\[
+P\left( \frac{S_n/n - \mu}{\sigma/\sqrt{n}} \le z \right) = 0.9
+\]
+where $\frac{S_n}{n} = 0.5$ as we want at least half of birds to be female,
+$\mu=0.55$ as this is the mean of our Bernoulli random variable and $\sigma = 
+\sqrt{0.55(0.45)} = 0.497$ as this is variance of a Bernoulli random variable.
+
+We can find the value of $z$ from the tables by looking up the inverse function
+for the normal distribution.  We want to find $z$ such that:
+
+\[
+ \Phi(z) = 0.9 \qquad \rightarrow \qquad z = 1.2816
+\]
+
+We thus have (for minimal sample size) i.e. $\frac{S_n/n - \mu}{\sigma/\sqrt{n}} = z$:
+
+\[
+ \frac{0.5 - 0.55}{0.497/\sqrt{n} } = 1.2816 \quad \rightarrow \quad n = \left( 
+\frac{1.2816 \times 0.497}{-0.05}\right)^2 \approx 163
+\]

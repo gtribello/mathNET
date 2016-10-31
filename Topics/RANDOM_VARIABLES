@@ -36,3 +36,5 @@ RANDOM_VARIABLES INTRO HTML SOR3012 non-classical-probability-video G.~Tribello 
 RANDOM_VARIABLES INTRO HTML SOR3012 probability-functions G.~Tribello An introduction to the probability mass and probabillity density
 RANDOM_VARIABLES EXERCISE HTML SOR3012 random-variables-problems G.~Tribello Some simple exercises on random variables
 RANDOM_VARIABLES INTRO PDF SOR3012 jim-chap02.pdf J.~F.~McCann Some introductory notes on probability
+RANDOM_VARIABLES INTRO PDF SOR3012 jim-chap04.pdf J.~F.~McCann Introductory material on discrete random variables including descriptions of the binomial, geometric and poisson random variables.
+RANDOM_VARIABLES INTRO PDF SOR3012 jim-chap10.pdf J.~F.~McCann Some notes on continuous random variables including descriptions of the uniform, exponential and normal random variables.

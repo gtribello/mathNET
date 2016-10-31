@@ -41,3 +41,4 @@ END:
 
 EXPONENTIAL_RANDOM_VARIABLE INTRO HTML SOR3012 exponential-random-variable-video G.~Tribello Introduction to the exponential random variable
 EXPONENTIAL_RANDOM_VARIABLE INTRO HTML SOR3012 pairs-of-exponentials G.~Tribello Calculating the probability that one exponential random variable is less than another.
+EXPONENTIAL_RANDOM_VARIABLE INTRO PDF SOR3012 jim-chap18.pdf J.~F.~McCann Notes on the derivation of the exponenitial random variable.

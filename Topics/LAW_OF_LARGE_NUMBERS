@@ -31,3 +31,4 @@ LAW_OF_LARGE_NUMBERS INTRO HTML SOR3012 law-of-large-numbers-video G.~Tribello I
 LAW_OF_LARGE_NUMBERS EXERCISE IPYTHON SOR3012 sor3012-calculating-histograms.ipynb G.~Tribello A programming exercise on calculating histograms
 LAW_OF_LARGE_NUMBERS INTRO HTML SOR3012 histogram-video G.~Tribello A video explaining how the law of large numbers is used when calculating a histogram
 LAW_OF_LARGE_NUMBERS EXERCISE IPYTHON SOR3012 Betrand-paradox.ipynb.zip G.~Tribello An exercise that will help you to understand why the cumulative probability distribution function is necessary.
+LAW_OF_LARGE_NUMBERS INTRO PDF SOR3012 jim-chap11.pdf J.~F.~McCann Some notes on the law of large numbers and the central limit theorem.  These notes include proofs for these two theorems.

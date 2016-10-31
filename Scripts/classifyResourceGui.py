@@ -116,7 +116,8 @@ class AddResourceDialogue(QDialog):
           error.exec_()
           return
        # And add the resource to the page
-       if mytopics.get(thistopic).addResource( self.typebox.currentText(), ftype, self.modbox.currentText(), myfile, self.textBrowser.toPlainText())==0 :
+       author = ""
+       if mytopics.get(thistopic).addResource( self.typebox.currentText(), ftype, self.modbox.currentText(), myfile, author, self.textBrowser.toPlainText())==0 :
           error.showMessage("This resource has already been added to this page")
           error.exec_()
           return

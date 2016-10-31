@@ -18,7 +18,7 @@ class topic(object) :
      ifile.close()
      self.label =  mystr.replace("TITLE: ", "").rstrip('\n') 
 
-  def addResource(self,location,programming,modname,resource_name,description):
+  def addResource(self,location,programming,modname,resource_name,author,description):
      f = open("Topics/" + self.name, "r")
      lines = f.readlines()
      inresources=0
@@ -33,7 +33,7 @@ class topic(object) :
                   return 0
      
      f = open("Topics/" + self.name, "a+")
-     f.write( self.name + " " + location + " " + programming + " " + modname + " " + resource_name + " " +  description + "\n" )
+     f.write( self.name + " " + location + " " + programming + " " + modname + " " + resource_name + " " + author + " " +  description + "\n" )
      f.close()
      os.remove("html/" + self.name + ".html" )
      self.printTopicPage()

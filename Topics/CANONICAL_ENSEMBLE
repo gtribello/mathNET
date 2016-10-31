@@ -38,5 +38,5 @@ LEARNINGOUTCOMES:
 - You should be able to explain how the heat capacity can be calculated from fluctutations.
 
 END:
-CANONICAL_ENSEMBLE INTRO HTML PHY9038 canonical-ensemble-video1 A video in which the canonical ensemble is derived from the generalised partition function
-CANONICAL_ENSEMBLE INTRO HTML PHY9038 canonical-ensemble-video2 A video which shows how ensemble averages for the energy can be found by taking derivatives of the canonical partition function.
+CANONICAL_ENSEMBLE INTRO HTML PHY9038 canonical-ensemble-video1 G.~Tribello A video in which the canonical ensemble is derived from the generalised partition function
+CANONICAL_ENSEMBLE INTRO HTML PHY9038 canonical-ensemble-video2 G.~Tribello A video which shows how ensemble averages for the energy can be found by taking derivatives of the canonical partition function.

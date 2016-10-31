@@ -7,6 +7,8 @@ import generate_video_page
 class resource(object) :
   def __init__(self,description) :
        dlist=description.split()
+       self.author=dlist[5].replace("~"," ") # The author of the resource
+       del dlist[5] 
        self.linkb=dlist[4]  # The actual web link you are using
        del dlist[4]
        self.module=dlist[3] # What module should this come under
@@ -61,6 +63,8 @@ class resource(object) :
             mytopics = topic.topiclist()
             table += '<td><a href="' + self.topic +'.html">' + mytopics.get(self.topic).label + "</a></td>"
 
+       if ( self.loc!="EXTERNAL" ) :
+            table += "<td>" + self.author + "</td>"
        table += "</tr> \n"
        return table
 

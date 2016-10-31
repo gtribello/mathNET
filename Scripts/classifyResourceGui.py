@@ -35,24 +35,30 @@ class AddResourceDialogue(QDialog):
        self.browse = QPushButton('browse', self )
        self.browse.clicked.connect(self.browsefiles)
        grid.addWidget( self.browse, 2, 3 )
+       # Author
+       alabel = QLabel("Author")
+       grid.addWidget( alabel, 3, 0 )
+       self.author = QTextEdit(self)
+       self.author.setMaximumHeight(label.sizeHint().height()*2)
+       grid.addWidget( self.author, 3, 1 )
        # Descrition
        label = QLabel("Description")
-       grid.addWidget( label, 3, 0 )
+       grid.addWidget( label, 4, 0 )
        self.textBrowser = QTextEdit(self)
-       grid.addWidget( self.textBrowser, 4, 0, 1, 4 )
+       grid.addWidget( self.textBrowser, 5, 0, 1, 4 )
        # Type dropdown
        label = QLabel("Type")
-       grid.addWidget( label, 3, 2 )
+       grid.addWidget( label, 4, 2 )
        self.typebox = QComboBox(self)
        self.typebox.addItem("unset")
        self.typebox.addItem("INTRO")
        self.typebox.addItem("EXERCISE")
        self.typebox.setCurrentIndex(0)
-       grid.addWidget( self.typebox, 3, 3 ) 
+       grid.addWidget( self.typebox, 4, 3 ) 
        # And go button
        self.gobutton = QPushButton('save', self ) 
        self.gobutton.clicked.connect(self.save)
-       grid.addWidget( self.gobutton, 5, 3 )
+       grid.addWidget( self.gobutton, 6, 3 )
        self.setLayout(grid)
 
    def setCurrentPage( self, page ):
@@ -116,7 +122,7 @@ class AddResourceDialogue(QDialog):
           error.exec_()
           return
        # And add the resource to the page
-       author = ""
+       author = self.author.toPlainText().replace(" ","~")
        if mytopics.get(thistopic).addResource( self.typebox.currentText(), ftype, self.modbox.currentText(), myfile, author, self.textBrowser.toPlainText())==0 :
           error.showMessage("This resource has already been added to this page")
           error.exec_()

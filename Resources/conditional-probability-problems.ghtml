@@ -140,9 +140,15 @@ $$
 P = \frac{n-1}{n(n-1-k)}
 $$
 
-EXERCISE: Exercise 1
+EXAMPLE_QUESTION:
 
 If two cards are drawn from a deck of cards calculate the probability
 that (a) they are both spades and (b) they both belong to the same suit.  (a
 deck of cards consists of 52 cards each one of which belongs to one of four
 suits. The number of cards in each of these suits is equal to 13)
+
+WORKED_SOLUTION:
+
+Probability that they are both spades is: $P=\frac{1}{17}$ <br/> 
+
+Probability that they are both same suit is: $P=\frac{4}{17}$

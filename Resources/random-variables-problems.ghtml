@@ -32,13 +32,13 @@ $$
 P = \frac{1}{9} \nonumber
 $$
 
-EXERCISE: Exercise 1
+EXAMPLE_QUESTION:
 
 Consider the problem described in the example but now suppose that the balls are not replaced.  Enumerate the 
 possible outcomes and calculate the probabilities.
  
-EXERCISE: Exercise 2
+WORKED_SOLUTION:
 
-A new two player gambling game is invented in which two, fair 6-sided dice are rolled.  Player A wins if both dice show numbers that are less
-than or equal to four, while player B wins if either dice shows a 5 or 6.  Determine which player is most likely to win and explain the additional
-(but reasonable) assumption that you are required to make in answering this question.
+$$
+P = \frac{1}{6}
+$$

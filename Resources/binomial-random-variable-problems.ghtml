@@ -9,6 +9,26 @@ $$
 f_X(x) = \binom{n}{x} (1-p)^{n-x} p^x
 $$
 
+EXAMPLE_QUESTION:
+
+A new two player gambling game is invented in which two, fair 6-sided dice are rolled.  Player A wins if both dice show numbers that are less
+than or equal to four, while player B wins if either dice shows a 5 or 6.  Determine which player is most likely to win and explain the additional
+(but reasonable) assumption that you are required to make in answering this question.
+
+WORKED_SOLUTION:
+
+The probability that player B wins can be determined using binomial distribution or similar (probability that 1 or 2 dice is equal to 5/6):
+
+$$
+P(\textrm{B wins}) = \binom{2}{1} 
+\left(\frac{1}{3}\right)\left(\frac{2}{3}\right) + \binom{2}{2} \left(
+\frac{1}{3}\right)\left(\frac{1}{3}\right) = 2 \times \frac{2}{9} + \frac{1}{9}
+= \frac{5}{9}
+$$ 
+
+To answer this question we must assume that the dice do not affect each other.  That is to say we must assume that the random variables
+that tell us the outcomes of the two dice rolls are independent.
+
 EXAMPLE_QUESTION: 
 
 Consider the binomially-distributed, discrete random variable, $X$, with

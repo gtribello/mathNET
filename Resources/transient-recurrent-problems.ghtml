@@ -15,7 +15,7 @@ $$
 Here $R_i$ is the return time to state $i$, which is random as this quantity measures the number of steps in a loop that starts and
 end in state $i$.
 
-EXERCISE: Classifying states in chains
+EXAMPLE_QUESTION: Classifying states in chains
 
 Consider the following transition matrices for three Markov chains. 
 
@@ -51,6 +51,20 @@ $$
 \right)
 \qquad .
 $$
+
+WORKED_SOLUTION:
+
+<table align=center>
+<col width="200">
+<col width="200">
+<col width="200">
+<col width="200">
+<col width="200">
+<tr> <td> <b> Problem </b> </td> <td> <b> State 1 </b> </td> <td> <b> State 2 </b> </td> <td> <b> State 3 </b> </td> <td> <b> State 4 </b> </td> </tr> 
+<tr> <td> (i) </td> <td> Transient </td> <td> Absorbing (recurrent) </td> <td> Recurrent </td> <td> Recurrent </td> </tr>
+<tr> <td> (ii) </td> <td> Recurrent </td> <td> Recurrent </td> <td> Recurrent </td> <td> </td> </tr> 
+<tr> <td> (iii) </td> <td> Transient </td> <td> Transient </td> <td> Transient </td> <td> Absorbing (recurrent) </td> </tr>
+</table>
 
 EXERCISE: Inventing Markov chains
 

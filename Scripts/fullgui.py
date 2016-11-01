@@ -96,6 +96,7 @@ class mainWindow(QWidget):
                   os.remove("html/" + ff)
            shutil.rmtree('html/resources')
            shutil.rmtree('html/assets')
+           shutil.rmtree('html/Images')
 
        # See if the html directory is there and create it 
        # if it isnt
@@ -109,10 +110,16 @@ class mainWindow(QWidget):
             os.stat('html/resources')
          except:
             os.mkdir('html/resources')
+         try:
+            os.stat('html/Images')
+         except:
+            shutil.copytree('Resources/Images', 'html/Images')
        except:
          os.mkdir('html')
          # Copy the assets to the html directory
          shutil.copytree('Templates/assets', 'html/assets')
+         # Copy the images to the html directory
+         shutil.copytree('Resources/Images', 'html/Images')
          # Make a resources directory
          os.mkdir('html/resources')
 

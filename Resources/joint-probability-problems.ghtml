@@ -9,7 +9,26 @@ $$
 The following exercises get you to manipulate these objects and to extract marginal distributions
 from joint distributions.
 
-EXERCISE: Exercise 1
+EXAMPLE_QUESTION:
+
+Consider a pair of discrete random variables $X$ and $Y$.  What formulae would you use to calculate the conditional probability $P(X=4|Y=1)$ and the conditional
+expectation $\mathbb{E}(X|Y=1)$
+
+WORKED_SOLUTION:
+
+Probability $X=4$ given $Y=1$ is given by:
+\[
+  P(X=4|Y=1) = \frac{P(X=4 \wedge Y=1)}{P(Y=1)} 
+\]
+
+<br/>
+
+Expectation of $X$ given $Y=1$ is given by:
+\[
+\mathbb{E}(X|Y=1) = \sum_{i=0}^\infty x_i P(X=i|Y=1)  
+\]
+
+EXAMPLE_QUESTION:
 
 Consider the two random variables $X$ and $Y$ with $X \in \{0,1,2\}$ and $Y \in
 \{1,2,4\}$.  The following table gives the join probability mass for the variables (with $X$ along the top):
@@ -27,18 +46,42 @@ Consider the two random variables $X$ and $Y$ with $X \in \{0,1,2\}$ and $Y \in
 <br/>
 Calculate the values of (i) $\mathbb{E}(X)$, (ii) $\mathbb{E}(Y)$ and (iii) $\textrm{cov}(X,Y)$.  Then
 calculate a table of values for the conditional probability mass $f_{X|Y}(x,y)$ and use these conditional
-probabilities to calculate the values of $\mathbb{E}(X|Y)$ for $y=1,2,4$.  Use all the values you have 
-obtained to verify the conditional expectation theorem.
+probabilities to calculate the values of $\mathbb{E}(X|Y)$ for $y=1,2,4$.  
 
-EXERCISE: Exercise 2
+WORKED_SOLUTION:
 
-Consider a pair of discrete random variables $X$ and $Y$.  What formulae would you use to calculate the conditional probability $P(X=4|Y=1)$ and the conditional
-expectation $\mathbb{E}(X|Y=1)$
+$$
+\mathbb{E}(X) = 1 \qquad \mathbb{E}(Y) = 2.6 \qquad \textrm{cov}(X,Y) = 0.5
+$$
 
-EXERCISE: Exercise 3
+<br/>
 
-The random variables $X$ and $Y$ are independent and have probability
-masses given by:
+The table of conditional probability masses is as follows:
+
+<br/> <br/>
+
+<table align=center> 
+<col width="100">
+<col width="100">
+<col width="100">
+<col width="100">
+<tr><td> $f_{X|Y}(x,y)$ </td><td> 0 </td><td> 1 </td><td> 2 </td></tr> 
+<tr><td> 1 </td><td> 0.5 </td><td> 0.5 </td><td> 0.0 </td></tr>
+<tr><td> 2 </td><td> 0.5 </td><td>0.25 </td><td> 0.25 </td></tr>
+<tr><td> 4 </td><td> 0.0 </td><td> 0.5 </td><td> 0.5 </td></tr>
+</table>
+
+<br/>
+
+which ensures that the conditional expectations are:
+
+$$
+\mathbb{E}(X|Y=1) = 0.5 \quad \mathbb{E}(X|Y=2) = 0.75 \quad \mathbb{E}(X|Y=4) = 1.5  
+$$
+
+EXAMPLE_QUESTION:
+
+The random variables $X$ and $Y$ are independent and have probability masses given by:
 \[
 \begin{aligned}
 P(X=1) &= 0.2 \quad P(X=2) = 0.2 \quad P(X=3) = 0.6 \\
@@ -47,5 +90,9 @@ P(Y=0) &= 0.4 \quad P(Y=1)=0.3 \quad P(Y=2) = 0.3
 \]
 Calculate the values of $\mathbb{E}(X)$, $\mathbb{E}(Y)$ and $\mathbb{E}(XY)$.
 
+WORKED_SOLUTION:
 
+$$
+\mathbb{E}(X) = 2.4 \qquad \mathbb{E}(Y) = 0.9 \qquad \mathbb{E}(XY)= 2.16
+$$
 

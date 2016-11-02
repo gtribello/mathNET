@@ -70,7 +70,7 @@ directly as shown below:
 
 $$
 \begin{aligned}
-P(X_1 = 1  |X_0 = 0) & = \frac{1}{2} \\
+P(X_1 = 1  |X_0 = 0) & = \frac{2}{3} \\
 \end{aligned}
 $$
 

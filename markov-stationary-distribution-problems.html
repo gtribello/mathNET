@@ -79,20 +79,14 @@ to come to understand how to set up the chain
 and how to find the stationary distribution by finding the top eigenvector
 of the transition matrix.
 
-<H1> Problems for you to try </H1> 
-<div id="accordion" class="panel-group"> 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-                  A class of Markov chains
-
-               </a>
-            </h4>
-        </div>
-        <div id="collapse-1" class="accordion-body collapse in">
-            <div class="panel-body">
-               <div class="row">
+<H1> Worked examples </H1>
+<p> Click on the problems to reveal the solution </p> 
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
 
 A Markov chain is described by the following transition matrix:
 $$
@@ -109,21 +103,168 @@ range of values of $p$ for which the matrix has a limiting stationary
 distribution.  Then find the limiting stationary distribution for this
 chain.
 
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-0" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+For the range of values $p$ can take we know that all the elements of the matrix must be positive or zero 
+and that the rows of the matrix must sum to one.  As such $0 \le p \le\frac{1}{4}$ 
+
+<br/> <br/>
+
+The chain has a limiting stationary distribution if in the long time limit there probability of being in 
+any given state in the future does not depend on the starting state.  This is true for $0 < p \le \frac{1}{4}$.
+It is not true for $p=0$ as say we start in state 0. We are guaranteed to finish in state 0 as state
+0 is only connected to itself.  This is also true for states 1 and 2 - as when $p=0$ the matrix is diagonal. 
+The state we end up in the long time limit thus depends on the intial state and there is no limiting stationary distribution.
+
+<br/> <br/>
+
+There are two ways of proceedinghere:
+
+<br/> <br/>
+
+<b> (1) Gaussian Elimination: </b> <br/> <br/>
+
+We want to find the solution, $\pi$ of the following matrix equation:
+
+$$
+\pi \mathbf{A} = \pi \qquad \rightarrow \qquad [\mathbf{A}^T - \mathbf{I}] \pi = 0
+$$
+
+We do this by Gaussian elimination as follows.  First we reduce the matrix to upper triangular form
+as shown below:
+
+$$
+[\mathbf{A}^T - \mathbf{I}]  = \left( 
+\begin{matrix}
+-4p & 2p & 0 \\
+4p & -4p & 2p \\
+0 & 2p & -2p
+\end{matrix}
+\right) 
+$$
+
+Adding row (1) to row (2) gives:
+
+$$
+[\mathbf{A}^T - \mathbf{I}]  = \left(  
+\begin{matrix}
+-4p & 2p & 0 \\
+0 & -2p & 2p \\
+0 & 2p & -2p
+\end{matrix}
+\right)
+$$
+
+And now adding row (2) to row (3) gives the an upper triangular matrix:
+
+$$
+[\mathbf{A}^T - \mathbf{I}]  = \left(
+\begin{matrix}
+-4p & 2p & 0 \\
+0 & -2p & 2p \\
+0 & 0 & 0
+\end{matrix}
+\right)
+$$
+
+We can thus write that:
+
+$$
+[\mathbf{A}^T - \mathbf{I}] \pi = 
+\left( 
+\begin{matrix}
+-4p & 2p & 0 \\
+0 & -2p & 2p \\
+0 & 0 & 0
+\end{matrix}
+\right) \left(
+\begin{matrix}
+\pi_1 \\
+\pi_2 \\
+\pi_3
+\end{matrix}
+\right) = 0 \qquad \rightarrow \qquad 
+\begin{matrix}
+-4p \pi_1 + 2p \pi_2 = 0 \\ 
+ -2p \pi_2 + 2p\pi_3 = 0
+\end{matrix}
+\qquad \rightarrow \qquad
+\begin{matrix}
+2 \pi_1 = \pi_2 \\
+\pi_2 = \pi_3 
+\end{matrix}
+$$
+
+<br/> <br/>
+
+<b> (2) Detailed Balance: </b> <br/> <br/>
+
+We can arrive at the two simultaneous equations above via an alternative route if we use the detailed balance condition.  
+Remember this states the elements of the transition matrix, $\mathbf{A}$, and the elements of the limiting stationary distribution, $\pi$, are related by:
+
+$$
+\pi_i A_{ij} = \pi_j A_{ji}
+$$ 
+
+With our transition matrix:
+
+$$
+\mathbf{A} = 
+ \left(
+ \begin{matrix}
+  1 - 4p & 4p & 0 \\
+  2p & 1 - 4p & 2p \\
+  0 & 2p & 1 - 2p
+ \end{matrix}
+ \right)
+$$
+
+We thus have for states 1 and 2: $\qquad \pi_1 4p = \pi_2 2p \qquad \rightarrow \qquad 2\pi_1 = \pi_2$ <br/> <br/>
+
+And for states 2 and 3: $\qquad \pi_2 2p = \pi_3 2p \qquad \rightarrow \qquad \pi_2 = \pi_3$ <br/> <br/> 
+
+<b> The end of the problem </b> <br/> <br/>
+
+Both the methods described above (Gaussian elimination and Detailed balance) got us to the following equations:
+
+$$
+2\pi_1 = \pi_2 \qquad \textrm{and} \qquad \pi_2 = \pi_3 
+$$
+
+We thus have two simultaneous equations and two unknowns.  We cannot solve these equations.  We know, however, that 
+$\pi$ is a vector of probabilities and that as such this vector must be normalized so that:
+
+$$
+\pi_1 + \pi_2 + \pi_3 = 1
+$$
+
+We can thus write:
+
+$$
+1= \pi_1 + \pi_2 + \pi_3 = \pi_1 + 2 \pi_1 + 2\pi_1 = 5\pi_1 \qquad \rightarrow \qquad \pi_1 = \frac{1}{5} 
+$$
+
+Inserting this equation into the equations above gives:
+
+$$
+\pi_1 = \frac{1}{5} \qquad \pi_2 = \frac{2}{5} \qquad \pi_3 = \frac{2}{5}
+$$
+
          </div>
       </div>
    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-                  Markov's glazers
-
-               </a>
-            </h4>
-        </div>
-        <div id="collapse-2" class="accordion-body collapse in">
-            <div class="panel-body">
-               <div class="row">
+</div>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
 
 A double glazing firm employs staff to cold call clients and try to sell
 them new windows for their home. There are three levels of staff pay: Level 1
@@ -141,21 +282,48 @@ in salaries each evening.  You may assume that the performance of any given
 member of the sales team is random and hence that the ordering of
 staff performances is random. 
 
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-1" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The transition matrix for this problem should be:
+
+$$
+A = 
+\left(
+\begin{matrix}
+0.2 & 0.8 & 0.0 \\
+0.2 & 0.0 & 0.8 \\
+0.05 & 0.15 & 0.8 
+\end{matrix}
+\right)
+$$
+
+You can find the stationary distribution by using Gaussian elimination.  It is:
+
+$$
+\pi_1=\frac{1}{11} \qquad \pi_2 =\frac{2}{11} \qquad \pi_3 = \frac{8}{11}
+$$
+
+The expected amount you need to pay out each evening is thus:
+
+$$
+\textrm{pay} = 90.91n \quad \textrm{pounds}
+$$
+
          </div>
       </div>
    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-                  Markov's magazine
-
-               </a>
-            </h4>
-        </div>
-        <div id="collapse-3" class="accordion-body collapse in">
-            <div class="panel-body">
-               <div class="row">
+</div>
+<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
 
 A magazine has print and ipad editions and 100,000 subscribers. These
 subscribers can subscribe to the magazine in
@@ -180,21 +348,43 @@ magazines
 that need to be printed each week in order to satisfy the demand for printed
 editions.
 
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-2" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The transition matrix for this problem should be:
+
+$$
+\left( 
+\begin{matrix}
+1-p & p & 0 \\
+p & 1-2p & p \\
+0 & p & 1-p
+\end{matrix}
+\right)
+$$
+
+We find the stationary distribution to be:
+
+$$
+\pi_1 = \pi_2 = \pi_3 = \frac{1}{3}
+$$
+
+The number of magazines required is thus: 66667
+
          </div>
       </div>
    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-                  Markov's Umbrellas
-
-               </a>
-            </h4>
-        </div>
-        <div id="collapse-4" class="accordion-body collapse in">
-            <div class="panel-body">
-               <div class="row">
+</div>
+<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
 
 I own 4 umbrellas and keep some in my home and some in my
 office.  I keep moving between my home and office and only take one of my
@@ -210,8 +400,88 @@ Now use the Markov chain you have drawn to solve the following problem:
 If I am in my office/home when it rains and there are no
 umbrellas available I will get wet as I walk to home/work.  Using the
 detailed balance condition or otherwise show that if $p=0.6$ the probability
-this will occur is approximately 5.4 \%.  How many umbrellas should I buy if I
-want the probability of getting wet to be less than 1 \%.
+this will occur is approximately 5.4 %.  How many umbrellas should I buy if I
+want the probability of getting wet to be less than 1 %.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-3" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The transition matrix in the four umbrella case is:
+
+\[
+ \begin{matrix}
+  \mathbf{P} = \left( 
+  \begin{matrix}
+  0 & 0 & 0 & 0 & 1 \\
+  0 & 0 & 0 & 1-p & p \\
+  0 & 0 & 1-p & p & 0 \\
+  0 & 1-p & p & 0 & 0 \\
+  1-p & p & 0 & 0 & 0 
+  \end{matrix}
+  \right)
+ \end{matrix}
+\]
+
+This matrix has an interesting symmetry, which we will exploit in solving the final problem.  At first 
+though lets try to determine the stationary distribution (using detailed balance) for the four umbrella
+case.  The detailed balance equations tell us that:
+
+\[
+\pi_0 = \pi_4( 1-p) \qquad \pi_1 ( 1-p) = \pi_3 (1-p) \qquad \pi_2 p = \pi_3 p 
+\qquad \pi_1 p = \pi_4 p
+\]
+
+In other words $\pi_1=\pi_2=\pi_3=\pi_4=\frac{1}{1-p}\pi_0$ and, as normalization tells us, we thus have:
+
+\[
+ 1 = \pi_0 + \pi_1 + \pi_2 + \pi_3 + \pi_4 = (1-p)\pi_1 + 4\pi_1 = (5-p)\pi_1 \qquad \rightarrow \qquad \pi_1 = \frac{1}{5-p}
+\]
+
+and hence that:
+
+\[
+\pi_0 = \frac{1-p}{5-p}
+\]
+
+This probability, $\pi_0$, is the probability that I am in a location where there is no umbrella.  For me to also get
+wet it must rain as I walk to home/work.  (I will get wet in these cases as I have no umbrella to take with me on the 
+journey).  The probability of getting wet is thus:
+
+\[
+ P(\textrm{WET}) = \frac{p(1-p)}{5-p} = \frac{0.6\times 0.4}{4.4} \approx 
+0.0545 
+\]
+
+Now the nice thing in this question is that the symmetry of the matrix ensures that we can come up with a general equation 
+for the result.  That is to say we can come up with a solution if we have $n$ (as opposed to four) umbrellas.  When we construct
+the $(n+1) \times (n+1)$ matrix that we would have in this case and exploit the detailed balance condition we would find that:
+
+$$
+\pi_1 = \pi_2 = \pi_3 = \dots = \pi_n
+$$
+
+Furthermore, just as in the four umbrella question $\pi_0=(1-p)\pi_1$.  Following through the working above (i.e. using the normalisation
+condition and so on) we find that:
+
+\[
+ P(\textrm{WET}) = \frac{p(1-p)}{n+1-p} \qquad \rightarrow \qquad n = \frac{p(1-p)}{P(\textrm{WET})} - 1 + p
+\]
+
+Hence for chance of getting wet to be less than 1% with $p=0.6$ we need:
+
+\[
+ n = \frac{ 0.6 \times 0.4 }{ 0.01 } - 0.4 \approx 24
+\]
+
+
+
+
+
+
          </div>
       </div>
    </div>

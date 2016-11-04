@@ -32,3 +32,4 @@ END:
 CONTINUOUS_TIME_MARKOV_CHAIN INTRO PDF SOR3012 jim-chap23.pdf J.~F.~McCann Notes on Markov chains in continuous time
 CONTINUOUS_TIME_MARKOV_CHAIN INTRO PDF SOR3012 jim-chap25.pdf J.~F.~McCann Notes on some examples of Markov chains in continuous time.
 CONTINUOUS_TIME_MARKOV_CHAIN INTRO HTML SOR3012 continuous-time-markov G.~Tribello A video introducing the theory of Markov chains in continuous time.
+CONTINUOUS_TIME_MARKOV_CHAIN EXERCISE HTML SOR3012 continuous-time-markov-chains-problems G.~Tribello Problems involving simple continuous time Markov chains

@@ -171,7 +171,7 @@ In this chain states 1 and 2 are transient and state 3 is recurrent.  <br/> <br/
 The time taken to absorption if the initial state is selected at random, $\mathbf{E}(T)$, is equal to:
 
 $$
-\mathbf{E}(T) = \frac{5}{2} \times \frac{1}{2} + 2 \times \frac{1}{2} = \frac{9}{4}
+\mathbf{E}(T) = \frac{5}{2} \times \frac{1}{3} + 2 \times \frac{1}{3} + 0 \times \frac{1}{3} = \frac{3}{2}
 $$
 
 EXAMPLE_QUESTION: 

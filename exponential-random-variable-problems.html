@@ -1,0 +1,460 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Title -->
+	<title>Exponential random variable
+ : Exercise</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<!-- Favicon -->
+	<link href="favicon.html" rel="shortcut icon">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+</head>
+<body>
+	<div id="pre_header" class="visible-lg"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="index.html" title="">
+					<img src="assets/img/logo.png" alt="Logo" />
+				</a>
+			</div>
+			<!-- End Logo -->
+			<!-- Top Menu -->
+			<div class="col-md-12 margin-top-30">
+				<div id="hornav" class="pull-right visible-lg">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+                                                <li><span>Modules</span>
+                                                <ul>
+                                                  <li><span><a href="SOR3012.html">SOR3012</a></span></li>
+<li><span><a href="PHY9038.html">PHY9038</a></span></li>
+
+					        </ul>				</div>
+				</div>
+				<div class="clear"></div>
+				<!-- End Top Menu -->
+			</div>
+		</div>
+		<!-- === END HEADER === -->
+		<!-- === BEGIN CONTENT === -->
+		<div id="content" class="container">
+                    <div class="panel panel-blue">
+                      <div class="panel-heading">
+                          <h1 class="panel-title"> Exponential random variable
+ : Exercises</h1>
+                      </div>
+                      
+<H1> Introduction </H1>
+
+The problems below all involve the exponential random variable in some way.  Remember that this 
+random variable is used to model the amount of time that we have to wait before some event occurs.
+Furthermore, this random variable has the all important property known as memorylessness:
+$$
+P(T>x+y | T>y ) = P(T>x) \qquad \textrm{for all} \quad x,y > 0
+$$
+The cumulative probability distribution function for the exponential random variable is:
+$$
+P(T \le x ) = 1 - e^{-\lambda x}
+$$
+
+<H1> Worked examples </H1>
+<p> Click on the problems to reveal the solution </p> 
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
+
+The alpha decay of Actinium-220 atoms to Francium-216 is a random
+process with a half life, $\gamma_{1/2}$, of 26~ms.  The
+time taken for any individual atom to decay can be modelled using an
+exponentially distributed random variable, $T$.  Give an expression for the
+cumulative probability distribution function for this variable and find the
+parameter, $\lambda$, that appears in this function.  Remember that the half
+life is the time taken for the number of Actinium-220 atoms in the sample to
+half.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-0" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+We model the decay of an Actinium-220 atom as an exponentially distributed
+random variable.  We thus have
+
+\[
+ P(T \le t ) = 1 - e^{-\lambda t} \qquad P(T>t) = e^{-\lambda t}
+\]
+
+The half life is the value of $t$ such that $P(T>t)=0.5$ 
+
+We can thus calculate $\lambda$ as follows:
+
+\[
+ 0.5 = e^{-26 \lambda} \quad \rightarrow \quad \lambda = -\frac{1}{26} \ln 0.5 \approx 0.0116~\textrm{ms}^{-1} 
+\]
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+
+Bob is waiting to catch a bus.  Alice meanwhile is visiting the library before
+going to catch the bus from the same bus stop as Bob. What is the probability that Alice will meet
+Bob at the bus stop if we are allowed to assume that the time she spends in the
+libarary, $T_A$, is an exponential random variable with mean $\frac{1}{\mu}$ and
+that Bob will on average wait $\frac{1}{\lambda}$ hours for a bus to
+arrive. Bob's waiting time, $T_B$, for a bus is also an exponetial random
+variable?
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-1" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+For Bob to meet Alice at the bus stop $T_B>T_A$ so the probability we
+are being asked to determine is $P(T_B>T_A)$.  We are told two important things
+in the question:
+
+<br/> <br/>
+
+<ul>
+ <li> Bob's waiting time for the bus, $T_B$, is exponentially distributed.  Hence, $P(T_B>t) =  e^{-\lambda t}$ </li>
+ <li> The amount of time Bob would have to wait to meet Alice, $T_A$, is also exponentially distributed.  Hence, $P(T_A>t) = e^{-\mu t}$ </li>
+</ul>
+
+These in turn imply that:
+
+<br/> <br/>
+
+<ul>
+<li> The probability that Alice will have arrived by time $t$ is $P(T_A \le t) = 1 - e^{-\mu t}$ </li>
+<li> The probability that Bob's bus will have arrived by time $t$ is $P(T_B \le t) = 1 - e^{-\lambda t}$ </li>
+</ul>
+
+These are the probability distribution functions for the random variables $T_A$
+and $T_B$.  From them we can determine the probability density functions:
+
+$$
+ P(T_A=t)=\frac{\textrm{d} }{\textrm{d}t} P(T_A \le t ) = \frac{\textrm{d} }{\textrm{d}t} \left( 1 - e^{-\mu t} \right) = \mu e^{-\mu t}
+$$
+
+We can use this density function to determine the probability that the question
+asks for $P(T_B>T_A)$.  We simply have to "sum" over each of the possible
+times at which Alice could have arrived multiplied by the probability that Bob
+is still at the bus stop.  In other words we have to calculate the following integral:
+
+$$
+\begin{aligned}
+ P(T_B>T_A) & = \int_0^{\infty} P(T_B>s) P(T_A=s) \textrm{d}s \\
+  & = \int e^{-\lambda s} \mu e^{-\mu s} \textrm{d} s \\
+  & = \mu \int_0^{\infty} e^{-(\lambda + \mu ) s } \textrm{d}s \\
+  & = \mu \left[ -\frac{1}{\lambda + \mu} e^{-(\lambda + \mu)s}
+\right]_0^{\infty} = \frac{\mu}{\lambda + \mu }
+ \end{aligned}
+$$
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+
+The departure  of an airplane, $T$, is taken to be a continuous random variable.
+The probability density has an exponential distribution:
+$$
+f_{T}(t) = 
+\left\{
+\begin{array}{ccc}
+\lambda e^{-\lambda t}  &  , &  t \geq 0 \\
+0  & , &  t < 0 \\
+\end{array}
+\right.  \qquad .
+$$
+where, $t = 0$, is the scheduled departure time.
+
+Show that the probability it leaves at a time later than $t$ is: $P (T > t) = e^{-\lambda t} $,
+and show that, $\mathbb{E}(T)=1/\lambda $. 
+
+Prove the {\em no memory}  property: 
+$$ 
+P (T > t + s |T > s) = P (T > t)  \qquad .
+$$
+The queues for checkin are horrendous and as a result I am not at the gate
+ready for departure.  If the time it takes me to reach the gate, $Y$, is an
+exponentially distributed random variable with parameter $\mu$ what is the
+probability I will catch my flight.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-2" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+In the question above we are given the probability density function and told to calculate $P(T>t)$.
+The first step in doing so is to calculate the cumulative probability distribution function, $F_T(t)$, from the 
+probability density.  We can do this by integrating the probability density as shown below.
+
+$$
+F_T(t) = P(T \le t) = \int_0^t f_T(t') \textrm{d}t' = \int_0^t \lambda e^{-\lambda t} \textrm{d}t = \left[ \frac{-\lambda e^{-\lambda t}}{\lambda} \right]_0^t =
+\left[ e^{-\lambda t} \right]_0^t = - e^{-\lambda t} + e^{0} = 1 - e^{-\lambda
+t} 
+$$
+
+Recall that the cumulative probability distribution function $F_T(t)=P(T\le t)$.  We can thus write:
+
+$$
+P(T>t) = 1 - P(T\le t) = 1 - F_T(t) = 1 - \left(1 - e^{-\lambda t} \right) = e^{-\lambda t}
+$$
+
+To calculate the expectation for this random variable we need to do the following integral:
+
+$$
+\mathbb{E}(T) = \int_0^\infty t f_T(t) \textrm{d}t  = \int_0^\infty t \lambda e^{-\lambda t}  \textrm{d} t \nonumber
+$$
+
+We can solve the final integral above using integration by parts, which remember tells us that:
+
+$$
+\int u \frac{\textrm{d}v}{\textrm{d}t} = uv - \int v \frac{\textrm{d}u}{\textrm{d}t}
+$$
+
+In this case we will use:
+
+$$
+\begin{aligned}
+   u & = t \qquad \qquad \frac{\textrm{d}v}{\textrm{d}t} = \lambda e^{-\lambda
+t} \\
+   \frac{\textrm{d}u}{\textrm{d}t} & = 1 \qquad \qquad v = \frac{ -\lambda
+e^{-\lambda t }}{\lambda} = - e^{-\lambda t}
+\end{aligned}
+$$ 
+
+when this is inserted into the formula above we find that:
+
+$$
+\begin{aligned}
+  \int_0^\infty t \lambda e^{-\lambda t} \textrm{d} t & = \left[ t
+e^{-\lambda t} \right]_0^\infty - \int_0^\infty 1 \left(-e^{-\lambda t}\right)
+\textrm{d}t \\
+& = \left[ 0 - 0 \right] + \int_0^\infty e^{-\lambda t} \textrm{d}t \\
+& = \left[ - \frac{ e^{-\lambda t} }{ \lambda } \right]_0^{\infty} \\
+& = 0 + \frac{1}{\lambda} = \frac{1}{\lambda} 
+\end{aligned}
+$$
+
+To prove the no memory property we note that:
+
+$$
+\begin{aligned}
+   P(T > t +s \vert T > s ) & = \frac{ e^{-\lambda(t+s)} }{ e^{-\lambda s}
+} \\
+ & = \frac{ e^{-\lambda t} e^{- \lambda s} }{ e^{-\lambda s} 
+}  =  e^{- \lambda t}
+ \end{aligned}
+$$
+
+The final result here is the same as the probability that $P(T>t)$, which we derived previously.
+
+Lastly the key to solving the final part of this problem is recognizing three things:
+
+<ul>
+<li> The amount of time taken for the plane to depart is a random variable, $T$, with cumulative probability distribution function: $P(T \le t) = 1 - e^{-\lambda t}$ </li>
+<li> The amount of time taken to get to the gate is a random variable, $Y$, with cumulative probability distribution function: $P(Y \le y) = 1 - e^{-\mu y}$ </li>
+<li> To catch the plane we have to arrive at the gate before the plane takes off.  We are thus being asked to calculate the probability: $P(Y<T)$
+</ul>
+
+Once you realise this the solution is the same as that for the above problem with Alice and Bob and the bus stop.
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+
+Secondary electrons generated during radiotherapy play an important role in
+damaging the DNA in tumours. These electrons are generated in water by
+the impact of the primary, ionizing radiation. They then diffuse through the
+solution before interacting with the DNA strand. However, whilst in solution
+electrons can also become solvated and hence inert. If the time taken for an
+electron to reach a DNA strand is an exponentially distributed random variable
+with parameter $\mu$ and the time taken for an electron to relax to a solvated
+(inert) state is an exponentially distributed random variable with parameter $\lambda$
+show that the probability that any given electron will cause damage to DNA
+is given by:
+$$
+\frac{\mu}{\lambda + \mu}
+$$
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-3" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The key to solving this problem is recognizing three things:
+
+<br/> <br/>
+
+<ul>
+<li> The amount of time taken for the electron to become solvated is a random variable, $X$, with cumulative probability distribution function: $P(X \le x) = 1 - e^{-\lambda x}$ </li>
+<li> The amount of time taken for the electron to reach a DNA strand is a random variable, $Y$, with cumulative probability distribution function: $P(Y \le y) = 1 - e^{-\mu y}$ </li> 
+<li> We have to calculate:  $P(Y < X)$. </li>
+</ul>
+
+Once you realise this the solution is the same as that for the above problem with Alice and Bob and the bus stop.
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 5</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
+
+A company offers to fix the mobile phones bought by its customers.
+These phones break in one of two ways: either the battery fails, which costs
+£20 to fix, or the screen breaks, which costs £30 to
+fix.  If the time taken for the battery to fail is given by an exponentially
+distributed random variable with parameter $\lambda$ and the time taken for the
+screen to break is given by an exponentially distributed random variable with
+parameter $\mu$ show that the expected cost to fix a broken phone is given by:
+\[
+ \mathbb{E}(C) = \frac{30\mu + 20\lambda}{\lambda + \mu}  
+\]
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-4" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The key to solving this problem is recognizing three things:
+
+<br/> <br/>
+
+<ul>
+<li> The amount of time taken for the screen to break is a random variable, $X$, with cumulative probability distribution function: $P(X \le x) = 1 - e^{-\lambda x}$ </li>
+<li> The amount of time taken for the battery to fail is a random variable, $Y$, with cumulative probability distribution function: $P(Y \le y) = 1 - e^{-\mu y}$ </li>
+<li> If $P(Y < X)$ then the company has to pay out £20 and if $P(X < Y)$ the company has to pay out £30. </li>
+</ul>
+
+You can determine the two probabilities in the third item above using the same method that was used to solve the problem with Alice and Bob above.
+These two probabilities will add up to one as such you can think of this pair of probabilities as the probability mass function for a discrete 
+random variable with two possible outcomes - a cost of £30 to the company or a cost of £20 to the company.  Calculating the expectation of this
+random variable is straightforward.
+
+         </div>
+      </div>
+   </div>
+</div>
+ 
+                    </div> 
+		</div>
+	</div>
+	<!-- === END CONTENT === -->
+	<!-- === BEGIN FOOTER === -->
+	<div id="base">
+		<div class="container padding-vert-30">
+			<div class="row">
+					<!-- Contact Details -->
+					<div class="col-md-3 margin-bottom-20">
+						<h3 class="margin-bottom-10">Contact Details</h3>
+						<p>School of Mathematics and Physics,<br />
+						Queen's University Belfast,<br />
+						Belfast,<br />
+						BT14 7EN</p>
+						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+					</div>
+					<!-- End Contact Details -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Menu -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="col-md-4">
+						<p>(c) 2016 Gareth Tribello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->

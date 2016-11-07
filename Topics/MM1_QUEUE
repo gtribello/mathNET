@@ -55,3 +55,4 @@ END:
 MM1_QUEUE EXERCISE IPYTHON SOR3012 sor3012-mm1-queue.ipynb G.~Tribello A programming exericse on the M/M/1 queue
 MM1_QUEUE INTRO HTML SOR3012 mm1-queue-video G.~Tribello A video introducing the M/M/1 Queue with infinite capacity
 MM1_QUEUE INTRO PDF SOR3012 jim-chap24.pdf J.~F.~McCann Notes on the M/M/1 Queue
+MM1_QUEUE EXERCISE HTML SOR3012 queues-problems G.~Tribello Some exercises involving the M/M/1 Queue

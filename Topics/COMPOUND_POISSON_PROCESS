@@ -28,3 +28,4 @@ END:
 COMPOUND_POISSON_PROCESS EXERCISE IPYTHON SOR3012 sor3012-compound-poisson.ipynb G.~Tribello A programming exercise on the compound poisson process
 COMPOUND_POISSON_PROCESS INTRO HTML SOR3012 compound-poisson-process-video G.~Tribello A video explaining how to calculate the expectation and variance for the compound poisson process.
 COMPOUND_POISSON_PROCESS INTRO PDF SOR3012 jim-chap21.pdf J.~F.~McCann Notes on the compound poisson process
+COMPOUND_POISSON_PROCESS EXERCISE HTML SOR3012 compound-poisson-process-questions G.~Tribello Some exercises involving the compound Poisson process

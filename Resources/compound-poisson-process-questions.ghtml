@@ -1,0 +1,92 @@
+TITLE: Compound Poisson Process
+
+DESCRIPTION:
+
+The problems below all involve the compound poisson process in some way.  Remember that this type 
+of random variable can be used to model the accumulated total for random variables from a distribution with 
+expectation $\mu$ and variance $\sigma^2$ that are generated at times given by a poisson process.  By using
+the condition expectation theorem we have seen elsewhere that the expectation and variance for a compound 
+Poisson process, $Y(t)$, are given by:
+$$
+\mathbb{E}[Y(t)] = \mu \lambda t \qquad \qquad \textrm{var}[Y(t)] = \lambda t(\mu^2 + \sigma^2)
+$$
+
+EXAMPLE_QUESTION:
+
+In September in Bergen (western Norway), showers arrive at a rate $\lambda=0.5$ per day.  During each of these showers the expected amount of rainfall is $\mathbb{E}[C_{i}]=18\ $mm and  
+the variance for the amount of rainfall is given by ${\rm var}(C_i)=  250\  {\rm mm}^2$.
+Assume that total rainfall can be modelled using a compound Poisson process.  Estimate the mean precipitation for the month of September, and the variance in the total rainfall for the month.
+
+WORKED_SOLUTION:
+
+We are told to assume that the amount of rain can be modelled using a compound Poisson process, $Y(t)$.  We know from above that the expectation and 
+variance for this kind of random variable are given by:
+
+$$
+\mathbb{E}[Y(t)] = \mu \lambda t \qquad \qquad \textrm{var}[Y(t)] = \lambda t(\mu^2 + \sigma^2)
+$$
+
+Remembering that there are 30 days in September and inserting all the information from the question into the above formulae we thus find that the 
+expected amount of precipitation is given by:
+
+$$
+\mathbb{E}(P) = \mu \lambda t = 18 \times 0.5 \times 30 = 270 \textrm{ mm}
+$$
+
+The variance, meanwhile, is:
+
+$$
+\textrm{var}(P) = \lambda t ( \sigma^2 +\mu^2 ) = 0.5\times 30 \times( 250 + 18^2 ) = 8610 \textrm{ mm}^2
+$$
+
+EXAMPLE_QUESTION:
+
+Suppose that casualties due to car accidents can be modelled using a compound Poisson process.  Road accidents on a motorway  occur according to a Poisson process with rate $\lambda=0.1$
+per day.  In each accident the number of casualties, $C_i$, has an identical, independent,  Binomial($n,p$) distribution; with $n=4$, and  $p=0.05$.
+Estimate the expected value and variance of the total number of expected casualties over a period of 30 days.
+
+WORKED_SOLUTION:
+
+Much as in the previous question we are told to assume that the number of casualties can be modelled using a compound Poisson Process.  We can thus use the formulae given at the top of this
+page once more.  The one difference with the previous question is that we are not given the mean and the variance.  We are instead told duing each accident the number of casualties is given
+by a binomial distribution.  We recall, however, that the expectation and variance of a binomial random variable, $X$, are given by:
+
+$$
+\mathbb{E}(X) = np = 4 \times 0.05 = 0.2 \qquad \textrm{and} \qquad \textrm{var} = np(1-p) = 4 \times 0.05 \times 0.95 = 0.19
+$$
+
+With the mean and variance for the number of casualities in each accident duly calculated we can insert this information, together with the information in the question, into the 
+formula above for the mean and variance of a compound poisson process and thus obtain values for the expected number of accidents over a 30 day period and the variance in this 
+quantity as shown below:
+
+$$
+\begin{aligned}
+  \mathbb{E}[Y(t)] & = \mu \lambda t  = 0.2 \times 0.1 \times 30 = 0.60 \\
+   \textrm{var}[Y(t)] & =  \lambda t(\mu^2 + \sigma^2) = 0.1 \times 30 \times (
+0.2^2 + 0.19 ) = 0.69
+\end{aligned}
+$$
+
+EXAMPLE_QUESTION:
+
+The employees of Queen's send emails through an email server according to a Poisson process with rate $\lambda$.  All the emails sent through the server are all stored on a local hard
+drive, which has a capacity of 10~MB.  If the emails have an average size of 0.01~MB estimate how long (on average) it will take for this storage space to become filled with emails assuming
+$\lambda=10$ hours$^{-1}$.
+
+WORKED_SOLUTION:
+
+The emails are sent according to a Poisson process.  Furthermore, the emails have an average size of 0.01~MB.  We can thus model the total
+ammount of data sent via email by time $t$ using a compound Poisson process.  The expectation for this particular kind of random variable
+is given by:
+
+\[
+\mathbb{E}[Y(t)] = \mu \lambda t
+\]
+
+The question is asking at what point will we have generated 10~MB of emails.  If we insert all the information in the question into the above formula and rearrange we find that:
+
+\[
+ 10 = 0.01 \times 10 \times t \qquad \rightarrow \qquad t =\frac{10}{0.01 
+\times 10} = 100 \quad \textrm{hours} 
+\]
+

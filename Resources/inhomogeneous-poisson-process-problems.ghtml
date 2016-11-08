@@ -1,0 +1,258 @@
+TITLE: Inhomogeneous Poisson Process
+
+DESCRIPTION:
+
+The questions below all involve the inhomogeneous Poisson Process in some way.  Remember that 
+the main difference between an inhomogeneous Poisson Process and a Poisson process is that in 
+an inhomogeneous Poisson Process the average rate of arrivals is allowed to vary with time.  This
+fact ensures that the probability that $n$ events have occured by time $t$ is given by the following
+equation:
+$$
+p_n(t) = \frac{(\int_0^t \lambda(t) \textrm{d}t')^n}{n!} e^{-\int_0^t \lambda(t) \textrm{d}t'}
+$$
+
+EXAMPLE_QUESTION:
+
+You send your sister text messages in the afternoon  according to an inhomogeneous Poisson process, at a rate (intensity).
+$$
+\lambda (t) = {t \over (1+t)} \quad {\rm hour}^{-1} \quad ,
+$$
+where $t$ is the time (in hours) from  12 noon.
+
+Show that the expected time for her to receive the first text message from you
+is 2 p.m. 
+[Hint: You will need the result, $\int_{0}^{+\infty} e^{-u}u^{n} du= n!\ \ $.]
+
+WORKED_SOLUTION:
+
+The question tells us that the texts arrive according to an inhomogeneous Poisson process.  We therefore know from the formula
+given above that the probability that no events have occured by time $t$ is given by:
+$$
+p_0(t) = \exp\left(-\int_0^t \lambda(t) \textrm{d}t'\right)
+$$
+The probability that the first event will have occured by time $t$ - the cumulative probability distribution function for the 
+random variable $T_1$ - is thus:
+$$
+P(T_1 \le t ) = 1 - \exp\left(-\int_0^t \lambda(t) \textrm{d}t'\right)
+$$
+We can get the probability density function for this random variable $T_1$ by differentiating the above equation with respect 
+to $t$:
+$$
+f_{T_1}(t) = \frac{ \textrm{d} P(T_1 \le t ) }{\textrm{d}t} = \lambda(t) \exp\left(-\int_0^t \lambda(t) \textrm{d}t'\right)
+$$
+We can thus write the expectation of $T_1$, which is the quantity we are asked to calculate in the question as follows:
+$$
+\mathbb{E}(T_1) =\int_0^\infty t f_{T_1}(t) \textrm{d}t =  \int_0^\infty t \lambda(t)  \exp\left( - \int_0^t \lambda(t') \textrm{d} t'  \right)  \textrm{d}t 
+$$
+Lets begin finding this expectation by performing the integral that currently appears in the exponential term:
+$$
+\int_0^t \lambda(t') \textrm{d} t'  = \int_0^t \frac{t'}{1+t'} \textrm{d}t'
+$$
+We can do the integration here by parts i.e. by using:
+$$
+\int v \frac{\textrm{d}u}{\textrm{d}x} \textrm{d}x = uv - \int u \frac{\textrm{d}v}{\textrm{d}x} \textrm{d}x
+$$
+In this case we will set:
+$$
+u = t \qquad \rightarrow \qquad \frac{\textrm{d}u}{\textrm{d}t} = 1 \qquad \textrm{and} \qquad \frac{\textrm{d}v}{\textrm{d}t} = \frac{1}{1+t} \qquad \rightarrow \qquad  v = \ln( 1+ t)
+$$
+When all this is inserted into the integration by parts formula above we find that:
+$$
+\begin{aligned}
+\int_0^t \lambda(t') \textrm{d} t'  & = [ t' \ln(1+t')]_0^t - \int_0^t \ln( 1+ t' ) \textrm{d}t'  \\
+ & = t\ln(1+t) - [ ( 1 + t' ) \ln(1 + t' ) - (1 + t' )]_0^t \\
+ & = t\ln(1+t) - \ln(1+t) + t\ln(1+t) + (1+t)  + \ln(1) - 1 \\
+ & = -\ln(1+t) + t
+\end{aligned} 
+$$
+Here notice that we find the indefinite integral of $\ln(1+t')$ by using a combination of integration by subtitution and integration by parts.  We begin by making the 
+substitution $y=1+t'$.  We are thus left to solve the integral $\int \ln(y) \textrm{d}y$, which we do by parts. In this case we set $u=\ln(y)$ and 
+$\frac{\textrm{d}v}{\textrm{d}y}=1$.  When the integration is completed and once we substitute y=1+t' into the final result we find the result I have used above:
+$\int \ln(1+t') \textrm{d}t' = (1+t')\ln(1+t') - (1+t') + C$ 
+
+<br/> <br/>
+
+Substituing $\int_0^t \lambda(t') \textrm{d} t'=-\ln(1+t) + t$ into the expression for $\mathbb{E}(T_1)$ above we finally get to:
+
+$$
+\begin{aligned}
+\mathbb{E}(T_1) & = \int_0^\infty t \frac{t}{1+t} \exp\left( \ln(1+t) - t
+\right) \textrm{d}t \\
+ & = \int_0^\infty t \frac{t}{1+t} e^{\ln(1+t)} e^{-t}   \textrm{d}t \\ 
+ & = \int_0^\infty t^2 \frac{1+t}{1+t} e^{-t} \textrm{d}t \\
+ & = \int_0^\infty t^2  e^{-t} \textrm{d}t = 2!
+\end{aligned}
+$$
+
+We therefore find that the expected time of arrival is 2 hours after 12:00 i.e. 14:00.
+
+EXAMPLE_QUESTION:
+
+Suppose two football teams score goals according to two independent inhomogeneous Poisson processes with rates:
+$$
+\lambda_1(t) = \frac{ 0.02 t}{10+ t} \quad \textrm{per minute} \qquad \textrm{and} \qquad \lambda_2(t) = \frac{ 0.04 t}{10 + t} \quad \textrm{per minute}.
+$$
+Calculate the probability that, in a match between them, the score is 1-1 at half time (the first half lasts 45 minutes).
+
+WORKED_SOLUTION:
+
+To find the solution to this problem we need to find the probability that each team has scored exactly one
+goal during 45 minutes of play.  We can do this using the $n=1$ case of the equation given at the top of this page.
+In other words, we need to calculate:
+$$
+P\{N(t)=1\} = \left( \int_0^t \lambda(t') \textrm{d}t' \right) \exp\left( - \int_0^t \lambda(t') \textrm{d}t' \right)
+$$
+with each of the two expressions for the rate that were given in the question.  As these two rate expressions have similar
+functional forms lets start by finding the following integral:
+$$
+\int_0^t \lambda(t') \textrm{d}t' = p\int_0^t \frac{t'}{10+t'} \textrm{d}t' 
+$$
+We can find this integral by doing integration by parts i.e. by using:
+$$
+\int v \frac{\textrm{d}u}{\textrm{d}x} \textrm{d}x = uv - \int u \frac{\textrm{d}v}{\textrm{d}x} \textrm{d}x
+$$
+and in this case setting:
+$$
+v = t \qquad \rightarrow \qquad \frac{\textrm{d}v}{\textrm{d}t} = 1 \qquad
+\frac{\textrm{d}u}{\textrm{d}t} = \frac{1}{10+t} \qquad \rightarrow \qquad u =
+\ln(t+10)
+$$
+When this information is inserted into the integration by parts equation we find that:
+$$
+\begin{aligned}
+\int_0^t \frac{t'}{10+t'} \textrm{d}t' & = \left[ t' \ln(t'+10) \right]_0^t -
+\int_0^t \ln(t+10) \textrm{d}t \\
+ & = t\ln(t+10) - [ (t'+10)\ln(t'+10) - t']_0^t \\
+ & = t\ln(t+10) - (t+10)\ln(t+10) + t + 10\ln(10) \\
+ & = 10\ln(10) - 10\ln(t+10) + t 
+ \end{aligned}
+$$
+Notice that we have used the fact that: $\int \ln(10+t') \textrm{d}t' = (10+t')\ln(10+t') - (10+t') + C$ (The solution
+of a similar indefinite integral was discussed in the solution to question 1).  Now as the first half lasts for 45 minutes 
+the above integral is thus simply equal to:
+$$
+10\ln(10) - 10\ln(t+10) + t = 10\ln(10) + 10\ln(55) = 27.952
+$$
+Next notice that the $\lambda_1(t)$ and $\lambda_2(t)$ functions that were given in the question are equal to the integrand of the integral above multiplied by a constant.  
+We can thus calculate the probability that each of the teams scores one goal during the first half using the equation at the top of this solution as shown below:
+
+$$
+\begin{aligned}
+\int_0^t \lambda_1(t') \textrm{d}t' & = 0.02 \times 27.952 \qquad \therefore \qquad P(N_1=1) = 0.02 \times 27.952 \times \exp(- 0.02 \times 27.952 ) = 0.56 \exp(-0.56 ) = 0.32 \\ 
+\int_0^t \lambda_2(t') \textrm{d}t' & = 0.04 \times 27.952 \qquad \therefore \qquad P(N_2=1) = 0.04 \times 27.952 \times \exp(- 0.04 \times 27.952 ) = 1.118 \exp(-1.118 ) = 0.37 \\
+\end{aligned}
+$$
+
+To work out the probability that the score is one-one we need to calculate the probability that both teams score exactly one goal.  We are told in the question that
+the inhomogeneous Poisson processes that determine the rate at which each team scores goals are independent.  We can thus calculate the probability that the two 
+teams score one goal each by taking the product of the two probilities calculated above as shown below:
+
+$$
+\textrm{Total probability:} \quad 0.32\times0.37 = 0.12 
+$$
+
+
+EXAMPLE_QUESTION:
+
+A bank extends a loan to a start-up technology company.  The company is
+at risk of going bankrupt and hence in danger of defaulting on the loan.  Let's
+assume the default is unpredictable.  The time at which default occurs is
+described by a continuous random variable, $T$, with a hazard rate:
+$$
+ \lambda(t) = a + bt \qquad a,b > 0
+$$
+Find an expression for the survival function - the probability the event does
+not happen before time $t$.  Hence, show that the expected value for the time
+of the default is:
+$$
+ \mathbb{E}[T] = \sqrt{\frac{2\pi}{b}} e^{a^2/2b} \left[ 1 - \Psi\left(\frac{a}{\sqrt{b}}\right) \right]
+$$
+where, $\Psi(z)$ is the normal probability distribution:
+$$
+\Psi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z e^{-\frac{1}{2} u^2} \textrm{d}u
+$$
+Hint: Use the following substitution $y=\sqrt{b}t + \frac{a}{\sqrt{b}}$ to solve the integral
+
+WORKED_SOLUTION:
+
+The hazard rate discussed in the question is the rate that should appear in the inhomogeneous Poisson process.
+Once again we are interested in probability that the event does not happen before time $t$, which we can 
+determine using the equation for the probability of having $n$ events by time $t$ that was given at the top of 
+this page.  We can thus write that the probability the default will not have occured by time $t$ as: 
+
+$$
+S_T(t) = P(T>t) = \exp\left(-\int_0^t \lambda(t') \textrm{d}t' \right)
+$$
+
+Inserting the hazard rate that we are given in the question into the integral above we find that:
+
+$$
+S_T(t) = \exp\left(-\int_0^t (a + bt) \textrm{d}t' \right) = \exp\left( - at - \frac{1}{2}bt^2 \right)
+$$
+
+We now want to work out the expected value for the time of the default.  As in question one above we do by first noting that the 
+probability that the first event will have occured by time $t$ - the cumulative probability distribution function for the
+random variable $T$ - is given by:
+$$
+P(T \le t ) = 1 - S_T(t) = 1 - \exp\left(-\int_0^t \lambda(t) \textrm{d}t'\right)
+$$
+We can get the probability density function for this random variable $T$ by differentiating the above equation with respect to $t$:
+$$
+f_{T}(t) = \frac{ \textrm{d} P(T \le t ) }{\textrm{d}t} = \lambda(t) \exp\left(-\int_0^t \lambda(t) \textrm{d}t'\right)
+$$
+We can thus write the expectation of $T$, which is the quantity we are asked to calculate in the question as follows:
+$$
+\mathbb{E}(T) =\int_0^\infty t f_{T}(t) \textrm{d}t =  \int_0^\infty t \lambda(t)  \exp\left( - \int_0^t \lambda(t') \textrm{d} t'  \right)  \textrm{d}t
+$$
+
+It is interesting to note at this stage that we can simplify the above expression by doing a little integration by parts.  Remember that the intetration
+by parts formula tells us that:
+$$
+\int v \frac{\textrm{d}u}{\textrm{d}x} \textrm{d}x = uv - \int u \frac{\textrm{d}v}{\textrm{d}x} \textrm{d}x
+$$
+In this case we will set:
+$$
+u = t \qquad \rightarrow \qquad \frac{\textrm{d}u}{\textrm{d}t} = 1 \qquad \textrm{and} \qquad
+\frac{\textrm{d}v}{\textrm{d}t} = \lambda(t) \exp\left(- \int_0^t \lambda(t') \textrm{d} t'  \right)
+\qquad \rightarrow \qquad v = -\exp\left(- \int_0^t \lambda(t') \textrm{d} t'  \right)
+$$
+Inserting these results into the above formula we find that:
+$$
+\begin{aligned}
+\int_0^\infty t \lambda(t)  \exp\left( - \int_0^t \lambda(t') \textrm{d} t'  \right)  \textrm{d}t & = \left[ -t\exp\left(- \int_0^t \lambda(t') \textrm{d} t'  \right) \right]_0^\infty + 
+\int_0^\infty \exp\left(- \int_0^t \lambda(t') \textrm{d} t'  \right) \textrm{d}t \\
+ & = \int_0^\infty \exp\left(- \int_0^t \lambda(t') \textrm{d} t'  \right) \textrm{d}t
+\end{aligned}
+$$
+as the term in bracekts in the first line here is equal to zero at both limits if $\lambda(t)$ is a monotonically increasing function as it is in this question.
+We will thus find the expectation in this question by solving this slightly simpler looking integral as shown below:
+$$
+ \mathbb{E}(T) = \int_0^\infty \exp\left(-\int_0^t \lambda(t') \textrm{d}t'\right) \textrm{d}t = \int_0^\infty \exp\left(-at - \frac{1}{2} bt^2 \right) \textrm{d}t
+$$
+
+Lets simplify the expression inside the expoential here by completing the square:
+
+$$
+-at-\frac{1}{2} bt^2 = -\frac{1}{2}\left(\sqrt{b}t + \frac{a}{\sqrt{b}} \right)^2 + \frac{1}{2}\left(\frac{a}{\sqrt{b}}\right)^2 
+$$ 
+
+When this is inserted into the integral we find:
+
+$$
+\mathbb{E}(T)  = \int_0^\infty \exp\left[ -\frac{\left(\sqrt{b}t + \frac{a}{\sqrt{b}} \right)^2}{2} + \frac{a^2}{2b} \right] \textrm{d}t  = \exp\left(\frac{a^2}{2b}\right) \int_0^\infty \exp\left[ -\frac{1}{2}\left(\sqrt{b}t + \frac{a}{\sqrt{b}} \right)^2 \right] \textrm{d}t
+$$
+
+We can solve the remaining integral here by making the substitution $y=\sqrt{b}t + \frac{a}{\sqrt{b}}$.  Remembering that $\frac{\textrm{d}y}{\textrm{d}t} = \frac{1}{\sqrt{b}}$ here we 
+find that the integral we need to solve once this substitution is made is:  
+
+$$
+ \mathbb{E}(T) = \frac{\exp\left(\frac{a^2}{2b}\right)}{\sqrt{b}} \int_{a/\sqrt{b}}^\infty \exp\left( - \frac{y^2}{2} \right)  \textrm{d}y
+$$
+
+To conclude we notice that $\frac{1}{\sqrt{2\pi}} \int_{a/\sqrt{b}}^\infty \exp\left( - \frac{y^2}{2} \right) \textrm{d}y = 1 - \Phi\left(\frac{a}{\sqrt{b}}\right)$,
+where $\Phi(x)$ is the cumulative probability distribution function for a Normal distribution.  We can thus write:  
+
+$$
+\mathbb{E}(T) = \exp\left(\frac{a^2}{2b}\right) \sqrt{\frac{2\pi}{b}} \left[ 1 - \Phi\left(\frac{a}{\sqrt{b}}\right) \right]
+$$
+

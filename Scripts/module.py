@@ -125,10 +125,12 @@ class module(object):
       mtlist = mfile.readlines()
       mfile.close()
       thesetopics = []
-      for j in range(0,len(mtlist)):
-          clist = mtlist[j].split()
-          for k in range(0,len(clist)):
-              thesetopics.append( clist[k] )
+      for item in mtlist :
+          llist = item.split()
+          if any("WEEK" in word for word in llist) :
+             for tt in llist :
+                 if tt.find("WEEK")==-1 :
+                    thesetopics.append( tt )
       return thesetopics
 
 class listofmodules(object):

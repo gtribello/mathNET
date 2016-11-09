@@ -266,6 +266,67 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
 
+Consider the  reversible  Markov chain, between the
+states $X=0,1,2,3,4,5,6,7,8$,  represented  by  the following matrix.
+$$
+P=
+\left(
+\begin{matrix}
+ 0& 1/2& 0& 0& 0& 1/2& 0& 0& 0\\ 
+ 1/3 & 0 &1/3& 0& 1/3& 0& 0& 0& 0 \\
+ 0& 1/2 &0 &1/2& 0& 0& 0& 0& 0 \\
+ 0 &0 & 1/3& 0 &1/3& 0 &0 &0 &1/3\\ 
+ 0& 1/4& 0 &1/4& 0& 1/4& 0& 1/4 &0\\ 
+ 1/3& 0 &0& 0& 1/3& 0& 1/3& 0& 0 \\
+ 0& 0 &0 &0 &0 &1/2& 0& 1/2& 0 \\
+ 0& 0 &0& 0& 1/3 &0 &1/3& 0 &1/3\\ 
+ 0 &0& 0& 1/2& 0& 0& 0& 1/2& 0   \\
+\end{matrix}
+\right) \qquad .
+$$
+Draw the transition graph for this process (hint: start by drawing a 3 x 3 grid
+of nodes with 0, 5 and 6 on the top row 1,4 and 7 on the second row and 2,3 and
+8 on the bottom row).  Then find the stationary distribution by using the detailed
+balance condition.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-1" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The transition graph for this particular Markov chain looks like this:
+
+<center> <img src="Images/markov-stat-dist-q2.png" align="middle" width="300"> </center>
+
+By using the detailed balance condition:
+$$
+\pi_{i}p_{ij} = \pi_{j}p_{ji}
+$$
+we can find that the stationary distribution satisfies the following equations:
+
+$$
+\pi_0 = \pi_2 = \pi_6 = \pi_8 \qquad \pi_1 = \pi_3 = \pi_5 = \pi_7 = \frac{3}{2} \pi_0 \qquad \pi_4 = 2 \pi_0
+$$
+
+When these equations are solved by exploiting the fact that $\pi$ must be normalized we thus find that:
+
+$$
+\pi_0 = \pi_2 = \pi_6 = \pi_8 = \frac{1}{12} \qquad \pi_1 = \pi_3 = \pi_5 = \pi_7 = \frac{3}{24} = \frac{1}{8} \qquad \pi_4 = \frac{2}{12} = \frac{1}{6}
+$$
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+
 A double glazing firm employs staff to cold call clients and try to sell
 them new windows for their home. There are three levels of staff pay: Level 1
 (£50), Level 2 (£75) or Level 3 (£100).  The amount a
@@ -285,7 +346,7 @@ staff performances is random.
         </a>
         </h4>
     </div>
-    <div id="collapse-1" class="accordion-body collapse">
+    <div id="collapse-2" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 
@@ -318,12 +379,12 @@ $$
       </div>
    </div>
 </div>
-<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
+<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
 
 A magazine has print and ipad editions and 100,000 subscribers. These
 subscribers can subscribe to the magazine in
@@ -351,7 +412,7 @@ editions.
         </a>
         </h4>
     </div>
-    <div id="collapse-2" class="accordion-body collapse">
+    <div id="collapse-3" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 
@@ -379,12 +440,12 @@ The number of magazines required is thus: 66667
       </div>
    </div>
 </div>
-<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
+<h4> Problem 5</h4><div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
 
 I own 4 umbrellas and keep some in my home and some in my
 office.  I keep moving between my home and office and only take one of my
@@ -406,7 +467,7 @@ want the probability of getting wet to be less than 1 %.
         </a>
         </h4>
     </div>
-    <div id="collapse-3" class="accordion-body collapse">
+    <div id="collapse-4" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 

@@ -25,73 +25,73 @@
 <!-- LIMITS -->
 <g id="node2" class="node"><title>LIMITS</title>
 <a xlink:href="LIMITS.html" xlink:title="Limit of a function" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1552.58,-612 1434.58,-612 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1434.58,-612C1428.58,-612 1422.58,-606 1422.58,-600"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1422.58,-600 1422.58,-588 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1422.58,-588C1422.58,-582 1428.58,-576 1434.58,-576"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1434.58,-576 1552.58,-576 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1552.58,-576C1558.58,-576 1564.58,-582 1564.58,-588"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1564.58,-588 1564.58,-600 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1564.58,-600C1564.58,-606 1558.58,-612 1552.58,-612"/>
+<polyline fill="none" stroke="black" points="1552.58,-612 1434.58,-612 "/>
+<path fill="none" stroke="black" d="M1434.58,-612C1428.58,-612 1422.58,-606 1422.58,-600"/>
+<polyline fill="none" stroke="black" points="1422.58,-600 1422.58,-588 "/>
+<path fill="none" stroke="black" d="M1422.58,-588C1422.58,-582 1428.58,-576 1434.58,-576"/>
+<polyline fill="none" stroke="black" points="1434.58,-576 1552.58,-576 "/>
+<path fill="none" stroke="black" d="M1552.58,-576C1558.58,-576 1564.58,-582 1564.58,-588"/>
+<polyline fill="none" stroke="black" points="1564.58,-588 1564.58,-600 "/>
+<path fill="none" stroke="black" d="M1564.58,-600C1564.58,-606 1558.58,-612 1552.58,-612"/>
 <text text-anchor="start" x="1430.58" y="-591.233" font-family="Times Roman,serif" font-size="14.00">Limit of a function</text>
 </a>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE -->
 <g id="node30" class="node"><title>DEFINITION_OF_DERIVATIVE</title>
 <a xlink:href="DEFINITION_OF_DERIVATIVE.html" xlink:title="Differentiation" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1415.58,-540 1321.58,-540 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1321.58,-540C1315.58,-540 1309.58,-534 1309.58,-528"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1309.58,-528 1309.58,-516 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1309.58,-516C1309.58,-510 1315.58,-504 1321.58,-504"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1321.58,-504 1415.58,-504 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1415.58,-504C1421.58,-504 1427.58,-510 1427.58,-516"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1427.58,-516 1427.58,-528 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1427.58,-528C1427.58,-534 1421.58,-540 1415.58,-540"/>
+<polyline fill="none" stroke="black" points="1415.58,-540 1321.58,-540 "/>
+<path fill="none" stroke="black" d="M1321.58,-540C1315.58,-540 1309.58,-534 1309.58,-528"/>
+<polyline fill="none" stroke="black" points="1309.58,-528 1309.58,-516 "/>
+<path fill="none" stroke="black" d="M1309.58,-516C1309.58,-510 1315.58,-504 1321.58,-504"/>
+<polyline fill="none" stroke="black" points="1321.58,-504 1415.58,-504 "/>
+<path fill="none" stroke="black" d="M1415.58,-504C1421.58,-504 1427.58,-510 1427.58,-516"/>
+<polyline fill="none" stroke="black" points="1427.58,-516 1427.58,-528 "/>
+<path fill="none" stroke="black" d="M1427.58,-528C1427.58,-534 1421.58,-540 1415.58,-540"/>
 <text text-anchor="start" x="1317.58" y="-519.233" font-family="Times Roman,serif" font-size="14.00">Differentiation</text>
 </a>
 </g>
 <!-- LIMITS&#45;&gt;DEFINITION_OF_DERIVATIVE -->
 <g id="edge2" class="edge"><title>LIMITS&#45;&gt;DEFINITION_OF_DERIVATIVE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1462.04,-575.831C1445.9,-566.537 1426.08,-555.121 1408.85,-545.197"/>
-<polygon fill="blue" stroke="blue" points="1410.53,-542.121 1400.11,-540.163 1407.03,-548.187 1410.53,-542.121"/>
+<path fill="none" stroke="black" d="M1462.04,-575.831C1445.9,-566.537 1426.08,-555.121 1408.85,-545.197"/>
+<polygon fill="black" stroke="black" points="1410.53,-542.121 1400.11,-540.163 1407.03,-548.187 1410.53,-542.121"/>
 </g>
 <!-- TAYLOR_SERIES -->
 <g id="node32" class="node"><title>TAYLOR_SERIES</title>
 <a xlink:href="TAYLOR_SERIES.html" xlink:title="One dimensional Taylor Series" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1695.58,-468 1495.58,-468 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1495.58,-468C1489.58,-468 1483.58,-462 1483.58,-456"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1483.58,-456 1483.58,-444 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1483.58,-444C1483.58,-438 1489.58,-432 1495.58,-432"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1495.58,-432 1695.58,-432 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1695.58,-432C1701.58,-432 1707.58,-438 1707.58,-444"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1707.58,-444 1707.58,-456 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1707.58,-456C1707.58,-462 1701.58,-468 1695.58,-468"/>
+<polyline fill="none" stroke="black" points="1695.58,-468 1495.58,-468 "/>
+<path fill="none" stroke="black" d="M1495.58,-468C1489.58,-468 1483.58,-462 1483.58,-456"/>
+<polyline fill="none" stroke="black" points="1483.58,-456 1483.58,-444 "/>
+<path fill="none" stroke="black" d="M1483.58,-444C1483.58,-438 1489.58,-432 1495.58,-432"/>
+<polyline fill="none" stroke="black" points="1495.58,-432 1695.58,-432 "/>
+<path fill="none" stroke="black" d="M1695.58,-432C1701.58,-432 1707.58,-438 1707.58,-444"/>
+<polyline fill="none" stroke="black" points="1707.58,-444 1707.58,-456 "/>
+<path fill="none" stroke="black" d="M1707.58,-456C1707.58,-462 1701.58,-468 1695.58,-468"/>
 <text text-anchor="start" x="1491.58" y="-447.233" font-family="Times Roman,serif" font-size="14.00">One dimensional Taylor Series</text>
 </a>
 </g>
 <!-- LIMITS&#45;&gt;TAYLOR_SERIES -->
 <g id="edge4" class="edge"><title>LIMITS&#45;&gt;TAYLOR_SERIES</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1493.44,-575.853C1494.14,-556.461 1497.77,-525.6 1512.58,-504 1521.03,-491.674 1533.32,-481.492 1545.85,-473.419"/>
-<polygon fill="blue" stroke="blue" points="1547.79,-476.34 1554.53,-468.167 1544.16,-470.351 1547.79,-476.34"/>
+<path fill="none" stroke="black" d="M1493.44,-575.853C1494.14,-556.461 1497.77,-525.6 1512.58,-504 1521.03,-491.674 1533.32,-481.492 1545.85,-473.419"/>
+<polygon fill="black" stroke="black" points="1547.79,-476.34 1554.53,-468.167 1544.16,-470.351 1547.79,-476.34"/>
 </g>
 <!-- INTRODUCTION_TO_CONTINUITY -->
 <g id="node55" class="node"><title>INTRODUCTION_TO_CONTINUITY</title>
 <a xlink:href="INTRODUCTION_TO_CONTINUITY.html" xlink:title="Introduction to continuity" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1703.58,-540 1533.58,-540 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1533.58,-540C1527.58,-540 1521.58,-534 1521.58,-528"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1521.58,-528 1521.58,-516 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1521.58,-516C1521.58,-510 1527.58,-504 1533.58,-504"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1533.58,-504 1703.58,-504 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1703.58,-504C1709.58,-504 1715.58,-510 1715.58,-516"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1715.58,-516 1715.58,-528 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1715.58,-528C1715.58,-534 1709.58,-540 1703.58,-540"/>
+<polyline fill="none" stroke="black" points="1703.58,-540 1533.58,-540 "/>
+<path fill="none" stroke="black" d="M1533.58,-540C1527.58,-540 1521.58,-534 1521.58,-528"/>
+<polyline fill="none" stroke="black" points="1521.58,-528 1521.58,-516 "/>
+<path fill="none" stroke="black" d="M1521.58,-516C1521.58,-510 1527.58,-504 1533.58,-504"/>
+<polyline fill="none" stroke="black" points="1533.58,-504 1703.58,-504 "/>
+<path fill="none" stroke="black" d="M1703.58,-504C1709.58,-504 1715.58,-510 1715.58,-516"/>
+<polyline fill="none" stroke="black" points="1715.58,-516 1715.58,-528 "/>
+<path fill="none" stroke="black" d="M1715.58,-528C1715.58,-534 1709.58,-540 1703.58,-540"/>
 <text text-anchor="start" x="1529.58" y="-519.233" font-family="Times Roman,serif" font-size="14.00">Introduction to continuity</text>
 </a>
 </g>
 <!-- LIMITS&#45;&gt;INTRODUCTION_TO_CONTINUITY -->
 <g id="edge6" class="edge"><title>LIMITS&#45;&gt;INTRODUCTION_TO_CONTINUITY</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1525.12,-575.831C1541.26,-566.537 1561.08,-555.121 1578.31,-545.197"/>
-<polygon fill="blue" stroke="blue" points="1580.13,-548.187 1587.05,-540.163 1576.64,-542.121 1580.13,-548.187"/>
+<path fill="none" stroke="black" d="M1525.12,-575.831C1541.26,-566.537 1561.08,-555.121 1578.31,-545.197"/>
+<polygon fill="black" stroke="black" points="1580.13,-548.187 1587.05,-540.163 1576.64,-542.121 1580.13,-548.187"/>
 </g>
 <!-- BERNOULI_RANDOM_VARIABLE -->
 <g id="node3" class="node"><title>BERNOULI_RANDOM_VARIABLE</title>
@@ -148,73 +148,73 @@
 <!-- FUNDAMENTAL_THEOREM_OF_CALCULUS -->
 <g id="node4" class="node"><title>FUNDAMENTAL_THEOREM_OF_CALCULUS</title>
 <a xlink:href="FUNDAMENTAL_THEOREM_OF_CALCULUS.html" xlink:title="Fundamental theorem of calculus" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="2111.58,-396 1889.58,-396 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1889.58,-396C1883.58,-396 1877.58,-390 1877.58,-384"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1877.58,-384 1877.58,-372 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1877.58,-372C1877.58,-366 1883.58,-360 1889.58,-360"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1889.58,-360 2111.58,-360 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2111.58,-360C2117.58,-360 2123.58,-366 2123.58,-372"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2123.58,-372 2123.58,-384 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2123.58,-384C2123.58,-390 2117.58,-396 2111.58,-396"/>
+<polyline fill="none" stroke="black" points="2111.58,-396 1889.58,-396 "/>
+<path fill="none" stroke="black" d="M1889.58,-396C1883.58,-396 1877.58,-390 1877.58,-384"/>
+<polyline fill="none" stroke="black" points="1877.58,-384 1877.58,-372 "/>
+<path fill="none" stroke="black" d="M1877.58,-372C1877.58,-366 1883.58,-360 1889.58,-360"/>
+<polyline fill="none" stroke="black" points="1889.58,-360 2111.58,-360 "/>
+<path fill="none" stroke="black" d="M2111.58,-360C2117.58,-360 2123.58,-366 2123.58,-372"/>
+<polyline fill="none" stroke="black" points="2123.58,-372 2123.58,-384 "/>
+<path fill="none" stroke="black" d="M2123.58,-384C2123.58,-390 2117.58,-396 2111.58,-396"/>
 <text text-anchor="start" x="1886.08" y="-375.233" font-family="Times Roman,serif" font-size="14.00">Fundamental theorem of calculus</text>
 </a>
 </g>
 <!-- INTEGRATION_BY_PARTS -->
 <g id="node27" class="node"><title>INTEGRATION_BY_PARTS</title>
 <a xlink:href="INTEGRATION_BY_PARTS.html" xlink:title="Integration by parts" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="2041.58,-324 1909.58,-324 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1909.58,-324C1903.58,-324 1897.58,-318 1897.58,-312"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1897.58,-312 1897.58,-300 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1897.58,-300C1897.58,-294 1903.58,-288 1909.58,-288"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1909.58,-288 2041.58,-288 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2041.58,-288C2047.58,-288 2053.58,-294 2053.58,-300"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2053.58,-300 2053.58,-312 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2053.58,-312C2053.58,-318 2047.58,-324 2041.58,-324"/>
+<polyline fill="none" stroke="black" points="2041.58,-324 1909.58,-324 "/>
+<path fill="none" stroke="black" d="M1909.58,-324C1903.58,-324 1897.58,-318 1897.58,-312"/>
+<polyline fill="none" stroke="black" points="1897.58,-312 1897.58,-300 "/>
+<path fill="none" stroke="black" d="M1897.58,-300C1897.58,-294 1903.58,-288 1909.58,-288"/>
+<polyline fill="none" stroke="black" points="1909.58,-288 2041.58,-288 "/>
+<path fill="none" stroke="black" d="M2041.58,-288C2047.58,-288 2053.58,-294 2053.58,-300"/>
+<polyline fill="none" stroke="black" points="2053.58,-300 2053.58,-312 "/>
+<path fill="none" stroke="black" d="M2053.58,-312C2053.58,-318 2047.58,-324 2041.58,-324"/>
 <text text-anchor="start" x="1906.08" y="-303.233" font-family="Times Roman,serif" font-size="14.00">Integration by parts</text>
 </a>
 </g>
 <!-- FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;INTEGRATION_BY_PARTS -->
 <g id="edge12" class="edge"><title>FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;INTEGRATION_BY_PARTS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1994.27,-359.831C1991.57,-352.046 1988.35,-342.773 1985.35,-334.135"/>
-<polygon fill="blue" stroke="blue" points="1988.56,-332.712 1981.97,-324.413 1981.95,-335.008 1988.56,-332.712"/>
+<path fill="none" stroke="black" d="M1994.27,-359.831C1991.57,-352.046 1988.35,-342.773 1985.35,-334.135"/>
+<polygon fill="black" stroke="black" points="1988.56,-332.712 1981.97,-324.413 1981.95,-335.008 1988.56,-332.712"/>
 </g>
 <!-- INTEGRATION_BY_SUBSTITUTION -->
 <g id="node37" class="node"><title>INTEGRATION_BY_SUBSTITUTION</title>
 <a xlink:href="INTEGRATION_BY_SUBSTITUTION.html" xlink:title="Integration by substitution" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="2299.58,-324 2121.58,-324 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2121.58,-324C2115.58,-324 2109.58,-318 2109.58,-312"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2109.58,-312 2109.58,-300 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2109.58,-300C2109.58,-294 2115.58,-288 2121.58,-288"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2121.58,-288 2299.58,-288 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2299.58,-288C2305.58,-288 2311.58,-294 2311.58,-300"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2311.58,-300 2311.58,-312 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2311.58,-312C2311.58,-318 2305.58,-324 2299.58,-324"/>
+<polyline fill="none" stroke="black" points="2299.58,-324 2121.58,-324 "/>
+<path fill="none" stroke="black" d="M2121.58,-324C2115.58,-324 2109.58,-318 2109.58,-312"/>
+<polyline fill="none" stroke="black" points="2109.58,-312 2109.58,-300 "/>
+<path fill="none" stroke="black" d="M2109.58,-300C2109.58,-294 2115.58,-288 2121.58,-288"/>
+<polyline fill="none" stroke="black" points="2121.58,-288 2299.58,-288 "/>
+<path fill="none" stroke="black" d="M2299.58,-288C2305.58,-288 2311.58,-294 2311.58,-300"/>
+<polyline fill="none" stroke="black" points="2311.58,-300 2311.58,-312 "/>
+<path fill="none" stroke="black" d="M2311.58,-312C2311.58,-318 2305.58,-324 2299.58,-324"/>
 <text text-anchor="start" x="2117.58" y="-303.233" font-family="Times Roman,serif" font-size="14.00">Integration by substitution</text>
 </a>
 </g>
 <!-- FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;INTEGRATION_BY_SUBSTITUTION -->
 <g id="edge14" class="edge"><title>FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;INTEGRATION_BY_SUBSTITUTION</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2053.3,-359.924C2082.13,-350.039 2118.03,-337.732 2148.24,-327.373"/>
-<polygon fill="blue" stroke="blue" points="2149.51,-330.637 2157.84,-324.083 2147.24,-324.016 2149.51,-330.637"/>
+<path fill="none" stroke="black" d="M2053.3,-359.924C2082.13,-350.039 2118.03,-337.732 2148.24,-327.373"/>
+<polygon fill="black" stroke="black" points="2149.51,-330.637 2157.84,-324.083 2147.24,-324.016 2149.51,-330.637"/>
 </g>
 <!-- UNIFORM_RANDOM_VARIABLE -->
 <g id="node46" class="node"><title>UNIFORM_RANDOM_VARIABLE</title>
 <a xlink:href="UNIFORM_RANDOM_VARIABLE.html" xlink:title="Uniform Random Variable" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1867.58,-324 1699.58,-324 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1699.58,-324C1693.58,-324 1687.58,-318 1687.58,-312"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1687.58,-312 1687.58,-300 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1687.58,-300C1687.58,-294 1693.58,-288 1699.58,-288"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1699.58,-288 1867.58,-288 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1867.58,-288C1873.58,-288 1879.58,-294 1879.58,-300"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1879.58,-300 1879.58,-312 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1879.58,-312C1879.58,-318 1873.58,-324 1867.58,-324"/>
+<polyline fill="none" stroke="black" points="1867.58,-324 1699.58,-324 "/>
+<path fill="none" stroke="black" d="M1699.58,-324C1693.58,-324 1687.58,-318 1687.58,-312"/>
+<polyline fill="none" stroke="black" points="1687.58,-312 1687.58,-300 "/>
+<path fill="none" stroke="black" d="M1687.58,-300C1687.58,-294 1693.58,-288 1699.58,-288"/>
+<polyline fill="none" stroke="black" points="1699.58,-288 1867.58,-288 "/>
+<path fill="none" stroke="black" d="M1867.58,-288C1873.58,-288 1879.58,-294 1879.58,-300"/>
+<polyline fill="none" stroke="black" points="1879.58,-300 1879.58,-312 "/>
+<path fill="none" stroke="black" d="M1879.58,-312C1879.58,-318 1873.58,-324 1867.58,-324"/>
 <text text-anchor="start" x="1695.58" y="-303.233" font-family="Times Roman,serif" font-size="14.00">Uniform Random Variable</text>
 </a>
 </g>
 <!-- FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;UNIFORM_RANDOM_VARIABLE -->
 <g id="edge16" class="edge"><title>FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;UNIFORM_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1946.1,-359.924C1916.18,-349.996 1878.9,-337.625 1847.59,-327.238"/>
-<polygon fill="blue" stroke="blue" points="1848.67,-323.91 1838.08,-324.083 1846.47,-330.554 1848.67,-323.91"/>
+<path fill="none" stroke="black" d="M1946.1,-359.924C1916.18,-349.996 1878.9,-337.625 1847.59,-327.238"/>
+<polygon fill="black" stroke="black" points="1848.67,-323.91 1838.08,-324.083 1846.47,-330.554 1848.67,-323.91"/>
 </g>
 <!-- CANONICAL_ENSEMBLE -->
 <g id="node5" class="node"><title>CANONICAL_ENSEMBLE</title>
@@ -252,21 +252,21 @@
 <!-- BASIC_COMBINATORICS -->
 <g id="node6" class="node"><title>BASIC_COMBINATORICS</title>
 <a xlink:href="BASIC_COMBINATORICS.html" xlink:title="Combinatorics" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="3031.58,-612 2941.58,-612 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2941.58,-612C2935.58,-612 2929.58,-606 2929.58,-600"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2929.58,-600 2929.58,-588 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2929.58,-588C2929.58,-582 2935.58,-576 2941.58,-576"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2941.58,-576 3031.58,-576 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M3031.58,-576C3037.58,-576 3043.58,-582 3043.58,-588"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="3043.58,-588 3043.58,-600 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M3043.58,-600C3043.58,-606 3037.58,-612 3031.58,-612"/>
+<polyline fill="none" stroke="black" points="3031.58,-612 2941.58,-612 "/>
+<path fill="none" stroke="black" d="M2941.58,-612C2935.58,-612 2929.58,-606 2929.58,-600"/>
+<polyline fill="none" stroke="black" points="2929.58,-600 2929.58,-588 "/>
+<path fill="none" stroke="black" d="M2929.58,-588C2929.58,-582 2935.58,-576 2941.58,-576"/>
+<polyline fill="none" stroke="black" points="2941.58,-576 3031.58,-576 "/>
+<path fill="none" stroke="black" d="M3031.58,-576C3037.58,-576 3043.58,-582 3043.58,-588"/>
+<polyline fill="none" stroke="black" points="3043.58,-588 3043.58,-600 "/>
+<path fill="none" stroke="black" d="M3043.58,-600C3043.58,-606 3037.58,-612 3031.58,-612"/>
 <text text-anchor="start" x="2937.58" y="-591.233" font-family="Times Roman,serif" font-size="14.00">Combinatorics</text>
 </a>
 </g>
 <!-- BASIC_COMBINATORICS&#45;&gt;BINOMIAL_RANDOM_VARIABLE -->
 <g id="edge20" class="edge"><title>BASIC_COMBINATORICS&#45;&gt;BINOMIAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2965.13,-575.831C2954.76,-567.048 2942.16,-556.371 2930.92,-546.849"/>
-<polygon fill="blue" stroke="blue" points="2932.92,-543.956 2923.02,-540.163 2928.39,-549.297 2932.92,-543.956"/>
+<path fill="none" stroke="black" d="M2965.13,-575.831C2954.76,-567.048 2942.16,-556.371 2930.92,-546.849"/>
+<polygon fill="black" stroke="black" points="2932.92,-543.956 2923.02,-540.163 2928.39,-549.297 2932.92,-543.956"/>
 </g>
 <!-- TRANSIENT_RECURRENT_STATES -->
 <g id="node7" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
@@ -342,47 +342,47 @@
 <!-- GAUSSIAN_ELIMINATION -->
 <g id="node9" class="node"><title>GAUSSIAN_ELIMINATION</title>
 <a xlink:href="GAUSSIAN_ELIMINATION.html" xlink:title="Gaussian Elimination" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="173.58,-468 35.5801,-468 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M35.5801,-468C29.5801,-468 23.5801,-462 23.5801,-456"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="23.5801,-456 23.5801,-444 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M23.5801,-444C23.5801,-438 29.5801,-432 35.5801,-432"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="35.5801,-432 173.58,-432 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M173.58,-432C179.58,-432 185.58,-438 185.58,-444"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="185.58,-444 185.58,-456 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M185.58,-456C185.58,-462 179.58,-468 173.58,-468"/>
+<polyline fill="none" stroke="black" points="173.58,-468 35.5801,-468 "/>
+<path fill="none" stroke="black" d="M35.5801,-468C29.5801,-468 23.5801,-462 23.5801,-456"/>
+<polyline fill="none" stroke="black" points="23.5801,-456 23.5801,-444 "/>
+<path fill="none" stroke="black" d="M23.5801,-444C23.5801,-438 29.5801,-432 35.5801,-432"/>
+<polyline fill="none" stroke="black" points="35.5801,-432 173.58,-432 "/>
+<path fill="none" stroke="black" d="M173.58,-432C179.58,-432 185.58,-438 185.58,-444"/>
+<polyline fill="none" stroke="black" points="185.58,-444 185.58,-456 "/>
+<path fill="none" stroke="black" d="M185.58,-456C185.58,-462 179.58,-468 173.58,-468"/>
 <text text-anchor="start" x="32.0801" y="-447.233" font-family="Times Roman,serif" font-size="14.00">Gaussian Elimination</text>
 </a>
 </g>
 <!-- EIGENVECTORS -->
 <g id="node24" class="node"><title>EIGENVECTORS</title>
 <a xlink:href="EIGENVECTORS.html" xlink:title="Eigendecomposition" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="169.58,-396 39.5801,-396 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M39.5801,-396C33.5801,-396 27.5801,-390 27.5801,-384"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="27.5801,-384 27.5801,-372 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M27.5801,-372C27.5801,-366 33.5801,-360 39.5801,-360"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="39.5801,-360 169.58,-360 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M169.58,-360C175.58,-360 181.58,-366 181.58,-372"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="181.58,-372 181.58,-384 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M181.58,-384C181.58,-390 175.58,-396 169.58,-396"/>
+<polyline fill="none" stroke="black" points="169.58,-396 39.5801,-396 "/>
+<path fill="none" stroke="black" d="M39.5801,-396C33.5801,-396 27.5801,-390 27.5801,-384"/>
+<polyline fill="none" stroke="black" points="27.5801,-384 27.5801,-372 "/>
+<path fill="none" stroke="black" d="M27.5801,-372C27.5801,-366 33.5801,-360 39.5801,-360"/>
+<polyline fill="none" stroke="black" points="39.5801,-360 169.58,-360 "/>
+<path fill="none" stroke="black" d="M169.58,-360C175.58,-360 181.58,-366 181.58,-372"/>
+<polyline fill="none" stroke="black" points="181.58,-372 181.58,-384 "/>
+<path fill="none" stroke="black" d="M181.58,-384C181.58,-390 175.58,-396 169.58,-396"/>
 <text text-anchor="start" x="36.0801" y="-375.233" font-family="Times Roman,serif" font-size="14.00">Eigendecomposition</text>
 </a>
 </g>
 <!-- GAUSSIAN_ELIMINATION&#45;&gt;EIGENVECTORS -->
 <g id="edge28" class="edge"><title>GAUSSIAN_ELIMINATION&#45;&gt;EIGENVECTORS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M104.58,-431.831C104.58,-424.131 104.58,-414.974 104.58,-406.417"/>
-<polygon fill="blue" stroke="blue" points="108.08,-406.413 104.58,-396.413 101.08,-406.413 108.08,-406.413"/>
+<path fill="none" stroke="black" d="M104.58,-431.831C104.58,-424.131 104.58,-414.974 104.58,-406.417"/>
+<polygon fill="black" stroke="black" points="108.08,-406.413 104.58,-396.413 101.08,-406.413 108.08,-406.413"/>
 </g>
 <!-- SET_PARTITIONS -->
 <g id="node10" class="node"><title>SET_PARTITIONS</title>
 <a xlink:href="SET_PARTITIONS.html" xlink:title="Partition (set theory)" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="2004.58,-900 1866.58,-900 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1866.58,-900C1860.58,-900 1854.58,-894 1854.58,-888"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1854.58,-888 1854.58,-876 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1854.58,-876C1854.58,-870 1860.58,-864 1866.58,-864"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1866.58,-864 2004.58,-864 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2004.58,-864C2010.58,-864 2016.58,-870 2016.58,-876"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2016.58,-876 2016.58,-888 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2016.58,-888C2016.58,-894 2010.58,-900 2004.58,-900"/>
+<polyline fill="none" stroke="black" points="2004.58,-900 1866.58,-900 "/>
+<path fill="none" stroke="black" d="M1866.58,-900C1860.58,-900 1854.58,-894 1854.58,-888"/>
+<polyline fill="none" stroke="black" points="1854.58,-888 1854.58,-876 "/>
+<path fill="none" stroke="black" d="M1854.58,-876C1854.58,-870 1860.58,-864 1866.58,-864"/>
+<polyline fill="none" stroke="black" points="1866.58,-864 2004.58,-864 "/>
+<path fill="none" stroke="black" d="M2004.58,-864C2010.58,-864 2016.58,-870 2016.58,-876"/>
+<polyline fill="none" stroke="black" points="2016.58,-876 2016.58,-888 "/>
+<path fill="none" stroke="black" d="M2016.58,-888C2016.58,-894 2010.58,-900 2004.58,-900"/>
 <text text-anchor="start" x="1862.58" y="-879.233" font-family="Times Roman,serif" font-size="14.00">Partition (set theory)</text>
 </a>
 </g>
@@ -402,8 +402,8 @@
 </g>
 <!-- SET_PARTITIONS&#45;&gt;RANDOM_VARIABLES -->
 <g id="edge30" class="edge"><title>SET_PARTITIONS&#45;&gt;RANDOM_VARIABLES</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1989.81,-863.924C2019.46,-854.039 2056.38,-841.732 2087.46,-831.373"/>
-<polygon fill="blue" stroke="blue" points="2088.95,-834.566 2097.33,-828.083 2086.74,-827.925 2088.95,-834.566"/>
+<path fill="none" stroke="black" d="M1989.81,-863.924C2019.46,-854.039 2056.38,-841.732 2087.46,-831.373"/>
+<polygon fill="black" stroke="black" points="2088.95,-834.566 2097.33,-828.083 2086.74,-827.925 2088.95,-834.566"/>
 </g>
 <!-- LAW_OF_LARGE_NUMBERS -->
 <g id="node11" class="node"><title>LAW_OF_LARGE_NUMBERS</title>
@@ -441,54 +441,54 @@
 <!-- VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS -->
 <g id="node12" class="node"><title>VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS</title>
 <a xlink:href="VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS.html" xlink:title="Variable separable differential equations" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1543.58,-252 1273.58,-252 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1273.58,-252C1267.58,-252 1261.58,-246 1261.58,-240"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1261.58,-240 1261.58,-228 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1261.58,-228C1261.58,-222 1267.58,-216 1273.58,-216"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1273.58,-216 1543.58,-216 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1543.58,-216C1549.58,-216 1555.58,-222 1555.58,-228"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1555.58,-228 1555.58,-240 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1555.58,-240C1555.58,-246 1549.58,-252 1543.58,-252"/>
+<polyline fill="none" stroke="black" points="1543.58,-252 1273.58,-252 "/>
+<path fill="none" stroke="black" d="M1273.58,-252C1267.58,-252 1261.58,-246 1261.58,-240"/>
+<polyline fill="none" stroke="black" points="1261.58,-240 1261.58,-228 "/>
+<path fill="none" stroke="black" d="M1261.58,-228C1261.58,-222 1267.58,-216 1273.58,-216"/>
+<polyline fill="none" stroke="black" points="1273.58,-216 1543.58,-216 "/>
+<path fill="none" stroke="black" d="M1543.58,-216C1549.58,-216 1555.58,-222 1555.58,-228"/>
+<polyline fill="none" stroke="black" points="1555.58,-228 1555.58,-240 "/>
+<path fill="none" stroke="black" d="M1555.58,-240C1555.58,-246 1549.58,-252 1543.58,-252"/>
 <text text-anchor="start" x="1269.58" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Variable separable differential equations</text>
 </a>
 </g>
 <!-- SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS -->
 <g id="node33" class="node"><title>SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS</title>
 <a xlink:href="SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS.html" xlink:title="Differential equations and integrating factors" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1551.58,-180 1245.58,-180 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1245.58,-180C1239.58,-180 1233.58,-174 1233.58,-168"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1233.58,-168 1233.58,-156 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1233.58,-156C1233.58,-150 1239.58,-144 1245.58,-144"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1245.58,-144 1551.58,-144 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1551.58,-144C1557.58,-144 1563.58,-150 1563.58,-156"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1563.58,-156 1563.58,-168 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1563.58,-168C1563.58,-174 1557.58,-180 1551.58,-180"/>
+<polyline fill="none" stroke="black" points="1551.58,-180 1245.58,-180 "/>
+<path fill="none" stroke="black" d="M1245.58,-180C1239.58,-180 1233.58,-174 1233.58,-168"/>
+<polyline fill="none" stroke="black" points="1233.58,-168 1233.58,-156 "/>
+<path fill="none" stroke="black" d="M1233.58,-156C1233.58,-150 1239.58,-144 1245.58,-144"/>
+<polyline fill="none" stroke="black" points="1245.58,-144 1551.58,-144 "/>
+<path fill="none" stroke="black" d="M1551.58,-144C1557.58,-144 1563.58,-150 1563.58,-156"/>
+<polyline fill="none" stroke="black" points="1563.58,-156 1563.58,-168 "/>
+<path fill="none" stroke="black" d="M1563.58,-168C1563.58,-174 1557.58,-180 1551.58,-180"/>
 <text text-anchor="start" x="1242.08" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Differential equations and integrating factors</text>
 </a>
 </g>
 <!-- VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS&#45;&gt;SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS -->
 <g id="edge34" class="edge"><title>VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS&#45;&gt;SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1406.06,-215.831C1404.99,-208.131 1403.72,-198.974 1402.53,-190.417"/>
-<polygon fill="blue" stroke="blue" points="1405.98,-189.837 1401.14,-180.413 1399.05,-190.8 1405.98,-189.837"/>
+<path fill="none" stroke="black" d="M1406.06,-215.831C1404.99,-208.131 1403.72,-198.974 1402.53,-190.417"/>
+<polygon fill="black" stroke="black" points="1405.98,-189.837 1401.14,-180.413 1399.05,-190.8 1405.98,-189.837"/>
 </g>
 <!-- DIFFERENCE_EQUATIONS -->
 <g id="node13" class="node"><title>DIFFERENCE_EQUATIONS</title>
 <a xlink:href="DIFFERENCE_EQUATIONS.html" xlink:title="Difference equations" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="865.58,-540 729.58,-540 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M729.58,-540C723.58,-540 717.58,-534 717.58,-528"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="717.58,-528 717.58,-516 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M717.58,-516C717.58,-510 723.58,-504 729.58,-504"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="729.58,-504 865.58,-504 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M865.58,-504C871.58,-504 877.58,-510 877.58,-516"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="877.58,-516 877.58,-528 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M877.58,-528C877.58,-534 871.58,-540 865.58,-540"/>
+<polyline fill="none" stroke="black" points="865.58,-540 729.58,-540 "/>
+<path fill="none" stroke="black" d="M729.58,-540C723.58,-540 717.58,-534 717.58,-528"/>
+<polyline fill="none" stroke="black" points="717.58,-528 717.58,-516 "/>
+<path fill="none" stroke="black" d="M717.58,-516C717.58,-510 723.58,-504 729.58,-504"/>
+<polyline fill="none" stroke="black" points="729.58,-504 865.58,-504 "/>
+<path fill="none" stroke="black" d="M865.58,-504C871.58,-504 877.58,-510 877.58,-516"/>
+<polyline fill="none" stroke="black" points="877.58,-516 877.58,-528 "/>
+<path fill="none" stroke="black" d="M877.58,-528C877.58,-534 871.58,-540 865.58,-540"/>
 <text text-anchor="start" x="725.58" y="-519.233" font-family="Times Roman,serif" font-size="14.00">Difference equations</text>
 </a>
 </g>
 <!-- DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN -->
 <g id="edge36" class="edge"><title>DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M717.441,-505.044C698.288,-497.043 680.081,-485.282 668.58,-468 659.716,-454.68 658.162,-444.143 668.58,-432 737.094,-352.139 833.574,-475.437 902.58,-396 934.646,-359.087 924.085,-297.604 914.003,-261.942"/>
-<polygon fill="blue" stroke="blue" points="917.301,-260.755 911.073,-252.184 910.597,-262.768 917.301,-260.755"/>
+<path fill="none" stroke="black" d="M717.441,-505.044C698.288,-497.043 680.081,-485.282 668.58,-468 659.716,-454.68 658.162,-444.143 668.58,-432 737.094,-352.139 833.574,-475.437 902.58,-396 934.646,-359.087 924.085,-297.604 914.003,-261.942"/>
+<polygon fill="black" stroke="black" points="917.301,-260.755 911.073,-252.184 910.597,-262.768 917.301,-260.755"/>
 </g>
 <!-- CHAPMAN_KOLMOGOROV_RELATION -->
 <g id="node14" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
@@ -612,21 +612,21 @@
 <!-- NORMAL_RANDOM_VARIABLE -->
 <g id="node34" class="node"><title>NORMAL_RANDOM_VARIABLE</title>
 <a xlink:href="NORMAL_RANDOM_VARIABLE.html" xlink:title="Normal random variable" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="2337.58,-252 2179.58,-252 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2179.58,-252C2173.58,-252 2167.58,-246 2167.58,-240"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2167.58,-240 2167.58,-228 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2167.58,-228C2167.58,-222 2173.58,-216 2179.58,-216"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2179.58,-216 2337.58,-216 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2337.58,-216C2343.58,-216 2349.58,-222 2349.58,-228"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2349.58,-228 2349.58,-240 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2349.58,-240C2349.58,-246 2343.58,-252 2337.58,-252"/>
+<polyline fill="none" stroke="black" points="2337.58,-252 2179.58,-252 "/>
+<path fill="none" stroke="black" d="M2179.58,-252C2173.58,-252 2167.58,-246 2167.58,-240"/>
+<polyline fill="none" stroke="black" points="2167.58,-240 2167.58,-228 "/>
+<path fill="none" stroke="black" d="M2167.58,-228C2167.58,-222 2173.58,-216 2179.58,-216"/>
+<polyline fill="none" stroke="black" points="2179.58,-216 2337.58,-216 "/>
+<path fill="none" stroke="black" d="M2337.58,-216C2343.58,-216 2349.58,-222 2349.58,-228"/>
+<polyline fill="none" stroke="black" points="2349.58,-228 2349.58,-240 "/>
+<path fill="none" stroke="black" d="M2349.58,-240C2349.58,-246 2343.58,-252 2337.58,-252"/>
 <text text-anchor="start" x="2175.58" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Normal random variable</text>
 </a>
 </g>
 <!-- RANDOM_VARIABLES&#45;&gt;NORMAL_RANDOM_VARIABLE -->
 <g id="edge52" class="edge"><title>RANDOM_VARIABLES&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2160.52,-791.61C2190.68,-728.45 2288.52,-513.819 2320.58,-324 2323.24,-308.223 2327.21,-302.563 2320.58,-288 2315.41,-276.632 2306.53,-266.727 2297.08,-258.612"/>
-<polygon fill="blue" stroke="blue" points="2299.07,-255.728 2289.08,-252.224 2294.71,-261.199 2299.07,-255.728"/>
+<path fill="none" stroke="black" d="M2160.52,-791.61C2190.68,-728.45 2288.52,-513.819 2320.58,-324 2323.24,-308.223 2327.21,-302.563 2320.58,-288 2315.41,-276.632 2306.53,-266.727 2297.08,-258.612"/>
+<polygon fill="black" stroke="black" points="2299.07,-255.728 2289.08,-252.224 2294.71,-261.199 2299.07,-255.728"/>
 </g>
 <!-- INFORMATION_THEORY -->
 <g id="node43" class="node"><title>INFORMATION_THEORY</title>
@@ -649,8 +649,8 @@
 </g>
 <!-- RANDOM_VARIABLES&#45;&gt;UNIFORM_RANDOM_VARIABLE -->
 <g id="edge56" class="edge"><title>RANDOM_VARIABLES&#45;&gt;UNIFORM_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2082.67,-791.902C1993.54,-766.426 1849.58,-717.333 1849.58,-666 1849.58,-666 1849.58,-666 1849.58,-450 1849.58,-405.829 1823.6,-360.4 1804.24,-332.679"/>
-<polygon fill="blue" stroke="blue" points="1806.91,-330.398 1798.23,-324.325 1801.23,-334.486 1806.91,-330.398"/>
+<path fill="none" stroke="black" d="M2082.67,-791.902C1993.54,-766.426 1849.58,-717.333 1849.58,-666 1849.58,-666 1849.58,-666 1849.58,-450 1849.58,-405.829 1823.6,-360.4 1804.24,-332.679"/>
+<polygon fill="black" stroke="black" points="1806.91,-330.398 1798.23,-324.325 1801.23,-334.486 1806.91,-330.398"/>
 </g>
 <!-- EXPONENTIAL_RANDOM_VARIABLE -->
 <g id="node48" class="node"><title>EXPONENTIAL_RANDOM_VARIABLE</title>
@@ -717,21 +717,21 @@
 <!-- MATRIX_POWERS -->
 <g id="node16" class="node"><title>MATRIX_POWERS</title>
 <a xlink:href="MATRIX_POWERS.html" xlink:title="Taking positive integer powers of a square matrix" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1279.58,-540 945.58,-540 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M945.58,-540C939.58,-540 933.58,-534 933.58,-528"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="933.58,-528 933.58,-516 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M933.58,-516C933.58,-510 939.58,-504 945.58,-504"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="945.58,-504 1279.58,-504 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1279.58,-504C1285.58,-504 1291.58,-510 1291.58,-516"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1291.58,-516 1291.58,-528 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1291.58,-528C1291.58,-534 1285.58,-540 1279.58,-540"/>
+<polyline fill="none" stroke="black" points="1279.58,-540 945.58,-540 "/>
+<path fill="none" stroke="black" d="M945.58,-540C939.58,-540 933.58,-534 933.58,-528"/>
+<polyline fill="none" stroke="black" points="933.58,-528 933.58,-516 "/>
+<path fill="none" stroke="black" d="M933.58,-516C933.58,-510 939.58,-504 945.58,-504"/>
+<polyline fill="none" stroke="black" points="945.58,-504 1279.58,-504 "/>
+<path fill="none" stroke="black" d="M1279.58,-504C1285.58,-504 1291.58,-510 1291.58,-516"/>
+<polyline fill="none" stroke="black" points="1291.58,-516 1291.58,-528 "/>
+<path fill="none" stroke="black" d="M1291.58,-528C1291.58,-534 1285.58,-540 1279.58,-540"/>
 <text text-anchor="start" x="941.58" y="-519.233" font-family="Times Roman,serif" font-size="14.00">Taking positive integer powers of a square matrix</text>
 </a>
 </g>
 <!-- MATRIX_POWERS&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION -->
 <g id="edge66" class="edge"><title>MATRIX_POWERS&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1035.76,-503.924C992.389,-493.72 938.056,-480.936 893.179,-470.376"/>
-<polygon fill="blue" stroke="blue" points="893.704,-466.904 883.168,-468.021 892.101,-473.718 893.704,-466.904"/>
+<path fill="none" stroke="black" d="M1035.76,-503.924C992.389,-493.72 938.056,-480.936 893.179,-470.376"/>
+<polygon fill="black" stroke="black" points="893.704,-466.904 883.168,-468.021 892.101,-473.718 893.704,-466.904"/>
 </g>
 <!-- CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
 <g id="node35" class="node"><title>CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
@@ -774,21 +774,21 @@
 <!-- EXPONENTIAL_GROWTH_DECAY -->
 <g id="node36" class="node"><title>EXPONENTIAL_GROWTH_DECAY</title>
 <a xlink:href="EXPONENTIAL_GROWTH_DECAY.html" xlink:title="Exponential growth/decay" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1495.58,-324 1321.58,-324 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1321.58,-324C1315.58,-324 1309.58,-318 1309.58,-312"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1309.58,-312 1309.58,-300 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1309.58,-300C1309.58,-294 1315.58,-288 1321.58,-288"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1321.58,-288 1495.58,-288 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1495.58,-288C1501.58,-288 1507.58,-294 1507.58,-300"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1507.58,-300 1507.58,-312 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1507.58,-312C1507.58,-318 1501.58,-324 1495.58,-324"/>
+<polyline fill="none" stroke="black" points="1495.58,-324 1321.58,-324 "/>
+<path fill="none" stroke="black" d="M1321.58,-324C1315.58,-324 1309.58,-318 1309.58,-312"/>
+<polyline fill="none" stroke="black" points="1309.58,-312 1309.58,-300 "/>
+<path fill="none" stroke="black" d="M1309.58,-300C1309.58,-294 1315.58,-288 1321.58,-288"/>
+<polyline fill="none" stroke="black" points="1321.58,-288 1495.58,-288 "/>
+<path fill="none" stroke="black" d="M1495.58,-288C1501.58,-288 1507.58,-294 1507.58,-300"/>
+<polyline fill="none" stroke="black" points="1507.58,-300 1507.58,-312 "/>
+<path fill="none" stroke="black" d="M1507.58,-312C1507.58,-318 1501.58,-324 1495.58,-324"/>
 <text text-anchor="start" x="1318.08" y="-303.233" font-family="Times Roman,serif" font-size="14.00">Exponential growth/decay</text>
 </a>
 </g>
 <!-- CONTINUOUS_TIME_MARKOV_CHAIN&#45;&gt;EXPONENTIAL_GROWTH_DECAY -->
 <g id="edge72" class="edge"><title>CONTINUOUS_TIME_MARKOV_CHAIN&#45;&gt;EXPONENTIAL_GROWTH_DECAY</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1434.75,-359.831C1430.88,-351.877 1426.26,-342.369 1421.98,-333.572"/>
-<polygon fill="blue" stroke="blue" points="1425.05,-331.877 1417.53,-324.413 1418.76,-334.937 1425.05,-331.877"/>
+<path fill="none" stroke="black" d="M1434.75,-359.831C1430.88,-351.877 1426.26,-342.369 1421.98,-333.572"/>
+<polygon fill="black" stroke="black" points="1425.05,-331.877 1417.53,-324.413 1418.76,-334.937 1425.05,-331.877"/>
 </g>
 <!-- MM1_QUEUE -->
 <g id="node60" class="node"><title>MM1_QUEUE</title>
@@ -831,26 +831,26 @@
 <!-- GEOMETRIC_SERIES -->
 <g id="node19" class="node"><title>GEOMETRIC_SERIES</title>
 <a xlink:href="GEOMETRIC_SERIES.html" xlink:title="Geometric series" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1997.58,-612 1889.58,-612 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1889.58,-612C1883.58,-612 1877.58,-606 1877.58,-600"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1877.58,-600 1877.58,-588 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1877.58,-588C1877.58,-582 1883.58,-576 1889.58,-576"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1889.58,-576 1997.58,-576 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1997.58,-576C2003.58,-576 2009.58,-582 2009.58,-588"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="2009.58,-588 2009.58,-600 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M2009.58,-600C2009.58,-606 2003.58,-612 1997.58,-612"/>
+<polyline fill="none" stroke="black" points="1997.58,-612 1889.58,-612 "/>
+<path fill="none" stroke="black" d="M1889.58,-612C1883.58,-612 1877.58,-606 1877.58,-600"/>
+<polyline fill="none" stroke="black" points="1877.58,-600 1877.58,-588 "/>
+<path fill="none" stroke="black" d="M1877.58,-588C1877.58,-582 1883.58,-576 1889.58,-576"/>
+<polyline fill="none" stroke="black" points="1889.58,-576 1997.58,-576 "/>
+<path fill="none" stroke="black" d="M1997.58,-576C2003.58,-576 2009.58,-582 2009.58,-588"/>
+<polyline fill="none" stroke="black" points="2009.58,-588 2009.58,-600 "/>
+<path fill="none" stroke="black" d="M2009.58,-600C2009.58,-606 2003.58,-612 1997.58,-612"/>
 <text text-anchor="start" x="1885.58" y="-591.233" font-family="Times Roman,serif" font-size="14.00">Geometric series</text>
 </a>
 </g>
 <!-- GEOMETRIC_SERIES&#45;&gt;GEOMETRIC_RANDOM_VARIABLE -->
 <g id="edge78" class="edge"><title>GEOMETRIC_SERIES&#45;&gt;GEOMETRIC_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2009.78,-586.8C2119.12,-574.908 2339.23,-550.968 2479.14,-535.752"/>
-<polygon fill="blue" stroke="blue" points="2479.93,-539.187 2489.49,-534.626 2479.17,-532.228 2479.93,-539.187"/>
+<path fill="none" stroke="black" d="M2009.78,-586.8C2119.12,-574.908 2339.23,-550.968 2479.14,-535.752"/>
+<polygon fill="black" stroke="black" points="2479.93,-539.187 2489.49,-534.626 2479.17,-532.228 2479.93,-539.187"/>
 </g>
 <!-- GEOMETRIC_SERIES&#45;&gt;MM1_QUEUE -->
 <g id="edge80" class="edge"><title>GEOMETRIC_SERIES&#45;&gt;MM1_QUEUE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1937.13,-575.866C1920.51,-531.768 1871.85,-418.279 1792.58,-360 1782.94,-352.917 1728.39,-338.09 1679.42,-325.762"/>
-<polygon fill="blue" stroke="blue" points="1680.27,-322.366 1669.72,-323.333 1678.57,-329.157 1680.27,-322.366"/>
+<path fill="none" stroke="black" d="M1937.13,-575.866C1920.51,-531.768 1871.85,-418.279 1792.58,-360 1782.94,-352.917 1728.39,-338.09 1679.42,-325.762"/>
+<polygon fill="black" stroke="black" points="1680.27,-322.366 1669.72,-323.333 1678.57,-329.157 1680.27,-322.366"/>
 </g>
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
 <g id="node20" class="node"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
@@ -959,8 +959,8 @@
 </g>
 <!-- EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV -->
 <g id="edge96" class="edge"><title>EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M181.904,-361.651C184.831,-361.084 187.731,-360.532 190.58,-360 284.419,-342.475 310.784,-341.335 408.536,-324.158"/>
-<polygon fill="blue" stroke="blue" points="409.307,-327.576 418.544,-322.387 408.087,-320.683 409.307,-327.576"/>
+<path fill="none" stroke="black" d="M181.904,-361.651C184.831,-361.084 187.731,-360.532 190.58,-360 284.419,-342.475 310.784,-341.335 408.536,-324.158"/>
+<polygon fill="black" stroke="black" points="409.307,-327.576 418.544,-322.387 408.087,-320.683 409.307,-327.576"/>
 </g>
 <!-- CONDITIONAL_EXPECTATION -->
 <g id="node25" class="node"><title>CONDITIONAL_EXPECTATION</title>
@@ -1008,8 +1008,8 @@
 </g>
 <!-- INTEGRATION_BY_PARTS&#45;&gt;EXPONENTIAL_RANDOM_VARIABLE -->
 <g id="edge110" class="edge"><title>INTEGRATION_BY_PARTS&#45;&gt;EXPONENTIAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1975.58,-287.831C1975.58,-280.131 1975.58,-270.974 1975.58,-262.417"/>
-<polygon fill="blue" stroke="blue" points="1979.08,-262.413 1975.58,-252.413 1972.08,-262.413 1979.08,-262.413"/>
+<path fill="none" stroke="black" d="M1975.58,-287.831C1975.58,-280.131 1975.58,-270.974 1975.58,-262.417"/>
+<polygon fill="black" stroke="black" points="1979.08,-262.413 1975.58,-252.413 1972.08,-262.413 1979.08,-262.413"/>
 </g>
 <!-- MARKOV_PROPERTY&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN -->
 <g id="edge112" class="edge"><title>MARKOV_PROPERTY&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN</title>
@@ -1028,32 +1028,32 @@
 </g>
 <!-- DEFINITION_OF_DERIVATIVE&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN -->
 <g id="edge118" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1378.08,-503.762C1391.04,-478.876 1414.37,-434.082 1429.4,-405.216"/>
-<polygon fill="blue" stroke="blue" points="1432.64,-406.576 1434.16,-396.09 1426.43,-403.342 1432.64,-406.576"/>
+<path fill="none" stroke="black" d="M1378.08,-503.762C1391.04,-478.876 1414.37,-434.082 1429.4,-405.216"/>
+<polygon fill="black" stroke="black" points="1432.64,-406.576 1434.16,-396.09 1426.43,-403.342 1432.64,-406.576"/>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE&#45;&gt;TAYLOR_SERIES -->
 <g id="edge120" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;TAYLOR_SERIES</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1425.57,-503.924C1456.87,-493.996 1495.87,-481.625 1528.62,-471.238"/>
-<polygon fill="blue" stroke="blue" points="1530.09,-474.443 1538.57,-468.083 1527.98,-467.77 1530.09,-474.443"/>
+<path fill="none" stroke="black" d="M1425.57,-503.924C1456.87,-493.996 1495.87,-481.625 1528.62,-471.238"/>
+<polygon fill="black" stroke="black" points="1530.09,-474.443 1538.57,-468.083 1527.98,-467.77 1530.09,-474.443"/>
 </g>
 <!-- PRODUCT_RULE -->
 <g id="node38" class="node"><title>PRODUCT_RULE</title>
 <a xlink:href="PRODUCT_RULE.html" xlink:title="Product Rule" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1331.58,-468 1251.58,-468 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1251.58,-468C1245.58,-468 1239.58,-462 1239.58,-456"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1239.58,-456 1239.58,-444 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1239.58,-444C1239.58,-438 1245.58,-432 1251.58,-432"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1251.58,-432 1331.58,-432 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1331.58,-432C1337.58,-432 1343.58,-438 1343.58,-444"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1343.58,-444 1343.58,-456 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1343.58,-456C1343.58,-462 1337.58,-468 1331.58,-468"/>
+<polyline fill="none" stroke="black" points="1331.58,-468 1251.58,-468 "/>
+<path fill="none" stroke="black" d="M1251.58,-468C1245.58,-468 1239.58,-462 1239.58,-456"/>
+<polyline fill="none" stroke="black" points="1239.58,-456 1239.58,-444 "/>
+<path fill="none" stroke="black" d="M1239.58,-444C1239.58,-438 1245.58,-432 1251.58,-432"/>
+<polyline fill="none" stroke="black" points="1251.58,-432 1331.58,-432 "/>
+<path fill="none" stroke="black" d="M1331.58,-432C1337.58,-432 1343.58,-438 1343.58,-444"/>
+<polyline fill="none" stroke="black" points="1343.58,-444 1343.58,-456 "/>
+<path fill="none" stroke="black" d="M1343.58,-456C1343.58,-462 1337.58,-468 1331.58,-468"/>
 <text text-anchor="start" x="1247.58" y="-447.233" font-family="Times Roman,serif" font-size="14.00">Product Rule</text>
 </a>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE&#45;&gt;PRODUCT_RULE -->
 <g id="edge122" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;PRODUCT_RULE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1349.15,-503.831C1339.85,-495.134 1328.56,-484.578 1318.45,-475.127"/>
-<polygon fill="blue" stroke="blue" points="1320.7,-472.436 1311,-468.163 1315.92,-477.549 1320.7,-472.436"/>
+<path fill="none" stroke="black" d="M1349.15,-503.831C1339.85,-495.134 1328.56,-484.578 1318.45,-475.127"/>
+<polygon fill="black" stroke="black" points="1320.7,-472.436 1311,-468.163 1315.92,-477.549 1320.7,-472.436"/>
 </g>
 <!-- NEWTONS_LAWS -->
 <g id="node42" class="node"><title>NEWTONS_LAWS</title>
@@ -1096,21 +1096,21 @@
 <!-- CHAIN_RULE -->
 <g id="node64" class="node"><title>CHAIN_RULE</title>
 <a xlink:href="CHAIN_RULE.html" xlink:title="Chain Rule" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1209.58,-468 1141.58,-468 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1141.58,-468C1135.58,-468 1129.58,-462 1129.58,-456"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1129.58,-456 1129.58,-444 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1129.58,-444C1129.58,-438 1135.58,-432 1141.58,-432"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1141.58,-432 1209.58,-432 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1209.58,-432C1215.58,-432 1221.58,-438 1221.58,-444"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1221.58,-444 1221.58,-456 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1221.58,-456C1221.58,-462 1215.58,-468 1209.58,-468"/>
+<polyline fill="none" stroke="black" points="1209.58,-468 1141.58,-468 "/>
+<path fill="none" stroke="black" d="M1141.58,-468C1135.58,-468 1129.58,-462 1129.58,-456"/>
+<polyline fill="none" stroke="black" points="1129.58,-456 1129.58,-444 "/>
+<path fill="none" stroke="black" d="M1129.58,-444C1129.58,-438 1135.58,-432 1141.58,-432"/>
+<polyline fill="none" stroke="black" points="1141.58,-432 1209.58,-432 "/>
+<path fill="none" stroke="black" d="M1209.58,-432C1215.58,-432 1221.58,-438 1221.58,-444"/>
+<polyline fill="none" stroke="black" points="1221.58,-444 1221.58,-456 "/>
+<path fill="none" stroke="black" d="M1221.58,-456C1221.58,-462 1215.58,-468 1209.58,-468"/>
 <text text-anchor="start" x="1138.08" y="-447.233" font-family="Times Roman,serif" font-size="14.00">Chain Rule</text>
 </a>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE&#45;&gt;CHAIN_RULE -->
 <g id="edge128" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;CHAIN_RULE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1319.88,-503.831C1292.91,-493.77 1259.27,-481.222 1231.26,-470.773"/>
-<polygon fill="blue" stroke="blue" points="1232.2,-467.388 1221.61,-467.171 1229.76,-473.946 1232.2,-467.388"/>
+<path fill="none" stroke="black" d="M1319.88,-503.831C1292.91,-493.77 1259.27,-481.222 1231.26,-470.773"/>
+<polygon fill="black" stroke="black" points="1232.2,-467.388 1221.61,-467.171 1229.76,-473.946 1232.2,-467.388"/>
 </g>
 <!-- GENERALIZED_PARTITION_FUNCTION&#45;&gt;CANONICAL_ENSEMBLE -->
 <g id="edge130" class="edge"><title>GENERALIZED_PARTITION_FUNCTION&#45;&gt;CANONICAL_ENSEMBLE</title>
@@ -1119,86 +1119,86 @@
 </g>
 <!-- TAYLOR_SERIES&#45;&gt;FUNDAMENTAL_THEOREM_OF_CALCULUS -->
 <g id="edge132" class="edge"><title>TAYLOR_SERIES&#45;&gt;FUNDAMENTAL_THEOREM_OF_CALCULUS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1696.99,-431.971C1755.48,-421.574 1829.09,-408.487 1889.18,-397.804"/>
-<polygon fill="blue" stroke="blue" points="1889.85,-401.24 1899.09,-396.043 1888.63,-394.348 1889.85,-401.24"/>
+<path fill="none" stroke="black" d="M1696.99,-431.971C1755.48,-421.574 1829.09,-408.487 1889.18,-397.804"/>
+<polygon fill="black" stroke="black" points="1889.85,-401.24 1899.09,-396.043 1888.63,-394.348 1889.85,-401.24"/>
 </g>
 <!-- TAYLOR_SERIES&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN -->
 <g id="edge134" class="edge"><title>TAYLOR_SERIES&#45;&gt;CONTINUOUS_TIME_MARKOV_CHAIN</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1557.22,-431.831C1537.08,-422.287 1512.2,-410.506 1490.87,-400.401"/>
-<polygon fill="blue" stroke="blue" points="1492.2,-397.156 1481.66,-396.038 1489.2,-403.482 1492.2,-397.156"/>
+<path fill="none" stroke="black" d="M1557.22,-431.831C1537.08,-422.287 1512.2,-410.506 1490.87,-400.401"/>
+<polygon fill="black" stroke="black" points="1492.2,-397.156 1481.66,-396.038 1489.2,-403.482 1492.2,-397.156"/>
 </g>
 <!-- TAYLOR_SERIES&#45;&gt;EXPONENTIAL_GROWTH_DECAY -->
 <g id="edge136" class="edge"><title>TAYLOR_SERIES&#45;&gt;EXPONENTIAL_GROWTH_DECAY</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1596.77,-431.749C1597.05,-411.683 1594.34,-379.684 1576.58,-360 1565.42,-347.629 1533.42,-336.022 1500.3,-326.764"/>
-<polygon fill="blue" stroke="blue" points="1501.05,-323.34 1490.48,-324.092 1499.21,-330.094 1501.05,-323.34"/>
+<path fill="none" stroke="black" d="M1596.77,-431.749C1597.05,-411.683 1594.34,-379.684 1576.58,-360 1565.42,-347.629 1533.42,-336.022 1500.3,-326.764"/>
+<polygon fill="black" stroke="black" points="1501.05,-323.34 1490.48,-324.092 1499.21,-330.094 1501.05,-323.34"/>
 </g>
 <!-- THE_EXPONENTIAL_FUNCTION -->
 <g id="node47" class="node"><title>THE_EXPONENTIAL_FUNCTION</title>
 <a xlink:href="THE_EXPONENTIAL_FUNCTION.html" xlink:title="Exponential function" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1771.58,-396 1635.58,-396 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1635.58,-396C1629.58,-396 1623.58,-390 1623.58,-384"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1623.58,-384 1623.58,-372 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1623.58,-372C1623.58,-366 1629.58,-360 1635.58,-360"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1635.58,-360 1771.58,-360 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1771.58,-360C1777.58,-360 1783.58,-366 1783.58,-372"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1783.58,-372 1783.58,-384 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1783.58,-384C1783.58,-390 1777.58,-396 1771.58,-396"/>
+<polyline fill="none" stroke="black" points="1771.58,-396 1635.58,-396 "/>
+<path fill="none" stroke="black" d="M1635.58,-396C1629.58,-396 1623.58,-390 1623.58,-384"/>
+<polyline fill="none" stroke="black" points="1623.58,-384 1623.58,-372 "/>
+<path fill="none" stroke="black" d="M1623.58,-372C1623.58,-366 1629.58,-360 1635.58,-360"/>
+<polyline fill="none" stroke="black" points="1635.58,-360 1771.58,-360 "/>
+<path fill="none" stroke="black" d="M1771.58,-360C1777.58,-360 1783.58,-366 1783.58,-372"/>
+<polyline fill="none" stroke="black" points="1783.58,-372 1783.58,-384 "/>
+<path fill="none" stroke="black" d="M1783.58,-384C1783.58,-390 1777.58,-396 1771.58,-396"/>
 <text text-anchor="start" x="1632.08" y="-375.233" font-family="Times Roman,serif" font-size="14.00">Exponential function</text>
 </a>
 </g>
 <!-- TAYLOR_SERIES&#45;&gt;THE_EXPONENTIAL_FUNCTION -->
 <g id="edge138" class="edge"><title>TAYLOR_SERIES&#45;&gt;THE_EXPONENTIAL_FUNCTION</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1622.83,-431.831C1636.52,-422.707 1653.27,-411.539 1667.96,-401.745"/>
-<polygon fill="blue" stroke="blue" points="1669.96,-404.622 1676.34,-396.163 1666.07,-398.798 1669.96,-404.622"/>
+<path fill="none" stroke="black" d="M1622.83,-431.831C1636.52,-422.707 1653.27,-411.539 1667.96,-401.745"/>
+<polygon fill="black" stroke="black" points="1669.96,-404.622 1676.34,-396.163 1666.07,-398.798 1669.96,-404.622"/>
 </g>
 <!-- LHOPITALS_RULE -->
 <g id="node58" class="node"><title>LHOPITALS_RULE</title>
 <a xlink:href="LHOPITALS_RULE.html" xlink:title="l&#39;Hopital&#39;s Rule" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1289.58,-396 1197.58,-396 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1197.58,-396C1191.58,-396 1185.58,-390 1185.58,-384"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1185.58,-384 1185.58,-372 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1185.58,-372C1185.58,-366 1191.58,-360 1197.58,-360"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1197.58,-360 1289.58,-360 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1289.58,-360C1295.58,-360 1301.58,-366 1301.58,-372"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1301.58,-372 1301.58,-384 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1301.58,-384C1301.58,-390 1295.58,-396 1289.58,-396"/>
+<polyline fill="none" stroke="black" points="1289.58,-396 1197.58,-396 "/>
+<path fill="none" stroke="black" d="M1197.58,-396C1191.58,-396 1185.58,-390 1185.58,-384"/>
+<polyline fill="none" stroke="black" points="1185.58,-384 1185.58,-372 "/>
+<path fill="none" stroke="black" d="M1185.58,-372C1185.58,-366 1191.58,-360 1197.58,-360"/>
+<polyline fill="none" stroke="black" points="1197.58,-360 1289.58,-360 "/>
+<path fill="none" stroke="black" d="M1289.58,-360C1295.58,-360 1301.58,-366 1301.58,-372"/>
+<polyline fill="none" stroke="black" points="1301.58,-372 1301.58,-384 "/>
+<path fill="none" stroke="black" d="M1301.58,-384C1301.58,-390 1295.58,-396 1289.58,-396"/>
 <text text-anchor="start" x="1193.58" y="-375.233" font-family="Times Roman,serif" font-size="14.00">l&#39;Hopital&#39;s Rule</text>
 </a>
 </g>
 <!-- TAYLOR_SERIES&#45;&gt;LHOPITALS_RULE -->
 <g id="edge140" class="edge"><title>TAYLOR_SERIES&#45;&gt;LHOPITALS_RULE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1489.95,-431.941C1438.7,-422.708 1376.07,-410.738 1311.57,-396.147"/>
-<polygon fill="blue" stroke="blue" points="1312.15,-392.689 1301.62,-393.879 1310.59,-399.514 1312.15,-392.689"/>
+<path fill="none" stroke="black" d="M1489.95,-431.941C1438.7,-422.708 1376.07,-410.738 1311.57,-396.147"/>
+<polygon fill="black" stroke="black" points="1312.15,-392.689 1301.62,-393.879 1310.59,-399.514 1312.15,-392.689"/>
 </g>
 <!-- SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS&#45;&gt;POISSON_PROCESS -->
 <g id="edge142" class="edge"><title>SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS&#45;&gt;POISSON_PROCESS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1398.58,-143.831C1398.58,-136.131 1398.58,-126.974 1398.58,-118.417"/>
-<polygon fill="blue" stroke="blue" points="1402.08,-118.413 1398.58,-108.413 1395.08,-118.413 1402.08,-118.413"/>
+<path fill="none" stroke="black" d="M1398.58,-143.831C1398.58,-136.131 1398.58,-126.974 1398.58,-118.417"/>
+<polygon fill="black" stroke="black" points="1402.08,-118.413 1398.58,-108.413 1395.08,-118.413 1402.08,-118.413"/>
 </g>
 <!-- NORMAL_RANDOM_VARIABLE&#45;&gt;CENTRAL_LIMIT_THEOREM -->
 <g id="edge144" class="edge"><title>NORMAL_RANDOM_VARIABLE&#45;&gt;CENTRAL_LIMIT_THEOREM</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2267.52,-215.831C2273.63,-207.369 2281.82,-197.149 2289.85,-187.897"/>
-<polygon fill="blue" stroke="blue" points="2292.48,-190.209 2296.52,-180.413 2287.25,-185.554 2292.48,-190.209"/>
+<path fill="none" stroke="black" d="M2267.52,-215.831C2273.63,-207.369 2281.82,-197.149 2289.85,-187.897"/>
+<polygon fill="black" stroke="black" points="2292.48,-190.209 2296.52,-180.413 2287.25,-185.554 2292.48,-190.209"/>
 </g>
 <!-- EXPONENTIAL_GROWTH_DECAY&#45;&gt;VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS -->
 <g id="edge146" class="edge"><title>EXPONENTIAL_GROWTH_DECAY&#45;&gt;VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1408.58,-287.831C1408.58,-280.131 1408.58,-270.974 1408.58,-262.417"/>
-<polygon fill="blue" stroke="blue" points="1412.08,-262.413 1408.58,-252.413 1405.08,-262.413 1412.08,-262.413"/>
+<path fill="none" stroke="black" d="M1408.58,-287.831C1408.58,-280.131 1408.58,-270.974 1408.58,-262.417"/>
+<polygon fill="black" stroke="black" points="1412.08,-262.413 1408.58,-252.413 1405.08,-262.413 1412.08,-262.413"/>
 </g>
 <!-- EXPONENTIAL_GROWTH_DECAY&#45;&gt;EXPONENTIAL_RANDOM_VARIABLE -->
 <g id="edge148" class="edge"><title>EXPONENTIAL_GROWTH_DECAY&#45;&gt;EXPONENTIAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1507.72,-289.287C1510.7,-288.845 1513.66,-288.414 1516.58,-288 1632.12,-271.584 1764.54,-256.39 1857.36,-246.329"/>
-<polygon fill="blue" stroke="blue" points="1857.78,-249.804 1867.35,-245.25 1857.03,-242.845 1857.78,-249.804"/>
+<path fill="none" stroke="black" d="M1507.72,-289.287C1510.7,-288.845 1513.66,-288.414 1516.58,-288 1632.12,-271.584 1764.54,-256.39 1857.36,-246.329"/>
+<polygon fill="black" stroke="black" points="1857.78,-249.804 1867.35,-245.25 1857.03,-242.845 1857.78,-249.804"/>
 </g>
 <!-- INTEGRATION_BY_SUBSTITUTION&#45;&gt;NORMAL_RANDOM_VARIABLE -->
 <g id="edge150" class="edge"><title>INTEGRATION_BY_SUBSTITUTION&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2222.69,-287.831C2228.11,-279.708 2234.6,-269.964 2240.57,-261.012"/>
-<polygon fill="blue" stroke="blue" points="2243.67,-262.675 2246.3,-252.413 2237.85,-258.792 2243.67,-262.675"/>
+<path fill="none" stroke="black" d="M2222.69,-287.831C2228.11,-279.708 2234.6,-269.964 2240.57,-261.012"/>
+<polygon fill="black" stroke="black" points="2243.67,-262.675 2246.3,-252.413 2237.85,-258.792 2243.67,-262.675"/>
 </g>
 <!-- PRODUCT_RULE&#45;&gt;SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS -->
 <g id="edge152" class="edge"><title>PRODUCT_RULE&#45;&gt;SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1239.76,-431.937C1212.9,-421.416 1184.15,-407.916 1176.58,-396 1168,-382.494 1172.73,-375.531 1176.58,-360 1193.98,-289.756 1198.16,-263.702 1252.58,-216 1268.63,-201.928 1288.68,-191.399 1308.73,-183.566"/>
-<polygon fill="blue" stroke="blue" points="1310.07,-186.8 1318.24,-180.044 1307.64,-180.236 1310.07,-186.8"/>
+<path fill="none" stroke="black" d="M1239.76,-431.937C1212.9,-421.416 1184.15,-407.916 1176.58,-396 1168,-382.494 1172.73,-375.531 1176.58,-360 1193.98,-289.756 1198.16,-263.702 1252.58,-216 1268.63,-201.928 1288.68,-191.399 1308.73,-183.566"/>
+<polygon fill="black" stroke="black" points="1310.07,-186.8 1318.24,-180.044 1307.64,-180.236 1310.07,-186.8"/>
 </g>
 <!-- INTERATOMIC_FORCES -->
 <g id="node54" class="node"><title>INTERATOMIC_FORCES</title>
@@ -1227,21 +1227,21 @@
 <!-- MATRIX_INVERSE -->
 <g id="node41" class="node"><title>MATRIX_INVERSE</title>
 <a xlink:href="MATRIX_INVERSE.html" xlink:title="The matrix inverse" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="687.58,-540 563.58,-540 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M563.58,-540C557.58,-540 551.58,-534 551.58,-528"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="551.58,-528 551.58,-516 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M551.58,-516C551.58,-510 557.58,-504 563.58,-504"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="563.58,-504 687.58,-504 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M687.58,-504C693.58,-504 699.58,-510 699.58,-516"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="699.58,-516 699.58,-528 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M699.58,-528C699.58,-534 693.58,-540 687.58,-540"/>
+<polyline fill="none" stroke="black" points="687.58,-540 563.58,-540 "/>
+<path fill="none" stroke="black" d="M563.58,-540C557.58,-540 551.58,-534 551.58,-528"/>
+<polyline fill="none" stroke="black" points="551.58,-528 551.58,-516 "/>
+<path fill="none" stroke="black" d="M551.58,-516C551.58,-510 557.58,-504 563.58,-504"/>
+<polyline fill="none" stroke="black" points="563.58,-504 687.58,-504 "/>
+<path fill="none" stroke="black" d="M687.58,-504C693.58,-504 699.58,-510 699.58,-516"/>
+<polyline fill="none" stroke="black" points="699.58,-516 699.58,-528 "/>
+<path fill="none" stroke="black" d="M699.58,-528C699.58,-534 693.58,-540 687.58,-540"/>
 <text text-anchor="start" x="560.08" y="-519.233" font-family="Times Roman,serif" font-size="14.00">The matrix inverse</text>
 </a>
 </g>
 <!-- MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES -->
 <g id="edge158" class="edge"><title>MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M602.32,-503.925C565.108,-472.825 499.93,-407.92 536.58,-360 547.265,-346.03 579.066,-334.828 614.198,-326.328"/>
-<polygon fill="blue" stroke="blue" points="615.236,-329.68 624.181,-324.002 613.648,-322.863 615.236,-329.68"/>
+<path fill="none" stroke="black" d="M602.32,-503.925C565.108,-472.825 499.93,-407.92 536.58,-360 547.265,-346.03 579.066,-334.828 614.198,-326.328"/>
+<polygon fill="black" stroke="black" points="615.236,-329.68 624.181,-324.002 613.648,-322.863 615.236,-329.68"/>
 </g>
 <!-- NEWTONS_LAWS&#45;&gt;MOLECULAR_DYNAMICS -->
 <g id="edge160" class="edge"><title>NEWTONS_LAWS&#45;&gt;MOLECULAR_DYNAMICS</title>
@@ -1256,14 +1256,14 @@
 <!-- DETAILED_BALANCE -->
 <g id="node44" class="node"><title>DETAILED_BALANCE</title>
 <a xlink:href="DETAILED_BALANCE.html" xlink:title="Detailed balance" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="644.58,-252 536.58,-252 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M536.58,-252C530.58,-252 524.58,-246 524.58,-240"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="524.58,-240 524.58,-228 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M524.58,-228C524.58,-222 530.58,-216 536.58,-216"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="536.58,-216 644.58,-216 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M644.58,-216C650.58,-216 656.58,-222 656.58,-228"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="656.58,-228 656.58,-240 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M656.58,-240C656.58,-246 650.58,-252 644.58,-252"/>
+<polyline fill="none" stroke="black" points="644.58,-252 536.58,-252 "/>
+<path fill="none" stroke="black" d="M536.58,-252C530.58,-252 524.58,-246 524.58,-240"/>
+<polyline fill="none" stroke="black" points="524.58,-240 524.58,-228 "/>
+<path fill="none" stroke="black" d="M524.58,-228C524.58,-222 530.58,-216 536.58,-216"/>
+<polyline fill="none" stroke="black" points="536.58,-216 644.58,-216 "/>
+<path fill="none" stroke="black" d="M644.58,-216C650.58,-216 656.58,-222 656.58,-228"/>
+<polyline fill="none" stroke="black" points="656.58,-228 656.58,-240 "/>
+<path fill="none" stroke="black" d="M656.58,-240C656.58,-246 650.58,-252 644.58,-252"/>
 <text text-anchor="start" x="533.08" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Detailed balance</text>
 </a>
 </g>
@@ -1283,8 +1283,8 @@
 </g>
 <!-- THE_EXPONENTIAL_FUNCTION&#45;&gt;EXPONENTIAL_GROWTH_DECAY -->
 <g id="edge164" class="edge"><title>THE_EXPONENTIAL_FUNCTION&#45;&gt;EXPONENTIAL_GROWTH_DECAY</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1629.52,-359.924C1587.8,-349.741 1535.55,-336.989 1492.34,-326.443"/>
-<polygon fill="blue" stroke="blue" points="1492.96,-322.992 1482.41,-324.021 1491.3,-329.792 1492.96,-322.992"/>
+<path fill="none" stroke="black" d="M1629.52,-359.924C1587.8,-349.741 1535.55,-336.989 1492.34,-326.443"/>
+<polygon fill="black" stroke="black" points="1492.96,-322.992 1482.41,-324.021 1491.3,-329.792 1492.96,-322.992"/>
 </g>
 <!-- LAGRANGE_MULTIPLIERS&#45;&gt;GENERALIZED_PARTITION_FUNCTION -->
 <g id="edge166" class="edge"><title>LAGRANGE_MULTIPLIERS&#45;&gt;GENERALIZED_PARTITION_FUNCTION</title>
@@ -1299,31 +1299,31 @@
 <!-- MATRIX_MULTIPLICATION -->
 <g id="node53" class="node"><title>MATRIX_MULTIPLICATION</title>
 <a xlink:href="MATRIX_MULTIPLICATION.html" xlink:title="Matrix multiplication" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1092.58,-612 958.58,-612 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M958.58,-612C952.58,-612 946.58,-606 946.58,-600"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="946.58,-600 946.58,-588 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M946.58,-588C946.58,-582 952.58,-576 958.58,-576"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="958.58,-576 1092.58,-576 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1092.58,-576C1098.58,-576 1104.58,-582 1104.58,-588"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1104.58,-588 1104.58,-600 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1104.58,-600C1104.58,-606 1098.58,-612 1092.58,-612"/>
+<polyline fill="none" stroke="black" points="1092.58,-612 958.58,-612 "/>
+<path fill="none" stroke="black" d="M958.58,-612C952.58,-612 946.58,-606 946.58,-600"/>
+<polyline fill="none" stroke="black" points="946.58,-600 946.58,-588 "/>
+<path fill="none" stroke="black" d="M946.58,-588C946.58,-582 952.58,-576 958.58,-576"/>
+<polyline fill="none" stroke="black" points="958.58,-576 1092.58,-576 "/>
+<path fill="none" stroke="black" d="M1092.58,-576C1098.58,-576 1104.58,-582 1104.58,-588"/>
+<polyline fill="none" stroke="black" points="1104.58,-588 1104.58,-600 "/>
+<path fill="none" stroke="black" d="M1104.58,-600C1104.58,-606 1098.58,-612 1092.58,-612"/>
 <text text-anchor="start" x="954.58" y="-591.233" font-family="Times Roman,serif" font-size="14.00">Matrix multiplication</text>
 </a>
 </g>
 <!-- MATRIX_MULTIPLICATION&#45;&gt;DIFFERENCE_EQUATIONS -->
 <g id="edge170" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;DIFFERENCE_EQUATIONS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M968.34,-575.924C936.765,-565.953 897.39,-553.519 864.409,-543.104"/>
-<polygon fill="blue" stroke="blue" points="865.433,-539.757 854.843,-540.083 863.325,-546.432 865.433,-539.757"/>
+<path fill="none" stroke="black" d="M968.34,-575.924C936.765,-565.953 897.39,-553.519 864.409,-543.104"/>
+<polygon fill="black" stroke="black" points="865.433,-539.757 854.843,-540.083 863.325,-546.432 865.433,-539.757"/>
 </g>
 <!-- MATRIX_MULTIPLICATION&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION -->
 <g id="edge172" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M985.765,-575.805C966.557,-566.267 943.612,-553.722 924.58,-540 905.709,-526.394 904.727,-518.557 886.58,-504 873.392,-493.421 858.172,-482.792 844.571,-473.797"/>
-<polygon fill="blue" stroke="blue" points="846.191,-470.675 835.904,-468.138 842.364,-476.536 846.191,-470.675"/>
+<path fill="none" stroke="black" d="M985.765,-575.805C966.557,-566.267 943.612,-553.722 924.58,-540 905.709,-526.394 904.727,-518.557 886.58,-504 873.392,-493.421 858.172,-482.792 844.571,-473.797"/>
+<polygon fill="black" stroke="black" points="846.191,-470.675 835.904,-468.138 842.364,-476.536 846.191,-470.675"/>
 </g>
 <!-- MATRIX_MULTIPLICATION&#45;&gt;MATRIX_POWERS -->
 <g id="edge174" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;MATRIX_POWERS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1047.53,-575.831C1058.25,-566.963 1071.3,-556.164 1082.89,-546.572"/>
-<polygon fill="blue" stroke="blue" points="1085.16,-549.235 1090.63,-540.163 1080.7,-543.842 1085.16,-549.235"/>
+<path fill="none" stroke="black" d="M1047.53,-575.831C1058.25,-566.963 1071.3,-556.164 1082.89,-546.572"/>
+<polygon fill="black" stroke="black" points="1085.16,-549.235 1090.63,-540.163 1080.7,-543.842 1085.16,-549.235"/>
 </g>
 <!-- INTERATOMIC_FORCES&#45;&gt;MONTE_CARLO -->
 <g id="edge176" class="edge"><title>INTERATOMIC_FORCES&#45;&gt;MONTE_CARLO</title>
@@ -1332,13 +1332,13 @@
 </g>
 <!-- INTRODUCTION_TO_CONTINUITY&#45;&gt;TAYLOR_SERIES -->
 <g id="edge178" class="edge"><title>INTRODUCTION_TO_CONTINUITY&#45;&gt;TAYLOR_SERIES</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1612.78,-503.831C1610.29,-496.046 1607.33,-486.773 1604.57,-478.135"/>
-<polygon fill="blue" stroke="blue" points="1607.84,-476.874 1601.46,-468.413 1601.17,-479.004 1607.84,-476.874"/>
+<path fill="none" stroke="black" d="M1612.78,-503.831C1610.29,-496.046 1607.33,-486.773 1604.57,-478.135"/>
+<polygon fill="black" stroke="black" points="1607.84,-476.874 1601.46,-468.413 1601.17,-479.004 1607.84,-476.874"/>
 </g>
 <!-- CENTRAL_LIMIT_THEOREM&#45;&gt;NORMAL_RANDOM_VARIABLE -->
 <g id="edge180" class="edge"><title>CENTRAL_LIMIT_THEOREM&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M2308.47,-180.413C2302.38,-188.824 2294.27,-198.932 2286.32,-208.092"/>
-<polygon fill="blue" stroke="blue" points="2283.46,-206.037 2279.42,-215.831 2288.69,-210.695 2283.46,-206.037"/>
+<path fill="none" stroke="black" d="M2308.47,-180.413C2302.38,-188.824 2294.27,-198.932 2286.32,-208.092"/>
+<polygon fill="black" stroke="black" points="2283.46,-206.037 2279.42,-215.831 2288.69,-210.695 2283.46,-206.037"/>
 </g>
 <!-- VARIANCE&#45;&gt;BERNOULI_RANDOM_VARIABLE -->
 <g id="edge182" class="edge"><title>VARIANCE&#45;&gt;BERNOULI_RANDOM_VARIABLE</title>
@@ -1352,80 +1352,80 @@
 </g>
 <!-- LHOPITALS_RULE&#45;&gt;GAMBLERS_RUIN -->
 <g id="edge186" class="edge"><title>LHOPITALS_RULE&#45;&gt;GAMBLERS_RUIN</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1200.99,-359.908C1138.87,-333.521 1023.54,-284.531 956.522,-256.064"/>
-<polygon fill="blue" stroke="blue" points="957.57,-252.706 946.997,-252.018 954.833,-259.149 957.57,-252.706"/>
+<path fill="none" stroke="black" d="M1200.99,-359.908C1138.87,-333.521 1023.54,-284.531 956.522,-256.064"/>
+<polygon fill="black" stroke="black" points="957.57,-252.706 946.997,-252.018 954.833,-259.149 957.57,-252.706"/>
 </g>
 <!-- VENN_DIAGRAMS -->
 <g id="node59" class="node"><title>VENN_DIAGRAMS</title>
 <a xlink:href="VENN_DIAGRAMS.html" xlink:title="Basic set theory" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1382.58,-1044 1278.58,-1044 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1278.58,-1044C1272.58,-1044 1266.58,-1038 1266.58,-1032"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1266.58,-1032 1266.58,-1020 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1266.58,-1020C1266.58,-1014 1272.58,-1008 1278.58,-1008"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1278.58,-1008 1382.58,-1008 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1382.58,-1008C1388.58,-1008 1394.58,-1014 1394.58,-1020"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1394.58,-1020 1394.58,-1032 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1394.58,-1032C1394.58,-1038 1388.58,-1044 1382.58,-1044"/>
+<polyline fill="none" stroke="black" points="1382.58,-1044 1278.58,-1044 "/>
+<path fill="none" stroke="black" d="M1278.58,-1044C1272.58,-1044 1266.58,-1038 1266.58,-1032"/>
+<polyline fill="none" stroke="black" points="1266.58,-1032 1266.58,-1020 "/>
+<path fill="none" stroke="black" d="M1266.58,-1020C1266.58,-1014 1272.58,-1008 1278.58,-1008"/>
+<polyline fill="none" stroke="black" points="1278.58,-1008 1382.58,-1008 "/>
+<path fill="none" stroke="black" d="M1382.58,-1008C1388.58,-1008 1394.58,-1014 1394.58,-1020"/>
+<polyline fill="none" stroke="black" points="1394.58,-1020 1394.58,-1032 "/>
+<path fill="none" stroke="black" d="M1394.58,-1032C1394.58,-1038 1388.58,-1044 1382.58,-1044"/>
 <text text-anchor="start" x="1274.58" y="-1023.23" font-family="Times Roman,serif" font-size="14.00">Basic set theory</text>
 </a>
 </g>
 <!-- VENN_DIAGRAMS&#45;&gt;CONDITIONAL_PROBABILITY -->
 <g id="edge188" class="edge"><title>VENN_DIAGRAMS&#45;&gt;CONDITIONAL_PROBABILITY</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1288.23,-1007.98C1169.62,-957.526 834.388,-814.917 705.217,-759.967"/>
-<polygon fill="blue" stroke="blue" points="706.486,-756.703 695.913,-756.009 703.745,-763.144 706.486,-756.703"/>
+<path fill="none" stroke="black" d="M1288.23,-1007.98C1169.62,-957.526 834.388,-814.917 705.217,-759.967"/>
+<polygon fill="black" stroke="black" points="706.486,-756.703 695.913,-756.009 703.745,-763.144 706.486,-756.703"/>
 </g>
 <!-- INCLUSION_EXCLUSION -->
 <g id="node62" class="node"><title>INCLUSION_EXCLUSION</title>
 <a xlink:href="INCLUSION_EXCLUSION.html" xlink:title="Inclusion&#45;exclusion principle" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1597.58,-972 1411.58,-972 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1411.58,-972C1405.58,-972 1399.58,-966 1399.58,-960"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1399.58,-960 1399.58,-948 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1399.58,-948C1399.58,-942 1405.58,-936 1411.58,-936"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1411.58,-936 1597.58,-936 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1597.58,-936C1603.58,-936 1609.58,-942 1609.58,-948"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1609.58,-948 1609.58,-960 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1609.58,-960C1609.58,-966 1603.58,-972 1597.58,-972"/>
+<polyline fill="none" stroke="black" points="1597.58,-972 1411.58,-972 "/>
+<path fill="none" stroke="black" d="M1411.58,-972C1405.58,-972 1399.58,-966 1399.58,-960"/>
+<polyline fill="none" stroke="black" points="1399.58,-960 1399.58,-948 "/>
+<path fill="none" stroke="black" d="M1399.58,-948C1399.58,-942 1405.58,-936 1411.58,-936"/>
+<polyline fill="none" stroke="black" points="1411.58,-936 1597.58,-936 "/>
+<path fill="none" stroke="black" d="M1597.58,-936C1603.58,-936 1609.58,-942 1609.58,-948"/>
+<polyline fill="none" stroke="black" points="1609.58,-948 1609.58,-960 "/>
+<path fill="none" stroke="black" d="M1609.58,-960C1609.58,-966 1603.58,-972 1597.58,-972"/>
 <text text-anchor="start" x="1408.08" y="-951.233" font-family="Times Roman,serif" font-size="14.00">Inclusion&#45;exclusion principle</text>
 </a>
 </g>
 <!-- VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION -->
 <g id="edge190" class="edge"><title>VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1374.49,-1007.83C1397.86,-998.159 1426.79,-986.189 1451.43,-975.994"/>
-<polygon fill="blue" stroke="blue" points="1453.09,-979.096 1460.99,-972.038 1450.41,-972.628 1453.09,-979.096"/>
+<path fill="none" stroke="black" d="M1374.49,-1007.83C1397.86,-998.159 1426.79,-986.189 1451.43,-975.994"/>
+<polygon fill="black" stroke="black" points="1453.09,-979.096 1460.99,-972.038 1450.41,-972.628 1453.09,-979.096"/>
 </g>
 <!-- MATRIX_INTRO -->
 <g id="node61" class="node"><title>MATRIX_INTRO</title>
 <a xlink:href="MATRIX_INTRO.html" xlink:title="Introduction to matrices" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1303.58,-684 1143.58,-684 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1143.58,-684C1137.58,-684 1131.58,-678 1131.58,-672"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1131.58,-672 1131.58,-660 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1131.58,-660C1131.58,-654 1137.58,-648 1143.58,-648"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1143.58,-648 1303.58,-648 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1303.58,-648C1309.58,-648 1315.58,-654 1315.58,-660"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1315.58,-660 1315.58,-672 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1315.58,-672C1315.58,-678 1309.58,-684 1303.58,-684"/>
+<polyline fill="none" stroke="black" points="1303.58,-684 1143.58,-684 "/>
+<path fill="none" stroke="black" d="M1143.58,-684C1137.58,-684 1131.58,-678 1131.58,-672"/>
+<polyline fill="none" stroke="black" points="1131.58,-672 1131.58,-660 "/>
+<path fill="none" stroke="black" d="M1131.58,-660C1131.58,-654 1137.58,-648 1143.58,-648"/>
+<polyline fill="none" stroke="black" points="1143.58,-648 1303.58,-648 "/>
+<path fill="none" stroke="black" d="M1303.58,-648C1309.58,-648 1315.58,-654 1315.58,-660"/>
+<polyline fill="none" stroke="black" points="1315.58,-660 1315.58,-672 "/>
+<path fill="none" stroke="black" d="M1315.58,-672C1315.58,-678 1309.58,-684 1303.58,-684"/>
 <text text-anchor="start" x="1140.08" y="-663.233" font-family="Times Roman,serif" font-size="14.00">Introduction to matrices</text>
 </a>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
 <g id="edge192" class="edge"><title>MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1131.42,-649.325C1128.44,-648.866 1125.49,-648.423 1122.58,-648 981.387,-627.473 944.104,-636.695 803.58,-612 698.188,-593.479 578.229,-563.005 502.969,-542.721"/>
-<polygon fill="blue" stroke="blue" points="503.675,-539.286 493.108,-540.053 501.847,-546.043 503.675,-539.286"/>
+<path fill="none" stroke="black" d="M1131.42,-649.325C1128.44,-648.866 1125.49,-648.423 1122.58,-648 981.387,-627.473 944.104,-636.695 803.58,-612 698.188,-593.479 578.229,-563.005 502.969,-542.721"/>
+<polygon fill="black" stroke="black" points="503.675,-539.286 493.108,-540.053 501.847,-546.043 503.675,-539.286"/>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;MATRIX_INVERSE -->
 <g id="edge194" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_INVERSE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1131.48,-649.582C1062.35,-637.074 973.648,-620.587 937.58,-612 851.946,-591.612 754.701,-562.612 691.869,-543.091"/>
-<polygon fill="blue" stroke="blue" points="692.675,-539.676 682.087,-540.042 690.592,-546.359 692.675,-539.676"/>
+<path fill="none" stroke="black" d="M1131.48,-649.582C1062.35,-637.074 973.648,-620.587 937.58,-612 851.946,-591.612 754.701,-562.612 691.869,-543.091"/>
+<polygon fill="black" stroke="black" points="692.675,-539.676 682.087,-540.042 690.592,-546.359 692.675,-539.676"/>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION -->
 <g id="edge196" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1173.87,-647.924C1146.8,-638.081 1113.14,-625.839 1084.73,-615.507"/>
-<polygon fill="blue" stroke="blue" points="1085.9,-612.211 1075.31,-612.083 1083.51,-618.79 1085.9,-612.211"/>
+<path fill="none" stroke="black" d="M1173.87,-647.924C1146.8,-638.081 1113.14,-625.839 1084.73,-615.507"/>
+<polygon fill="black" stroke="black" points="1085.9,-612.211 1075.31,-612.083 1083.51,-618.79 1085.9,-612.211"/>
 </g>
 <!-- INCLUSION_EXCLUSION&#45;&gt;SET_PARTITIONS -->
 <g id="edge198" class="edge"><title>INCLUSION_EXCLUSION&#45;&gt;SET_PARTITIONS</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1609.74,-936.433C1681.59,-924.43 1775.84,-908.685 1844.49,-897.217"/>
-<polygon fill="blue" stroke="blue" points="1845.14,-900.657 1854.42,-895.557 1843.98,-893.753 1845.14,-900.657"/>
+<path fill="none" stroke="black" d="M1609.74,-936.433C1681.59,-924.43 1775.84,-908.685 1844.49,-897.217"/>
+<polygon fill="black" stroke="black" points="1845.14,-900.657 1854.42,-895.557 1843.98,-893.753 1845.14,-900.657"/>
 </g>
 <!-- POISSON_PROCESS&#45;&gt;INHOMOGENEOUS_POISSON_PROCESS -->
 <g id="edge200" class="edge"><title>POISSON_PROCESS&#45;&gt;INHOMOGENEOUS_POISSON_PROCESS</title>
@@ -1464,32 +1464,32 @@
 </g>
 <!-- STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE -->
 <g id="edge214" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M525.534,-287.831C536.25,-278.963 549.299,-268.164 560.889,-258.572"/>
-<polygon fill="blue" stroke="blue" points="563.161,-261.235 568.633,-252.163 558.698,-255.842 563.161,-261.235"/>
+<path fill="none" stroke="black" d="M525.534,-287.831C536.25,-278.963 549.299,-268.164 560.889,-258.572"/>
+<polygon fill="black" stroke="black" points="563.161,-261.235 568.633,-252.163 558.698,-255.842 563.161,-261.235"/>
 </g>
 <!-- SUMMATIONS -->
 <g id="node67" class="node"><title>SUMMATIONS</title>
 <a xlink:href="SUMMATIONS.html" xlink:title="Summation and product notation" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="3" points="1922.58,-828 1700.58,-828 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1700.58,-828C1694.58,-828 1688.58,-822 1688.58,-816"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1688.58,-816 1688.58,-804 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1688.58,-804C1688.58,-798 1694.58,-792 1700.58,-792"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1700.58,-792 1922.58,-792 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1922.58,-792C1928.58,-792 1934.58,-798 1934.58,-804"/>
-<polyline fill="none" stroke="blue" stroke-width="3" points="1934.58,-804 1934.58,-816 "/>
-<path fill="none" stroke="blue" stroke-width="3" d="M1934.58,-816C1934.58,-822 1928.58,-828 1922.58,-828"/>
+<polyline fill="none" stroke="black" points="1922.58,-828 1700.58,-828 "/>
+<path fill="none" stroke="black" d="M1700.58,-828C1694.58,-828 1688.58,-822 1688.58,-816"/>
+<polyline fill="none" stroke="black" points="1688.58,-816 1688.58,-804 "/>
+<path fill="none" stroke="black" d="M1688.58,-804C1688.58,-798 1694.58,-792 1700.58,-792"/>
+<polyline fill="none" stroke="black" points="1700.58,-792 1922.58,-792 "/>
+<path fill="none" stroke="black" d="M1922.58,-792C1928.58,-792 1934.58,-798 1934.58,-804"/>
+<polyline fill="none" stroke="black" points="1934.58,-804 1934.58,-816 "/>
+<path fill="none" stroke="black" d="M1934.58,-816C1934.58,-822 1928.58,-828 1922.58,-828"/>
 <text text-anchor="start" x="1697.08" y="-807.233" font-family="Times Roman,serif" font-size="14.00">Summation and product notation</text>
 </a>
 </g>
 <!-- SUMMATIONS&#45;&gt;GEOMETRIC_SERIES -->
 <g id="edge216" class="edge"><title>SUMMATIONS&#45;&gt;GEOMETRIC_SERIES</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1822.61,-791.955C1845.85,-753.917 1899.98,-665.343 1927.26,-620.713"/>
-<polygon fill="blue" stroke="blue" points="1930.26,-622.503 1932.49,-612.145 1924.29,-618.853 1930.26,-622.503"/>
+<path fill="none" stroke="black" d="M1822.61,-791.955C1845.85,-753.917 1899.98,-665.343 1927.26,-620.713"/>
+<polygon fill="black" stroke="black" points="1930.26,-622.503 1932.49,-612.145 1924.29,-618.853 1930.26,-622.503"/>
 </g>
 <!-- SUMMATIONS&#45;&gt;EXPECTATION -->
 <g id="edge218" class="edge"><title>SUMMATIONS&#45;&gt;EXPECTATION</title>
-<path fill="none" stroke="blue" stroke-width="3" d="M1934.79,-796.118C2070.62,-780.813 2283.72,-756.801 2388.37,-745.009"/>
-<polygon fill="blue" stroke="blue" points="2388.91,-748.471 2398.46,-743.873 2388.13,-741.515 2388.91,-748.471"/>
+<path fill="none" stroke="black" d="M1934.79,-796.118C2070.62,-780.813 2283.72,-756.801 2388.37,-745.009"/>
+<polygon fill="black" stroke="black" points="2388.91,-748.471 2398.46,-743.873 2388.13,-741.515 2388.91,-748.471"/>
 </g>
 <!-- SUMMATIONS&#45;&gt;INFORMATION_THEORY -->
 <g id="edge220" class="edge"><title>SUMMATIONS&#45;&gt;INFORMATION_THEORY</title>

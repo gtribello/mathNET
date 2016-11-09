@@ -22,31 +22,6 @@ class module(object):
          sys.error("Cannot get name as module was not read")
       return self.name
 
-   def addConnectionsToMatrixGraph(self,nodelist,graph):
-      self.mygraph = np.zeros( (len(nodelist), len(nodelist) ) )
-      if( self.wasread==0 ):
-         sys.error("Cannot get name as module was not read")
-# Now open the file ane read in the lines
-      mfile = open( "Modules/" + self.name, 'r' )
-      mtlist = mfile.readlines()
-      mfile.close()
-# This does the generation of the graph
-      ingraph = 0
-      clista = []
-      for item in mtlist :               # range(1,len(mtlist)):
-         if ingraph==1 :
-            clistb = item.split()
-            if (len(clista)>0) & (len(clistb)>0) :
-               assert( (len(clista)==1) & (len(clistb)==1) )
-               assert( (clista[0] in nodelist) & (clistb[0] in nodelist) )
-               graph[ nodelist.index(clista[0]), nodelist.index(clistb[0]) ] += 1
-               self.mygraph[ nodelist.index(clista[0]), nodelist.index(clistb[0]) ]=1
-            clista=clistb
-         elif "GRAPH:" in item  :
-            ingraph=1
-            
-      return graph
-
    def printModulePage(self):
       f = open( 'Templates/module_template.html', 'r' )
       outfilecontents = f.read()
@@ -80,9 +55,9 @@ class module(object):
              inweeks += 1 
           elif indesc==1 :
              desc += item
-          elif "GRAPH:" in item  :
+          elif "END:" in item  :
              if inweeks!=(nweeks+1) :
-                sys.error("found GRAPH: before WEEKS FINISHED")
+                sys.error("found END: before WEEKS FINISHED")
              ingraph, inweeks = 1, 0
           elif (inlearn==1) & (item[0]=="-") :
              learning += '<li type="square">' + item[1:] + '</li> \n'
@@ -152,10 +127,3 @@ class listofmodules(object):
        for module in self.modules :
            modulemenu += '<li><span><a href="' + module.getname() +'.html">' + module.getname() + '</a></span></li>\n'
        return modulemenu
-
-   def createMatrixGraph(self,nodelist):
-       graph = np.zeros( (len(nodelist), len(nodelist) ) )
-       for module in self.modules :
-           graph = module.addConnectionsToMatrixGraph( nodelist, graph )
-       return graph
-           

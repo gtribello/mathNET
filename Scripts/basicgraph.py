@@ -16,12 +16,19 @@ class basicgraph:
       self.labels=labels
       self.set_nodes = 1
 
-   def setConnections(self,connections):
+   def setConnections(self):
       if self.set_nodes == 0 :
          sys.error("nodes should be set before connections are set")
-      if connections.shape[0]!=len(self.nodes) | connections.shape[1]!=len(self.nodes) :
-         sys.error("mismatch for shape of connections array")  
-      self.graph = connections 
+# This reads in the graph
+      self.graph = np.zeros( (len(self.nodes), len(self.nodes) ) )
+      gfile = open( "Templates/GRAPH", 'r' )
+      glist = gfile.readlines()
+      gfile.close()
+# This does the generation of the graph
+      for item in glist :
+           gpair = item.split()
+           assert( len(gpair)==2 )
+           self.graph[ self.nodes.index(gpair[0]), self.nodes.index(gpair[1]) ] += 1
       self.set_conn = 1
 
    def printNodeGraph(self,node):

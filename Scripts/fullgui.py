@@ -131,9 +131,7 @@ class mainWindow(QWidget):
        # Now read in the modules
        mymodules = module.listofmodules()
        # Create the connections for the graph
-       graph = mymodules.createMatrixGraph(mytopics.topiclist)
-       # Pass these connections to the graph
-       mygraph.setConnections( graph )
+       mygraph.setConnections()
        # Now create all topic pages if not already there
        for topic in mytopics.topiclist :
            if not os.path.isfile('html/' + topic + '.html') :

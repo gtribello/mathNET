@@ -1,6 +1,7 @@
 import os
 import shutil
 import topic
+import subprocess
 import generate_html_exercise
 import generate_video_page
 
@@ -39,6 +40,29 @@ class resource(object) :
                 table += '<td></td><td><i class="fa fa-book fa-3x"></i></td><td>'
 
             table += '<a href="resources/' + self.linkb + '">' + self.description + '</a></td>'
+       elif( self.rtype=="LATEX" ):
+            if not os.path.isfile("html/resources" + self.linkb.replace(".tex",".pdf") ):
+               cmd = ['pdflatex', '-interaction', 'nonstopmode', "Resources/" + self.linkb]
+               proc = subprocess.Popen(cmd)
+               proc.communicate()
+               proc = subprocess.Popen(cmd)
+               proc.communicate()
+               shutil.copy( self.linkb.replace(".tex",".pdf"), "html/resources/" + self.linkb.replace(".tex",".pdf") )                
+               if not proc.returncode == 0 :
+                  os.unlink( self.linkb )
+                  raise ValueError("Error compling latex document entitled " + self.linkb)
+               # Delete files we don't need after latex has run  
+               for filen in os.listdir("."):
+                   if filen.startswith( self.linkb.replace(".tex","") ):
+                      os.remove(filen)
+
+            if( self.loc=="EXERCISE"):
+                table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>'
+            else:
+                assert( self.loc=="INTRO" )
+                table += '<td></td><td><i class="fa fa-book fa-3x"></i></td><td>'
+
+            table += '<a href="resources/' + self.linkb.replace(".tex",".pdf") + '">' + self.description + '</a></td>'
        elif( self.rtype=="IPYTHON"):
             assert( self.loc=="EXERCISE" )
             if not os.path.isfile("html/resources/" + self.linkb):

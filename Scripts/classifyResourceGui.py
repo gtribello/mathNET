@@ -115,6 +115,8 @@ class AddResourceDialogue(QDialog):
           ftype = "IPYTHON" 
        elif ext=="pdf" :
           ftype = "PDF"
+       elif ext=="tex" :
+          ftype = "LATEX"
        elif ext=="ghtml" :
           myfile=myfile.replace(".ghtml","")
        else :

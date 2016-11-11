@@ -1,0 +1,162 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+\usepackage{makecell,pict2e}
+\usepackage{comment}
+\usepackage{color}
+
+\renewcommand\theadfont{\large}
+\newcommand{\gt}[1]{{\color{blue}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\renewcommand\theadfont{\large}
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\scshape}
+
+\includecomment{answers}
+% \excludecomment{answers}
+
+\usepackage[margin=2cm]{geometry}
+\setlength{\topmargin}{-2.cm}
+\setlength{\headheight}{1cm}
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\vek}[1]{\mbox{\boldmath $  #1$}}
+\newcommand{\ex}[1]{\ensuremath {\mathbb{E}} \left[ #1 \right]}
+\newcommand{\var}[1]{\ensuremath{{\rm var}\left[ #1 \right]}}
+
+\title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
+Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
+\huge Gamblers ruin II: Expected length of game \\
+\horrule{2pt} \\[0.25cm]
+}
+\author{ \normalfont
+\normalsize
+        Gareth Tribello \\[-3pt] \normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+The essence of many gambling games is as follows: you place a stake of $x$ pounds on something or other.  This might be the spin of a wheel, a horse winning a race or some other event in the future.  
+Regardless this event occurs with a probablilty of $p$.  Furthermore, if the event transpires you win back double your stake - $2x$ pounds - you will thus have $a + x$ pounds in total, where $a$ was 
+your initial holding.  If the event does not transpire you loose your stake and are thus left with $a - x$ pounds.  
+
+The ideas in this first paragraph have been covered in the videos on the gamblers video and in the programming exercise.  We have shown how we can describe the above process using a Markov chain, 
+what the transition graph is for this chain and what the associated one-step transition probability matrix is for this discrete Markov chain.  We have also shown that we can solve a homogeneous 
+difference equation to determine the probability of ruin given that you start with exactly $k$ pounds and that we get the following result when we do so:
+$$
+\pi_k = \frac{ \left( \frac{q}{p} \right)^k - \left( \frac{q}{p} \right)^n }{ 1 - \left( \frac{q}{p} \right)^n }
+$$
+{\bf Before attempting this exercise make sure you are familiar with these ideas and that you can thus do the following items:}
+
+\begin{enumerate}
+ \item You must be able to explain why the gamblers ruin problem can be descibed using a Markov chain.
+ \item You must be able to write out the transition graph for the gamblers ruin problem.
+ \item You must be able to write out the one step transition probability matrix for the gamblers ruin problem.
+ \item You must be able to use the conditional expectation theorem to derive the inhomogeneous homogeneous difference equation $d_k = (1+d_{k+1})p + (1 + d_{k-1})q$, where $d_k$ is the 
+expected length of the game given that you start with $k$ pounds and where $p$ and $q$ are the probabiltiy of winning when you place each stake.
+\item You should be able to solve the homogeneous difference equation $\pi_k = \pi_{k+1} p + \pi_{k-1} q$ to show that $\pi_k = \frac{ \left( \frac{q}{p} \right)^k - \left( \frac{q}{p} 
+\right)^n }{ 1 - \left( \frac{q}{p} \right)^n }$
+\end{enumerate}
+
+{\bf If you cannot do all of the above things watch the video on gamblers ruin again and look again at exercise I.  If you are unable to do the above you will not understand the remainder of this 
+exercise.}
+
+\section*{Solution guidelines}
+
+\begin{enumerate}
+ \item We now want to determine how many bets you would make on average.  We could do this by partitioning the matrix we obtained in question 3 into $\mathbf{Q}$ and $\mathbf{R}$ 
+parts and then substituting these into the formula $\mathbf{H} = (\mathbf{I} - \mathbf{Q})^{-1} \mathbf{1}$ that we learnt previously but we adopt a different strategy in this case.   When 
+we use this strategy we state that $d_k$ is the expected number of bets we would expect to make if we started with $k$ pounds.  We then use the conditional expectation theorem to calculate the 
+expected number of gambles we will make by conditioning on the outcome of the first game:
+\[
+ d_k = (1+d_{k+1})p + (1 + d_{k-1})q
+\]
+The equation above is an inhomogeneous difference equation, which we can write as follows:
+\begin{equation}
+ d_k - pd_{k+1} - qd_{k-1} = 1
+ \label{eqn:inhomo}
+\end{equation}
+The general solution to an inhomogeneous difference equation is a linear combination of the solution we would obtain for the corresponding homogenous difference equation and a particular 
+solution.  In other words, the solution will be:
+\[
+d_k =  A \theta_1^k + B \theta_2^k + d^{(\textrm{part})}_k % A + B \left( \frac{1-p}{p}\right)^k + bk
+\]
+In this case:
+$$
+d_k' = A \theta_1^k + B \theta_2^k
+$$
+Is the solution to the corresponding homogeneous difference equation:
+\begin{equation}
+d_k' - pd_{k+1}' - qd_{k-1}' = 0
+\label{eqn:homo}
+\end{equation}
+Notice that this equation has a zero on the left hand side as opposed to the one in equation \ref{eqn:inhomo}.  Further note that we already know the solution to this equation.  When we solved for 
+the probability of ruin we found (by inserting the trial solution $d_k' = \theta^k$ into equation \ref{eqn:homo} and factorising) that:
+$$
+d_k' = A + B \left( \frac{q}{p} \right)^k
+$$
+The solution for the inhomogeneous equation (equation \ref{eqn:inhomo}) that we wish to solve must therefore be:
+$$
+d_k = 1 + \left( \frac{q}{p} \right)^k + d^{(\textrm{part})}_k
+$$
+Further note that if we substitute the $d_k'$ part of the above equation into equation \ref{eqn:inhomo} we get zero precisely because $d_k'$ is the solution of equation \ref{eqn:homo}.  We can thus 
+confidently assert that:
+$$
+d^{(\textrm{part})}_k - p d^{(\textrm{part})}_{k+1} - q d^{(\textrm{part})}_{k-1} = 1
+$$
+We now proceed via a similar (in fact easier) route to the method we used to solve the homogeneous difference equation.  We insert a trial solution with some unknown parameters in to the above 
+equation and rearrange the resulting equation to find a value for the parameter.  In this case the trial solution we are going to use is $d^{(\textrm{part})}_k = bk$.  {\bf Substitute this into the 
+above equation now and rearrange to find a suitable value for the parameter $b$.}  As you do this note that $d^{(\textrm{part})}_{k+1} = b(k+1)$.  {\bf Use what you find and the information above to 
+show that:}
+
+\begin{equation}
+d_k = A + B \left( \frac{q}{p} \right)^k + \frac{k}{q-p}
+\label{eqn:soln}
+\end{equation}
+
+\item Think about the transition graph and what the quantity $d_k$ represents.  Given the meaning of this quantity what are the values of $d_0$ and $d_n$.  Notice that $n$ is the amount of 
+money the gambler wishes to win.  Insert the values of $d_0$ and $d_n$ into equation \ref{eqn:soln} and, by solving the resulting set of simultaneous equations, find the 
+values of A and B. Hence, show that:
+$$
+d_k = \frac{k}{q-p} - \frac{s_k}{q-p}
+$$
+where
+$$
+s_k = \frac{ 1 - \left(\frac{q}{p} \right)^k}{ 1 - \left( \frac{q}{p} \right)^n }
+$$
+
+
+\end{enumerate}
+
+
+\end{document}

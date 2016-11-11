@@ -1,0 +1,142 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+\usepackage{makecell,pict2e}
+\usepackage{comment}
+\usepackage{color}
+
+\renewcommand\theadfont{\large}
+\newcommand{\gt}[1]{{\color{blue}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\renewcommand\theadfont{\large}
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\scshape}
+
+\includecomment{answers}
+% \excludecomment{answers}
+
+\usepackage[margin=2cm]{geometry}
+\setlength{\topmargin}{-2.cm}
+\setlength{\headheight}{1cm}
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\vek}[1]{\mbox{\boldmath $  #1$}}
+\newcommand{\ex}[1]{\ensuremath {\mathbb{E}} \left[ #1 \right]}
+\newcommand{\var}[1]{\ensuremath{{\rm var}\left[ #1 \right]}}
+
+\title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
+Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
+\huge Gamblers ruin I: Probability of ruin \\
+\horrule{2pt} \\[0.25cm]
+}
+\author{ \normalfont
+\normalsize
+        Gareth Tribello \\[-3pt] \normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+The essence of many gambling games is as follows: you place a stake of $x$ pounds on something or other.  This might be the spin of a wheel, a horse winning a race or some other event in the future.  
+Regardless this event occurs with a probablilty of $p$.  If the event transpires you win back double your stake - $2x$ pounds - you will thus have $a + x$ pounds in total, where $a$ was your initial 
+holding.  If it does not transpire you loose your stake and are thus left with $a - x$ pounds.  
+
+The ideas in this first paragraph have been covered in the videos on the gamblers video and in the programming exercise.  We have shown how we can describe the above process using a Markov chain, 
+what the transition graph is for this chain and what the associated one-step transition probability matrix is for this discrete Markov chain.  {\bf Before attempting this exercise make sure you are 
+familiar with these ideas and that you can thus do the following items:}
+
+\begin{enumerate}
+ \item You must be able to explain why the gamblers ruin problem can be descibed using a Markov chain.
+ \item You must be able to write out the transition graph for the gamblers ruin problem.
+ \item You must be able to write out the one step transition probability matrix for the gamblers ruin problem.
+ \item You must be able to use the partition theorem to derive the homogeneous difference equation $\pi_k = \pi_{k+1} p + \pi_{k-1} q$, where $\pi_k$ is the conditional probability of ruin given that 
+you start with $k$ pounds and where $p$ and $q$ are the probabiltiy of winning when you place each stake.
+\end{enumerate}
+
+{\bf If you cannot do all of the above things watch the video on gamblers ruin again.  If you are unable to do the above you will not understand the remainder of this exercise.}
+
+The purpose of this exercise is to find an exact expression for the conditional probability of ruin given that you start with exactly $k$ pounds, $\pi_k$.
+
+\section*{Solution guidelines}
+
+\begin{enumerate}
+\item We would like to determine the probablity of loosing all our money.  We could do this by partitioning the transition probability matrix for the gamblers ruin problem into $\mathbf{Q}$ and 
+$\mathbf{R}$ parts and then substituting these into the formula $\mathbf{H} = (\mathbf{I} - \mathbf{Q})^{-1} \mathbf{R}$ that we learnt previously.  However, for this particular problem we generally 
+adopt a different strategy.  We are instead going to the parition theorem and condition on the outcome of the first gamble.  Doing so allows us to write: 
+allows us to write:
+\[
+ \pi_k = \pi_{k+1}p + \pi_{k-1}q
+\]
+This equation is a homogenous difference equation, which we can rewrite as follows:
+\[
+\pi_k - \pi_{k+1}p - \pi_{k-1}q = 0
+\]
+To solve homogenous difference equations we introduce a trial solution $\pi_k = \theta^k$ and find values of $\theta$ that satisfy the above equality.  $\pi_k$ is then a linear combination of the 
+solutions we find - so for example if we find two solutions, $\theta_1$ and $\theta_2$, we could write $\pi_k$ as follows:
+\[
+ \phi_k = A \theta_1^k + B \theta_2^k
+\]
+{\bf Insert the trial solution $\pi_k = \theta^k$ into the homogenous difference equation above remebering that $\phi_{k+1}=\theta^{k+1}$.  Factorise the resulting equation and hence show that:
+
+\begin{equation}
+ \pi_k = A + B \left( \frac{q}{p}\right)^k
+\label{eqn:soln}
+\end{equation}
+
+where $A$ and $B$ are as yet unknown parameters.}
+
+\item Think about what the quantity $\pi_k$ represents.  This is the probability of ruin given that you start with exactly $k$ pounds to your name.  Given the meaning of this quantity, $\pi_k$, {\bf 
+what are the values of $\pi_0$ and $\pi_n$.}  Notice that here $n$ is the target amount of money the gambler wants to win.  
+
+\item If you insert the values of $\pi_0$ and $\pi_n$ into the left hand side of equation \ref{eqn:soln} and the corresponding values of $k$ into the right hand side you get two simulaltaneous 
+equation with two unknowns $A$ and $B$.  {\bf Solve this set of simultaneous equations and find values for $A$ and $B$.}  Hence, show that:
+\[
+ \pi_k = \frac{ \left( \frac{q}{p} \right)^k - \left( \frac{q}{p} \right)^n }{ 1 - \left( \frac{q}{p} \right)^n }
+\]
+
+\item Now use everything that you have derived above to show that the conditional probability, $s_k$, that the gambler wins the $n$ pounds he desires given that he starts with exactly $k$ pounds is 
+given by:
+$$
+s_k = \frac{ 1 - \left( \frac{q}{p} \right)^k }{ 1 - \left( \frac{q}{p} \right)^n }
+$$
+
+\item Suppose that $p=0.5$.  Why is it not possible to use the equations above to calculate $\pi_k$ and $s_k$ in this limit?  Use l'Hopital's rule to show that when $p=0.5$ $\pi_k$ and 
+$s_k$ are given by the expressions shown below:
+$$
+\pi_k = \frac{ n-k }{n } \qquad \qquad s_k = \frac{ k}{n} 
+$$
+
+\end{enumerate}
+
+
+
+\end{document}

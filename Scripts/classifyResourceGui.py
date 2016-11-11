@@ -119,6 +119,11 @@ class AddResourceDialogue(QDialog):
           ftype = "LATEX"
        elif ext=="ghtml" :
           myfile=myfile.replace(".ghtml","")
+          f = open( myfile, r )
+          m_page = f.read()
+          f.close()
+          if m_page.find("GEOGEBRA:") !=-1 :
+             ftype = "GEOGEBRA" 
        else :
           error.showMessage("Invalid extension on input resource file")
           error.exec_()

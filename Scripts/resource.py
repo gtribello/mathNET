@@ -80,6 +80,19 @@ class resource(object) :
                 table += '<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td>'
 
             table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'
+       elif( self.rtype=="GEOGEBRA"):
+            if( self.loc=="EXERCISE"):
+                if not os.path.isfile("html/" + self.linkb + ".html") :
+                   generate_video_page.convert_geogebra_to_html( self.linkb )
+                table += '<td></td><td><i class="fa fa-signal fa-3x"></i></td><td>'
+            else:
+                assert( self.loc=="INTRO" )
+                if not os.path.isfile("html/" + self.linkb + ".html") :
+                   generate_video_page.convert_geogebra_to_html( self.linkb )
+                table += '<td></td><td><i class="fa fa-signal fa-3x"></i></td><td>'
+
+            table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'
+
 
        if( printmodule==1 ):
             table += '<td><a href="' + self.module +'.html">' + self.module + "</a></td>"    

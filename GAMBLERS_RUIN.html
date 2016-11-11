@@ -105,11 +105,11 @@ find the hitting probabilities by solving a homogeneous difference equation.  Fu
 hitting times by solving an inhomogenous difference equation.   When these two probelms are solved we find that
 the conditional probability, $\pi_k$, of finishing in state $0$ given that we start in state $k$ is given by:
 $$
-\pi_k = \frac {\left( \frac{q}{p}\right)^k - \frac{q}{p}\right)^N }{ 1 - \frac{q}{p}\right)^N } 
+\pi_k = \frac {\left( \frac{q}{p}\right)^k - \left(\frac{q}{p}\right)^N }{ 1 - \left(\frac{q}{p}\right)^N } 
 $$
 The expected time to arrival in either state $0$ or state $N$ given that we start in state $k$ is by contrast:
 $$
-d_k = \frac{k}{q-p} - \frac{N\pi_k}{q-p}
+d_k = \frac{k}{q-p} - \frac{N(1-\pi_k)}{q-p}
 $$
 Notice that these equations are NOT valid in the limit when $q=p$ and that l'Hopital's rule must be used to find
 the probabilities in this limit. 

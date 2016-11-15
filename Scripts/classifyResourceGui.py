@@ -20,7 +20,8 @@ class AddResourceDialogue(QDialog):
        self.modbox = QComboBox(self)
        self.modbox.addItem("unset")
        for item in os.listdir("Modules") :
-           self.modbox.addItem(item)
+           if not item.startswith('.') :
+              self.modbox.addItem(item)
        self.modbox.setCurrentIndex(0)
        grid.addWidget( self.modbox, 1, 3 )  
        # Add resource entry

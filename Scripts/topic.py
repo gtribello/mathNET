@@ -130,10 +130,12 @@ class topiclist(object) :
      self.labellist = []
      self.topiclist = os.listdir('Topics')
      for this in self.topiclist :
-         newtopic = topic( this )
-         newtopic.readName()
-         self.labellist.append( newtopic.label )
-         self.tlist.append( newtopic )
+         # Make sure swap files are ignored 
+         if not this.startswith('.') : 
+            newtopic = topic( this )
+            newtopic.readName()
+            self.labellist.append( newtopic.label )
+            self.tlist.append( newtopic )
 
   def get( self, name ) :
      ind=self.topiclist.index(name)

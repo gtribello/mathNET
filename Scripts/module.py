@@ -114,9 +114,10 @@ class listofmodules(object):
        self.modules = []
        self.mnames = os.listdir("Modules")
        for mod in self.mnames :
-           newmod = module(self)
-           newmod.readin( mod )
-           self.modules.append( newmod )
+           if not mod.startswith('.') :
+              newmod = module(self)
+              newmod.readin( mod )
+              self.modules.append( newmod )
 
    def get(self,name):
        ind=self.mnames.index(name)

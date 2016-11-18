@@ -111,12 +111,12 @@ class module(object):
 class listofmodules(object):
 
    def __init__(self):
-       self.modules = []
-       self.mnames = os.listdir("Modules")
-       for mod in self.mnames :
+       self.modules, self.mnames = [], []
+       for mod in os.listdir("Modules") :
            if not mod.startswith('.') :
               newmod = module(self)
               newmod.readin( mod )
+              self.mnames.append( mod )
               self.modules.append( newmod )
 
    def get(self,name):

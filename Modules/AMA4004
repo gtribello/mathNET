@@ -1,0 +1,46 @@
+TITLE: Statistical Mechanics
+
+DESCRIPTION:
+
+Statistical mechanics is a formalism that aims to explain the physical properties of matter at the
+macroscopic level by considering the dynamical behaviour of matter's microscopic constituents - atoms and molecules.
+The scope of the formalism is almost unlimited as it is applicable to matter in any state of aggregation,
+ranging from gases, liquids and solids to matter in equilibrium with radiation and biological specimens.
+The aim of this course is to introduce the basic principles and methods of statistical mechanics and to
+apply them to a number of model systems in order to illustrate their use and potential in a systematic manner.
+
+We start by introducing the fundamentals of thermodynamics and then proceed to develop the concepts
+and techniques needed to evaluate probability distributions and partition functions. This later quantity
+establishes the link between the microscopic description of a system, based on quantum states or positions in phase space,
+and the macroscopic characterisation provided by a small set of independent thermodynamic variables.  We discuss a number 
+systems where the partition function can be calculated exactly and then show how we can use this function to rationalise 
+the behavior of the constituent particles in these system at the microscopic and macroscopic scales.  Ultimately, however,
+the exact solution for the partition function cannot be found for the majority of real systems of interest.  In the last
+part of the course we therefore discuss how approximate ensemble averages are found by exploiting approximations or numerical
+simulation techniques.
+
+LEARNINGOUTCOMES:
+
+- You should be able to state the laws of thermodynamics and explain what physical consequences these laws have on the behavior of matter by deriving the Maxwell relations and inequalities involving response functions. 
+
+- You should be able to explain how exact solutions for the partition function for a number of model Hamiltonians can be derived.  You should then be able to use these exact solutions to explain how the the component particles in these systems behave when the thermodynamic variables are changed.
+
+- You should be able to explain how the mean field and cluster expansion approximations work and how these techniques can be used to calculate approximate partition functions for interacting systems.
+
+- You should be able to explain how ensemble averages for interacting systems can be calculated approximately by using Monte Carlo integration or molecular dynamics.  You should be able to explain the limitations of this approach and discuss how these limitations can be overcome by making use of bias potentials. 
+
+NWEEKS: 11
+
+WEEK1: NEWTONS_LAWS DEFINITION_OF_DERIVATIVE THERMODYNAMIC_VARIABLES GIBBS_PHASE_RULE EXACT_DIFFERENTIALS
+WEEK2: CARNOT_CYCLE LAWS_OF_THERMODYNAMICS THERMODYNAMIC_POTENTIALS MAXWELL_RELATIONS RESPONSE_FUNCTIONS 
+WEEK3: PRINCIPLE_OF_EQUAL_APRIORI_PROBABILITIES INFORMATION_THEORY LAGRANGE_MULTIPLIERS 
+WEEK4: GENERALIZED_PARTITION_FUNCTION CANONICAL_ENSEMBLE ISOTHERMAL_ISOBARIC_ENSEMBLE GRAND_CANONICAL_ENSEMBLE
+WEEK5: LATTICE_GAS ADSORPTION
+WEEK6: IDEAL_GAS PARTITION_FUNCTION_FOR_MOLECULES 
+WEEK7: ISING_MODEL 
+WEEK8: PHASE_TRANSITIONS
+WEEK9: MEAN_FIELD_MODELS CLUSTER_EXPANSION
+WEEK10: MONTE_CARLO 
+WEEK11: MOLECULAR_DYNAMICS
+
+END:

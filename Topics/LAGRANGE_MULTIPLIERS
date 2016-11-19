@@ -18,4 +18,4 @@ LEARNINGOUTCOMES:
 - You should be able to use Lagrange's method of undetermined multipliers to perform an optimization of a $N$-dimensional function subject to $M$ constraints
 
 END:
-LAGRANGE_MULTIPLIERS INTRO HTML PHY9038 lagrange-multipliers-video G.~Tribello A video explaining Lagrange's method of undetermined multipliers.
+LAGRANGE_MULTIPLIERS INTRO HTML PHY9038/AMA4004 lagrange-multipliers-video G.~Tribello A video explaining Lagrange's method of undetermined multipliers.

@@ -25,5 +25,5 @@ LEARNINGOUTCOMES:
 - You should be able to write an expression for the entropy of a uniform distribution
 
 END:
-INFORMATION_THEORY INTRO HTML PHY9038 info-theory-video1 G.~Tribello A video on the Khinchine axioms for information theory in which the information contained in a uniform distribution is derived.
-INFORMATION_THEORY INTRO HTML PHY9038 info-theory-video2 G.~Tribello A video in which the information contained in a non-uniform distribution is derived.
+INFORMATION_THEORY INTRO HTML PHY9038/AMA4004 info-theory-video1 G.~Tribello A video on the Khinchine axioms for information theory in which the information contained in a uniform distribution is derived.
+INFORMATION_THEORY INTRO HTML PHY9038/AMA4004 info-theory-video2 G.~Tribello A video in which the information contained in a non-uniform distribution is derived.

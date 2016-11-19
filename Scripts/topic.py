@@ -116,9 +116,13 @@ class topic(object) :
            res = resource.resource(line)
            if res.linkb not in reslist :
               reslist.append(res.linkb)
-              if (res.module==modname) & (res.loc=="INTRO") :
+              inmod=0
+              for mm in res.module :
+                  if mm==modname :
+                     inmod=1
+              if (inmod==1) & (res.loc=="INTRO") :
                  intro_table += res.getResourceHTML( 2 )
-              elif (res.module==modname) & (res.loc=="EXERCISE") :
+              elif (inmod==1) & (res.loc=="EXERCISE") :
                  ex_table += res.getResourceHTML( 2 )
         elif "END:" in line :
            foundend=1

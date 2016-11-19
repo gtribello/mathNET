@@ -12,7 +12,7 @@ class resource(object) :
        del dlist[5] 
        self.linkb=dlist[4]  # The actual web link you are using
        del dlist[4]
-       self.module=dlist[3] # What module should this come under
+       self.module=dlist[3].split("/")
        del dlist[3]
        self.rtype=dlist[2] # What kind of resource is this video etc
        del dlist[2] 
@@ -95,7 +95,12 @@ class resource(object) :
 
 
        if( printmodule==1 ):
-            table += '<td><a href="' + self.module +'.html">' + self.module + "</a></td>"    
+            table += '<td>'
+            for mod in self.module :
+                table += '<a href="' + mod +'.html">' + mod + "</a>"
+                if mod != self.module[-1] :
+                   table += ' / '
+            table += '</td>'
        elif( printmodule==2 ):
             mytopics = topic.topiclist()
             table += '<td><a href="' + self.topic +'.html">' + mytopics.get(self.topic).label + "</a></td>"

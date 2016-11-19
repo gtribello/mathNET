@@ -4,4 +4,12 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to describe the transitions that take place during the Carnot cycle and the work and heat that is transferred between the gas in the piston and its surroundings during these transitions.
+- You should be able to explain why the Carnot engine is the most efficient engine that can be constructed.
+- You should be able to explain how Kelvin's universal calibration for temperature is constructed using considerations based on the Carnot cycle.
+
 END:
+CARNOT_CYCLE INTRO HTML AMA4004 carnot-video-1 G.~Tribello An explanation of the various stages in the operation of a Carnot engine and an explanation as to why this is the most efficient engine that can be constructed. 
+CARNOT_CYCLE INTRO HTML AMA4004 temperature-video G.~Tribello An explanation of Kelvin's universal calibration for temperature.
+CARNOT_CYCLE INTRO HTML AMA4004 adiabatic-work-video G.~Tribello An explanation of how much work when the volume of a system changes adiabatically.
+CARNOT_CYCLE INTRO HTML AMA4004 carnot-entropy-video G.~Tribello The Claussius inequality and entropy explained by comparing the efficiency of real engines with that of the Carnot engine.

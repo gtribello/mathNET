@@ -4,4 +4,7 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to calculate the canonical paritition function for $N$ atoms adsorbed on a surface and the grand canonical parition function for this system.
+- You should thus be able to derive the Langmuir adsorption isotherm and explain the assumptions that are used when this model is used to analyse data on the adsorption of gasses on surfaces.
+
 END:

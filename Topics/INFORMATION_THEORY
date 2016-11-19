@@ -21,6 +21,8 @@ LEARNINGOUTCOMES:
 - You should be able to state the Khinchine axioms of information theory
 - You should be able to give an expression for the information contained in a uniform distribution.
 - You should be able to give an expression for the information contained in a non-uniform distribution.
+- You should be able to explain how entropy and information are related.
+- You should be able to write an expression for the entropy of a uniform distribution
 
 END:
 INFORMATION_THEORY INTRO HTML PHY9038 info-theory-video1 G.~Tribello A video on the Khinchine axioms for information theory in which the information contained in a uniform distribution is derived.

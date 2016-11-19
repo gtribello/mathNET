@@ -4,4 +4,9 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to explain the meaning of the word phase in thermodynamics.
+- You should be able to explain what happens to the intensive and extensive thermodynamic variables in a two phases system as it comes to equilibrium.
+- You should be able to state Gibbs phase rule and give an explanation how this result is derived.
+
 END:
+GIBBS_PHASE_RULE INTRO HTML AMA4004 gibbs-phase-rule-video G.~Tribello An introduction to Gibb's phase rule.

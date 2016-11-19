@@ -4,4 +4,13 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to give a description of the scope and applications of classical thermodynamics.
+- You should be able to explain what we mean when we refer to a system, its environment and the state of the system in thermodynamics.
+- You should be able to give a list of thermodynamic variables.
+- You should be able to explain the difference between intensive and extensive thermodynamic variables.
+- You should be able to write out and manipulate the equation of state for an ideal gas.
+- You should be able to explain the meanings of the following terms: isothermal, isobaric, isochoric, adiabatic, diabatic, isolated system, closed system and open system.
+
 END:
+THERMODYNAMIC_VARIABLES INTRO HTML AMA4004 thermodymaic-variables-video G.~Tribello An introduction to thermodynamic variables and the distinction between intenstive and extensive variables.
+THERMODYNAMIC_VARIABLES INTRO HTML AMA4004 work-and-heat-video G.~Tribello An introduction to the roles played by work and heat in classical thermodynamics

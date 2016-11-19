@@ -4,4 +4,8 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to enumerate all the configurations in phase space for a lattice gas and for the adsorption gas on a surface.
+- You should be able to calculate the canonical partition functions for a lattice gas.
+- You should be able to calculate ensemble averages for lattice gasses.
+
 END:

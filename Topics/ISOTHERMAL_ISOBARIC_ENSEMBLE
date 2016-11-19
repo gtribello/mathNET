@@ -4,4 +4,12 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to write an expression for the isothermal isobaric partition function.
+- You should be able to write an expression for the probability of being in a particular micostate if the system has constant number of atoms, constant pressure and constant temperature.
+- You should be able to explain the relation between the isothermal isobaric partition function and the Gibbs free energy.
+- You should be able to explain how ensemble averages are calculated in the isothermal isobaric ensemble
+- You should be able to explain how we can calculate the ensemble average of the volume by taking a derivative of the isothermal-isobaric partition function.
+- You should be able to explain how the compressibility can be calculated from fluctutations.
+
 END:
+ISOTHERMAL_ISOBARIC_ENSEMBLE INTRO HTML AMA4004 isothermal-isobaric-ensemble-video G.~Tribello An introduction to the isothermal isobaric ensemble and its partition function.

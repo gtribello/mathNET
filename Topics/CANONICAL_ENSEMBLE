@@ -32,9 +32,10 @@ $$
 LEARNINGOUTCOMES:
 
 - You should be able to write an expression for the canonical partition function.
-- You should be able to write an expression for the probability of being in a particular micostate if the system has constant number of atoms, constant voluem and constant temperature.
-- You should be able to explain how ensemble averages are calculated.
-- You should be able to explain how we can calculate the ensemble average of the energy by taking a derivative.
+- You should be able to write an expression for the probability of being in a particular micostate if the system has constant number of atoms, constant volume and constant temperature.
+- You should be able to explain how the Helmholtz free energy and the canonical paritition function are related.
+- You should be able to explain how ensemble averages are calculated in the canonical ensemble.
+- You should be able to explain how we can calculate the ensemble average of the energy by taking a derivative of the canonical partition function.
 - You should be able to explain how the heat capacity can be calculated from fluctutations.
 
 END:

@@ -4,4 +4,10 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to write down the mean field Hamiltonian for the 1D and 2D closed Ising models.
+- You should be able to derive expressions for the mean field canonical partition function for 1D and 2D Ising models.
+- You should be able to find average energies and average spins for 1D and 2D, mean-field Ising models by taking appropriate derivatives of the partition function.
+- You should be able to find the temperature at which the order disorder transition takes place for an Ising model simulated using mean field theory.
+- You should be able to perform derivations with more refined mean field theories in which the interaction between a subset of the spins are modelled explicitly.
+
 END:

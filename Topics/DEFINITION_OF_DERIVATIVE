@@ -9,7 +9,7 @@ $$
 
 LEARNINGOUTCOMES:
 
-- You should be able to write out the definition of the derivative.
+- You should be able to write out an expression that defines the derivative of a function as a limit.
 - You should be able to find the derivatives of functions by taking the above limit.  
 - You should be able to find the derivatives of $x^n$ and $e^{\lambda x}$ with respect to $x$.
 

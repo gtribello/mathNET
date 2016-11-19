@@ -1,0 +1,12 @@
+TITLE: Reservoirs and thermodynamic potentials
+
+VIDEO: https://www.youtube.com/embed/srbUDLGNKjw
+
+QUESTIONS:
+
+- What makes reservoirs a special kind of phase?
+- Give an expression for the infinitesimal $\textrm{d}H$, where $H$ is the enthalpy.
+- What are the values of the following partial derivatives: $\left( \frac{\partial H}{\partial P} \right)_S$ and $\left( \frac{\partial H}{\partial S} \right)_P$
+- Give an expression for the infinitesimal $\textrm{d}F$, where $F$ is the Helmholtz free energy.
+- What are the values of the following partial derivatives: $\left( \frac{\partial F}{\partial V} \right)_T$ and $\left( \frac{\partial F}{\partial T} \right)_V$ 
+

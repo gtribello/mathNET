@@ -4,4 +4,11 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to explain what distinguishes a first-order phase transition and a continuous phase transition by making reference to the first and higher derivatives of thermodynamic potentials.
+- You should be able to discuss how an infinite 1D-closed Ising model undergoes a phase transition at $T=0$ if there is no applied magnetic field.
+- You should be able to use the transfer matrix approach to calculate the average spin for a closed 1D-Ising model.
+- You should be able to use the transfer matrix approach to calculate the covariance of the spins in a closed 1D-Ising model.
+
+
 END:
+PHASE_TRANSITIONS INTRO HTML AMA4004 phase-transitions-video G.~Tribello An explanation of the difference between first order and continuous phase transitions.

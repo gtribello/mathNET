@@ -4,4 +4,12 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to explain how the spins interact in a closed 1D-Ising model.
+- You should be able to write out the Hamiltonian for a closed 1D-Ising model.
+- You should be able to write a python function to calculate the Hamiltonian for a 1D-Ising model.
+- You should be able to write a program to calculate the ensemble average of the energy and the free energy as a function of magnetisation for a 1D-Ising model by brute force.
+- You should be able to use the Perron Frobenius theorem to show that $\lim_{n\rightarrow \infty} \textrm{Tr}(\mathbf{A})^n = \lambda_1^n$ where $\mathbf{A}$ is any square matrix with all positive elements and $\lambda_1$ is its top eigenvalue.
+- You should be able to write out the summations that have to be evaluated in order to evaluate the partition function for closed and open 1D-Ising models.  You should then be able to use the transfer matrix approach to rewrite these canonical partition function summations as powers of a matrix.  By doing so you should thus be able to find an exact expression for canonical partition function for this model.
+- You should be able to use the Perron-Frobenius theorem to evaluate the partition function for the Ising models in the thermodynamic limit.
+
 END:

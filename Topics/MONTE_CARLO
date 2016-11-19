@@ -11,6 +11,7 @@ variables.
 
 LEARNINGOUTCOMES:
 
+- You should be able to explain what we mean by importance sampling.
 - You should be able to explain and implement the metropolis sampling algorithm.
 - You should be able to explain how ensemble averages can be computed using Monte Carlo simulations.
 - You should be able to explain how problems with ergodicity affect the accuracy of the ensemble averages calculated using Monte Carlo

@@ -4,4 +4,11 @@ DESCRIPTION:
 
 LEARNINGOUTCOMES:
 
+- You should be able to write an expression for the grand canonical partition function.
+- You should be able to write an expression for the probability of being in a particular micostate if the system has constant chemical potnetial, constant volume/pressure and constant temperature.
+- You should be able to explain how the grand potential and the grand canonical partition function are related.
+- You should be able to explain how ensemble averages are calculated in the grand canonical ensemble
+- You should be able to explain how we can calculate the ensemble average of the number of atoms by taking a derivative of the grand canonical partition function.
+- You should be able to explain why the second derivative of the partition function must be positive using considerations based on fluctuations.
+
 END:

@@ -29,7 +29,14 @@ class basicgraph:
            gpair = item.split()
            assert( len(gpair)==2 )
            self.graph[ self.nodes.index(gpair[0]), self.nodes.index(gpair[1]) ] += 1
+           # This will build the matrix we are going to diagonalize to do page rank algorithm
       self.set_conn = 1
+      r0 = np.sum( self.graph, axis=1 ) 
+# Store largest outward connectivity for key topics
+      self.tlist = []
+      for i in range(0,len(self.nodes)):
+          self.tlist.append( (r0[i], self.nodes[i]) )
+      self.tlist.sort(key=lambda x: x[0])
 
    def printNodeGraph(self,node):
       label = self.labels[self.nodes.index(node)]
@@ -118,5 +125,17 @@ class basicgraph:
     src.render("html/" + modulename)
     # Delete the dot file
     os.remove("html/" + modulename)
+
+   def getKeyTopicsFromList( self, ntopics, tlist ) :
+        keytopics = []
+        for i in range(1,ntopics+1):
+            found=0
+            for tt in reversed(self.tlist) :
+                for tout in tlist :
+                    if tout==tt[1] :
+                       found += 1 
+                if( found==i ) : break;
+            keytopics.append( tt[1] )
+        return keytopics  
 
 

@@ -1,6 +1,7 @@
 import numpy as np
 import shutil
 import topic
+import basicgraph
 import os
 
 class module(object):
@@ -71,6 +72,21 @@ class module(object):
                  if clista[0] not in utopics :
                     utopics.append(clista[0]) 
 
+      # Construct list of topics
+      fulltopics = []
+      for wlist in weeks :
+          for tt in wlist :
+              fulltopics.append( tt )
+      # Read in graph
+      mytopics = topic.topiclist()  
+      mygraph = basicgraph.basicgraph()
+      mygraph.setNodes(mytopics.topiclist, mytopics.labellist)
+      mygraph.setConnections()
+      keytopics, keytstring = mygraph.getKeyTopicsFromList( 5, fulltopics ), ""
+      for kt in keytopics :
+          keytstring += '<a href="' + kt + '.html">' + mytopics.get(kt).label + "</a>"
+          if kt!=keytopics[4] : keytstring += " | "  
+
       # Get relevant resources for each topic in module
       reslist, topictab = [], ""
       mytopics = topic.topiclist() 
@@ -87,6 +103,7 @@ class module(object):
       
       outfilecontents = outfilecontents.replace("INSERT FULL DESCRIPTION", desc )
       outfilecontents = outfilecontents.replace("INSERT LEARNING OUTCOMES", learning + "</ul>\n" )    
+      outfilecontents = outfilecontents.replace("INSERT KEY TOPICS", keytstring )
       outfilecontents = outfilecontents.replace("INSERT MODULE LABEL", self.name)
       outfilecontents = outfilecontents.replace("INSERT MODULE LIST", self.inlist.getModuleMenu() )
       outfilecontents = outfilecontents.replace("INSERT STUDY GUIDE", topictab )

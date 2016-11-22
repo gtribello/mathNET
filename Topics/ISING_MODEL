@@ -2,6 +2,20 @@ TITLE: The Ising Model
 
 DESCRIPTION:
 
+The Ising model is one of the simplest models of an interacting system.  In this model
+the particles or spins sit on a lattice of identical sites and each particle interacts
+with its nearest neighbors only.  An exact expression for the partition function of this
+system can be calculated if the spins are on a one or two dimensional lattice.  
+Calculating the exact parition function for the two dimensional Ising model would be
+well beyond the scope of most undergraduate physics/maths courses.
+
+<p>
+In one dimension the Ising model Hamiltonian is given by:
+$$
+H = - J \sum_{i=1}^N s_i s_{i+1} - H \sum_{i=1}^N s_i
+$$
+where in a closed geometry $s_{N+1}=s_1$ and where $J$ and $H$ are parameters.
+
 LEARNINGOUTCOMES:
 
 - You should be able to explain how the spins interact in a closed 1D-Ising model.

@@ -2,6 +2,13 @@ TITLE: Thermodynamic variables
 
 DESCRIPTION:
 
+The thermodynamic variables are the macroscopic quantitis that describe the state of the system.  Many of these quantities can be easily mesaured 
+or controlled in experiments.  There is an important distinction between <b> extensive </b> thermodynamic variables such as volume, which have 
+values that depend on the number of atoms/mols that are present in the system, and <b> intensive </b> thermodynamic variables such as pressure and
+temperature, which have values that do not depend on the number of atoms/mols in the system.  A system is said to be in equilibrium if the thermodynamic
+variables that characterize the state of that system do not change over macroscopic timescales.  When two phases are in equilibrium the intensive 
+thermodynamic variables that characterize state of the two phases must be equal. 
+
 LEARNINGOUTCOMES:
 
 - You should be able to give a description of the scope and applications of classical thermodynamics.

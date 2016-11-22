@@ -42,7 +42,7 @@
 <polygon fill="black" stroke="black" points="190.52,-176.676 180.086,-178.514 189.388,-183.584 190.52,-176.676"/>
 </g>
 <!-- PARTITION_FUNCTION_FOR_MOLECULES -->
-<g id="node6" class="node"><title>PARTITION_FUNCTION_FOR_MOLECULES</title>
+<g id="node8" class="node"><title>PARTITION_FUNCTION_FOR_MOLECULES</title>
 <a xlink:href="PARTITION_FUNCTION_FOR_MOLECULES.html" xlink:title="The partition function for molecular gasses" target="_top">
 <polyline fill="none" stroke="black" points="498,-180 210,-180 "/>
 <path fill="none" stroke="black" d="M210,-180C204,-180 198,-174 198,-168"/>
@@ -56,12 +56,12 @@
 </a>
 </g>
 <!-- CANONICAL_ENSEMBLE&#45;&gt;PARTITION_FUNCTION_FOR_MOLECULES -->
-<g id="edge6" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;PARTITION_FUNCTION_FOR_MOLECULES</title>
+<g id="edge8" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;PARTITION_FUNCTION_FOR_MOLECULES</title>
 <path fill="none" stroke="black" d="M506.037,-215.924C478.285,-206.081 443.767,-193.839 414.639,-183.507"/>
 <polygon fill="black" stroke="black" points="415.579,-180.127 404.984,-180.083 413.239,-186.725 415.579,-180.127"/>
 </g>
 <!-- LATTICE_GAS -->
-<g id="node8" class="node"><title>LATTICE_GAS</title>
+<g id="node10" class="node"><title>LATTICE_GAS</title>
 <a xlink:href="LATTICE_GAS.html" xlink:title="Statistical mechanics of independent&#45;distinguisable systems" target="_top">
 <polyline fill="none" stroke="black" points="435,-108 31,-108 "/>
 <path fill="none" stroke="black" d="M31,-108C25,-108 19,-102 19,-96"/>
@@ -75,12 +75,12 @@
 </a>
 </g>
 <!-- CANONICAL_ENSEMBLE&#45;&gt;LATTICE_GAS -->
-<g id="edge8" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;LATTICE_GAS</title>
+<g id="edge10" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;LATTICE_GAS</title>
 <path fill="none" stroke="black" d="M554.477,-215.75C550.61,-195.062 541.175,-161.893 519,-144 500.644,-129.188 457.639,-117.997 410.406,-109.757"/>
 <polygon fill="black" stroke="black" points="410.713,-106.26 400.27,-108.043 409.546,-113.162 410.713,-106.26"/>
 </g>
 <!-- IDEAL_GAS -->
-<g id="node11" class="node"><title>IDEAL_GAS</title>
+<g id="node13" class="node"><title>IDEAL_GAS</title>
 <a xlink:href="IDEAL_GAS.html" xlink:title="The ideal gas model" target="_top">
 <polyline fill="none" stroke="black" points="607,-108 477,-108 "/>
 <path fill="none" stroke="black" d="M477,-108C471,-108 465,-102 465,-96"/>
@@ -94,12 +94,12 @@
 </a>
 </g>
 <!-- CANONICAL_ENSEMBLE&#45;&gt;IDEAL_GAS -->
-<g id="edge12" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;IDEAL_GAS</title>
+<g id="edge14" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;IDEAL_GAS</title>
 <path fill="none" stroke="black" d="M556.666,-215.669C556.173,-197.44 554.962,-168.705 552,-144 550.995,-135.613 549.487,-126.564 547.946,-118.315"/>
 <polygon fill="black" stroke="black" points="551.363,-117.549 546.011,-108.405 544.493,-118.891 551.363,-117.549"/>
 </g>
 <!-- ISING_MODEL -->
-<g id="node13" class="node"><title>ISING_MODEL</title>
+<g id="node15" class="node"><title>ISING_MODEL</title>
 <a xlink:href="ISING_MODEL.html" xlink:title="The Ising Model" target="_top">
 <polyline fill="none" stroke="black" points="491,-36 389,-36 "/>
 <path fill="none" stroke="black" d="M389,-36C383,-36 377,-30 377,-24"/>
@@ -113,12 +113,12 @@
 </a>
 </g>
 <!-- CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL -->
-<g id="edge14" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL</title>
+<g id="edge16" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL</title>
 <path fill="none" stroke="black" d="M576.719,-215.543C608.161,-183.865 662.733,-118.113 628,-72 613.82,-53.1732 559.74,-38.8863 513.201,-29.7514"/>
 <polygon fill="black" stroke="black" points="513.576,-26.2599 503.098,-27.8241 512.265,-33.1359 513.576,-26.2599"/>
 </g>
 <!-- ADSORPTION -->
-<g id="node16" class="node"><title>ADSORPTION</title>
+<g id="node18" class="node"><title>ADSORPTION</title>
 <a xlink:href="ADSORPTION.html" xlink:title="Statistical mechanics of adsorption" target="_top">
 <polyline fill="none" stroke="black" points="919,-180 687,-180 "/>
 <path fill="none" stroke="black" d="M687,-180C681,-180 675,-174 675,-168"/>
@@ -132,29 +132,48 @@
 </a>
 </g>
 <!-- CANONICAL_ENSEMBLE&#45;&gt;ADSORPTION -->
-<g id="edge18" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;ADSORPTION</title>
+<g id="edge20" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;ADSORPTION</title>
 <path fill="none" stroke="black" d="M618.759,-215.924C652.973,-205.91 695.676,-193.412 731.352,-182.97"/>
 <polygon fill="black" stroke="black" points="732.602,-186.251 741.216,-180.083 730.635,-179.533 732.602,-186.251"/>
 </g>
 <!-- MONTE_CARLO&#45;&gt;LATTICE_GAS -->
+<!-- RESPONSE_FUNCTIONS -->
+<g id="node4" class="node"><title>RESPONSE_FUNCTIONS</title>
+<a xlink:href="RESPONSE_FUNCTIONS.html" xlink:title="Response functions" target="_top">
+<polyline fill="none" stroke="black" points="511,-324 385,-324 "/>
+<path fill="none" stroke="black" d="M385,-324C379,-324 373,-318 373,-312"/>
+<polyline fill="none" stroke="black" points="373,-312 373,-300 "/>
+<path fill="none" stroke="black" d="M373,-300C373,-294 379,-288 385,-288"/>
+<polyline fill="none" stroke="black" points="385,-288 511,-288 "/>
+<path fill="none" stroke="black" d="M511,-288C517,-288 523,-294 523,-300"/>
+<polyline fill="none" stroke="black" points="523,-300 523,-312 "/>
+<path fill="none" stroke="black" d="M523,-312C523,-318 517,-324 511,-324"/>
+<text text-anchor="start" x="381.5" y="-303.233" font-family="Times Roman,serif" font-size="14.00">Response functions</text>
+</a>
+</g>
+<!-- RESPONSE_FUNCTIONS&#45;&gt;CANONICAL_ENSEMBLE -->
+<g id="edge4" class="edge"><title>RESPONSE_FUNCTIONS&#45;&gt;CANONICAL_ENSEMBLE</title>
+<path fill="none" stroke="black" d="M475.505,-287.831C489.318,-278.707 506.226,-267.539 521.053,-257.745"/>
+<polygon fill="black" stroke="black" points="523.089,-260.595 529.503,-252.163 519.23,-254.754 523.089,-260.595"/>
+</g>
 <!-- GENERALIZED_PARTITION_FUNCTION -->
-<g id="node4" class="node"><title>GENERALIZED_PARTITION_FUNCTION</title>
+<g id="node6" class="node"><title>GENERALIZED_PARTITION_FUNCTION</title>
 <a xlink:href="GENERALIZED_PARTITION_FUNCTION.html" xlink:title="The generalized partition function" target="_top">
-<polyline fill="none" stroke="black" points="671,-324 443,-324 "/>
-<path fill="none" stroke="black" d="M443,-324C437,-324 431,-318 431,-312"/>
-<polyline fill="none" stroke="black" points="431,-312 431,-300 "/>
-<path fill="none" stroke="black" d="M431,-300C431,-294 437,-288 443,-288"/>
-<polyline fill="none" stroke="black" points="443,-288 671,-288 "/>
-<path fill="none" stroke="black" d="M671,-288C677,-288 683,-294 683,-300"/>
-<polyline fill="none" stroke="black" points="683,-300 683,-312 "/>
-<path fill="none" stroke="black" d="M683,-312C683,-318 677,-324 671,-324"/>
-<text text-anchor="start" x="439" y="-303.233" font-family="Times Roman,serif" font-size="14.00">The generalized partition function</text>
+<polyline fill="none" stroke="black" points="781,-324 553,-324 "/>
+<path fill="none" stroke="black" d="M553,-324C547,-324 541,-318 541,-312"/>
+<polyline fill="none" stroke="black" points="541,-312 541,-300 "/>
+<path fill="none" stroke="black" d="M541,-300C541,-294 547,-288 553,-288"/>
+<polyline fill="none" stroke="black" points="553,-288 781,-288 "/>
+<path fill="none" stroke="black" d="M781,-288C787,-288 793,-294 793,-300"/>
+<polyline fill="none" stroke="black" points="793,-300 793,-312 "/>
+<path fill="none" stroke="black" d="M793,-312C793,-318 787,-324 781,-324"/>
+<text text-anchor="start" x="549" y="-303.233" font-family="Times Roman,serif" font-size="14.00">The generalized partition function</text>
 </a>
 </g>
 <!-- GENERALIZED_PARTITION_FUNCTION&#45;&gt;CANONICAL_ENSEMBLE -->
-<g id="edge4" class="edge"><title>GENERALIZED_PARTITION_FUNCTION&#45;&gt;CANONICAL_ENSEMBLE</title>
-<path fill="none" stroke="black" d="M557,-287.831C557,-280.131 557,-270.974 557,-262.417"/>
-<polygon fill="black" stroke="black" points="560.5,-262.413 557,-252.413 553.5,-262.413 560.5,-262.413"/>
+<g id="edge6" class="edge"><title>GENERALIZED_PARTITION_FUNCTION&#45;&gt;CANONICAL_ENSEMBLE</title>
+<path fill="none" stroke="black" d="M639.242,-287.831C625.303,-278.707 608.24,-267.539 593.277,-257.745"/>
+<polygon fill="black" stroke="black" points="595.033,-254.711 584.749,-252.163 591.199,-260.568 595.033,-254.711"/>
 </g>
 <!-- LATTICE_GAS&#45;&gt;ISING_MODEL -->
 </g>

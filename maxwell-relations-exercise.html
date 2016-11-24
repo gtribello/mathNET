@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<!-- Title -->
-	<title>Bayes theorem  
+	<title>Maxwell relations
  : Exercise</title>
 	<!-- Meta -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -68,14 +68,14 @@
 		<div id="content" class="container">
                     <div class="panel panel-blue">
                       <div class="panel-heading">
-                          <h1 class="panel-title"> Bayes theorem  
+                          <h1 class="panel-title"> Maxwell relations
  : Exercises</h1>
                       </div>
                       
 <H1> Introduction </H1>
 
-In what follows a full written solution is provided to the problem that was discussed in the video.
-For the remainder of the problems only the final solution is given.
+To solve the problem below you need to remember what we have learnt about thermodynamic variables, Gibbs phase rule,
+thermodynamic potentials and the deriving of Maxwell relations.  
 
 <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
@@ -87,10 +87,9 @@ For the remainder of the problems only the final solution is given.
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
 
-Consider a test to detect a disease that 0.1 % of the population have. The test
-is 99 % effective in detecting an infected person. However, the test gives a false
-positive result in 0.5 % of cases. If a person tests positive for the disease what is the
-probability that they actually have it?
+Explain the difference between intensive and extensive thermodynamic variables. Explain how the intensive and extensive thermodynamic
+variables behave in a system at equilibrium. Finally, state Gibbs phase rule and explain the meaning of each term in the equation.  
+When does Gibbs phase rule hold?
 
         </a>
         </h4>
@@ -99,38 +98,27 @@ probability that they actually have it?
         <div class="panel-body">
            <div class="row">
 
-The first step in solving this problem is to recognize what we are trying to calculate and what
-quantities we have been given in the question. We can introduce a Bernoulli random variable and 
-say that $D=1$ when the person has the disease.  We can then introduce a second Bernoulli random variable $T$
-and say that $T=1$ when a person gets a positive test result.  We then note that these two random 
-variables are <b>not</b> independent.
-
-With these symbols in place we can now state clearly what it we are trying to calculate.  We are 
-trying to calculate the conditional probability $P(D=1|T=1)$.  In addition, the question tells us
-that:
-
-$$
-P(D=1)=0.001 \qquad \qquad P(T=1|D=1)=0.990 \qquad \qquad P(T=1|D=0)=0.005
-$$
-
-From these quantities we can the probability of getting a positive test result, $P(T=1)$ using the
-partition theorem as shown below:
-
-$$
-P(T=1) = P(T=1|D=1)P(D=1) + P(T=1|D=0)P(D=0) = P(T=1|D=1)P(D=1) + P(T=1|D=0)[1-P(D=1)] = 0.99 \times 0.1 + 0.005 \times ( 1 - 0.001 ) = 0.005985
-$$
-
-We can now insert this result into Bayes theorem to get the desired conditional probability.
-
-$$
-P(D=1|T=1) = \frac{P(T=1|D=1)P(D=1)}{P(T=1)} = \frac{0.99 \times 0.001}{0.005985} \approx 0.165
-$$
+<ul>
+<li> An extensive quantity is a thermodynamic variable whose value depends on the
+number of atoms/mols of substance present in the system. </li>
+<li> An intensive quantity is a thermodynamic variable whose value does not depend
+on the number of atoms/mols of substance present in the system. </li>
+<li> At equilibrium the extensive variables settle down to a steady constant value.
+<li> At equilibrium the intensive variables are uniform throughout the whole system.
+<li> Gibbs' phase rule states:
+\[
+F = C - \pi + 2 
+\]
+where $C$ is the number of distinct chemical components, $\pi$ is the number of
+phases and $F$ is the number of independent thermodynamic variables. </li>
+<li> Gibbs' phase rule only holds for systems at equilibrium. </li>
+</ul>
 
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4>
+</br>
 <div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
@@ -138,10 +126,11 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
 
-Two production lines produce the same part. Line 1 produces 1,000 parts per week of
-which 100 are defective. Line 2 produces 2,000 parts per week of which 150 are defective. If you
-choose a part randomly from the stock what is the probability it is defective? If it is defective
-what is the probability it was produced by line 1?
+Consider water at its freezing point. At this temperature the solid
+and liquid phases of water can coexist. Determine the number of chemical
+constituents in this system and hence use Gibbs phase rule to determine the
+number of thermodynamic variables that are required to define the state of
+this system when it is at equilibrium.
 
         </a>
         </h4>
@@ -150,15 +139,29 @@ what is the probability it was produced by line 1?
         <div class="panel-body">
            <div class="row">
 
-$$
-P(L_1|D) = \frac{2}{5}
-$$
+<p>
+Water at its freezing point has:
+</p>
+
+<p>
+<ul>
+<li> Two phases (water liquid and water ice) $\pi=2$ </li>
+<li> One distinct chemical component (water molecules) $C=1$ </li> 
+</li>
+</p>
+
+<p>
+We thus have:
+\[
+F = C -\pi + 2 = 2 - 2 +2 = 1
+\]
+</p>
 
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 3</h4>
+</br>
 <div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
@@ -166,11 +169,11 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
 
-Marie is getting married tomorrow, at an outdoor ceremony in the desert. In recent
-years, it has rained only 5 days each year. Unfortunately, the weatherman has predicted rain
-for tomorrow. When it actually rains, the weatherman correctly forecasts rain 90 % of the time.
-When it doesn’t rain, he incorrectly forecasts rain 10 % of the time. What is the probability that
-it will rain on the day of Marie’s wedding? (Assume that there are no leap years)
+Give mathematical statements of the first and second laws of thermodynamics. The work done when the area of the interface between
+two phases (an extensive quantity) changes by an infinitesimal amount $\textrm{d}A$ is given by $\textrm{d}w = \alpha \textrm{d}A$,
+where $\alpha$ is an intensive quantity known as the surface tension.  Given this information, and the first and second laws of thermodynamics, write an
+expression that relates infinitesimal changes in the internal energy $\textrm{d}E$ to infinitesimal changes in entropy, $\textrm{d}S$, volume,
+$\textrm{d}V$ and surface area, $\textrm{d}A$.
 
         </a>
         </h4>
@@ -179,15 +182,52 @@ it will rain on the day of Marie’s wedding? (Assume that there are no leap yea
         <div class="panel-body">
            <div class="row">
 
-$$
-P(R|F) \approx 0.1111
-$$
+The first law of thermodynamics tells us that:
+
+\[
+\textrm{d}E = \textrm{d}q + \textrm{d}w
+\]
+
+The second law of thermodynamics tells us that:
+
+\[
+\textrm{d}S \ge \frac{\textrm{d}q}{T} 
+\]
+and that the equality only holds when equilibrium between the system and the environment is maintained during the transition.
+When this is the case we can write:
+\[
+\textrm{d}q_{rev} = T\textrm{d}S
+\]
+The work done when a gas is expanded by an amount $\textrm{d}V$ is given by:
+\[
+\textrm{d}w_{rev}^{(PV)} = - P \textrm{d}V
+\]
+if the equilibrium between the system and its environment is maintained during the transition.
+
+<br/><br/>
+
+The question tells us that work is also done when the surface area of the system changes.  The total work done when the system changes its total 
+volume $V$ and the surface area of the nucleus $A$ (while maintaining equilibrium) by $\textrm{d}V$ and $\textrm{d}A$ respectively is thus:
+
+\[
+\textrm{d}w_{rev} = \alpha \textrm{d}A - P \textrm{d}V
+\]
+
+Substituting this and our expression for $\textrm{d}q_{rev}$ into the first law of thermodynamics gives:
+
+\[
+\textrm{d}E = T\textrm{d}S + \alpha \textrm{d}A - P \textrm{d}V
+\]
+
+This holds for any change in the thermodynamic variables $\textrm{d}A$, $\textrm{d}S$ and $\textrm{d}V$ because the internal energy $E$ is an exact
+differential.  In other words, it no longer matters if equilibrium is maintained during the transition or not - the change in the internal energy 
+is always the same.
 
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 4</h4>
+</br>
 <div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
@@ -195,13 +235,14 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
 
-You are selling a product in an area where 30 % of the people live in the city
-and the rest live in the suburbs.  Currently 20 % of the city dwellers user
-your product and 10 % of the suburbanites use your product.  You are presented
-with two new sales strategies the first will increase your market share in the
-suburbs to 15 %.  The second will increase your market share in the city to 25
-%. Which strategy should you adopt? What percentage of the people who own your
-product are city dwellers before your new sales drive?
+Use the result you obtained in the previous part and the definition of the
+Helmholtz free energy, $F$, to determine an expression for $\textrm{d}F$.  Use
+the result you obtain to show that:
+\[
+\left( \frac{\partial \alpha }{\partial V} \right)_T = -\left( \frac{\partial 
+P}{\partial A}
+\right)_T
+\]
 
         </a>
         </h4>
@@ -210,13 +251,55 @@ product are city dwellers before your new sales drive?
         <div class="panel-body">
            <div class="row">
 
-Strategy 1 is better sand before the new sales drive $\frac{6}{13}$ of the people who are the product are city dwellers
+The definition of the Helmholtz free energy is:
+
+\[
+F = E - TS
+\]
+
+Therefore:
+
+\[
+\textrm{d}F = \textrm{d}E - T\textrm{d}S - S\textrm{d}T = T\textrm{d}S + \alpha 
+\textrm{d}A - P \textrm{d}V - T\textrm{d}S - S\textrm{d}T = \alpha\textrm{d}A - 
+P\textrm{d}V - S\textrm{d}T 
+\]
+
+We also know however that $F=F(T,V,A)$ so we can write:
+
+\[
+ \textrm{d}F = 
+ \left( \frac{\partial F}{\partial A} \right)_{V,T} \textrm{d}A + 
+\left( \frac{\partial F}{\partial V} \right)_{T,A} \textrm{d}V + 
+\left( \frac{\partial F}{\partial T} \right)_{V,A} \textrm{d}T
+\]
+
+By equating coefficients we can thus find that:
+
+\[
+\alpha = \left( \frac{\partial F}{\partial A} \right)_{V,T} \qquad P = -\left( 
+\frac{\partial F}{\partial V} \right)_{T,A} \qquad S =  -\left( \frac{\partial 
+F}{\partial T} \right)_{V,A}
+\]
+
+But we know that $F$ is an exact differential, which means that:
+
+\[
+\left(\frac{\partial^2 F}{\partial A \partial V}\right)_T = \left(\frac{\partial^2 F}{\partial V \partial A}\right)_T
+\]
+
+which (when we insert the results above) ensures that:
+
+\[
+\left( \frac{\partial \alpha}{\partial V} \right)_T = -\left( \frac{\partial 
+P}{\partial A} \right)_T
+\]
 
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 5</h4>
+</br>
 <div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
@@ -224,16 +307,11 @@ Strategy 1 is better sand before the new sales drive $\frac{6}{13}$ of the peopl
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
 
-In a casino in Blackpool there are two slot machines: one 
-that pays out 10 % of the time, and one that pays out 20 % of the time.  
-Obviously, you would like to play on the machine that pays out 20 % of the 
-time 
-but you do not know which of the two machines is the more generous.  You thus 
-adopt the following strategy: you assume initially that the two machines are 
-equally likely to be the generous machine.  You then select one of 
-the two machines at random and put a coin into it.  Given that you loose that 
-first bet estimate the probability that the machine you selected is the more 
-generous of the two machines.
+Standard text book equilibrium thermodynamics predicts that liquid water cannot exist at temperatures below the freezing point.  At all
+temperatures below the freezing point liquid water should convert to ice.  The reason for this discrepancy between theory and reality is that in text book
+equilibrium thermodynamics the interface between the two phases is assumed to make a negligible contribution to the internal energy.  It is possible to
+remedy this by introducing the surface tension as described in the questions above.  What constraints are placed on the value of the surface tension, $\alpha$, if the
+presence of interfaces is to account for the existence of supercooled liquids?
 
         </a>
         </h4>
@@ -242,7 +320,11 @@ generous of the two machines.
         <div class="panel-body">
            <div class="row">
 
-The probability that you are on the more generous machine given you loose the first game is 0.471
+Surface tension only explains the existence of supercooled liquids if this quantity is positive. The positive sign on the work done implies that work must be done on the system
+whenever an interface is formed.  If the surface tension were negative work would always be done on the universe by the system when a surface was created.  This work
+could be converted to heat (in order to ensure that the internal energy of the universe remained constant).  This would increase the entropy of the whole
+(isolated) system (system+universe). If the entropy of the whole system increases the formation of the crystal nucleus is spontaneous by the second law of thermodynamics.
+
          </div>
       </div>
    </div>

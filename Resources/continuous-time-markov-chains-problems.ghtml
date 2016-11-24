@@ -8,6 +8,8 @@ $$
 \frac{\textrm{d}P(t)}{\textrm{d}t} = \mathbf{P}(t) \mathbf{Q}
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Glaucoma is a disease of the eyes that usually occurs in old aged patients.  Its progression, in the absence of treatment, can be modelled as a
@@ -112,6 +114,8 @@ amount of time taken it takes to get to state one does not affect the amount of 
 transition from state 2 to 3 is also exponentially distributed so the expectation is $\frac{1}{\lambda_2}$.  As the two processes are independent 
 the total expected time is thus $\frac{1}{\lambda_1} + \frac{1}{\lambda_2}$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 A new treatment for Glaucoma can be given to patients in state $X=3$.
@@ -186,6 +190,8 @@ as such it must be normalised
 + \lambda_3}
 \nonumber
 \end{equation}
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

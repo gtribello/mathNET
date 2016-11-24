@@ -7,6 +7,8 @@ objects appear in a range of different fields.  It is thus important that you un
 how to add and multiply matrices.  The exercises on this page should consolidate your
 ability to multiply matrices.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Calculate the following product of matrices
@@ -47,6 +49,8 @@ $$
 \end{matrix}
 \right)
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 

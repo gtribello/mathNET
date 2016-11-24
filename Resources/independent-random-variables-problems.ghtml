@@ -13,6 +13,8 @@ $$
 P(X=x \vee Y=y ) = P(X=x) + P(Y=y) - P(X=x \wedge Y=y)
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION: 
 
 Suppose $P(X=1) = \frac{3}{4}$ and $P(Y=1) = \frac{1}{3}$ show that the random variables $X$ and $Y$ are not independent
@@ -56,6 +58,8 @@ We thus have that:
 $$
 \frac{1}{12} \le P(A \wedge B) \le \frac{1}{3}
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 

@@ -9,6 +9,8 @@ $$
 f_X(x) = \binom{n}{x} (1-p)^{n-x} p^x
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 A new two player gambling game is invented in which two, fair 6-sided dice are rolled.  Player A wins if both dice show numbers that are less
@@ -28,6 +30,8 @@ $$
 
 To answer this question we must assume that the dice do not affect each other.  That is to say we must assume that the random variables
 that tell us the outcomes of the two dice rolls are independent.
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 

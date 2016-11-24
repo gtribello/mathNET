@@ -7,6 +7,8 @@ When you have completed the following problems you should be able to do three th
 identify the problems where the Chapman-Kolmogorov relation is innapropriate and (3) solve both these types of
 problem.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Consider the sequence of
@@ -44,6 +46,8 @@ P(GTCC) & = p_{30}p_{02} p_{22} = 0.2 \times 0.3 \times 0.2 = 0.012 \\
 P(CGGT) & = p_{23}p_{33}p_{30} = 0.3 \times 0.3 \times 0.2 = 0.018
 \end{aligned}
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 
@@ -126,6 +130,8 @@ $$
 
 For part (iii) we thus have $P (X_3 = 0 |X_0 = 0)=\frac{23}{54}$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION: 
 
 Consider a Markov chain between two states, $X=0$ and $X=1$,  for which 
@@ -170,6 +176,8 @@ $$
 P( X_1=0 \wedge X_2=0 \wedge X_3=1 \wedge X_4=0 \wedge X_5=1 ) = 0.0768
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Suppose the autumn weather in Belfast, from day to day, follows a Markov 
@@ -210,6 +218,8 @@ In terms of the improvments to the model we could think about any of the followi
 <li> Weather is predictable one day ahead this model assumes it is random </li>
 <li> Seasonal variations are not taken into account.  To incorporate this correctly we would need to use an inhomogeneous Markov chain </li>
 </ul>
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 

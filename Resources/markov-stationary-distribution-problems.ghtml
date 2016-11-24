@@ -8,7 +8,9 @@ to come to understand how to set up the chain
 and how to find the stationary distribution by finding the top eigenvector
 of the transition matrix.
 
-EXAMPLE_QUESTION: A class of Markov chains
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION: 
 
 A Markov chain is described by the following transition matrix:
 $$
@@ -172,6 +174,8 @@ $$
 \pi_1 = \frac{1}{5} \qquad \pi_2 = \frac{2}{5} \qquad \pi_3 = \frac{2}{5}
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Consider the  reversible  Markov chain, between the
@@ -219,6 +223,8 @@ $$
 \pi_0 = \pi_2 = \pi_6 = \pi_8 = \frac{1}{12} \qquad \pi_1 = \pi_3 = \pi_5 = \pi_7 = \frac{3}{24} = \frac{1}{8} \qquad \pi_4 = \frac{2}{12} = \frac{1}{6}
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 A double glazing firm employs staff to cold call clients and try to sell
@@ -263,6 +269,8 @@ The expected amount you need to pay out each evening is thus:
 $$
 \textrm{pay} = 90.91n \quad \textrm{pounds}
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 
@@ -310,6 +318,8 @@ $$
 $$
 
 The number of magazines required is thus: 66667
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 

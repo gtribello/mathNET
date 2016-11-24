@@ -11,6 +11,8 @@ $$
 p_n(t) = \frac{(\int_0^t \lambda(t) \textrm{d}t')^n}{n!} e^{-\int_0^t \lambda(t) \textrm{d}t'}
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 You send your sister text messages in the afternoon  according to an inhomogeneous Poisson process, at a rate (intensity).
@@ -86,6 +88,8 @@ $$
 
 We therefore find that the expected time of arrival is 2 hours after 12:00 i.e. 14:00.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Suppose two football teams score goals according to two independent inhomogeneous Poisson processes with rates:
@@ -151,6 +155,7 @@ $$
 \textrm{Total probability:} \quad 0.32\times0.37 = 0.12 
 $$
 
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

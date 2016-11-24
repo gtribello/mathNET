@@ -13,6 +13,8 @@ $$
 P(T \le x ) = 1 - e^{-\lambda x}
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 The alpha decay of Actinium-220 atoms to Francium-216 is a random
@@ -40,6 +42,8 @@ We can thus calculate $\lambda$ as follows:
 \[
  0.5 = e^{-26 \lambda} \quad \rightarrow \quad \lambda = -\frac{1}{26} \ln 0.5 \approx 0.0116~\textrm{ms}^{-1} 
 \]
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 
@@ -94,6 +98,8 @@ $$
 \right]_0^{\infty} = \frac{\mu}{\lambda + \mu }
  \end{aligned}
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 
@@ -199,6 +205,8 @@ Lastly the key to solving the final part of this problem is recognizing three th
 
 Once you realise this the solution is the same as that for the above problem with Alice and Bob and the bus stop.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Secondary electrons generated during radiotherapy play an important role in
@@ -228,6 +236,8 @@ The key to solving this problem is recognizing three things:
 </ul>
 
 Once you realise this the solution is the same as that for the above problem with Alice and Bob and the bus stop.
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

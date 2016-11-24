@@ -10,6 +10,8 @@ $$
 The following exercises should teach you when it is appropriate to use the conditional expectation 
 theroem to calculate expectations and when it is not appropriate as well as how to use the theorem.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION: 
 
 Niall and Simone play backgammon every day and Niall wins a
@@ -93,6 +95,8 @@ We can then do:
 
 This pattern clearly continues and the result thus follows
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION: 
 
 Your tutorial operates with the following rules. You are trapped in a classroom with an infinite amount of work
@@ -109,6 +113,8 @@ $$
 \mathbb{E}(X) = 30
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION: 
 
 In a game show, there are 4 identical boxes, each containing a prize. 
@@ -121,6 +127,8 @@ WORKED_SOLUTION:
 $$
 \mathbb{E}(X) = 212.5
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 
@@ -136,6 +144,8 @@ WORKED_SOLUTION:
 $$
 \mathbb{E}(X) = 6 \qquad \sigma = \sqrt{38} 
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

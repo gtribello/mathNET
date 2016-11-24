@@ -9,6 +9,8 @@ $$
 The following exercises get you to manipulate these objects and to extract marginal distributions
 from joint distributions.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Consider a pair of discrete random variables $X$ and $Y$.  What formulae would you use to calculate the conditional probability $P(X=4|Y=1)$ and the conditional
@@ -27,6 +29,8 @@ Expectation of $X$ given $Y=1$ is given by:
 \[
 \mathbb{E}(X|Y=1) = \sum_{i=0}^\infty x_i P(X=i|Y=1)  
 \]
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 
@@ -78,6 +82,8 @@ which ensures that the conditional expectations are:
 $$
 \mathbb{E}(X|Y=1) = 0.5 \quad \mathbb{E}(X|Y=2) = 0.75 \quad \mathbb{E}(X|Y=4) = 1.5  
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

@@ -10,6 +10,8 @@ where $\mathbf{I}$ is the identity matrix, which has ones for each of its diagon
 off diagonal elements.  The methods for calculating the inverse of $2 \times 2$ matrices and $3 \times 3$ matrices are 
 explained in the two worked examples below.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Calculate the inverse of the $2 \times 2$ matrix:
@@ -41,6 +43,8 @@ If the determinant is non-zero the inverse exists.  You can thus compute the inv
 $$
 \mathbf{A}^{-1} = \frac{1}{\det(\mathbf{A})} \left( \begin{matrix} d & -b \\ -c & a \end{matrix} \right)
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

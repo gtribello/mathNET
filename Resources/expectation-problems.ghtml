@@ -23,6 +23,8 @@ $$
 $$
 in the continuous case.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION: 
 
 The discrete random variable, $X$, has the values: $X \in \{ 0,1,2,3\}$,
@@ -67,6 +69,8 @@ The variance is thus:
 $$
 \textrm{var}(X) = \frac{31}{4} - \left( \frac{11}{4} \right)^2 = \frac{3}{16}
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION: 
 

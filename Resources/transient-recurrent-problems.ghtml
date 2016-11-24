@@ -15,6 +15,8 @@ $$
 Here $R_i$ is the return time to state $i$, which is random as this quantity measures the number of steps in a loop that starts and
 end in state $i$.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION: Classifying states in chains
 
 Consider the following transition matrices for three Markov chains. 

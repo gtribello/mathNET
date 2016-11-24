@@ -6,6 +6,8 @@ In mathematics a limit of a function is the value the function approaches as the
 be calculated using our usual approach of sticking numbers into the formula and as such we must find other approaches for determining these
 quantities.  In this exercise you will learn about one approach - squeezing inequalities - that can be used to solve limits.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Find value of the following limit:

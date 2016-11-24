@@ -1,0 +1,654 @@
+TITLE: Classical thermodynamics
+
+DESCRIPTION:
+
+To solve the problems below you will need to use everything that you have learnt about classical thermodynamics 
+during this course.
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Magnetisation, $M$, is an extensive thermodynamic variable that measures the degree of magnetic polarisation in a material.  The conjugate intensive thermodynamic variable this quantity is the magnetic field strength, $H$.  Write an expression for the infinitesimal change in energy $\textrm{d}E$ that takes place when the magnetisation changes by an infinitesimal amount, $\textrm{d}M$.  Assume that the number of atoms, the entropy and the volume of the system are kept fixed during this change.
+
+WORKED_SOLUTION:
+
+The change in energy that takes place when the magnetisation changes by a small amount $\textrm{d}M$ can be calculated using:
+$$
+ \textrm{d}E = H \textrm{d}M
+$$
+
+EXAMPLE_QUESTION:
+
+Write an expression that connects the magnetic field strength, $H$, to a first partial derivative of the internal energy $E$.
+
+WORKED_SOLUTION:
+
+We can combine the first law of thermodynamics, $\textrm{d}E = \textrm{d}q + \textrm{d}w$, and the second laws of (equilibrium) thermodynamics, $\textrm{d}q = T\textrm{d}S$, to 
+give:
+$$
+\textrm{d}E = T\textrm{d}S - P\textrm{d}V + H\textrm{d}M
+$$
+In addition, because $E$ is an exact differential we can write
+$$
+\textrm{d}E  = \left( \frac{\partial E}{\partial S }\right) \textrm{d}S + \left( \frac{\partial E}{\partial V }\right) \textrm{d}V + \left( \frac{\partial E}{\partial M}\right) \textrm{d}M
+$$
+Equating coefficients of $\textrm{d}M$ in these two expressions gives us:
+$$
+H = \left( \frac{\partial E}{\partial M}\right) 
+$$
+
+EXAMPLE_QUESTION:
+
+The magnetic susceptibility is given by $\chi = \left( \frac{\partial M}{\partial H} \right)$ show that this quantity must be positive by demonstrating that it can be related to a second derivative of the internal energy.
+
+WORKED_SOLUTION:
+
+To answer this question we first need to derive an expression for the appropriate thermodynamic potential.  In particular we will use the 
+following quantity, $P$, which is given by:
+$$
+P = E - TS - HM 
+$$
+This definition ensures that:
+$$
+\begin{aligned}
+\textrm{d}P & = \textrm{d}E - T\textrm{d}S - S\textrm{d}T = T\textrm{d}S - P\textrm{d}V + H\textrm{d}M - T\textrm{d}S - S\textrm{d}T - H\textrm{d}M - M\textrm{d}H \\
+ & = - P\textrm{d}V - S\textrm{d}T - M\textrm{d}H
+\end{aligned}
+$$
+
+$P$ must be minimised when the system is in equilibrium.  Therefore:
+$$
+\delta P > 0 \qquad \textrm{therefore} \qquad \delta E - T\delta S - H\delta M > 0 \qquad \textrm{thus} \qquad \delta E > T\delta S + H\delta M
+$$
+
+The second result here comes about because:
+
+<ul> 
+<li> We have assumed in deriving the thermodynamic potential that the reservoir is enormous.  As such when extensive variables (entropy and magnetisation) are exchanged between it and the system the conjugate intensive variables (field strength and temperature) do not change. </li>
+<li> The volume of the system is fixed we therefore make no changes in this quantity. </li>
+</ul>
+
+Expanding $\delta E$ using a Taylor series gives us:
+$$
+\delta E = \left( \frac{\partial E}{\partial S} \right) \delta S +  \left( \frac{\partial E}{\partial M} \right) \delta M + \frac{1}{2} \left( \frac{\partial^2 E}{\partial S^2} \right) (\delta S)^2 + \frac{1}{2} \left( \frac{\partial^2 E}{\partial M^2} \right) (\delta M)^2 + \left( \frac{\partial^2 E}{\partial S \partial M} \right) \delta S \delta M
+$$
+
+When the above is used to replace the left hand side of the inequality we arrived at because $P$ must be minimised we find that:
+$$
+\left( \frac{\partial^2 E}{\partial S^2} \right) (\delta S)^2 + \frac{1}{2} \left( \frac{\partial^2 E}{\partial M^2} \right) (\delta M)^2 + \left( \frac{\partial^2 E}{\partial S \partial M} \right) \delta S \delta M > 0
+$$
+as we are able to cancel the first order terms in $\delta S$ and $\delta M$ because $T = \left( \frac{\partial E}{\partial S} \right)$ and 
+$H = \left( \frac{\partial E}{\partial M} \right)$.
+
+This equation implies that:
+$$
+\left( \frac{\partial^2 E}{\partial M^2} \right) > 0
+$$
+
+Remembering that $H = \left( \frac{\partial E}{\partial M} \right)$ we can rewrite the above as:
+$$
+\left( \frac{\partial H}{\partial M} \right) > 0 
+$$
+The derivative on the left hand side is equal to one over the susceptibility and, consequently, the susceptibility must be positive.
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Write an expression for $\textrm{d}F$ in terms of $\textrm{d}V$, $\textrm{d}T$, $P$ and $S$.  Here $F$ is the Helmholtz free energy.  Use the expression you have written and the fact that $F$ is an exact differential to show that:
+$$
+\left(\frac{\partial S}{\partial V}\right)_T = \left( \frac{\partial P}{\partial T}\right)_V
+$$
+
+WORKED_SOLUTION:
+
+We begin by recalling that the differential of the Helmholtz free energy, $\textrm{d}F$, is given by:
+
+$$
+\textrm{d}F = -S\textrm{d}T - P\textrm{d}V 
+$$
+
+Becasue $F$ is an exact differential we can also write:
+$$
+\textrm{d}F = \left( \frac{\partial F}{\partial T} \right)_V \textrm{d}T + \left(\frac{\partial F}{\partial V}\right)_T \textrm{d}V
+$$
+By equating coefficients of $\textrm{d}T$ and $\textrm{d}V$ in these two expressions we thus arrive at:
+$$
+-S = \left( \frac{\partial F}{\partial T} \right)_V \qquad \textrm{and} \qquad -P= \left(\frac{\partial F}{\partial V}\right)_T
+$$
+We arrive at the result asked for in the question by noting that the cross derivatives 
+$\frac{ \partial^2 F}{\partial V \partial T} = \frac{ \partial^2 F}{\partial T \partial V}$ must also be equal because
+$F$ is an exact differential.
+
+EXAMPLE_QUESTION:
+
+Explain why the constant volume heat capacity can be calculated using $C_v = T \left( \frac{\partial S}{\partial T}\right)_V$.
+
+WORKED_SOLUTION:
+
+We know that the constant volume heat capacity is defined as:
+$$
+\textrm{d}E = C_v \textrm{d}T = \textrm{d} q + \textrm{d} w = T\textrm{d}S - \textrm{d} w = T\textrm{d}S
+$$
+$\textrm{d}w$ must be zero in this case as we are not allowing $PV$-work (constant volume) or any other kind of work for that matter.  
+Consequently, the heat output is the same regardless of the manner in which the transition is performed because it is equal to the change 
+in the internal energy and because internal energy is exact differential.  Rearranging the above gets us to:
+
+$$
+C_v = T \left( \frac{\partial S}{\partial T} \right)_V
+$$
+
+EXAMPLE_QUESTION:
+
+A van der Waals gas obeys the following mechanical equation of state:
+$$
+\left( P + \frac{aN^2}{V^2} \right)\left(\frac{V}{N} - b \right) = k_B T
+$$
+where $a$ and $b$ are positive constants.  Use the result from part from the first part of this question and the above equation to show that:
+$$
+\left(\frac{\partial S}{\partial V}\right)_T = \frac{k_B}{\frac{V}{N} - b} 
+$$
+for a van der Waals gas.
+
+WORKED_SOLUTION:
+
+We can rearrange the mechanical equation state for the van der Waals gas that we were given in the question and differentiate as follows:
+
+$$
+P = \frac{k_B T}{ \frac{V}{N} - b} - \frac{aN^2}{V^2} \quad \rightarrow \quad \left(\frac{\partial P}{\partial T}\right)_V = \frac{k_B}{\frac{V}{N} - b}
+$$
+
+We then invoke the Maxwell relation we just derived to get the result required by the question.
+
+EXAMPLE_QUESTION:
+
+Use the results from the first three parts of this question and the fact that $S$ is an exact differential to show that:
+$$
+\left( \frac{\partial C_v}{\partial V} \right)_T = 0
+$$
+for a van der Waals gas.
+
+WORKED_SOLUTION:
+
+We can differentiate $C_v$ wrt $V$ at constant $T$ as follows:
+
+$$
+\left(\frac{\partial C_v}{\partial V} \right)_T = T \frac{\partial^2 S}{\partial V \partial T} = T \frac{\partial^2 S}{\partial T \partial V}
+$$
+
+The last part here follows because $S$ is a exact differential.  We now invoke the Maxwell equation we derived from the definition of the Helmholtz free energy.
+When this result is substituted into the previous equation we find:
+
+$$
+\left(\frac{\partial C_v}{\partial V} \right)_T = T \frac{\partial }{\partial T} \left( \frac{\partial P}{\partial T}\right)_V
+$$
+
+we now have a derivative that we can calculate from the equation of state that was given in the question.  Rearranging this equation we have:
+
+$$
+P = \frac{k_B T}{ \frac{V}{N} - b} - \frac{aN^2}{V^2} \quad \rightarrow \quad \left(\frac{\partial P}{\partial T}\right)_V = \frac{k_B}{\frac{V}{N} - b} \quad \rightarrow \quad T \frac{\partial }{\partial T} \left( \frac{\partial P}{\partial T}\right)_V = 0
+$$
+
+EXAMPLE_QUESTION:
+
+Show, by considering a transition between two states $i$ and $j$  during which the internal energy does not change, that:
+$$
+\left(\frac{\partial T}{\partial V}\right)_E  = - \frac{1}{ C_v } \left(\frac{\partial E}{\partial V}\right)_T
+$$
+
+WORKED_SOLUTION:
+
+We know that the internal energy is a state function and hence that the change in internal energy on moving between state $i$ and state $j$ is independent 
+of the path taken.  We can thus consider a reversible path connecting these two points and use the fact that at all points along this path the system is 
+equilibrium.  Because the system is always at equilibrium we can thus write the internal energy as a function of any pair of thermodynamic variables we so 
+wish.  We will use that $U=U(T,V)$ and will further note that because $U$ is an exact differential we can write:
+
+$$
+\textrm{d}E = \left(\frac{\partial E}{\partial T}\right)_V \textrm{d}T + \left(\frac{\partial E}{\partial V}\right)_T \textrm{d}V = 0
+$$
+
+The question tells us that there is zero change in internal energy during the transition hence the zero at the end of the above expression.
+
+We can rearrange the expression above to obtain:
+
+$$
+\left(\frac{\partial T}{\partial V}\right)_E  = - \frac{\left(\frac{\partial E}{\partial V}\right)_T }{ \left(\frac{\partial E}{\partial T}\right)_V}
+$$
+
+We now note that $\left(\frac{\partial E}{\partial T}\right)_V = C_v$ by definition. 
+
+EXAMPLE_QUESTION:
+
+Use the combined form of the first and second laws of thermodynamics and the fact that, at equilibrium, the entropy can be expressed as a 
+function of the temperature and the volume to show that:
+$$ 
+\left(\frac{\partial E}{\partial V}\right)_T = T\left(\frac{\partial P}{\partial T}\right)_V - P
+$$
+
+WORKED_SOLUTION:
+
+The combined form of the first and second laws of thermodynamics tells us that:
+
+$$
+\textrm{d}E = T\textrm{d}S - P\textrm{d}V
+$$
+
+Further more that the fact that we are in equilibrium at all points during the transition ensures that we can calculate any thermodynamic variable 
+from a pair of thermodynamic variables (Gibbs phase rule).  As such we can write:
+
+$$
+S=S(T,V) \qquad \rightarrow \qquad \textrm{d}S = \left(\frac{\partial S}{\partial T}\right)_V \textrm{d}T + \left(\frac{\partial S}{\partial V}\right)_T \textrm{d}V
+$$
+(the last result here follows because $S$ is an exact differential).
+
+<br/> <br/>
+
+We can substitute the previous equation into the combined form of the first and second law of thermodynamics that was given at the start of this derivation and 
+arrive at:
+$$
+\textrm{d}E = T\left[ \left(\frac{\partial S}{\partial T}\right)_V \textrm{d}T + \left(\frac{\partial S}{\partial V}\right)_T \textrm{d}V \right] - P\textrm{d}V = T \left(\frac{\partial S}{\partial T}\right)_V \textrm{d}T + \left[ T\left(\frac{\partial S}{\partial V}\right)_T - P \right] \textrm{d}V
+$$
+
+Equating coefficients of $\textrm{d}V$ in this equation and the combined form of the first and second law of thermodynamics gives:
+
+$$
+\left(\frac{\partial E}{\partial V}\right)_T = T\left(\frac{\partial S}{\partial V}\right)_T - P  = T\left(\frac{\partial P}{\partial T}\right)_V - P
+$$
+
+To get the second equality here we used the Maxwell relation derived from the Helmholtz free energy that we derived in the first part of this question.
+
+EXAMPLE_QUESTION:
+
+Use the results obtained in the previous two questions together with the mechanical equation of state for a van der Waals gas to show that the amount a 
+van der Waals gas' temperature will change during an expansion from an initial volume $V_i$ to a final volume $V_f$ is given by:
+
+$$
+\Delta T = \frac{aN^2}{C_v} \left[ \frac{1}{V_f} - \frac{1}{V_i} \right]
+$$
+
+Assume that $C_v$ is independent of temperature.
+
+WORKED_SOLUTION:
+
+The left hand side shown below appears on the left hand side of the expression we just derived in the previous part.  We can 
+use the mehcanical equation of state to calculate the derivative here and thus simplify this expression as shown:
+
+$$
+T\left(\frac{\partial P}{\partial T}\right)_V - P = \frac{k_B T}{\frac{V}{N} -b} -  P = \frac{aN^2}{V^2}
+$$
+The final equality here is obtained by rearranging the equation of state.
+
+<br/> <br/>
+
+Substituting this result together with the fact that $\left(\frac{\partial U}{\partial T}\right)_V = C_v$ 
+into the result from the previous question gives:
+
+$$
+\left(\frac{\partial T}{\partial V}\right)_E  = - \frac{\left(\frac{\partial U}{\partial V}\right)_T }{ \left(\frac{\partial U}{\partial T}\right)_V} = - \frac{aN^2}{V^2 C_v}
+$$
+
+We can now integrate this expression as follows:
+
+$$
+\Delta T = - \int_{V_i}^{V_f} \frac{aN^2}{V^2 C_v} \textrm{d}V = - \frac{aN^2}{C_v} \int_{V_i}^{V_f} \frac{\textrm{d}V}{V^2} = \frac{aN^2}{C_v} \left[ \frac{1}{V} \right]_{V_i}^{V_f} = \frac{aN^2}{C_v} \left[ \frac{1}{V_f} - \frac{1}{V_i} \right]
+$$
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Prove that $\left( \frac{\partial S}{\partial P}\right)_H = -\frac{V}{T}$ and explain why this derivative must be less than zero.
+
+WORKED_SOLUTION:
+
+Recall that $H=U+PV$ and hence that the differential of the enthalpy, $\textrm{d}H$, must be given by:
+
+\[
+\textrm{d}H = \textrm{d}U + \textrm{P}\textrm{d}V + V\textrm{d}P = T\textrm{d}S - P\textrm{d}V + \textrm{P}\textrm{d}V + V\textrm{d}P =  T\textrm{d}S + V\textrm{d}P
+\]
+
+This expression can be rearranged to give:
+
+\[
+\textrm{d}S = \frac{1}{T}\textrm{d}H - \frac{V}{T} \textrm{d}P
+\]
+
+At the same time $S=S(H,P)$ so: 
+
+\[
+\textrm{d}S = \left( \frac{\partial S}{\partial H}\right)_P \textrm{d}H + \left( \frac{\partial S}{\partial P}\right)_H \textrm{d}P
+\]
+
+Equating coefficients of $\textrm{d}P$ gives in the above equations for $\textrm{d}S$ gives:
+
+$$
+ \left( \frac{\partial S}{\partial P}\right)_H = - \frac{V}{T}
+$$
+
+This quantity must be negative as neither volume nor {\bf absolute} temperature (i.e. in Kelvin) can be less than zero. 
+
+EXAMPLE_QUESTION:
+
+The Joule-Thomson process involves the slow passage of a gas from one container to another through a porous wall across a pressure gradient and 
+is isoenthalpic (constant $H$).  This technique can be used to condense gases as the gas will cool down or warm up in accordance with the sign of 
+the Joule-Thomson coefficient:
+$$
+C_{JT} = \left( \frac{\partial T}{\partial P} \right)_H
+$$
+Show that $C_{JT} = \frac{V}{C_p}(T \alpha_P - 1 )$, where $\alpha_P=\frac{1}{V} \left( \frac{\partial V}{\partial T} \right)_P$ and 
+$C_p=\left( \frac{\partial H}{\partial T} \right)_P$ the constant pressure heat capacity.  
+
+WORKED_SOLUTION:
+
+We have an isoenthalpic process that takes us from state $i$ to state $j$. Lets further suppose that at all points along the path connecting 
+the two states we can write $H=H(T,P)$.  That is to say we will assume that the system is in equilibrium with its environment at all points 
+during the transition.  Pulling these ideas together we have:
+$$
+\textrm{d}H = \left( \frac{\partial H}{\partial T}\right)_P \textrm{d}T + \left( \frac{\partial H}{\partial P}\right)_T \textrm{d}P = 0
+$$
+This can be rearranged to give:
+
+$$
+C_{JT} = \left( \frac{\partial T}{\partial P}\right)_H = - \frac{\left( \frac{\partial H}{\partial P} \right)_T}{\left( \frac{\partial H}{\partial T} \right)_P} = - \frac{1}{C_P} \left( \frac{\partial H}{\partial P} \right)_T
+\label{eqn:jt}
+$$
+
+We now recall that $\textrm{d}H = T\textrm{d}S + V\textrm{d}P$ and furthermore that (because we are at equilibrium at all points 
+during the transition) we can calculate the entropy if we are given the pressure and the temperature (Gibbs phase rule).  
+That is to say we can write $S=S(P,T)$ and thus:
+\[
+\textrm{d}S = \left( \frac{\partial S}{\partial T} \right)_P \textrm{d}T + \left(\frac{\partial S}{\partial P}\right)_T \textrm{d}P
+\]
+which we can then substitute into our expression for $\textrm{d}H$ as follows:
+
+\[
+\textrm{d}H = T\left[ \left( \frac{\partial S}{\partial T} \right)_P \textrm{d}T + \left(\frac{\partial S}{\partial P}\right)_T \textrm{d}P \right] + V\textrm{d}P = T \left( \frac{\partial S}{\partial T} \right)_P \textrm{d}T  + \left[ T\left(\frac{\partial S}{\partial P}\right)_T + V \right] \textrm{d}P
+\]
+
+Equating coefficients of $\textrm{d}P$ in the above equation and the first equation in this solution gives:
+
+\[
+\left( \frac{\partial H}{\partial P}\right)_T =  \left[ T\left(\frac{\partial S}{\partial P}\right)_T + V \right] = \left[ -T\left(\frac{\partial V}{\partial T}\right)_P + V \right] 
+\]
+
+To get the last equality in the above we use the Maxwell relation that can be derived from the definition of the Gibbs free energy:
+
+$$
+\textrm{d}G = P\textrm{d}V - S\textrm{d}T \qquad \rightarrow \qquad \left( \frac{\partial S}{\partial P}\right)_T = -\left(\frac{\partial V}{\partial T}\right)_P
+$$
+
+we now note from the question that $\left(\frac{\partial V}{\partial T}\right)_P = V\alpha_P$ and hence:
+
+\[
+\left( \frac{\partial H}{\partial P}\right)_T = \left[ -T\left(\frac{\partial V}{\partial T}\right)_P + V \right]  = -T V \alpha_P + V = V( -T\alpha_P + 1)
+\]
+
+Substituting this into the equation we derived earlier for $C_{JT}$ gives:
+
+\[
+C_{JT} = - \frac{1}{C_P} \left( \frac{\partial H}{\partial P} \right)_T = \frac{V}{C_P} (T\alpha_P -1)
+\]
+
+EXAMPLE_QUESTION:
+
+Show that $C_{JT}=0$ is always zero for an ideal gas.  
+
+WORKED_SOLUTION:
+
+For an ideal gas $V=\frac{N k_B T}{P}$ hence: 
+
+\[
+\alpha_P =  \frac{1}{V} \left( \frac{\partial V}{\partial T} \right)_P = \frac{1}{V} \frac{N k_B}{P}
+\]
+
+Substituting this into the expression we derived for $C_{JT}$ in the previous question gives:
+
+\[
+C_{JT} = \frac{V}{C_P} (T\alpha_P -1) = \frac{V}{C_P}\left( \frac{N k_B T}{PV} - 1 \right) = \frac{V}{C_P} ( 1- 1 ) = 0
+\]
+
+where we have used the fact that $\frac{N k_B T}{PV}=1$ for ideal gas which we can work out based on the mechanical equation 
+of state $PV = N k_B T$ 
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+The laws of thermodynamics can be used to describe systems that are liquid and solid as well as systems that are gaseous.  Often when we do so we have to 
+consider forms of work other than PV-work.  For example if we have an elastic bar then we will have to do work to extend the length of the bar against a 
+tensile force, $f$, that will try to pull the bar back to its equilibrium length $L_0$.  Write an expression that is analogous to 
+$\textrm{d}E = T\textrm{d}S - P\textrm{d}V$ for this system.
+
+WORKED_SOLUTION:
+
+\[
+\textrm{d}E = \textrm{d} q + \textrm{d} w = T\textrm{d}S + f\textrm{d}L
+\]
+
+EXAMPLE_QUESTION:
+
+Show that:
+$$
+\left( \frac{\partial E }{\partial T} \right)_L = T \left(\frac{\partial S}{\partial T}\right)_L \qquad \textrm{and} \qquad \left( \frac{\partial E}{\partial L}\right)_T = T\left( \frac{\partial S}{\partial L} \right)_T + f 
+$$
+
+WORKED_SOLUTION:
+
+We know that at all points during the transition between states the system is in equilibrium.  As a consequence we know that 
+we can calculate $S$ if we are given the values of two thermodynamic variables (Gibbs phase rule) in this case we will choose $L$ and $T$ and hence write:
+
+$$
+\textrm{d}S = \left( \frac{\partial S}{\partial L} \right)_T \textrm{d}L + \left( \frac{\partial S}{\partial T} \right)_L \textrm{d}T
+$$
+
+We can thus rewrite the equation from the first part above as:
+
+$$
+\textrm{d}E = T \left[ \left( \frac{\partial S}{\partial L} \right)_T \textrm{d}L + \left( \frac{\partial S}{\partial T} \right)_L \textrm{d}T \right] + f\textrm{d}L = T\left(\frac{\partial S}{\partial T}\right)_L \textrm{d}T + \left[  T\left( \frac{\partial S}{\partial L} \right)_T + f \right] \textrm{d}L
+$$
+
+We next note that:
+
+$$
+\textrm{d}E = \left( \frac{\partial E}{\partial T}\right)_L \textrm{d}T +  \left( \frac{\partial E}{\partial L}\right)_T \textrm{d}L
+$$
+and hence by equating coefficients of $\textrm{d}T$ and $\textrm{d}L$ in the previous two equations we arrive at the desired results.
+
+EXAMPLE_QUESTION:
+
+Use the definition of the Helmholtz free energy $F=E-TS$ (an exact differential) and the result obtained in the first part of this question to show that:
+\[
+\left( \frac{\partial S}{\partial L}\right)_T = -\left( \frac{\partial f}{\partial T}\right)_L
+\]
+
+WORKED_SOLUTION:
+
+Firstly:
+
+\[
+\textrm{d}F = \textrm{d}E - T\textrm{d}S - S\textrm{d}T = T\textrm{d}S+f\textrm{d}L - T\textrm{d}S - S\textrm{d}T  = f\textrm{d}L - S\textrm{d}T
+\]
+
+Next remember that $F=F(L,T)$ for system at equilibrium and hence:
+
+\[
+\textrm{d}F = \left(\frac{\partial F}{\partial L}\right)_T \textrm{d}L + \left(\frac{\partial F}{\partial T}\right)_L \textrm{d}T
+\]
+
+By equating coefficients in the previous two expressions we arrive at:
+
+$$
+\begin{aligned}
+f &= \left(\frac{\partial F}{\partial L}\right)_T \qquad \rightarrow \qquad \left( \frac{\partial f}{\partial T} \right)_L = \left( \frac{\partial^2 F}{\partial T \partial L} \right) \\
+S &= -\left(\frac{\partial F}{\partial T}\right)_L \qquad \rightarrow \qquad -\left( \frac{\partial S}{\partial L} \right)_T = \left( \frac{\partial^2 F}{\partial L \partial T} \right) \\
+\end{aligned}
+$$
+
+The required result is obtained by noting that the cross derivatives in the above are equal because $F$ is an exact differential.
+
+EXAMPLE_QUESTION:
+
+If the mechanical equation of state of the bar is $f=aT^2[L-L_0]$, where $a$ is a positive constant show that:
+
+\[
+\left( \frac{\partial S}{\partial L}\right)_T = -2aT[L-L_0]
+\]
+
+WORKED_SOLUTION:
+
+From the previous parts we have:
+
+\[
+\left( \frac{\partial S}{\partial L}\right)_T = -\left( \frac{\partial f}{\partial T}\right)_L
+\]
+
+We can calculate $\left( \frac{\partial f}{\partial T}\right)_L$ from the mechanical equation of state.   It is:
+
+\[
+\left( \frac{\partial f}{\partial T}\right)_L = 2aT[L-L_0]
+\]
+
+EXAMPLE_QUESTION:
+
+Explain why $\left( \frac{\partial S}{\partial T }\right)_L=\frac{C_L}{T}$ where $C_L$ is the 
+constant length heat capacity $C_L=\left( \frac{\partial E}{\partial T} \right)_L$
+
+WORKED_SOLUTION:
+
+Rearranging what we are told in the question:
+\[
+\textrm{d}E = C_L \textrm{d}T
+\]
+when no work is done (that is to say the length of the bar is fixed but the temperature of the bar is changed).  Because no work is done this 
+equation implies that the heat input/output is always $\textrm{d}q = C_L \textrm{d}T$ regardless of whether the system is at equilibrium at all points
+during the transition or not.  This holds because the internal energy is an exact differential and hence the change in the internal energy depends only 
+on the initial and final states - it does not depend on the manner of the transition (i.e. whether it is reversible/irreversible).
+
+Remembering that the second law of thermodynamics tells us:
+\[
+\textrm{d}S = \frac{\textrm{d}q_{rev}}{T}
+\]
+we can thus write
+\[
+\textrm{d}S = \frac{C_L\textrm{d}T}{T} \qquad \rightarrow \qquad \left( \frac{\partial S}{\partial T} \right)_L = \frac{C_L}{T}
+\]
+
+EXAMPLE_QUESTION:
+
+Use the results from the previous two parts and the fact that the entropy (an exact differential) can be written as a function of $L$ and $T$ - i.e. $S(L,T)$ 
+to show that
+\[
+C_L(L,T) = -aT(L-L_0)^2 + bT
+\]
+You will need to use the fact that $C_L=bT$ when $L=L_0$.
+
+WORKED_SOLUTION:
+
+Because we have $S=S(L,T)$ we can write:
+\[
+\textrm{d}S = \left( \frac{\partial S}{\partial L} \right)_T \textrm{d}L + \left(\frac{\partial S}{\partial T}\right)_L \textrm{d}T 
+\]
+We next note that because $S$ is an exact differential:
+
+\[
+\left[ \frac{\partial }{\partial L} \left( \frac{\partial S}{\partial T}\right)_L \right]_T =  \left[ \frac{\partial }{\partial T} \left( \frac{\partial S}{\partial L}\right)_T \right]_L \qquad \rightarrow \qquad \left[ \frac{\partial }{\partial L} \frac{C_L}{T} \right]_T =  -\left[ \frac{\partial }{\partial T} 2aT(L-L_0) \right]_L
+\]
+
+Here we use the results for $ \left( \frac{\partial S}{\partial L} \right)_T$ and $\left(\frac{\partial S}{\partial T}\right)_L$ that were derived in previous parts
+of this question.
+
+If we now do this piece of differentiation we find:
+\[
+\frac{1}{T} \left( \frac{\partial C_L}{\partial L} \right)_T = -2a(L-L_0) \qquad \rightarrow \qquad \left( \frac{\partial C_L}{\partial L} \right)_T = -2aT(L-L_0)
+\]
+
+This is a partial differential equation we can solve as follows
+\[
+C_L(L,T) = -aT(L^2-2L_0L) + K(T) = -aT(L-L_0)^2 - L_0^2 + K(T)
+\]
+
+To determine $K(T)$ note from the question that $C_L(L_0,T)=bT$ hence:
+
+\[
+C_L(L_0,T) = -aT(L_0 - L_0)^2 - L_0^2 + K(T) = K(T) - L_0^2 = bT \qquad \rightarrow \qquad K(T) = bT +L_0^2
+\]
+
+EXAMPLE_QUESTION:
+
+Use all the results you have arrived at previously and the fact that $S_0=S(L_0,T_0)$ to show that:
+\[
+S(L,T) = b(T-T_0) - aT(L-L_0)^2 + S_0
+\]
+
+WORKED_SOLUTION:
+
+We know from the previous parts and basic integration that:
+
+$$
+\left(\frac{\partial S}{\partial L} \right)_T = -2aT(L-L_0) \qquad \rightarrow \qquad S(L,T) = -aT(L^2 - 2L_0L) + f(T)
+$$
+
+Differentiating this expression with respect to $T$ at constant $L$ gives:
+
+\[
+\left( \frac{\partial S }{\partial T} \right)_L = -a(L^2-2L_0L) + \frac{\textrm{d}f(T)}{\partial T} 
+\]
+
+We know from previous parts of this question, however, that
+
+\[
+\left( \frac{\partial S }{\partial T} \right)_L=\frac{C_L}{T} = \frac{bT - aT(L-L_0)^2}{T} = b - a(L-L_0)^2
+\]
+
+which, when combined with the above implies that:
+
+\[
+-a(L^2-2L_0L) + \frac{\textrm{d}f(T)}{\textrm{d} T} = b - a(L-L_0)^2 \quad \rightarrow \quad \frac{\textrm{d}f(T)}{\textrm{d} T} = b - aL_0^2 \quad \rightarrow \quad f(T) = bT - aL_0^2T + C
+\]
+
+Substituting this result for $f(T)$ into the first equation in this solution gives:
+
+$$
+\begin{aligned}
+S(L,T) & = -aT(L^2 -2L_0L + L_0^2) + bT + C = -aT(L-L_0)^2 + bT + C
+ \end{aligned}
+$$
+
+We finish by using the boundary condition from the question $S_0=S(L_0,T_0)$.  Substituting for $L_0$ and $T_0$ into the above we get:
+
+\[
+S_0 = -aTL(L_0-L_0)^2 + bT_0 + C \qquad \rightarrow \qquad C=S_0 - bT_0 
+\]
+
+When this value of $C$ is inserted into the equation that we have derived for $S(L,T)$ we get the result the question asks for.
+
+EXAMPLE_QUESTION:
+
+If the bar is at temperature $T_i$ and if it has length $L_i$ and a tensile force is applied until the bar reaches a length of 
+$L_f$ derive an expression for the value of the final temperature $T_f$ if this extension (change of thermodynamic state) is performed adiabatically.
+
+WORKED_SOLUTION:
+
+It is important to remember at this stage that because the change in length takes place adiabatically there is no associated change in 
+entropy.  This implies: 
+
+$$
+\begin{aligned}
+0=S_f-S_i & = b(T_f - T_0) -aT_f (L_f-L_0)^2 + S_0 - [b(T_i - T_0) -aT_i(L_i-L_0)^2 + S_0] \\
+  & = b(T_f-T_i) - a[T_f(L_f-L_0)^2 - T_i(L_i-L_0)^2]
+\end{aligned}
+$$
+By rearranging this expression we find that:
+
+\[
+T_f = \frac{T_i [ b - a(L_i -L_0)^2] }{b-a(L_f-L_0)^2}
+\]
+
+Notice that for a tensile force $L_f>L_i$ and hence $a(L_f-L_0)^2>a(L_i-L_0)^2$ so $b-a(L_f-L_0)^2 \lt b-a(L_i-L_0)^2$ consequently:
+
+$$
+\frac{b - a(L_i -L_0)^2 }{b-a(L_f-L_0)^2} > 1 \qquad \rightarrow \qquad \frac{T_f}{T_i} > 1 
+$$
+
+In other words, stretching the bar heats it up.

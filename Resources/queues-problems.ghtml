@@ -6,6 +6,8 @@ The problems below all involve a continuous time Markov chains that can be used 
 Such Markov chains have a stationary distribution when the time between arrivals is greater than the average 
 service time.  Further notice how this model for queues can appear in a range of different guises.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 A second hand bookshop receives books from donors at a average rate
@@ -119,6 +121,8 @@ i \left(\frac{\lambda}{\mu}\right)^i =
 
 The result asked for in the question is obtained by multiplying top and bottom
 by $\mu$.
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 
@@ -241,6 +245,8 @@ $$
 \frac{\lambda}{\mu} \right)^{C+1}} \sum_{n=0}^C n \left(
 \frac{\lambda}{\mu} \right)^n
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

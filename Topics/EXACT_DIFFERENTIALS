@@ -8,3 +8,4 @@ LEARNINGOUTCOMES:
 - You should be able to find the function $u(x,y)$ from a differential of the form $\textrm{d}u = C_1(x,y) \textrm{d}x + C_2(x,y) \textrm{d}y$
 
 END:
+EXACT_DIFFERENTIALS EXERCISE HTML AMA4004 exact-differential-problems G.~Tribello Some problems involving partial differential equations.

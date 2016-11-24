@@ -2,7 +2,7 @@ TITLE: Gibbs Phase rule
 
 DESCRIPTION:
 
-The requirement that all intensive variables must be homogenous (equal) across the entirety of the system when the system is at equilibrium ensures that {\bf at equilibrium} not all thermodynamic quantities are independent.  In particular, there is a result called Gibb's phase rule which states:
+The requirement that all intensive variables must be homogenous (equal) across the entirety of the system when the system is at equilibrium ensures that <b> at equilibrium</b> not all thermodynamic quantities are independent.  In particular, there is a result called Gibb's phase rule which states:
 $$
 F = C - \pi + 2
 $$
@@ -16,3 +16,4 @@ LEARNINGOUTCOMES:
 
 END:
 GIBBS_PHASE_RULE INTRO HTML AMA4004 gibbs-phase-rule-video G.~Tribello An introduction to Gibb's phase rule.
+GIBBS_PHASE_RULE EXERCISE HTML AMA4004 gibbs-phase-rule-problems G.~Tribello Some problems involving the manipulation of Gibbs phase rule.

@@ -4,6 +4,8 @@ DESCRIPTION:
 
 The following problems allow you to practise adding matrices together and multiplying matrices by a scalar.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Calculate sum of the following two matrices:
@@ -46,6 +48,8 @@ When we add together two matrices we add together the elements term by term as s
  \end{matrix}
 \right)
 \end{equation}
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

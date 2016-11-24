@@ -1,0 +1,232 @@
+TITLE: Problems involving exact differentials
+
+DESCRIPTION:
+
+A differential, $\textrm{d}f = C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}y$, is exact if it has the following
+property:
+$$
+\frac{\partial^2 f}{\partial x\partial y} = \frac{\partial^2 f}{\partial y\partial x}
+$$
+Furhtermore, if the differential is exact then we can write $\textrm{d}f = \left( \frac{\partial f}{\partial x}\right)_y\textrm{d}x + \left( \frac{\partial f}{\partial y}\right)_x\textrm{d}y$.  The exercises that follow involve learning how to test differentials for exactness and how to solve partial differential equations involving exact 
+differentials.  The exercises below should be completed as follows:
+
+<ol>
+<li> If you click on the first box below you will find a complete worked solution to the question it asks. </li>
+<li> The second box in the first section contains a set of comprehension questions that should be answered by looking through the worked solution that was given to the first problem. </li>
+<li> The boxes in the second question contain problems for you to work on.  Only the final solution is given when you click on the question to reveal an answer. </li>
+<li> The two questions in the final section involve applying what you have learnt about exact differentials to thermodynamics. </b>
+</ol>
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Test the differential $\textrm{d}u = (y-x^2) \textrm{d}x + (x+y^2) \textrm{d}y$ for exactness and find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+An exact differential, $\textrm{d}f=C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}x$, has the following important properties:
+
+$$
+\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x}
+$$
+
+Furthermore, $\textrm{d}f = \left(\frac{\partial f}{\partial x}\right)_y \textrm{d}x + \left(\frac{\partial f}{\partial y}\right)_x \textrm{d}y$ for an exact differential.  Two final useful results can be obtained by comparing coefficients of $\textrm{d}x$ and $\textrm{d}y$ in  $\textrm{d}f=C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}y$ and  $\textrm{d}f = \left(\frac{\partial f}{\partial x}\right)_y \textrm{d}x + \left(\frac{\partial f}{\partial y}\right)_x \textrm{d}y$.  These two results being of course:
+
+$$
+\left( \frac{\partial f}{\partial x} \right)_y = C_1(x,y) \qquad \textrm{and} \qquad \left( \frac{\partial f}{\partial y} \right)_x = C_2(x,y) 
+$$
+
+We can then insert these results into $\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x}$ to obtain:
+
+$$
+\left(\frac{\partial C_1}{\partial y}\right)_x = \left(\frac{\partial C_2}{\partial x}\right)_y 
+$$
+
+In the example given in the question
+
+$$
+C_1 = (y-x^2) \qquad \rightarrow \qquad \left(\frac{\partial C_1}{\partial y}\right)_x = 1
+$$
+
+$$
+C_2 = (x+y^2) \qquad \rightarrow \qquad \left(\frac{\partial C_2}{\partial x}\right)_y = 1
+$$
+$\textrm{d}u$ is thefore an exact differential because $\left(\frac{\partial C_1}{\partial y}\right)_x = \left(\frac{\partial C_2}{\partial x}\right)_y$.  We can find $u$ using indefinite integrals.   We know that:
+
+$$
+\left( \frac{\partial u}{\partial x} \right)_y = y - x^2 \qquad \qquad \left( \frac{\partial u}{\partial y} \right)_x = x + y^2
+$$
+
+We can thus integrate along the $x$ axis (i.e. keeping $y$ fixed) and get the following.
+
+$$
+\int (y - x^2)_y \textrm{d}x = yx - \frac{1}{3}x^3 + k(y)
+$$
+
+where $k(y)$ is some unknown function of $y$.  Similarly:
+
+$$
+\int (x + y^2)_x \textrm{d}y = yx + \frac{1}{3}y^3 + c(x)
+$$
+
+For the above two functions to be consistent the functions $c(x)$ and $k(y)$ must be equal to:
+
+$$
+c(x) = -\frac{1}{3}x^3 \qquad k(y) = \frac{1}{3}y^3
+$$
+Hence:
+$$
+u(x,y) = \frac{1}{3} y^3 +yx - \frac{1}{3}x^3 + C
+$$
+
+EXAMPLE_QUESTION:
+
+Use the information in the worked example above to answer the following questions:
+
+<ol>
+<li> For the exact differential $\textrm{d}f = C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}y$ how are the functions $C_1(x,y)$ and $C_2(x,y)$ related to the partial derivatives of the function $f$? </li>
+<li> Explain why $\left(\frac{\partial C_1}{\partial y}\right)_x = \left(\frac{\partial C_2}{\partial x}\right)_y$ must hold for the differential $\textrm{d}f = C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}y$ to be exact. </li>
+<li> Explain what we mean when we state that we integrate along the $x$ axis and why the additive constant that we obtain when we do so depends on $y$. </li>
+<li> What results from the earlier parts of the proof must the solution, $u(x,y)=\frac{1}{3} y^3 +yx - \frac{1}{3}x^3 + C$, be consistent with. </li>
+</ol>
+
+WORKED_SOLUTION:
+
+<ol>
+<li> For an exact differential, $\textrm{d}f = C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}y$, $C_1(x,y)$ is the partial derivative of $f$ with respect to $x$ and $C_2$ is the partial derivative of $f$ with respect to $y$.  In other words, $\left( \frac{\partial f}{\partial x} \right)_y = C_1(x,y)$ and $\left( \frac{\partial f}{\partial y} \right)_x = C_2(x,y)$ </li>.
+<li> For an exact differential $\left(\frac{\partial C_1}{\partial y}\right)_x = \left(\frac{\partial C_2}{\partial x}\right)_y$ because, as discussed in the previous part, $C_1(x,y)$ and $C_2(x,y)$ must be equal to the first partial derivatives of $f(x,y)$ with respect to $x$ and $y$ respectively.  In other words, because $C_1(x,y) = \left( \frac{\partial f}{\partial x} \right)_y$ $\left(\frac{\partial C_1}{\partial y}\right)_x = \left(\frac{\partial^2 f}{\partial y \partial x}\right)$.  In addition, $C_2(x,y) = \left( \frac{\partial f}{\partial y} \right)_x$ so $\left(\frac{\partial C_2}{\partial x}\right)_x = \left(\frac{\partial^2 f}{\partial x \partial f}\right)$.  These two second-derivative, cross terms must be equal as $\textrm{d}f$ is an exact differential.</li>
+<li> By integrating along $x$ we mean that we integrate along a path that is parallel to the $x$ axis.  Now obviously there is are an infinite number of paths that run paralle to the $x$ axis - these paths differ in the value that $y$ takes.  The integral under each of these different paths will be different and as such the constant term depends on $y$. </li>
+<li> $u(x,y)=\frac{1}{3} y^3 +yx - \frac{1}{3}x^3 + C$ must be consistent with the integral obtained by integrating along a 1D path that runs parallel to the $x$ axis, $\int (y - x^2)_y \textrm{d}x = yx - \frac{1}{3}x^3 + k(y)$ and the result obtained by integrating along a 1D path that runs paralle to the $y$ axis $\int (x + y^2)_x \textrm{d}y = yx + \frac{1}{3}y^3 + c(x)$.  To arrive at the final result we solve for the two functions $k(y)$ and $c(x)$ by setting these two integrals equal. </li>  
+</ol>
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Test if the differential $\textrm{d}u = 2xy \textrm{d}x + (x^2 + 3y^2) \textrm{d}y$ is exact. If it is find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+$$
+u = x^2 y + y^3 + C
+$$
+
+EXAMPLE_QUESTION:
+
+Test if the differential $\textrm{d}u = 2xy \textrm{d}x + x^2 \textrm{d}y$ is exact. If it is find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+$$
+u = x^2 y + C
+$$
+
+EXAMPLE_QUESTION:
+
+Test if the differential $\textrm{d}u = (3x + 3) \textrm{d}x + (2y - 2)\textrm{d}y$  is exact. If it is find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+$$
+u = \frac{3}{2} x^2 + 3x + y^2 - 2y + C
+$$
+
+EXAMPLE_QUESTION:
+
+Test if the differential $\textrm{d}u = (2xy - 9x^2)\textrm{d}x + (2y + x^2 + 1) \textrm{d}y$ is exact. If it is find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+$$
+u = x^2y -3x^3 + y^2 + y + C
+$$
+
+EXAMPLE_QUESTION:
+
+Test if the differential $\textrm{d}u = (2xy^2 + 4)\textrm{d}x - 2(3 - x^2y)\textrm{d}y$ is exact. If it is find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+$$
+u = x^2y^2 + 4x - 6y  + C
+$$
+
+EXAMPLE_QUESTION:
+
+Test if the differential $\textrm{d}u = \left(\frac{2xy}{x^2 + 1} - 2x\right)\textrm{d}x - \left[ 2 - \ln(x^2 + 1) \right]\textrm{d}y$ is exact. If it is find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+$$
+u = y\ln(x^2 + 1) - 2y - x^2 +  C
+$$
+
+EXAMPLE_QUESTION:
+
+Test if the differential $\textrm{d}u = (3y^3 e^{3xy} - 1 )\textrm{d}x + ( 2ye^{3xy} + 3xy^2 e^{3xy})\textrm{d}y$ is exact. If it is find the function $u(x,y)$.
+
+WORKED_SOLUTION:
+
+$$
+u = y^2 e^{3xy} - x + C
+$$
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Consider the equation of state of an ideal gas $PV=Nk_BT$.  Clearly $V$ can be expressed as a function of $P$ and $T$, $V(P,T)$.  
+Show that $\textrm{d}V$ is an exact differential.
+
+WORKED_SOLUTION:
+
+Rearanging the equation of state for the ideal gas that we were given in the question we find that:
+$$
+V = \frac{N k_B T}{P}
+$$
+
+We can thus write the differential $\textrm{d}V$ as:
+$$
+\textrm{d}V = \left( \frac{\partial V}{\partial P}\right)_T \textrm{d}P + \left(\frac{\partial V}{\partial T}\right)_P \textrm{d}T = -\frac{N k_B T}{P^2} \textrm{d}P + \frac{N k_B}{P} \textrm{d}T
+$$
+
+The coefficients of $P$ and $T$ in this expression are thus
+$$
+\begin{aligned}
+C_1 & =  -\frac{N k_B T}{P^2} \qquad \rightarrow \qquad \left( \frac{\partial C_1}{\partial T}\right)_P = -\frac{N k_B}{P^2} \\
+C_2 & =  \frac{N k_B}{P}   \qquad \rightarrow \qquad \left( \frac{\partial C_2}{\partial P}\right)_T = -\frac{N k_B}{P^2}
+\end{aligned}
+$$
+
+The above two partial derivatives are equal so $\textrm{d}V$ is thus an exact differential.  This agrees with our physical intuition. Volume 
+is a state function so whenever the system is moved between two particular thermodynamic states the the total change in volume is the 
+same. The path that is taken between these two states does not matter.
+
+EXAMPLE_QUESTION:
+
+Consider the equation of state for the ideal gas once more and determine if $-P\textrm{d}V$ an exact differential?
+
+WORKED_SOLUTION:
+
+Taking the differential we obtained for $\textrm{d}V$ in the previous part and multiplying it by $-P$ gives: 
+
+$$
+-P\textrm{d}V = \frac{N k_B T}{P} \textrm{d}P  - N k_B \textrm{d}T
+$$
+
+We thus have:
+
+$$
+\begin{aligned}
+C_1 & =  \frac{N k_B T}{P} \qquad \rightarrow \qquad \left( \frac{\partial C_1}{\partial T}\right)_P = \frac{N k_B}{P} \\
+C_2 & =  N k_B  \qquad \rightarrow \qquad \left( \frac{\partial C_2}{\partial P}\right)_T = 0
+\end{aligned}
+$$
+
+These two derivatives are not equal so $-P\textrm{d}V$ is not an exact differential.  In actual fact the integral of $-P\textrm{d}V$ is equal 
+to the total amount of $PV$-work that is done during the course of the transition between our thermodynamic states.  The work done during the 
+transition <b> does depend </b> on the path we take between the two thermodynamic states.  For instance the ammount of work done when the system
+is not allowed to exchange heat with its surroundings will be diffent to the ammount of work that will be done when the system is also allowed to
+exchange heat with the surroundings.  This result is thus in accordance with physical intutition once more.
+

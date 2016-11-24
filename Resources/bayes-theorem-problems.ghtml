@@ -5,6 +5,8 @@ DESCRIPTION:
 In what follows a full written solution is provided to the problem that was discussed in the video.
 For the remainder of the problems only the final solution is given.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Consider a test to detect a disease that 0.1 % of the population have. The test
@@ -41,6 +43,8 @@ $$
 P(D=1|T=1) = \frac{P(T=1|D=1)P(D=1)}{P(T=1)} = \frac{0.99 \times 0.001}{0.005985} \approx 0.165
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Two production lines produce the same part. Line 1 produces 1,000 parts per week of
@@ -53,6 +57,8 @@ WORKED_SOLUTION:
 $$
 P(L_1|D) = \frac{2}{5}
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 
@@ -68,6 +74,8 @@ $$
 P(R|F) \approx 0.1111
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 You are selling a product in an area where 30 % of the people live in the city
@@ -81,6 +89,8 @@ product are city dwellers before your new sales drive?
 WORKED_SOLUTION:
 
 Strategy 1 is better sand before the new sales drive $\frac{6}{13}$ of the people who are the product are city dwellers
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

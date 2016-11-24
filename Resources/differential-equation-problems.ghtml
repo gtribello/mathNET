@@ -5,6 +5,8 @@ DESCRIPTION:
 In the examples below a method for solving the simplest, variable differential equations 
 is introduced.  There are then some examples that allow you to practise using this technique.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Solve the following first order differential equation:

@@ -4,6 +4,8 @@ DESCRIPTION:
 
 A simple example problem involving the construction of random variables together with a simple varient on the problem for you to try.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 An urn contains 3 balls a red one, a green one and a blue one. Consider an
@@ -31,6 +33,8 @@ The classical interpretation of probability means all combinations are equally l
 $$
 P = \frac{1}{9} \nonumber
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

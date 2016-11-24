@@ -18,6 +18,8 @@ In doing the following exercises you will learn how to extract probabilistic
 information about the sums of independent and identical random variables 
 using the central limit theorem.
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Analysis of commuter travel  shows that the number of passenger per car, $X$, 
@@ -36,6 +38,8 @@ Thus:
 $$
  P( N \le 140 ) \approx \Phi(x) \approx \Phi(2) \approx 0.9772 \nonumber
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 
@@ -96,6 +100,8 @@ $$
  P( s > 1.2 ) = 1 - P( s \le 1.2 ) = 1 - 0.15625 = 0.844 \nonumber 
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 During the course of a single season a particular football player has 213 penalty attempts and scores 175 of them. 
@@ -153,6 +159,8 @@ value of $n$ into the above gives:
 $$
 \epsilon = \frac{\sqrt{0.146}}{\sqrt{213}} \Phi^{-1}\left( \frac{1.95}{2} \right) \approx 0.0262*1.9600 \approx 0.05135
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

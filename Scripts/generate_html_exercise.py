@@ -30,10 +30,9 @@ def convert_exercise_to_html( infile ):
            if inquestion>0 | insolution==1 :
               sys.error("DESCRIPTION SHOULD APPEAR BEFORE EXAMPLES IN INPUT FILE " + infile)
            html_string += "<H1> Introduction </H1>\n"
-        elif "EXAMPLE_QUESTION:" in item :
-           egcount += 1
-           if foundexamples==0 : 
-              html_string += "<H1> Worked examples </H1>\n"
+        elif "QUESTION_BREAK:" in item :
+           if foundexamples==0 :
+              html_string += "<H1> Example problems </H1>\n"
               html_string += "<p> Click on the problems to reveal the solution </p> \n" 
               foundexamples=1
            if insolution==1 :
@@ -41,9 +40,18 @@ def convert_exercise_to_html( infile ):
               html_string +='      </div>\n'
               html_string +='   </div>\n'
               html_string +='</div>\n'
+           insolution=0
+           egcount += 1
+           html_string += '<h4> Problem ' + str(egcount) + '</h4>'  
+        elif "EXAMPLE_QUESTION:" in item :
+           if insolution==1 :
+              html_string +='         </div>\n'
+              html_string +='      </div>\n'
+              html_string +='   </div>\n'
+              html_string +='</div>\n'
+              html_string += '</br>\n'
            inquestion=1
            insolution=0
-           html_string += '<h4> Problem ' + str(egcount) + '</h4>'
            html_string += '<div id="accordion" class="panel-group"> \n'
            html_string += '<!-- Start of introductory panel -->\n'
            html_string += '<div class="panel panel-default">\n'

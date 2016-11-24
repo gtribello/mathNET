@@ -11,6 +11,8 @@ $$
 \mathbb{E}[Y(t)] = \mu \lambda t \qquad \qquad \textrm{var}[Y(t)] = \lambda t(\mu^2 + \sigma^2)
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 In September in Bergen (western Norway), showers arrive at a rate $\lambda=0.5$ per day.  During each of these showers the expected amount of rainfall is $\mathbb{E}[C_{i}]=18\ $mm and  
@@ -39,6 +41,8 @@ $$
 \textrm{var}(P) = \lambda t ( \sigma^2 +\mu^2 ) = 0.5\times 30 \times( 250 + 18^2 ) = 8610 \textrm{ mm}^2
 $$
 
+QUESTION_BREAK:
+
 EXAMPLE_QUESTION:
 
 Suppose that casualties due to car accidents can be modelled using a compound Poisson process.  Road accidents on a motorway  occur according to a Poisson process with rate $\lambda=0.1$
@@ -66,6 +70,8 @@ $$
 0.2^2 + 0.19 ) = 0.69
 \end{aligned}
 $$
+
+QUESTION_BREAK:
 
 EXAMPLE_QUESTION:
 

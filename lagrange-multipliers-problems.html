@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<!-- Title -->
-	<title>Random variables
+	<title>Lagrange multipliers
  : Exercise</title>
 	<!-- Meta -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -68,13 +68,15 @@
 		<div id="content" class="container">
                     <div class="panel panel-blue">
                       <div class="panel-heading">
-                          <h1 class="panel-title"> Random variables
+                          <h1 class="panel-title"> Lagrange multipliers
  : Exercises</h1>
                       </div>
                       
 <H1> Introduction </H1>
 
-A simple example problem involving the construction of random variables together with a simple varient on the problem for you to try.
+The method of Lagrange multipliers is used to find the optimum of a function $f(x,y)$ subject to the constraint that $g(x,y)=c$.
+The exercises in the first section that follows allow you to practise using this method to find constrained optimums.  To solve 
+the problems in the second section you will need to set up the problem so that you can apply Lagrange's method. 
 
 <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
@@ -86,10 +88,7 @@ A simple example problem involving the construction of random variables together
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
 
-An urn contains 3 balls a red one, a green one and a blue one. Consider an
-experiment in which balls are drawn at random and then replaced. Define the sample space for
-such an experiment if this is done twice. What is the probability for each element in the sample
-space? 
+Find the optimum of $f(x,y)=x^2+y^2$ subject to the constraint $g(x,y)=2x+y=10$
 
         </a>
         </h4>
@@ -98,30 +97,11 @@ space?
         <div class="panel-body">
            <div class="row">
 
-The sample space is:
-<br/><br/> 
-
-<table>
-<col width="100">
-<col width="100">
-<col width="100">
-<tr><td> red red </td><td> red green </td><td> red blue </td></tr>
-<tr><td> green red </td><td> green green </td><td> green blue </td></tr>
-<tr><td> blue red </td><td> blue green </td><td> blue blue </td></tr>
-</table> 
-<br/> 
-
-The classical interpretation of probability means all combinations are equally likely.  Hence:
-
-$$
-P = \frac{1}{9} \nonumber
-$$
-
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4>
+</br>
 <div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
@@ -129,9 +109,8 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
 
-Consider the problem described in the example but now suppose that the balls are not replaced.  Enumerate the 
-possible outcomes and calculate the probabilities.
- 
+Find the optimum of $f(x,y)=x^2+y^2$  subject to the constraint $g(x,y)=x+2y=5$
+
         </a>
         </h4>
     </div>
@@ -139,15 +118,11 @@ possible outcomes and calculate the probabilities.
         <div class="panel-body">
            <div class="row">
 
-$$
-P = \frac{1}{6}
-$$
-
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 3</h4>
+</br>
 <div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
@@ -155,7 +130,7 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
 
-What is the probabilities that two randomly selected people have their birthday on the 4th October (assume no leap years)?
+Find the optimum of $f(x,y) = 81x^2 + y^2$ subject to the constraint $g(x,y)=4x^2 +y^2=9$
 
         </a>
         </h4>
@@ -163,10 +138,6 @@ What is the probabilities that two randomly selected people have their birthday 
     <div id="collapse-2" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
-$$
-P = \left( \frac{1}{365} \right)^2
-$$
 
          </div>
       </div>
@@ -179,8 +150,8 @@ $$
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-  
-What is the probability that two randomly selected people have the same birthday (assume no leap years again)?
+
+Find the optimum of $f(x,y)=8x^2 - 2y$ subject to the constraint $g(x,y)=x^2+y^2 = 1$
 
         </a>
         </h4>
@@ -189,15 +160,11 @@ What is the probability that two randomly selected people have the same birthday
         <div class="panel-body">
            <div class="row">
 
-$$
-P = \left( \frac{1}{365} \right)
-$$
-
          </div>
       </div>
    </div>
 </div>
-<h4> Problem 4</h4>
+</br>
 <div id="accordion" class="panel-group"> 
 <!-- Start of introductory panel -->
 <div class="panel panel-default">
@@ -205,10 +172,7 @@ $$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
 
-In the game of bridge 4 players share out the 52 cards in a deck.  In each round three players play while the last player (the dummy)
-lays his cards out on the table for this partner (the declarer) to play.  If the declarer can see that he and the dummy have 8 of the heart
-cards between them he knows that the two hands that he cannot see must hold five heart cards between them.  What are the probabilities that
-the cards are split 0:5, 1:4 and 2:3 between the other two players?
+Find the optimum of $f(x,y,z) = y^2 - 10z$ subject to the constraint $x^2 + y^2 + z^2 = 36$
 
         </a>
         </h4>
@@ -217,12 +181,178 @@ the cards are split 0:5, 1:4 and 2:3 between the other two players?
         <div class="panel-body">
            <div class="row">
 
-<ul>
-<li>Probability of 0:5 split : 0.06 </li>
-<li>Probability of 1:4 split : 0.32 </li>
-<li>Probability of 2:3 split : 0.62 </li>
-</ul>
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
 
+Find the optimum of $f(x,y,z) = xyz$ subject to the constraint $x+9y^2 + z^2 = 4$.  (assume $x \ge 0$)
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-5" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
+
+Find the optimum of $f(x,y,z)=3x^2 + y$ subject to the constraints $4x - 3y = 9$ and $x^2 + z^2 = 9$
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-6" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 2</h4>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
+
+Consider a three-sided spinner, which has edges labelled $0$, $1$ and $2$.  Calculate the most probable set of 
+probabilities $\{p_j\}$, for getting 0, 1 and 2 given that the average value of $j$ is $\langle j \rangle =10/7$.  
+N.B.  The most probable set of probabilities will have the minimum information subject to the constraints implied in the question.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-7" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The information is given by:
+
+\[
+I(p) = \sum_{j=0}^2 p_j \log(p_j)
+\]
+
+We want to minimise this subject to the constraints $p_0+p_1+p_2=1$ (normalisation) and $p_1+2p_2=\frac{10}{7}$ (average value).
+
+The extended function to minimise is thus:
+
+\[
+I'(\{p_j\}) = \sum_{j=0}^2 p_j \log(p_j) + \lambda_1 \left( \sum_{j=0}^2 j p_j - \frac{10}{7} \right) + \lambda_2 \left( \sum_{j=0}^2 p_j -1 \right)
+\]
+
+At the minimum of this function we have:
+
+\[
+\begin{aligned}
+\frac{\partial I'}{\partial p_j} & = \log(p_j) + 1 + j \lambda_1 + \lambda_2 = 0 \qquad \rightarrow \qquad p_j = e^{-(1+\lambda_2) - j\lambda_1} \qquad \rightarrow \qquad p_j = \frac{x^j }{Q} \\
+\frac{\partial I'}{\partial \lambda_1} & =  \sum_{j=0}^2 jp_j - \frac{10}{7} =0 \\
+\frac{\partial I'}{\partial \lambda_2} & = \sum_{j=0}^2 p_j -1 = 0 
+\end{aligned}
+\]
+
+Notice we have defined $Q=e^{1+\lambda_2}$ in the above and $x=e^{-\lambda_1}$.  These constraints tell us that:
+
+\[
+\begin{aligned}
+1&=p_0+p_1+p_2 = \frac{1+ x+x^2}{Q} \qquad \rightarrow \qquad 1+x+x^2 = Q \\
+\frac{10}{7} & = p_1 + 2p_2 = \frac{x+2x^2}{Q} \qquad \rightarrow \qquad x+2x^2 = \frac{10}{7} Q
+\end{aligned}
+\]
+
+Equating these two expressions we get:
+
+\[
+\frac{10}{7} (1 + x + x^2 ) = x + 2x^2 \qquad \rightarrow \qquad 4x^2 - 3x - 10 = 0 \qquad \rightarrow \qquad x=2
+\]
+
+and hence $Q=1+x+x^2 = 1 + 2 + 4 = 7$.  We thus have the following probability distribution:
+
+\[
+p_0 = \frac{1}{7} \qquad p_1 = \frac{2}{7} \qquad p_2 = \frac{4}{7}
+\]
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
+
+Calculate the most probable set of probabilities $\{p_j\}$, given that the average value of $j$ is $\langle j \rangle$ and that the 
+face painted 0 never occurs.  (Hint: notice that we have three constraints here and that there are three unknowns).
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-8" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+Three equations and three unknowns means that we can solve this problem using simultaneous equations.  We don't need to do Lagrange multipliers again.
+These three simultaneous equations are:
+
+\[
+\begin{aligned}
+p_0 & = 0 \\
+p_0 + p_1 + p_2 &= 1 \qquad \rightarrow \qquad p_1 + p_2 = 1 \\
+p_1 + 2p_2 & = \frac{10}{7}
+\end{aligned}
+\]
+
+From this we can deduce that:
+
+\[
+p_1 = 1 - p_2 \qquad \rightarrow \qquad 1-p_2 + 2p_2 = \frac{10}{7} \qquad \rightarrow \qquad p_2 = \frac{3}{7} \qquad p_1 = \frac{4}{7}
+\]
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse">
+
+Now suppose that all three sides are equally probable.  Is the information in this distribution greater than or 
+less than the information in the distribution you calculated in the first part of this problem?
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-9" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The information is lower as the uniform distribution has the minimum amount of information.
          </div>
       </div>
    </div>

@@ -1,0 +1,139 @@
+TITLE: Lagrange multipliers
+
+DESCRIPTION:
+
+The method of Lagrange multipliers is used to find the optimum of a function $f(x,y)$ subject to the constraint that $g(x,y)=c$.
+The exercises in the first section that follows allow you to practise using this method to find constrained optimums.  To solve 
+the problems in the second section you will need to set up the problem so that you can apply Lagrange's method. 
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Find the optimum of $f(x,y)=x^2+y^2$ subject to the constraint $g(x,y)=2x+y=10$
+
+WORKED_SOLUTION:
+
+EXAMPLE_QUESTION:
+
+Find the optimum of $f(x,y)=x^2+y^2$  subject to the constraint $g(x,y)=x+2y=5$
+
+WORKED_SOLUTION: 
+
+EXAMPLE_QUESTION:
+
+Find the optimum of $f(x,y) = 81x^2 + y^2$ subject to the constraint $g(x,y)=4x^2 +y^2=9$
+
+WORKED_SOLUTION: 
+
+EXAMPLE_QUESTION:
+
+Find the optimum of $f(x,y)=8x^2 - 2y$ subject to the constraint $g(x,y)=x^2+y^2 = 1$
+
+WORKED_SOLUTION: 
+
+EXAMPLE_QUESTION:
+
+Find the optimum of $f(x,y,z) = y^2 - 10z$ subject to the constraint $x^2 + y^2 + z^2 = 36$
+
+WORKED_SOLUTION: 
+
+EXAMPLE_QUESTION:
+
+Find the optimum of $f(x,y,z) = xyz$ subject to the constraint $x+9y^2 + z^2 = 4$.  (assume $x \ge 0$)
+
+WORKED_SOLUTION: 
+
+EXAMPLE_QUESTION:
+
+Find the optimum of $f(x,y,z)=3x^2 + y$ subject to the constraints $4x - 3y = 9$ and $x^2 + z^2 = 9$
+
+WORKED_SOLUTION: 
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Consider a three-sided spinner, which has edges labelled $0$, $1$ and $2$.  Calculate the most probable set of 
+probabilities $\{p_j\}$, for getting 0, 1 and 2 given that the average value of $j$ is $\langle j \rangle =10/7$.  
+N.B.  The most probable set of probabilities will have the minimum information subject to the constraints implied in the question.
+
+WORKED_SOLUTION:
+
+The information is given by:
+
+\[
+I(p) = \sum_{j=0}^2 p_j \log(p_j)
+\]
+
+We want to minimise this subject to the constraints $p_0+p_1+p_2=1$ (normalisation) and $p_1+2p_2=\frac{10}{7}$ (average value).
+
+The extended function to minimise is thus:
+
+\[
+I'(\{p_j\}) = \sum_{j=0}^2 p_j \log(p_j) + \lambda_1 \left( \sum_{j=0}^2 j p_j - \frac{10}{7} \right) + \lambda_2 \left( \sum_{j=0}^2 p_j -1 \right)
+\]
+
+At the minimum of this function we have:
+
+\[
+\begin{aligned}
+\frac{\partial I'}{\partial p_j} & = \log(p_j) + 1 + j \lambda_1 + \lambda_2 = 0 \qquad \rightarrow \qquad p_j = e^{-(1+\lambda_2) - j\lambda_1} \qquad \rightarrow \qquad p_j = \frac{x^j }{Q} \\
+\frac{\partial I'}{\partial \lambda_1} & =  \sum_{j=0}^2 jp_j - \frac{10}{7} =0 \\
+\frac{\partial I'}{\partial \lambda_2} & = \sum_{j=0}^2 p_j -1 = 0 
+\end{aligned}
+\]
+
+Notice we have defined $Q=e^{1+\lambda_2}$ in the above and $x=e^{-\lambda_1}$.  These constraints tell us that:
+
+\[
+\begin{aligned}
+1&=p_0+p_1+p_2 = \frac{1+ x+x^2}{Q} \qquad \rightarrow \qquad 1+x+x^2 = Q \\
+\frac{10}{7} & = p_1 + 2p_2 = \frac{x+2x^2}{Q} \qquad \rightarrow \qquad x+2x^2 = \frac{10}{7} Q
+\end{aligned}
+\]
+
+Equating these two expressions we get:
+
+\[
+\frac{10}{7} (1 + x + x^2 ) = x + 2x^2 \qquad \rightarrow \qquad 4x^2 - 3x - 10 = 0 \qquad \rightarrow \qquad x=2
+\]
+
+and hence $Q=1+x+x^2 = 1 + 2 + 4 = 7$.  We thus have the following probability distribution:
+
+\[
+p_0 = \frac{1}{7} \qquad p_1 = \frac{2}{7} \qquad p_2 = \frac{4}{7}
+\]
+
+EXAMPLE_QUESTION:
+
+Calculate the most probable set of probabilities $\{p_j\}$, given that the average value of $j$ is $\langle j \rangle$ and that the 
+face painted 0 never occurs.  (Hint: notice that we have three constraints here and that there are three unknowns).
+
+WORKED_SOLUTION:
+
+Three equations and three unknowns means that we can solve this problem using simultaneous equations.  We don't need to do Lagrange multipliers again.
+These three simultaneous equations are:
+
+\[
+\begin{aligned}
+p_0 & = 0 \\
+p_0 + p_1 + p_2 &= 1 \qquad \rightarrow \qquad p_1 + p_2 = 1 \\
+p_1 + 2p_2 & = \frac{10}{7}
+\end{aligned}
+\]
+
+From this we can deduce that:
+
+\[
+p_1 = 1 - p_2 \qquad \rightarrow \qquad 1-p_2 + 2p_2 = \frac{10}{7} \qquad \rightarrow \qquad p_2 = \frac{3}{7} \qquad p_1 = \frac{4}{7}
+\]
+
+EXAMPLE_QUESTION:
+
+Now suppose that all three sides are equally probable.  Is the information in this distribution greater than or 
+less than the information in the distribution you calculated in the first part of this problem?
+
+WORKED_SOLUTION:
+
+The information is lower as the uniform distribution has the minimum amount of information.

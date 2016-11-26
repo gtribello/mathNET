@@ -4,13 +4,11 @@ VIDEO: https://www.youtube.com/embed/KiLr6ErYCKE
 
 QUESTIONS:
 
-- Explain in your own words what the difference is between the extensive variables that I have labelled $\alpha^{(j)}$ and the variables I have labelled $B^{(k)}$ in the video.
-- What derivative we trying to work out in this video?  Use the space below to explain why and any details you think are relevant.
-- Given that $\frac{S}{k_B} = \Psi + \sum_k \lambda_k \langle B^{(k)} \rangle$ write an expression for the derivative that we would like to calculate.
-- Explain in your own words why: $\frac{\partial \Phi }{\partial \alpha^{(j)}} \textrm{d}\alpha^{(j)} = \textrm{d} \Phi$
-- Give an expression that allows one to calculate $\Psi$.
-- Hence, give an expression for the derivative $\frac{\partial \Psi}{\partial \alpha^{(j)}}$
-- What is $\frac{e^{-\sum_k \lambda_k B_i^{(k)}}}{e^\Psi}$ equal to?
-- Use this result to explain in your own words why: $\frac{\partial \Psi}{\partial \alpha^{(j)}} = - \sum_k \frac{\partial \lambda_k}{\partial \alpha^{(j)}} \langle B^{(k)} \rangle - \sum_k \lambda_k \left\langle \frac{\partial B^{(k)} }{\partial \alpha^{(j)}} \right\rangle$
-- Give the final result for the change in infinitesimal change in entropy that accompanies an infinitesimal change in the fixed extensive thermodynamic variable $\alpha^{(j)}$
-
+- What thermodynamic potential can be calculated from the canonical partition function?  How is this done and how is this result derived?
+- Give an expression that allows one to calculate the ensemble average, $\langle A \rangle$, for the observable $A$.  You may assume that this quantity can be calculated based on the positions, $\mathbf{x}$, and momenta, $\mathbf{p}$, of the atoms using a function $A( \mathbf{x},\mathbf{p})$.
+- Explain why $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j )- \Psi}$
+- Now calculate the first derivative of $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j) - \Psi}$ with respect to $\beta$ and hence show that $\langle E \rangle = - \frac{ \partial \Psi }{\partial \beta }$
+- Calculate the second derivative of $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j) - \Psi}$ with respect to $\beta$ and hence show that $\langle (H - \langle E \rangle )^2 \rangle = \frac{ \partial^2 \Psi }{\partial \beta^2 }$
+- Explain (in your own words) why $\langle (H - \langle E \rangle )^2 \rangle = - \frac{ \partial \langle E \rangle }{\partial \beta }$. 
+- Use the chain rule to show that: $\frac{\partial \langle E \rangle }{\partial \beta} = k_B T^2 \frac{\partial \langle E \rangle }{\partial T}$
+- Use the result you have just arrived at to write an expression that tells you how the heat capacity can be calculated from the fluctutations in the total energy $\langle (H - \langle E \rangle )^2\rangle$

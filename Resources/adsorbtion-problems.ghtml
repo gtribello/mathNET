@@ -1,0 +1,117 @@
+TITLE: Adsorbtion
+
+DESCRIPTION:
+
+The problems below require you to use what you have learnt about the canonical and grand canonical paritition 
+functions to derive a simple model for adsorbtion of atoms/molecules on a surface.
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+A surface has $M$ sites that can be either occupied by an atom or not.  How many different ways are there of arranging $N \lt M$ atoms on this surface 
+
+WORKED_SOLUTION:
+
+Notice that we have two types of objects - empty sites and filled sites.  Furthermore, there are $N$ filled sites and $M-N$ empty sites.  The number
+of different arrangments of these two types of object can be calculated using the binomial coefficient:
+$$
+\binom{M}{N} = \frac{M!}{N!(M-N)!}
+$$
+
+EXAMPLE_QUESTION:
+
+A surface has $M$ sites where molecules can be adsorbed in two states: the ground state, which has energy $E = 0$ and an excited state with energy $E = U$.
+Calculate the canonical partition function for a single molecule adsorbed on a particular adsorption site, $Z(1)$. Explain why when $N$ molecules adsorb 
+on the surface the canonical partition function for the whole system is given by:
+$$
+Z_c^{(N)} = \frac{ M!}{N!(M-N)!} \left[ Z_c^{(1)} \right]^N
+$$
+When performing the derivation for this second part you should assume that the adsorbed molecules do not interact with each other.
+
+WORKED_SOLUTION:
+
+The canonical partition function is given by:
+
+\[
+ Z_c = \sum_i e^{-\frac{E_i}{k_B T}}
+\]
+
+where the sum runs over all possible microstates and $E_i$ is the energy of microstate $i$.  For one molecule adsorbed on one site on the surface we thus have:
+
+\[
+Z_c^{(1)} = e^{0} + e^{-\frac{U}{k_B T}} = 1 + e^{-\frac{U}{k_B T}}
+\]
+
+As it's energy can be either equal to 0 or $U$.  For $N$ particles we thus have:
+
+\[
+\begin{aligned}
+Z_c^{(N)} & =  \frac{M!}{M!(M-N)!} \sum_{i_1} \sum_{i_2} \sum_{i_1} \dots 
+\sum_{i_N}  e^{-\frac{E_{i_1} + E_{i_2} + E_{i_3} + \dots + E_{i_N}}{k_B T}} \\
+& = \frac{M!}{M!(M-N)!} \sum_{i_1} \sum_{i_2} \sum_{i_1} \dots \sum_{i_N} 
+\prod_{j=1}^N e^{-\frac{E_{i_j}}{k_B T}} \\
+& = \frac{M!}{M!(M-N)!} \sum_{i_1} e^{-\frac{E_{i_1}}{k_B T}} \sum_{i_2} 
+e^{-\frac{E_{i_2}}{k_B T}} 
+\sum_{i_3} e^{-\frac{E_{i_3}}{k_B T}} \dots \sum_{i_N} e^{-\frac{E_{i_N}}{k_B 
+T}} \\
+& = \frac{M!}{M!(M-N)!} \left(Z_c^{(1)}\right)^N = \frac{M!}{M!(M-N)!} \left(1 
++ e^{-\frac{U}{k_B T}}\right)^N
+\end{aligned}
+\]
+
+The factor of $\frac{M!}{M!(M-N)!}$ comes about because when $N$ particles adsorb there will be $N$ filled sites and $M$ empty sites.  Hence, because
+we have to sum over all possible microstates when calculating the partition function, we have to consider all possible arrangements of the $N$ atoms 
+on the $M$ absorbption sites.  As discussed in the answer to the first part of this question we can calculate the number of orderings of $N$ filled sites
+and $M-N$ empty sites using the binomial coefficients.
+
+EXAMPLE_QUESTION:
+
+Explain why the grand canonical partition function for this system can be calculated from the canonical partition function using:
+$$
+Z_{gc} = \sum_{n=0}^M Z_c^{(n)} e^{\beta \mu n}
+$$
+Hence, show that the grand canonical partition function for the system that was introduced in the previous part is given by:
+$$
+Z_{gc} = ( 1 + e^{\beta \mu}\left[ 1 + e^{-\frac{U}{k_B T}} \right] )^M
+$$
+where $\mu$ is the chemical potential.  Then, by taking an appropriate derivative of this partition function, show that on average {\bf a fraction}:
+$$
+\langle K \rangle =\frac{  e^{\beta \mu}  [ 1 + e^{-\frac{U}{k_B T}} ] }{ 1 + e^{\beta \mu}\left[ 1 + e^{-\frac{U}{k_B T}} \right] }
+$$
+of the available lattice sites are occupied.
+
+WORKED_SOLUTION:
+
+The grand canonical partition is related to the canonical partition function by:
+
+\[
+\begin{aligned}
+  Z_{gc} & = \sum_{N=0}^M Z_c(N,V) e^{\beta \mu N} \\
+   & = \sum_{N=0}^M e^{\beta \mu N} \binom{M}{N} \left(1 + e^{-\frac{U}{k_B 
+T}}\right)^N \\
+ & = \sum_{N=0}^M \binom{M}{N} \left[ e^{\beta \mu} \left(1 + e^{-\frac{U}{k_B 
+T}}\right) \right]^N \\
+& = ( 1 + e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}])^M
+\end{aligned}
+\]
+
+In deriving this formula we have used the binomial theorem $\sum_{i=1}^N a^i b^{N-i} = (a+b)^N$ with $a=e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}]$ and $b=1$.
+
+</br> </br>
+
+To get the average fraction of occupied lattices sites, $\langle K \rangle$ we
+have to take the following derivative:
+\[
+ \langle K \rangle = \frac{1}{M} \frac{\partial \ln Z_{gc} }{\partial (\beta \mu) }
+\]
+when we take this derivative we find that:
+\[
+\begin{aligned}
+\langle K \rangle & = \frac{M}{M} \frac{\partial }{\partial(\beta \mu)} 
+\ln\left[ 
+1+e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}] \right] \\
+ & = \frac{ e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}] }{1+e^{\beta \mu}[1 
++ e^{-\frac{U}{k_B T}}]}
+\end{aligned}
+\]

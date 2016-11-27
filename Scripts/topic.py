@@ -37,9 +37,10 @@ class topic(object) :
      f.close()
      os.remove("html/" + self.name + ".html" )
      self.printTopicPage()
-     os.remove("html/" + modname + ".html" )
-     mymodules = module.listofmodules()
-     mymodules.get(modname).printModulePage()
+     if location!="EXTERNAL" :  
+        os.remove("html/" + modname + ".html" )
+        mymodules = module.listofmodules()
+        mymodules.get(modname).printModulePage()
      return 1
 
   def printTopicPage( self ):

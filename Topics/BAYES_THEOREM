@@ -22,3 +22,4 @@ END:
 BAYES_THEOREM INTRO HTML SOR3012 bayes_theorem_video G.~Tribello A video introducing Bayes theorem
 BAYES_THEOREM EXERCISE IPYTHON SOR3012 sor3012-6-bayes-theorem.ipynb G.~Tribello A programming exercise to help you get to grip with Bayes theorem
 BAYES_THEOREM EXERCISE HTML SOR3012 bayes-theorem-problems G.~Tribello Problems on Bayes theorem
+BAYES_THEOREM EXTERNAL VIDEO module https://www.khanacademy.org/math/precalculus/prob-comb/dependent-events-precalc/v/bayes-theorem-visualized blank Kahn academy video on bayes theorem.

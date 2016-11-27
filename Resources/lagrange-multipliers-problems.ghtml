@@ -14,41 +14,75 @@ Find the optimum of $f(x,y)=x^2+y^2$ subject to the constraint $g(x,y)=2x+y=10$
 
 WORKED_SOLUTION:
 
+$$
+x=4 \qquad y=2 \qquad f(x,y) = 20
+$$
+
 EXAMPLE_QUESTION:
 
 Find the optimum of $f(x,y)=x^2+y^2$  subject to the constraint $g(x,y)=x+2y=5$
 
 WORKED_SOLUTION: 
 
-EXAMPLE_QUESTION:
-
-Find the optimum of $f(x,y) = 81x^2 + y^2$ subject to the constraint $g(x,y)=4x^2 +y^2=9$
-
-WORKED_SOLUTION: 
+$$
+x=1 \qquad y=2 \qquad f(x,y) = 5
+$$
 
 EXAMPLE_QUESTION:
 
-Find the optimum of $f(x,y)=8x^2 - 2y$ subject to the constraint $g(x,y)=x^2+y^2 = 1$
+Find the largest value $f(x,y) = 81x^2 + y^2$ can take subject to the constraint $g(x,y)=4x^2 +y^2=9$
 
 WORKED_SOLUTION: 
+
+The extended function here is:
+
+$$
+F(x,y,\lambda) = 81x^2 + y^2 + \lambda( 4x^2 + y^2 - 9 )
+$$
+
+When this is differentiated with respect to $y$ you get:
+
+$$
+\frac{\partial F}{\partial y} = 2y + 2y\lambda = 0 \qquad \rightarrow \qquad 2y(1 + \lambda) = 0 \qquad \therefore y=0 \quad \textrm{or} \quad \lambda=-1 
+$$
+
+You have to insert both these solutions into the other equations you get by calculating $\frac{\partial F}{\partial x}$ and 
+ $\frac{\partial F}{\partial \lambda}$. Through this process you will get 4 local optima.  You will find that the largest 
+values are at:
+
+$$
+x=0 \qquad y=\pm 3 \qquad f(x,y) = 9
+$$
 
 EXAMPLE_QUESTION:
 
-Find the optimum of $f(x,y,z) = y^2 - 10z$ subject to the constraint $x^2 + y^2 + z^2 = 36$
+Find the minimum value that $f(x,y)=8x^2 - 2y$ can take subject to the constraint $g(x,y)=x^2+y^2 = 1$.  
 
 WORKED_SOLUTION: 
+
+$$
+x=0 \qquad y= 1 \qquad f(x,y) = -2
+$$
 
 EXAMPLE_QUESTION:
 
-Find the optimum of $f(x,y,z) = xyz$ subject to the constraint $x+9y^2 + z^2 = 4$.  (assume $x \ge 0$)
+Find the smallest value $f(x,y,z) = y^2 - 10z$ can take subject to the constraint $x^2 + y^2 + z^2 = 36$.  Hint to do this you need to remember $\lambda \ne 0$.
 
 WORKED_SOLUTION: 
+
+$$
+x=0 \qquad y=0 \qquad z=6 \qquad f(x,y,z) = -60
+$$
 
 EXAMPLE_QUESTION:
 
-Find the optimum of $f(x,y,z)=3x^2 + y$ subject to the constraints $4x - 3y = 9$ and $x^2 + z^2 = 9$
+Find the largest value $f(x,y,z)=3x^2 + y$ can take subject to the constraints $4x - 3y = 9$ and $x^2 + z^2 = 9$
 
 WORKED_SOLUTION: 
+
+$$
+x=3 \qquad y=1 \qquad z=0 \qquad f(x,y,z) = 28
+$$
 
 QUESTION_BREAK:
 

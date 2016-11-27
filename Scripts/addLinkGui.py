@@ -73,7 +73,7 @@ class AddLinkDialogue(QDialog):
        # Generate topic list
        mytopics = topiclist() 
        thistopic = self.onpage.toPlainText() 
-       if( mytopics.get(thistopic).addResource( "EXTERNAL", self.typebox.currentText(), "module", self.linkd.text(), self.textBrowser.toPlainText() )==0 ) :
+       if( mytopics.get(thistopic).addResource( "EXTERNAL", self.typebox.currentText(), "module", self.linkd.text(), "blank", self.textBrowser.toPlainText() )==0 ) :
           error.showMessage("This resource has already been added to this page")
           error.exec_()
           return 

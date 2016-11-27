@@ -1,0 +1,993 @@
+TITLE: Ising model 
+
+DESCRIPTION:
+
+The questions below require you to find partition functions using the transfer matrix technique 
+that was introduced in the video on finding the partition function for the 1D-closed Ising model.
+The problems below are difficult and they are here mostly to show you the scope of this technique. 
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+In the video on the closed, 1D Ising model we calculated the canonical partition function for a system of $N$ spins using the transfer matrix method.
+We are now going to use this method to calculate the ensemble average for the $i$th of our spin variables, $\langle S_i \rangle$, instead.  Explain why I 
+can calculate this quantity using the following equation:
+\[
+\langle S_i \rangle = \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) \exp\left[ \beta J \sum_{j=1}^{N} z(s_j)z(s_{j+1}) + \beta H \sum_{j=1}^N z(s_j) \right]
+\]
+where as always $z(0)=-1$, $z(1)=1$ and $s_{N+1}=s_1$.
+
+WORKED_SOLUTION:
+
+We note that the probability, $P_i$, of being in microstate $i$ (if we are in the canonical ensemble) is equal to:
+\[
+P_i = \frac{ e^{-\beta E_i}}{Z_c}
+\]
+
+The average of a quantity, $A$, is then defined as:
+\[
+\langle A \rangle = \sum_i A_i P_i
+\]
+
+where the sum runs over all the possible microstates $A_i$ the system can adopt. $A_i$ is the value of the quantity $A$ when we are in 
+microstate $i$ and $P_i$ is the probability (see above) of being in that microstate.  Now remember when we write out a sum over all microstates 
+for an Ising system we consider write one summation sign (over the two states each spin can adopt) for each spin in the system.  By doing so we 
+thus enumerate over all possible states.  If we do the summation above using the value of the $i$th spin as our property $A$ we get the expression 
+in the question above.
+
+EXAMPLE_QUESTION:
+
+Given that I can express the value of the spin variable using the Pauli spin matrix:
+\[
+\sigma = \left(
+\begin{matrix}
+1 & 0 \\
+0 & -1
+\end{matrix}
+\right)
+\]
+how might I rewrite the summation in the previous question using the transfer matrix approach.  
+
+WORKED_SOLUTION:
+
+From the first question we have:
+
+\[
+\langle S_i \rangle = \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) \exp\left[ \beta J \sum_{j=1}^{N} z(s_j)z(s_{j+1}) + \beta H \sum_{j=1}^N z(s_j) \right]
+\]
+
+which we can rewrite as follows:
+
+\[
+\begin{aligned}
+\langle S_i \rangle = & \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) \exp\left[ \beta J \sum_{j=1}^{N} z(s_j)z(s_{j+1}) +\frac{H}{2}[z(s_j)+z(s_{j+1})] \right] \\
+= & \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) \prod_{j=1}^N e^{ \frac{\beta H z(s_j)}{2}} e^{\beta J z(s_j)z(s_{j+1})} e^{\frac{\beta H z(s_{j+1})}{2}} \\
+= & \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 e^{\frac{\beta H z(s_1)}{2}} e^{\beta J z(s_1)z(s_{2})} e^{\frac{\beta H z(s_{2})}{2}} \sum_{s_3=0}^1 e^{\frac{\beta H z(s_2)}{2}} e^{\beta J z(s_2)z(s_{3})} e^{\frac{\beta H z(s_{3})}{2}} \dots \\
+ & \dots \sum_{s_i=0}^1 z(s_i) e^{\frac{\beta H z(s_i)}{2}} e^{\beta J z(s_i)z(s_{i+1})} e^{\frac{\beta H z(s_{i+1})}{2}} \dots \\
+ & \dots \sum_{s_N=0}^1 e^{\frac{\beta H z(s_{N-1})}{2}} e^{\beta J z(s_{N-1})z(s_{N})} e^{\frac{\beta H z(s_{N})}{2}} e^{\frac{\beta H z(s_N)}{2}} e^{\beta J z(s_N)z(s_{1})} e^{\frac{\beta H z(s_{1})}{2}}
+\end{aligned}
+\]
+
+We now introduce the transfer matrix:
+
+\[
+\mathbf{P} = 
+\left(
+\begin{matrix}
+e^{\beta(J+H)} & e^{-\beta J} \\
+e^{-\beta J} & e^{\beta(J-H)}
+\end{matrix}
+\right)
+\]
+
+We can use this matrix and the matrix defined in the question to rewrite the above sum as:
+
+\[
+\langle S_i \rangle = \frac{1}{Z_c} \textrm{Tr}(\mathbf{P}^{i-1} \sigma \mathbf{P}^{N+1-i})
+\]
+
+(Hopefully you are beginning to be able to see how we can rewrite these sums as products of matrices easily now.  If you are still struggling, however, 
+try to do all this explicitly for the case of 3 spins to convince yourself that the above works)
+
+</br> </br>
+
+We next recall that the trace of a product of matrices is invariant to cyclic permutations in the order in which the matrix products are calculated.  This
+is is important as we can use this fact to rewrite the above as 
+\[
+\langle S_i \rangle = \frac{\textrm{Tr}(\sigma \mathbf{P}^N) }{Z_c} =  \frac{\textrm{Tr}(\sigma \mathbf{P}^N) }{\textrm{Tr}(\mathbf{P}^N)} 
+\]
+We get to the final result here by using the fact that the canonical partition function, $Z_c$, is equal to the trace of the 
+transfer matrix, $\mathbf{P}$.
+
+EXAMPLE_QUESTION:
+
+Use the result from the previous calculation and the fact that:
+\[
+\mathbf{S} = \mathbf{V}^{-1} \sigma \mathbf{V} = 
+\left(
+\begin{matrix}
+a & b \\
+c & d
+\end{matrix}
+\right)
+\]
+where $a$, $b$, $c$ and $d$ are parameters to calculate $\langle S_i \rangle$ 
+
+WORKED_SOLUTION:
+
+We begin by recalling that we can write $\mathbf{P}^N$ as:
+\[
+\mathbf{P}^N = \mathbf{V}\mathbf{\Lambda^N} \mathbf{V}^{-1}
+\]
+where $\mathbf{V}$ is the matrix of right eigenvectors and $\mathbf{\Lambda}$ is the diagonal matrix of eigenvalues.  
+Substituting this into the equation for $\langle S_i \rangle$ we derived in the previous part gives:
+
+\[
+\begin{aligned}
+\langle S_i \rangle & = \frac{ 
+\textrm{Tr}\left[ 
+\sigma 
+\mathbf{V} 
+\left(
+\begin{matrix}
+\lambda_1^N & 0 \\
+0 & \lambda_2^N 
+\end{matrix}
+\right)
+\mathbf{V}^{-1}
+\right]}{
+\textrm{Tr}\left[
+\mathbf{V} 
+\left(
+\begin{matrix}
+\lambda_1^N & 0 \\
+0 & \lambda_2^N 
+\end{matrix}
+\right)
+\mathbf{V}^{-1}
+\right] 
+} 
+= \frac{
+\textrm{Tr}\left[ 
+\mathbf{V}^{-1}
+\sigma 
+\mathbf{V} 
+\left(
+\begin{matrix}
+\lambda_1^N & 0 \\
+0 & \lambda_2^N 
+\end{matrix}
+\right)
+\right]}{
+\textrm{Tr}\left[
+\mathbf{V}^{-1}
+\mathbf{V} 
+\left(
+\begin{matrix}
+\lambda_1^N & 0 \\
+0 & \lambda_2^N 
+\end{matrix}
+\right)
+\right] 
+} = 
+\frac{
+\textrm{Tr}\left[ 
+\mathbf{V}^{-1}
+\sigma 
+\mathbf{V} 
+\left(
+\begin{matrix}
+\lambda_1^N & 0 \\
+0 & \lambda_2^N 
+\end{matrix}
+\right)
+\right]}{
+\textrm{Tr}\left[
+\mathbf{I}
+\left(
+\begin{matrix}
+\lambda_1^N & 0 \\
+0 & \lambda_2^N 
+\end{matrix}
+\right)
+\right] 
+} \\
+& = 
+\frac{
+\textrm{Tr}\left[ 
+\left(
+\begin{matrix}
+a & b \\
+c & d
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+\lambda_1^N & 0 \\
+0 & \lambda_2^N 
+\end{matrix}
+\right)
+\right]}{
+\lambda_1^N + \lambda_2^N
+} =
+\frac{\textrm{Tr} \left(
+\begin{matrix}
+a \lambda_1^N & b \lambda_2^N \\
+c\lambda_1^N & d \lambda_2^N 
+\end{matrix}
+\right)}{\lambda_1^N + \lambda_2^N} = \frac{a\lambda_1^N + d\lambda_2^N}{\lambda_1^N + \lambda_2^N} = \frac{a \left[ 1 + d \left(\frac{\lambda_2}{\lambda_1}\right)^N \right]}{ \left[ 1 + \left(\frac{\lambda_2}{\lambda_1}\right)^N \right]}
+\end{aligned}
+\]
+Notice how we have used the fact that the trace of a product of matrices is invariant to cyclic permutations in the order of the matrix 
+multiplications in the above.  
+
+EXAMPLE_QUESTION:
+
+Now suppose that I want to calculate whether or not (on average) the spin on the $i$th site and the $(i+r)$th site are arranged parallel or antiparallel,
+ $\langle s_i s_{i+r} \rangle$.  Write an expression for this quantity using summation notation and show that when this is rewritten using transfer matrices you obtain.
+\[
+\langle s_i s_{i+r} \rangle = \frac{ \textrm{Tr}(\sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} )}{\textrm{Tr}(\mathbf{P}^N)}
+\]
+
+WORKED_SOLUTION:
+
+The average we have been asked to calculate can be calculated using the following summation
+\[
+\begin{aligned}
+\langle S_i S_{i+r} \rangle = & \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) z(s_{i+r}) \exp\left[ \beta J \sum_{k=1}^{N} z(s_k)z(s_{k+1}) + \beta H \sum_{k=1}^N z(s_k) \right] \\
+ = & \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) z(s_{i+r})  \exp\left[ \beta J \sum_{k=1}^{N} z(s_k)z(s_{k+1}) +\frac{H}{2}[z(s_k)+z(s_{k+1})] \right] \\
+ = & \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) z(s_{i+r}) \prod_{k=1}^N e^{ \frac{\beta H z(s_k)}{2}} e^{\beta J z(s_k)z(s_{k+1})} e^{\frac{\beta H z(s_{k+1})}{2}} \\
+ = & \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 e^{ \frac{\beta H z(s_1)}{2}} e^{\beta J z(s_1)z(s_{2})} e^{\frac{\beta H z(s_{2})}{2}} \sum_{s_3=0}^1 e^{ \frac{\beta H z(s_2)}{2}} e^{\beta J z(s_2)z(s_{3})} e^{\frac{\beta H z(s_{3})}{2}} \dots \\
+ & \dots \sum_{s_i=0}^1 z(s_i) e^{ \frac{\beta H z(s_i)}{2}} e^{\beta J z(s_i)z(s_{i+1})} e^{\frac{\beta H z(s_{i+1})}{2}} \dots \sum_{s_{i+r}=0}^1 e^{ \frac{\beta H z(s_{i+r})}{2}} e^{\beta J z(s_{i+r})z(s_{i+r+1})} e^{\frac{\beta H z(s_{i+r+1})}{2}} \dots  \\
+ & \dots \sum_{s_N=0}^1 e^{ \frac{\beta H z(s_{N-1})}{2}} e^{\beta J z(s_{N-1})z(s_{N})} e^{\frac{\beta H z(s_{N})}{2}}  e^{ \frac{\beta H z(s_N)}{2}} e^{\beta J z(s_N)z(s_{1})} e^{\frac{\beta H z(s_{1})}{2}} 
+\end{aligned}
+\]
+
+Where here we once again have $z(0)=-1$ and $z(1)=1$.  When we introduce the transfer matrix, $\mathbf{P}$, from above we see that this can be rewritten as:
+
+\[
+\langle S_i S_j \rangle = \frac{1}{Z_c} \textrm{Tr}( \mathbf{P}^{i-1} \sigma \mathbf{P}^r \sigma \mathbf{P}^{N-r-i+1}) = \frac{1}{Z_c} \textrm{Tr}( \sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} )
+\]
+
+where we again use the fact that we can permute the order of the matrices when we calculate the trace of their product.  To get 
+the result in the question you use the fact that $Z_c = \textrm{Tr}(\mathbf{P}^N)$.
+
+EXAMPLE_QUESTION:
+
+Use the result from the previous question to express the ensemble average $\langle S_i S_j \rangle$ in terms of the parameters $a$, $b$, $c$ and $d$ and
+the eigenvalues of the transfer matrix $\lambda_1$ and $\lambda_2$
+
+WORKED_SOLUTION:
+
+At the end of the previous question we arrrived at:
+
+\[
+\langle S_i S_j \rangle = \frac{1}{Z_c} \textrm{Tr}( \sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} )
+\]
+
+Lets now consider the numerator in the above expression only.  Using our usual tricks with the eigendecomposition we can rewrite this as:
+
+\[
+\begin{aligned}
+\textrm{Tr}\left[ \sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} \right] & = \textrm{Tr}\left[ \sigma \mathbf{V}\mathbf{\Lambda}^{r}\mathbf{V}^{-1} \sigma \mathbf{V}\mathbf{\Lambda}^{N-r} \mathbf{V}^{-1} \right] = \textrm{Tr}\left[\mathbf{V}^{-1} \sigma \mathbf{V}\mathbf{\Lambda}^{r}\mathbf{V}^{-1} \sigma \mathbf{V}\mathbf{\Lambda}^{N-r}  \right] \\
+& = \textrm{Tr}\left[ 
+\left(
+\begin{matrix}
+a & b \\
+c & d 
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+\lambda_1^r & 0 \\
+0 & \lambda_2^r
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+a & b \\
+c & d
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+\lambda_1^{N-r} & 0 \\
+0 & \lambda_2^{N-r}
+\end{matrix}
+\right)
+\right] \\
+& = \textrm{Tr}\left[
+\left(
+\begin{matrix}
+a \lambda_1^r & b \lambda_2^r \\
+c \lambda_1^r & d \lambda_2^r 
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+a \lambda_1^{N-r} & b \lambda_2^{N-r} \\
+c \lambda_1^{N-r} & d \lambda_2^{N-r} 
+\end{matrix}
+\right)
+\right] \\
+& = \textrm{Tr}\left[
+\left(
+\begin{matrix}
+a^2 \lambda_1^N + bc  \lambda_1^{N-r}\lambda_2^r & ab\lambda_1^r\lambda_2^{N-r} + bd \lambda_2^N \\
+ac\lambda_1^N + cd \lambda_1^{N-r}\lambda_2^r & bc \lambda_1^r \lambda_2^{N-r} + d^2 \lambda_2^N
+\end{matrix}
+\right)
+\right] \\
+& = a^2 \lambda_1^N + bc  \lambda_1^{N-r}\lambda_2^r + bc \lambda_1^r \lambda_2^{N-r} + d^2 \lambda_2^N \\
+& = \lambda_1^N \left[ a^2 + d^2 \left(\frac{\lambda_2}{\lambda_1}\right)^N \right] + bc \lambda_1^N\left[ \left(\frac{\lambda_2}{\lambda_1}\right)^r + \left(\frac{\lambda_2}{\lambda_1}\right)^{N-r} \right] 
+\end{aligned}
+\]
+
+Inserting this into the question at the start (and using the value we know for for $Z_c$) we thus have:
+
+\[
+\langle S_i S_j \rangle = \frac{1}{Z_c} \textrm{Tr}( \sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} ) = \frac{\left[ a^2 + d^2 \left(\frac{\lambda_2}{\lambda_1}\right)^N \right] + bc \left[ \left(\frac{\lambda_2}{\lambda_1}\right)^r + \left(\frac{\lambda_2}{\lambda_1}\right)^{N-r} \right]}{\left[ 1 + \left(\frac{\lambda_2}{\lambda_1}\right)^N\right]} 
+\]
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+Consider a 1-D open chain Ising model with $N$ spins in an external magnetic field $H$.  Each spin will interact with its neighbours and with the external field.  Write an expression that can be used calculate the energy of a microstate of this system.  Remember in this model, at variance with the closed Ising model, the 1st spin <b>does not</b> interact with the $N$th spin.
+
+WORKED_SOLUTION:
+
+The energy of a microstate can be calculated using:
+
+\[
+E = -\sum_{i=1}^{N-1} J s_i s_{i+1} - \sum_{i=1}^N H s_i =  -\frac{H}{2}s_1 - \sum_{i=1}^{N-1} \left[J s_i s_{i+1} + \frac{H}{2}(s_i + s_{i+1}) \right] - \frac{H}{2}s_N
+\]
+
+The important difference from the 1D-closed Ising model is that the first sum in the above goes from $1$ to $N-1$ rather than from $1$ to $N$ as it 
+did in the closed case.  The reason for this is that $s_{N+1} \ne s_1$ as it was for the closed Ising model.  Now $s_{N+1}$ is a spin variable that 
+just does not exist as the spins are now on a line and not on a circle.
+
+EXAMPLE_QUESTION:
+
+Use the summation notation that we used to solve the closed, 1D Ising model to show that the canonical partition function for open, 1D Ising model is given by:
+\[
+\begin{aligned}
+Z_c  & \sum_{s_1=0}^1 e^{\frac{H\beta}{2}z(s_1)}  \sum_{s_{2}=0}^1 e^{\frac{\beta H}{2}z(s_1)} e^{\beta J z(s_1) z(s_{2})}e^{\frac{\beta H}{2}z(s_{2})} \dots \sum_{s_{N-1}=0}^1 e^{\frac{\beta H}{2}z(s_{N-2})} e^{\beta J z(s_{N-2}) z(s_{N-1})}e^{\frac{\beta H}{2}z(s_{N-1})}  \\
+  &  \sum_{s_N=0}^1 e^{\frac{\beta H}{2}z(s_{N-1})} e^{\beta J z(s_{N-1}) z(s_{N})}e^{\frac{\beta H}{2}z(s_{N})} e^{\frac{H\beta}{2}z(s_N)}
+\end{aligned}
+\]
+Use the arguments the derivation we performed for the closed, 1D Ising model to show that the above summations can be written as a product of matrices as follows:
+\[
+Z_c = \mathbf{s}^T \mathbf{P}^{N-1}\mathbf{s}
+\]
+where $\mathbf{P}$ is the transfer matrix that we introduced when solving the closed, 1D Ising model and where $\mathbf{s}$ is:
+\[
+\mathbf{s} = \left(
+\begin{matrix}
+e^{\frac{\beta H}{2}} \\
+e^{-\frac{\beta H}{2}}
+\end{matrix}
+\right)
+\]
+$\mathbf{s}^T$ is the (row vector) transpose of $\mathbf{s}$.  (N.B. One way to do this is would be to enumerate all the microstates of an 
+open-1D ising model with two spins, work out the energy of each and the contribution they make to the partition function.  You could then 
+compare the result you get by summing all these contributions to the result that you get by evaluating the above matrix product with $N=2$)
+
+WORKED_SOLUTION:
+
+Once again in what follows we have $z(0)=-1$ and $Z(1)=1$.  We can write the sum over microstates that we have to perform in order to evaluate 
+the canonical partition function for this system as:
+
+\[
+\begin{aligned}
+Z_c = & \sum_{s_1=0}^1 \sum_{s_2=0}^1 \dots \sum_{s_{N-1}=0}^1 e^{\left( \frac{\beta H}{2}z(s_1) + \sum_{i=1}^{N-1} \left[\beta J z(s_i) z(s_{i+1}) + \frac{\beta H}{2}(z(s_i) + z(s_{i+1})) \right]\right)} \sum_{s_N=0}^1 e^{\frac{H\beta}{2}z(s_N)} \\
+ = & \sum_{s_1=0}^1 \sum_{s_2=0}^1 \dots \sum_{s_{N-1}=0}^1 e^{\frac{H\beta}{2}z(s_1)} \left\{ \prod_{i=1}^{N-1} e^{\frac{\beta H}{2}z(s_i)} e^{\beta J z(s_i) z(s_{i+1})}e^{\frac{\beta H}{2}z(s_{i+1})} \right\} \sum_{s_N=0}^1 e^{\frac{H\beta}{2}z(s_N)} \\
+ = & \sum_{s_1=0}^1 e^{\frac{H\beta}{2}z(s_1)}  \sum_{s_{2}=0}^1 e^{\frac{\beta H}{2}z(s_1)} e^{\beta J z(s_1) z(s_{2})}e^{\frac{\beta H}{2}z(s_{2})} \dots \sum_{s_{N-1}=0}^1 e^{\frac{\beta H}{2}z(s_{N-2})} e^{\beta J z(s_{N-2}) z(s_{N-1})}e^{\frac{\beta H}{2}z(s_{N-1})}  \\
+  &  \sum_{s_N=0}^1 e^{\frac{\beta H}{2}z(s_{N-1})} e^{\beta J z(s_{N-1}) z(s_{N})}e^{\frac{\beta H}{2}z(s_{N})} e^{\frac{H\beta}{2}z(s_N)}
+\end{aligned}
+\]
+
+To show that this sum can be written in the matrix product notation we note first note that terms like
+$$
+e^{\frac{\beta H}{2}z(s_i)} e^{\beta J z(s_i) z(s_{i+1})}e^{\frac{\beta H}{2}z(s_{i+1})}
+$$
+appeared when we derived the partition function for the closed 1D-Ising model.  If you remember in that derivation we rewrote the summations involving 
+these objects as matrix products.  Notice here though that in the first product we do (the rightmost one in my convention) is different to the one we 
+had when we were solving for the closed, 1D Ising model because the geometry of the lattice the spins are on is different in this case.  In this, open, case 
+the first three exponentials after the product are the objects that we turn into the transfer matrix $\mathbf{P}$.  The last exponential, however, is 
+simply $e^{\frac{H\beta}{2}z(s_N)}$ which can take on only two values $e^{+\frac{H\beta}{2}}$ and $e^{-\frac{H\beta}{2}}$, which is why we write the 
+bit after the $\sum_{s_N=0}^1$ as a product of a vector and a matrix.  Notice next that we have an 
+$e^{\frac{\beta H}{2}z(s_i)} e^{\beta J z(s_i) z(s_{i+1})}e^{\frac{\beta H}{2}z(s_{i+1})}$ after all but one of the $N$ summation signs.  Whenever we see 
+this we replace it by a transfer matrix $\mathbf{P}$.  Hence, we can rewrite everything from the summation over $s_2$ onwards as $\mathbf{P}^{n-1}\mathbf{s}$.  
+Hopefully, you can see why this then is multiplied by the row vector transpose of $\mathbf{s}$ as I am not sure that I can explain it clearly or even whether 
+this paragraph of text explains clearly how we have rewritten this as matrix products.  Ah well... if you have learnt anything from this experience learn 
+this - matrices are awesome!  Just look at how simple the equation above now looks:
+
+\[
+Z_c = \mathbf{s}^T \mathbf{P}^{N-1}\mathbf{s}
+\]
+
+Cool huh!
+
+EXAMPLE_QUESTION:
+
+Show that when $H = 0$ the eigenvectors of the transfer matrix, $\mathbf{P}$, are equal to:
+\[
+v_1 = \frac{1}{\sqrt{2}} \left( \begin{matrix} 1 \\ 1 \end{matrix} \right) \qquad \textrm{and} \qquad v_2 = \frac{1}{\sqrt{2}} \left( \begin{matrix} 1 \\ -1 \end{matrix} \right)
+\]
+Use the eigenvalues of this matrix (we already calculated these when we considered the closed 1D-Ising model) and all the other tricks that we used for calculating 
+powers of matrices to show that, when we evaluate the canonical partition function (in the absence of a magnetic field) using the transfer matrix method 
+for an open 1D-Ising model, we get the following:
+$$
+Z_c = 2^N\cosh^{N-1}(\beta J)
+$$
+
+WORKED_SOLUTION:
+
+The eigenvalues we obtained for the transfer matrix $\mathbf{P}$ in the derivation for the 1D-Ising model were:
+
+\[
+\lambda = e^{\beta J} \cosh(\beta H) \pm \sqrt{ e^{2\beta J}\sinh^2(\beta H) + e^{-2\beta J} }
+\]
+
+In the absence of a magentic field, $H=0$, these reduce to $\lambda_1=2\cosh(\beta J)$ and $\lambda_2=2\sinh(\beta J)$.
+
+</br></br>
+
+To find the partition function for the open, 1D-Ising model we also need to calculate the eigenvectors of this matrix.  Remember that we 
+calculate an eigenvector by rearranging the equation that defines our eigensystem of equations as follows:
+
+\[
+\mathbf{P}\mathbf{v} = \lambda \mathbf{v} \qquad \rightarrow \qquad \left( \mathbf{P} - \lambda \mathbf{I} \right) \mathbf{v} = 0
+\]
+
+Lets now write out the matrices explicitly and find the first eigenvector (the one with eigenvalue $2\cosh(\beta J)=e^{\beta J} + e^{-\beta J}$).
+
+\[
+\begin{aligned}
+0= \left( \mathbf{P} - \lambda \mathbf{I} \right) \mathbf{v} & = \left\{ \left(
+ \begin{matrix}
+ e^{\beta J} & e^{-\beta J} \\
+ e^{-\beta J} & e^{\beta J} 
+ \end{matrix}
+ \right) - \left( e^{\beta J} + e^{-\beta J} \right) \left(
+ \begin{matrix}
+ 1 & 0 \\
+ 0 & 1 
+ \end{matrix}
+ \right)
+ \right\}
+ \left(
+ \begin{matrix}
+ v_1 \\
+ v_2
+ \end{matrix}
+ \right) \\
+ & = \left( 
+ \begin{matrix}
+ -e^{-\beta J} & e^{-\beta J} \\
+ e^{-\beta J} & -e^{-\beta J}
+ \end{matrix}
+ \right)
+ \left(
+ \begin{matrix}
+ v_1 \\
+ v_2
+ \end{matrix}
+ \right) =0
+ \end{aligned} 
+\] 
+
+Multiplying the top row of the matrix by the vector gives us $-e^{-\beta J}v_1 + e^{-\beta J}v_2 = 0$ which we can rearrange to give $v_1=v_2$.  
+Now to get the final values of the components of the eigenvector we require that the vector $\mathbf{v}$ be normalised.  In other words we 
+require $v_1^2 + v_2^2 = 1$. We can rewrite this requirement as: $2v_1^2 =1$ as we know that $v_1=v_2$ and hence arrive at $v_1=v_2 = \frac{1}{\sqrt{2}}$.
+
+</br> </br>
+
+We now turn to the second eigenvalue and eigenvector.  By a similar logic to before we have:
+
+\[
+\begin{aligned}
+0= \left( \mathbf{P} - \lambda \mathbf{I} \right) \mathbf{v} & = \left\{ \left(
+ \begin{matrix}
+ e^{\beta J} & e^{-\beta J} \\
+ e^{-\beta J} & e^{\beta J} 
+ \end{matrix}
+ \right) - \left( e^{\beta J} - e^{-\beta J} \right) \left(
+ \begin{matrix}
+ 1 & 0 \\
+ 0 & 1 
+ \end{matrix}
+ \right)
+ \right\}
+ \left(
+ \begin{matrix}
+ v_1 \\
+ v_2
+ \end{matrix}
+ \right) \\
+ & = \left( 
+ \begin{matrix}
+ e^{-\beta J} & e^{-\beta J} \\
+ e^{-\beta J} & e^{-\beta J}
+ \end{matrix}
+ \right)
+ \left(
+ \begin{matrix}
+ v_1 \\
+ v_2
+ \end{matrix}
+ \right) =0
+ \end{aligned} 
+\]
+
+which brings us neatly to $e^{-\beta J}v_1 + e^{-\beta J}v_2 = 0$ and hence $v_2=-v_1$.  The requirement of normalisation once again 
+gives $2v_1^2 =1$ and hence $v_1=\frac{1}{\sqrt{2}}$ while $v_2 = -\frac{1}{\sqrt{2}}$
+
+</br></br>
+
+Lets now turn again to the partition function.  When we left off we had:
+
+\[
+Z_c = \mathbf{s}^T \mathbf{P}^{N-1}\mathbf{s}
+\]
+
+We can exploit the fact that $\mathbf{P}$ is diagonazable and rewrite this as:
+
+\[
+Z_c =  \mathbf{s}^T \mathbf{V} \mathbf{\Lambda}^{N-1} \mathbf{V}^{-1} \mathbf{s}
+\]
+
+The matrix $\mathbf{V}$ is the matrix that has the eigenvectors of $\mathbf{P}$ in its columns.  In other words it is:
+
+\[
+\mathbf{V} = \left(
+\begin{matrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{matrix}
+\right)
+\]
+
+Lets invert this matrix (remember we do this by dividing the adjoint matrix by the determinant as below):
+
+\[
+\mathbf{V}^{-1} = \frac{1}{-\frac{1}{2}-\frac{1}{2}} \left(
+\begin{matrix}
+-\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} \\
+-\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}}
+\end{matrix} 
+\right) = \left(
+\begin{matrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{matrix}
+\right)
+\]
+
+What do you know $\mathbf{V}^{-1}=\mathbf{V}$.  We could have worked this out by recalling something about symmetric matrices; namely, that we can 
+decompose a symmetric diagonalisable matrix as:
+
+\[
+\mathbf{P} = \mathbf{V} \mathbf{\Lambda} \mathbf{V}^T
+\] 
+
+Here $\Lambda$ is still the diagonal element containing the eigenvalues and $\mathbf{V}$ is the matrix containing the eigenvectors.
+
+</br> </br>
+
+Right so the matrix multiplication we have to do is as follows:
+
+\[
+\begin{aligned}
+Z_c & = 
+\left(
+\begin{matrix}
+1 & 1
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{matrix}
+\right) 
+\left(
+\begin{matrix}
+\lambda_1^{N-1} & 0 \\
+0 & \lambda_2^{N-1}
+\end{matrix}
+\right) 
+\left(
+\begin{matrix}
+\frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} \\
+\frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}}
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+1 \\
+1
+\end{matrix}
+\right) \\
+& = 
+\left( 
+\begin{matrix}
+\sqrt{2} & 0 
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+\lambda_1^{N-1} & 0 \\
+0 & \lambda_2^{N-1}
+\end{matrix}
+\right)
+\left( 
+\begin{matrix}
+\sqrt{2} \\
+0 
+\end{matrix}
+\right) \\
+& = 
+\left( 
+\begin{matrix}
+\sqrt{2} & 0 \\
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+\sqrt{2}\lambda_1^{N-1} \\
+0 
+\end{matrix}
+\right) = 2\lambda_1^{N-1} = 2^N\cosh^{N-1}(\beta J)
+\end{aligned}
+\]
+
+Notice that in the first line of the above we have used $H=0$ for the $\mathbf{s}$ vectors that were introduced in part (b).  In the final part I have 
+inserted in the value of the first eigenvalue.
+
+EXAMPLE_QUESTION:
+
+Calculate the constant volume heat capacity, $C_v$, for an open 1D-Ising model in the absence of an external magnetic field (i.e. $H = 0$).  
+What happens to this quantity as $T \rightarrow 0$?
+
+WORKED_SOLUTION:
+
+The heat capacity is given by:
+
+\[
+C_v = \left(\frac{\partial \langle E \rangle}{\partial \beta} \right) = - \left(\frac{\partial^2 \ln Z_c }{\partial \beta^2 } \right)
+\]
+
+The equality between the partial derivatives here holds because:
+
+$$
+\langle E \rangle = -\left(\frac{\partial \ln Z_c }{\partial \beta } \right)
+$$
+
+So in evaluating $C_v$ we also get the ensemble average of the energy $\langle E \rangle$ for free.  When we evaluate this first derivative we find that:
+
+$$
+\langle E \rangle = -(N-1)J\tanh(\beta J)
+$$
+
+As such:
+
+\[
+C_v = - \frac{\partial }{\partial \beta} (N-1)J\tanh(\beta J) = -(N-1)J^2\left[1-\tanh^2(\beta J) \right]
+\]
+
+At $T=0$ we can thus state that $C_v=0$.
+
+QUESTION_BREAK:
+
+EXAMPLE_QUESTION:
+
+The energy of a microstatestate in the Potts model is given by:
+\[
+E = -J \sum_{i=1}^{N}\delta(\sigma_i,\sigma_{i+1})  \qquad \textrm{where} \qquad \sigma_{N+1}=\sigma_1
+\]
+where $\sigma_i$ is the value of the spin variable on site $i$.  This can take values between $1$ and $p$.  $\delta(\sigma_i,\sigma_{i+1})$ is the Kronecker delta and is given by:
+\[
+\delta(\sigma_i,\sigma_j) = 
+\begin{cases}
+1 & \textrm{if} \quad i = j \\
+0 & \textrm{if} \quad i \ne j
+\end{cases}
+\]
+Which sites interact in the Potts model?  When is the interaction energy between two interacting sites in the Potts model non-zero?
+
+WORKED_SOLUTION:
+
+Neighboring spins interact in the Pots model and the spins are arranged on a circle so that each spin variable can interact with two neighbors.  
+The interaction between two neighbouring sites is non zero when they have the same value for their spin variables.
+
+EXAMPLE_QUESTION:
+
+Use the summation notation that we have used in exercises 5 and 6 to show that the canonical partition function for a Potts model 
+with $N$ sites that can each be in one of $p$ sites can be written as:
+\[
+Z_c = \sum_{s_1=1}^p \sum_{s_2=1}^p e^{J\beta  \delta(\sigma_1,\sigma_2)} \dots \sum_{s_N=1}^p e^{J\beta  \delta(\sigma_{N-1},\sigma_N)}  e^{J\beta  \delta(\sigma_N,\sigma_1)}
+\]
+
+WORKED_SOLUTION:
+
+The canonical partition function is:
+
+\[
+\begin{aligned}
+Z_c & = \sum_{s_1=1}^p \sum_{s_2=1}^p \dots \sum_{s_N=1}^p e^{J\beta \sum_{i=1}^N \delta(\sigma_i,\sigma_{i+1})} \\
+& = \sum_{s_1=1}^p \sum_{s_2=1}^p \dots \sum_{s_N=1}^p \prod_{i=1}^N e^{J\beta  \delta(\sigma_i,\sigma_{i+1})} \\
+& = \sum_{s_1=1}^p \sum_{s_2=1}^p e^{J\beta  \delta(\sigma_1,\sigma_2)} \dots \sum_{s_N=1}^p e^{J\beta  \delta(\sigma_{N-1},\sigma_N)} e^{J\beta  \delta(\sigma_N,\sigma_1)}
+\end{aligned}
+\]
+
+EXAMPLE_QUESTION:
+
+We are going to find the canonical partition function for the Potts model using a transfer matrix in a manner similar to what we did for the closed and open Ising models.  
+Show that the transfer matrix, $\mathbf{P}$, is given by:
+\[
+\mathbf{P} = \mathbf{D}(\beta) + \mathbf{A} = \left(
+\begin{matrix}
+e^{\beta J} - 1 & 0 & 0 & \dots & 0 \\
+0 & e^{\beta J} - 1 & 0 & \dots & 0 \\
+0 & 0 & e^{\beta J} - 1  & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \dots & e^{\beta J} - 1
+\end{matrix}
+\right) + \left(
+\begin{matrix}
+1 & 1 & 1 & \dots & 1 \\
+1 & 1 & 1 & \dots & 1 \\
+1 & 1 & 1 & \dots & 1 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & 1 & 1& \dots & 1
+\end{matrix}
+\right)
+\]
+
+WORKED_SOLUTION:
+
+The formula for the partition function we wrote out in the previous part tells us that should calculate the elements of the 
+transition matrix using $e^{J\beta  \delta(\sigma_N,\sigma_1)}$. The transfer matrix is thus:
+
+\[
+\mathbf{P} = \left(
+\begin{matrix}
+e^{\beta J} & 1 & 1 & \dots & 1 \\
+1 & e^{\beta J} & 1 & \dots & 1 \\
+1 & 1 & e^{\beta J} & \dots & 1 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+1 & 1 & 1& \dots & e^{\beta J}
+\end{matrix}
+\right)
+\]
+
+This can be decomposed into the sum of matrices that is required in the question.
+
+EXAMPLE_QUESTION:
+
+To determine the partition function we will use the tricks that we have used for the open and closed Ising models.  In other words we are going to 
+take the trace of the transfer matrix raised to the power $N$.  Furthermore, we are going to do this by taking the sum of the powers of the eigenvalues 
+as usual.  As per usual the first step in doing this is to determine the eigenvalues.  Show that for this system the first of these is given by:
+\[
+\lambda_1 = e^{\beta J} + p - 1
+\]
+and that the remaining eigenvalues are all equal to:
+\[
+\lambda_i = e^{\beta J} -1
+\]
+
+WORKED_SOLUTION:
+
+Remember the eigenvalue equation is:
+
+\[
+\mathbf{P}\mathbf{v} = \lambda \mathbf{v}
+\]
+
+We can substitute $\mathbf{P}$ into the above to give:
+
+\[
+(\mathbf{D}(\beta) + \mathbf{A})\mathbf{v} = \lambda \mathbf{v} \quad \rightarrow \quad (\mathbf{D}(\beta) - \lambda \mathbf{I}) \mathbf{v} = -\mathbf{A}\mathbf{v}
+\]
+
+Now notice from above that $\mathbf{A}$ is a square matrix containing all ones.  As a consequence the right hand side, $\mathbf{A}\mathbf{v}$ is a vector that has 
+all equal elements.  Because $\mathbf{A}$ is a matrix of all ones the elements of the vector $\mathbf{A}\mathbf{v}$ are equal to the sum of the elements of $\mathbf{v}$.
+With this in mind lets write out the matrices:
+
+\[
+\left\{
+ \left(
+\begin{matrix}
+e^{\beta J} - 1 & 0 & 0 & \dots & 0 \\
+0 & e^{\beta J} - 1 & 0 & \dots & 0 \\
+0 & 0 & e^{\beta J} - 1  & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \dots & e^{\beta J} - 1
+\end{matrix}
+\right) 
+- \lambda
+\left(
+\begin{matrix}
+1 & 0 & 0 & \dots & 0 \\
+0 & 1 & 0 & \dots & 0 \\
+0 & 0 & 1 & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \dots & 1
+\end{matrix}
+\right) 
+\right\}
+\left(
+\begin{matrix}
+v_1 \\
+v_2 \\
+v_3 \\
+\vdots \\
+v_p
+\end{matrix}
+\right)
+= 
+\left(
+\begin{matrix}
+-\nu \\
+-\nu \\
+-\nu \\
+\vdots \\
+-\nu
+\end{matrix}
+\right)
+\]
+
+Where here we have introduced the symbol $\nu=\sum_{i=1}^p v_i$.  If we add up the matrices on the left hand side this is:
+
+\[
+ \left(
+\begin{matrix}
+e^{\beta J} - 1 - \lambda & 0 & 0 & \dots & 0 \\
+0 & e^{\beta J} -1 - \lambda & 0 & \dots & 0 \\
+0 & 0 & e^{\beta J} - 1 - \lambda  & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \dots & e^{\beta J} - 1 - \lambda
+\end{matrix}
+\right) 
+\left(
+\begin{matrix}
+v_1 \\
+v_2 \\
+v_3 \\
+\vdots \\
+v_p
+\end{matrix}
+\right)
+=
+\left(
+\begin{matrix}
+-\nu \\
+-\nu \\
+-\nu \\
+\vdots \\
+-\nu
+\end{matrix}
+\right)
+\] 
+
+Now notice that if take any row in the matrix on the left hand side of the equation and multiply it by the vector.  We get something like the following:
+
+\[
+\left(e^{\beta J} + 1 - \lambda \right)v_i = \nu
+\]
+
+where $i$ is the particular row that we chose to multiply.   Now remember that $\nu=\sum_{i=1}^p v_i$, which is important 
+because when this is combined with the above it tells us that for any $\nu \ne 0$:
+\[
+v_1 = v_2 = v_3 = \dots = v_p
+\]
+as only then can this equality hold for {\bf all} $v_i$ as it must.  Notice we get $\left(e^{\beta J} + 1 - \lambda \right)v_i = \nu$ 
+whenever we multiply any row of the matrix by the vector $\mathbf{v}$.  Inserting this all into our matrices gives:
+
+\[
+ \left(
+\begin{matrix}
+e^{\beta J} - 1 - \lambda & 0 & 0 & \dots & 0 \\
+0 & e^{\beta J} -1 - \lambda & 0 & \dots & 0 \\
+0 & 0 & e^{\beta J} - 1 - \lambda  & \dots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \dots & e^{\beta J} - 1 - \lambda
+\end{matrix}
+\right) 
+\left(
+\begin{matrix}
+v_1 \\
+v_1 \\
+v_1 \\
+\vdots \\
+v_1
+\end{matrix}
+\right)
+=
+\left(
+\begin{matrix}
+-p v_1 \\
+-p v_1 \\
+-p v_1 \\
+\vdots \\
+-p v_1
+\end{matrix}
+\right)
+\]
+
+which in turn implies:
+\[
+\left(e^{\beta J} - 1 - \lambda_1 \right) = -p \quad \rightarrow \quad \lambda_1 = e^{\beta J} - 1 + p
+\]
+as the factors of $v_1$ on the right and left hand sides of the equation cancel.
+
+</br> </br>
+
+We now note that if $\nu=0$ we must have:
+
+\[
+\left(e^{\beta J} - 1 - \lambda \right) = 0 \qquad \rightarrow \qquad \lambda = e^{\beta J} - 1
+\]
+This will be the eigenvalue for any eigenvector that has $\nu=0$.  $\lambda_1$ will be the eigenvalue corresponding to any eigenvector that has $\nu\ne0$.  
+
+</br> </br>
+
+To confirm these arguments are correct consider that the trace of the original matrix $\mathbf{P}$ is equal to:
+\[
+\textrm{Tr}(\mathbf{P}) = pe^{\beta J}
+\]
+which is equal to:
+\[
+\lambda_1 + (p-1)\lambda = (e^{\beta J} - 1 + p ) + p(e^{\beta J} - 1) = 6e^{\beta J} + p -p = 6e^{\beta J}
+\]
+and as we now know the trace of a matrix is equal to the sum of its eigenvalues.
+
+EXAMPLE_QUESTION:
+
+Use the eigenvalues that you determined in the previous question to determine the canonical partition function for a system of $N$ Potts sites.
+Use the expression you derived to evaluate the average energy per site and the heat capacity in the thermodynamic limit. 
+
+WORKED_SOLUTION:
+
+We calculate the canonical partition function by taking the sum of the powers of the eigenvalues as we did when we examined the closed 1D Ising model.  This gives us:
+
+\[
+Z_c = \lambda_1^N + (p-1)\lambda_2^N = (e^{\beta J} + p -1)^N + (p-1)(e^{\beta J} -1)^N
+\]
+
+We can then calculate the average energy per site from the canonical partition function using:
+
+\[
+\begin{aligned}
+\frac{\langle E \rangle}{N} = - \frac{1}{N} \left( \frac{\partial \ln Z_c}{\partial \beta} \right) & = - \frac{1}{N} \frac{\partial }{\partial \beta}\left\{ \ln[ (e^{\beta J} + p -1)^N + (p-1)(e^{\beta J} -1)^N ] \right\} \\
+& = - \frac{Je^{\beta J}[(e^{\beta J} + p -1)^{N-1} + (p-1)(e^{\beta J} - 1)^{N-1}] }{(e^{\beta J} + p -1)^N + (p-1)(e^{\beta J} -1)^N} 
+\end{aligned}
+\]
+
+In the thermodynamic limit $\frac{\lambda_2}{\lambda_1} \rightarrow 0$ and hence $Z_c \rightarrow \lambda_1^N$.  We can thus write:
+
+\[
+Z_c = (e^{\beta J} + p -1)^N
+\]
+
+The internal energy per site in this limit is thus:
+
+\[
+\begin{aligned}
+\frac{\langle E \rangle}{N} =  - \frac{1}{N} \left( \frac{\partial \ln Z_c}{\partial \beta} \right) & = -\frac{1}{N} \frac{\partial }{\partial \beta} N \ln(e^{\beta J} + p -1) \\
+ & = -\frac{Je^{\beta J}}{e^{\beta J} + p -1} \\
+ & = -\frac{J}{1 + (p-1)e^{-\beta J}}
+\end{aligned}
+\]
+
+The per-site heat capacity can be calculated from the average energy per site as follows:
+
+\[
+\begin{aligned}
+C_v =  \frac{1}{N} \left( \frac{\partial \langle E \rangle }{\partial \beta} \right) & = -\frac{\partial }{\partial \beta} \frac{J}{1 + (p-1)e^{-\beta J}} \\
+& = -\frac{J^2 (p-1)e^{-\beta J}}{(1 + (p-1)e^{-\beta J})^2}
+\end{aligned}
+\]

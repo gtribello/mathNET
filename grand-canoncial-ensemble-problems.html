@@ -1,0 +1,469 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Title -->
+	<title>The Grand Canonical Ensemble
+ : Exercise</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<!-- Favicon -->
+	<link href="favicon.html" rel="shortcut icon">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+</head>
+<body>
+	<div id="pre_header" class="visible-lg"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="index.html" title="">
+					<img src="assets/img/logo.png" alt="Logo" />
+				</a>
+			</div>
+			<!-- End Logo -->
+			<!-- Top Menu -->
+			<div class="col-md-12 margin-top-30">
+				<div id="hornav" class="pull-right visible-lg">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+                                                <li><span>Modules</span>
+                                                <ul>
+                                                  <li><span><a href="SOR3012.html">SOR3012</a></span></li>
+<li><span><a href="AMA4004.html">AMA4004</a></span></li>
+<li><span><a href="PHY9038.html">PHY9038</a></span></li>
+
+					        </ul>				</div>
+				</div>
+				<div class="clear"></div>
+				<!-- End Top Menu -->
+			</div>
+		</div>
+		<!-- === END HEADER === -->
+		<!-- === BEGIN CONTENT === -->
+		<div id="content" class="container">
+                    <div class="panel panel-blue">
+                      <div class="panel-heading">
+                          <h1 class="panel-title"> The Grand Canonical Ensemble
+ : Exercises</h1>
+                      </div>
+                      
+<H1> Introduction </H1>
+
+The grand canonical ensemble is used to model system with a fixed number temperature, a fixed pressure/volume
+and a variable number of atoms.  In this exercise you are going to derive an expression for the probability of 
+being in a particular microstate within this ensemble, an expression for the grand canonical partition function
+and the ensemble average for the number of atoms in the system.  In doing this you will start from the expressions 
+for the probability of being in a particular micostate and the partition function in the generalised partition 
+function.  You will then follow arguments similar to those presented in the videos on the canonical partition function 
+and the isothermal isobaric ensemble.  You should thus make sure you are familiar with the derivations presented in those
+videos before attempting the exercises below.  
+
+<H1> Example problems </H1>
+<p> Click on the problems to reveal the solution </p> 
+<h4> Problem 1</h4>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
+
+Use the fact that only the volume is held fixed in the isothermal, isobaric ensemble to write an expression for the probability of being 
+in a microstate for the grand canonical ensemble.  N.B.  Use the symbol $\beta \xi$ for the Lagrange multiplier that appears in front of the 
+number of atoms $N(\mathbf{x}_i,\mathbf{p}_i)$.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-0" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+$$
+p_i = \frac{ e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i)} e^{-\beta \xi N(\mathbf{x}_i,\mathbf{p}_i)} }{ Z_{GC} }
+$$
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+
+Now write an expression for the grand canonical partition function.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-1" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+$$
+Z_{GC} = \sum_i  e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i)} e^{-\beta \xi N(\mathbf{x}_i,\mathbf{p}_i)}
+$$
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+
+Now write an expression for $\frac{\textrm{d}S}{k_B}$ in terms of $\textrm{d}V$, $\textrm{d}\langle E \rangle$ and $\textrm{d}\langle N \rangle$
+that holds when you are considering an ensemble in which the volume is the only extensive quantity that is being held fixed.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-2" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+$$
+\frac{\textrm{d}S}{k_B} = - \left[ \beta \left\langle \frac{\partial E}{\partial V} \right\rangle  + \beta \xi \left\langle \frac{\partial E}{\partial N} \right\rangle \right] \textrm{d}V + \beta \textrm{d}\langle E \rangle + \beta \xi \textrm{d}\langle N \rangle 
+$$
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
+
+Use the result from part the previous part and the result from classical thermodynamics $\textrm{d}E = T\textrm{d}S - P\textrm{d}V + \mu \textrm{d}N$ to show that $\xi = - \mu$
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-3" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+Rearranging the equation in the question we have:
+$$
+\textrm{d}S = \frac{1}{T} \textrm{d}E + \frac{P}{T}\textrm{d}V - \frac{\mu}{T} \textrm{d}N
+$$
+Comparing coefficients of $\textrm{d}N$ in this equation and $\frac{\textrm{d}S}{k_B} = - \left[ \beta \left\langle \frac{\partial E}{\partial V} \right\rangle  + \beta \xi \left\langle \frac{\partial E}{\partial N} \right\rangle \right] \textrm{d}V + \beta \textrm{d}\langle E \rangle + \beta \xi \textrm{d}\langle N \rangle$:
+$$
+-\frac{\mu}{T} = k_B \beta \xi \qquad \rightarrow \qquad -\beta \mu = \beta xi \qquad \rightarrow \qquad \mu = -\xi 
+$$
+In doing this remember that $\beta = \frac{1}{k_B T}$
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
+
+What thermodynamic potential can be calculated from the grand canonical partition function and how is this done?
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-4" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The grand potential can be calculated from the grand canonical partition function as shown below:
+$$
+\frac{S}{k_B} = \psi + \sum_k \lambda_k \langle B^{(k)} \rangle  \qquad \rightarrow \qquad \frac{S}{k_B} = \psi + \frac{E}{k_B T} - \frac{N\mu}{k_B T} \quad \textrm{for Grand Canonical ensemble}
+$$
+Rearranging this expression gives:
+$$
+k_B T \psi = ST - E + N\mu = -\Omega \qquad \rightarrow \qquad \Omega = -k_B T \ln Z_{GC}
+$$
+Here we must remember that the grand canonical potential, $\Omega$, is given by $\Omega = E - TS + \mu N$
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
+
+Show that:
+$$
+\langle N \rangle = \left( \frac{\partial \ln Z}{\partial (\beta \mu)} \right)  
+$$
+where $Z$ is the grand canonical partition function.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-5" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+We start here from:
+$$
+1 = e^{\psi} e^{-\psi} = e^{-\psi} Z = e^{-\psi} \sum_i e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i)} e^{\beta \mu N(\mathbf{x}_i,\mathbf{p}_i)} = \sum_i e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i) + \beta \mu N(\mathbf{x}_i,\mathbf{p}_i) - \psi  }
+$$
+Differentiating both sides of this expression with respect to $(\beta \mu)$ gives:
+$$
+\begin{aligned}
+0 & = \sum_i \left( N(\mathbf{x}_i,\mathbf{p}_i) - \frac{\partial \psi}{\partial (\beta \mu)} \right) e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i) + \beta \mu N(\mathbf{x}_i,\mathbf{p}_i) - \psi  } \\
+ & = \sum_i N(\mathbf{x}_i,\mathbf{p}_i) \frac{e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i)} e^{\beta \mu N(\mathbf{x}_i,\mathbf{p}_i)}}{e^\psi} - \sum_i \left( \frac{\partial \psi}{\partial (\beta \mu)} \right) \frac{e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i)} e^{\beta \mu N(\mathbf{x}_i,\mathbf{p}_i)}}{e^\psi}  \\
+& = \sum_i N(\mathbf{x}_i,\mathbf{p}_i) P_i - \left( \frac{\partial \psi}{\partial (\beta \mu)} \right) \sum_i P_i \\
+0 & = \langle N \rangle - \left( \frac{\partial \psi}{\partial (\beta \mu)} \right) 
+\end{aligned}
+$$
+Note the that energy of a microstate {\bf does not} depend on $\mu$ the derivatives of these quantities are zero.
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
+
+Show that:
+$$
+\left\langle (N - \langle N \rangle)^2 \right\rangle = \left( \frac{\partial^2 \ln Z}{\partial (\beta \mu)^2} \right)
+$$
+where $Z$ is the grand canonical partition function.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-6" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+We differentiate the first result we arrived at when we differentiated $Z$ with respect to $(\beta \mu)$ in the last question with respect 
+to $(\beta \mu)$ once more.  This brings us to:
+$$
+\begin{aligned}
+0 & = \sum_i \left( N(\mathbf{x}_i,\mathbf{p}_i) - \frac{\partial \psi}{\partial (\beta \mu)} \right)^2  e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i) + \beta \mu N(\mathbf{x}_i,\mathbf{p}_i) - \psi  } - \sum_i \frac{\partial^2 \psi}{\partial (\beta \mu)^2} e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i) + \beta \mu N(\mathbf{x}_i,\mathbf{p}_i) - \psi  } \\
+ & = \sum_i \left( N(\mathbf{x}_i,\mathbf{p}_i) - \langle N \rangle \right)^2 \frac{e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i)} e^{\beta \mu N(\mathbf{x}_i,\mathbf{p}_i)}}{e^\psi} - \frac{\partial^2 \psi}{\partial (\beta \mu)^2} \sum_i \frac{e^{-\beta E(\mathbf{x}_i,\mathbf{p}_i)} e^{\beta \mu N(\mathbf{x}_i,\mathbf{p}_i)}}{e^\psi}  \\
+ & = \sum_i \left( N(\mathbf{x}_i,\mathbf{p}_i) - \langle N \rangle \right)^2 P_i - \frac{\partial^2 \psi}{\partial (\beta \mu)^2}  \sum_i P_i \\
+0 & = \left\langle (N - \langle N \rangle)^2 \right\rangle - \frac{\partial^2 \psi}{\partial (\beta \mu)^2}
+\end{aligned}
+$$
+
+         </div>
+      </div>
+   </div>
+</div>
+<h4> Problem 2</h4>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
+
+Suppose you are given the partition function, $Z(M)$, for a system with a fixed magnetization, $M$.  Explain why the partition 
+function for a system in which the magnetic field, $H$, rather than the magnetism, is fixed is given by:
+$$
+Z(H) = \sum_i Z(M_i) e^{\beta H M_i} 
+$$ 
+Hence demonstrate that $\langle ( \delta M)^2 \rangle = \left( \frac{\partial M}{\partial (\beta H)} \right)_{N}$ 
+where $\langle ( \delta M)^2 \rangle = \langle M^2 \rangle - \langle M \rangle^2$
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-7" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+To prove that the partition function is the one given in the question we first begin by noting that classical thermodynamics tells us that:
+
+$$
+\textrm{d}E = T\textrm{d}S - P\textrm{d}V + H \textrm{M}
+$$
+
+we can rearrange this expression to give:
+
+$$
+\textrm{d}S = \frac{1}{T} \textrm{d}E + \frac{P}{T} \textrm{d}V - \frac{H}{T} \textrm{d}M
+$$
+
+Now suppose that we are in an ensemble in which only the value of the volume is held fixed.  In other words, the energy and 
+the magnetisation of the system is allowed to fluctutuate, but the average values of these quantities is not allowed to be infinite.
+Statistical mechanics tells us that:
+
+$$
+\frac{\textrm{d}S}{k_B} = -\beta \langle \frac{\partial H}{\partial V} \rangle \textrm{d}V + \beta \textrm{d}\langle E \rangle + \beta \xi \textrm{d}\langle M \rangle
+$$
+
+If we compare the coefficients of $\textrm{d}E$ and $\textrm{d}M$ in this expression and the previous one we find that:
+$$
+\begin{aligned}
+k_B \beta = \frac{1}{T} \qquad \rightarrow \qquad \beta = \frac{1}{k_B T} \\
+k_B \beta \xi = - \frac{H}{T} \qquad \rightarrow \qquad \xi = - H
+\end{aligned}
+$$ 
+Given the definition of the generalised partition function:
+$$
+Z = \sum_j e^{\sum_k \lambda_k B_j^{(k)} }
+$$
+we can thus write that the partition function $Z(H)$ is given by:
+$$
+Z(H) = \sum_j e^{-\beta E_j} e^{\beta H M_j}
+$$
+Now suppose that we had fixed the magnetization, $M$, of the system.  The partition function in this case would have been:
+$$
+Z(M) = \sum_n e^{-\beta E_n} = \sum_j e^{-\beta E_j} \delta( M_j - M ) 
+$$
+Critically the first sum in the above (the one over $n$) consider only those microstates that have a magnetism of $M$.  We 
+can calculate $Z(M)$ by summing over all microstates including those that have a magnetisation, $M_j$, that is not
+equal to $M$, as we did when calculating $Z(H)$, by including a function:
+$$
+\delta( M_j - M ) = \begin{cases}
+1 & \textrm{if} \quad M_j = M \\
+0 & \textrm{otherwise}
+\end{cases}
+$$  
+in the sum as we did in the second summation above.  We recover the expression in the question for $Z(H)$ by recognising that:
+$$
+Z(H) = \sum_j e^{-\beta E_j} e^{\beta H M_j} = \sum_i e^{\beta H M_i} \sum_j e^{-\beta E_j} \delta( M_i - M_j ) = \sum_i e^{\beta H M_i} Z(M_i)
+$$
+We now define $\psi$ as $Z(H)=e^\psi$ and note that.
+\[
+1 = e^{-\psi}e^{\psi} = e^{-\psi} \sum_j e^{\beta H M_j} = \sum_j e^{\beta H M_j - \psi}
+\]
+
+Notice that Z(M_i) does not depend on $\beta H$.  We can thus differentiate both sides of this expression above with respect to $\beta H$ to give:
+
+\[
+\begin{aligned}
+0 &= \frac{\partial }{\partial (\beta H)} \sum_j Z(M_j) e^{\beta H M_j - \psi} = \sum_j Z(M_j) \frac{\partial }{\partial (\beta H)} e^{\beta H M_j - \psi} \\
+& = \sum_j Z(M_j) e^{\beta H M_j - \psi}\left( M_j - \frac{\partial \psi}{\partial (\beta H)} \right) \\
+& = \frac{1}{Z(H)} \sum_j M_j Z(M_j) e^{\beta H M_j } - \frac{\partial \psi}{\partial (\beta H)} \frac{1}{Z(H)}  \sum_j Z(M_j) e^{\beta H M_j - \psi} \\
+& = \langle M \rangle - \frac{\partial \psi}{\partial (\beta H)}
+\end{aligned}
+\]
+so obviously $\frac{\partial \psi}{\partial (\beta H)}  = \langle M \rangle$.  If we now take second derivatives of $1 = e^{-\psi}e^{\psi}$ we find
+
+\[
+\begin{aligned}
+0 & = \frac{\partial }{\partial (\beta H)} \sum_j Z(M_j) e^{\beta H M_j - \psi}\left( M_j - \frac{\partial \psi}{\partial (\beta H)} \right) =  \sum_j Z(M_j) \left[ e^{\beta H M_j - \psi}\left(
+ M_j - \frac{\partial \psi}{\partial (\beta H)} \right)^2 - e^{\beta H M_j - \psi} \frac{\partial^2 \psi}{\partial (\beta H)^2} \right] \\
+ & =  \sum_j Z(M_j) e^{\beta H M_j - \psi} \left\{  \left[ M_j - \langle M_j \rangle \right]^2 - \frac{\partial^2 \psi}{\partial (\beta H)^2} \right\} = \langle (\delta M)^2 \rangle -  \frac{\partial^2 \psi}{\partial (\beta H)^2}
+\end{aligned}
+\]
+
+We thus have: $ \langle (\delta M)^2 \rangle = \frac{\partial^2 \psi}{\partial (\beta H)^2}$ where $\psi=\ln Z_c$. But 
+remember $\frac{\partial \psi}{\partial (\beta H)}  = \langle M \rangle$ so we can rewrite this second derivative as a first 
+derivative i.e. as $\langle (\delta M)^2 \rangle = \left( \frac{\partial \langle M \rangle }{\partial (\beta H)^2 } \right)$.  
+If we do this at constant $\beta$ we get the result required by the question.
+
+
+         </div>
+      </div>
+   </div>
+</div>
+ 
+                    </div> 
+		</div>
+	</div>
+	<!-- === END CONTENT === -->
+	<!-- === BEGIN FOOTER === -->
+	<div id="base">
+		<div class="container padding-vert-30">
+			<div class="row">
+					<!-- Contact Details -->
+					<div class="col-md-3 margin-bottom-20">
+						<h3 class="margin-bottom-10">Contact Details</h3>
+						<p>School of Mathematics and Physics,<br />
+						Queen's University Belfast,<br />
+						Belfast,<br />
+						BT7 1NN</p>
+						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+					</div>
+					<!-- End Contact Details -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Menu -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="col-md-4">
+						<p>(c) 2016 Gareth Tribello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->

@@ -97,6 +97,10 @@ Find the optimum of $f(x,y)=x^2+y^2$ subject to the constraint $g(x,y)=2x+y=10$
         <div class="panel-body">
            <div class="row">
 
+$$
+x=4 \qquad y=2 \qquad f(x,y) = 20
+$$
+
          </div>
       </div>
    </div>
@@ -118,6 +122,10 @@ Find the optimum of $f(x,y)=x^2+y^2$  subject to the constraint $g(x,y)=x+2y=5$
         <div class="panel-body">
            <div class="row">
 
+$$
+x=1 \qquad y=2 \qquad f(x,y) = 5
+$$
+
          </div>
       </div>
    </div>
@@ -130,7 +138,7 @@ Find the optimum of $f(x,y)=x^2+y^2$  subject to the constraint $g(x,y)=x+2y=5$
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
 
-Find the optimum of $f(x,y) = 81x^2 + y^2$ subject to the constraint $g(x,y)=4x^2 +y^2=9$
+Find the largest value $f(x,y) = 81x^2 + y^2$ can take subject to the constraint $g(x,y)=4x^2 +y^2=9$
 
         </a>
         </h4>
@@ -138,6 +146,26 @@ Find the optimum of $f(x,y) = 81x^2 + y^2$ subject to the constraint $g(x,y)=4x^
     <div id="collapse-2" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
+
+The extended function here is:
+
+$$
+F(x,y,\lambda) = 81x^2 + y^2 + \lambda( 4x^2 + y^2 - 9 )
+$$
+
+When this is differentiated with respect to $y$ you get:
+
+$$
+\frac{\partial F}{\partial y} = 2y + 2y\lambda = 0 \qquad \rightarrow \qquad 2y(1 + \lambda) = 0 \qquad \therefore y=0 \quad \textrm{or} \quad \lambda=-1 
+$$
+
+You have to insert both these solutions into the other equations you get by calculating $\frac{\partial F}{\partial x}$ and 
+ $\frac{\partial F}{\partial \lambda}$. Through this process you will get 4 local optima.  You will find that the largest 
+values are at:
+
+$$
+x=0 \qquad y=\pm 3 \qquad f(x,y) = 9
+$$
 
          </div>
       </div>
@@ -151,7 +179,7 @@ Find the optimum of $f(x,y) = 81x^2 + y^2$ subject to the constraint $g(x,y)=4x^
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
 
-Find the optimum of $f(x,y)=8x^2 - 2y$ subject to the constraint $g(x,y)=x^2+y^2 = 1$
+Find the minimum value that $f(x,y)=8x^2 - 2y$ can take subject to the constraint $g(x,y)=x^2+y^2 = 1$.  
 
         </a>
         </h4>
@@ -159,6 +187,10 @@ Find the optimum of $f(x,y)=8x^2 - 2y$ subject to the constraint $g(x,y)=x^2+y^2
     <div id="collapse-3" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
+
+$$
+x=0 \qquad y= 1 \qquad f(x,y) = -2
+$$
 
          </div>
       </div>
@@ -172,7 +204,7 @@ Find the optimum of $f(x,y)=8x^2 - 2y$ subject to the constraint $g(x,y)=x^2+y^2
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
 
-Find the optimum of $f(x,y,z) = y^2 - 10z$ subject to the constraint $x^2 + y^2 + z^2 = 36$
+Find the smallest value $f(x,y,z) = y^2 - 10z$ can take subject to the constraint $x^2 + y^2 + z^2 = 36$.  Hint to do this you need to remember $\lambda \ne 0$.
 
         </a>
         </h4>
@@ -180,6 +212,10 @@ Find the optimum of $f(x,y,z) = y^2 - 10z$ subject to the constraint $x^2 + y^2 
     <div id="collapse-4" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
+
+$$
+x=0 \qquad y=0 \qquad z=6 \qquad f(x,y,z) = -60
+$$
 
          </div>
       </div>
@@ -193,7 +229,7 @@ Find the optimum of $f(x,y,z) = y^2 - 10z$ subject to the constraint $x^2 + y^2 
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
 
-Find the optimum of $f(x,y,z) = xyz$ subject to the constraint $x+9y^2 + z^2 = 4$.  (assume $x \ge 0$)
+Find the largest value $f(x,y,z)=3x^2 + y$ can take subject to the constraints $4x - 3y = 9$ and $x^2 + z^2 = 9$
 
         </a>
         </h4>
@@ -202,26 +238,9 @@ Find the optimum of $f(x,y,z) = xyz$ subject to the constraint $x+9y^2 + z^2 = 4
         <div class="panel-body">
            <div class="row">
 
-         </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
-
-Find the optimum of $f(x,y,z)=3x^2 + y$ subject to the constraints $4x - 3y = 9$ and $x^2 + z^2 = 9$
-
-        </a>
-        </h4>
-    </div>
-    <div id="collapse-6" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
+$$
+x=3 \qquad y=1 \qquad z=0 \qquad f(x,y,z) = 28
+$$
 
          </div>
       </div>
@@ -233,7 +252,7 @@ Find the optimum of $f(x,y,z)=3x^2 + y$ subject to the constraints $4x - 3y = 9$
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
+        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
 
 Consider a three-sided spinner, which has edges labelled $0$, $1$ and $2$.  Calculate the most probable set of 
 probabilities $\{p_j\}$, for getting 0, 1 and 2 given that the average value of $j$ is $\langle j \rangle =10/7$.  
@@ -242,7 +261,7 @@ N.B.  The most probable set of probabilities will have the minimum information s
         </a>
         </h4>
     </div>
-    <div id="collapse-7" class="accordion-body collapse">
+    <div id="collapse-6" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 
@@ -301,7 +320,7 @@ p_0 = \frac{1}{7} \qquad p_1 = \frac{2}{7} \qquad p_2 = \frac{4}{7}
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
+        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
 
 Calculate the most probable set of probabilities $\{p_j\}$, given that the average value of $j$ is $\langle j \rangle$ and that the 
 face painted 0 never occurs.  (Hint: notice that we have three constraints here and that there are three unknowns).
@@ -309,7 +328,7 @@ face painted 0 never occurs.  (Hint: notice that we have three constraints here 
         </a>
         </h4>
     </div>
-    <div id="collapse-8" class="accordion-body collapse">
+    <div id="collapse-7" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 
@@ -340,7 +359,7 @@ p_1 = 1 - p_2 \qquad \rightarrow \qquad 1-p_2 + 2p_2 = \frac{10}{7} \qquad \righ
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse">
+        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
 
 Now suppose that all three sides are equally probable.  Is the information in this distribution greater than or 
 less than the information in the distribution you calculated in the first part of this problem?
@@ -348,7 +367,7 @@ less than the information in the distribution you calculated in the first part o
         </a>
         </h4>
     </div>
-    <div id="collapse-9" class="accordion-body collapse">
+    <div id="collapse-8" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
 

@@ -1,0 +1,290 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Title -->
+	<title>Adsorbtion
+ : Exercise</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	<!-- Favicon -->
+	<link href="favicon.html" rel="shortcut icon">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+</head>
+<body>
+	<div id="pre_header" class="visible-lg"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="index.html" title="">
+					<img src="assets/img/logo.png" alt="Logo" />
+				</a>
+			</div>
+			<!-- End Logo -->
+			<!-- Top Menu -->
+			<div class="col-md-12 margin-top-30">
+				<div id="hornav" class="pull-right visible-lg">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+                                                <li><span>Modules</span>
+                                                <ul>
+                                                  <li><span><a href="SOR3012.html">SOR3012</a></span></li>
+<li><span><a href="AMA4004.html">AMA4004</a></span></li>
+<li><span><a href="PHY9038.html">PHY9038</a></span></li>
+
+					        </ul>				</div>
+				</div>
+				<div class="clear"></div>
+				<!-- End Top Menu -->
+			</div>
+		</div>
+		<!-- === END HEADER === -->
+		<!-- === BEGIN CONTENT === -->
+		<div id="content" class="container">
+                    <div class="panel panel-blue">
+                      <div class="panel-heading">
+                          <h1 class="panel-title"> Adsorbtion
+ : Exercises</h1>
+                      </div>
+                      
+<H1> Introduction </H1>
+
+The problems below require you to use what you have learnt about the canonical and grand canonical paritition 
+functions to derive a simple model for adsorbtion of atoms/molecules on a surface.
+
+<H1> Example problems </H1>
+<p> Click on the problems to reveal the solution </p> 
+<h4> Problem 1</h4>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
+
+A surface has $M$ sites that can be either occupied by an atom or not.  How many different ways are there of arranging $N \lt M$ atoms on this surface 
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-0" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+Notice that we have two types of objects - empty sites and filled sites.  Furthermore, there are $N$ filled sites and $M-N$ empty sites.  The number
+of different arrangments of these two types of object can be calculated using the binomial coefficient:
+$$
+\binom{M}{N} = \frac{M!}{N!(M-N)!}
+$$
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+
+A surface has $M$ sites where molecules can be adsorbed in two states: the ground state, which has energy $E = 0$ and an excited state with energy $E = U$.
+Calculate the canonical partition function for a single molecule adsorbed on a particular adsorption site, $Z(1)$. Explain why when $N$ molecules adsorb 
+on the surface the canonical partition function for the whole system is given by:
+$$
+Z_c^{(N)} = \frac{ M!}{N!(M-N)!} \left[ Z_c^{(1)} \right]^N
+$$
+When performing the derivation for this second part you should assume that the adsorbed molecules do not interact with each other.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-1" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The canonical partition function is given by:
+
+\[
+ Z_c = \sum_i e^{-\frac{E_i}{k_B T}}
+\]
+
+where the sum runs over all possible microstates and $E_i$ is the energy of microstate $i$.  For one molecule adsorbed on one site on the surface we thus have:
+
+\[
+Z_c^{(1)} = e^{0} + e^{-\frac{U}{k_B T}} = 1 + e^{-\frac{U}{k_B T}}
+\]
+
+As it's energy can be either equal to 0 or $U$.  For $N$ particles we thus have:
+
+\[
+\begin{aligned}
+Z_c^{(N)} & =  \frac{M!}{M!(M-N)!} \sum_{i_1} \sum_{i_2} \sum_{i_1} \dots 
+\sum_{i_N}  e^{-\frac{E_{i_1} + E_{i_2} + E_{i_3} + \dots + E_{i_N}}{k_B T}} \\
+& = \frac{M!}{M!(M-N)!} \sum_{i_1} \sum_{i_2} \sum_{i_1} \dots \sum_{i_N} 
+\prod_{j=1}^N e^{-\frac{E_{i_j}}{k_B T}} \\
+& = \frac{M!}{M!(M-N)!} \sum_{i_1} e^{-\frac{E_{i_1}}{k_B T}} \sum_{i_2} 
+e^{-\frac{E_{i_2}}{k_B T}} 
+\sum_{i_3} e^{-\frac{E_{i_3}}{k_B T}} \dots \sum_{i_N} e^{-\frac{E_{i_N}}{k_B 
+T}} \\
+& = \frac{M!}{M!(M-N)!} \left(Z_c^{(1)}\right)^N = \frac{M!}{M!(M-N)!} \left(1 
++ e^{-\frac{U}{k_B T}}\right)^N
+\end{aligned}
+\]
+
+The factor of $\frac{M!}{M!(M-N)!}$ comes about because when $N$ particles adsorb there will be $N$ filled sites and $M$ empty sites.  Hence, because
+we have to sum over all possible microstates when calculating the partition function, we have to consider all possible arrangements of the $N$ atoms 
+on the $M$ absorbption sites.  As discussed in the answer to the first part of this question we can calculate the number of orderings of $N$ filled sites
+and $M-N$ empty sites using the binomial coefficients.
+
+         </div>
+      </div>
+   </div>
+</div>
+</br>
+<div id="accordion" class="panel-group"> 
+<!-- Start of introductory panel -->
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+
+Explain why the grand canonical partition function for this system can be calculated from the canonical partition function using:
+$$
+Z_{gc} = \sum_{n=0}^M Z_c^{(n)} e^{\beta \mu n}
+$$
+Hence, show that the grand canonical partition function for the system that was introduced in the previous part is given by:
+$$
+Z_{gc} = ( 1 + e^{\beta \mu}\left[ 1 + e^{-\frac{U}{k_B T}} \right] )^M
+$$
+where $\mu$ is the chemical potential.  Then, by taking an appropriate derivative of this partition function, show that on average {\bf a fraction}:
+$$
+\langle K \rangle =\frac{  e^{\beta \mu}  [ 1 + e^{-\frac{U}{k_B T}} ] }{ 1 + e^{\beta \mu}\left[ 1 + e^{-\frac{U}{k_B T}} \right] }
+$$
+of the available lattice sites are occupied.
+
+        </a>
+        </h4>
+    </div>
+    <div id="collapse-2" class="accordion-body collapse">
+        <div class="panel-body">
+           <div class="row">
+
+The grand canonical partition is related to the canonical partition function by:
+
+\[
+\begin{aligned}
+  Z_{gc} & = \sum_{N=0}^M Z_c(N,V) e^{\beta \mu N} \\
+   & = \sum_{N=0}^M e^{\beta \mu N} \binom{M}{N} \left(1 + e^{-\frac{U}{k_B 
+T}}\right)^N \\
+ & = \sum_{N=0}^M \binom{M}{N} \left[ e^{\beta \mu} \left(1 + e^{-\frac{U}{k_B 
+T}}\right) \right]^N \\
+& = ( 1 + e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}])^M
+\end{aligned}
+\]
+
+In deriving this formula we have used the binomial theorem $\sum_{i=1}^N a^i b^{N-i} = (a+b)^N$ with $a=e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}]$ and $b=1$.
+
+</br> </br>
+
+To get the average fraction of occupied lattices sites, $\langle K \rangle$ we
+have to take the following derivative:
+\[
+ \langle K \rangle = \frac{1}{M} \frac{\partial \ln Z_{gc} }{\partial (\beta \mu) }
+\]
+when we take this derivative we find that:
+\[
+\begin{aligned}
+\langle K \rangle & = \frac{M}{M} \frac{\partial }{\partial(\beta \mu)} 
+\ln\left[ 
+1+e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}] \right] \\
+ & = \frac{ e^{\beta \mu}[1 + e^{-\frac{U}{k_B T}}] }{1+e^{\beta \mu}[1 
++ e^{-\frac{U}{k_B T}}]}
+\end{aligned}
+\]
+         </div>
+      </div>
+   </div>
+</div>
+ 
+                    </div> 
+		</div>
+	</div>
+	<!-- === END CONTENT === -->
+	<!-- === BEGIN FOOTER === -->
+	<div id="base">
+		<div class="container padding-vert-30">
+			<div class="row">
+					<!-- Contact Details -->
+					<div class="col-md-3 margin-bottom-20">
+						<h3 class="margin-bottom-10">Contact Details</h3>
+						<p>School of Mathematics and Physics,<br />
+						Queen's University Belfast,<br />
+						Belfast,<br />
+						BT7 1NN</p>
+						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+					</div>
+					<!-- End Contact Details -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Menu -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="col-md-4">
+						<p>(c) 2016 Gareth Tribello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->

@@ -11,3 +11,4 @@ LEARNINGOUTCOMES:
 - You should be able to perform derivations with more refined mean field theories in which the interaction between a subset of the spins are modelled explicitly.
 
 END:
+MEAN_FIELD_MODELS EXERCISE HTML AMA4004 mean-field-problems G.~Tribello Problems in which the mean field approximation is used to examine Ising models in one and two dimensions.

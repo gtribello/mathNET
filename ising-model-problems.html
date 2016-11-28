@@ -76,7 +76,8 @@
 
 The questions below require you to find partition functions using the transfer matrix technique 
 that was introduced in the video on finding the partition function for the 1D-closed Ising model.
-The problems below are difficult and they are here mostly to show you the scope of this technique. 
+The problems below are difficult so don't get disillusioned if you cannot do them.  
+They are here mostly to show you the scope of this technique. 
 
 <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
@@ -845,8 +846,7 @@ inserted in the value of the first eigenvalue.
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
 
-Calculate the constant volume heat capacity, $C_v$, for an open 1D-Ising model in the absence of an external magnetic field (i.e. $H = 0$).  
-What happens to this quantity as $T \rightarrow 0$?
+Calculate the ensemble average of the energy $\langle E \rangle$ for an open, 1D Ising model with $H=0$.
 
         </a>
         </h4>
@@ -855,31 +855,17 @@ What happens to this quantity as $T \rightarrow 0$?
         <div class="panel-body">
            <div class="row">
 
-The heat capacity is given by:
-
-\[
-C_v = \left(\frac{\partial \langle E \rangle}{\partial \beta} \right) = - \left(\frac{\partial^2 \ln Z_c }{\partial \beta^2 } \right)
-\]
-
-The equality between the partial derivatives here holds because:
+The ensemble average of the energy is given by: 
 
 $$
 \langle E \rangle = -\left(\frac{\partial \ln Z_c }{\partial \beta } \right)
 $$
 
-So in evaluating $C_v$ we also get the ensemble average of the energy $\langle E \rangle$ for free.  When we evaluate this first derivative we find that:
+For the 1D Ising model with $H=0$ we thus have:
 
 $$
 \langle E \rangle = -(N-1)J\tanh(\beta J)
 $$
-
-As such:
-
-\[
-C_v = - \frac{\partial }{\partial \beta} (N-1)J\tanh(\beta J) = -(N-1)J^2\left[1-\tanh^2(\beta J) \right]
-\]
-
-At $T=0$ we can thus state that $C_v=0$.
 
          </div>
       </div>
@@ -1217,7 +1203,7 @@ and as we now know the trace of a matrix is equal to the sum of its eigenvalues.
         <a class="accordion-toggle" href="#collapse-13" data-parent="#accordion" data-toggle="collapse">
 
 Use the eigenvalues that you determined in the previous question to determine the canonical partition function for a system of $N$ Potts sites.
-Use the expression you derived to evaluate the average energy per site and the heat capacity in the thermodynamic limit. 
+Use the expression you derived to evaluate the average energy.  Explain how you would calculate the heat capacity from the average energy.
 
         </a>
         </h4>
@@ -1241,30 +1227,15 @@ We can then calculate the average energy per site from the canonical partition f
 \end{aligned}
 \]
 
-In the thermodynamic limit $\frac{\lambda_2}{\lambda_1} \rightarrow 0$ and hence $Z_c \rightarrow \lambda_1^N$.  We can thus write:
-
-\[
-Z_c = (e^{\beta J} + p -1)^N
-\]
-
-The internal energy per site in this limit is thus:
-
-\[
-\begin{aligned}
-\frac{\langle E \rangle}{N} =  - \frac{1}{N} \left( \frac{\partial \ln Z_c}{\partial \beta} \right) & = -\frac{1}{N} \frac{\partial }{\partial \beta} N \ln(e^{\beta J} + p -1) \\
- & = -\frac{Je^{\beta J}}{e^{\beta J} + p -1} \\
- & = -\frac{J}{1 + (p-1)e^{-\beta J}}
-\end{aligned}
-\]
-
 The per-site heat capacity can be calculated from the average energy per site as follows:
 
 \[
 \begin{aligned}
-C_v =  \frac{1}{N} \left( \frac{\partial \langle E \rangle }{\partial \beta} \right) & = -\frac{\partial }{\partial \beta} \frac{J}{1 + (p-1)e^{-\beta J}} \\
-& = -\frac{J^2 (p-1)e^{-\beta J}}{(1 + (p-1)e^{-\beta J})^2}
+C_v =  \frac{1}{N} \left( \frac{\partial \langle E \rangle }{\partial \beta} \right) & = -\frac{\partial }{\partial \beta}  \left[ \frac{Je^{\beta J}[(e^{\beta J} + p -1)^{N-1} + (p-1)(e^{\beta J} - 1)^{N-1}] }{(e^{\beta J} + p -1)^N + (p-1)(e^{\beta J} -1)^N} \right] \\
 \end{aligned}
 \]
+
+The differentiation here is going to be a nightmare so it is not worth doing
          </div>
       </div>
    </div>

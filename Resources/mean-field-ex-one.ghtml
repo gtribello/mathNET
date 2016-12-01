@@ -1,0 +1,23 @@
+TITLE: A mean field description for the 1D Ising model
+
+GEOGEBRA: https://www.geogebra.org/material/iframe/id/htpXS3ab/width/1920/height/860/border/888888
+
+DESCRIPTION:
+
+The green line on the graph is the line $y=x$, while the red line is a plot of the equation we derived in the video on the mean 
+field description of the Ising model:
+$$
+\langle M \rangle = \tanh\left[ \beta ( H + 2J\langle M \rangle ) \right]
+$$
+where $\langle M \rangle$ is the average magnetization per spin.  The sliders allow you to adjust the strength of the 
+applied magnetic field, $H$, which is expressed in units of $J$, and the inverse temperature, $\beta$, which is expressed in 
+units of $\frac{J}{k_B T}$
+
+QUESTIONS:
+
+- What is significant about the points where the red line intersects the green line?
+- When the applied field $H$ is equal to 0 at how many points does the red line intersect with the green line?  What happens as the the inverse temperature is increased?
+- Based on your answer to the previous question how does the magnetization of the system behave when there is zero applied field and when (a) T>0.5 $\frac{k_B T}{J}$ and (b) $T<0.5 \frac{k_B T}{J}$? How do the spins behave in these differnt regimes?  What is significant about the temperature $T=0.5 \frac{k_B T}{J}$?
+- What is the derivative of $\tanh\left[ \beta ( H + 2J\langle M \rangle ) \right]$ with respect to $\langle M \rangle$ equal to when $H=0$ and when $\beta=2 \frac{J}{k_B T}$?  Explain why this is significant given your answers to the previous questions and the figure above.
+- Describe how the curve changes when $H \ne 0$.  How does the number of times the green line intercepts with the red line change as the strength of the field and the temperature are changed?  Describe how the positions of these various intercepts changes with field strength? 
+

@@ -11,73 +11,73 @@
 <!-- GRAND_CANONICAL_ENSEMBLE -->
 <g id="node1" class="node"><title>GRAND_CANONICAL_ENSEMBLE</title>
 <a xlink:href="GRAND_CANONICAL_ENSEMBLE.html" xlink:title="The grand canonical ensemble" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="285,-108 83,-108 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M83,-108C77,-108 71,-102 71,-96"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="71,-96 71,-84 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M71,-84C71,-78 77,-72 83,-72"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="83,-72 285,-72 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M285,-72C291,-72 297,-78 297,-84"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="297,-84 297,-96 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M297,-96C297,-102 291,-108 285,-108"/>
-<text text-anchor="start" x="79.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">The grand canonical ensemble</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="336,-108 134,-108 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M134,-108C128,-108 122,-102 122,-96"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="122,-96 122,-84 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M122,-84C122,-78 128,-72 134,-72"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="134,-72 336,-72 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M336,-72C342,-72 348,-78 348,-84"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="348,-84 348,-96 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M348,-96C348,-102 342,-108 336,-108"/>
+<text text-anchor="start" x="130.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">The grand canonical ensemble</text>
 </a>
 </g>
 <!-- ADSORPTION -->
-<g id="node6" class="node"><title>ADSORPTION</title>
+<g id="node2" class="node"><title>ADSORPTION</title>
 <a xlink:href="ADSORPTION.html" xlink:title="Statistical mechanics of adsorption" target="_top">
-<polyline fill="none" stroke="black" points="300,-36 68,-36 "/>
-<path fill="none" stroke="black" d="M68,-36C62,-36 56,-30 56,-24"/>
-<polyline fill="none" stroke="black" points="56,-24 56,-12 "/>
-<path fill="none" stroke="black" d="M56,-12C56,-6 62,-1.74305e-14 68,-1.70974e-14"/>
-<polyline fill="none" stroke="black" points="68,-1.70974e-14 300,-4.21885e-15 "/>
-<path fill="none" stroke="black" d="M300,-4.21885e-15C306,-3.88578e-15 312,-6 312,-12"/>
-<polyline fill="none" stroke="black" points="312,-12 312,-24 "/>
-<path fill="none" stroke="black" d="M312,-24C312,-30 306,-36 300,-36"/>
-<text text-anchor="start" x="64.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Statistical mechanics of adsorption</text>
+<polyline fill="none" stroke="black" points="351,-36 119,-36 "/>
+<path fill="none" stroke="black" d="M119,-36C113,-36 107,-30 107,-24"/>
+<polyline fill="none" stroke="black" points="107,-24 107,-12 "/>
+<path fill="none" stroke="black" d="M107,-12C107,-6 113,-1.74305e-14 119,-1.70974e-14"/>
+<polyline fill="none" stroke="black" points="119,-1.70974e-14 351,-4.21885e-15 "/>
+<path fill="none" stroke="black" d="M351,-4.21885e-15C357,-3.88578e-15 363,-6 363,-12"/>
+<polyline fill="none" stroke="black" points="363,-12 363,-24 "/>
+<path fill="none" stroke="black" d="M363,-24C363,-30 357,-36 351,-36"/>
+<text text-anchor="start" x="115.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Statistical mechanics of adsorption</text>
 </a>
 </g>
 <!-- GRAND_CANONICAL_ENSEMBLE&#45;&gt;ADSORPTION -->
-<g id="edge6" class="edge"><title>GRAND_CANONICAL_ENSEMBLE&#45;&gt;ADSORPTION</title>
-<path fill="none" stroke="black" d="M184,-71.8314C184,-64.131 184,-54.9743 184,-46.4166"/>
-<polygon fill="black" stroke="black" points="187.5,-46.4132 184,-36.4133 180.5,-46.4133 187.5,-46.4132"/>
-</g>
-<!-- RESPONSE_FUNCTIONS -->
-<g id="node2" class="node"><title>RESPONSE_FUNCTIONS</title>
-<a xlink:href="RESPONSE_FUNCTIONS.html" xlink:title="Response functions" target="_top">
-<polyline fill="none" stroke="black" points="138,-180 12,-180 "/>
-<path fill="none" stroke="black" d="M12,-180C6,-180 5.92119e-14,-174 4.73695e-14,-168"/>
-<polyline fill="none" stroke="black" points="4.73695e-14,-168 2.36848e-14,-156 "/>
-<path fill="none" stroke="black" d="M2.36848e-14,-156C1.18424e-14,-150 6,-144 12,-144"/>
-<polyline fill="none" stroke="black" points="12,-144 138,-144 "/>
-<path fill="none" stroke="black" d="M138,-144C144,-144 150,-150 150,-156"/>
-<polyline fill="none" stroke="black" points="150,-156 150,-168 "/>
-<path fill="none" stroke="black" d="M150,-168C150,-174 144,-180 138,-180"/>
-<text text-anchor="start" x="8.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Response functions</text>
-</a>
-</g>
-<!-- RESPONSE_FUNCTIONS&#45;&gt;GRAND_CANONICAL_ENSEMBLE -->
-<g id="edge2" class="edge"><title>RESPONSE_FUNCTIONS&#45;&gt;GRAND_CANONICAL_ENSEMBLE</title>
-<path fill="none" stroke="black" d="M102.505,-143.831C116.318,-134.707 133.226,-123.539 148.053,-113.745"/>
-<polygon fill="black" stroke="black" points="150.089,-116.595 156.503,-108.163 146.23,-110.754 150.089,-116.595"/>
+<g id="edge2" class="edge"><title>GRAND_CANONICAL_ENSEMBLE&#45;&gt;ADSORPTION</title>
+<path fill="none" stroke="black" d="M235,-71.8314C235,-64.131 235,-54.9743 235,-46.4166"/>
+<polygon fill="black" stroke="black" points="238.5,-46.4132 235,-36.4133 231.5,-46.4133 238.5,-46.4132"/>
 </g>
 <!-- GENERALIZED_PARTITION_FUNCTION -->
 <g id="node4" class="node"><title>GENERALIZED_PARTITION_FUNCTION</title>
 <a xlink:href="GENERALIZED_PARTITION_FUNCTION.html" xlink:title="The generalized partition function" target="_top">
-<polyline fill="none" stroke="black" points="408,-180 180,-180 "/>
-<path fill="none" stroke="black" d="M180,-180C174,-180 168,-174 168,-168"/>
-<polyline fill="none" stroke="black" points="168,-168 168,-156 "/>
-<path fill="none" stroke="black" d="M168,-156C168,-150 174,-144 180,-144"/>
-<polyline fill="none" stroke="black" points="180,-144 408,-144 "/>
-<path fill="none" stroke="black" d="M408,-144C414,-144 420,-150 420,-156"/>
-<polyline fill="none" stroke="black" points="420,-156 420,-168 "/>
-<path fill="none" stroke="black" d="M420,-168C420,-174 414,-180 408,-180"/>
-<text text-anchor="start" x="176" y="-159.233" font-family="Times Roman,serif" font-size="14.00">The generalized partition function</text>
+<polyline fill="none" stroke="black" points="240,-180 12,-180 "/>
+<path fill="none" stroke="black" d="M12,-180C6,-180 8.28967e-14,-174 6.63173e-14,-168"/>
+<polyline fill="none" stroke="black" points="6.63173e-14,-168 3.31587e-14,-156 "/>
+<path fill="none" stroke="black" d="M3.31587e-14,-156C1.65793e-14,-150 6,-144 12,-144"/>
+<polyline fill="none" stroke="black" points="12,-144 240,-144 "/>
+<path fill="none" stroke="black" d="M240,-144C246,-144 252,-150 252,-156"/>
+<polyline fill="none" stroke="black" points="252,-156 252,-168 "/>
+<path fill="none" stroke="black" d="M252,-168C252,-174 246,-180 240,-180"/>
+<text text-anchor="start" x="8" y="-159.233" font-family="Times Roman,serif" font-size="14.00">The generalized partition function</text>
 </a>
 </g>
 <!-- GENERALIZED_PARTITION_FUNCTION&#45;&gt;GRAND_CANONICAL_ENSEMBLE -->
 <g id="edge4" class="edge"><title>GENERALIZED_PARTITION_FUNCTION&#45;&gt;GRAND_CANONICAL_ENSEMBLE</title>
-<path fill="none" stroke="black" d="M266.242,-143.831C252.303,-134.707 235.24,-123.539 220.277,-113.745"/>
-<polygon fill="black" stroke="black" points="222.033,-110.711 211.749,-108.163 218.199,-116.568 222.033,-110.711"/>
+<path fill="none" stroke="black" d="M153.505,-143.831C167.318,-134.707 184.226,-123.539 199.053,-113.745"/>
+<polygon fill="black" stroke="black" points="201.089,-116.595 207.503,-108.163 197.23,-110.754 201.089,-116.595"/>
+</g>
+<!-- RESPONSE_FUNCTIONS -->
+<g id="node6" class="node"><title>RESPONSE_FUNCTIONS</title>
+<a xlink:href="RESPONSE_FUNCTIONS.html" xlink:title="Response functions" target="_top">
+<polyline fill="none" stroke="black" points="408,-180 282,-180 "/>
+<path fill="none" stroke="black" d="M282,-180C276,-180 270,-174 270,-168"/>
+<polyline fill="none" stroke="black" points="270,-168 270,-156 "/>
+<path fill="none" stroke="black" d="M270,-156C270,-150 276,-144 282,-144"/>
+<polyline fill="none" stroke="black" points="282,-144 408,-144 "/>
+<path fill="none" stroke="black" d="M408,-144C414,-144 420,-150 420,-156"/>
+<polyline fill="none" stroke="black" points="420,-156 420,-168 "/>
+<path fill="none" stroke="black" d="M420,-168C420,-174 414,-180 408,-180"/>
+<text text-anchor="start" x="278.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Response functions</text>
+</a>
+</g>
+<!-- RESPONSE_FUNCTIONS&#45;&gt;GRAND_CANONICAL_ENSEMBLE -->
+<g id="edge6" class="edge"><title>RESPONSE_FUNCTIONS&#45;&gt;GRAND_CANONICAL_ENSEMBLE</title>
+<path fill="none" stroke="black" d="M317.242,-143.831C303.303,-134.707 286.24,-123.539 271.277,-113.745"/>
+<polygon fill="black" stroke="black" points="273.033,-110.711 262.749,-108.163 269.199,-116.568 273.033,-110.711"/>
 </g>
 </g>
 </svg>

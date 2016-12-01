@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- LAWS_OF_THERMODYNAMICS -->
-<g id="node2" class="node"><title>LAWS_OF_THERMODYNAMICS</title>
+<g id="node4" class="node"><title>LAWS_OF_THERMODYNAMICS</title>
 <a xlink:href="LAWS_OF_THERMODYNAMICS.html" xlink:title="The first and second laws of thermodynamics" target="_top">
 <polyline fill="none" stroke="black" points="316,-36 12,-36 "/>
 <path fill="none" stroke="black" d="M12,-36C6,-36 1.42109e-13,-30 1.13687e-13,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- CARNOT_CYCLE&#45;&gt;LAWS_OF_THERMODYNAMICS -->
-<g id="edge2" class="edge"><title>CARNOT_CYCLE&#45;&gt;LAWS_OF_THERMODYNAMICS</title>
+<g id="edge4" class="edge"><title>CARNOT_CYCLE&#45;&gt;LAWS_OF_THERMODYNAMICS</title>
 <path fill="none" stroke="black" d="M164,-71.8314C164,-64.131 164,-54.9743 164,-46.4166"/>
 <polygon fill="black" stroke="black" points="167.5,-46.4132 164,-36.4133 160.5,-46.4133 167.5,-46.4132"/>
 </g>
 <!-- THERMODYNAMIC_VARIABLES -->
-<g id="node4" class="node"><title>THERMODYNAMIC_VARIABLES</title>
+<g id="node2" class="node"><title>THERMODYNAMIC_VARIABLES</title>
 <a xlink:href="THERMODYNAMIC_VARIABLES.html" xlink:title="Thermodynamic variables" target="_top">
 <polyline fill="none" stroke="black" points="249,-180 79,-180 "/>
 <path fill="none" stroke="black" d="M79,-180C73,-180 67,-174 67,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- THERMODYNAMIC_VARIABLES&#45;&gt;CARNOT_CYCLE -->
-<g id="edge4" class="edge"><title>THERMODYNAMIC_VARIABLES&#45;&gt;CARNOT_CYCLE</title>
+<g id="edge2" class="edge"><title>THERMODYNAMIC_VARIABLES&#45;&gt;CARNOT_CYCLE</title>
 <path fill="none" stroke="black" d="M164,-143.831C164,-136.131 164,-126.974 164,-118.417"/>
 <polygon fill="black" stroke="black" points="167.5,-118.413 164,-108.413 160.5,-118.413 167.5,-118.413"/>
 </g>

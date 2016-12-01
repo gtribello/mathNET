@@ -11,54 +11,54 @@
 <!-- VENN_DIAGRAMS -->
 <g id="node1" class="node"><title>VENN_DIAGRAMS</title>
 <a xlink:href="VENN_DIAGRAMS.html" xlink:title="Basic set theory" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="242,-108 138,-108 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M138,-108C132,-108 126,-102 126,-96"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="126,-96 126,-84 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M126,-84C126,-78 132,-72 138,-72"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="138,-72 242,-72 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M242,-72C248,-72 254,-78 254,-84"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="254,-84 254,-96 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M254,-96C254,-102 248,-108 242,-108"/>
-<text text-anchor="start" x="134" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Basic set theory</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="261,-108 157,-108 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M157,-108C151,-108 145,-102 145,-96"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="145,-96 145,-84 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M145,-84C145,-78 151,-72 157,-72"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="157,-72 261,-72 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M261,-72C267,-72 273,-78 273,-84"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="273,-84 273,-96 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M273,-96C273,-102 267,-108 261,-108"/>
+<text text-anchor="start" x="153" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Basic set theory</text>
 </a>
-</g>
-<!-- CONDITIONAL_PROBABILITY -->
-<g id="node2" class="node"><title>CONDITIONAL_PROBABILITY</title>
-<a xlink:href="CONDITIONAL_PROBABILITY.html" xlink:title="Conditional probability" target="_top">
-<polyline fill="none" stroke="black" points="160,-36 12,-36 "/>
-<path fill="none" stroke="black" d="M12,-36C6,-36 7.10543e-14,-30 5.68434e-14,-24"/>
-<polyline fill="none" stroke="black" points="5.68434e-14,-24 2.84217e-14,-12 "/>
-<path fill="none" stroke="black" d="M2.84217e-14,-12C1.42109e-14,-6 6,-1.72678e-14 12,-1.67721e-14"/>
-<polyline fill="none" stroke="black" points="12,-1.67721e-14 160,-4.54417e-15 "/>
-<path fill="none" stroke="black" d="M160,-4.54417e-15C166,-4.04844e-15 172,-6 172,-12"/>
-<polyline fill="none" stroke="black" points="172,-12 172,-24 "/>
-<path fill="none" stroke="black" d="M172,-24C172,-30 166,-36 160,-36"/>
-<text text-anchor="start" x="8" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Conditional probability</text>
-</a>
-</g>
-<!-- VENN_DIAGRAMS&#45;&gt;CONDITIONAL_PROBABILITY -->
-<g id="edge2" class="edge"><title>VENN_DIAGRAMS&#45;&gt;CONDITIONAL_PROBABILITY</title>
-<path fill="none" stroke="black" d="M163.756,-71.8314C150.701,-62.7927 134.747,-51.7476 120.695,-42.0198"/>
-<polygon fill="black" stroke="black" points="122.449,-38.9773 112.235,-36.1628 118.465,-44.7326 122.449,-38.9773"/>
 </g>
 <!-- INCLUSION_EXCLUSION -->
-<g id="node4" class="node"><title>INCLUSION_EXCLUSION</title>
+<g id="node2" class="node"><title>INCLUSION_EXCLUSION</title>
 <a xlink:href="INCLUSION_EXCLUSION.html" xlink:title="Inclusion&#45;exclusion principle" target="_top">
-<polyline fill="none" stroke="black" points="388,-36 202,-36 "/>
-<path fill="none" stroke="black" d="M202,-36C196,-36 190,-30 190,-24"/>
-<polyline fill="none" stroke="black" points="190,-24 190,-12 "/>
-<path fill="none" stroke="black" d="M190,-12C190,-6 196,-1.73575e-14 202,-1.69515e-14"/>
-<polyline fill="none" stroke="black" points="202,-1.69515e-14 388,-4.36476e-15 "/>
-<path fill="none" stroke="black" d="M388,-4.36476e-15C394,-3.95874e-15 400,-6 400,-12"/>
-<polyline fill="none" stroke="black" points="400,-12 400,-24 "/>
-<path fill="none" stroke="black" d="M400,-24C400,-30 394,-36 388,-36"/>
-<text text-anchor="start" x="198.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Inclusion&#45;exclusion principle</text>
+<polyline fill="none" stroke="black" points="198,-36 12,-36 "/>
+<path fill="none" stroke="black" d="M12,-36C6,-36 7.10543e-14,-30 5.68434e-14,-24"/>
+<polyline fill="none" stroke="black" points="5.68434e-14,-24 2.84217e-14,-12 "/>
+<path fill="none" stroke="black" d="M2.84217e-14,-12C1.42109e-14,-6 6,-1.73575e-14 12,-1.69515e-14"/>
+<polyline fill="none" stroke="black" points="12,-1.69515e-14 198,-4.36476e-15 "/>
+<path fill="none" stroke="black" d="M198,-4.36476e-15C204,-3.95874e-15 210,-6 210,-12"/>
+<polyline fill="none" stroke="black" points="210,-12 210,-24 "/>
+<path fill="none" stroke="black" d="M210,-24C210,-30 204,-36 198,-36"/>
+<text text-anchor="start" x="8.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Inclusion&#45;exclusion principle</text>
 </a>
 </g>
 <!-- VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION -->
-<g id="edge4" class="edge"><title>VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION</title>
-<path fill="none" stroke="black" d="M216.496,-71.8314C229.677,-62.7927 245.785,-51.7476 259.971,-42.0198"/>
-<polygon fill="black" stroke="black" points="262.245,-44.7047 268.513,-36.1628 258.286,-38.9316 262.245,-44.7047"/>
+<g id="edge2" class="edge"><title>VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION</title>
+<path fill="none" stroke="black" d="M182.756,-71.8314C169.701,-62.7927 153.747,-51.7476 139.695,-42.0198"/>
+<polygon fill="black" stroke="black" points="141.449,-38.9773 131.235,-36.1628 137.465,-44.7326 141.449,-38.9773"/>
+</g>
+<!-- CONDITIONAL_PROBABILITY -->
+<g id="node4" class="node"><title>CONDITIONAL_PROBABILITY</title>
+<a xlink:href="CONDITIONAL_PROBABILITY.html" xlink:title="Conditional probability" target="_top">
+<polyline fill="none" stroke="black" points="388,-36 240,-36 "/>
+<path fill="none" stroke="black" d="M240,-36C234,-36 228,-30 228,-24"/>
+<polyline fill="none" stroke="black" points="228,-24 228,-12 "/>
+<path fill="none" stroke="black" d="M228,-12C228,-6 234,-1.72678e-14 240,-1.67721e-14"/>
+<polyline fill="none" stroke="black" points="240,-1.67721e-14 388,-4.54417e-15 "/>
+<path fill="none" stroke="black" d="M388,-4.54417e-15C394,-4.04844e-15 400,-6 400,-12"/>
+<polyline fill="none" stroke="black" points="400,-12 400,-24 "/>
+<path fill="none" stroke="black" d="M400,-24C400,-30 394,-36 388,-36"/>
+<text text-anchor="start" x="236" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Conditional probability</text>
+</a>
+</g>
+<!-- VENN_DIAGRAMS&#45;&gt;CONDITIONAL_PROBABILITY -->
+<g id="edge4" class="edge"><title>VENN_DIAGRAMS&#45;&gt;CONDITIONAL_PROBABILITY</title>
+<path fill="none" stroke="black" d="M235.496,-71.8314C248.677,-62.7927 264.785,-51.7476 278.971,-42.0198"/>
+<polygon fill="black" stroke="black" points="281.245,-44.7047 287.513,-36.1628 277.286,-38.9316 281.245,-44.7047"/>
 </g>
 </g>
 </svg>

@@ -11,112 +11,112 @@
 <!-- STATIONARY_DIST_MARKOV -->
 <g id="node1" class="node"><title>STATIONARY_DIST_MARKOV</title>
 <a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title="Ergodic Markov chains" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="352,-108 206,-108 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M206,-108C200,-108 194,-102 194,-96"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="194,-96 194,-84 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M194,-84C194,-78 200,-72 206,-72"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="206,-72 352,-72 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M352,-72C358,-72 364,-78 364,-84"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="364,-84 364,-96 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M364,-96C364,-102 358,-108 352,-108"/>
-<text text-anchor="start" x="202" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Ergodic Markov chains</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="283,-108 137,-108 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M137,-108C131,-108 125,-102 125,-96"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="125,-96 125,-84 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M125,-84C125,-78 131,-72 137,-72"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="137,-72 283,-72 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M283,-72C289,-72 295,-78 295,-84"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="295,-84 295,-96 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M295,-96C295,-102 289,-108 283,-108"/>
+<text text-anchor="start" x="133" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Ergodic Markov chains</text>
 </a>
 </g>
 <!-- MONTE_CARLO -->
-<g id="node6" class="node"><title>MONTE_CARLO</title>
+<g id="node4" class="node"><title>MONTE_CARLO</title>
 <a xlink:href="MONTE_CARLO.html" xlink:title="Monte Carlo Simulation" target="_top">
-<polyline fill="none" stroke="black" points="270,-36 114,-36 "/>
-<path fill="none" stroke="black" d="M114,-36C108,-36 102,-30 102,-24"/>
-<polyline fill="none" stroke="black" points="102,-24 102,-12 "/>
-<path fill="none" stroke="black" d="M102,-12C102,-6 108,-1.72899e-14 114,-1.68162e-14"/>
-<polyline fill="none" stroke="black" points="114,-1.68162e-14 270,-4.5001e-15 "/>
-<path fill="none" stroke="black" d="M270,-4.5001e-15C276,-4.02641e-15 282,-6 282,-12"/>
-<polyline fill="none" stroke="black" points="282,-12 282,-24 "/>
-<path fill="none" stroke="black" d="M282,-24C282,-30 276,-36 270,-36"/>
-<text text-anchor="start" x="110.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Monte Carlo Simulation</text>
+<polyline fill="none" stroke="black" points="201,-36 45,-36 "/>
+<path fill="none" stroke="black" d="M45,-36C39,-36 33,-30 33,-24"/>
+<polyline fill="none" stroke="black" points="33,-24 33,-12 "/>
+<path fill="none" stroke="black" d="M33,-12C33,-6 39,-1.72899e-14 45,-1.68162e-14"/>
+<polyline fill="none" stroke="black" points="45,-1.68162e-14 201,-4.5001e-15 "/>
+<path fill="none" stroke="black" d="M201,-4.5001e-15C207,-4.02641e-15 213,-6 213,-12"/>
+<polyline fill="none" stroke="black" points="213,-12 213,-24 "/>
+<path fill="none" stroke="black" d="M213,-24C213,-30 207,-36 201,-36"/>
+<text text-anchor="start" x="41.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Monte Carlo Simulation</text>
 </a>
 </g>
 <!-- STATIONARY_DIST_MARKOV&#45;&gt;MONTE_CARLO -->
-<g id="edge6" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;MONTE_CARLO</title>
-<path fill="none" stroke="black" d="M257.046,-71.8314C246.331,-62.9632 233.281,-52.1637 221.691,-42.5718"/>
-<polygon fill="black" stroke="black" points="223.882,-39.8422 213.947,-36.1628 219.419,-45.2349 223.882,-39.8422"/>
+<g id="edge4" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;MONTE_CARLO</title>
+<path fill="none" stroke="black" d="M188.046,-71.8314C177.331,-62.9632 164.281,-52.1637 152.691,-42.5718"/>
+<polygon fill="black" stroke="black" points="154.882,-39.8422 144.947,-36.1628 150.419,-45.2349 154.882,-39.8422"/>
 </g>
 <!-- DETAILED_BALANCE -->
-<g id="node11" class="node"><title>DETAILED_BALANCE</title>
+<g id="node6" class="node"><title>DETAILED_BALANCE</title>
 <a xlink:href="DETAILED_BALANCE.html" xlink:title="Detailed balance" target="_top">
-<polyline fill="none" stroke="black" points="420,-36 312,-36 "/>
-<path fill="none" stroke="black" d="M312,-36C306,-36 300,-30 300,-24"/>
-<polyline fill="none" stroke="black" points="300,-24 300,-12 "/>
-<path fill="none" stroke="black" d="M300,-12C300,-6 306,-1.71176e-14 312,-1.64717e-14"/>
-<polyline fill="none" stroke="black" points="312,-1.64717e-14 420,-4.84461e-15 "/>
-<path fill="none" stroke="black" d="M420,-4.84461e-15C426,-4.19866e-15 432,-6 432,-12"/>
-<polyline fill="none" stroke="black" points="432,-12 432,-24 "/>
-<path fill="none" stroke="black" d="M432,-24C432,-30 426,-36 420,-36"/>
-<text text-anchor="start" x="308.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Detailed balance</text>
+<polyline fill="none" stroke="black" points="351,-36 243,-36 "/>
+<path fill="none" stroke="black" d="M243,-36C237,-36 231,-30 231,-24"/>
+<polyline fill="none" stroke="black" points="231,-24 231,-12 "/>
+<path fill="none" stroke="black" d="M231,-12C231,-6 237,-1.71176e-14 243,-1.64717e-14"/>
+<polyline fill="none" stroke="black" points="243,-1.64717e-14 351,-4.84461e-15 "/>
+<path fill="none" stroke="black" d="M351,-4.84461e-15C357,-4.19866e-15 363,-6 363,-12"/>
+<polyline fill="none" stroke="black" points="363,-12 363,-24 "/>
+<path fill="none" stroke="black" d="M363,-24C363,-30 357,-36 351,-36"/>
+<text text-anchor="start" x="239.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Detailed balance</text>
 </a>
 </g>
 <!-- STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE -->
-<g id="edge12" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE</title>
-<path fill="none" stroke="black" d="M300.954,-71.8314C311.669,-62.9632 324.719,-52.1637 336.309,-42.5718"/>
-<polygon fill="black" stroke="black" points="338.581,-45.2349 344.053,-36.1628 334.118,-39.8422 338.581,-45.2349"/>
+<g id="edge6" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE</title>
+<path fill="none" stroke="black" d="M231.954,-71.8314C242.669,-62.9632 255.719,-52.1637 267.309,-42.5718"/>
+<polygon fill="black" stroke="black" points="269.581,-45.2349 275.053,-36.1628 265.118,-39.8422 269.581,-45.2349"/>
 </g>
-<!-- TRANSIENT_RECURRENT_STATES -->
-<g id="node2" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
-<a xlink:href="TRANSIENT_RECURRENT_STATES.html" xlink:title="Transient and recurrent states in Markov chains" target="_top">
-<polyline fill="none" stroke="black" points="336,-252 12,-252 "/>
-<path fill="none" stroke="black" d="M12,-252C6,-252 1.42109e-13,-246 1.13687e-13,-240"/>
-<polyline fill="none" stroke="black" points="1.13687e-13,-240 5.68434e-14,-228 "/>
-<path fill="none" stroke="black" d="M5.68434e-14,-228C2.84217e-14,-222 6,-216 12,-216"/>
-<polyline fill="none" stroke="black" points="12,-216 336,-216 "/>
-<path fill="none" stroke="black" d="M336,-216C342,-216 348,-222 348,-228"/>
-<polyline fill="none" stroke="black" points="348,-228 348,-240 "/>
-<path fill="none" stroke="black" d="M348,-240C348,-246 342,-252 336,-252"/>
-<text text-anchor="start" x="8.5" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Transient and recurrent states in Markov chains</text>
-</a>
-</g>
-<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge2" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M173.792,-215.806C174.433,-196.375 178.016,-165.48 193,-144 201.687,-131.547 214.262,-121.361 227.127,-113.326"/>
-<polygon fill="black" stroke="black" points="229.177,-116.182 236.035,-108.106 225.638,-110.142 229.177,-116.182"/>
-</g>
-<!-- EIGENVECTORS -->
-<g id="node8" class="node"><title>EIGENVECTORS</title>
-<a xlink:href="EIGENVECTORS.html" xlink:title="Eigendecomposition" target="_top">
-<polyline fill="none" stroke="black" points="344,-180 214,-180 "/>
-<path fill="none" stroke="black" d="M214,-180C208,-180 202,-174 202,-168"/>
-<polyline fill="none" stroke="black" points="202,-168 202,-156 "/>
-<path fill="none" stroke="black" d="M202,-156C202,-150 208,-144 214,-144"/>
-<polyline fill="none" stroke="black" points="214,-144 344,-144 "/>
-<path fill="none" stroke="black" d="M344,-144C350,-144 356,-150 356,-156"/>
-<polyline fill="none" stroke="black" points="356,-156 356,-168 "/>
-<path fill="none" stroke="black" d="M356,-168C356,-174 350,-180 344,-180"/>
-<text text-anchor="start" x="210.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Eigendecomposition</text>
-</a>
-</g>
-<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;EIGENVECTORS -->
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
-<g id="node4" class="node"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
+<g id="node2" class="node"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
 <a xlink:href="TRANSITION_MATRIX_OF_MARKOV_CHAIN.html" xlink:title="Markovian transition matrix" target="_top">
-<polyline fill="none" stroke="black" points="564,-252 378,-252 "/>
-<path fill="none" stroke="black" d="M378,-252C372,-252 366,-246 366,-240"/>
-<polyline fill="none" stroke="black" points="366,-240 366,-228 "/>
-<path fill="none" stroke="black" d="M366,-228C366,-222 372,-216 378,-216"/>
-<polyline fill="none" stroke="black" points="378,-216 564,-216 "/>
-<path fill="none" stroke="black" d="M564,-216C570,-216 576,-222 576,-228"/>
-<polyline fill="none" stroke="black" points="576,-228 576,-240 "/>
-<path fill="none" stroke="black" d="M576,-240C576,-246 570,-252 564,-252"/>
-<text text-anchor="start" x="374.5" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Markovian transition matrix</text>
+<polyline fill="none" stroke="black" points="198,-252 12,-252 "/>
+<path fill="none" stroke="black" d="M12,-252C6,-252 7.10543e-14,-246 5.68434e-14,-240"/>
+<polyline fill="none" stroke="black" points="5.68434e-14,-240 2.84217e-14,-228 "/>
+<path fill="none" stroke="black" d="M2.84217e-14,-228C1.42109e-14,-222 6,-216 12,-216"/>
+<polyline fill="none" stroke="black" points="12,-216 198,-216 "/>
+<path fill="none" stroke="black" d="M198,-216C204,-216 210,-222 210,-228"/>
+<polyline fill="none" stroke="black" points="210,-228 210,-240 "/>
+<path fill="none" stroke="black" d="M210,-240C210,-246 204,-252 198,-252"/>
+<text text-anchor="start" x="8.5" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Markovian transition matrix</text>
 </a>
 </g>
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge4" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M451.381,-215.857C430.616,-197.015 396.548,-167.114 365,-144 350.514,-133.387 333.941,-122.67 319.234,-113.613"/>
-<polygon fill="black" stroke="black" points="320.715,-110.417 310.354,-108.204 317.074,-116.395 320.715,-110.417"/>
+<g id="edge2" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<path fill="none" stroke="black" d="M104.792,-215.806C105.433,-196.375 109.016,-165.48 124,-144 132.687,-131.547 145.262,-121.361 158.127,-113.326"/>
+<polygon fill="black" stroke="black" points="160.177,-116.182 167.035,-108.106 156.638,-110.142 160.177,-116.182"/>
+</g>
+<!-- EIGENVECTORS -->
+<g id="node10" class="node"><title>EIGENVECTORS</title>
+<a xlink:href="EIGENVECTORS.html" xlink:title="Eigendecomposition" target="_top">
+<polyline fill="none" stroke="black" points="275,-180 145,-180 "/>
+<path fill="none" stroke="black" d="M145,-180C139,-180 133,-174 133,-168"/>
+<polyline fill="none" stroke="black" points="133,-168 133,-156 "/>
+<path fill="none" stroke="black" d="M133,-156C133,-150 139,-144 145,-144"/>
+<polyline fill="none" stroke="black" points="145,-144 275,-144 "/>
+<path fill="none" stroke="black" d="M275,-144C281,-144 287,-150 287,-156"/>
+<polyline fill="none" stroke="black" points="287,-156 287,-168 "/>
+<path fill="none" stroke="black" d="M287,-168C287,-174 281,-180 275,-180"/>
+<text text-anchor="start" x="141.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Eigendecomposition</text>
+</a>
+</g>
+<!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;EIGENVECTORS -->
+<!-- TRANSIENT_RECURRENT_STATES -->
+<g id="node8" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
+<a xlink:href="TRANSIENT_RECURRENT_STATES.html" xlink:title="Transient and recurrent states in Markov chains" target="_top">
+<polyline fill="none" stroke="black" points="564,-252 240,-252 "/>
+<path fill="none" stroke="black" d="M240,-252C234,-252 228,-246 228,-240"/>
+<polyline fill="none" stroke="black" points="228,-240 228,-228 "/>
+<path fill="none" stroke="black" d="M228,-228C228,-222 234,-216 240,-216"/>
+<polyline fill="none" stroke="black" points="240,-216 564,-216 "/>
+<path fill="none" stroke="black" d="M564,-216C570,-216 576,-222 576,-228"/>
+<polyline fill="none" stroke="black" points="576,-228 576,-240 "/>
+<path fill="none" stroke="black" d="M576,-240C576,-246 570,-252 564,-252"/>
+<text text-anchor="start" x="236.5" y="-231.233" font-family="Times Roman,serif" font-size="14.00">Transient and recurrent states in Markov chains</text>
+</a>
+</g>
+<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV -->
+<g id="edge8" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<path fill="none" stroke="black" d="M382.381,-215.857C361.616,-197.015 327.548,-167.114 296,-144 281.514,-133.387 264.941,-122.67 250.234,-113.613"/>
+<polygon fill="black" stroke="black" points="251.715,-110.417 241.354,-108.204 248.074,-116.395 251.715,-110.417"/>
 </g>
 <!-- EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge8" class="edge"><title>EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M279,-143.831C279,-136.131 279,-126.974 279,-118.417"/>
-<polygon fill="black" stroke="black" points="282.5,-118.413 279,-108.413 275.5,-118.413 282.5,-118.413"/>
+<g id="edge10" class="edge"><title>EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<path fill="none" stroke="black" d="M210,-143.831C210,-136.131 210,-126.974 210,-118.417"/>
+<polygon fill="black" stroke="black" points="213.5,-118.413 210,-108.413 206.5,-118.413 213.5,-118.413"/>
 </g>
 </g>
 </svg>

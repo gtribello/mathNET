@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- SET_PARTITIONS -->
-<g id="node2" class="node"><title>SET_PARTITIONS</title>
+<g id="node4" class="node"><title>SET_PARTITIONS</title>
 <a xlink:href="SET_PARTITIONS.html" xlink:title="Partition (set theory)" target="_top">
 <polyline fill="none" stroke="black" points="174,-36 36,-36 "/>
 <path fill="none" stroke="black" d="M36,-36C30,-36 24,-30 24,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- INCLUSION_EXCLUSION&#45;&gt;SET_PARTITIONS -->
-<g id="edge2" class="edge"><title>INCLUSION_EXCLUSION&#45;&gt;SET_PARTITIONS</title>
+<g id="edge4" class="edge"><title>INCLUSION_EXCLUSION&#45;&gt;SET_PARTITIONS</title>
 <path fill="none" stroke="black" d="M105,-71.8314C105,-64.131 105,-54.9743 105,-46.4166"/>
 <polygon fill="black" stroke="black" points="108.5,-46.4132 105,-36.4133 101.5,-46.4133 108.5,-46.4132"/>
 </g>
 <!-- VENN_DIAGRAMS -->
-<g id="node4" class="node"><title>VENN_DIAGRAMS</title>
+<g id="node2" class="node"><title>VENN_DIAGRAMS</title>
 <a xlink:href="VENN_DIAGRAMS.html" xlink:title="Basic set theory" target="_top">
 <polyline fill="none" stroke="black" points="157,-180 53,-180 "/>
 <path fill="none" stroke="black" d="M53,-180C47,-180 41,-174 41,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION -->
-<g id="edge4" class="edge"><title>VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION</title>
+<g id="edge2" class="edge"><title>VENN_DIAGRAMS&#45;&gt;INCLUSION_EXCLUSION</title>
 <path fill="none" stroke="black" d="M105,-143.831C105,-136.131 105,-126.974 105,-118.417"/>
 <polygon fill="black" stroke="black" points="108.5,-118.413 105,-108.413 101.5,-118.413 108.5,-118.413"/>
 </g>

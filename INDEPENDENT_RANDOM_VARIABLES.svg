@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- MARKOV_PROPERTY -->
-<g id="node6" class="node"><title>MARKOV_PROPERTY</title>
+<g id="node4" class="node"><title>MARKOV_PROPERTY</title>
 <a xlink:href="MARKOV_PROPERTY.html" xlink:title="The Markov Property" target="_top">
 <polyline fill="none" stroke="black" points="278,-36 140,-36 "/>
 <path fill="none" stroke="black" d="M140,-36C134,-36 128,-30 128,-24"/>
@@ -37,7 +37,7 @@
 </a>
 </g>
 <!-- INDEPENDENT_RANDOM_VARIABLES&#45;&gt;MARKOV_PROPERTY -->
-<g id="edge6" class="edge"><title>INDEPENDENT_RANDOM_VARIABLES&#45;&gt;MARKOV_PROPERTY</title>
+<g id="edge4" class="edge"><title>INDEPENDENT_RANDOM_VARIABLES&#45;&gt;MARKOV_PROPERTY</title>
 <path fill="none" stroke="black" d="M209,-71.8314C209,-64.131 209,-54.9743 209,-46.4166"/>
 <polygon fill="black" stroke="black" points="212.5,-46.4132 209,-36.4133 205.5,-46.4133 212.5,-46.4132"/>
 </g>
@@ -61,7 +61,7 @@
 <polygon fill="black" stroke="black" points="176.535,-116.733 182.765,-108.163 172.551,-110.977 176.535,-116.733"/>
 </g>
 <!-- CONDITIONAL_PROBABILITY -->
-<g id="node4" class="node"><title>CONDITIONAL_PROBABILITY</title>
+<g id="node6" class="node"><title>CONDITIONAL_PROBABILITY</title>
 <a xlink:href="CONDITIONAL_PROBABILITY.html" xlink:title="Conditional probability" target="_top">
 <polyline fill="none" stroke="black" points="388,-180 240,-180 "/>
 <path fill="none" stroke="black" d="M240,-180C234,-180 228,-174 228,-168"/>
@@ -75,7 +75,7 @@
 </a>
 </g>
 <!-- CONDITIONAL_PROBABILITY&#45;&gt;INDEPENDENT_RANDOM_VARIABLES -->
-<g id="edge4" class="edge"><title>CONDITIONAL_PROBABILITY&#45;&gt;INDEPENDENT_RANDOM_VARIABLES</title>
+<g id="edge6" class="edge"><title>CONDITIONAL_PROBABILITY&#45;&gt;INDEPENDENT_RANDOM_VARIABLES</title>
 <path fill="none" stroke="black" d="M287.504,-143.831C274.323,-134.793 258.215,-123.748 244.029,-114.02"/>
 <polygon fill="black" stroke="black" points="245.714,-110.932 235.487,-108.163 241.755,-116.705 245.714,-110.932"/>
 </g>

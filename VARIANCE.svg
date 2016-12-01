@@ -60,41 +60,41 @@
 <path fill="none" stroke="black" d="M229.748,-71.8314C243.055,-62.7927 259.316,-51.7476 273.637,-42.0198"/>
 <polygon fill="black" stroke="black" points="275.955,-44.677 282.26,-36.1628 272.021,-38.8864 275.955,-44.677"/>
 </g>
-<!-- RANDOM_VARIABLES -->
-<g id="node4" class="node"><title>RANDOM_VARIABLES</title>
-<a xlink:href="RANDOM_VARIABLES.html" xlink:title="Random variables" target="_top">
-<polyline fill="none" stroke="black" points="191,-180 75,-180 "/>
-<path fill="none" stroke="black" d="M75,-180C69,-180 63,-174 63,-168"/>
-<polyline fill="none" stroke="black" points="63,-168 63,-156 "/>
-<path fill="none" stroke="black" d="M63,-156C63,-150 69,-144 75,-144"/>
-<polyline fill="none" stroke="black" points="75,-144 191,-144 "/>
-<path fill="none" stroke="black" d="M191,-144C197,-144 203,-150 203,-156"/>
-<polyline fill="none" stroke="black" points="203,-156 203,-168 "/>
-<path fill="none" stroke="black" d="M203,-168C203,-174 197,-180 191,-180"/>
-<text text-anchor="start" x="71.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Random variables</text>
-</a>
-</g>
-<!-- RANDOM_VARIABLES&#45;&gt;VARIANCE -->
-<g id="edge4" class="edge"><title>RANDOM_VARIABLES&#45;&gt;VARIANCE</title>
-<path fill="none" stroke="black" d="M150.664,-143.831C158.973,-135.285 169.026,-124.944 178.092,-115.62"/>
-<polygon fill="black" stroke="black" points="180.637,-118.023 185.098,-108.413 175.618,-113.143 180.637,-118.023"/>
-</g>
 <!-- EXPECTATION -->
-<g id="node6" class="node"><title>EXPECTATION</title>
+<g id="node4" class="node"><title>EXPECTATION</title>
 <a xlink:href="EXPECTATION.html" xlink:title="Expectation " target="_top">
-<polyline fill="none" stroke="black" points="313,-180 233,-180 "/>
-<path fill="none" stroke="black" d="M233,-180C227,-180 221,-174 221,-168"/>
-<polyline fill="none" stroke="black" points="221,-168 221,-156 "/>
-<path fill="none" stroke="black" d="M221,-156C221,-150 227,-144 233,-144"/>
-<polyline fill="none" stroke="black" points="233,-144 313,-144 "/>
-<path fill="none" stroke="black" d="M313,-144C319,-144 325,-150 325,-156"/>
-<polyline fill="none" stroke="black" points="325,-156 325,-168 "/>
-<path fill="none" stroke="black" d="M325,-168C325,-174 319,-180 313,-180"/>
-<text text-anchor="start" x="229.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Expectation </text>
+<polyline fill="none" stroke="black" points="173,-180 93,-180 "/>
+<path fill="none" stroke="black" d="M93,-180C87,-180 81,-174 81,-168"/>
+<polyline fill="none" stroke="black" points="81,-168 81,-156 "/>
+<path fill="none" stroke="black" d="M81,-156C81,-150 87,-144 93,-144"/>
+<polyline fill="none" stroke="black" points="93,-144 173,-144 "/>
+<path fill="none" stroke="black" d="M173,-144C179,-144 185,-150 185,-156"/>
+<polyline fill="none" stroke="black" points="185,-156 185,-168 "/>
+<path fill="none" stroke="black" d="M185,-168C185,-174 179,-180 173,-180"/>
+<text text-anchor="start" x="89.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Expectation </text>
 </a>
 </g>
 <!-- EXPECTATION&#45;&gt;VARIANCE -->
-<g id="edge6" class="edge"><title>EXPECTATION&#45;&gt;VARIANCE</title>
+<g id="edge4" class="edge"><title>EXPECTATION&#45;&gt;VARIANCE</title>
+<path fill="none" stroke="black" d="M150.664,-143.831C158.973,-135.285 169.026,-124.944 178.092,-115.62"/>
+<polygon fill="black" stroke="black" points="180.637,-118.023 185.098,-108.413 175.618,-113.143 180.637,-118.023"/>
+</g>
+<!-- RANDOM_VARIABLES -->
+<g id="node6" class="node"><title>RANDOM_VARIABLES</title>
+<a xlink:href="RANDOM_VARIABLES.html" xlink:title="Random variables" target="_top">
+<polyline fill="none" stroke="black" points="331,-180 215,-180 "/>
+<path fill="none" stroke="black" d="M215,-180C209,-180 203,-174 203,-168"/>
+<polyline fill="none" stroke="black" points="203,-168 203,-156 "/>
+<path fill="none" stroke="black" d="M203,-156C203,-150 209,-144 215,-144"/>
+<polyline fill="none" stroke="black" points="215,-144 331,-144 "/>
+<path fill="none" stroke="black" d="M331,-144C337,-144 343,-150 343,-156"/>
+<polyline fill="none" stroke="black" points="343,-156 343,-168 "/>
+<path fill="none" stroke="black" d="M343,-168C343,-174 337,-180 331,-180"/>
+<text text-anchor="start" x="211.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Random variables</text>
+</a>
+</g>
+<!-- RANDOM_VARIABLES&#45;&gt;VARIANCE -->
+<g id="edge6" class="edge"><title>RANDOM_VARIABLES&#45;&gt;VARIANCE</title>
 <path fill="none" stroke="black" d="M255.336,-143.831C247.027,-135.285 236.974,-124.944 227.908,-115.62"/>
 <polygon fill="black" stroke="black" points="230.382,-113.143 220.902,-108.413 225.363,-118.023 230.382,-113.143"/>
 </g>

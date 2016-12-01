@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS -->
-<g id="node2" class="node"><title>SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS</title>
+<g id="node4" class="node"><title>SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS</title>
 <a xlink:href="SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS.html" xlink:title="Differential equations and integrating factors" target="_top">
 <polyline fill="none" stroke="black" points="318,-36 12,-36 "/>
 <path fill="none" stroke="black" d="M12,-36C6,-36 1.18424e-13,-30 9.4739e-14,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS&#45;&gt;SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS -->
-<g id="edge2" class="edge"><title>VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS&#45;&gt;SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS</title>
+<g id="edge4" class="edge"><title>VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS&#45;&gt;SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS</title>
 <path fill="none" stroke="black" d="M165,-71.8314C165,-64.131 165,-54.9743 165,-46.4166"/>
 <polygon fill="black" stroke="black" points="168.5,-46.4132 165,-36.4133 161.5,-46.4133 168.5,-46.4132"/>
 </g>
 <!-- EXPONENTIAL_GROWTH_DECAY -->
-<g id="node4" class="node"><title>EXPONENTIAL_GROWTH_DECAY</title>
+<g id="node2" class="node"><title>EXPONENTIAL_GROWTH_DECAY</title>
 <a xlink:href="EXPONENTIAL_GROWTH_DECAY.html" xlink:title="Exponential growth/decay" target="_top">
 <polyline fill="none" stroke="black" points="252,-180 78,-180 "/>
 <path fill="none" stroke="black" d="M78,-180C72,-180 66,-174 66,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- EXPONENTIAL_GROWTH_DECAY&#45;&gt;VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS -->
-<g id="edge4" class="edge"><title>EXPONENTIAL_GROWTH_DECAY&#45;&gt;VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS</title>
+<g id="edge2" class="edge"><title>EXPONENTIAL_GROWTH_DECAY&#45;&gt;VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS</title>
 <path fill="none" stroke="black" d="M165,-143.831C165,-136.131 165,-126.974 165,-118.417"/>
 <polygon fill="black" stroke="black" points="168.5,-118.413 165,-108.413 161.5,-118.413 168.5,-118.413"/>
 </g>

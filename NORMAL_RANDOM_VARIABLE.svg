@@ -11,79 +11,79 @@
 <!-- NORMAL_RANDOM_VARIABLE -->
 <g id="node1" class="node"><title>NORMAL_RANDOM_VARIABLE</title>
 <a xlink:href="NORMAL_RANDOM_VARIABLE.html" xlink:title="Normal random variable" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="250,-108 92,-108 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M92,-108C86,-108 80,-102 80,-96"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="80,-96 80,-84 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M80,-84C80,-78 86,-72 92,-72"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="92,-72 250,-72 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M250,-72C256,-72 262,-78 262,-84"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="262,-84 262,-96 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M262,-96C262,-102 256,-108 250,-108"/>
-<text text-anchor="start" x="88" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Normal random variable</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="219,-108 61,-108 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M61,-108C55,-108 49,-102 49,-96"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="49,-96 49,-84 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M49,-84C49,-78 55,-72 61,-72"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="61,-72 219,-72 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M219,-72C225,-72 231,-78 231,-84"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="231,-84 231,-96 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M231,-96C231,-102 225,-108 219,-108"/>
+<text text-anchor="start" x="57" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Normal random variable</text>
 </a>
 </g>
 <!-- CENTRAL_LIMIT_THEOREM -->
 <g id="node6" class="node"><title>CENTRAL_LIMIT_THEOREM</title>
 <a xlink:href="CENTRAL_LIMIT_THEOREM.html" xlink:title="The central limit theorem" target="_top">
-<polyline fill="none" stroke="black" points="256,-36 86,-36 "/>
-<path fill="none" stroke="black" d="M86,-36C80,-36 74,-30 74,-24"/>
-<polyline fill="none" stroke="black" points="74,-24 74,-12 "/>
-<path fill="none" stroke="black" d="M74,-12C74,-6 80,-1.73241e-14 86,-1.68845e-14"/>
-<polyline fill="none" stroke="black" points="86,-1.68845e-14 256,-4.43174e-15 "/>
-<path fill="none" stroke="black" d="M256,-4.43174e-15C262,-3.99222e-15 268,-6 268,-12"/>
-<polyline fill="none" stroke="black" points="268,-12 268,-24 "/>
-<path fill="none" stroke="black" d="M268,-24C268,-30 262,-36 256,-36"/>
-<text text-anchor="start" x="82.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The central limit theorem</text>
+<polyline fill="none" stroke="black" points="225,-36 55,-36 "/>
+<path fill="none" stroke="black" d="M55,-36C49,-36 43,-30 43,-24"/>
+<polyline fill="none" stroke="black" points="43,-24 43,-12 "/>
+<path fill="none" stroke="black" d="M43,-12C43,-6 49,-1.73241e-14 55,-1.68845e-14"/>
+<polyline fill="none" stroke="black" points="55,-1.68845e-14 225,-4.43174e-15 "/>
+<path fill="none" stroke="black" d="M225,-4.43174e-15C231,-3.99222e-15 237,-6 237,-12"/>
+<polyline fill="none" stroke="black" points="237,-12 237,-24 "/>
+<path fill="none" stroke="black" d="M237,-24C237,-30 231,-36 225,-36"/>
+<text text-anchor="start" x="51.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The central limit theorem</text>
 </a>
 </g>
 <!-- NORMAL_RANDOM_VARIABLE&#45;&gt;CENTRAL_LIMIT_THEOREM -->
 <g id="edge6" class="edge"><title>NORMAL_RANDOM_VARIABLE&#45;&gt;CENTRAL_LIMIT_THEOREM</title>
-<path fill="none" stroke="black" d="M165.048,-71.8314C164.297,-64.131 164.076,-54.9743 164.385,-46.4166"/>
-<polygon fill="black" stroke="black" points="167.879,-46.6161 165.024,-36.4133 160.893,-46.1697 167.879,-46.6161"/>
+<path fill="none" stroke="black" d="M134.048,-71.8314C133.297,-64.131 133.076,-54.9743 133.385,-46.4166"/>
+<polygon fill="black" stroke="black" points="136.879,-46.6161 134.024,-36.4133 129.893,-46.1697 136.879,-46.6161"/>
 </g>
-<!-- RANDOM_VARIABLES -->
-<g id="node2" class="node"><title>RANDOM_VARIABLES</title>
-<a xlink:href="RANDOM_VARIABLES.html" xlink:title="Random variables" target="_top">
-<polyline fill="none" stroke="black" points="348,-180 232,-180 "/>
-<path fill="none" stroke="black" d="M232,-180C226,-180 220,-174 220,-168"/>
-<polyline fill="none" stroke="black" points="220,-168 220,-156 "/>
-<path fill="none" stroke="black" d="M220,-156C220,-150 226,-144 232,-144"/>
-<polyline fill="none" stroke="black" points="232,-144 348,-144 "/>
+<!-- INTEGRATION_BY_SUBSTITUTION -->
+<g id="node2" class="node"><title>INTEGRATION_BY_SUBSTITUTION</title>
+<a xlink:href="INTEGRATION_BY_SUBSTITUTION.html" xlink:title="Integration by substitution" target="_top">
+<polyline fill="none" stroke="black" points="348,-180 170,-180 "/>
+<path fill="none" stroke="black" d="M170,-180C164,-180 158,-174 158,-168"/>
+<polyline fill="none" stroke="black" points="158,-168 158,-156 "/>
+<path fill="none" stroke="black" d="M158,-156C158,-150 164,-144 170,-144"/>
+<polyline fill="none" stroke="black" points="170,-144 348,-144 "/>
 <path fill="none" stroke="black" d="M348,-144C354,-144 360,-150 360,-156"/>
 <polyline fill="none" stroke="black" points="360,-156 360,-168 "/>
 <path fill="none" stroke="black" d="M360,-168C360,-174 354,-180 348,-180"/>
-<text text-anchor="start" x="228.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Random variables</text>
-</a>
-</g>
-<!-- RANDOM_VARIABLES&#45;&gt;NORMAL_RANDOM_VARIABLE -->
-<g id="edge2" class="edge"><title>RANDOM_VARIABLES&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="black" d="M259.971,-143.831C244.75,-134.622 226.087,-123.33 209.792,-113.471"/>
-<polygon fill="black" stroke="black" points="211.387,-110.345 201.019,-108.163 207.763,-116.334 211.387,-110.345"/>
-</g>
-<!-- RANDOM_VARIABLES&#45;&gt;CENTRAL_LIMIT_THEOREM -->
-<!-- INTEGRATION_BY_SUBSTITUTION -->
-<g id="node4" class="node"><title>INTEGRATION_BY_SUBSTITUTION</title>
-<a xlink:href="INTEGRATION_BY_SUBSTITUTION.html" xlink:title="Integration by substitution" target="_top">
-<polyline fill="none" stroke="black" points="190,-180 12,-180 "/>
-<path fill="none" stroke="black" d="M12,-180C6,-180 5.92119e-14,-174 4.73695e-14,-168"/>
-<polyline fill="none" stroke="black" points="4.73695e-14,-168 2.36848e-14,-156 "/>
-<path fill="none" stroke="black" d="M2.36848e-14,-156C1.18424e-14,-150 6,-144 12,-144"/>
-<polyline fill="none" stroke="black" points="12,-144 190,-144 "/>
-<path fill="none" stroke="black" d="M190,-144C196,-144 202,-150 202,-156"/>
-<polyline fill="none" stroke="black" points="202,-156 202,-168 "/>
-<path fill="none" stroke="black" d="M202,-168C202,-174 196,-180 190,-180"/>
-<text text-anchor="start" x="8" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Integration by substitution</text>
+<text text-anchor="start" x="166" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Integration by substitution</text>
 </a>
 </g>
 <!-- INTEGRATION_BY_SUBSTITUTION&#45;&gt;NORMAL_RANDOM_VARIABLE -->
-<g id="edge4" class="edge"><title>INTEGRATION_BY_SUBSTITUTION&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="black" d="M118.664,-143.831C126.973,-135.285 137.026,-124.944 146.092,-115.62"/>
-<polygon fill="black" stroke="black" points="148.637,-118.023 153.098,-108.413 143.618,-113.143 148.637,-118.023"/>
+<g id="edge2" class="edge"><title>INTEGRATION_BY_SUBSTITUTION&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
+<path fill="none" stroke="black" d="M228.971,-143.831C213.75,-134.622 195.087,-123.33 178.792,-113.471"/>
+<polygon fill="black" stroke="black" points="180.387,-110.345 170.019,-108.163 176.763,-116.334 180.387,-110.345"/>
+</g>
+<!-- INTEGRATION_BY_SUBSTITUTION&#45;&gt;CENTRAL_LIMIT_THEOREM -->
+<!-- RANDOM_VARIABLES -->
+<g id="node4" class="node"><title>RANDOM_VARIABLES</title>
+<a xlink:href="RANDOM_VARIABLES.html" xlink:title="Random variables" target="_top">
+<polyline fill="none" stroke="black" points="128,-180 12,-180 "/>
+<path fill="none" stroke="black" d="M12,-180C6,-180 5.92119e-14,-174 4.73695e-14,-168"/>
+<polyline fill="none" stroke="black" points="4.73695e-14,-168 2.36848e-14,-156 "/>
+<path fill="none" stroke="black" d="M2.36848e-14,-156C1.18424e-14,-150 6,-144 12,-144"/>
+<polyline fill="none" stroke="black" points="12,-144 128,-144 "/>
+<path fill="none" stroke="black" d="M128,-144C134,-144 140,-150 140,-156"/>
+<polyline fill="none" stroke="black" points="140,-156 140,-168 "/>
+<path fill="none" stroke="black" d="M140,-168C140,-174 134,-180 128,-180"/>
+<text text-anchor="start" x="8.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Random variables</text>
+</a>
+</g>
+<!-- RANDOM_VARIABLES&#45;&gt;NORMAL_RANDOM_VARIABLE -->
+<g id="edge4" class="edge"><title>RANDOM_VARIABLES&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
+<path fill="none" stroke="black" d="M87.664,-143.831C95.9732,-135.285 106.026,-124.944 115.092,-115.62"/>
+<polygon fill="black" stroke="black" points="117.637,-118.023 122.098,-108.413 112.618,-113.143 117.637,-118.023"/>
 </g>
 <!-- CENTRAL_LIMIT_THEOREM&#45;&gt;NORMAL_RANDOM_VARIABLE -->
 <g id="edge8" class="edge"><title>CENTRAL_LIMIT_THEOREM&#45;&gt;NORMAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="black" d="M176.976,-36.4133C177.707,-44.0593 177.92,-53.1084 177.615,-61.5726"/>
-<polygon fill="black" stroke="black" points="174.105,-61.6264 176.952,-71.8314 181.09,-62.078 174.105,-61.6264"/>
+<path fill="none" stroke="black" d="M145.976,-36.4133C146.707,-44.0593 146.92,-53.1084 146.615,-61.5726"/>
+<polygon fill="black" stroke="black" points="143.105,-61.6264 145.952,-71.8314 150.09,-62.078 143.105,-61.6264"/>
 </g>
 </g>
 </svg>

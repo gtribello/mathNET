@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<!-- Title -->
-	<title>The binomial random variable 
+	<title>A mean field description for the 1D Ising model
  : Exercise</title>
 	<!-- Meta -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -68,36 +68,47 @@
 		<div id="content" class="container">
                     <div class="panel panel-blue">
                       <div class="panel-heading">
-                          <h1 class="panel-title"> The binomial random variable 
- : Introductory video</h1>
+                          <h1 class="panel-title"> A mean field description for the 1D Ising model
+ : Geogebra exercise </h1>
                       </div>
                      </div>
                       <div class="row margin-vert-30">
                       <div class="panel panel-primary">
                         <div class="panel-heading">
                          <h4 class="panel-title">
-                           Before watching the video read the questions below.  As you watch the video try to answer them 
+                           Try to answer the questions below by reading the description and adjusting the geogebra plot
                          </h4>
                         </div>
                         <div class="panel-body">
                           <div class="row">
                            <p align="center">
-                           <iframe width="630" height="472" src="https://www.youtube.com/embed/sQqiR9fQdIM
-" frameborder="0" allowfullscreen></iframe>
+                           <br/>
+                           <center> <iframe scrolling="no" src="https://www.geogebra.org/material/iframe/id/htpXS3ab/width/1920/height/860/border/888888
+" width="960px" height="450px" style="border:0px;"> </iframe> </center>
                            </p>
-                           
+                           <h1> Description </h3>
+                             
+The green line on the graph is the line $y=x$, while the red line is a plot of the equation we derived in the video on the mean 
+field description of the Ising model:
+$$
+\langle M \rangle = \tanh\left[ \beta ( H + 2J\langle M \rangle ) \right]
+$$
+where $\langle M \rangle$ is the average magnetization per spin.  The sliders allow you to adjust the strength of the 
+applied magnetic field, $H$, which is expressed in units of $J$, and the inverse temperature, $\beta$, which is expressed in 
+units of $\frac{J}{k_B T}$
+
+
+                           <h1> Questions </h3>
                            <ul>
-                             <li type="square"> Draw a tree diagram that illustrates the outcomes that could be obtained from three bernoulli trials
+                             <li type="square"> What is significant about the points where the red line intersects the green line?
 </li> 
-<li type="square"> Illustrate on your tree diagrams, which outcomes correspdond to the $X=0$, $X=1$, $X=2$ and $X=3$ outcomes for a Binomial random variable.
+<li type="square"> When the applied field $H$ is equal to 0 at how many points does the red line intersect with the green line?  What happens as the the inverse temperature is increased?
 </li> 
-<li type="square"> Hence, calculate the probabilities $P(X=0)$, $P(X=1)$, $P(X=2)$ and $P(X=3)$ where $X$ is a binomial random variable
+<li type="square"> Based on your answer to the previous question how does the magnetization of the system behave when there is zero applied field and when (a) T>0.5 $\frac{k_B T}{J}$ and (b) $T<0.5 \frac{k_B T}{J}$? How do the spins behave in these differnt regimes?  What is significant about the temperature $T=0.5 \frac{k_B T}{J}$?
 </li> 
-<li type="square"> Write out the probability mass function for a binomial random variable with paraemter $p$ and number of trials $N$.
+<li type="square"> What is the derivative of $\tanh\left[ \beta ( H + 2J\langle M \rangle ) \right]$ with respect to $\langle M \rangle$ equal to when $H=0$ and when $\beta=2 \frac{J}{k_B T}$?  Explain why this is significant given your answers to the previous questions and the figure above.
 </li> 
-<li type="square"> How many ways are there of arraning $N$ distinguishable objects.
-</li> 
-<li type="square"> How many ways are there of arranging $N$ objects of type 1 and $M$ objects of type 2.
+<li type="square"> Describe how the curve changes when $H \ne 0$.  How does the number of times the green line intercepts with the red line change as the strength of the field and the temperature are changed?  Describe how the positions of these various intercepts changes with field strength? 
 </li> 
 
                            </ul>

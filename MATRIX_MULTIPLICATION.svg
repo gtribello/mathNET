@@ -61,7 +61,7 @@
 <polygon fill="black" stroke="black" points="310.5,-118.413 307,-108.413 303.5,-118.413 310.5,-118.413"/>
 </g>
 <!-- MATRIX_POWERS -->
-<g id="node6" class="node"><title>MATRIX_POWERS</title>
+<g id="node8" class="node"><title>MATRIX_POWERS</title>
 <a xlink:href="MATRIX_POWERS.html" xlink:title="Taking positive integer powers of a square matrix" target="_top">
 <polyline fill="none" stroke="black" points="439,-36 105,-36 "/>
 <path fill="none" stroke="black" d="M105,-36C99,-36 93,-30 93,-24"/>
@@ -75,13 +75,13 @@
 </a>
 </g>
 <!-- MATRIX_MULTIPLICATION&#45;&gt;MATRIX_POWERS -->
-<g id="edge6" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;MATRIX_POWERS</title>
+<g id="edge8" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;MATRIX_POWERS</title>
 <path fill="none" stroke="black" d="M373.197,-143.879C404.136,-133.939 436.117,-121.015 445,-108 454.02,-94.7847 454.48,-84.8895 445,-72 435.329,-58.8502 405.079,-47.4891 372.519,-38.6269"/>
 <polygon fill="black" stroke="black" points="373.389,-35.2366 362.827,-36.0762 371.607,-42.0061 373.389,-35.2366"/>
 </g>
 <!-- DIFFERENCE_EQUATIONS&#45;&gt;MATRIX_POWERS -->
 <!-- MATRIX_INTRO -->
-<g id="node9" class="node"><title>MATRIX_INTRO</title>
+<g id="node6" class="node"><title>MATRIX_INTRO</title>
 <a xlink:href="MATRIX_INTRO.html" xlink:title="Introduction to matrices" target="_top">
 <polyline fill="none" stroke="black" points="387,-252 227,-252 "/>
 <path fill="none" stroke="black" d="M227,-252C221,-252 215,-246 215,-240"/>
@@ -95,7 +95,7 @@
 </a>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION -->
-<g id="edge10" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION</title>
+<g id="edge6" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION</title>
 <path fill="none" stroke="black" d="M307,-215.831C307,-208.131 307,-198.974 307,-190.417"/>
 <polygon fill="black" stroke="black" points="310.5,-190.413 307,-180.413 303.5,-190.413 310.5,-190.413"/>
 </g>

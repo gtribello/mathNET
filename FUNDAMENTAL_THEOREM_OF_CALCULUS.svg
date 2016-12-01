@@ -42,7 +42,7 @@
 <polygon fill="black" stroke="black" points="138.071,-108.229 127.477,-108.083 135.668,-114.803 138.071,-108.229"/>
 </g>
 <!-- INTEGRATION_BY_SUBSTITUTION -->
-<g id="node6" class="node"><title>INTEGRATION_BY_SUBSTITUTION</title>
+<g id="node4" class="node"><title>INTEGRATION_BY_SUBSTITUTION</title>
 <a xlink:href="INTEGRATION_BY_SUBSTITUTION.html" xlink:title="Integration by substitution" target="_top">
 <polyline fill="none" stroke="black" points="364,-108 186,-108 "/>
 <path fill="none" stroke="black" d="M186,-108C180,-108 174,-102 174,-96"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;INTEGRATION_BY_SUBSTITUTION -->
-<g id="edge6" class="edge"><title>FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;INTEGRATION_BY_SUBSTITUTION</title>
+<g id="edge4" class="edge"><title>FUNDAMENTAL_THEOREM_OF_CALCULUS&#45;&gt;INTEGRATION_BY_SUBSTITUTION</title>
 <path fill="none" stroke="black" d="M275,-143.831C275,-136.131 275,-126.974 275,-118.417"/>
 <polygon fill="black" stroke="black" points="278.5,-118.413 275,-108.413 271.5,-118.413 278.5,-118.413"/>
 </g>
@@ -81,7 +81,7 @@
 </g>
 <!-- INTEGRATION_BY_PARTS&#45;&gt;UNIFORM_RANDOM_VARIABLE -->
 <!-- TAYLOR_SERIES -->
-<g id="node4" class="node"><title>TAYLOR_SERIES</title>
+<g id="node6" class="node"><title>TAYLOR_SERIES</title>
 <a xlink:href="TAYLOR_SERIES.html" xlink:title="One dimensional Taylor Series" target="_top">
 <polyline fill="none" stroke="black" points="375,-252 175,-252 "/>
 <path fill="none" stroke="black" d="M175,-252C169,-252 163,-246 163,-240"/>
@@ -95,7 +95,7 @@
 </a>
 </g>
 <!-- TAYLOR_SERIES&#45;&gt;FUNDAMENTAL_THEOREM_OF_CALCULUS -->
-<g id="edge4" class="edge"><title>TAYLOR_SERIES&#45;&gt;FUNDAMENTAL_THEOREM_OF_CALCULUS</title>
+<g id="edge6" class="edge"><title>TAYLOR_SERIES&#45;&gt;FUNDAMENTAL_THEOREM_OF_CALCULUS</title>
 <path fill="none" stroke="black" d="M275,-215.831C275,-208.131 275,-198.974 275,-190.417"/>
 <polygon fill="black" stroke="black" points="278.5,-190.413 275,-180.413 271.5,-190.413 278.5,-190.413"/>
 </g>

@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- GEOMETRIC_RANDOM_VARIABLE -->
-<g id="node2" class="node"><title>GEOMETRIC_RANDOM_VARIABLE</title>
+<g id="node4" class="node"><title>GEOMETRIC_RANDOM_VARIABLE</title>
 <a xlink:href="GEOMETRIC_RANDOM_VARIABLE.html" xlink:title="The geometric random variable" target="_top">
 <polyline fill="none" stroke="black" points="220,-36 12,-36 "/>
 <path fill="none" stroke="black" d="M12,-36C6,-36 8.28967e-14,-30 6.63173e-14,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- GEOMETRIC_SERIES&#45;&gt;GEOMETRIC_RANDOM_VARIABLE -->
-<g id="edge2" class="edge"><title>GEOMETRIC_SERIES&#45;&gt;GEOMETRIC_RANDOM_VARIABLE</title>
+<g id="edge4" class="edge"><title>GEOMETRIC_SERIES&#45;&gt;GEOMETRIC_RANDOM_VARIABLE</title>
 <path fill="none" stroke="black" d="M193.009,-71.8314C180.078,-62.7927 164.278,-51.7476 150.362,-42.0198"/>
 <polygon fill="black" stroke="black" points="152.184,-39.0235 141.983,-36.1628 148.174,-44.7608 152.184,-39.0235"/>
 </g>
 <!-- MM1_QUEUE -->
-<g id="node4" class="node"><title>MM1_QUEUE</title>
+<g id="node6" class="node"><title>MM1_QUEUE</title>
 <a xlink:href="MM1_QUEUE.html" xlink:title="The M/M/1 Queue " target="_top">
 <polyline fill="none" stroke="black" points="382,-36 262,-36 "/>
 <path fill="none" stroke="black" d="M262,-36C256,-36 250,-30 250,-24"/>
@@ -56,12 +56,12 @@
 </a>
 </g>
 <!-- GEOMETRIC_SERIES&#45;&gt;MM1_QUEUE -->
-<g id="edge4" class="edge"><title>GEOMETRIC_SERIES&#45;&gt;MM1_QUEUE</title>
+<g id="edge6" class="edge"><title>GEOMETRIC_SERIES&#45;&gt;MM1_QUEUE</title>
 <path fill="none" stroke="black" d="M244.991,-71.8314C257.922,-62.7927 273.722,-51.7476 287.638,-42.0198"/>
 <polygon fill="black" stroke="black" points="289.826,-44.7608 296.017,-36.1628 285.816,-39.0235 289.826,-44.7608"/>
 </g>
 <!-- SUMMATIONS -->
-<g id="node6" class="node"><title>SUMMATIONS</title>
+<g id="node2" class="node"><title>SUMMATIONS</title>
 <a xlink:href="SUMMATIONS.html" xlink:title="Summation and product notation" target="_top">
 <polyline fill="none" stroke="black" points="330,-180 108,-180 "/>
 <path fill="none" stroke="black" d="M108,-180C102,-180 96,-174 96,-168"/>
@@ -75,7 +75,7 @@
 </a>
 </g>
 <!-- SUMMATIONS&#45;&gt;GEOMETRIC_SERIES -->
-<g id="edge6" class="edge"><title>SUMMATIONS&#45;&gt;GEOMETRIC_SERIES</title>
+<g id="edge2" class="edge"><title>SUMMATIONS&#45;&gt;GEOMETRIC_SERIES</title>
 <path fill="none" stroke="black" d="M219,-143.831C219,-136.131 219,-126.974 219,-118.417"/>
 <polygon fill="black" stroke="black" points="222.5,-118.413 219,-108.413 215.5,-118.413 222.5,-118.413"/>
 </g>

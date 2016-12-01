@@ -11,54 +11,54 @@
 <!-- ISOTHERMAL_ISOBARIC_ENSEMBLE -->
 <g id="node1" class="node"><title>ISOTHERMAL_ISOBARIC_ENSEMBLE</title>
 <a xlink:href="ISOTHERMAL_ISOBARIC_ENSEMBLE.html" xlink:title="The isothermal isobaric ensemble" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="295,-36 73,-36 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M73,-36C67,-36 61,-30 61,-24"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="61,-24 61,-12 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M61,-12C61,-6 67,-1.7417e-14 73,-1.70704e-14"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="73,-1.70704e-14 295,-4.24593e-15 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M295,-4.24593e-15C301,-3.89932e-15 307,-6 307,-12"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="307,-12 307,-24 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M307,-24C307,-30 301,-36 295,-36"/>
-<text text-anchor="start" x="69" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The isothermal isobaric ensemble</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="346,-36 124,-36 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M124,-36C118,-36 112,-30 112,-24"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="112,-24 112,-12 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M112,-12C112,-6 118,-1.7417e-14 124,-1.70704e-14"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="124,-1.70704e-14 346,-4.24593e-15 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M346,-4.24593e-15C352,-3.89932e-15 358,-6 358,-12"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="358,-12 358,-24 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M358,-24C358,-30 352,-36 346,-36"/>
+<text text-anchor="start" x="120" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The isothermal isobaric ensemble</text>
 </a>
-</g>
-<!-- RESPONSE_FUNCTIONS -->
-<g id="node2" class="node"><title>RESPONSE_FUNCTIONS</title>
-<a xlink:href="RESPONSE_FUNCTIONS.html" xlink:title="Response functions" target="_top">
-<polyline fill="none" stroke="black" points="138,-108 12,-108 "/>
-<path fill="none" stroke="black" d="M12,-108C6,-108 5.92119e-14,-102 4.73695e-14,-96"/>
-<polyline fill="none" stroke="black" points="4.73695e-14,-96 2.36848e-14,-84 "/>
-<path fill="none" stroke="black" d="M2.36848e-14,-84C1.18424e-14,-78 6,-72 12,-72"/>
-<polyline fill="none" stroke="black" points="12,-72 138,-72 "/>
-<path fill="none" stroke="black" d="M138,-72C144,-72 150,-78 150,-84"/>
-<polyline fill="none" stroke="black" points="150,-84 150,-96 "/>
-<path fill="none" stroke="black" d="M150,-96C150,-102 144,-108 138,-108"/>
-<text text-anchor="start" x="8.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Response functions</text>
-</a>
-</g>
-<!-- RESPONSE_FUNCTIONS&#45;&gt;ISOTHERMAL_ISOBARIC_ENSEMBLE -->
-<g id="edge2" class="edge"><title>RESPONSE_FUNCTIONS&#45;&gt;ISOTHERMAL_ISOBARIC_ENSEMBLE</title>
-<path fill="none" stroke="black" d="M102.505,-71.8314C116.318,-62.7074 133.226,-51.539 148.053,-41.7449"/>
-<polygon fill="black" stroke="black" points="150.089,-44.5949 156.503,-36.1628 146.23,-38.7541 150.089,-44.5949"/>
 </g>
 <!-- GENERALIZED_PARTITION_FUNCTION -->
-<g id="node4" class="node"><title>GENERALIZED_PARTITION_FUNCTION</title>
+<g id="node2" class="node"><title>GENERALIZED_PARTITION_FUNCTION</title>
 <a xlink:href="GENERALIZED_PARTITION_FUNCTION.html" xlink:title="The generalized partition function" target="_top">
-<polyline fill="none" stroke="black" points="408,-108 180,-108 "/>
-<path fill="none" stroke="black" d="M180,-108C174,-108 168,-102 168,-96"/>
-<polyline fill="none" stroke="black" points="168,-96 168,-84 "/>
-<path fill="none" stroke="black" d="M168,-84C168,-78 174,-72 180,-72"/>
-<polyline fill="none" stroke="black" points="180,-72 408,-72 "/>
-<path fill="none" stroke="black" d="M408,-72C414,-72 420,-78 420,-84"/>
-<polyline fill="none" stroke="black" points="420,-84 420,-96 "/>
-<path fill="none" stroke="black" d="M420,-96C420,-102 414,-108 408,-108"/>
-<text text-anchor="start" x="176" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">The generalized partition function</text>
+<polyline fill="none" stroke="black" points="240,-108 12,-108 "/>
+<path fill="none" stroke="black" d="M12,-108C6,-108 8.28967e-14,-102 6.63173e-14,-96"/>
+<polyline fill="none" stroke="black" points="6.63173e-14,-96 3.31587e-14,-84 "/>
+<path fill="none" stroke="black" d="M3.31587e-14,-84C1.65793e-14,-78 6,-72 12,-72"/>
+<polyline fill="none" stroke="black" points="12,-72 240,-72 "/>
+<path fill="none" stroke="black" d="M240,-72C246,-72 252,-78 252,-84"/>
+<polyline fill="none" stroke="black" points="252,-84 252,-96 "/>
+<path fill="none" stroke="black" d="M252,-96C252,-102 246,-108 240,-108"/>
+<text text-anchor="start" x="8" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">The generalized partition function</text>
 </a>
 </g>
 <!-- GENERALIZED_PARTITION_FUNCTION&#45;&gt;ISOTHERMAL_ISOBARIC_ENSEMBLE -->
-<g id="edge4" class="edge"><title>GENERALIZED_PARTITION_FUNCTION&#45;&gt;ISOTHERMAL_ISOBARIC_ENSEMBLE</title>
-<path fill="none" stroke="black" d="M266.242,-71.8314C252.303,-62.7074 235.24,-51.539 220.277,-41.7449"/>
-<polygon fill="black" stroke="black" points="222.033,-38.711 211.749,-36.1628 218.199,-44.5679 222.033,-38.711"/>
+<g id="edge2" class="edge"><title>GENERALIZED_PARTITION_FUNCTION&#45;&gt;ISOTHERMAL_ISOBARIC_ENSEMBLE</title>
+<path fill="none" stroke="black" d="M153.505,-71.8314C167.318,-62.7074 184.226,-51.539 199.053,-41.7449"/>
+<polygon fill="black" stroke="black" points="201.089,-44.5949 207.503,-36.1628 197.23,-38.7541 201.089,-44.5949"/>
+</g>
+<!-- RESPONSE_FUNCTIONS -->
+<g id="node4" class="node"><title>RESPONSE_FUNCTIONS</title>
+<a xlink:href="RESPONSE_FUNCTIONS.html" xlink:title="Response functions" target="_top">
+<polyline fill="none" stroke="black" points="408,-108 282,-108 "/>
+<path fill="none" stroke="black" d="M282,-108C276,-108 270,-102 270,-96"/>
+<polyline fill="none" stroke="black" points="270,-96 270,-84 "/>
+<path fill="none" stroke="black" d="M270,-84C270,-78 276,-72 282,-72"/>
+<polyline fill="none" stroke="black" points="282,-72 408,-72 "/>
+<path fill="none" stroke="black" d="M408,-72C414,-72 420,-78 420,-84"/>
+<polyline fill="none" stroke="black" points="420,-84 420,-96 "/>
+<path fill="none" stroke="black" d="M420,-96C420,-102 414,-108 408,-108"/>
+<text text-anchor="start" x="278.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Response functions</text>
+</a>
+</g>
+<!-- RESPONSE_FUNCTIONS&#45;&gt;ISOTHERMAL_ISOBARIC_ENSEMBLE -->
+<g id="edge4" class="edge"><title>RESPONSE_FUNCTIONS&#45;&gt;ISOTHERMAL_ISOBARIC_ENSEMBLE</title>
+<path fill="none" stroke="black" d="M317.242,-71.8314C303.303,-62.7074 286.24,-51.539 271.277,-41.7449"/>
+<polygon fill="black" stroke="black" points="273.033,-38.711 262.749,-36.1628 269.199,-44.5679 273.033,-38.711"/>
 </g>
 </g>
 </svg>

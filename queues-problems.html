@@ -370,16 +370,35 @@ $$
         <div class="panel-body">
            <div class="row">
 
-In this question we have multiple servers.  Clearly, this is only going to affect the rate at which people are served and the fact that there are multiple servers 
-<b> is not </b> going to affect the rate at which customers arrive.  We thus know that all the $k(k+1)$ of our Jump rate matrix, $\mathbf{Q}$, will remain equal to 
+In this question we have multiple servers.  Clearly, this is only going to affect the rate at which people are served. The fact that there are multiple servers 
+<b> is not </b> going to affect the rate at which customers arrive so we thus know that all the $k(k+1)$ of our Jump rate matrix, $\mathbf{Q}$, will remain equal to 
 $\lambda$ just as they have been in the previous questions.  Further note that customers still arrive one at at time so all the $k(k+n)$ where $n>1$ elements of $\mathbf{Q}$
 will still be equal to zero.  Furthermore, although there are multiple servers, we will still assume that it is impossible for two customers to get out of the service
 system at exacly the same instant in time.  As such all the $k(k-n)$ where $n>1$ elements of $\mathbf{Q}$ will also still be zero.  In other words, the fact that there are 
-multiple servers will only affect the $k(k-1)$ elements of $\mathbf{Q}$ and by extension the $kk$ elements of $\mathbf{Q}$.  As to how these will be affected we need to consider
-how many people are being served at each instant in time.  If one person is being served the rate at which they will be served is $\mu$.  If two people are being served then the
-rate at which they will be served is $2\mu$.  If $s$ people are being served then the rate at which they will be served is $s\mu$. 
-When all this information is inserted into the jump rate matrix we find:
-
+multiple servers will only affect the $k(k-1)$ elements of $\mathbf{Q}$ and by extension the $kk$ elements of $\mathbf{Q}$. To find the values of the $k(k-1)$ elements of $\mathbf{Q}$
+ we need to remember that in the M/M/1 queue we assume that the time a customer spends being served is given by an exponentially distributed random variable.  If we thus have $j$ people
+being served at once the time taken for the number of people in the queue (which remember counts the number of people standing in the queue <b>and</b> the number of people being served)
+will be the minimum of $k$ identically-distributed, independent, exponential random variables.  That is to say the time taken, $T$, for the length of the queue to decrease by one is 
+given by:
+$$
+T = \min( X_1, X_2, \dots , X_j )
+$$  
+where all the $X_i$ here are exponentially distributed random variables with cumulative probability distributions equal to:
+$$
+F_X(x) = 1 - e^{-\mu x}
+$$
+We can find a cumulative probability distribution function for $T$ and hence the rate parameter that will enter our Jump rate matrix by noting that:
+$$
+P(T>t) = P( X_1>t \wedge X_2>t \wedge \dots \wedge X_j>t ) = P(X_1>t) P(X_2>t) \dots P(X_j>t) = \prod_{i=1}^j P(X_i>t)
+$$
+Notice the second equality here holds because $X_1,X_2,\dots,X_j$ are all independent random variables.  We next remember that $P(X_i>t)=e^{-\mu x}$, which 
+brings us to:
+$$
+P(T>t) = \prod_{i=1}^j P(X_i>t) = \prod_{i=1}^j e^{-\mu t} = \left( e^{-\mu t} \right)^j = e^{-j \mu t}
+$$
+We thus find that if one person is being served the rate at which the queues length will decrease by one is equal to $\mu$.  If two people are being served then the
+rate at which the queues length will decrease by one is equal to $2\mu$.  If $s$ people are being served then the rate at which the queues length will decrease by one
+is given by $s\mu$.  When all this information is inserted into the jump rate matrix we find:
 $$
 \mathbf{Q} = \left(
  \begin{matrix}

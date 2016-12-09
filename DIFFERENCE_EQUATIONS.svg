@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- GAMBLERS_RUIN -->
-<g id="node2" class="node"><title>GAMBLERS_RUIN</title>
+<g id="node4" class="node"><title>GAMBLERS_RUIN</title>
 <a xlink:href="GAMBLERS_RUIN.html" xlink:title="Gamblers ruin" target="_top">
 <polyline fill="none" stroke="black" points="125,-36 35,-36 "/>
 <path fill="none" stroke="black" d="M35,-36C29,-36 23,-30 23,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN -->
-<g id="edge2" class="edge"><title>DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN</title>
+<g id="edge4" class="edge"><title>DIFFERENCE_EQUATIONS&#45;&gt;GAMBLERS_RUIN</title>
 <path fill="none" stroke="black" d="M80,-71.8314C80,-64.131 80,-54.9743 80,-46.4166"/>
 <polygon fill="black" stroke="black" points="83.5001,-46.4132 80,-36.4133 76.5001,-46.4133 83.5001,-46.4132"/>
 </g>
 <!-- MATRIX_MULTIPLICATION -->
-<g id="node4" class="node"><title>MATRIX_MULTIPLICATION</title>
+<g id="node2" class="node"><title>MATRIX_MULTIPLICATION</title>
 <a xlink:href="MATRIX_MULTIPLICATION.html" xlink:title="Matrix multiplication" target="_top">
 <polyline fill="none" stroke="black" points="147,-180 13,-180 "/>
 <path fill="none" stroke="black" d="M13,-180C7,-180 1,-174 1,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- MATRIX_MULTIPLICATION&#45;&gt;DIFFERENCE_EQUATIONS -->
-<g id="edge4" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;DIFFERENCE_EQUATIONS</title>
+<g id="edge2" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;DIFFERENCE_EQUATIONS</title>
 <path fill="none" stroke="black" d="M80,-143.831C80,-136.131 80,-126.974 80,-118.417"/>
 <polygon fill="black" stroke="black" points="83.5001,-118.413 80,-108.413 76.5001,-118.413 83.5001,-118.413"/>
 </g>

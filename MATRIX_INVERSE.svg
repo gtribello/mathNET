@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- HITTING_PROBABILITIES -->
-<g id="node2" class="node"><title>HITTING_PROBABILITIES</title>
+<g id="node4" class="node"><title>HITTING_PROBABILITIES</title>
 <a xlink:href="HITTING_PROBABILITIES.html" xlink:title="Hitting time and hitting probability" target="_top">
 <polyline fill="none" stroke="black" points="246,-36 12,-36 "/>
 <path fill="none" stroke="black" d="M12,-36C6,-36 9.4739e-14,-30 7.57912e-14,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES -->
-<g id="edge2" class="edge"><title>MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES</title>
+<g id="edge4" class="edge"><title>MATRIX_INVERSE&#45;&gt;HITTING_PROBABILITIES</title>
 <path fill="none" stroke="black" d="M129,-71.8314C129,-64.131 129,-54.9743 129,-46.4166"/>
 <polygon fill="black" stroke="black" points="132.5,-46.4132 129,-36.4133 125.5,-46.4133 132.5,-46.4132"/>
 </g>
 <!-- MATRIX_INTRO -->
-<g id="node4" class="node"><title>MATRIX_INTRO</title>
+<g id="node2" class="node"><title>MATRIX_INTRO</title>
 <a xlink:href="MATRIX_INTRO.html" xlink:title="Introduction to matrices" target="_top">
 <polyline fill="none" stroke="black" points="209,-180 49,-180 "/>
 <path fill="none" stroke="black" d="M49,-180C43,-180 37,-174 37,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;MATRIX_INVERSE -->
-<g id="edge4" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_INVERSE</title>
+<g id="edge2" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_INVERSE</title>
 <path fill="none" stroke="black" d="M129,-143.831C129,-136.131 129,-126.974 129,-118.417"/>
 <polygon fill="black" stroke="black" points="132.5,-118.413 129,-108.413 125.5,-118.413 132.5,-118.413"/>
 </g>

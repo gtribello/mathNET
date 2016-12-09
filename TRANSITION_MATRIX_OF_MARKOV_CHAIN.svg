@@ -42,7 +42,7 @@
 <polygon fill="black" stroke="black" points="124.605,-38.4628 114.262,-36.1628 120.913,-44.4102 124.605,-38.4628"/>
 </g>
 <!-- CHAPMAN_KOLMOGOROV_RELATION -->
-<g id="node4" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
+<g id="node8" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
 <a xlink:href="CHAPMAN_KOLMOGOROV_RELATION.html" xlink:title="The Chapman Kolmogorov Relation" target="_top">
 <polyline fill="none" stroke="black" points="434,-36 200,-36 "/>
 <path fill="none" stroke="black" d="M200,-36C194,-36 188,-30 188,-24"/>
@@ -56,12 +56,12 @@
 </a>
 </g>
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION -->
-<g id="edge4" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
+<g id="edge8" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
 <path fill="none" stroke="black" d="M230.272,-71.8314C245.109,-62.6221 263.302,-51.3301 279.186,-41.4706"/>
 <polygon fill="black" stroke="black" points="281.087,-44.4102 287.738,-36.1628 277.395,-38.4628 281.087,-44.4102"/>
 </g>
 <!-- MARKOV_PROPERTY -->
-<g id="node6" class="node"><title>MARKOV_PROPERTY</title>
+<g id="node4" class="node"><title>MARKOV_PROPERTY</title>
 <a xlink:href="MARKOV_PROPERTY.html" xlink:title="The Markov Property" target="_top">
 <polyline fill="none" stroke="black" points="175,-180 37,-180 "/>
 <path fill="none" stroke="black" d="M37,-180C31,-180 25,-174 25,-168"/>
@@ -75,12 +75,12 @@
 </a>
 </g>
 <!-- MARKOV_PROPERTY&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
-<g id="edge6" class="edge"><title>MARKOV_PROPERTY&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
+<g id="edge4" class="edge"><title>MARKOV_PROPERTY&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
 <path fill="none" stroke="black" d="M129.973,-143.831C141.786,-134.878 156.197,-123.956 168.943,-114.295"/>
 <polygon fill="black" stroke="black" points="171.18,-116.992 177.035,-108.163 166.951,-111.414 171.18,-116.992"/>
 </g>
 <!-- MATRIX_INTRO -->
-<g id="node8" class="node"><title>MATRIX_INTRO</title>
+<g id="node6" class="node"><title>MATRIX_INTRO</title>
 <a xlink:href="MATRIX_INTRO.html" xlink:title="Introduction to matrices" target="_top">
 <polyline fill="none" stroke="black" points="377,-180 217,-180 "/>
 <path fill="none" stroke="black" d="M217,-180C211,-180 205,-174 205,-168"/>
@@ -94,7 +94,7 @@
 </a>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
-<g id="edge8" class="edge"><title>MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
+<g id="edge6" class="edge"><title>MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
 <path fill="none" stroke="black" d="M272.775,-143.831C260.837,-134.878 246.274,-123.956 233.394,-114.295"/>
 <polygon fill="black" stroke="black" points="235.317,-111.363 225.217,-108.163 231.117,-116.963 235.317,-111.363"/>
 </g>

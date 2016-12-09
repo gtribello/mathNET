@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- PHASE_TRANSITIONS -->
-<g id="node4" class="node"><title>PHASE_TRANSITIONS</title>
+<g id="node2" class="node"><title>PHASE_TRANSITIONS</title>
 <a xlink:href="PHASE_TRANSITIONS.html" xlink:title="The theory of phase transitions" target="_top">
 <polyline fill="none" stroke="black" points="222,-36 12,-36 "/>
 <path fill="none" stroke="black" d="M12,-36C6,-36 9.71075e-14,-30 8.05282e-14,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- ISING_MODEL&#45;&gt;PHASE_TRANSITIONS -->
-<g id="edge4" class="edge"><title>ISING_MODEL&#45;&gt;PHASE_TRANSITIONS</title>
+<g id="edge2" class="edge"><title>ISING_MODEL&#45;&gt;PHASE_TRANSITIONS</title>
 <path fill="none" stroke="black" d="M208.962,-71.8314C193.229,-62.6221 173.939,-51.3301 157.096,-41.4706"/>
 <polygon fill="black" stroke="black" points="158.426,-38.1941 148.028,-36.1628 154.89,-44.2352 158.426,-38.1941"/>
 </g>
 <!-- MEAN_FIELD_MODELS -->
-<g id="node6" class="node"><title>MEAN_FIELD_MODELS</title>
+<g id="node4" class="node"><title>MEAN_FIELD_MODELS</title>
 <a xlink:href="MEAN_FIELD_MODELS.html" xlink:title="The mean field approximation" target="_top">
 <polyline fill="none" stroke="black" points="462,-36 264,-36 "/>
 <path fill="none" stroke="black" d="M264,-36C258,-36 252,-30 252,-24"/>
@@ -56,12 +56,12 @@
 </a>
 </g>
 <!-- ISING_MODEL&#45;&gt;MEAN_FIELD_MODELS -->
-<g id="edge6" class="edge"><title>ISING_MODEL&#45;&gt;MEAN_FIELD_MODELS</title>
+<g id="edge4" class="edge"><title>ISING_MODEL&#45;&gt;MEAN_FIELD_MODELS</title>
 <path fill="none" stroke="black" d="M271.038,-71.8314C286.771,-62.6221 306.061,-51.3301 322.904,-41.4706"/>
 <polygon fill="black" stroke="black" points="325.11,-44.2352 331.972,-36.1628 321.574,-38.1941 325.11,-44.2352"/>
 </g>
 <!-- CANONICAL_ENSEMBLE -->
-<g id="node2" class="node"><title>CANONICAL_ENSEMBLE</title>
+<g id="node6" class="node"><title>CANONICAL_ENSEMBLE</title>
 <a xlink:href="CANONICAL_ENSEMBLE.html" xlink:title="The canonical ensemble" target="_top">
 <polyline fill="none" stroke="black" points="319,-180 161,-180 "/>
 <path fill="none" stroke="black" d="M161,-180C155,-180 149,-174 149,-168"/>
@@ -75,7 +75,7 @@
 </a>
 </g>
 <!-- CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL -->
-<g id="edge2" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL</title>
+<g id="edge6" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL</title>
 <path fill="none" stroke="black" d="M240,-143.831C240,-136.131 240,-126.974 240,-118.417"/>
 <polygon fill="black" stroke="black" points="243.5,-118.413 240,-108.413 236.5,-118.413 243.5,-118.413"/>
 </g>

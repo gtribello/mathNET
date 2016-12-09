@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- THERMODYNAMIC_POTENTIALS -->
-<g id="node2" class="node"><title>THERMODYNAMIC_POTENTIALS</title>
+<g id="node4" class="node"><title>THERMODYNAMIC_POTENTIALS</title>
 <a xlink:href="THERMODYNAMIC_POTENTIALS.html" xlink:title="Thermodynamic Potentials" target="_top">
 <polyline fill="none" stroke="black" points="194,-36 18,-36 "/>
 <path fill="none" stroke="black" d="M18,-36C12,-36 6,-30 6,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- EXACT_DIFFERENTIALS&#45;&gt;THERMODYNAMIC_POTENTIALS -->
-<g id="edge2" class="edge"><title>EXACT_DIFFERENTIALS&#45;&gt;THERMODYNAMIC_POTENTIALS</title>
+<g id="edge4" class="edge"><title>EXACT_DIFFERENTIALS&#45;&gt;THERMODYNAMIC_POTENTIALS</title>
 <path fill="none" stroke="black" d="M106,-71.8314C106,-64.131 106,-54.9743 106,-46.4166"/>
 <polygon fill="black" stroke="black" points="109.5,-46.4132 106,-36.4133 102.5,-46.4133 109.5,-46.4132"/>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE -->
-<g id="node4" class="node"><title>DEFINITION_OF_DERIVATIVE</title>
+<g id="node2" class="node"><title>DEFINITION_OF_DERIVATIVE</title>
 <a xlink:href="DEFINITION_OF_DERIVATIVE.html" xlink:title="Differentiation" target="_top">
 <polyline fill="none" stroke="black" points="153,-180 59,-180 "/>
 <path fill="none" stroke="black" d="M59,-180C53,-180 47,-174 47,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- DEFINITION_OF_DERIVATIVE&#45;&gt;EXACT_DIFFERENTIALS -->
-<g id="edge4" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;EXACT_DIFFERENTIALS</title>
+<g id="edge2" class="edge"><title>DEFINITION_OF_DERIVATIVE&#45;&gt;EXACT_DIFFERENTIALS</title>
 <path fill="none" stroke="black" d="M106,-143.831C106,-136.131 106,-126.974 106,-118.417"/>
 <polygon fill="black" stroke="black" points="109.5,-118.413 106,-108.413 102.5,-118.413 109.5,-118.413"/>
 </g>

@@ -11,73 +11,73 @@
 <!-- JOINT_PROBABILITY_DISTRIBUTION -->
 <g id="node1" class="node"><title>JOINT_PROBABILITY_DISTRIBUTION</title>
 <a xlink:href="JOINT_PROBABILITY_DISTRIBUTION.html" xlink:title="Joint probability distribution" target="_top">
-<polyline fill="none" stroke="blue" stroke-width="2" points="405,-108 219,-108 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M219,-108C213,-108 207,-102 207,-96"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="207,-96 207,-84 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M207,-84C207,-78 213,-72 219,-72"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="219,-72 405,-72 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M405,-72C411,-72 417,-78 417,-84"/>
-<polyline fill="none" stroke="blue" stroke-width="2" points="417,-84 417,-96 "/>
-<path fill="none" stroke="blue" stroke-width="2" d="M417,-96C417,-102 411,-108 405,-108"/>
-<text text-anchor="start" x="215.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Joint probability distribution</text>
+<polyline fill="none" stroke="blue" stroke-width="2" points="355,-108 169,-108 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M169,-108C163,-108 157,-102 157,-96"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="157,-96 157,-84 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M157,-84C157,-78 163,-72 169,-72"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="169,-72 355,-72 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M355,-72C361,-72 367,-78 367,-84"/>
+<polyline fill="none" stroke="blue" stroke-width="2" points="367,-84 367,-96 "/>
+<path fill="none" stroke="blue" stroke-width="2" d="M367,-96C367,-102 361,-108 355,-108"/>
+<text text-anchor="start" x="165.5" y="-87.2333" font-family="Times Roman,serif" font-size="14.00">Joint probability distribution</text>
 </a>
-</g>
-<!-- CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
-<g id="node2" class="node"><title>CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
-<a xlink:href="CAUCHY_SCHWARTZ_INEQUALITY_STATS.html" xlink:title="The Cauchy Schwartz Inequality in Statistics" target="_top">
-<polyline fill="none" stroke="black" points="316,-36 12,-36 "/>
-<path fill="none" stroke="black" d="M12,-36C6,-36 1.42109e-13,-30 1.13687e-13,-24"/>
-<polyline fill="none" stroke="black" points="1.13687e-13,-24 5.68434e-14,-12 "/>
-<path fill="none" stroke="black" d="M5.68434e-14,-12C2.84217e-14,-6 6,-1.75036e-14 12,-1.72437e-14"/>
-<polyline fill="none" stroke="black" points="12,-1.72437e-14 316,-4.07262e-15 "/>
-<path fill="none" stroke="black" d="M316,-4.07262e-15C322,-3.81267e-15 328,-6 328,-12"/>
-<polyline fill="none" stroke="black" points="328,-12 328,-24 "/>
-<path fill="none" stroke="black" d="M328,-24C328,-30 322,-36 316,-36"/>
-<text text-anchor="start" x="8.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The Cauchy Schwartz Inequality in Statistics</text>
-</a>
-</g>
-<!-- JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
-<g id="edge2" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
-<path fill="none" stroke="black" d="M274.653,-71.8314C255.123,-62.3302 231.036,-50.6121 210.327,-40.5374"/>
-<polygon fill="black" stroke="black" points="211.602,-37.2654 201.078,-36.038 208.539,-43.56 211.602,-37.2654"/>
 </g>
 <!-- INDEPENDENT_RANDOM_VARIABLES -->
 <g id="node4" class="node"><title>INDEPENDENT_RANDOM_VARIABLES</title>
 <a xlink:href="INDEPENDENT_RANDOM_VARIABLES.html" xlink:title="Independent random variables" target="_top">
-<polyline fill="none" stroke="black" points="562,-36 358,-36 "/>
-<path fill="none" stroke="black" d="M358,-36C352,-36 346,-30 346,-24"/>
-<polyline fill="none" stroke="black" points="346,-24 346,-12 "/>
-<path fill="none" stroke="black" d="M346,-12C346,-6 352,-1.73896e-14 358,-1.70156e-14"/>
-<polyline fill="none" stroke="black" points="358,-1.70156e-14 562,-4.30065e-15 "/>
-<path fill="none" stroke="black" d="M562,-4.30065e-15C568,-3.92668e-15 574,-6 574,-12"/>
-<polyline fill="none" stroke="black" points="574,-12 574,-24 "/>
-<path fill="none" stroke="black" d="M574,-24C574,-30 568,-36 562,-36"/>
-<text text-anchor="start" x="354.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Independent random variables</text>
+<polyline fill="none" stroke="black" points="216,-36 12,-36 "/>
+<path fill="none" stroke="black" d="M12,-36C6,-36 8.28967e-14,-30 6.63173e-14,-24"/>
+<polyline fill="none" stroke="black" points="6.63173e-14,-24 3.31587e-14,-12 "/>
+<path fill="none" stroke="black" d="M3.31587e-14,-12C1.65793e-14,-6 6,-1.73896e-14 12,-1.70156e-14"/>
+<polyline fill="none" stroke="black" points="12,-1.70156e-14 216,-4.30065e-15 "/>
+<path fill="none" stroke="black" d="M216,-4.30065e-15C222,-3.92668e-15 228,-6 228,-12"/>
+<polyline fill="none" stroke="black" points="228,-12 228,-24 "/>
+<path fill="none" stroke="black" d="M228,-24C228,-30 222,-36 216,-36"/>
+<text text-anchor="start" x="8.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">Independent random variables</text>
 </a>
 </g>
 <!-- JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;INDEPENDENT_RANDOM_VARIABLES -->
 <g id="edge4" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;INDEPENDENT_RANDOM_VARIABLES</title>
-<path fill="none" stroke="black" d="M349.347,-71.8314C368.877,-62.3302 392.964,-50.6121 413.673,-40.5374"/>
-<polygon fill="black" stroke="black" points="415.461,-43.56 422.922,-36.038 412.398,-37.2654 415.461,-43.56"/>
+<path fill="none" stroke="black" d="M224.653,-71.8314C205.123,-62.3302 181.036,-50.6121 160.327,-40.5374"/>
+<polygon fill="black" stroke="black" points="161.602,-37.2654 151.078,-36.038 158.539,-43.56 161.602,-37.2654"/>
+</g>
+<!-- CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
+<g id="node6" class="node"><title>CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
+<a xlink:href="CAUCHY_SCHWARTZ_INEQUALITY_STATS.html" xlink:title="The Cauchy Schwartz Inequality in Statistics" target="_top">
+<polyline fill="none" stroke="black" points="562,-36 258,-36 "/>
+<path fill="none" stroke="black" d="M258,-36C252,-36 246,-30 246,-24"/>
+<polyline fill="none" stroke="black" points="246,-24 246,-12 "/>
+<path fill="none" stroke="black" d="M246,-12C246,-6 252,-1.75036e-14 258,-1.72437e-14"/>
+<polyline fill="none" stroke="black" points="258,-1.72437e-14 562,-4.07262e-15 "/>
+<path fill="none" stroke="black" d="M562,-4.07262e-15C568,-3.81267e-15 574,-6 574,-12"/>
+<polyline fill="none" stroke="black" points="574,-12 574,-24 "/>
+<path fill="none" stroke="black" d="M574,-24C574,-30 568,-36 562,-36"/>
+<text text-anchor="start" x="254.5" y="-15.2333" font-family="Times Roman,serif" font-size="14.00">The Cauchy Schwartz Inequality in Statistics</text>
+</a>
+</g>
+<!-- JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
+<g id="edge6" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
+<path fill="none" stroke="black" d="M299.347,-71.8314C318.877,-62.3302 342.964,-50.6121 363.673,-40.5374"/>
+<polygon fill="black" stroke="black" points="365.461,-43.56 372.922,-36.038 362.398,-37.2654 365.461,-43.56"/>
 </g>
 <!-- RANDOM_VARIABLES -->
-<g id="node6" class="node"><title>RANDOM_VARIABLES</title>
+<g id="node2" class="node"><title>RANDOM_VARIABLES</title>
 <a xlink:href="RANDOM_VARIABLES.html" xlink:title="Random variables" target="_top">
-<polyline fill="none" stroke="black" points="370,-180 254,-180 "/>
-<path fill="none" stroke="black" d="M254,-180C248,-180 242,-174 242,-168"/>
-<polyline fill="none" stroke="black" points="242,-168 242,-156 "/>
-<path fill="none" stroke="black" d="M242,-156C242,-150 248,-144 254,-144"/>
-<polyline fill="none" stroke="black" points="254,-144 370,-144 "/>
-<path fill="none" stroke="black" d="M370,-144C376,-144 382,-150 382,-156"/>
-<polyline fill="none" stroke="black" points="382,-156 382,-168 "/>
-<path fill="none" stroke="black" d="M382,-168C382,-174 376,-180 370,-180"/>
-<text text-anchor="start" x="250.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Random variables</text>
+<polyline fill="none" stroke="black" points="320,-180 204,-180 "/>
+<path fill="none" stroke="black" d="M204,-180C198,-180 192,-174 192,-168"/>
+<polyline fill="none" stroke="black" points="192,-168 192,-156 "/>
+<path fill="none" stroke="black" d="M192,-156C192,-150 198,-144 204,-144"/>
+<polyline fill="none" stroke="black" points="204,-144 320,-144 "/>
+<path fill="none" stroke="black" d="M320,-144C326,-144 332,-150 332,-156"/>
+<polyline fill="none" stroke="black" points="332,-156 332,-168 "/>
+<path fill="none" stroke="black" d="M332,-168C332,-174 326,-180 320,-180"/>
+<text text-anchor="start" x="200.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00">Random variables</text>
 </a>
 </g>
 <!-- RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION -->
-<g id="edge6" class="edge"><title>RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
-<path fill="none" stroke="black" d="M312,-143.831C312,-136.131 312,-126.974 312,-118.417"/>
-<polygon fill="black" stroke="black" points="315.5,-118.413 312,-108.413 308.5,-118.413 315.5,-118.413"/>
+<g id="edge2" class="edge"><title>RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
+<path fill="none" stroke="black" d="M262,-143.831C262,-136.131 262,-126.974 262,-118.417"/>
+<polygon fill="black" stroke="black" points="265.5,-118.413 262,-108.413 258.5,-118.413 265.5,-118.413"/>
 </g>
 </g>
 </svg>

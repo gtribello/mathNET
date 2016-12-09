@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- EXPONENTIAL_GROWTH_DECAY -->
-<g id="node2" class="node"><title>EXPONENTIAL_GROWTH_DECAY</title>
+<g id="node4" class="node"><title>EXPONENTIAL_GROWTH_DECAY</title>
 <a xlink:href="EXPONENTIAL_GROWTH_DECAY.html" xlink:title="Exponential growth/decay" target="_top">
 <polyline fill="none" stroke="black" points="199,-36 25,-36 "/>
 <path fill="none" stroke="black" d="M25,-36C19,-36 13,-30 13,-24"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- THE_EXPONENTIAL_FUNCTION&#45;&gt;EXPONENTIAL_GROWTH_DECAY -->
-<g id="edge2" class="edge"><title>THE_EXPONENTIAL_FUNCTION&#45;&gt;EXPONENTIAL_GROWTH_DECAY</title>
+<g id="edge4" class="edge"><title>THE_EXPONENTIAL_FUNCTION&#45;&gt;EXPONENTIAL_GROWTH_DECAY</title>
 <path fill="none" stroke="black" d="M112,-71.8314C112,-64.131 112,-54.9743 112,-46.4166"/>
 <polygon fill="black" stroke="black" points="115.5,-46.4132 112,-36.4133 108.5,-46.4133 115.5,-46.4132"/>
 </g>
 <!-- TAYLOR_SERIES -->
-<g id="node4" class="node"><title>TAYLOR_SERIES</title>
+<g id="node2" class="node"><title>TAYLOR_SERIES</title>
 <a xlink:href="TAYLOR_SERIES.html" xlink:title="One dimensional Taylor Series" target="_top">
 <polyline fill="none" stroke="black" points="212,-180 12,-180 "/>
 <path fill="none" stroke="black" d="M12,-180C6,-180 8.28967e-14,-174 6.63173e-14,-168"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- TAYLOR_SERIES&#45;&gt;THE_EXPONENTIAL_FUNCTION -->
-<g id="edge4" class="edge"><title>TAYLOR_SERIES&#45;&gt;THE_EXPONENTIAL_FUNCTION</title>
+<g id="edge2" class="edge"><title>TAYLOR_SERIES&#45;&gt;THE_EXPONENTIAL_FUNCTION</title>
 <path fill="none" stroke="black" d="M112,-143.831C112,-136.131 112,-126.974 112,-118.417"/>
 <polygon fill="black" stroke="black" points="115.5,-118.413 112,-108.413 108.5,-118.413 115.5,-118.413"/>
 </g>

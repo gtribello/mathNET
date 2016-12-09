@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- POISSON_RANDOM_VARIABLE -->
-<g id="node6" class="node"><title>POISSON_RANDOM_VARIABLE</title>
+<g id="node9" class="node"><title>POISSON_RANDOM_VARIABLE</title>
 <a xlink:href="POISSON_RANDOM_VARIABLE.html" xlink:title="The poisson random variable" target="_top">
 <polyline fill="none" stroke="black" points="279,-36 87,-36 "/>
 <path fill="none" stroke="black" d="M87,-36C81,-36 75,-30 75,-24"/>
@@ -37,7 +37,7 @@
 </a>
 </g>
 <!-- BINOMIAL_RANDOM_VARIABLE&#45;&gt;POISSON_RANDOM_VARIABLE -->
-<g id="edge6" class="edge"><title>BINOMIAL_RANDOM_VARIABLE&#45;&gt;POISSON_RANDOM_VARIABLE</title>
+<g id="edge10" class="edge"><title>BINOMIAL_RANDOM_VARIABLE&#45;&gt;POISSON_RANDOM_VARIABLE</title>
 <path fill="none" stroke="black" d="M183,-71.8314C183,-64.131 183,-54.9743 183,-46.4166"/>
 <polygon fill="black" stroke="black" points="186.5,-46.4132 183,-36.4133 179.5,-46.4133 186.5,-46.4132"/>
 </g>
@@ -61,7 +61,7 @@
 <polygon fill="black" stroke="black" points="90.0794,-115.458 97.6122,-108.007 87.0774,-109.134 90.0794,-115.458"/>
 </g>
 <!-- MOMENT_GENERATING_FUNCTION -->
-<g id="node8" class="node"><title>MOMENT_GENERATING_FUNCTION</title>
+<g id="node6" class="node"><title>MOMENT_GENERATING_FUNCTION</title>
 <a xlink:href="MOMENT_GENERATING_FUNCTION.html" xlink:title="The moment generating function" target="_top">
 <polyline fill="none" stroke="black" points="294,-180 72,-180 "/>
 <path fill="none" stroke="black" d="M72,-180C66,-180 60,-174 60,-168"/>
@@ -95,7 +95,7 @@
 <polygon fill="black" stroke="black" points="272.496,-108.814 261.929,-108.041 269.708,-115.235 272.496,-108.814"/>
 </g>
 <!-- MOMENT_GENERATING_FUNCTION&#45;&gt;BINOMIAL_RANDOM_VARIABLE -->
-<g id="edge8" class="edge"><title>MOMENT_GENERATING_FUNCTION&#45;&gt;BINOMIAL_RANDOM_VARIABLE</title>
+<g id="edge6" class="edge"><title>MOMENT_GENERATING_FUNCTION&#45;&gt;BINOMIAL_RANDOM_VARIABLE</title>
 <path fill="none" stroke="black" d="M183,-143.831C183,-136.131 183,-126.974 183,-118.417"/>
 <polygon fill="black" stroke="black" points="186.5,-118.413 183,-108.413 179.5,-118.413 186.5,-118.413"/>
 </g>

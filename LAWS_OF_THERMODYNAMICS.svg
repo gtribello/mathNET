@@ -23,7 +23,7 @@
 </a>
 </g>
 <!-- THERMODYNAMIC_POTENTIALS -->
-<g id="node2" class="node"><title>THERMODYNAMIC_POTENTIALS</title>
+<g id="node4" class="node"><title>THERMODYNAMIC_POTENTIALS</title>
 <a xlink:href="THERMODYNAMIC_POTENTIALS.html" xlink:title="Thermodynamic Potentials" target="_top">
 <polyline fill="none" stroke="black" points="188,-108 12,-108 "/>
 <path fill="none" stroke="black" d="M12,-108C6,-108 7.10543e-14,-102 5.68434e-14,-96"/>
@@ -37,12 +37,12 @@
 </a>
 </g>
 <!-- LAWS_OF_THERMODYNAMICS&#45;&gt;THERMODYNAMIC_POTENTIALS -->
-<g id="edge2" class="edge"><title>LAWS_OF_THERMODYNAMICS&#45;&gt;THERMODYNAMIC_POTENTIALS</title>
+<g id="edge4" class="edge"><title>LAWS_OF_THERMODYNAMICS&#45;&gt;THERMODYNAMIC_POTENTIALS</title>
 <path fill="none" stroke="black" d="M282.743,-143.924C248.807,-133.91 206.452,-121.412 171.065,-110.97"/>
 <polygon fill="black" stroke="black" points="171.863,-107.556 161.282,-108.083 169.882,-114.27 171.863,-107.556"/>
 </g>
 <!-- GENERALIZED_PARTITION_FUNCTION -->
-<g id="node4" class="node"><title>GENERALIZED_PARTITION_FUNCTION</title>
+<g id="node6" class="node"><title>GENERALIZED_PARTITION_FUNCTION</title>
 <a xlink:href="GENERALIZED_PARTITION_FUNCTION.html" xlink:title="The generalized partition function" target="_top">
 <polyline fill="none" stroke="black" points="458,-108 230,-108 "/>
 <path fill="none" stroke="black" d="M230,-108C224,-108 218,-102 218,-96"/>
@@ -56,12 +56,12 @@
 </a>
 </g>
 <!-- LAWS_OF_THERMODYNAMICS&#45;&gt;GENERALIZED_PARTITION_FUNCTION -->
-<g id="edge4" class="edge"><title>LAWS_OF_THERMODYNAMICS&#45;&gt;GENERALIZED_PARTITION_FUNCTION</title>
+<g id="edge6" class="edge"><title>LAWS_OF_THERMODYNAMICS&#45;&gt;GENERALIZED_PARTITION_FUNCTION</title>
 <path fill="none" stroke="black" d="M344,-143.831C344,-136.131 344,-126.974 344,-118.417"/>
 <polygon fill="black" stroke="black" points="347.5,-118.413 344,-108.413 340.5,-118.413 347.5,-118.413"/>
 </g>
 <!-- RESPONSE_FUNCTIONS -->
-<g id="node6" class="node"><title>RESPONSE_FUNCTIONS</title>
+<g id="node8" class="node"><title>RESPONSE_FUNCTIONS</title>
 <a xlink:href="RESPONSE_FUNCTIONS.html" xlink:title="Response functions" target="_top">
 <polyline fill="none" stroke="black" points="362,-36 236,-36 "/>
 <path fill="none" stroke="black" d="M236,-36C230,-36 224,-30 224,-24"/>
@@ -75,13 +75,12 @@
 </a>
 </g>
 <!-- LAWS_OF_THERMODYNAMICS&#45;&gt;RESPONSE_FUNCTIONS -->
-<g id="edge6" class="edge"><title>LAWS_OF_THERMODYNAMICS&#45;&gt;RESPONSE_FUNCTIONS</title>
+<g id="edge8" class="edge"><title>LAWS_OF_THERMODYNAMICS&#45;&gt;RESPONSE_FUNCTIONS</title>
 <path fill="none" stroke="black" d="M432.333,-143.936C450.684,-135.977 467.82,-124.513 479,-108 487.97,-94.7509 488.551,-84.8367 479,-72 466.99,-55.8587 424.775,-42.7368 384.246,-33.4714"/>
 <polygon fill="black" stroke="black" points="384.794,-30.0079 374.273,-31.2586 383.277,-36.8417 384.794,-30.0079"/>
 </g>
-<!-- THERMODYNAMIC_POTENTIALS&#45;&gt;RESPONSE_FUNCTIONS -->
 <!-- CARNOT_CYCLE -->
-<g id="node9" class="node"><title>CARNOT_CYCLE</title>
+<g id="node2" class="node"><title>CARNOT_CYCLE</title>
 <a xlink:href="CARNOT_CYCLE.html" xlink:title="The Carnot Cycle" target="_top">
 <polyline fill="none" stroke="black" points="400,-252 288,-252 "/>
 <path fill="none" stroke="black" d="M288,-252C282,-252 276,-246 276,-240"/>
@@ -95,9 +94,10 @@
 </a>
 </g>
 <!-- CARNOT_CYCLE&#45;&gt;LAWS_OF_THERMODYNAMICS -->
-<g id="edge10" class="edge"><title>CARNOT_CYCLE&#45;&gt;LAWS_OF_THERMODYNAMICS</title>
+<g id="edge2" class="edge"><title>CARNOT_CYCLE&#45;&gt;LAWS_OF_THERMODYNAMICS</title>
 <path fill="none" stroke="black" d="M344,-215.831C344,-208.131 344,-198.974 344,-190.417"/>
 <polygon fill="black" stroke="black" points="347.5,-190.413 344,-180.413 340.5,-190.413 347.5,-190.413"/>
 </g>
+<!-- THERMODYNAMIC_POTENTIALS&#45;&gt;RESPONSE_FUNCTIONS -->
 </g>
 </svg>

@@ -42,7 +42,7 @@
 <polygon fill="black" stroke="black" points="147.602,-107.77 137.012,-108.083 145.486,-114.443 147.602,-107.77"/>
 </g>
 <!-- CHAPMAN_KOLMOGOROV_RELATION -->
-<g id="node4" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
+<g id="node6" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
 <a xlink:href="CHAPMAN_KOLMOGOROV_RELATION.html" xlink:title="The Chapman Kolmogorov Relation" target="_top">
 <polyline fill="none" stroke="black" points="424,-108 190,-108 "/>
 <path fill="none" stroke="black" d="M190,-108C184,-108 178,-102 178,-96"/>
@@ -56,7 +56,7 @@
 </a>
 </g>
 <!-- MATRIX_MULTIPLICATION&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION -->
-<g id="edge4" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
+<g id="edge6" class="edge"><title>MATRIX_MULTIPLICATION&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
 <path fill="none" stroke="black" d="M307,-143.831C307,-136.131 307,-126.974 307,-118.417"/>
 <polygon fill="black" stroke="black" points="310.5,-118.413 307,-108.413 303.5,-118.413 310.5,-118.413"/>
 </g>
@@ -81,7 +81,7 @@
 </g>
 <!-- DIFFERENCE_EQUATIONS&#45;&gt;MATRIX_POWERS -->
 <!-- MATRIX_INTRO -->
-<g id="node6" class="node"><title>MATRIX_INTRO</title>
+<g id="node4" class="node"><title>MATRIX_INTRO</title>
 <a xlink:href="MATRIX_INTRO.html" xlink:title="Introduction to matrices" target="_top">
 <polyline fill="none" stroke="black" points="387,-252 227,-252 "/>
 <path fill="none" stroke="black" d="M227,-252C221,-252 215,-246 215,-240"/>
@@ -95,7 +95,7 @@
 </a>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION -->
-<g id="edge6" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION</title>
+<g id="edge4" class="edge"><title>MATRIX_INTRO&#45;&gt;MATRIX_MULTIPLICATION</title>
 <path fill="none" stroke="black" d="M307,-215.831C307,-208.131 307,-198.974 307,-190.417"/>
 <polygon fill="black" stroke="black" points="310.5,-190.413 307,-180.413 303.5,-190.413 310.5,-190.413"/>
 </g>

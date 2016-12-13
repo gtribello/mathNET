@@ -1,0 +1,12 @@
+<PAGE>
+  <TITLE>The exponential function </TITLE>
+  <VIDEO>https://www.youtube.com/embed/PBXp8Ikyn0o</VIDEO>
+  <UL>
+    <LI> Explain why we can write real numbers as $\sum_{n=1}^\infty a_n (\delta t)^n$?  When we use this representation when writing decimals what is the value of $\delta t$</LI>
+    <LI> Give the definition of the derivative as a limit</LI>
+    <LI> Show from first principles (i.e. by solving the limit that you just wrote down) that the first derivative of $x^4$ with respect to $x$ is $4x^3$.</LI>
+    <LI> Give the Taylor series expansion of a function</LI>
+    <LI> Write down the Taylor series expansion for the exponential function $e^x$.</LI>
+    <LI> Explain, by making reference to the properties of the Taylor series of this function, why the exponential function is so useful.</LI>
+  </UL>
+</PAGE>

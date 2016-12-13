@@ -33,9 +33,9 @@ LEARNINGOUTCOMES:
 - You should be able to differentiate the generalised partition function (and functions thereof) with respect to $\lambda_k$ and $\alpha^{(j)}$
 
 END:
-GENERALIZED_PARTITION_FUNCTION INTRO HTML PHY9038/AMA4004 statistical-mechanics-intro-video G.~Tribello An introductory video on statistical mechanics that introduces the terms microstates and phase space.
-GENERALIZED_PARTITION_FUNCTION INTRO HTML PHY9038/AMA4004 generalised-partition-video G.~Tribello A video introducing in which the form of the generalised partition function is derived by performing a constrained optimisation of the information.
-GENERALIZED_PARTITION_FUNCTION INTRO HTML PHY9038/AMA4004 entropy-statistical-mechanics-video G.~Tribello A video explaining how the entropy in the generalised ensemble is calculated.
-GENERALIZED_PARTITION_FUNCTION INTRO HTML PHY9038/AMA4004 entropy-changes-statistical-mechanics-video G.~Tribello A video explaining how an expression for the change in entropy can be derived in statistical mechanics.
+GENERALIZED_PARTITION_FUNCTION INTRO XML PHY9038/AMA4004 statistical-mechanics-intro-video G.~Tribello An introductory video on statistical mechanics that introduces the terms microstates and phase space.
+GENERALIZED_PARTITION_FUNCTION INTRO XML PHY9038/AMA4004 generalised-partition-video G.~Tribello A video introducing in which the form of the generalised partition function is derived by performing a constrained optimisation of the information.
+GENERALIZED_PARTITION_FUNCTION INTRO XML PHY9038/AMA4004 entropy-statistical-mechanics-video G.~Tribello A video explaining how the entropy in the generalised ensemble is calculated.
+GENERALIZED_PARTITION_FUNCTION INTRO XML PHY9038/AMA4004 entropy-changes-statistical-mechanics-video G.~Tribello A video explaining how an expression for the change in entropy can be derived in statistical mechanics.
 GENERALIZED_PARTITION_FUNCTION INTRO PDF PHY9038/AMA4004 generalised-ensemble.pdf Some notes summarising all the important information you need to know about the generalised partition function.
-GENERALIZED_PARTITION_FUNCTION INTRO HTML AMA4004 ensemble-averages-by-differentiation-video G.~Tribello A video demonstrating how some ensemble averages can be calculated by taking derivatives of the partition function. 
+GENERALIZED_PARTITION_FUNCTION INTRO XML AMA4004 ensemble-averages-by-differentiation-video G.~Tribello A video demonstrating how some ensemble averages can be calculated by taking derivatives of the partition function. 

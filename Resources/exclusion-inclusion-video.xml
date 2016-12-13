@@ -1,0 +1,9 @@
+<PAGE>
+  <TITLE>The inclusion-exclusion theorem in statistics</TITLE>
+  <VIDEO>https://www.youtube.com/embed/aVXR6roXBbY</VIDEO>
+  <UL>
+    <LI> Draw a Venn diagram of a sample space.  Draw two shapes in this diagram to represent two mutually exclusive events  $X=x$ and $Y=y$.</LI>
+    <LI> Draw a Venn diagram of a sample space.  Draw two shapes in this diagram to represent two concurrent events  $X=x$ and $Y=y$.</LI>
+    <LI> Write out the inclusion-exclusion principle and use a Venn diagram to explain the origin of each of the terms in this expression.</LI>
+  </UL>
+</PAGE>

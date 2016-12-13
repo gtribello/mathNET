@@ -23,7 +23,7 @@ LEARNINGOUTCOMES:
 END:
 
 
-CONDITIONAL_PROBABILITY INTRO HTML SOR3012 conditional-probability-video G.~Tribello Introduction to conditional probability
+CONDITIONAL_PROBABILITY INTRO XML SOR3012 conditional-probability-video G.~Tribello Introduction to conditional probability
 CONDITIONAL_PROBABILITY EXERCISE HTML SOR3012 conditional-probability-problems G.~Tribello Exercises on conditional probability
-CONDITIONAL_PROBABILITY INTRO HTML SOR3012 partition-theorem-video G.~Tribello A video explaining the partition theorem in statistics
+CONDITIONAL_PROBABILITY INTRO XML SOR3012 partition-theorem-video G.~Tribello A video explaining the partition theorem in statistics
 CONDITIONAL_PROBABILITY INTRO PDF SOR3012 jim-chap03.pdf J.~F.~McCann Introductory material on conditional probability.

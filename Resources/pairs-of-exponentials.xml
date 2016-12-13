@@ -1,0 +1,10 @@
+<PAGE>
+  <TITLE>Calculating the probability that X happens before Y</TITLE>
+  <VIDEO>https://www.youtube.com/embed/0g3pL4Y9MII </VIDEO>
+  <UL>
+    <LI> The video concerns how to calculate the probability that $P(X \lt T)$.  What types of random variable must $X$ and $Y$ be in order for the derivation in the video to hold.</LI>
+    <LI> What is the cumulative probability distribution function and what is the probability density function for the type of random variable you mentioned in your answer to the first question.</LI>
+    <LI> Explain in your own words why the answer to this question is an integral and explain what the integrand of this integral represents.</LI>
+    <LI> Set a question like the one discussed in the question that asks for the probability that one random variable is less than another.</LI>
+  </UL>
+</PAGE>

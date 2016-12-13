@@ -1,0 +1,11 @@
+<PAGE>
+  <TITLE>The conditional expectation theorem</TITLE>
+  <VIDEO>https://www.youtube.com/embed/DDql34ZMSh8</VIDEO>
+  <UL>
+    <LI> State the conditional expectation theorem</LI>
+    <LI> In the video we calculated the expectation and variance of a particular random variable using the conditional expectation theorem, which random variable?</LI>
+    <LI> Explain why $\mathbb{E}(X+1)=\mathbb{E}(X)+1$.</LI>
+    <LI> Explain why $\mathbb{E}[(X+1)^2] \ne \mathbb{E}(X^2) + 1$ and what the left hand side of this equation is really equal to</LI>
+    <LI> Explain why $\mathbb{E}[\ln(XY)] = \mathbb{E}[\ln(X)] + \mathbb{E}[\ln(Y)]$</LI>
+  </UL>
+</PAGE>

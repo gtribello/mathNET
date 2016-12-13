@@ -1,0 +1,12 @@
+<PAGE>
+  <TITLE>Classification of states in a Markov chain</TITLE>
+  <VIDEO>https://www.youtube.com/embed/5YS2sn9vzWk</VIDEO>
+  <UL>
+    <LI> Explain in your own words what we mean when we talk about the limiting behavior of a Markov chain.</LI>
+    <LI> How is the return time to a state defined.</LI>
+    <LI> What is the distinction between the transient and the recurrent states in a Markov chain.</LI>
+    <LI> Draw an example of a Markov chain with one transient state and one recurrent state.</LI>
+    <LI> Draw transition graphs for two Markov chains with one transient and two recurrent states that have different limiting behaviors</LI>
+    <LI> Draw an example of a Markov chain with 3 recurrent states and 4 transient states.</LI>
+  </UL>
+</PAGE>

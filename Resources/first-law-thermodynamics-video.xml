@@ -1,0 +1,10 @@
+<PAGE>
+  <TITLE>The first law of thermodynamics</TITLE>
+  <VIDEO>https://www.youtube.com/embed/w5vFoXiwLL4</VIDEO>
+  <UL>
+    <LI> Write an expression for the change in internal energy, $\Delta E$, that occurs when a system outputs $\Delta q$ worth of heat and does $\Delta w$ worth of work.</LI>
+    <LI> Write integrals for the changes in internal energy that occur during (i) an adiabatic transition and (ii) an isochoric transition.</LI>
+    <LI> Give expressions that relate the pressure and temperature to partial derivatives of the internal energy.</LI>
+    <LI> State the first law of thermodynamics</LI>
+  </UL>
+</PAGE>

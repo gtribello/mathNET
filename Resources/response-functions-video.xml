@@ -1,0 +1,15 @@
+<PAGE>
+  <TITLE>Response functions</TITLE>
+  <VIDEO>https://www.youtube.com/embed/YinVu3Kd-eU</VIDEO>
+  <UL>
+    <LI> How is the constant volume heat capacity, $C_V$, defined:</LI>
+    <LI> Show that $\frac{C_v}{T} = \left( \frac{\partial S}{\partial T} \right)_V$</LI>
+    <LI> Is the Gibbs free energy minimised at equilibrium or maximised at equilibrium (justify your answer).</LI>
+    <LI> Use your answer to to the previous question to explain why $\delta E &gt; T\delta S - P \delta V$.</LI>
+    <LI> Use the result from the previous question to show, by expanding $\delta E$ using the Taylor series, that $\left(\frac{\delta^2 E }{\delta S^2} \right)_V &gt; 0$ and $\left(\frac{\delta^2 E }{\delta V^2} \right)_S &gt; 0$.</LI>
+    <LI> Hence, show that $C_v$ must be greater than zero</LI>
+    <LI> Give the definition of the isoentropic compressibility, $\kappa_s$.</LI>
+    <LI> Show that $\kappa_s = - \frac{1}{V}\left( \frac{\partial V}{\partial P} \right)_S$</LI>
+    <LI> Explain why the isoentropic compressibility must be positive</LI>
+  </UL>
+</PAGE>

@@ -1,0 +1,14 @@
+<PAGE>
+  <TITLE>Calculating the expectation</TITLE>
+  <VIDEO>https://www.youtube.com/embed/4l6N4mD1n6I</VIDEO>
+  <UL>
+    <LI> How is the expectation of a discrete random variable calculated?</LI>
+    <LI> How is the expectation of a continous random variable calculated?</LI>
+    <LI> What do we mean by the $n$th moment of the random variable $X$?</LI>
+    <LI> What do we mean by the $n$th central moment of the random variable $X$?</LI>
+    <LI> How is the variance of a random variable calculated?</LI>
+    <LI> Complete the following sentence "the ? is the ? moment of the distribution"</LI>
+    <LI> How is the moment generating function computed?</LI>
+    <LI> How do you calculate the $n$th moment of the distribution from the moment generating function?  </LI>
+  </UL>
+</PAGE>

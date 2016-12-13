@@ -2,8 +2,9 @@ import os
 import shutil
 import topic
 import subprocess
+import xml_to_html
 import generate_html_exercise
-import generate_video_page
+
 
 class resource(object) :
   def __init__(self,description) :
@@ -69,26 +70,28 @@ class resource(object) :
                shutil.copy("Resources/" + self.linkb, "html/resources/" + self.linkb)
             table += '<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td>' + '<a href="resources/' + self.linkb + '" download="' + self.linkb + '"> ' + self.description + '</a></td>'
        elif( self.rtype=="HTML"):
-            if( self.loc=="EXERCISE"):
-                if not os.path.isfile("html/" + self.linkb + ".html") :
-                   generate_html_exercise.convert_exercise_to_html( self.linkb )
-                table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>'
-            else:
-                assert( self.loc=="INTRO" )
-                if not os.path.isfile("html/" + self.linkb + ".html") :
-                   generate_video_page.convert_video_to_html( self.linkb )
-                table += '<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td>'
-
+            assert( self.loc=="EXERCISE" )
+            if not os.path.isfile("html/" + self.linkb + ".html") :
+               generate_html_exercise.convert_exercise_to_html( self.linkb )
+            table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>'
             table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'
+       elif( self.rtype=="XML") :
+            if not os.path.isfile("html/" + self.linkb + ".html") :
+                xml_to_html.build_html_file( self.linkb )
+            if self.loc=="INTRO" :
+                table += '<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td>'
+            else :
+                table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>' 
+            table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>' 
        elif( self.rtype=="GEOGEBRA"):
             if( self.loc=="EXERCISE"):
                 if not os.path.isfile("html/" + self.linkb + ".html") :
-                   generate_video_page.convert_geogebra_to_html( self.linkb )
+                   xml_to_html.build_html_file( self.linkb )
                 table += '<td></td><td><i class="fa fa-signal fa-3x"></i></td><td>'
             else:
                 assert( self.loc=="INTRO" )
                 if not os.path.isfile("html/" + self.linkb + ".html") :
-                   generate_video_page.convert_geogebra_to_html( self.linkb )
+                   xml_to_html.build_html_file( self.linkb )
                 table += '<td></td><td><i class="fa fa-signal fa-3x"></i></td><td>'
 
             table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'

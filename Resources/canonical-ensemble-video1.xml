@@ -1,0 +1,14 @@
+<PAGE>
+  <UL>
+    <LI> Explain why function can be used to calculate the energy, number of atoms and volume of a microstate.  What are the arguments of these functions? </LI>
+    <LI> What is the name of the function that is used to calculate the energy of a microstate. </LI> 
+    <LI> Which extensive thermodynamic variables are constrained to have a particular value in the canonical ensemble. </LI>
+    <LI> Give an expression for the probability of being in a microstate in the canonical ensemble </LI>
+    <LI> Give an expression for the canonical partition function </LI>
+    <LI> Give an expression for $\frac{\textrm{d}S}{k_B}$ for the canonical ensemble that can be obtained using arguments based on statistical mechanics. </LI>
+    <LI> Explain why in the previous expression we can write terms such as $\left \langle \frac{ \partial H }{\partial N} \right\rangle$ and $\left \langle \frac{ \partial H }{\partial V} \right\rangle$ </LI>
+    <LI> Give an expression for $\beta$ and explain how this result is derived. </LI>
+  </UL>
+  <TITLE> The canonical ensemble </TITLE>
+  <VIDEO>https://www.youtube.com/embed/SbZXEyeP4wk</VIDEO>
+</PAGE>

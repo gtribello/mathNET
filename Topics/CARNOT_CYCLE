@@ -15,8 +15,8 @@ LEARNINGOUTCOMES:
 - You should be able to explain how Kelvin's universal calibration for temperature is constructed using considerations based on the Carnot cycle.
 
 END:
-CARNOT_CYCLE INTRO HTML AMA4004 carnot-video-1 G.~Tribello An explanation of the various stages in the operation of a Carnot engine and an explanation as to why this is the most efficient engine that can be constructed. 
-CARNOT_CYCLE INTRO HTML AMA4004 temperature-video G.~Tribello An explanation of Kelvin's universal calibration for temperature.
-CARNOT_CYCLE INTRO HTML AMA4004 adiabatic-work-video G.~Tribello An explanation of how much work when the volume of a system changes adiabatically.
-CARNOT_CYCLE INTRO HTML AMA4004 carnot-entropy-video G.~Tribello The Claussius inequality and entropy explained by comparing the efficiency of real engines with that of the Carnot engine.
+CARNOT_CYCLE INTRO XML AMA4004 carnot-video-1 G.~Tribello An explanation of the various stages in the operation of a Carnot engine and an explanation as to why this is the most efficient engine that can be constructed. 
+CARNOT_CYCLE INTRO XML AMA4004 temperature-video G.~Tribello An explanation of Kelvin's universal calibration for temperature.
+CARNOT_CYCLE INTRO XML AMA4004 adiabatic-work-video G.~Tribello An explanation of how much work when the volume of a system changes adiabatically.
+CARNOT_CYCLE INTRO XML AMA4004 carnot-entropy-video G.~Tribello The Claussius inequality and entropy explained by comparing the efficiency of real engines with that of the Carnot engine.
 CARNOT_CYCLE EXERCISE HTML AMA4004 carnot-fridge-problem G.~Tribello An exercise to consolidate what you have learnt about the Carnot engine.

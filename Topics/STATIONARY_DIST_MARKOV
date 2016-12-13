@@ -32,5 +32,5 @@ STATIONARY_DIST_MARKOV EXERCISE IPYTHON SOR3012 Ergodic-markov-chains.ipynb.zip 
 STATIONARY_DIST_MARKOV EXERCISE IPYTHON SOR3012 sor3012-ehrenfest-urns.ipynb G.~Tribello A programming exercise that involves simulating a more complex discrete time Markov chain.
 STATIONARY_DIST_MARKOV INTRO PDF SOR3012 jim-chap14.pdf J.~F.~McCann Notes on the ergodic theorem and the stationary distribution of Markov chains in general
 STATIONARY_DIST_MARKOV INTRO PDF SOR3012 jim-chap15.pdf J.~F.~McCann More notes on the ergodic distribution and the stationary distribution of Markov chains.
-STATIONARY_DIST_MARKOV INTRO HTML SOR3012 limiting-stationary-dist-video1 G.~Tribello	 A video explaining the derivation of the ergodic theorem 
-STATIONARY_DIST_MARKOV INTRO HTML SOR3012 limiting-stationary-dist-video2 G.~Tribello	 A video explaining why the limiting stationary distribution of an ergodic markov chain can be found by finding the principle left eigenvector of the transition matrix.
+STATIONARY_DIST_MARKOV INTRO XML SOR3012 limiting-stationary-dist-video1 G.~Tribello	 A video explaining the derivation of the ergodic theorem 
+STATIONARY_DIST_MARKOV INTRO XML SOR3012 limiting-stationary-dist-video2 G.~Tribello	 A video explaining why the limiting stationary distribution of an ergodic markov chain can be found by finding the principle left eigenvector of the transition matrix.

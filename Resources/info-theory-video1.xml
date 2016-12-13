@@ -1,0 +1,13 @@
+<PAGE>
+  <TITLE>The information contained in uniform distributions</TITLE>
+  <VIDEO>https://www.youtube.com/embed/xdo1t6_so20</VIDEO>
+  <UL>
+    <LI> Explain the meaning of the term functional</LI>
+    <LI> State Khitchine’s four axioms for the information</LI>
+    <LI> Explain what we mean when we state that a function or functional is monotonically decreasing.</LI>
+    <LI> Now explain why the information in a uniform distribution decreases monotonically with the size of the sample space.</LI>
+    <LI> If the uniform probability distribution $p$ has a sample space with $m$ outcomes and the probability distribution $q$ has a sample space with $n$ outcomes. How many outcomes are there in the sample space for the joint probability distribution $p \otimes q$. N.B. $p$ and $q$ are independent.</LI>
+    <LI> Explain why the information in a uniform probablity distribution must be a function of $\frac{1}{n}$ where $n$ is the number of </LI>
+    <LI> Hence, explain why the information in a uniform distribution, $p$, is given by: $I(p) = -k \ln n$.</LI>
+  </UL>
+</PAGE>

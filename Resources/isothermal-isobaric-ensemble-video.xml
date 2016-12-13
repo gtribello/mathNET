@@ -1,0 +1,18 @@
+<PAGE>
+  <TITLE>The isothermal-isobaric ensemble</TITLE>
+  <VIDEO>https://www.youtube.com/embed/ad9u34u5ld8</VIDEO>
+  <UL>
+    <LI> Which extensive thermodynamic variables are constrained to have a particular value in the isothermal-isobaric ensemble.</LI>
+    <LI> Give an expression for the probability of being in a microstate in the isothermal-isobaric ensemble</LI>
+    <LI> Give an expression for the isothermal-isobaric partition function</LI>
+    <LI> Give an expression for $\frac{\textrm{d}S}{k_B}$ for the isothermal-isobaric ensemble that can be obtained using arguments based on statistical mechanics.</LI>
+    <LI> Give an expression for the Lagrange multiplier $\lambda$ and explain how this result is derived.</LI>
+    <LI> What thermodynamic potential can be calculated from the isothermal-isobaric partition function?  How is this done and how is this result derived?</LI>
+    <LI> Explain why: $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j) - \beta PV(\mathbf{x}_i,\mathbf{p}_i) - \Psi}$</LI>
+    <LI> Now calculate the first derivative of $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j) - \beta PV(\mathbf{x}_i,\mathbf{p}_i)  - \Psi}$ with respect to $\beta P$ and hence show that $\langle V \rangle = - \frac{ \partial \Psi }{\partial (\beta V) }$</LI>
+    <LI> Calculate the second derivative of $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j )- \beta PV(\mathbf{x}_i,\mathbf{p}_i) - \Psi}$ with respect to $\beta P$ and hence show that $\langle (V - \langle V \rangle )^2 \rangle = \frac{ \partial^2 \Psi }{\partial (\beta P)^2 }$</LI>
+    <LI> Explain (in your own words) why $\langle (V - \langle V \rangle )^2 \rangle = - \frac{ \partial \Psi }{\partial (\beta P) }$.</LI>
+    <LI> Use the chain rule to show that: $\frac{\partial \langle V \rangle }{\partial (\beta P)} = k_B T \frac{\partial \langle V \rangle }{\partial P}$ if $T$ is constant.</LI>
+    <LI> Use the result you have just arrived at to write an expression that tells you how the isothermal compressibility, $\kappa_T$, can be calculated from the fluctuations in the total volume $\langle (V - \langle V \rangle )^2\rangle$</LI>
+  </UL>
+</PAGE>

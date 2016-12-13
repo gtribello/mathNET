@@ -19,5 +19,5 @@ LEARNINGOUTCOMES:
 - You should be able to explain the meanings of the following terms: isothermal, isobaric, isochoric, adiabatic, diabatic, isolated system, closed system and open system.
 
 END:
-THERMODYNAMIC_VARIABLES INTRO HTML AMA4004 thermodymaic-variables-video G.~Tribello An introduction to thermodynamic variables and the distinction between intenstive and extensive variables.
-THERMODYNAMIC_VARIABLES INTRO HTML AMA4004 work-and-heat-video G.~Tribello An introduction to the roles played by work and heat in classical thermodynamics
+THERMODYNAMIC_VARIABLES INTRO XML AMA4004 thermodymaic-variables-video G.~Tribello An introduction to thermodynamic variables and the distinction between intenstive and extensive variables.
+THERMODYNAMIC_VARIABLES INTRO XML AMA4004 work-and-heat-video G.~Tribello An introduction to the roles played by work and heat in classical thermodynamics

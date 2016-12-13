@@ -1,0 +1,11 @@
+<PAGE>
+  <TITLE>The probability distribution function</TITLE>
+  <VIDEO>https://www.youtube.com/embed/qbbTEZ4NlCI</VIDEO>
+  <UL>
+    <LI> Explain why $\lim_{x\rightarrow -\infty} F_X(x)=0$  $F_X(x)$ is the probability distribution function for the random variable $X$</LI>
+    <LI> Explain why $\lim_{x\rightarrow +\infty} F_X(x)=1$.  $F_X(x)$ is the probability distribution function for the random variable $X$</LI>
+    <LI> Consider a die and explain what set of outcomes are in each of the following subsets $\{ s : (s \in \Omega ) \wedge (x(s) \le 0 \}$, $\{ s : (s \in \Omega ) \wedge (x(s) \le 1 \}$, $\{ s : (s \in \Omega ) \wedge (x(s) \le 1.5 \}$, $\{ s : (s \in \Omega ) \wedge (x(s) \le 4.5 \}$ and $\{ s : (s \in \Omega ) \wedge (x(s) \le 6.25 \}$.  In these expressions $\Omega$ is used to represent the sample space for the experiment and $x(s)$ tells you the value that comes up when the dice is rolled.</LI>
+    <LI> Sketch the probability distribution function for a random variable $X$ tells you the outcome of a fair dice roll.  Indicate all the points on this curve where the function is discontinuous.</LI>
+    <LI> Write a mathematical expression using limits which tells us that the function $f(x)$ has a discontinuity at $a$.</LI>
+  </UL>
+</PAGE>

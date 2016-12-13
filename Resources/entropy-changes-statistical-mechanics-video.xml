@@ -1,0 +1,15 @@
+<PAGE>
+  <TITLE>Entropy changes in statistical mechanics</TITLE>
+  <VIDEO>https://www.youtube.com/embed/-Tbv5CGd_H4</VIDEO>
+  <UL>
+    <LI> Explain in your own words what the difference is between the extensive variables that I have labelled $\alpha^{(j)}$ and the variables I have labelled $B^{(k)}$ in the video.</LI>
+    <LI> What derivative we trying to work out in this video?  Use the space below to explain why and any details you think are relevant.</LI>
+    <LI> Given that $\frac{S}{k_B} = \Psi + \sum_k \lambda_k \langle B^{(k)} \rangle$ write an expression for the derivative that we would like to calculate.</LI>
+    <LI> Explain in your own words why: $\frac{\partial \Phi }{\partial \alpha^{(j)}} \textrm{d}\alpha^{(j)} = \textrm{d} \Phi$</LI>
+    <LI> Give an expression that allows one to calculate $\Psi$.</LI>
+    <LI> Hence, give an expression for the derivative $\frac{\partial \Psi}{\partial \alpha^{(j)}}$</LI>
+    <LI> What is $\frac{e^{-\sum_k \lambda_k B_i^{(k)}}}{e^\Psi}$ equal to?</LI>
+    <LI> Use this result to explain in your own words why: $\frac{\partial \Psi}{\partial \alpha^{(j)}} = - \sum_k \frac{\partial \lambda_k}{\partial \alpha^{(j)}} \langle B^{(k)} \rangle - \sum_k \lambda_k \left\langle \frac{\partial B^{(k)} }{\partial \alpha^{(j)}} \right\rangle$</LI>
+    <LI> Give the final result for the change in infinitesimal change in entropy that accompanies an infinitesimal change in the fixed extensive thermodynamic variable $\alpha^{(j)}$</LI>
+  </UL>
+</PAGE>

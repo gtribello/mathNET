@@ -1,0 +1,12 @@
+<PAGE>
+  <TITLE>Independent random variables</TITLE>
+  <VIDEO>https://www.youtube.com/embed/1P8stG7g3SU</VIDEO>
+  <UL>
+    <LI> What does it mean when we say that two events are independent?</LI>
+    <LI> What does it mean when we say that two random variables are independent?</LI>
+    <LI> If the random variables $X$ and $Y$ are NOT independent is the following equality guaranteed to never hold $P(X=1 \wedge Y=2)=P(X=1)P(Y=2)$?  Explain your reasoning.</LI>
+    <LI> Is the probability of getting a 3 when I roll a dice independent of the probability of getting a 2 on the same roll? Explain your reasoning.</LI>
+    <LI> Is the following statement true or false "the set of values which a random variable can take all correspond to events that are independent of each other."  Explain your reasoning.</LI>
+    <LI> Given the following equation $P(X=x | Y=a \wedge Z=b)=P(X=x | Y=a)$ what can you conclude about the independence of the random variables $X$, $Y$ and $Z$. </LI>
+  </UL>
+</PAGE>

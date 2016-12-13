@@ -1,0 +1,14 @@
+<PAGE>
+  <TITLE>The canonical ensemble </TITLE>
+  <VIDEO>https://www.youtube.com/embed/KiLr6ErYCKE</VIDEO>
+  <UL>
+    <LI> What thermodynamic potential can be calculated from the canonical partition function?  How is this done and how is this result derived?</LI>
+    <LI> Give an expression that allows one to calculate the ensemble average, $\langle A \rangle$, for the observable $A$.  You may assume that this quantity can be calculated based on the positions, $\mathbf{x}$, and momenta, $\mathbf{p}$, of the atoms using a function $A( \mathbf{x},\mathbf{p})$.</LI>
+    <LI> Explain why $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j )- \Psi}$</LI>
+    <LI> Now calculate the first derivative of $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j) - \Psi}$ with respect to $\beta$ and hence show that $\langle E \rangle = - \frac{ \partial \Psi }{\partial \beta }$</LI>
+    <LI> Calculate the second derivative of $1 = \sum_j e^{-\beta H(\mathbf{x}_j,\mathbf{p}_j) - \Psi}$ with respect to $\beta$ and hence show that $\langle (H - \langle E \rangle )^2 \rangle = \frac{ \partial^2 \Psi }{\partial \beta^2 }$</LI>
+    <LI> Explain (in your own words) why $\langle (H - \langle E \rangle )^2 \rangle = - \frac{ \partial \langle E \rangle }{\partial \beta }$. </LI>
+    <LI> Use the chain rule to show that: $\frac{\partial \langle E \rangle }{\partial \beta} = k_B T^2 \frac{\partial \langle E \rangle }{\partial T}$</LI>
+    <LI> Use the result you have just arrived at to write an expression that tells you how the heat capacity can be calculated from the fluctutations in the total energy $\langle (H - \langle E \rangle )^2\rangle$</LI>
+  </UL>
+</PAGE>

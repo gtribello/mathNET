@@ -1,0 +1,16 @@
+<PAGE>
+  <TITLE> Statistical mechanics of non-interacting spins </TITLE>
+  <GEOGEBRA> https://www.geogebra.org/material/iframe/id/MmKZGxVh/width/1920/height/860/border/888888 </GEOGEBRA>
+  <DESCRIPTION>
+     The graph shows how the average magnetization per spin, $\langle M \rangle$, for a collection of non-interacting spins 
+     in a magnetic field with strength, $h$, changes with temperature, $T$.  The sliding bar allows you to change the value 
+     of the applied magnetic field, $h$.
+  </DESCRIPTION>
+  <UL>
+    <LI> Describe how the magnetisation changes as temperature increases.  Explain this behavior making reference to the probability of being in the various microstates. </LI>
+    <LI> Now increase the strength of the magnetic field.  How does this affect the shape of the curve? Explain why the shape of the curve changes in this way by making reference to the positions of the underlying energy levels and the probability of being in the various microstates?  </LI>
+    <LI> What happens to the shape of the curve when the magnetic field is negative?  Explain this behavior by once more making reference to the energy levels. </LI>
+    <LI> What happens to the shape of the curve when there is no magnetic field?  Explain this behavior. </LI>
+    <LI> Derive an expression for the entropy as a function of temperature for this particular model.  Your final report should contain a plot of this expression for various values of the magnetic field, $h$, as well as an explanation as to why this curve has this particular shape and why the shape of the curve changes in the way that you see it does as the magnetic field strength, $h$, is changed. </LI>
+  </UL>
+</PAGE>

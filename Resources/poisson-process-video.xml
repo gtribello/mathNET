@@ -1,0 +1,15 @@
+<PAGE>
+  <TITLE>The poisson process</TITLE>
+  <VIDEO>https://www.youtube.com/embed/kWvG0_p4wO8</VIDEO>
+  <UL>
+    <LI> Draw the transition graph for the poissson process.  How many states does this markov chain have.</LI>
+    <LI> Write out the jump rate matrix for the poisson process.</LI>
+    <LI> Explain the three assumptions that we make when we model a counting process using a poisson process.</LI>
+    <LI> Use the kolmogorov equation to derive a differential equation involving $\frac{\textrm{d}p_{03}(t)}{\textrm{d}t} for the Poisson process.</LI>
+    <LI> Show in your notes why the fact that $\frac{\textrm{d}p_{00}(t)}{\textrm{d}t} = - \lambda t$ together with the fact that $P_{00}(t)=0$ implies that $P_{00}(t)=e^{-\lambda t}. </LI>
+    <LI> Show that $\frac{\textrm{d}\left[ e^{\lambda t} P_{01}(t) \right]}{\textrm{d}t} = e^{\lambda t} \frac{\textrm{d}P_{01}(t)}{\textrm{d}t} + \lambda e^{\lambda t} P_{01}(t)$ using the product rule and explain how this fact is used when we solve a differential equation using an integrating factor.</LI>
+    <LI> Use the method of integrating factors to derive an expression for $P_{03}(t)$ starting from the differential equation that you wrote down in the third of these questions.</LI>
+    <LI> Give the expression for $P_{0n}(t)$ that is derived in the video for the poisson process.</LI>
+    <LI> Given the expression that we derived for $P_{0n}(t)$ what is the expectation value for $\mathbb{E}[N(t)]$ if $N(t)$ is a counting process that can be modelled using a Poisson random variable.</LI>
+  </UL>
+</PAGE>

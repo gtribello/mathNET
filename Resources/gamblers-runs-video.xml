@@ -1,0 +1,13 @@
+<PAGE>
+  <TITLE>Gamblers ruin</TITLE>
+  <VIDEO>https://www.youtube.com/embed/nUkSZyr_24c</VIDEO>
+  <UL>
+    <LI> Draw the transition graph for the gamblers ruin.</LI>
+    <LI> Write out the one-step transition matrix for the gamblers ruin problem.</LI>
+    <LI> On the transition graph that you wrote out in the first of these questions highlight the recurrent states.</LI>
+    <LI> Explain what the symbol $\pi_k$ is used to represent in the video and then explain why $\pi_0=1$ and why $\pi_N=1$.</LI>
+    <LI> Write out and explain the derivation of the homogeneous difference equation that can be used to find all the $\pi_k$ values that have $0&lt;k&lt;N$.</LI>
+    <LI> Explain what the symbol $d_k$ is used to represent in the video and then explain why $d_0=0$ and why $d_N=0$.</LI>
+    <LI> Write out and explain the derivation of the inhomogeneous difference equation that can be used to find all the $d_k$ values that have $0&lt;k&lt;N$. </LI>
+  </UL>
+</PAGE>

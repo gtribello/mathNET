@@ -1,0 +1,13 @@
+<PAGE>
+  <TITLE>The central limit theorem</TITLE>
+  <VIDEO>https://www.youtube.com/embed/-XJe3s_BCKw</VIDEO>
+  <UL>
+    <LI> Explain the scope of the central limit theorem.  What do we want to know about the sum of a set of random variables</LI>
+    <LI> State the central limit theorem, ensuring that you define all the terms within the equation.</LI>
+    <LI> Explain the rationale for writing the central limit theorem without the limit sign</LI>
+    <LI> In order for the central limit theorem to have any predictive value what must we be able to say about the expectation and variance of our random variable.</LI>
+    <LI> Explain what we mean by a confidence limit and the meanings of the symbols $\epsilon$ and $p_c$ that are introduced in the video.</LI>
+    <LI> Explain in your own words why $p_c = 2\Phi\left( \frac{ \epsilon}{\sigma / \sqrt{n}} \right) - 1$</LI>
+    <LI> If I perform 20 measurements of some random quantity $X$ how many of my measurements would I expect to lie within the 95 % confidence interval.</LI>
+  </UL>
+</PAGE>

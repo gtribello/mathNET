@@ -35,6 +35,6 @@ END:
 
 
 POISSON_PROCESS EXERCISE IPYTHON SOR3012 sor3012-poisson-process.ipynb G.~Tribello A programming exericse on simulating the poisson process
-POISSON_PROCESS INTRO HTML SOR3012 poisson-process-video G.~Tribello A video introducing the poisson process as a continuous time Markov chain
+POISSON_PROCESS INTRO XML SOR3012 poisson-process-video G.~Tribello A video introducing the poisson process as a continuous time Markov chain
 POISSON_PROCESS INTRO PDF SOR3012 jim-chap19.pdf J.~F.~McCann Some notes on the poisson process and its derivation.
 POISSON_PROCESS INTRO PDF SOR3012 jim-chap20.pdf J.~F.~McCann More notes on the properties of the Poisson process.

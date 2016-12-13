@@ -7,5 +7,5 @@ LEARNINGOUTCOMES:
 - You should be able to derive Maxwell relations.
 
 END:
-MAXWELL_RELATIONS INTRO HTML AMA4004 maxwell-relations-video G.~Tribello An explanation as to how to derive a Maxwell relation from the definition of the thermodynamic potentials.
+MAXWELL_RELATIONS INTRO XML AMA4004 maxwell-relations-video G.~Tribello An explanation as to how to derive a Maxwell relation from the definition of the thermodynamic potentials.
 MAXWELL_RELATIONS EXERCISE HTML AMA4004 maxwell-relations-exercise G.~Tribello An exercise on deriving Maxwell relations in a less familiar setting

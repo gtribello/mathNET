@@ -33,7 +33,7 @@ We can take powers of square matrices by doing matrix multiplication.  We thus h
   <EXERCISE>
     <TITLE>Exercise 1
 </TITLE>
-    <PROBLEMS>Calculate the following matrix powers: \\
+    <PROBLEMS>Calculate the following matrix powers: <br/><br/>
 <table>
 <tr><td>
 $$

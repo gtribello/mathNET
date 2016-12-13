@@ -4,7 +4,6 @@ import xml.etree.ElementTree as ET
 import lxml.etree as ET
 
 def build_html_file( infile ):
-    print( infile )
     tree = ET.parse( "Resources/" + infile + ".xml" )
     root = tree.getroot()
     # Find appropriate template to use

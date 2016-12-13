@@ -3,8 +3,6 @@ import shutil
 import topic
 import subprocess
 import xml_to_html
-import generate_html_exercise
-
 
 class resource(object) :
   def __init__(self,description) :
@@ -69,12 +67,6 @@ class resource(object) :
             if not os.path.isfile("html/resources/" + self.linkb):
                shutil.copy("Resources/" + self.linkb, "html/resources/" + self.linkb)
             table += '<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td>' + '<a href="resources/' + self.linkb + '" download="' + self.linkb + '"> ' + self.description + '</a></td>'
-       elif( self.rtype=="HTML"):
-            assert( self.loc=="EXERCISE" )
-            if not os.path.isfile("html/" + self.linkb + ".html") :
-               generate_html_exercise.convert_exercise_to_html( self.linkb )
-            table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>'
-            table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>'
        elif( self.rtype=="XML") :
             if not os.path.isfile("html/" + self.linkb + ".html") :
                 xml_to_html.build_html_file( self.linkb )

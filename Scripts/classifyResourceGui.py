@@ -71,7 +71,7 @@ class AddResourceDialogue(QDialog):
        return True
 
    def browsefiles( self ):
-       filename = QFileDialog.getOpenFileName(self, 'Add resource file', 'Resources', "Files (*.ipynb *.pdf *.ghtml *.zip)" )
+       filename = QFileDialog.getOpenFileName(self, 'Add resource file', 'Resources', "Files (*.ipynb *.pdf *.xml *.zip)" )
        splitup = filename.split("/")
        if splitup[len(splitup)-2] != "Resources" : 
           error = QErrorMessage(self)
@@ -109,7 +109,7 @@ class AddResourceDialogue(QDialog):
        myfile = self.resource.toPlainText()
        splitup = myfile.split(".")
        ext = splitup[len(splitup)-1]
-       ftype = "HTML"
+       ftype = "XML"
        if ext=="ipynb" : 
           ftype = "IPYTHON"
        elif ext=="zip" :
@@ -118,13 +118,13 @@ class AddResourceDialogue(QDialog):
           ftype = "PDF"
        elif ext=="tex" :
           ftype = "LATEX"
-       elif ext=="ghtml" :
+       elif ext=="xml" :
           f = open( "Resources/" + myfile, "r" )
           m_page = f.read()
           f.close()
-          if m_page.find("GEOGEBRA:") !=-1 :
+          if m_page.find("<GEOGEBRA>") !=-1 :
              ftype = "GEOGEBRA"
-          myfile=myfile.replace(".ghtml","")
+          myfile=myfile.replace(".xml","")
        else :
           error.showMessage("Invalid extension on input resource file")
           error.exec_()

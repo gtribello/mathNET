@@ -1,0 +1,54 @@
+<PAGE>
+  <TITLE>Solving limits using the squeeze method
+</TITLE>
+  <DESCRIPTION>
+In mathematics a limit of a function is the value the function approaches as the input approaches some value.  Generally these limits cannot
+be calculated using our usual approach of sticking numbers into the formula and as such we must find other approaches for determining these
+quantities.  In this exercise you will learn about one approach - squeezing inequalities - that can be used to solve limits.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Find value of the following limit:
+$$
+\lim_{x \rightarrow \infty} \frac{\sin(x)}{x}
+$$
+</QUESTION>
+      <SOLUTION>
+If we put the equation in the question into words we are being asked to ``find the limit of $\sin(x)$ over $x$ as $x$ tends to infinity.” 
+In more prosaic terms substitute $\infty$ into the equation after the limit sign and see what happens. Obviously, this is not a problem 
+we can solve with a calculator as (a) we cannot put infinity into a calculator and (b) even if we could the value of 
+$\frac{\infty}{\infty}$ is undefined. We thus have to use some other scheme.  For this particular problem we solve the limit as follows:
+We know that:
+$$
+-1 \le \sin(x) \le +1 
+$$
+and therefore that:
+$$
+-\frac{1}{x} \le \sin(x) \le + \frac{1}{x}
+$$
+If we now take limits we have:
+$$
+\lim_{x \rightarrow \infty} -\frac{1}{x} \le \lim_{x \rightarrow \infty} \sin(x) \le + \lim_{x \rightarrow \infty} \frac{1}{x}
+$$
+We next note that as $x \rightarrow \infty \quad \frac{1}{x} \rightarrow 0$.  This implies that:
+$$
+0 \le \lim_{x \rightarrow \infty} \sin(x) \le 0
+$$
+Zero is the only number that satisifes both these inequality so:
+$$
+\lim_{x \rightarrow \infty} \sin(x) = 0
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <EXERCISE>
+    <TITLE>Your turn
+</TITLE>
+    <PROBLEMS>Use a similar logic to solve the following limits:
+$$
+\lim_{x \rightarrow \infty} \frac{2 - \cos(x)}{x+3} \qquad \qquad \lim_{x\rightarrow \infty} \frac{\cos^2(2x)}{3-2x}
+$$
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

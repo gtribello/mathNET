@@ -1,0 +1,88 @@
+<PAGE>
+  <TITLE>Random variables
+</TITLE>
+  <DESCRIPTION>
+A simple example problem involving the construction of random variables together with a simple varient on the problem for you to try.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+An urn contains 3 balls a red one, a green one and a blue one. Consider an
+experiment in which balls are drawn at random and then replaced. Define the sample space for
+such an experiment if this is done twice. What is the probability for each element in the sample
+space? 
+</QUESTION>
+      <SOLUTION>
+The sample space is:
+<br/><br/> 
+<table>
+<col width="100"/>
+<col width="100"/>
+<col width="100"/>
+<tr><td> red red </td><td> red green </td><td> red blue </td></tr>
+<tr><td> green red </td><td> green green </td><td> green blue </td></tr>
+<tr><td> blue red </td><td> blue green </td><td> blue blue </td></tr>
+</table> 
+<br/> 
+The classical interpretation of probability means all combinations are equally likely.  Hence:
+$$
+P = \frac{1}{9} \nonumber
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Consider the problem described in the example but now suppose that the balls are not replaced.  Enumerate the 
+possible outcomes and calculate the probabilities.
+ 
+</QUESTION>
+      <SOLUTION>
+$$
+P = \frac{1}{6}
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+What is the probabilities that two randomly selected people have their birthday on the 4th October (assume no leap years)?
+</QUESTION>
+      <SOLUTION>
+$$
+P = \left( \frac{1}{365} \right)^2
+$$
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+  
+What is the probability that two randomly selected people have the same birthday (assume no leap years again)?
+</QUESTION>
+      <SOLUTION>
+$$
+P = \left( \frac{1}{365} \right)
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+In the game of bridge 4 players share out the 52 cards in a deck.  In each round three players play while the last player (the dummy)
+lays his cards out on the table for this partner (the declarer) to play.  If the declarer can see that he and the dummy have 8 of the heart
+cards between them he knows that the two hands that he cannot see must hold five heart cards between them.  What are the probabilities that
+the cards are split 0:5, 1:4 and 2:3 between the other two players?
+</QUESTION>
+      <SOLUTION>
+<ul>
+<li>Probability of 0:5 split : 0.06 </li>
+<li>Probability of 1:4 split : 0.32 </li>
+<li>Probability of 2:3 split : 0.62 </li>
+</ul>
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+</PAGE>

@@ -27,4 +27,4 @@ LEARNINGOUTCOMES:
 - You should be able to use the Perron-Frobenius theorem to evaluate the partition function for the Ising models in the thermodynamic limit.
 
 END:
-ISING_MODEL EXERCISE HTML AMA4004 ising-model-problems G.~Tribello Problems on using transfer matrices to calculate partition functions and ensemble averages for interacting systems
+ISING_MODEL EXERCISE XML AMA4004 ising-model-problems G.~Tribello Problems on using transfer matrices to calculate partition functions and ensemble averages for interacting systems

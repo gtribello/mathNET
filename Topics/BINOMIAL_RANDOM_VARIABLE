@@ -27,4 +27,4 @@ END:
 
 BINOMIAL_RANDOM_VARIABLE INTRO XML SOR3012 binomial-random-variable-video G.~Tribello A video explaining the derivation of the binomial random variable
 BINOMIAL_RANDOM_VARIABLE EXERCISE IPYTHON SOR3012 sor3012-2-binomial-geometric.ipynb G.~Tribello A progrmming exercise about the binomail and geometric random variables
-BINOMIAL_RANDOM_VARIABLE EXERCISE HTML SOR3012 binomial-random-variable-problems G.~Tribello Problems involving the binomial random variable
+BINOMIAL_RANDOM_VARIABLE EXERCISE XML SOR3012 binomial-random-variable-problems G.~Tribello Problems involving the binomial random variable

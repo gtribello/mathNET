@@ -1,0 +1,102 @@
+<PAGE>
+  <TITLE>Transient and Recurrent state
+</TITLE>
+  <DESCRIPTION>
+In the following exercises you will have practise in drawing transition graphs 
+for Markov chains from the transition matrix and in classifying states as transient
+or recurrent.  Remember that a state is transient if:
+$$
+P(R_i \le \infty ) \lt 1
+$$
+and that is recurrent if:
+$$
+P(R_i \le \infty ) = 1
+$$
+Here $R_i$ is the return time to state $i$, which is random as this quantity measures the number of steps in a loop that starts and
+end in state $i$.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Consider the following transition matrices for three Markov chains. 
+In each case, (a) draw the transition diagram, and (b) classify 
+the subsets of states (equivalence classes)  into transient states 
+and recurrent states.
+$$
+{\rm (i)} \quad 
+\left(  
+\begin{matrix}
+0.1 &amp;   0.8  &amp;  0 &amp; 0.1 \\
+0    &amp;   1  &amp;  0  &amp;  0  \\
+0   &amp; 0 &amp; 0 &amp; 1 \\
+0   &amp;   0  &amp;  0.4  &amp; 0.6\\
+\end{matrix}
+\right)
+\qquad {\rm (ii)} \quad 
+\left(  
+\begin{matrix}
+0  &amp;   0.5  &amp;  0.5 \\
+0  &amp;   0.4  &amp;  0.6 \\
+1  &amp;   0  &amp;  0 \\
+\end{matrix}
+\right)
+\qquad {\rm (iii)} \quad 
+\left(  
+\begin{matrix}
+0.1 &amp;  0 &amp; 0.3 &amp; 0.6 \\
+0.2 &amp; 0.2 &amp; 0.6 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 1 \\
+\end{matrix}
+\right)
+\qquad .
+$$
+</QUESTION>
+      <SOLUTION>
+         <table align="center">
+         <col width="200"/>
+         <col width="200"/>
+         <col width="200"/>
+         <col width="200"/>
+         <col width="200"/>
+         <tr> 
+           <td> <b> Problem </b> </td> 
+           <td> <b> State 1 </b> </td> 
+           <td> <b> State 2 </b> </td> 
+           <td> <b> State 3 </b> </td> 
+           <td> <b> State 4 </b> </td> 
+         </tr> 
+         <tr> 
+           <td> (i) </td> 
+           <td> Transient </td> 
+           <td> Absorbing (recurrent) </td> 
+           <td> Recurrent </td> 
+           <td> Recurrent </td> 
+         </tr>
+         <tr> 
+           <td> (ii) </td> 
+           <td> Recurrent </td> 
+           <td> Recurrent </td> 
+           <td> Recurrent </td> 
+           <td> </td> 
+         </tr> 
+         <tr> 
+           <td> (iii) </td> 
+           <td> Transient </td> 
+           <td> Transient </td> 
+           <td> Transient </td> 
+           <td> Absorbing (recurrent) </td> 
+         </tr>
+         </table>
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <EXERCISE>
+    <TITLE>Inventing Markov chains
+</TITLE>
+    <PROBLEMS>Draw a transition graph for a Markov chain that has three recurrent
+states and two transient states.   Draw a second transition graph.  This time your Markov chain should have five states all
+of which have period 3.  Does this Markov chain have a limiting stationary distribution?
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

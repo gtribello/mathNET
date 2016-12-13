@@ -39,5 +39,5 @@ END:
 
 
 EXPECTATION INTRO XML SOR3012 expectation-video G.~Tribello Introducing the expectation
-EXPECTATION EXERCISE HTML SOR3012 expectation-problems G.~Tribello Exercises involving the calculation of the expectation for a random variable
+EXPECTATION EXERCISE XML SOR3012 expectation-problems G.~Tribello Exercises involving the calculation of the expectation for a random variable
 EXPECTATION INTRO PDF SOR3012 jim-chap05.pdf J.~F.~McCann An explanation of how the expectation, variance and moment generating function are calculated.

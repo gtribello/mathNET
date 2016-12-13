@@ -1,0 +1,314 @@
+<PAGE>
+  <TITLE>Basic matrix problems
+</TITLE>
+  <DESCRIPTION>
+The following problems allow you to practise adding matrices together and multiplying matrices by a scalar.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Calculate sum of the following two matrices:
+$$
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) + 
+\left(
+ \begin{matrix}
+  e &amp; f \\
+  g &amp; h
+ \end{matrix}
+\right)
+$$
+</QUESTION>
+      <SOLUTION>
+When we add together two matrices we add together the elements term by term as shown here:
+\begin{equation}
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) + 
+\left(
+ \begin{matrix}
+  e &amp; f \\
+  g &amp; h
+ \end{matrix}
+\right) = 
+\left(
+ \begin{matrix}
+  a + e &amp; b + f \\
+  c + g &amp; d + h
+ \end{matrix}
+\right)
+\end{equation}
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Calculate the following product of a matrix and a scalar, $\alpha$:
+$$
+\alpha \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right)
+$$
+</QUESTION>
+      <SOLUTION>
+When a matrix is multiplied by a scalar the scalar multiplies each of the elements of the matrix in turn
+as shown here:
+\begin{equation}
+\alpha \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) = 
+\left(
+ \begin{matrix}
+  \alpha a &amp; \alpha b \\
+  \alpha c &amp; \alpha d
+ \end{matrix}
+\right)
+\end{equation}
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <EXERCISE>
+    <TITLE>Matrix addition 
+</TITLE>
+    <PROBLEMS> Do the following matrix addition problems:
+<table align="center">
+<col width="300"/>
+<col width="300"/>
+<col width="300"/>
+<tr><td>
+$$
+ \left( 
+ \begin{matrix}
+  1 &amp; 4 \\
+  5 &amp; -2
+ \end{matrix}
+ \right) + 
+  \left( 
+ \begin{matrix}
+  7 &amp; 3 \\
+  11 &amp; 9
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+ \left( 
+ \begin{matrix}
+  -3 &amp; 4 \\
+  6 &amp; 13
+ \end{matrix}
+ \right) + 
+  \left( 
+ \begin{matrix}
+  3 &amp; -8 \\
+  -2 &amp; 2
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+ \left( 
+ \begin{matrix}
+  5 &amp; 7 &amp; 9 \\
+  3 &amp; -2 &amp; 2 \\
+  1 &amp; 0 &amp; 7
+ \end{matrix}
+ \right) + 
+  \left( 
+ \begin{matrix}
+  -2 &amp; 5 &amp; -6 \\
+  4 &amp; -3 &amp; 5 \\
+  -1 &amp; \sqrt{3} &amp; 8
+ \end{matrix}
+ \right)
+$$
+</td></tr><tr><td>
+$$
+ \left( 
+ \begin{matrix}
+  -7 &amp; 5 \\
+  4 &amp; 3
+ \end{matrix}
+ \right) + 
+  \left( 
+ \begin{matrix}
+  -14 &amp; 3 \\
+  -3 &amp; 1
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+ \left( 
+ \begin{matrix}
+  1 &amp; 6 &amp; 4 \\
+  -3 &amp; 8 &amp; 9 \\
+  -2 &amp; 7 &amp; -1
+ \end{matrix}
+ \right) + 
+  \left( 
+ \begin{matrix}
+  -2 &amp; 4 &amp; -1 \\
+  4 &amp; -17 &amp; -5 \\
+  6 &amp; 1 &amp; 8
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+ \left( 
+ \begin{matrix}
+  1 &amp; 6 &amp; 4 \\
+  -3 &amp; 8 &amp; 9 \\
+  -2 &amp; 7 &amp; -1
+ \end{matrix}
+ \right) -
+  \left( 
+ \begin{matrix}
+  -2 &amp; 4 &amp; -1 \\
+  4 &amp; -17 &amp; -5 \\
+  6 &amp; 1 &amp; 8
+ \end{matrix}
+ \right)
+$$
+</td></tr><tr><td>
+$$
+ \left( 
+ \begin{matrix}
+  -3 &amp; 4 \\
+  6 &amp; 13
+ \end{matrix}
+ \right) - 
+  \left( 
+ \begin{matrix}
+  3 &amp; -8 \\
+  -2 &amp; 2
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+ \left( 
+ \begin{matrix}
+  5 &amp; 7 &amp; 9 \\
+  3 &amp; -2 &amp; 2 \\
+  1 &amp; 0 &amp; 7
+ \end{matrix}
+ \right) - 
+  \left( 
+ \begin{matrix}
+  -2 &amp; 5 &amp; -6 \\
+  4 &amp; -3 &amp; 5 \\
+  -1 &amp; \sqrt{3} &amp; 8
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+\left( 
+ \begin{matrix}
+  1 &amp; 4 \\
+  5 &amp; -2
+ \end{matrix}
+ \right) - 
+  \left( 
+ \begin{matrix}
+  7 &amp; 3 \\
+  11 &amp; 9
+ \end{matrix}
+ \right)
+$$
+</td></tr>
+</table>
+</PROBLEMS>
+  </EXERCISE>
+  <EXERCISE>
+    <TITLE>Matrix times scalar 
+</TITLE>
+    <PROBLEMS>
+<table align="center">
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<tr><td> 
+$$
+ 10 \left( 
+ \begin{matrix}
+  1 &amp; 4 \\
+  5 &amp; -2
+ \end{matrix}
+ \right)  
+$$
+ 
+</td><td>
+ 
+$$
+ 5 \left( 
+ \begin{matrix}
+  5 &amp; 7 &amp; 9 \\
+  3 &amp; -2 &amp; 2 \\
+  1 &amp; 0 &amp; 7
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+2 \left( 
+ \begin{matrix}
+  -2 &amp; 4 &amp; -1 \\
+  4 &amp; -17 &amp; -5 \\
+  6 &amp; 1 &amp; 8
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+-10
+ \left( 
+ \begin{matrix}
+  -2 &amp; 5 &amp; -6 \\
+  4 &amp; -3 &amp; 5 \\
+  -1 &amp; \sqrt{3} &amp; 8
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+100  \left( 
+ \begin{matrix}
+  7 &amp; 3 \\
+  11 &amp; 9
+ \end{matrix}
+ \right)
+$$
+</td><td>
+$$
+ 15 \left( 
+ \begin{matrix}
+  -3 &amp; 4 \\
+  6 &amp; 13
+ \end{matrix}
+ \right)
+$$
+</td></tr>
+</table>
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

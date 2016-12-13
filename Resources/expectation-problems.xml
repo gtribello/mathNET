@@ -1,0 +1,170 @@
+<PAGE>
+  <TITLE>Expectation 
+</TITLE>
+  <DESCRIPTION>
+In the following problems the aim is (almost) always to find the expectation for a random variable.
+Remember that for discrete random variable the expectation is given by:
+$$
+\mathbb{E}(X) = \sum_{x_i=0}^\infty x_i P(X=x_i) = \sum_{x_i=0}^\infty x_i f_X(x_i) 
+$$ 
+where $f_X(x)$ is used to denote the probability mass function.  For a continuous random variable
+the expectation is:
+$$
+\mathbb{E}(X) = \int_{-\infty}^\infty x f_X(x) \textrm{d}x
+$$
+where $f_X(x)$ is the probability density.  If the expectation of a function of a random variable $\mathbb{E}[g(X)]$
+is required then this can be calculated using:
+$$
+\mathbb{E}[g(X)] = \sum_{x_i=0}^\infty g(x_i) f_X(x_i)
+$$
+in the discrete case and using:
+$$
+\mathbb{E}[g(X)] = \int_{-\infty}^\infty g(x) f_X(x) \textrm{d}x
+$$
+in the continuous case.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+The discrete random variable, $X$, has the values: $X \in \{ 0,1,2,3\}$,
+with a probability mass given by:
+$$
+f_X(x) = P(X=x) =k x (x-1) \quad , \quad x=0,1,2,3 \quad .
+$$
+where $k$ is a constant.  Find the value of $k$ and then find the expectation, $\mathbb{E}(X)$, and variance, $\textrm{var}(X)$, of this
+random variable.
+</QUESTION>
+      <SOLUTION>
+To work out $k$ we can use the fact that the distribution must be normalised.  In other words, we use the fact that:
+$$
+\sum_{i=0}^\infty f_X(x) = 1
+$$
+In this case this implies:
+$$
+\sum_{i=0}^3 f_X(x) = 1
+$$
+Using the definition of $f_X(x)$ in the question this implies:
+$$
+ 0 + 0 + 2 k + 6 k = 1 \qquad \rightarrow \qquad k =\frac{1}{8}
+$$
+The expectation of a discrete random variable is given by:
+$$
+\mathbb{E}(X) = \sum_{i=0}^\infty x f_X(x) 
+$$
+In this case we have four terms in this sum:
+$$
+\mathbb{E}(X) = 0 \times 0 + 1 \times 0 + 2 \times \frac{1}{4} + 3 \times \frac{3}{4} = \frac{11}{4}  
+$$
+The variance is given by:
+$$
+\textrm{var}(X) = \mathbb{E}(X^2) - [\mathbb{E}(X)]^2 \qquad \textrm{where} \qquad \mathbb{E}(X^2) = \sum_{i=0}^\infty x^2 f_X(x) 
+$$
+In this case $\mathbb{E}(X^2)$ is given by :
+$$
+\mathbb{E}(X^2) = 4 \times \frac{1}{4} + 9 \times \frac{3}{4} = \frac{31}{4}
+$$
+The variance is thus:
+$$
+\textrm{var}(X) = \frac{31}{4} - \left( \frac{11}{4} \right)^2 = \frac{3}{16}
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Suppose that the value/price of an asset (for example a share in 
+a company)  changes randomly over time. In the geometric Brownian motion model,
+its value, $S$, at a time, $t$, is given by  
+$$
+S(t)=S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t +\sigma X  \sqrt{t} \right)
+\qquad ,
+$$
+where $\mu$ is the drift rate, $\sigma$, the volatility, and where
+ $X$ is a random variable, with the standard distribution, $N(0,1)$. 
+ Clearly, $S_{0}$, is the initial ($t=0$) value of the asset.
+Show that the expected value of the asset, after a time $t$, is given by:
+$$
+\mathbb{E}[S(t)] = \frac{ S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t \right) }{\sqrt{2 \pi}}
+\int_{-\infty}^\infty \exp\left( \sigma x \sqrt{t} - \frac{x^2}{2} \right) \textrm{d}x
+$$
+Then use the fact that $\sigma x \sqrt{t} - \frac{x^2}{2} = -\frac{1}{2}(x-\sigma\sqrt{t})^2 + \frac{1}{2}\sigma^2 t$,
+the substitution $y = x - \sigma \sqrt{t}$ and the fact that $\int_{-\infty}^\infty e^{-y^2/2} \textrm{d}y = \sqrt{2\pi}$
+to show that the value of the above integral is nothing more than:
+$$
+\mathbb{E}[S(t)] = S_0 \exp(\mu t)
+$$
+</QUESTION>
+      <SOLUTION>
+The definition of the expectation for a continuous random variable : $\mathbb{E}[S(t)] = \int_{-\infty}^\infty s(t) P\left\{ S(t) = s \right\} \textrm{d}s(t)$ 
+<br/><br/>
+Now from the question:
+$$
+ P\{ S(t)=s \} = S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t +\sigma X  \sqrt{t}
+\right) = S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t \right)\exp\left( \sigma X
+\sqrt{t} \right)
+$$
+We are calculating $\mathbb{E}[S(t)]$ at fixed $t$ hence the first exponential in the above is fixed. 
+This is important as we only need to keep the terms that depend on the random variable, $X$, inside the integral for the expectation. 
+When we take this integral we are going to integrate over the set of values that this random variable can take. 
+Now the question tells us that
+$$
+ P\{X = x \} = \frac{1}{\sqrt{2\pi}} e^{-x^2/2} \qquad \qquad \textrm{Normal distribution} 
+$$
+Given all of the above we can rewrite our expectation value as:
+$$
+\mathbb{E}[S(t)] = \int_{-\infty}^{\infty} s(t,x) P\{ X=x \} \textrm{d}x =
+\frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} s(t,x) e^{-x^2/2} \textrm{d}x  
+$$
+We can now insert $s(t,x)$ into the integral and manipulate this expression somewhat
+$$
+\begin{aligned}
+ \mathbb{E}[S(t)] &amp; = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} S_0 \exp
+\left( (\mu-\frac{1}{2}\sigma^2)t +\sigma x  \sqrt{t} \right) e^{-x^2/2}
+\textrm{d}x \\
+ &amp; = \frac{ S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t \right) }{\sqrt{2 \pi}}
+\int_{-\infty}^\infty \exp\left( \sigma x \sqrt{t} - \frac{x^2}{2} \right)
+\textrm{d}x 
+\end{aligned}
+$$
+For the next step of the solution we have to note that : $\sigma x \sqrt{t} - \frac{x^2}{2} = - \frac{1}{2}(x - \sigma \sqrt{t})^2 + \frac{1}{2} \sigma^2 t$.
+We can get this result by competing the square, which is an algebraic trick that it is useful to know about.  In this question  we were given this information
+in the question. 
+$$
+\begin{aligned}
+ \mathbb{E}[S(t)] &amp; = \frac{ S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t \right)
+}{\sqrt{2 \pi}}
+\int_{-\infty}^\infty \exp\left(   \frac{1}{2}(x - \sigma
+\sqrt{t})^2 + \frac{1}{2} \sigma^2 t \right) \textrm{d}x \\
+&amp; = \frac{ S_0 \exp \left( t(\mu-\frac{1}{2}\sigma^2) + \frac{1}{2} \sigma^2 t
+\right)}{\sqrt{2 \pi}} \int_{-\infty}^\infty \exp\left(   \frac{1}{2}(x - \sigma
+\sqrt{t})^2 \right) \textrm{d}x \\
+&amp; = \frac{S_0 \exp\left( \mu t \right) }{\sqrt{2\pi}} \int_{-\infty}^\infty
+\exp\left(   \frac{1}{2}(x - \sigma
+\sqrt{t})^2 \right) \textrm{d}x
+\end{aligned}
+$$
+Now we finish the integration by making the substitution $y = x - \sigma \sqrt{t} \quad \rightarrow \quad \frac{\textrm{d}y}{\textrm{d}x } = 1$ 
+Remember when we do an integration by substitution we have to change the limits, the integrand and the infinitessimal (the $\textrm{d}x$ part).
+$$
+\mathbb{E}[S(t)] = \frac{S_0 \exp\left( \mu t \right) }{\sqrt{2\pi}}
+\int_{-\infty}^\infty e^{-y^2/2} \textrm{d}y = \frac{S_0 \exp\left( \mu t
+\right) }{\sqrt{2\pi}} \sqrt{2\pi} = S_0 \exp\left( \mu t \right)
+$$
+It is worth noting something about this problem and its final solution.  This problem is typical of the sort of thing that appears in 
+financial maths.  As discussed in the question this particular random variable appears in the context of modelling the value/price of an asset.  Now the value of an asset changes for two reasons (1) the value increases geometrically because of compound interest and (2) the value 
+changes randomly because of the various random factors that affect the assets price.  The model has therefore been constructed so that <b> on average </b> it 
+increases geometrically.   There might, however, be some random fluctuations around this average.  As such many of the terms that appear in the original random variable:
+$$
+S(t)=S_0 \exp \left( (\mu-\frac{1}{2}\sigma^2)t +\sigma X  \sqrt{t} \right)
+$$
+(particularly the $-\frac{1}{2}\sigma^2 t$ that appears in the exponential) are there so that the expectation comes out as:
+$$
+\mathbb{E}[S(t)] = S_0 \exp\left( \mu t \right)
+$$
+I mention all this stuff because it is interesting and because we often don't get students to think about how we might (when modelling)
+set up ``problems" so that the solution comes out in a particular way. 
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+</PAGE>

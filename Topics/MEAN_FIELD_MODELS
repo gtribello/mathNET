@@ -11,6 +11,6 @@ LEARNINGOUTCOMES:
 - You should be able to perform derivations with more refined mean field theories in which the interaction between a subset of the spins are modelled explicitly.
 
 END:
-MEAN_FIELD_MODELS EXERCISE HTML AMA4004 mean-field-problems G.~Tribello Problems in which the mean field approximation is used to examine Ising models in one and two dimensions.
+MEAN_FIELD_MODELS EXERCISE XML AMA4004 mean-field-problems G.~Tribello Problems in which the mean field approximation is used to examine Ising models in one and two dimensions.
 MEAN_FIELD_MODELS EXERCISE GEOGEBRA AMA4004 mean-field-ex-one G.~Tribello Understanding the behavior of the magnetization for the mean-field, 1D Ising model
 MEAN_FIELD_MODELS EXERCISE GEOGEBRA AMA4004 mean-field-ex-two G.~Tribello Understanding the free energy landscape for the mean-field, 1D Ising model

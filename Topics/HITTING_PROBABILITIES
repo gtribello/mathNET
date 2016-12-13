@@ -27,5 +27,5 @@ LEARNINGOUTCOMES:
 END:
 
 
-HITTING_PROBABILITIES EXERCISE HTML SOR3012 hitting-time-problems G.~Tribello Problems on setting up Markov chains with transient and absorbing states and on calculating hitting times and hitting probabilities.
+HITTING_PROBABILITIES EXERCISE XML SOR3012 hitting-time-problems G.~Tribello Problems on setting up Markov chains with transient and absorbing states and on calculating hitting times and hitting probabilities.
 HITTING_PROBABILITIES INTRO XML SOR3012 hitting-times-video G.~Tribello A video explaining how the hitting times and hitting probabilities are calculated

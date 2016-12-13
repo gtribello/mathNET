@@ -16,4 +16,4 @@ LEARNINGOUTCOMES:
 
 END:
 GIBBS_PHASE_RULE INTRO XML AMA4004 gibbs-phase-rule-video G.~Tribello An introduction to Gibb's phase rule.
-GIBBS_PHASE_RULE EXERCISE HTML AMA4004 gibbs-phase-rule-problems G.~Tribello Some problems involving the manipulation of Gibbs phase rule.
+GIBBS_PHASE_RULE EXERCISE XML AMA4004 gibbs-phase-rule-problems G.~Tribello Some problems involving the manipulation of Gibbs phase rule.

@@ -1,0 +1,322 @@
+<PAGE>
+  <TITLE>Applying the laws of thermodynamics 
+</TITLE>
+  <DESCRIPTION>
+In the questions that follow we are going to use the laws of thermodynamics to calculate the amount the entropy changes
+by in an ideal gas.   The focus here is on solving the partial differential equations.  We will leave deriving the 
+equation of state for the ideal gas, $PV=Nk_B T$, and deriving an expression for the internal energy of an ideal gas,
+$E=\frac{3}{2} Nk_BT$ to later in the course once we are more familiar with the statistical concepts that are required to derive and understand these results.
+For now we will simply note that, in the two expressions that have been given in this paragraph and in the questions that 
+follow, $k_B$ is Boltzmann's constant, $T$ is the absolute temperature, $V$ is the volume and $P$ is the pressure.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+A sample of (ideal) gas is compressed from the volume $2V$ to $V$ at constant temperature.  If the gas is isolated from the rest of the universe what is the change in the internal energy?
+</QUESTION>
+      <SOLUTION>
+We know from the description above that:
+$$
+E = \frac{3}{2} Nk_B T \qquad \rightarrow \qquad \left( \frac{\partial E}{\partial V} \right)_T = 0 
+$$
+Hence there is no change in internal energy.  The value of the internal energy does not depend on the volume (for an ideal gas)
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+During the compression the gas experiences an external pressure from the surroundings of $P$.  Write an expression for the work done, $\textrm{d}w$, during during an infinititisimal change in volume $\textrm{d}V$?  Show how you arrived at this expression.
+</QUESTION>
+      <SOLUTION>
+The work done on the gas is given by:
+$$
+\textrm{d}w = -P_{\textrm{ext}}\textrm{d}V 
+$$
+There are long discussions on the derivation of this expression in the videos.
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Rearrange the equation of state for an ideal gas and obtain an expression that allows one to calculate the pressure, $P$, from the temperature $T$ and 
+the volume $V$.  Use the expression that you get for $P$ to calculate the work done on the gas during the compression from $2V$ to $V$. 
+</QUESTION>
+      <SOLUTION>
+Rearranging the equation of state gives us:
+$$
+P = \frac{N k_B T}{V}
+$$
+To calculate the work done during the compression we integrate the infinitessimal that was discussed in the previous part between $2V$ and $V$.
+We use the above expression in place of $P$ as shown below, however.
+$$
+\Delta w = -\int_{2V}^V P\textrm{d}V' = -\int_{2V}^V \frac{N k_B T}{V'} \textrm{d}V' = -\left[ N k_B T \ln \left( V' \right) \right]_{2V}^V = - N k_B T \ln \left( \frac{V}{2V} \right) = N k_B T \ln ( 2)
+$$
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Use what you know about the change in energy that occurs as an ideal gas is compressed from a volume of $2V$ to a volume of $V$ to determine how much heat 
+must be emitted/absorbed during the compression of the gas?
+</QUESTION>
+      <SOLUTION>
+The first law of thermodynamics tells us that:
+$$
+\Delta E = \Delta q + \Delta w
+$$
+We know, however, that when the ideal gas is compressed $\Delta E = 0$.  By remembering that $\Delta w = N k_B T \ln ( 2)$ of work
+has been done on the gas during the compression we thus realise that, in order to ensure that the total energy of the gas does not change,
+the following amount of heat must be output:
+$$
+\Delta q = - N k_B T \ln ( 2)
+$$
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Calculate how much the entropy of an ideal gas changes by during a compression from $2V$ to $V$.
+</QUESTION>
+      <SOLUTION>
+The second law of thermodynamics tells us that if the system is at equilibrium at all points during the transition:
+$$
+\Delta S = \frac{\Delta q}{T} 
+$$
+The change in entropy in this case is thus equal to:
+$$
+\Delta S = \frac{- N k_B T \ln ( 2)}{T} = - N k_B \ln ( 2)
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Starting from the following statements of the first and second laws of equilibrium thermodynamics $\textrm{d}E = \textrm{d} q + \textrm{d} w$ and $\textrm{d}S = \frac{\textrm{d}q}{T}$ and assuming only $PV$-work is done on the system show that:
+$$
+\textrm{d}S = \frac{1}{T} \textrm{d}E + \frac{P}{T} \textrm{d}V
+$$
+</QUESTION>
+      <SOLUTION>
+Consider a transition involving an infinitesimal change in volume.  The work done during such a transition will be:
+$$
+\textrm{d}w_{rev} = -P\textrm{d}V
+$$
+Notice, however, that for the above equation to hold the system must be in equilibrium with its environment at all points during the transition.  
+That is to say the internal pressure in the system must be equal to the external pressure upon it.  We write $\textrm{d}w_{rev}$ rather than simply
+$\textrm{d}w$ to make it clear that we have taken this particular path in deriving this expression.
+We can calculate the heat output/input during this transition using the second law of thermodynamics:
+$$
+\textrm{d}q_{rev} = T\textrm{d}S
+$$
+Again though we must assume, when using this result, that the system is in equilibrium with its environment at all points during the transition
+That is to way the temperature in the system must be equal to the external temperature.  This is why we again have used the symbol $\textrm{d}q_{rev}$ 
+in the above expression.
+Inserting these two results into the first law of thermodynamics gives:
+$$
+\textrm{d}E_{rev} = \textrm{d}q_{rev} + \textrm{d}w_{rev} = T\textrm{d}S - P\textrm{d}V
+$$
+However, the internal energy is an exact differential the change in the internal energy only depends on the initial and final states.  
+It does not depend on the path taken.  When using this result we are thus not required to assume that the system is at equilibrium at 
+all points during the transition. We can thus write $\textrm{d}E_{rev}=\textrm{d}E$.  We thus have:
+$$
+\textrm{d}E = T\textrm{d}S - P\textrm{d}V
+$$
+which can be rearranged to give the answer required for this question.
+<br/><br/>
+<b> The fact that that the heat output and the work done depend on the path the transition takes and that the internal energy does not depend on the path taken
+is a subtle and important point.  You must mention it in your solutions. </b>
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+$\textrm{d}S$ is an exact differential.  Use this information to write an expression for $\textrm{d}S$ in terms of $\left( \frac{\partial S}{\partial E} \right)_V$, $\left( \frac{\partial S}{\partial V} \right)_E$, $\textrm{d}E$ and $\textrm{d}V$ and hence show that for an ideal gas:
+$$
+\left( \frac{\partial S}{\partial E} \right)_V = \frac{3Nk_B}{2E} \qquad \textrm{and} \qquad \left( \frac{\partial S}{\partial V} \right)_E = \frac{Nk_B}{V}
+$$
+You will need the expression for the internal energy of an ideal monoatomic gas $E= \frac{3}{2} N k_B T$ and the mechanical equation of state for an ideal gas $PV = Nk_B T$.
+</QUESTION>
+      <SOLUTION>
+The fact that $S$ is an exact differential ensures that we can write:
+$$
+\textrm{d}S = \left( \frac{\partial S}{\partial E} \right)_V \textrm{d}E + \left( \frac{\partial S}{\partial V} \right)_E \textrm{d}V
+$$
+If we equate the coefficients of $\textrm{d}E$ and $\textrm{d}V$ in this expression and the expression that we derived in the first part we find:
+$$
+\begin{aligned}
+\left( \frac{\partial S}{\partial E} \right)_V &amp; = \frac{1}{T} \\
+\left( \frac{\partial S}{\partial V} \right)_E &amp; = \frac{P}{T} 
+\end{aligned}
+$$
+The equation for the internal energy of an ideal gas that was given in the question can be rearranged to give $\frac{1}{T} = \frac{3 N k_B }{2E}$.  Furthermore, the 
+equation of state for the ideal gas can be rearranged to give $\frac{P}{T} = \frac{N k_B }{V}$.  When the factors of $\frac{1}{T}$ and $\frac{P}{T}$ in the right hand
+sides of the above expressions are replaced by the right hand sides of these expressions we get to the desired results. 
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Integrate the partial differential equations that you derived in the previous question and demonstrate that:
+$$
+S(E,V) = N k_B\ln(E^{\frac{3}{2}} V) + k
+$$
+for an ideal gas.
+</QUESTION>
+      <SOLUTION>
+The first result that was derived in the previous question tells us that:
+$$
+\left( \frac{\partial S}{\partial E} \right)_V = \frac{3 N k_B }{2E} \quad \rightarrow \quad S(E,V) = \frac{3N k_B}{2} \ln(E) + f(V)
+$$
+We arrive at the second result above by integrating along the $E$ axis (so holding V fixed).  Furthermore, in writing 
+this expression we introduce $f(V)$ as some as yet unknown function of $V$.
+<br/> <br/>
+The second result that was derived in the previous question tells us that:
+$$
+\left( \frac{\partial S}{\partial V} \right)_E = \frac{N k_B }{V} \quad \rightarrow \quad S(E,V) = N k_B \ln(V) + g(E)
+$$
+We arrive at the econd result above by integrating along the $V$ axis (so holding E fixed).  Much as in the previous part we 
+introduce $g(E)$ as some as yet unknown function of $E$.
+<br/> <br/>
+We now need to ensure that the two results we have obtained are consistent.  To guarantee this we must set $g(E)$ and $f(V)$
+as shown below:
+$$
+g(E) = \frac{3N k_B}{2} \ln(E) \qquad \textrm{and} \qquad f(V) = N k_B \ln(V)
+$$
+When these results are inserted into either of the two integrals we have defined we thus find that:
+$$
+S(E,V) = \frac{3N k_B}{2} \ln(E) + N k_B \ln(V) + k = N k_B\ln(E^{\frac{3}{2}} V) + k
+$$
+as required.
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+A quantity of water, initially at 10$^\circ$C, is brought into content with a heat reservoir at a temperature of 90$^\circ$C.  The constant volume 
+heat capacity, $C_v$ of the water is defined as $\textrm{d} q=C_v\textrm{d}T$.   If the waters volume is fixed (i.e. if no work is done on or by the system) 
+explain why the change in the internal energy is during an infinitesimal change in temperature is given by $\textrm{d}E = C_v \textrm{d}T$.
+Use this result, and the second law of (equilibrium) thermodynamics, $\textrm{d}S = \frac{\textrm{d}q}{T}$, to demonstrate that the change in entropy 
+during an infinitesimal change in the temperature of the water is given by:
+$$
+\textrm{d}S = \frac{C_v \textrm{d}T }{T}
+$$
+</QUESTION>
+      <SOLUTION>
+Recall the first law of thermodynamics tells us that:
+$$
+\textrm{d}E = \textrm{d} q + \textrm{d} w 
+$$
+In addition the question tells us that no work is done during the transition so $\textrm{d} w = 0$, $\textrm{d} E = \textrm{d} q$ and (using the information in the question) we thus have: 
+$$
+\textrm{d}E = \textrm{d} q = C_v \textrm{d}T 
+$$
+This result is important as the first law of thermodynamics tells us that the internal energy is an exact differential.  In other words, the change in internal energy 
+that occurs during a transition depends only on the initial and final states of the system - not on the path taken.  The result above suggests that the heat input/output 
+must always be the same as $\textrm{d} q=\textrm{d} E$.  It is critical to realise that the  manner in which we heat the water is irelevant.  We can thus substitute the equation
+that we just arrived at, $\textrm{d} q = C_v \textrm{d}T$, into the second law of (equilibrium) thermodynamics, $\textrm{d}S = \frac{\textrm{d}q}{T}$ and get the required 
+differential for the change in the entropy:
+$$
+\textrm{d}S = \frac{\textrm{d} q}{T} = \frac{ C_v \textrm{d}T}{T}
+$$
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Determine the change in the entropy of the water when it is heated from 10$^\circ$C to 90$^\circ$C.
+</QUESTION>
+      <SOLUTION>
+To calculate the change in entropy required we must integrate the result we arrived at in the previous question as shown below:
+$$
+\Delta S_{water} = \int_{10}^{90} \frac{C_v \textrm{d}T}{T} = \left[ C_v \ln (T) \right]_{10}^{90} = 2C_v \ln(3)
+$$
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Now determine how much heat must flow from the reservoir to the water in order to heat the water from 10$^\circ$C to 90$^\circ$C
+and the change in the entropy of the reservoir that occurs as a consequence of this outflow of heat.  
+</QUESTION>
+      <SOLUTION>
+We determine the ammount of heat that must flow by integrating $\textrm{d} q = C_v \textrm{d} T$ as shown below:
+$$
+\Delta q = -\int_{10}^{90} C_v \textrm{d}T  = -C_v \int_{10}^{90} \textrm{d}T = - C_v ( 90 - 10 ) = -80C_v
+$$
+There is a minus sign here because we are considering the heat that is lost from the reservoir and given to the water.
+<br/><br/>
+To determine the change in entropy we use the fact that we know from the first law of (equilibrium) thermodynatims that $\Delta S = \frac{\Delta q}{T}$.  We 
+can thus use the value that we just obtained for $\Delta q$ to calculate the value of $\Delta S$ as shown below:
+$$
+\Delta S_{reservoir} = \frac{\Delta q_{rev}}{T} = -\frac{80C_v}{90} = -\frac{8}{9}C_v
+$$
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+What are the changes of entropy for the water and the reservoirs if two reservoirs are used to heat the system rather than one?  The first of 
+these reservoirs is at 50$^\circ$C and so it heats the system from 10$^\circ$C to 50$^\circ$C, while the second is at 90$^\circ$C and it heats 
+the system from 50$^\circ$C to 90$^\circ$C.
+</QUESTION>
+      <SOLUTION>
+To tackle this part of the question we have to recognise that the answers to the questions above tell us that if we change the temperature 
+from $T_i$ to $T_f$ the change in the entropy of the water will be:
+$$
+\Delta S_{water} = C_v \ln\left( \frac{T_f}{T_i} \right)
+$$
+while the change in the entropy of the reservoir will be:
+$$
+\Delta S_{reservoir} = \frac{C_v}{T_f}(T_f - T_i)
+$$
+Here $T_{f}$ is the temperature of the reservoir and $T_i$ is the temperature of the system when it is first placed in contact with the reservoir.
+With this in mind we can calculate the change in entropy for the various parts of thermodynamic transition described in the question:
+$$
+\begin{aligned}
+\textrm{Change in entropy of water when in contact with 50$^{\circ}$ reservoir} \qquad &amp;  \Delta S_{wc} = C_v  \ln(5) \\
+\textrm{Change in entropy of water when in contact with 90$^{\circ}$ reservoir} \qquad&amp; \Delta S_{wh} = C_v  \ln\left( \frac{9}{5} \right) \\
+\textrm{Change in entropy of 50$^{\circ}$ reservoir } \qquad &amp; \Delta S_{rc} = -\frac{4}{5} C_v  \\
+\textrm{Change in entropy of 90$^{\circ}$ reservoir } \qquad &amp; \Delta S_{rh} = -\frac{4}{9} C_v  
+\end{aligned}
+$$
+When these are added together we find that the change in the entropy for the water is given by:
+$$
+\Delta S_{water} = \Delta S_{wc} + \Delta S_{wh} = C_v \ln(5) + C_V \ln\left( \frac{9}{5} \right) = C_v \ln(9) = 2C_v\ln(3)
+$$
+This is the same as it was in the previous part, which should not be surprising - entropy is a state function.  The fact that we used 
+two reservoirs is irrelevant the entropy change in the water (a closed system) depends only on the initial and final states.
+<br/><br/>
+The total change in the entropy of the reservoirs is:
+$$
+\Delta S_{reservoir} = \Delta S_{rc} + \Delta S_{rh} = -\frac{4}{5} C_v -\frac{4}{9} C_v = - \frac{56}{45} C_v
+$$
+This is larger than it was in the previous part.  Noice, however, that we have changed this part of the the system (we now have two reservoirs).
+The fact that we have a different entropy change is a consequence of this change.
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Now suppose that an infinite number of reservoirs are used.  What is the entropy change for the entire system (water+all reservoirs) 
+when the system is heated from 10$^\circ$C to 90$^\circ$C?
+</QUESTION>
+      <SOLUTION>
+Lets do the easy part of this question first.  We know entropy is a state function so we know that, even with this infinite number of reservoirs, 
+the entropy change for the water (a closed system) is going to be given by:
+$$
+\Delta S_{water} = C_v \ln\left( \frac{T_f}{T_i} \right)
+$$
+what will be different is the entropy change for the set of reservoirs.  Using our now familiar equations we can write the total entropy change for all the reservoirs as:
+$$
+\Delta S_{reservoir} = \sum_{i=1}^N \Delta S_{ri} =  -C_v \sum_{i=1}^N \frac{ T_i - T_{i-1} }{ T_i } =  -C_v \sum_{i=1}^N \frac{ \frac{T_N - T_0}{N} }{ T_0 + \frac{i(T_N-T_0)}{N} } = -C_v \sum_{i=1}^N \frac{\delta T}{ T_0 + i(\delta T)}
+$$
+here $T_0$ is the initial temperature of the water and $T_N$ is the final temperature of the water.  Our reservoirs are at equally spaced temperatures 
+between $T_N$ and $T_0$ so if there are $N$ of them in total the difference in temperature between the temperature of the $i$th and $(i+1)$th 
+reservoir is $\delta T =  \frac{T_N - T_0}{N}$.
+<br/><br/>
+In the limit of infinitely many reservoirs the sum from the above equation becomes an integral and we thus have:
+$$
+\Delta S_{reservoir} = -C_v \int_{T_0}^{T_N} \frac{\textrm{d}T}{T} = -[C_v \ln\left( T \right) ]_{T_0}^{T_N} = -C_v \ln\left( \frac{T_N}{T_0} \right) 
+$$
+In other words the entropy change for the reservoirs is equal to minus the entropy change for the water.  This makes a lot of sense.  When we have an infinite number 
+of reservoirs the water and the reservoirs are in thermodynamic equilibrium at all points during the transition as the internal temperature of the water is the same
+as the external temperature of the reservoir.  
+<br/><br/>
+Notice that the maths here works even if $C_v$ is not temperature independent.  If $C_v$ did depend on temperature the entropy change for the water would be an 
+integral involving the function $C_v(T)$ and the entropy change for the reservoirs would just be minus that integral.
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+</PAGE>

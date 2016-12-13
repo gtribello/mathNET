@@ -1,0 +1,414 @@
+<PAGE>
+  <TITLE>Matrix Multiplication
+</TITLE>
+  <DESCRIPTION>
+Matrices are enormously important in advanced mathematics and these mathematical
+objects appear in a range of different fields.  It is thus important that you understand
+how to add and multiply matrices.  The exercises on this page should consolidate your
+ability to multiply matrices.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Calculate the following product of matrices
+$$
+ \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) 
+\left(
+ \begin{matrix}
+  e &amp; f \\
+  g &amp; h
+ \end{matrix}
+\right)
+$$
+</QUESTION>
+      <SOLUTION>
+The product of the two matrices is given by:
+$$
+ \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) 
+\left(
+ \begin{matrix}
+  e &amp; f \\
+  g &amp; h
+ \end{matrix}
+\right) = \left(
+\begin{matrix}
+ ae + bg &amp; af + bh \\
+ ce + dg &amp; cf + dh
+\end{matrix}
+\right)
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Only one of the following matrix multiplications can be performed.  Can you explain which 
+one it is:
+$$
+ \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) 
+\left(
+ \begin{matrix}
+  e  \\
+  f 
+ \end{matrix}
+\right)
+\qquad \qquad \qquad 
+\left(
+ \begin{matrix}
+  e  \\
+  f 
+ \end{matrix}
+\right) 
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right)
+$$
+</QUESTION>
+      <SOLUTION>
+When multiplying rectangular matrices the number of columns in the first matrix must be equal
+to the number of rows in the second matrix.  Consequently the following matrix multiplication is possible:
+$$
+ \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) 
+\left(
+ \begin{matrix}
+  e  \\
+  f 
+ \end{matrix}
+\right) = \left(
+\begin{matrix}
+ ae + bf \\
+ ce + df 
+\end{matrix}
+\right)
+$$
+But the following matrix multiplication cannot be performed:
+$$
+ \left(
+ \begin{matrix}
+  e  \\
+  f 
+ \end{matrix}
+\right) 
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right)
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <EXERCISE>
+    <TITLE>Exercise 1
+</TITLE>
+    <PROBLEMS>Write down which of the following matrix multiplication problems it is possible to do.
+If the multiplication problem is possible do the matrix multiplication.
+<table align="center">
+<col width="250"/>
+<col width="250"/>
+<col width="250"/>
+<col width="250"/>
+<tr> <td> 
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+-1 &amp; 2 &amp; 1 \\
+8 &amp; -3 &amp; 5 \\
+11 &amp; 2 &amp; 6
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+3 &amp; 2 &amp; -1 \\
+5 &amp; 3 &amp; 2 \\
+6 &amp; 1 &amp; 4
+\end{matrix}
+\right)
+$$
+</td><td> 
+$$
+\left(
+\begin{matrix}
+-8 &amp; 5 &amp; 2 &amp; -3 \\
+1 &amp; -1 &amp; 6 &amp; 7
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+3 &amp; 5 \\
+2 &amp; 2 \\
+6 &amp; 1 \\
+8 &amp; -4
+\end{matrix}
+\right)
+$$
+</td><td> 
+$$
+\left(
+\begin{matrix}
+3 &amp; 5 \\
+2 &amp; 2 \\
+6 &amp; 1 \\
+8 &amp; -4
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+-8 &amp; 5 &amp; 2 &amp; -3 \\
+1 &amp; -1 &amp; 6 &amp; 7
+\end{matrix}
+\right)
+$$
+</td></tr><tr><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 3  \\
+ -4
+\end{matrix}
+\right)
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 6 \\
+ 3
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 6 \\
+ 3
+\end{matrix}
+\right)
+$$
+</td></tr>
+</table>
+</PROBLEMS>
+  </EXERCISE>
+  <EXERCISE>
+    <TITLE>Adding the transpose
+</TITLE>
+    <PROBLEMS>If a matrix has a small superscript T above it that 
+means I would like you to transpose the matrix <b>before</b>  doing the matrix multiplication.  If
+by contrast you have a matrix product such as $(\mathbf{AB})^T$ that means I would like you to transpose 
+the matrix you get from the mutltiplication.
+<table align="center">
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<tr><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)^T
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)^T
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)^T
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)^T
+$$
+</td><td> 
+$$
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)^T
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)^T
+$$
+</td><td>
+$$
+ \left[
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right) \right]^T
+$$
+</td></tr>
+</table>
+Given the results you obtained in the above exercises, which of the following equalities is correct for any pair of matrices $\mathbf{A}$ and $\mathbf{B}$.
+$$
+ \mathbf{A}^T \mathbf{B} = \mathbf{A}\mathbf{B} \qquad (\mathbf{A}\mathbf{B})^T = \mathbf{A}^T\mathbf{B}^T \qquad  (\mathbf{A}\mathbf{B})^T = \mathbf{B}^T \mathbf{A}^T \qquad  (\mathbf{A}\mathbf{B})^T 
+= \mathbf{B} \mathbf{A}^T
+$$
+</PROBLEMS>
+  </EXERCISE>
+  <EXERCISE>
+    <TITLE>Taking products of three matrices
+</TITLE>
+    <PROBLEMS>Calculate the following matrix products
+<table align="center">
+<col width="400"/>
+<col width="400"/>
+<tr><td>
+$$
+\left(
+\begin{matrix}
+ 3 &amp; 2 &amp; -6 &amp; 7
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 1 &amp; 3 \\
+ 5 &amp; 4 \\
+ 8 &amp; 7 \\
+ -3 &amp; -2 \\
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ -1 &amp; 2 &amp; -3 \\
+ 3 &amp; 4 &amp; -2
+\end{matrix}
+\right)
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 2 &amp; 6 \\
+ 8 &amp; 1 &amp; 9
+ \end{matrix}
+\right) 
+\left(
+\begin{matrix}
+ 5 &amp; 8 &amp; 4
+\end{matrix}
+\right)
+\left(
+\begin{matrix}
+ 2 &amp; 2 &amp; 8 &amp; 4 &amp; -3
+\end{matrix}
+\right)
+$$
+</td></tr>
+ </table>
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

@@ -1,0 +1,200 @@
+<PAGE>
+  <TITLE>Mean field problems
+</TITLE>
+  <DESCRIPTION>
+The problems below demonstrate how we can calculate the partition function for the Ising model by 
+exploiting the mean field approximation.  The essence of this approach was covered in the videos
+the problems below show how we can vary the number of interactions that we include explicitly and
+thus progressively refine our estimate when using this technique.  
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+The mean field Hamiltonian for the 1D-closed Ising model that was introduced in the video had one spin incorporated explicitly.  
+The interaction between this spin and its neighbours was then incorporated using the mean field approximation.  Write out a mean field 
+Hamiltonian that models the interaction between a pair of spins explicitly and then then models the interaction with the remaining spins 
+using the mean field approximation
+</QUESTION>
+      <SOLUTION>
+The Hamiltonian for our pair of spins in a mean field is given by:
+\[
+E = -Js_1s_2 - (H + J\langle s\rangle)(s_1 +s_2) 
+\]
+The $s_1$ and $s_2$ in this expression are the values of the two spin variables that we are incorporating explicitly.  The 
+interaction between these two spins is explicitly modelled in the first term.  The factor of $J\langle s \rangle (s_1 + s_2)$
+ensures that the remaining spin-spin interactions are incoroporated using the mean field approximation.
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Calculate the partition function for the Hamiltonian that you introduced in the previous part and derive an expression that can be solved self-consistently 
+to determine the average spin on a lattice site.
+</QUESTION>
+      <SOLUTION>
+The partition function for the Hamiltonian introduced in the previous part is given by:
+\[
+\begin{aligned}
+Z_c^{mfa} &amp; = \sum_{s_1=0}^1 \sum_{s_2=0}^1 \dots \sum_{s_{N-1}=0}^1 \sum_{s_N=0}^1 \exp\left( \beta \sum_{i=1}^{N/2} Jz(s_{2i-1}) z(s_{2i}) + (H+J\langle s \rangle)[z(s_{2i-1})+z(s_{2i})] \right) \\
+&amp; = \sum_{s_1=0}^1 \sum_{s_2=0}^1 \dots \sum_{s_{N-1}=0}^1 \sum_{s_N=0}^1 \prod_{i=1}^{N/2} e^{\beta Jz(s_{2i-1})z(s_{2i})}e^{\beta(H+J\langle s \rangle)[z(s_{2i-1})+z(s_{2i})]} \\
+&amp; = \sum_{s_1=0}^1 \sum_{s_2=0}^1e^{\beta Jz(s_{1})z(s_{2})}e^{\beta(H+J\langle s \rangle)[z(s_{1})+z(s_{2})]} \dots  \sum_{s_{N-1}=0}^1 \sum_{s_N=0}^1 e^{\beta Jz(s_{N-1})z(s_{N})}e^{\beta(H+J\langle s \rangle)[z(s_{N-1})+z(s_{N})]} \\
+&amp; = \left(e^{\beta J}e^{2\beta(H+J\langle s \rangle)} + 2e^{-\beta J} + e^{\beta J}e^{-2\beta(H+J\langle s \rangle)} \right) \dots \left(e^{\beta J}e^{2\beta(H+J\langle s \rangle)} + 2e^{-\beta J} + e^{\beta J}e^{-2\beta(H+J\langle s \rangle)} \right) \\
+&amp; = \left(e^{\beta J}e^{2\beta(H+J\langle s \rangle)} + 2e^{-\beta J} + e^{\beta J}e^{-2\beta(H+J\langle s \rangle)} \right)^{N/2} \\
+&amp; = \left(2e^{\beta J}\cosh(2\beta(H+J\langle s \rangle)) + 2e^{-\beta J} \right)^{N/2}
+\end{aligned}
+\] 
+To calculate the average spin, $\langle s \rangle$, in a system with $N$ sites we use the fact that this quantity is equal to the average magnetisation, $\langle M \rangle$, 
+as shown below:
+$$
+\langle s \rangle = \frac{\langle M \rangle}{N}
+$$
+We can calculate the average magnetization by taking suitable derivatves of the logarithm of the partition function as shown below:
+\[
+\begin{aligned}
+\langle s \rangle &amp; = \frac{1}{N \beta} \left( \frac{\partial \ln(Z_c)}{\partial H}\right)_T \\
+&amp; = \frac{1}{N \beta} \left\{ \frac{\partial }{\partial H} \frac{N}{2} \ln\left( 2e^{\beta J}\cosh(2\beta[H+J\langle s \rangle)] + 2e^{-\beta J} \right) \right\}_T \\
+&amp; = \frac{N}{2N \beta} \left[ \frac{4\beta e^{\beta J} \sinh[2\beta(H+J\langle s\rangle)] }{ 2e^{\beta J}\cosh[2\beta(H+J\langle s \rangle)] + 2e^{-\beta J}} \right] \\
+&amp; = \frac{\sinh[2\beta(H+J\langle s\rangle)] }{ \cosh[2\beta(H+J\langle s \rangle)] + e^{-2\beta J}}
+\end{aligned}
+\]
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Show that the inverse temperature, $\beta$, at which the order-disorder transition takes place for a closed-1D Ising model 
+in which the interaction between pairs of spins is modelled explicitly and the interactions with the remaining sites are incorporated using
+the mean field approximation is given by: 
+\[
+\beta = \frac{1+e^{-2\beta J}}{2\beta J}
+\]
+You should do this calculation in the absence of a field $H=0$.
+</QUESTION>
+      <SOLUTION>
+For the reasons discussed in the video we find the transition temperature by finding the temperature for which:
+$$
+\frac{1}{\beta N} \frac{\partial }{\partial \langle s \rangle } \left( \frac{\partial \ln(Z_c)}{\partial H}\right)_T = 1
+$$
+When this is done for the partition function introduced in this question we find that:
+\[
+\begin{aligned}
+\left\{ \frac{\partial}{\partial \langle s \rangle } \frac{\sinh[2\beta J\langle s\rangle] }{ \cosh[2\beta J\langle s \rangle] + e^{-2\beta J}} \right\}_{\langle s\rangle =0} &amp; = 1 \\
+\left\{ \frac{2\beta J \cosh[2\beta J\langle s\rangle] }{\cosh[2\beta J\langle s \rangle] + e^{-2\beta J}} - \frac{2\beta J\sinh^2[2\beta J\langle s\rangle] }{(\cosh[2\beta J\langle s \rangle] + e^{-2\beta J})^2} \right\}_{\langle s \rangle = 0 } &amp; = 1 \\
+\frac{2\beta J }{1+e^{-2\beta J}} &amp; = 1 \qquad \rightarrow \qquad \beta = \frac{1+e^{-2\beta J}}{2\beta J}
+\end{aligned}
+\]
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+In the 2D-Ising model the spins are arranged on a square lattice - you can think of it like a chess board with one spin on each of the black and white squares.  
+Each spin can take on either the familiar spin-up or spin-down configuration and each spin interacts with its four nearest neighbours.  The interaction between 
+any pair of spins is given by $-Js_1s_2$, where $s_1$ and $s_2$ are the spin coordinates of the two interacting sites and can take values of $-1$ and $+1$.  
+When people draw diagrams of the Ising model they generally draw a flat lattice.  Really, however, for each spin to have four neighbours system the system must 
+be in a closed geometry so you should think of the spins as arranged on a taurus (donut).  &lt;b&gt; Write down a mean field Hamiltonian for the 2D Ising model, which
+ supposes that we model one spin explicitly and the interaction between this spin and its neighbors using the mean field approximation. &lt;/b&gt;
+</QUESTION>
+      <SOLUTION>
+\[
+E^{mfa} = -\sum_{i=1}^N (H + 4J\langle S \rangle)s_i
+\]
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Now calculate the canonicial partition function for this mean field Hamiltonian for the 2D Ising model.  Use the result you obtain to calculate the average spin
+per site and the temperature at which the order-disorder transition takes place.
+</QUESTION>
+      <SOLUTION>
+The partition function is given by:
+\[
+Z_c^{mfa} = 2^N\cosh^N[\beta(H + 4J\langle s \rangle)] 
+\]
+The average spin per site is thus:
+\[
+\langle s \rangle = \tanh[\beta(H+4J\langle s\rangle)]
+\]
+and the transition temperature is $k_B T = 4J$.
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Consider the two-dimensional Ising model on a square lattice once more.  This time write down a mean field Hamiltonian for this system that supposes that we 
+model the interaction between a pair of neighbouring spins explicitly and the interaction between these two spins and the surrounding spins using the mean field 
+approximation.
+</QUESTION>
+      <SOLUTION>
+\[
+E = -\sum_{i=1}^{N/2} Js_{2i-1}s_{2i} + (H + 3J\langle s \rangle )(s_{2i-1}+s_{2i} )
+\]
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Now calculate the canonical partition function for this new mean field Hamiltonian.  Use the result you obtain to calculate the average spin per site and 
+to derive a self-consistent equation the solution of which tells you temperature at which the order-disorder transition takes place.
+ 
+</QUESTION>
+      <SOLUTION>
+The partition function is given by:
+\[
+Z^{mfa} = \left(2e^{\beta J}\cosh(2\beta(H+3J\langle s \rangle)) + 2e^{-\beta J} \right)^{N/2}
+\]
+The average spin per site is thus:
+\langle s \rangle = \frac{\sinh[2\beta(H+3J\langle s\rangle)] }{ \cosh[2\beta(H+3J\langle s \rangle)] + e^{-2\beta J}}
+The equation for the order-disorder transition is:
+\[
+\beta = \frac{1+e^{-2\beta J}}{6\beta J}
+\]
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Consider the two-dimensional Ising model on a square lattice once more.  This time write down a mean field Hamiltonian for this system that supposes that we 
+model the interaction between a cluster of 5 neighbouring spins explicitly and the interaction between these five spins and the surrounding spins using the mean field 
+approximation.  Calculate the canonical partition function for this new mean field Hamiltonian.
+</QUESTION>
+      <SOLUTION>
+The Hamiltonian in this case is:
+\[
+E = -\sum_{i=1}^{N/5} \left[ Hs_{5i} + \sum_{j=1}^4 (3J\langle s \rangle + H)s_{5i-j} + Js_{5i-j}s_{5i} \right] 
+\]
+And the partition function is:
+\[
+Z_N = \left\{e^{\beta H} 2^4 \cosh^4(\beta\left[ 3J\langle s \rangle + H + J \right]) + e^{-\beta H} 2^4 \cosh^4(\beta\left[  3J\langle s \rangle + H - J \right])\right\}^{N/5}
+\]
+</SOLUTION>
+    </EXAMPLE>
+    <EXAMPLE>
+      <QUESTION>
+Finally, consider an entire row of spins in the average field of the rest of the lattice.  Use the fact that the average value of the spin for a one-dimensional, 
+closed Ising model is given by:
+$$
+\langle s \rangle = \frac{ \sinh(\beta H) }{\sqrt{\sinh^2(\beta H) + e^{-4\beta J}}}
+$$
+To determine a self-consistent equation in $\beta$ that can be used to determine the temperature at which the order-disorder transition takes place in this system.
+</QUESTION>
+      <SOLUTION>
+If we construct the full system by supposing that the spins in a row interact explicitly and then interact 
+with mean field spin spins from adjacent rows we can write the Hamiltonian for the system as:
+\[
+E^{mfa} = - \sum_{i=1}^{N} \sum_{j=1}^{M} J s_{ij}s_{i(j+1)} + Hs_{ij} + 2J\langle s \rangle  
+\]
+Here we suppose we have $N\times M$ spins in total and that these are arranged in $N$-rows containing $M$ spins each.  
+We can think of the spins on each row as a closed 1D-Ising model in a field of magnitude: $H+2J\langle s\rangle$.   
+Thinking this way and using the equation given in the question we can thus write the average spin as:
+\[
+\langle s \rangle = \frac{ \sinh[\beta (H+2J\langle s \rangle)] }{\sqrt{\sinh^2[\beta(H+2J\langle s \rangle)] + e^{-4\beta J}}}
+\]
+which, when $H=0$, becomes:
+\[
+\langle s \rangle = \frac{ \sinh[2\beta J\langle s \rangle)] }{\sqrt{\sinh^2[2\beta J\langle s \rangle] + e^{-4\beta J}}}
+\]
+We can thus find (in the usual way) that the transition temperature is the solution of:
+\[
+\beta = \frac{e^{-2\beta J}}{2J}
+\]
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+</PAGE>

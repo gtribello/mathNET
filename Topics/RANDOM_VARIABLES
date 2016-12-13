@@ -34,7 +34,7 @@ RANDOM_VARIABLES EXERCISE IPYTHON SOR3012 sor3012-1-coins-and-dice.ipynb G.~Trib
 RANDOM_VARIABLES INTRO XML SOR3012 classical_probability_video G.~Tribello The classical interpretation of probability explained
 RANDOM_VARIABLES INTRO XML SOR3012 non-classical-probability-video G.~Tribello An introduction to the cumulative probability distribution function
 RANDOM_VARIABLES INTRO XML SOR3012 probability-functions G.~Tribello An introduction to the probability mass and probabillity density
-RANDOM_VARIABLES EXERCISE HTML SOR3012 random-variables-problems G.~Tribello Some simple exercises on random variables
+RANDOM_VARIABLES EXERCISE XML SOR3012 random-variables-problems G.~Tribello Some simple exercises on random variables
 RANDOM_VARIABLES INTRO PDF SOR3012 jim-chap02.pdf J.~F.~McCann Some introductory notes on probability
 RANDOM_VARIABLES INTRO PDF SOR3012 jim-chap04.pdf J.~F.~McCann Introductory material on discrete random variables including descriptions of the binomial, geometric and poisson random variables.
 RANDOM_VARIABLES INTRO PDF SOR3012 jim-chap10.pdf J.~F.~McCann Some notes on continuous random variables including descriptions of the uniform, exponential and normal random variables.

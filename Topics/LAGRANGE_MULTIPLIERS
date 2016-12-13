@@ -19,5 +19,5 @@ LEARNINGOUTCOMES:
 
 END:
 LAGRANGE_MULTIPLIERS INTRO XML PHY9038/AMA4004 lagrange-multipliers-video G.~Tribello A video explaining Lagrange's method of undetermined multipliers.
-LAGRANGE_MULTIPLIERS EXERCISE HTML AMA4004 lagrange-multipliers-problems G.~Tribello Some problems that require you to use Lagrange's method of undetermined multipliers.
+LAGRANGE_MULTIPLIERS EXERCISE XML AMA4004 lagrange-multipliers-problems G.~Tribello Some problems that require you to use Lagrange's method of undetermined multipliers.
 LAGRANGE_MULTIPLIERS EXTERNAL WEBSITE module http://tutorial.math.lamar.edu/Classes/CalcIII/LagrangeMultipliers.aspx blank A tutorial on Lagrange multipliers with many nice examples.

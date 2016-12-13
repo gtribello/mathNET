@@ -1,0 +1,45 @@
+<PAGE>
+  <TITLE>Integration by substitution
+</TITLE>
+  <DESCRIPTION>
+When looking at the following problems remember that when using integration by substitution you must change three
+things; namely:
+<ul>
+<li> The limits if it is a definite integral. </li>
+<li> The integrand </li>
+<li> The infinitessimal (often $\textrm{d}x$) </li>
+</ul>
+When you look at the worked examples and at the problems start by trying to work out how these things have been done
+or how they should be done.
+</DESCRIPTION>
+  <EXERCISE>
+    <TITLE>Exercise 1
+</TITLE>
+    <PROBLEMS>Find the following indefinite integral (hint: use the substitution $u=x-1$)
+$$
+\int \frac{x^2 + 1}{x-1} \textrm{d}x
+$$
+</PROBLEMS>
+  </EXERCISE>
+  <EXERCISE>
+    <TITLE>Exercise 2
+</TITLE>
+    <PROBLEMS>Find the following indefinite integral (hint: use the substitution $u=\sqrt{x+1}$)
+$$
+\int \frac{x}{\sqrt{x+1}} \textrm{d}x
+$$
+</PROBLEMS>
+  </EXERCISE>
+  <EXERCISE>
+    <TITLE>An exercise based on probability theory
+</TITLE>
+    <PROBLEMS>Suppose the continuous random variable, $X$, has the Cauchy probability distribution, defined by the 
+probability density:
+$$
+f_X(x) = \frac{a}{\pi(a^2 + x^2)} \qquad -\infty \lt x \lt + \infty 
+$$
+where, $a > 0$ is a constant. Use the substitution $x=a\tan t$ to verify that $\int_{-\infty}^\infty f_X(x) \textrm{d}x = 1$. 
+Hint: remember that $1+\tan^2(t) = sec^2(t)$.
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

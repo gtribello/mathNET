@@ -1,0 +1,36 @@
+<PAGE>
+  <TITLE>Integration by parts
+</TITLE>
+  <DESCRIPTION>
+Remember when solving the following problem that the method of integration by parts is derived by integrating the product
+rule rule and rearranging the resulting expression.  We thus have:
+$$
+\int u \frac{\textrm{d}v}{\textrm{d}x} \textrm{d}x = uv - \int v \frac{\textrm{d}u}{\textrm{d}x} \textrm{d}x
+$$
+When using this method remember that you must divide the function you wish to integrate into a part $u$ and a 
+part $\frac{\textrm{d}v}{\textrm{d}x}$.  You then differentiate $u$ and integrate $\frac{\textrm{d}v}{\textrm{d}x}$
+and insert what emerges into the equations above.  Generally, when you pick the functions to use for $u$ and 
+$\frac{\textrm{d}v}{\textrm{d}x}$ you want to choose functions so that $v \frac{\textrm{d}u}{\textrm{d}x} \textrm{d}x$
+is a simpler function to integrate than the original $u \frac{\textrm{d}v}{\textrm{d}x} \textrm{d}x$.
+</DESCRIPTION>
+  <EXERCISE>
+    <TITLE>Exercise 1
+</TITLE>
+    <PROBLEMS>Use integration by parts to find the following integrals:
+$$
+ \int x\sin(x)  \textrm{d}x \qquad \int \frac{\ln(x)}{x^3} \textrm{d}x 
+$$
+</PROBLEMS>
+  </EXERCISE>
+  <EXERCISE>
+    <TITLE>Using integration by parts multiple times
+</TITLE>
+    <PROBLEMS>Solve the following definite integrals:
+$$
+ \int_0^\infty e^{-\lambda t } \textrm{d}t \qquad \int_0^\infty t e^{-\lambda t
+} \textrm{d}t \qquad \int_0^\infty t^2 e^{-\lambda t } \textrm{d}t \qquad
+\int_0^\infty  t^3 e^{-\lambda t } \textrm{d}t \qquad
+$$
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

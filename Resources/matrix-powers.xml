@@ -1,0 +1,79 @@
+<PAGE>
+  <TITLE>Taking powers of a matrix
+</TITLE>
+  <DESCRIPTION>
+We can take powers of square matrices by doing matrix multiplication.  We thus have:
+\begin{equation}
+ \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right)^2 = 
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right)
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) = 
+\left(
+ \begin{matrix}
+  a^2 + bc &amp; ab + bd \\
+  ca + dc &amp; bc + d^2
+ \end{matrix}
+\right)
+\end{equation}
+</DESCRIPTION>
+  <EXERCISE>
+    <TITLE>Exercise 1
+</TITLE>
+    <PROBLEMS>Calculate the following matrix powers: \\
+<table>
+<tr><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)^2
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)^3
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+3 &amp; 2 &amp; -1 \\
+5 &amp; 3 &amp; 2 \\
+6 &amp; 1 &amp; 4
+\end{matrix}
+\right)^2
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)^4
+$$
+</td></tr>
+</table>
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

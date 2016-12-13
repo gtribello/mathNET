@@ -30,4 +30,4 @@ END:
 
 
 CHAPMAN_KOLMOGOROV_RELATION INTRO XML SOR3012 chapman-kolmogorov-video G.~Tribello An explanation of how the Chapman-Kolmogorov relation is derived
-CHAPMAN_KOLMOGOROV_RELATION EXERCISE HTML SOR3012 chapman-kolmogorov-problems G.~Tribello Problems in which the Chapman-Kolmogorov relation is used to calculate probabilities.
+CHAPMAN_KOLMOGOROV_RELATION EXERCISE XML SOR3012 chapman-kolmogorov-problems G.~Tribello Problems in which the Chapman-Kolmogorov relation is used to calculate probabilities.

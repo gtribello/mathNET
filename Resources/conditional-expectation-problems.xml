@@ -1,0 +1,169 @@
+<PAGE>
+  <TITLE>Conditional Expectation
+</TITLE>
+  <DESCRIPTION>
+The conditional expectation theorem states that the expectation for a discrete random variable can
+be calculated using:
+$$
+\mathbb{E}(X) = \sum_{i=0}^\infty \mathbb{E}(X|Y=y_i)P(Y=y_i)
+$$
+The following exercises should teach you when it is appropriate to use the conditional expectation 
+theroem to calculate expectations and when it is not appropriate as well as how to use the theorem.
+</DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Niall and Simone play backgammon every day and Niall wins a
+fraction $p$ of these games.  Assume that the each game of backgammon is
+independent and use the conditional expectation theorem to show that the expected
+number of games that they will play, $\mathbb{E}(X_n)$, before Niall has a set
+of $n$ consecutive victories is given
+by:
+\begin{equation}
+\mathbb{E}(X_n) = \frac{1}{p}( 1 + \mathbb{E}(X_{n-1}) ) \label{eqn:niall}
+\end{equation}
+where $\mathbb{E}(X_{n-1})$ is the expected number of games they play before Niall
+has $n-1$ consecutive victories.  Solve the above equation and show that:
+\[
+\mathbb{E}(X_n) = \sum_{i=1}^n \frac{1}{p^i}
+\]
+</QUESTION>
+      <SOLUTION>
+<b> N.B. The solution to this problem is the same as the solution to the last problem on the problem sheet that was 
+handed out during the Thursday lecture in week 4. </b>
+<br/><br/>
+We can calculate $\mathbb{E}(X_n)$ by conditioning on the value of $X_{n-1}$.  In other words we can use 
+the conditional expectation theorem to write that:
+$$
+\mathbb{E}(X_n) = \sum_{k=n}^\infty \mathbb{E}(X_n|X_{n-1}=k)P(X_{n-1}=k)
+$$
+To calculate the conditional conditional expectation value, $\mathbb{E}(X_n|X_{n-1}=k)$ in this expression we use 
+the conditional expectation theorem once more.  When doing this we condition on the outcome of the $(k+1)$th game 
+of backgammon.  In the following equations the outcome of this $(k+1)$th game is indicated using the random variable $Y$:
+\[
+\begin{aligned}
+\mathbb{E}(X_n|X_{n-1} = k) &amp; = \mathbb{E}(X_n| X_{n-1}=k \wedge Y=1)P(Y=1) +
+                                 \mathbb{E}(X_n|X_{n-1}=k \wedge Y=0)P(Y=0) \\
+                            &amp; = ( k + 1)p + (k + 1 + \mathbb{E}(X_n) )(1-p)  \\
+                            &amp; = k + 1 + (1-p)\mathbb{E}(X_n)
+\end{aligned}
+\]
+In the above solution we determine that $\mathbb{E}(X_n| X_{n-1}=k \wedge Y=1)=k+1$ by noting that if Niall has won the last $n-1$ 
+games and if he wins the next game (the $(k+1)$th game in the sequence) he will have the required $n$-long 
+streak of wins.  We determine that $\mathbb{E}(X_n| X_{n-1}=k \wedge Y=0)=k + 1 + \mathbb{E}(X_n)$ by noting that 
+Nial's streak of $n$ victories will not have occured if he looses a game ($Y=0$) immediately after winning $n-1$ consecutive games.
+His streak of wins will be too short by one in this case.  We further note that the outcome of each individual game is independent
+and hence that we must wait a random number of games, $X_n$, before this winning streak occurs.  In this case we will thus will require
+$k+1+X_n$ games to be played in total.  When we take the expectation of this <b>random</b> quantity and exploit the linearity
+of this operator we get the result $\mathbb{E}(X_n| X_{n-1}=k \wedge Y=0)=k + 1 + \mathbb{E}(X_n)$. 
+We can now insert the expression we obtained for $\mathbb{E}(X_n|X_{n-1} = k)$ into the expression for $\mathbb{E}(X_n)$ above 
+and rearrange to get the desired answer as shown below: 
+\[
+\begin{aligned}
+ \mathbb{E}(X_n) &amp; = \sum_{k=n}^\infty \mathbb{E}(X_n|X_{n-1}=k)P(X_{n-1}=k) \\
+                 &amp; = \sum_{k=n}^\infty ( k + 1 + (1-p)\mathbb{E}(X_n) )P(X_{n-1}=k) \\
+                 &amp; = \sum_{k=n}^\infty k P(X_{n-1}=k) + (1+ (1-p)\mathbb{E}(X_n) )\sum_{k=n}^\infty P(X_{n-1}=k) \\
+                 &amp; = \mathbb{E}(X_{n-1}) + 1  + (1-p)\mathbb{E}(X_n) \\
+\rightarrow \qquad \mathbb{E}(X_n) &amp; = \frac{1}{p}[ 1 + \mathbb{E}(X_{n-1}) ]                    
+\end{aligned}
+\]
+To solve this we can use the fact that: $\mathbb{E}(X_1) = \frac{1}{p}$ as $X_1$ is a geometric random variable.  We can 
+therefore get to:
+\[
+\mathbb{E}(X_2) = \frac{1}{p}[ 1 + \mathbb{E}(X_{1})] = \frac{1}{p}\left( 1 + 
+\frac{1}{p} \right) = \frac{1}{p} + \frac{1}{p^2} = \sum_{i=1}^2 \frac{1}{p^i}
+\]
+We can then do:
+\[
+\mathbb{E}(X_3) = \frac{1}{p}( 1 + \mathbb{E}(X_2) ) = \frac{1}{p}\left( 1 + 
+\sum_{i=1}^2 \frac{1}{p^i}\right) = \sum_{i=1}^3 \frac{1}{p^i}
+\]
+This pattern clearly continues and the result thus follows
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Your tutorial operates with the following rules. You are trapped in a classroom with an infinite amount of work
+to do.  At the beginning of the class, and every 5 minutes thereafter, you are
+offered the chance to escape based on the roll of a fair dice.  If you get a 6
+you are allowed to leave immediately, if you get a 1 you miss your next turn
+so have to wait 10 minutes for your next chance to escape, if you roll any
+other number you get a turn in 5 minutes.  Calculated the expected time you
+will spend in the tutorial.
+</QUESTION>
+      <SOLUTION>
+$$
+\mathbb{E}(X) = 30
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+In a game show, there are 4 identical boxes, each containing a prize. 
+The boxes contain 50, 100, 200 and 500 pounds.  You are asked to choose one box
+and are allowed to keep the contents as your prize.  What is the expected value
+of your prize?
+</QUESTION>
+      <SOLUTION>
+$$
+\mathbb{E}(X) = 212.5
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+A disorientated  explorer reaches a clearing in the jungle. There are three
+paths leading from the clearing. Path 1 will takes him into deep forest that forces him 
+to return to  the clearing after 2 hours.  Path 2 is also a dead-end that forces him to return after 3 hours 
+of walking. Path 3 takes him to the village after 1 hour.  Assume the explorer will always select paths 1,2, and 3 with equal 
+probabilities, irrespective of whether he found it to be a dead-end.  Calculate the expected value and standard deviation, $\sigma$, for 
+the number of hours to reach the village.
+</QUESTION>
+      <SOLUTION>
+$$
+\mathbb{E}(X) = 6 \qquad \sigma = \sqrt{38} 
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+Consider the explorer from the previous problem once more but now assume that, although the explorer chooses the path at random, 
+with equal probabilities, he will not choose a path that he has already established is a dead-end.  Calculate the expected time 
+for him to reach the village, in this case. 
+</QUESTION>
+      <SOLUTION>
+The interesting thing about this variant on the problem is that we can't use conditioning in this case.  
+The easiest way is to thus rely on enumerating all possibilities.
+<br/><br/>
+<table align="center">
+<col width="150"/>
+<col width="150"/>
+<col width="150"/>
+<tr><td> <b> Choice sequence </b> </td><td> <b> Total time </b> </td><td> <b> Probability </b> </td></tr>
+<tr><td> 3 </td><td> 1 </td><td> $\frac{1}{3}$ </td></tr>
+<tr><td> 1 3 </td><td> 2 + 1 = 3 </td><td> $\left(\frac{1}{3}\right)\left(\frac{1}{2}\right)= \frac{1}{6}$ </td></tr>
+<tr><td> 2 3 </td><td> 3 + 1 = 4 </td><td> $\left(\frac{1}{3}\right)\left(\frac{1}{2}\right)=\frac{1}{6}$  </td></tr>
+<tr><td> 1 2 3 </td><td> 2 + 3 + 1 = 6 </td><td> $\left(\frac{1}{3}\right)\left(\frac{1}{2}\right)(1)= \frac{1}{6}$ </td></tr>
+<tr><td> 2 1 3 </td><td> 3 + 2 + 1 = 6 </td><td> $\left(\frac{1}{3}\right)\left(\frac{1}{2}\right)(1)= \frac{1}{6}$ </td></tr>
+</table>
+Inserting all this into the expression for the expectation gives:
+$$
+\begin{aligned}
+ \mathbb{E}(X) &amp; = \left( 1 \times \frac{1}{3} \right) + \left( 3 \times
+\frac{1}{6} \right) + \left( 4 \times \frac{1}{6} \right) + \left( 6 \times
+\frac{1}{6} \right) + \left( 6 \times \frac{1}{6} \right) \\
+ &amp; = \frac{1}{3} + \frac{1}{2} + \frac{2}{3} + 1 + 1 = 3.5
+\end{aligned}
+$$
+</SOLUTION>
+    </EXAMPLE>
+  </QUESTION_GROUP>
+</PAGE>

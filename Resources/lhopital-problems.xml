@@ -1,0 +1,24 @@
+<PAGE>
+  <TITLE>Solving limits using l'Hopital's Rule
+</TITLE>
+  <DESCRIPTION>
+Remember l'Hopital's rule states that:
+$$
+\lim_{x \rightarrow a} \frac{f(x)}{g(x)} = \lim_{x \rightarrow a} \frac{f'(x)}{g'(x)}
+$$
+which can be proved by performing a Taylor series expansion of the function in the numerator
+and the denominator and truncating the expansion at first order.
+</DESCRIPTION>
+  <EXERCISE>
+    <TITLE>Exercise 1
+</TITLE>
+    <PROBLEMS>Use l'Hopital's rule to find values for the following limits
+$$
+\lim_{x\rightarrow 1 } \frac{ 1 - x^n }{1 - x^m} \qquad \lim_{x \rightarrow 0}
+\frac{ 1 - e^x }{ x - x^2} \qquad \lim_{x\rightarrow 0}
+\frac{\sin(3x^2) }{1-\exp(x^2)} \qquad \lim_{x\rightarrow 1} \frac{ \ln(x) }{
+x^3 - 1} 
+$$
+</PROBLEMS>
+  </EXERCISE>
+</PAGE>

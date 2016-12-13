@@ -24,7 +24,7 @@ Q = \left(
 \mu & -\lambda-\mu & \lambda & 0 & 0 & \dots & 0 & 0 \\ 
 0 & \mu & -\lambda-\mu & \lambda & 0 & \dots & 0 & 0 \\ 
 \vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
-0 & 0 & 0 & 0 & 0 & \dots & -\mu & \mu 
+0 & 0 & 0 & 0 & 0 & \dots & \mu & -\mu 
 \end{matrix}
 \right)
 $$

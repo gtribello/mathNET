@@ -37,7 +37,8 @@ install:
     - popd
     # Graphviz
     - "pip install graphviz"
-
+    # lxml
+    - sudo apt-get install python3-lxml
 script:
   - python Scripts/build-website.py
 

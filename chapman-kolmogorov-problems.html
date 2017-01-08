@@ -71,85 +71,78 @@
                           <h1 class="panel-title"> The Chapman Kolmogorov Relation
  : Exercises</h1>
                       </div>
-                      
-<H1> Introduction </H1>
-
+                      <H1> Introduction </H1>
+<DESCRIPTION>
 When you have completed the following problems you should be able to do three things with Markov chains:
 (1) identify the problems where the Chapman-Kolmogorov relation is required to calculate probabilities, (2)
 identify the problems where the Chapman-Kolmogorov relation is innapropriate and (3) solve both these types of
 problem.
-
-<H1> Example problems </H1>
+</DESCRIPTION>
+  <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Consider the sequence of
 bases/nucleotides/letters of a strand of DNA (T, A, C, G) to be the states,
 $ X \in \{0,1,2,3\} $ respectively, of a
 Markov chain.
 The letters are abbreviations for
 Thymine, Adenine, Cytosine and Guanine.
-
 Suppose the chain is  described by the transition matrix:
 $$
 \left(
 \begin{matrix}
-0.2 & 0.3 & 0.3 & 0.2 \\
-0.2 & 0.3 & 0.3 & 0.2 \\
-0.2 & 0.3 & 0.2 & 0.3 \\
-0.2 & 0.2 & 0.3 & 0.3 \\
+0.2 &amp; 0.3 &amp; 0.3 &amp; 0.2 \\
+0.2 &amp; 0.3 &amp; 0.3 &amp; 0.2 \\
+0.2 &amp; 0.3 &amp; 0.2 &amp; 0.3 \\
+0.2 &amp; 0.2 &amp; 0.3 &amp; 0.3 \\
 \end{matrix}
 \right)
 $$
-
 Calculate the probability of the following sequences:
 AGT,  GTCC,   CGGT.
-
 You may assume the first letter in the sequence  is  given (has probability 1).
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-0" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 We can use the information given in the transition matrix and the fact that the probability of the first letter is equal to one
 to find the probabilities required by this question directly as shown below.
 $$
 \begin{aligned}
-P(AGT) & = p_{13}p_{30} = 0.2 \times 0.2 = 0.04 \\
-P(GTCC) & = p_{30}p_{02} p_{22} = 0.2 \times 0.3 \times 0.2 = 0.012 \\
-P(CGGT) & = p_{23}p_{33}p_{30} = 0.3 \times 0.3 \times 0.2 = 0.018
+P(AGT) &amp; = p_{13}p_{30} = 0.2 \times 0.2 = 0.04 \\
+P(GTCC) &amp; = p_{30}p_{02} p_{22} = 0.2 \times 0.3 \times 0.2 = 0.012 \\
+P(CGGT) &amp; = p_{23}p_{33}p_{30} = 0.3 \times 0.3 \times 0.2 = 0.018
 \end{aligned}
 $$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Consider a Markov chain with two states $X  \in  \{0, 1\}$. The  transition matrix has the form: 
 $$
 P= 
 \left(
 \begin{matrix}
-\frac{1}{3}  &  \ \ & \frac{2}{3} \\ 
-             &  & \\
-\frac{1}{2}  & \ \ &  \frac{1}{2} \\ 
+\frac{1}{3}  &amp;  \ \ &amp; \frac{2}{3} \\ 
+             &amp;  &amp; \\
+\frac{1}{2}  &amp; \ \ &amp;  \frac{1}{2} \\ 
 \end{matrix}
 \right) \qquad .
 $$
@@ -157,95 +150,86 @@ Calculate the following transition probabilities:
 $$
 P (X_1 = 1  |X_0 = 0) \qquad P (X_2 = 0|X_0 = 1) \qquad P (X_3 = 0 |X_0 = 0)
 $$
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-1" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 We can use the information contained in the transition matrix to "calculate" the first of these probabilities 
 directly as shown below:
-
 $$
 \begin{aligned}
-P(X_1 = 1  |X_0 = 0) & = \frac{2}{3} \\
+P(X_1 = 1  |X_0 = 0) &amp; = \frac{2}{3} \\
 \end{aligned}
 $$
-
 For the second we need to use the Chapmann-Kolmogorov relation so we need to calculate the 2nd power of the matrix:
-
 $$
 \left(
 \begin{matrix}
-\frac{1}{3}  & \frac{2}{3} \\ 
-\frac{1}{2}  &  \frac{1}{2} 
+\frac{1}{3}  &amp; \frac{2}{3} \\ 
+\frac{1}{2}  &amp;  \frac{1}{2} 
 \end{matrix}
 \right)
 \left(
 \begin{matrix}
-\frac{1}{3}  & \frac{2}{3} \\ 
-\frac{1}{2}  &  \frac{1}{2} 
+\frac{1}{3}  &amp; \frac{2}{3} \\ 
+\frac{1}{2}  &amp;  \frac{1}{2} 
 \end{matrix}
 \right) = 
 \left(
 \begin{matrix}
-\frac{4}{9}  & \frac{5}{9} \\ 
-\frac{5}{12}  &  \frac{7}{12} 
+\frac{4}{9}  &amp; \frac{5}{9} \\ 
+\frac{5}{12}  &amp;  \frac{7}{12} 
 \end{matrix}
 \right)
 $$
-
 So $P (X_2 = 0|X_0 = 1)=\frac{5}{12}$
-
 <br/> <br/>
-
 For part (iii) we have to calculate the third power of the matrix
-
 $$
 \left(
 \begin{matrix}
-\frac{1}{3}  & \frac{2}{3} \\ 
-\frac{1}{2}  &  \frac{1}{2} 
+\frac{1}{3}  &amp; \frac{2}{3} \\ 
+\frac{1}{2}  &amp;  \frac{1}{2} 
 \end{matrix}
 \right)
 \left(
 \begin{matrix}
-\frac{4}{9}  & \frac{5}{9} \\ 
-\frac{5}{12}  &  \frac{7}{12} 
+\frac{4}{9}  &amp; \frac{5}{9} \\ 
+\frac{5}{12}  &amp;  \frac{7}{12} 
 \end{matrix}
 \right) =
 \left(
 \begin{matrix}
-\frac{23}{54}  & \frac{31}{54} \\ 
-\frac{31}{72}  &  \frac{41}{72} 
+\frac{23}{54}  &amp; \frac{31}{54} \\ 
+\frac{31}{72}  &amp;  \frac{41}{72} 
 \end{matrix}
 \right)
 $$
-
 For part (iii) we thus have $P (X_3 = 0 |X_0 = 0)=\frac{23}{54}$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 3</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Consider a Markov chain between two states, $X=0$ and $X=1$,  for which 
 the transition matrix is given by:
 $$
 P=
 \left(
 \begin{matrix}
-0.2 & 0.8 \\
-0.6 & 0.4 \\
+0.2 &amp; 0.8 \\
+0.6 &amp; 0.4 \\
 \end{matrix}
 \right) \qquad .
 $$
@@ -257,60 +241,51 @@ P(X_{2}=0 \vert X_{0}=1) \quad , \quad
 P(X_{3}=1 \vert X_{1}=1) \qquad .
 $$
 Lastly, given that $X_{0}=0$, calculate the probability of the chain (sequence) $00101$ for $X_0,X_{1},X_{2},X_{3},X_{4}$, 
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-2" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 The transition graph is as shown below:
-
 <br/><br/>
-
-<center> <img src="Images/chapman-problems-problem3.png" align="middle" width="300"> </center>
-
+<center> <img src="Images/chapman-problems-problem3.png" align="middle" width="300"/> </center>
 <br/><br/>
-
 The probabilities required are equal to:
-
 $$
 P(X_{1}=0 \vert X_{0}=0) = 0.2 \qquad P(X_{2}=0 \vert X_{0}=1) = 0.36 \qquad P(X_{3}=1 \vert X_{1}=1) = 0.64
 $$
-
 And if $X_0=0$ then:
-
 $$
 P( X_1=0 \wedge X_2=0 \wedge X_3=1 \wedge X_4=0 \wedge X_5=1 ) = 0.0768
 $$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 4</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Suppose the autumn weather in Belfast, from day to day, follows a Markov 
 process. If it is raining here today, there is a probability 0.3 that it 
 will rain again tomorrow. Similarly, the probabilities of cloudy  weather 
 (with no rain) or sunshine the next day are 0.5 and 0.2, respectively.
-
 We can summarize all the transition probabilities between the states (that 
 is the weather from one day to the next)  
 $X \in \{ R,C,S \}$, in the transition matrix:
 $$
 P= \left(  
 \begin{matrix}
-0.3  &   0.5  &  0.2 \\
-0.3  &   0.4  &  0.3 \\
-0.2  &   0.5  &  0.3 \\
+0.3  &amp;   0.5  &amp;  0.2 \\
+0.3  &amp;   0.4  &amp;  0.3 \\
+0.2  &amp;   0.5  &amp;  0.3 \\
 \end{matrix}
 \right)
 \qquad .
@@ -319,40 +294,36 @@ Today is a Friday in Belfast,   in  mid-October,  and it is raining.   Use the i
 to calculate the probability that both the next two days, Saturday and Sunday, will be sunny and to calculate 
 the probability of rain on Sunday.  Can you suggest one (or more) aspects of this model that is 
 unrealistic and how we might thus improve the model?
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-3" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 $$
 P(\textrm{next two days sunny}) = 0.06 \qquad P(\textrm{rain on Sunday}) = 0.28
 $$
-
 <br/> <br/>
-
 In terms of the improvments to the model we could think about any of the following:
-
 <ul>
 <li> There are weather variations within the days. </li>
 <li> Weather is predictable one day ahead this model assumes it is random </li>
 <li> Seasonal variations are not taken into account.  To incorporate this correctly we would need to use an inhomogeneous Markov chain </li>
 </ul>
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 5</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 5</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Marital status for a man in his 30s is considered using the following  Markov
 process. The state space of the process consists of three states: Single  ($X=0$), Cohabiting
  ($X=1$), Married  ($X=2$).
@@ -362,51 +333,42 @@ $$
 P=
 \left(  
 \begin{matrix}
- 0.60  &   0.35  &  0.05  \\
- 0.20  &   0.70  &  0.10  \\
- 0.10  &    0.05 &  0.85  
+ 0.60  &amp;   0.35  &amp;  0.05  \\
+ 0.20  &amp;   0.70  &amp;  0.10  \\
+ 0.10  &amp;    0.05 &amp;  0.85  
 \end{matrix}
 \right) \qquad .
 $$
 Draw the transition graph for this Markov chain and then answer the following questions:
-
 <ul>
 <li> Calculate the probability that a 35-year-old married man gets divorced next year, and marries again the following year.</li>
 <li> Given a 30-year-old  man is single   this year, calculate the the probability that he will still  be single in two years time.</li>
 <li> Do you think this is a good model for the marital status of a man?  What is good/bad about it? </li>
 </ul>
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-4" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 Transition graph:
-
 <br/><br/>
-
-<center> <img src="Images/chapman-problems-problem5.png" align="middle" width="300"> </center>
-
+<center> <img src="Images/chapman-problems-problem5.png" align="middle" width="300"/> </center>
 <br/><br/>
-
-
 <ul>
-<li> Probablity that he gets divorsed and then remaires in two years: $P = 0.01$
-<li> Probability single 30-year will still be single in two years: $P= 0.435$
+<li> Probablity that he gets divorsed and then remaires in two years: $P = 0.01$ </li>
+<li> Probability single 30-year will still be single in two years: $P= 0.435$ </li>
 </ul>
-
-
 This is not a good model as the assumption of Markovianity is dubious.  For instance a man who has cohabited with his partner for many years
 is more likely to get married than a man who has cohabitted for only one year. 
-
-
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
+</br>
  
                     </div> 
 		</div>

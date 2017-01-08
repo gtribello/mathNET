@@ -71,23 +71,23 @@
                           <h1 class="panel-title"> Geometric random variable
  : Exercises</h1>
                       </div>
-                      
-<H1> Introduction </H1>
-
+                      <H1> Introduction </H1>
+<DESCRIPTION>
 The problems below all involve the geometric random variable in some way.  Remember that this 
 random variable is used to model the number of Bernoulli trials you have to perform before you 
 get a positive result and that the probability mass function for this random variable is:
 $$
 f_X(x) = (1-p)^{x-1} p
 $$
-
+</DESCRIPTION>
+  <H1> Example problems </H1>
+<p> Click on the problems to reveal the solution </p> 
 <div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 The probability I get a head when I toss a particular kind of coin is equal to $p$. Calculate the probability, $P(X = n)$, that 
 I get my first head only once I have tossed 
 the coin $n$ times. You may assume that each toss of the coin is independent. In addition,
@@ -95,14 +95,14 @@ show that:
 $$
 \sum_{n=1}^\infty P(X=n) = 1 
 $$
-
-        </a>
+</QUESTION>
+            </a>
         </h4>
     </div>
     <div id="collapse-0" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 In this question we are being asked to derive the probability mass function for the geometric random variable.  This mass function
 is given at the top of this page in the short description of the geometric random variable.  One way to answer this question would 
 thus be to explain why the experiment described in the question can be modelled using a geometric random variable.  Another way 
@@ -128,7 +128,6 @@ $$
 P(X=n) = (1-p)^{n-1} p
 $$
 and hopefully it is clear why from the logic given in the previous paragraphs.
-
 In the second part of the question we are asked to prove that:
 $$
 \sum_{n=1}^\infty P(X=n) = 1
@@ -144,25 +143,24 @@ $$
 Notice the change in the lower limit for the summation here.  We now exploit the fact that the summation here is a geometric series
 and note that:
 $$
-\sum_{k=0}^\infty (1-p)^{k} = \frac{1}{1-(1-p)} \qquad \textrm{if} \quad (1-p)<1
+\sum_{k=0}^\infty (1-p)^{k} = \frac{1}{1-(1-p)} \qquad \textrm{if} \quad (1-p)&lt;1
 $$
-The last inequality here, $(1-p)<1$, most definitely holds (as $p$ is a probability) so we can thus write:
+The last inequality here, $(1-p)&lt;1$, most definitely holds (as $p$ is a probability) so we can thus write:
 $$
 p \sum_{k=0}^\infty (1-p)^{k} = p \frac{1}{1-(1-p)} = \frac{p}{p} = 1
 $$
-
-         </div>
+</SOLUTION>
+           </div>
       </div>
    </div>
 </div>
 </br>
 <div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 A group of $n$ players, $J_1$, $J_2$,...,$J_n$, sit round a table, and each player in turn, 
 starting with $J_1$, rolls a fair die. The die is passed around the table (making more than 
 one circuit of the table if necessary) until a player throws a six and thereby wins the game. 
@@ -170,36 +168,30 @@ Show that the probability that $J_i$ (the ith player to play) wins the game is g
 $$
 p = \frac{ \frac{1}{6} \left( \frac{5}{6} \right)^{i-1} }{ 1 - \left(\frac{5}{6}\right)^n}
 $$
-
-        </a>
+</QUESTION>
+            </a>
         </h4>
     </div>
     <div id="collapse-1" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 Start by considering the probability player $J_i$ wins <b>in the first round</b> $P_1(J_i)$. The 
 random variable in this question follows a geometric distribution so 
 the probability that the $J_i$th player wins during the first round is:
-
 $$
  P_1( J_i ) = \left( \frac{5}{6}\right)^{i-1} \frac{1}{6} 
 $$
-
 The probability player $J_i$ wins during the second round is:
-
 $$
 P_2( J_i ) = \left( \frac{5}{6} \right)^n \left( \frac{5}{6}\right)^{i-1} \frac{1}{6} 
 $$
-
 The factor of $\left( \frac{5}{6} \right)^n$ appears here as for player $J_i$ to win on the second round everyone 
 must loose during the first round. 
-
 We can generalise this insight and write the probability that player $J_i$ wins during the $k$th round as:
 $$
  P_k( J_i ) = \left( \frac{5}{6} \right)^{kn} \left( \frac{5}{6}\right)^{i-1} \frac{1}{6} 
 $$
-
 The total probability player $J_i$ wins is sum of probability player $J_i$ wins in all rounds.  In other words, 
 the total probabiliy that player $J$ wins is given by: 
 $$
@@ -214,10 +206,12 @@ $$
 = \frac{ \left(\frac{1}{6} \right) \left(\frac{5}{6}\right)^{i-1} }{ 1 -
 \left(\frac{5}{6}\right)^n }
 $$
-         </div>
+</SOLUTION>
+           </div>
       </div>
    </div>
 </div>
+</br>
  
                     </div> 
 		</div>

@@ -71,38 +71,34 @@
                           <h1 class="panel-title"> Poisson Random Variable
  : Exercises</h1>
                       </div>
-                      
-<H1> Introduction </H1>
-
+                      <H1> Introduction </H1>
+<DESCRIPTION>
 The problems below all involve the Poisson random variable.  Remember that the probablity mass function 
 for this random variable is:
 $$
 f_X(x) = P(X=x) = \frac{\lambda^x}{x!} e^{-\lambda}
 $$
 where $\lambda$ is a parameter.
-
-<H1> Example problems </H1>
+</DESCRIPTION>
+  <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Prove that the Poisson Distribution is properly normalised.
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-0" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 To prove the distribution is normalised we need to show that $\sum_{x=0}^\infty f_X(x) = 1$.  
 For the Poisson random variable we have:
-
 $$
 \sum_{x=0}^\infty f_X(x) = \sum_{x=0}^\infty \frac{\lambda^x}{x!}
 e^{-\lambda} = e^{-\lambda} \sum_{x=0}^\infty \frac{\lambda^x}{x!} =
@@ -110,77 +106,64 @@ e^{-\lambda} e^{\lambda} = 1
 $$
 The penultimate equality here holds because $\sum_{x=0}^\infty \frac{\lambda^x}{x!}$ is the McLaurin expansion of
 the exponential function.
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Calculate the moment generating function for the Poisson Distribution and hence calculate the expectation and variance of this random variable. 
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-1" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 The moment Generating function is given by $M_X(t) = \mathbb{E}(e^{tX})$. For the poisson random variable this is:
-
 $$
 \begin{aligned}
-M_X(t) &= \sum_{x=0}^\infty e^{tx} P(X=x) \\
-& = \sum_{x=0}^\infty e^{tx} \frac{\lambda^x}{x!} e^{-\lambda} \\
-& = e^{-\lambda} \sum_{x=0}^\infty \frac{(\lambda e^t)^x}{x!} \\
-& = e^{-\lambda} e^{\lambda e^t} = e^{\lambda(e^t - 1)} 
+M_X(t) &amp;= \sum_{x=0}^\infty e^{tx} P(X=x) \\
+&amp; = \sum_{x=0}^\infty e^{tx} \frac{\lambda^x}{x!} e^{-\lambda} \\
+&amp; = e^{-\lambda} \sum_{x=0}^\infty \frac{(\lambda e^t)^x}{x!} \\
+&amp; = e^{-\lambda} e^{\lambda e^t} = e^{\lambda(e^t - 1)} 
 \end{aligned}
 $$
-
 We now recall that we can find the first moment of the distribution (the expectation) by finding the value of the first derivative
 of the moment generating function at $t=0$. i.e.
-
 $$
 \mathbb{E}(X) = \frac{\textrm{d}M_X(0)}{\textrm{d}t}
 $$
-
 For the Poisson distribution this derivative is:
-
 $$
 \frac{\textrm{d}M_X(t)}{\textrm{d}t} = \lambda e^t e^{\lambda(e^t - 1)}
 $$
-
 which at $t=0$ gives: $\mathbb{E}(X) =  \lambda e^0 e^{\lambda(e^0 - 1)} = \lambda$
-
 <br/><br/>
-
 To calculate the variance we need to first caclulate the second moment of the distribution.  We can find this quantity from the 
 moment generating function by finding the value of the second derivative at $t=0$.  i.e.
-
 $$
 \mathbb{E}(X^2) = \frac{\textrm{d}^2M_X(0)}{\textrm{d}t^2}
 $$
-
 The second derivative for the moment generating function of the Poisson random variable is given by:
-
 $$
 \frac{\textrm{d}^2M_X(t)}{\textrm{d}t^2} = \lambda e^t e^{\lambda(e^t - 1)} + \lambda^2 e^{2t} e^{\lambda(e^t - 1)}
 $$
-
 At $t=0$ then $\mathbb{E}(X^2) = \lambda e^0 e^{\lambda(e^0 - 1)} + \lambda^2 e^{0} e^{\lambda(e^0 - 1)} = \lambda + \lambda^2$
-
 The variance is thus $\textrm{var}(X) = \mathbb{E}(X^2) - [\mathbb{E}(X)]^2 = \lambda + \lambda^2 - \lambda^2 = \lambda$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
+</br>
  
                     </div> 
 		</div>

@@ -71,32 +71,29 @@
                           <h1 class="panel-title"> Discrete markov chains with absorbing states
  : Exercises</h1>
                       </div>
-                      
-<H1> Introduction </H1>
-
+                      <H1> Introduction </H1>
+<DESCRIPTION>
 In these exercises we consider Markov chains that have a mixture of transient and 
 absorbing states.  In problems of this type the aim is almost always to calculate the
 probability of finishing in each of the absorbing states and to calculate the expected
 number of steps till absorbtion.
-
-<H1> Example problems </H1>
+</DESCRIPTION>
+  <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 A discrete random variable, $X$, can take the values $X \in \{0,1,2\}$
 according to a discrete Markov Process described by the transition matrix:
 $$
 \mathbf{P} = \left(
 \begin{matrix}
- 0.6 & 0.1 & 0.3 \\
- 0.2 & 0.2 & 0.6 \\
- 0 & 0 & 1 
+ 0.6 &amp; 0.1 &amp; 0.3 \\
+ 0.2 &amp; 0.2 &amp; 0.6 \\
+ 0 &amp; 0 &amp; 1 
 \end{matrix}
 \right)
 \nonumber
@@ -104,36 +101,33 @@ $$
 Find the hitting times for each of the transient states in this
 chain. That is find the expected number of steps required until absorption
 occurs. 
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-0" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 The Markov chain given in the question has two transient states and one recurrent state.
 The recurrent state is state 2 and as such the matrix has already been arranged in the 
 required form for this type of problem; namely:
-
 \begin{equation}
  P = \left(
  \begin{matrix}
-  Q & R \\
-  0 & I 
+  Q &amp; R \\
+  0 &amp; I 
  \end{matrix}
  \right)
  \nonumber
 \end{equation}
-
 with $Q$ connecting the transient states to the transient states and $R$ connecting the transient
 states to the recurrent states.  In this question we thus have:
-
 $$
 \mathbf{Q} = \left( 
  \begin{matrix}
-  0.6 & 0.1 \\
-  0.2 & 0.2 
+  0.6 &amp; 0.1 \\
+  0.2 &amp; 0.2 
  \end{matrix}
 \right)
 \qquad \textrm{and} \qquad 
@@ -144,44 +138,38 @@ $$
 \end{matrix}
 \right)
 $$
-
 To calculate the vector of hitting times, $\mathbf{h}$, for this chain we need to use:
-
 $$
 \mathbf{h} = ( \mathbf{I} - \mathbf{Q} )^{-1}\mathbf{1}
 $$
-
 and as such we need to invert a $2\times2$ matrix as shown below:
-
 $$
 ( I - Q )^{-1} = 
 \left(
 \begin{matrix}
- 0.4 & -0.1 \\
- -0.2 & 0.8
+ 0.4 &amp; -0.1 \\
+ -0.2 &amp; 0.8
 \end{matrix}
 \right)^{-1} = \frac{1}{ 0.4\times0.8 - 0.1 \times 0.2 } \left(
 \begin{matrix}
- 0.8 & 0.1 \\
- 0.2 & 0.4
+ 0.8 &amp; 0.1 \\
+ 0.2 &amp; 0.4
 \end{matrix} 
 \right) =
 \left(
 \begin{matrix}
- 8/3 & 1/3 \\
- 2/3 & 4/3
+ 8/3 &amp; 1/3 \\
+ 2/3 &amp; 4/3
 \end{matrix}
 \right)
 $$
-
 When this matrix is multiplied by a vector containing all ones we get the desired vector of hitting times:
-
 $$
 \mathbf{h} = ( \mathbf{I} - \mathbf{Q} )^{-1} \mathbf{1} = 
  \left(
  \begin{matrix}
-  8/3 & 1/3 \\
-  2/3 & 4/3
+  8/3 &amp; 1/3 \\
+  2/3 &amp; 4/3
  \end{matrix} 
  \right)
  \left(
@@ -197,7 +185,6 @@ $$
  \end{matrix}
  \right)
 $$
-
 Now, obviously, calculating the hitting probabilities using:
 $$
 \mathbf{H} = ( \mathbf{I} - \mathbf{Q} )^{-1}\mathbf{R}
@@ -209,8 +196,8 @@ $$
 \mathbf{H} = ( \mathbf{I} - \mathbf{Q} )^{-1} \mathbf{R} =
  \left(
  \begin{matrix}
-  8/3 & 1/3 \\ 
-  2/3 & 4/3
+  8/3 &amp; 1/3 \\ 
+  2/3 &amp; 4/3
  \end{matrix} 
  \right)
  \left(
@@ -232,70 +219,66 @@ $$
  \end{matrix}
  \right)
 $$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Consider a Markov chain with the following transition matrix.  
 $$
 \mathbf{P} = \left(
 \begin{matrix}
-1/3 & 1/3 & 1/3 \\
-0 & 1/2 & 1/2 \\
-0 & 0 & 1
+1/3 &amp; 1/3 &amp; 1/3 \\
+0 &amp; 1/2 &amp; 1/2 \\
+0 &amp; 0 &amp; 1
 \end{matrix}
 \right)
 $$
 Which of the states in this graph is
 absorbing and what is the expected time till absorption if my initial state is
 selected at random.
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-1" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 In this chain states 1 and 2 are transient and state 3 is recurrent.  <br/> <br/>
-
 The time taken to absorption if the initial state is selected at random, $\mathbf{E}(T)$, is equal to:
-
 $$
 \mathbf{E}(T) = \frac{5}{2} \times \frac{1}{3} + 2 \times \frac{1}{3} + 0 \times \frac{1}{3} = \frac{3}{2}
 $$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 3</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 A Markov chain, between the states $X=0,1,2,3,4$,
  is  described by the following  transition matrix:
 $$
 \mathbf{P} = \left(
   \begin{matrix}
-   1 & 0 & 0 & 0 &  0 \\
-   0.3 & 0.6 & 0 & 0 & 0.1 \\
-    0 & 0 & 1 & 0 & 0 \\
-    0 & 0 & 0 & 1 & 0 \\
-    0 & 0.2 & 0.3 & 0.3 & 0.2 
+   1 &amp; 0 &amp; 0 &amp; 0 &amp;  0 \\
+   0.3 &amp; 0.6 &amp; 0 &amp; 0 &amp; 0.1 \\
+    0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+    0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+    0 &amp; 0.2 &amp; 0.3 &amp; 0.3 &amp; 0.2 
   \end{matrix}
   \right)
 $$
@@ -305,8 +288,8 @@ $$
 P =
 \left(
 \begin{matrix}
-Q & R \\
-0  & I \\
+Q &amp; R \\
+0  &amp; I \\
 \end{matrix}
 \right) 
 \qquad ,
@@ -318,46 +301,39 @@ h = (I-Q)^{-1}R \qquad ,
 $$
 and the hitting times.  These hitting times should tell you the expected number of steps 
 starting from the transient states, until absorption occurs.
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-2" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 The transition graph in this case looks like this:
-
-<center> <img src="Images/hitting-problems-chain.png" align="middle" width="300"> </center>
-
+<center> <img src="Images/hitting-problems-chain.png" align="middle" width="300"/> </center>
 The partitioned matrix looks like this:
-
 $$
 P = \left(
 \begin{matrix}
- 0.6 & 0.1 & 0.3 & 0 & 0  \\ 
- 0.2 & 0.2 & 0 & 0.3 & 0.3  \\
- 0 & 0 & 1 & 0 & 0 \\
- 0 & 0 & 0 & 1 & 0 \\
- 0 & 0 & 0 & 0 & 1
+ 0.6 &amp; 0.1 &amp; 0.3 &amp; 0 &amp; 0  \\ 
+ 0.2 &amp; 0.2 &amp; 0 &amp; 0.3 &amp; 0.3  \\
+ 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 \\
+ 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
+ 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1
 \end{matrix}
 \right)
 $$
-
 The hitting probability matrix in this case is:
-
 $$
 \mathbf{H} =  
 \left(
 \begin{matrix}
-0.8 & 0.1 & 0.1 \\
-0.2 & 0.4 & 0.4
+0.8 &amp; 0.1 &amp; 0.1 \\
+0.2 &amp; 0.4 &amp; 0.4
 \end{matrix}
 \right)
 $$
-
 The hitting times are:
-
 $$
 \mathbf{h} = \left(
  \begin{matrix}
@@ -366,84 +342,77 @@ $$
  \end{matrix}
  \right)
 $$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 4</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 A university introduces a new mathematics degree structure. The course is
 only two years long but students have to resit a year if they fail their final
 examinations.  Students also have the option to resit the first and second
 years if they feel they did particularly poorly during year 2.  In any given
 year students perform as follows in the two years:
-
 <table align="center">
-<col width="200">
-<col width="200">
-<col width="200">
-<col width="200">
-<tr><td> </td><td> Fraction passed </td><td> Fraction failed </td><td> Fraction dropped out </tr>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<tr><td> </td><td> Fraction passed </td><td> Fraction failed </td><td> Fraction dropped out </td></tr>
 <tr><td> Year 1 </td><td> 0.1 </td><td> 0.6 </td><td> 0.3 </td></tr> 
 </table>
-
 <br/>
-
 <table align="center"> 
-<col width="200">
-<col width="200">
-<col width="200">
-<col width="200">
-<tr><td></td><td>  Fraction passed </td><td> Fraction repeat year 1 </td><td> Fraction repeat year 2 </td></tr> 
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<col width="200"/>
+<tr><td/><td>  Fraction passed </td><td> Fraction repeat year 1 </td><td> Fraction repeat year 2 </td></tr> 
 <tr><td> Year 2 </td><td> 0.6 </td><td> 0.2 </td><td> 0.2 </td></tr>
 </table> 
-
 Construct a Markov chain based on this information and use this chain to calculate the probability that a student starting this course will complete it and the 
 expected number of years a student will spend at university.
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-3" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 The Markov chain in this question contains four states.  In the matrix given below the states are as follows
-
 <ol>
 <li> Student in year 1 </li>
 <li> Student in year 2 </li>
 <li> Student dropped out of year 1 </li>
 <li> Student graduated from year 2 </li>
 </ol>
-
 Notice that states 1 and 2 are thus transient and that states 3 and 4 are recurrent:
-
 $$
 \mathbf{A} = 
 \left(
  \begin{matrix}
-   0.6 & 0.1 & 0.3 & 0 \\
-   0.2 & 0.2 & 0 & 0.6 \\
-   0 & 0 & 1 & 0 \\
-   0 & 0 & 0 & 1 
+   0.6 &amp; 0.1 &amp; 0.3 &amp; 0 \\
+   0.2 &amp; 0.2 &amp; 0 &amp; 0.6 \\
+   0 &amp; 0 &amp; 1 &amp; 0 \\
+   0 &amp; 0 &amp; 0 &amp; 1 
  \end{matrix}
  \right)
 $$
-
 By using the same techniques that were used to solve the other problems on this page we can determine that the probability a 
 student completes the course is equal to $\frac{3}{15}$ and that on average each student spends three years at university.
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
+</br>
  
                     </div> 
 		</div>

@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<!-- Title -->
-	<title>Gamblers ruin</title>
+	<title>Quadratic functions</title>
 	<!-- Meta -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="">
@@ -67,7 +67,7 @@
 		<div id="content" class="container">
                     <div class="panel panel-blue">
                       <div class="panel-heading">
-                          <h1 class="panel-title"> Gamblers ruin</h1>
+                          <h1 class="panel-title"> Quadratic functions</h1>
                       </div>
                     </div> 
                     <div class="panel panel-primary">
@@ -82,57 +82,36 @@
                             <div class="panel-body">
                                 <div class="row">
                                     <div class="col-md-7">
-                                        <h3 class="no-margin no-padding">Gamblers ruin</h3>
+                                        <h3 class="no-margin no-padding">Quadratic functions</h3>
                                         <p align="justify">
-Gamblers ruin is a problem involving a particular discrete time Markov chain.
-The transition matrix for the Gamblers ruin problem is the following $(N+1) \times (N+1)$ 
-square matrix:
+A quadratic function is any function having the form:
 $$
-M = \left(
-\begin{matrix}
-1 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 0 \\
-q & r & p & 0 & 0 & \dots & 0 & 0 & 0 \\ 
-0 & q & r & p & 0 & \dots & 0 & 0 & 0 \\
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
-0 & 0 & 0 & 0 & 0 & \dots & q & r & p \\
-0 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 1
-\end{matrix}
-\right)
+f(x) = ax^2 + bx + c 
 $$
-where $q + r + p = 1$.  This chain has ($N-1$) transient states and two recurrent states so 
-solving this problem ammounts to finding hitting times and hitting probabilities.  What makes
-this particular chain interesting is that the symmetry of the matrix ensures that it is possible to 
-find the hitting probabilities by solving a homogeneous difference equation.  Furthermore, we can find the 
-hitting times by solving an inhomogenous difference equation.   When these two probelms are solved we find that
-the conditional probability, $\pi_k$, of finishing in state $0$ given that we start in state $k$ is given by:
+where $a$, $b$ and $c$ are parameters and where $a \ne 0$.  Quadratics can be written
+in a range of forms.  A very important result is the equation for the roots of the 
+qudaratic (the points where $f(x)=0$).  This equation is:
+
 $$
-\pi_k = \frac {\left( \frac{q}{p}\right)^k - \left(\frac{q}{p}\right)^N }{ 1 - \left(\frac{q}{p}\right)^N } 
+x = \frac{ -b \pm \sqrt{b^2 - 4ac} }{2 a} 
 $$
-The expected time to arrival in either state $0$ or state $N$ given that we start in state $k$ is by contrast:
-$$
-d_k = \frac{k}{q-p} - \frac{N(1-\pi_k)}{q-p}
-$$
-Notice that these equations are NOT valid in the limit when $q=p$ and that l'Hopital's rule must be used to find
-the probabilities in this limit. 
 
 <H4> Learning outcomes </H4> 
 <ul> 
-<li type="square"> You should be able to write out the transition graph and the transition matrix for the gamblers ruin problem.
+<li type="square"> You should be able to factorise quadratics and multiply out factorised quadratics.
 </li> 
-<li type="square"> You should be able to classify the states in the gamblers ruin problem as transient/recurrent.
+<li type="square"> You should be able to find the roots of a quadratic equation.
 </li> 
-<li type="square"> You should be able to derive an expression for the probability of ruin in the gamblers run problem.
+<li type="square"> You should be able to find the intercept for a quadratic equation.
 </li> 
-<li type="square"> You should be able to calculate the probability of ruin in the limit of equal forward and backward jump probabilities ($p=q$) using l'Hopital's rule.
+<li type="square"> You should be able to complete the square in order to find the location of the minimum/maximum for a quadratic equation.
 </li> 
-<li type="square"> You should be able to use condition expectation to obtain a difference equation the solution of which tells one the length of the game in gamblers ruin.
-</li> 
-<li type="square"> You should be able to solve the difference equation for the length of the game to find an expression for the expected length of the game.
+<li type="square"> When given the equation of a quadratic you should be able to draw a sketch of the graph and indicate where the graph crosses the $x$ and $y$ axis and the location of the minimum/maximum for the curve.
 </li> 
 </ul> 
 </p>
                                     </div>
-                                    <div class="col-md-5"><object data="GAMBLERS_RUIN.svg" type="image/svg+xml" width="100%"></object></div>
+                                    <div class="col-md-5"><object data="QUADRATIC_EQUATIONS.svg" type="image/svg+xml" width="100%"></object></div>
                                 </div>
                             </div>
                         </div>
@@ -152,13 +131,7 @@ the probabilities in this limit.
                                      <div class="row">
                                         <table>
                                         <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr> 
-                                          <tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="gamblers-runs-video.html">A video explaining the gamblers ruin problem and the derivation of the difference equations.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap08.pdf">Some introductory notes on random walks.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap09.pdf">Some notes on how the expected number of games is worked out in the gamblers ruin problem.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>J. F. McCann</td></tr> 
-
+                                          
                                         </table>
                                      </div>
                                 </div>
@@ -179,13 +152,7 @@ the probabilities in this limit.
                                         <table>
                                         <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>
                                           <tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-gamblers-ruin.ipynb" download="sor3012-gamblers-ruin.ipynb"> A programming exercise on gamblers ruin</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="resources/gamblers-ruin-probability.pdf">Deriving the probability of ruin in gamblers ruin</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="resources/gamblers-ruin-expectation.pdf">Deriving the expected length of the game in the gamblers ruin problem</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="gamblers-ruin-problems.html">Some exercises that use the solutions of the gamblers ruin problem.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
+<td></td><td><i class="fa fa-signal fa-3x"></i></td><td><a href="quadratic-equation-exercise.html">An exercise on sketching quadratic equations.</a></td><td><a href="AMA4004.html">AMA4004</a></td><td>G. Tribello</td></tr> 
 
                                         </table>
                                      </div>

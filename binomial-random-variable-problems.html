@@ -71,68 +71,62 @@
                           <h1 class="panel-title"> Binomial random variable
  : Exercises</h1>
                       </div>
-                      
-<H1> Introduction </H1>
-
+                      <H1> Introduction </H1>
+<DESCRIPTION>
 The problems below all involve the binomial random variable in some way.  Remember that this
 random variable is used to model the number of successes in a set of $n$ Bernoulli trials and that
 the probability mass function for this random variable is:
 $$
 f_X(x) = \binom{n}{x} (1-p)^{n-x} p^x
 $$
-
-<H1> Example problems </H1>
+</DESCRIPTION>
+  <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 A new two player gambling game is invented in which two, fair 6-sided dice are rolled.  Player A wins if both dice show numbers that are less
 than or equal to four, while player B wins if either dice shows a 5 or 6.  Determine which player is most likely to win and explain the additional
 (but reasonable) assumption that you are required to make in answering this question.
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-0" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 The probability that player B wins can be determined using binomial distribution or similar (probability that 1 or 2 dice is equal to 5/6):
-
 $$
 P(\textrm{B wins}) = \binom{2}{1} 
 \left(\frac{1}{3}\right)\left(\frac{2}{3}\right) + \binom{2}{2} \left(
 \frac{1}{3}\right)\left(\frac{1}{3}\right) = 2 \times \frac{2}{9} + \frac{1}{9}
 = \frac{5}{9}
 $$ 
-
 To answer this question we must assume that the dice do not affect each other.  That is to say we must assume that the random variables
 that tell us the outcomes of the two dice rolls are independent.
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Consider the binomially-distributed, discrete random variable, $X$, with
 probability mass function:
 $$
  P(X=x) = f_X(x) = 
  \begin{cases}
-  \binom{n}{x} p^x(1-p)^{n-x} & x=0,1,2,\dots,n \\
-  0 & \textrm{otherwise}
+  \binom{n}{x} p^x(1-p)^{n-x} &amp; x=0,1,2,\dots,n \\
+  0 &amp; \textrm{otherwise}
  \end{cases}
 $$
 By making the substitution $p=\frac{\lambda}{n}$ and by recalling that
@@ -142,20 +136,20 @@ Distribution:
 $$
  P(X=x) = f_X(x) = 
  \begin{cases}
-  \frac{\lambda^x}{x!} e^{-\lambda}  & x=0,1,2,\dots,n \\
-  0 & \textrm{otherwise}
+  \frac{\lambda^x}{x!} e^{-\lambda}  &amp; x=0,1,2,\dots,n \\
+  0 &amp; \textrm{otherwise}
  \end{cases}
  \nonumber
 $$
 in the limit as $n \rightarrow \infty$ 
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-1" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 Let's being by rewriting the binomial distribution in terms of $\lambda$
 $$
 f_X(x) = \binom{n}{x} \left( \frac{\lambda}{n} \right)^x \left( 1 -
@@ -167,17 +161,16 @@ And now lets use the limit from the question:
 $$
  \begin{aligned}
   \lim_{n \rightarrow \infty} \frac{n!}{x!(n-x)!} \left( \frac{\lambda}{n}
-\right)^x \left( 1 - \frac{\lambda}{n} \right)^{n-x} & = \lim_{n \rightarrow
+\right)^x \left( 1 - \frac{\lambda}{n} \right)^{n-x} &amp; = \lim_{n \rightarrow
 \infty} \frac{\lambda^x n^x}{n^x x!} \left( 1- \frac{\lambda}{n} \right)^{n-x}
 \\
-& = \frac{\lambda^x}{x!} \lim_{n\rightarrow \infty} \left( 1- \frac{\lambda}{n}
+&amp; = \frac{\lambda^x}{x!} \lim_{n\rightarrow \infty} \left( 1- \frac{\lambda}{n}
 \right)^n \\
-& = \frac{\lambda^x}{x!} e^{-\lambda}
+&amp; = \frac{\lambda^x}{x!} e^{-\lambda}
 \end{aligned}
 $$
 In the last line here we need to use the Euler limit definition of exponential function
 $e^{-\lambda} = \lim_{n\rightarrow \infty} \left( 1- \frac{\lambda}{n} \right)^n$ 
-
 Notice that in answering this question we have had to use a result from the algebra
 of limits.  In particular, we have had to use the fact that if $\lim_{x\rightarrow a} f(x) = L_f$ 
 and $\lim_{x\rightarrow a} g(x) = L_g$ then:
@@ -185,10 +178,12 @@ $$
 \lim_{x\rightarrow a} f(x)g(x) = \lim_{x\rightarrow a} f(x)\lim_{x\rightarrow a} g(x) = L_f L_g
 $$
  
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
+</br>
  
                     </div> 
 		</div>

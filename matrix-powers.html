@@ -5,7 +5,8 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<!-- Title -->
-	<title> Introduction to Bayes theorem  : Exercise</title>
+	<title>Taking powers of a matrix
+ : Exercise</title>
 	<!-- Meta -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="">
@@ -67,56 +68,103 @@
 		<div id="content" class="container">
                     <div class="panel panel-blue">
                       <div class="panel-heading">
-                          <h1 class="panel-title">  Introduction to Bayes theorem  : Introductory video</h1>
+                          <h1 class="panel-title"> Taking powers of a matrix
+ : Exercises</h1>
                       </div>
-                     </div>
-                      <div class="row margin-vert-30">
-                      <div class="panel panel-primary">
-                        <div class="panel-heading">
-                         <h4 class="panel-title">
-                           Before watching the video read the questions below.  As you watch the video try to answer them 
-                         </h4>
-                        </div>
-                        <div class="panel-body">
-                          <div class="row">
-                           <p align="center">
-                           <iframe width="630" height="472" src=" https://www.youtube.com/embed/P9pXM6sT7J0 " frameborder="0" allowfullscreen></iframe>
-                           </p>
-                           
-                           <ul>
-                             <UL>
-    <LI> 
-      For the first problem in the video - the one about the female engineers - is the quantity you are being asked to calculate a conditional or an absolute probability?  
-    </LI> 
-    <LI> 
-      For the female engineers problem you are given two conditional probabilities and one absolute probability.  What are these the probabilities of?
-    </LI>
-    <LI> 
-      For the question about the medical test there are two random variables: there is a Bernoulli random variable that tells you whether you have 
-      the disease and a Bernoulli random variable that tells you whether or not the test result was positive.  Are these random variables independent of each other?  Explain your reasoning.
-    </LI>
-    <LI> 
-      Give a statement of Bayes theorem.
-    </LI>
-    <LI> 
-      Suppose you now administered two tests to the patient to determine whether or not they have the disease.  Test A comes up positive in $P(T_1=1|D=1)$ percent of diseased 
-      patients and positive in $P(T_1=1|D=0)$ percent of healthy patients.  Test B by contrast comes up positive in $P(T_2=1|D=1)$ percent of diseased patients and positive 
-      in $P(T_2=1|D=0)$ percent of healthy patients.  Draw a Venn diagram showing the various possible categories each individual could be in.  If we can calculate the probability 
-      that a person has the disease given they had positive results for the two tests using 
-      $P(D=1|T_1=1 \wedge T_2=1) = \frac{P(T_1=1|D=1)P(T_2=1|D=1)P(D=1)}{ P(T_1=1|D=1)P(T_2=1|D=1)P(D=1) + P(T_1=0|D=1)P(T_2=1|D=1)P(D=1) + P(T_1=1|D=1)P(T_2=0|D=1)P(D=1) + P(T_1=0|D=1)P(T_2=0|D=1)P(D=1) }$ 
-      what further assumption have we made?  How would we use Bayes theorem to calculate this conditional probability with this assumption relaxed?
-    </LI>
-    <LI> 
-      Consider a pair of discrete random variables, $X$ and $Y$, that can both take values between $0$ and $n$.  Use Bayes theorem to derive an expression for the conditional probability 
-      $P(X=a|Y=y)$ in terms of the set of absolute probabilities, $P(X=x_j)$, for getting each possible value for $X$ and the set of conditional probabilities $P(Y=y|X=x_j)$ for getting $Y=y$ 
-      given that $X=x_j$.  In doing this you will need to use summation notation.
-    </LI>
-  </UL>
+                      <H1> Introduction </H1>
+<DESCRIPTION>
+We can take powers of square matrices by doing matrix multiplication.  We thus have:
+\begin{equation}
+ \left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right)^2 = 
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right)
+\left(
+ \begin{matrix}
+  a &amp; b \\
+  c &amp; d
+ \end{matrix}
+\right) = 
+\left(
+ \begin{matrix}
+  a^2 + bc &amp; ab + bd \\
+  ca + dc &amp; bc + d^2
+ \end{matrix}
+\right)
+\end{equation}
+</DESCRIPTION>
+  <H1> Example problems </H1>
+<p> Click on the problems to reveal the solution </p> 
+<H1> Problems for you to try </H1> 
+<div id="accordion" class="panel-group"> 
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+               <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
+                  Exercise 1
 
-                           </ul>
-                          </div>
-                        </div>
-                      </div>
+               </a>
+            </h4>
+        </div>
+        <div id="collapse-0" class="accordion-body collapse in">
+            <div class="panel-body">
+               <div class="row">
+<PROBLEMS>Calculate the following matrix powers: <br/><br/>
+<table>
+<tr><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)^2
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 3 &amp; 2 \\
+ -4 &amp; 8
+\end{matrix}
+\right)^3
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+3 &amp; 2 &amp; -1 \\
+5 &amp; 3 &amp; 2 \\
+6 &amp; 1 &amp; 4
+\end{matrix}
+\right)^2
+$$
+</td><td>
+$$
+\left(
+\begin{matrix}
+ 6 &amp; 3 \\
+ 2 &amp; -1
+\end{matrix}
+\right)^4
+$$
+</td></tr>
+</table>
+</PROBLEMS>
+           </div>
+      </div>
+   </div>
+</div>
+ 
+                    </div> 
 		</div>
 	</div>
 	<!-- === END CONTENT === -->

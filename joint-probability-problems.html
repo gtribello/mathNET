@@ -5,8 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 	<!-- Title -->
-	<title>Joint probability distribution function
- : Exercise</title>
+	<title>Joint probability distribution function  : Exercise</title>
 	<!-- Meta -->
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="description" content="">
@@ -68,71 +67,64 @@
 		<div id="content" class="container">
                     <div class="panel panel-blue">
                       <div class="panel-heading">
-                          <h1 class="panel-title"> Joint probability distribution function
- : Exercises</h1>
+                          <h1 class="panel-title"> Joint probability distribution function  : Exercises</h1>
                       </div>
-                      
-<H1> Introduction </H1>
-
+                      <H1> Introduction </H1>
+<DESCRIPTION>
 A pair of discrete random variables $X$ and $Y$ has a joint probability mass function in which
 $$
 f_{XY}(x,y) = P(X=x \wedge Y=y)
 $$
 The following exercises get you to manipulate these objects and to extract marginal distributions
 from joint distributions.
-
-<H1> Example problems </H1>
+</DESCRIPTION>
+  <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Consider a pair of discrete random variables $X$ and $Y$.  What formulae would you use to calculate the conditional probability $P(X=4|Y=1)$ and the conditional
 expectation $\mathbb{E}(X|Y=1)$
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-0" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 Probability $X=4$ given $Y=1$ is given by:
 \[
   P(X=4|Y=1) = \frac{P(X=4 \wedge Y=1)}{P(Y=1)} 
 \]
-
 <br/>
-
 Expectation of $X$ given $Y=1$ is given by:
 \[
 \mathbb{E}(X|Y=1) = \sum_{i=0}^\infty x_i P(X=i|Y=1)  
 \]
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 2</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 Consider the two random variables $X$ and $Y$ with $X \in \{0,1,2\}$ and $Y \in
 \{1,2,4\}$.  The following table gives the join probability mass for the variables (with $X$ along the top):
 <br/>
 <table align="center">
-<col width="100">
-<col width="100">
-<col width="100">
-<col width="100">
+<col width="100"/>
+<col width="100"/>
+<col width="100"/>
+<col width="100"/>
 <tr> <td> $f_{XY}(x,y)$ </td><td> 0 </td><td> 1 </td><td> 2 </td></tr>
 <tr> <td> 1 </td><td> 0.1 </td><td> 0.1 </td><td> 0.0 </td></tr> 
 <tr> <td> 2 </td><td> 0.2 </td><td> 0.1 </td><td> 0.1 </td></tr> 
@@ -142,79 +134,72 @@ Consider the two random variables $X$ and $Y$ with $X \in \{0,1,2\}$ and $Y \in
 Calculate the values of (i) $\mathbb{E}(X)$, (ii) $\mathbb{E}(Y)$ and (iii) $\textrm{cov}(X,Y)$.  Then
 calculate a table of values for the conditional probability mass $f_{X|Y}(x,y)$ and use these conditional
 probabilities to calculate the values of $\mathbb{E}(X|Y)$ for $y=1,2,4$.  
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-1" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 $$
 \mathbb{E}(X) = 1 \qquad \mathbb{E}(Y) = 2.6 \qquad \textrm{cov}(X,Y) = 0.5
 $$
-
 <br/>
-
 The table of conditional probability masses is as follows:
-
 <br/> <br/>
-
-<table align=center> 
-<col width="100">
-<col width="100">
-<col width="100">
-<col width="100">
+<table align="center"> 
+<col width="100"/>
+<col width="100"/>
+<col width="100"/>
+<col width="100"/>
 <tr><td> $f_{X|Y}(x,y)$ </td><td> 0 </td><td> 1 </td><td> 2 </td></tr> 
 <tr><td> 1 </td><td> 0.5 </td><td> 0.5 </td><td> 0.0 </td></tr>
 <tr><td> 2 </td><td> 0.5 </td><td>0.25 </td><td> 0.25 </td></tr>
 <tr><td> 4 </td><td> 0.0 </td><td> 0.5 </td><td> 0.5 </td></tr>
 </table>
-
 <br/>
-
 which ensures that the conditional expectations are:
-
 $$
 \mathbb{E}(X|Y=1) = 0.5 \quad \mathbb{E}(X|Y=2) = 0.75 \quad \mathbb{E}(X|Y=4) = 1.5  
 $$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
-<h4> Problem 3</h4>
-<div id="accordion" class="panel-group"> 
-<!-- Start of introductory panel -->
+</br>
+<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
 <div class="panel panel-default">
     <div class="panel-heading">
         <h4 class="panel-title">
         <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-
+<QUESTION>
 The random variables $X$ and $Y$ are independent and have probability masses given by:
 \[
 \begin{aligned}
-P(X=1) &= 0.2 \quad P(X=2) = 0.2 \quad P(X=3) = 0.6 \\
-P(Y=0) &= 0.4 \quad P(Y=1)=0.3 \quad P(Y=2) = 0.3
+P(X=1) &amp;= 0.2 \quad P(X=2) = 0.2 \quad P(X=3) = 0.6 \\
+P(Y=0) &amp;= 0.4 \quad P(Y=1)=0.3 \quad P(Y=2) = 0.3
 \end{aligned}
 \]
 Calculate the values of $\mathbb{E}(X)$, $\mathbb{E}(Y)$ and $\mathbb{E}(XY)$.
-
-        </a>
+</QUESTION>
+              </a>
         </h4>
     </div>
     <div id="collapse-2" class="accordion-body collapse">
         <div class="panel-body">
            <div class="row">
-
+<SOLUTION>
 $$
 \mathbb{E}(X) = 2.4 \qquad \mathbb{E}(Y) = 0.9 \qquad \mathbb{E}(XY)= 2.16
 $$
-
-         </div>
+</SOLUTION>
+             </div>
       </div>
    </div>
 </div>
+</br>
  
                     </div> 
 		</div>

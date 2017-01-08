@@ -71,9 +71,8 @@
                           <h1 class="panel-title"> Detailed Balance
  : Exercises</h1>
                       </div>
-                      
-<H1> Introduction </H1>
-
+                      <H1> Introduction </H1>
+<DESCRIPTION>
 In solving the following problems you will use the detailed balance condition:
 $$
 \pi_i p_{ij} = \pi_j p_{ji}
@@ -82,32 +81,33 @@ to find the limiting staionary distribution for a Markov chain.  Markov chains
 with limiting stationary distributions don't always satisfy detailed balance 
 so you need to take care when using this method for finding the stationary distribution.
 If you are in any doubt use the method based on finding the top eigenvector.  
-
+</DESCRIPTION>
+  <H1> Example problems </H1>
+<p> Click on the problems to reveal the solution </p> 
 <H1> Problems for you to try </H1> 
 <div id="accordion" class="panel-group"> 
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
+               <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
                   A first problem
 
                </a>
             </h4>
         </div>
-        <div id="collapse-1" class="accordion-body collapse in">
+        <div id="collapse-0" class="accordion-body collapse in">
             <div class="panel-body">
                <div class="row">
-
-Consider the  reversible  Markov chain, between the states 
+<PROBLEMS>Consider the  reversible  Markov chain, between the states 
 $X=0,1,2,3$,  represented  by  the following transition matrix. 
 $$
 P=
 \left(
 \begin{matrix}
-0.5   &  0.5  & 0 &    0  \\
- 0.05 &  0.45 & 0.5 & 0 \\
-0     &  0.1 &  0.5 &  0.4  \\
-0 & 0 &  0.3  &  0.7 \\
+0.5   &amp;  0.5  &amp; 0 &amp;    0  \\
+ 0.05 &amp;  0.45 &amp; 0.5 &amp; 0 \\
+0     &amp;  0.1 &amp;  0.5 &amp;  0.4  \\
+0 &amp; 0 &amp;  0.3  &amp;  0.7 \\
 \end{matrix}
 \right) \qquad .
 $$
@@ -117,38 +117,40 @@ Once you have calculated $\pi$ use it to verify that this is the
 stationary distribution by showing that $\pi P = \pi$.  Then use
 the ergodic theorem to calculate the recurrence time (expected return time) 
 for state $X=2$.
-
-         </div>
+</PROBLEMS>
+           </div>
       </div>
    </div>
+</div>
+<H1> Problems for you to try </H1> 
+<div id="accordion" class="panel-group"> 
     <div class="panel panel-default">
         <div class="panel-heading">
             <h4 class="panel-title">
-               <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
+               <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
                   A big chain
 
                </a>
             </h4>
         </div>
-        <div id="collapse-2" class="accordion-body collapse in">
+        <div id="collapse-1" class="accordion-body collapse in">
             <div class="panel-body">
                <div class="row">
-
-Consider the  reversible  Markov chain, between the 
+<PROBLEMS>Consider the  reversible  Markov chain, between the 
 states $X=0,1,2,3,4,5,6,7,8$,  represented  by  the following matrix. 
 $$
 P=
 \left(
 \begin{matrix}
- 0& 1/2& 0& 0& 0& 1/2& 0& 0& 0\\ 
- 1/3 & 0 &1/3& 0& 1/3& 0& 0& 0& 0 \\
- 0& 1/2 &0 &1/2& 0& 0& 0& 0& 0 \\
- 0 &0 & 1/3& 0 &1/3& 0 &0 &0 &1/3\\ 
- 0& 1/4& 0 &1/4& 0& 1/4& 0& 1/4 &0\\ 
- 1/3& 0 &0& 0& 1/3& 0& 1/3& 0& 0 \\
- 0& 0 &0 &0 &0 &1/2& 0& 1/2& 0 \\
- 0& 0 &0& 0& 1/3 &0 &1/3& 0 &1/3\\ 
- 0 &0& 0& 1/2& 0& 0& 0& 1/2& 0   \\
+ 0&amp; 1/2&amp; 0&amp; 0&amp; 0&amp; 1/2&amp; 0&amp; 0&amp; 0\\ 
+ 1/3 &amp; 0 &amp;1/3&amp; 0&amp; 1/3&amp; 0&amp; 0&amp; 0&amp; 0 \\
+ 0&amp; 1/2 &amp;0 &amp;1/2&amp; 0&amp; 0&amp; 0&amp; 0&amp; 0 \\
+ 0 &amp;0 &amp; 1/3&amp; 0 &amp;1/3&amp; 0 &amp;0 &amp;0 &amp;1/3\\ 
+ 0&amp; 1/4&amp; 0 &amp;1/4&amp; 0&amp; 1/4&amp; 0&amp; 1/4 &amp;0\\ 
+ 1/3&amp; 0 &amp;0&amp; 0&amp; 1/3&amp; 0&amp; 1/3&amp; 0&amp; 0 \\
+ 0&amp; 0 &amp;0 &amp;0 &amp;0 &amp;1/2&amp; 0&amp; 1/2&amp; 0 \\
+ 0&amp; 0 &amp;0&amp; 0&amp; 1/3 &amp;0 &amp;1/3&amp; 0 &amp;1/3\\ 
+ 0 &amp;0&amp; 0&amp; 1/2&amp; 0&amp; 0&amp; 0&amp; 1/2&amp; 0   \\
 \end{matrix}
 \right) \qquad .
 $$
@@ -159,7 +161,8 @@ stationary state and the ergodic theorem to calculate the fraction of time that 
 in state $X=6$ and the expected return time for state 3. That is, the expected number of 
 steps, starting from state $X=3$, until the system returns to state 3 
 for the first time.
-         </div>
+</PROBLEMS>
+           </div>
       </div>
    </div>
 </div>

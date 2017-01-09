@@ -153,6 +153,55 @@ $$
   <QUESTION_GROUP>
     <EXAMPLE>
       <QUESTION>
+       Roger Federer has championship point in the Wimbledon Final. Thus far in the match he served 141 times and  90 of those serves have
+       landed in the service box. Use the central-limit theorem to estimate the probability that his first serve will be in during the championship point and
+       provide error bars for a 90% confidence level on your numerical estimate.  Discuss what approximations you have made in doing this calculation and whether or not you
+       think they are sensible.
+      </QUESTION>
+      <SOLUTION>
+        We will assume that each serve is the generation of a random number from a Bernoulli random variable, $X$.  In other words we will assume that the
+        probability of getting each serve in is a constant.  The number of services that landed in is thus the sum of many of these random numbers. That is to say it
+        is:
+        $$
+         S_n = X_1 + X_2 + X_3 + \dots + X_n \nonumber
+        $$
+        We can thus estimate the parameter $p$, which is the mean of the Bernoulli random variable, by assuming the Law of Large Numbers holds:
+        $$ 
+        p = \frac{ \textrm{Number of first serves in} }{ \textrm{Number of first serves} } = \frac{90}{141} \approx 0.638  
+        $$
+        (a more correct method here is to note that $S_n$ is a binomially distributed random variable with parameter $p$ and to calculate the parameter using maximum likelihood).
+        <br/><br/>
+        We can use the central limit theorem to get error bars for this estimate.  We want to be able to state the following about the probability distribution for
+        the sum of the Bernoulli random variables (serve attempts):
+        $$
+        \begin{aligned}
+        P\left( \frac{ - \epsilon}{ \sigma / \sqrt{n} } \le \frac{ S_n / n -
+        \mu }{\sigma/\sqrt{n}} \le \frac{\epsilon}{ \sigma / \sqrt{n} } \right) &amp; =
+        0.90 \\
+        \Phi\left( \frac{\epsilon}{ \sigma / \sqrt{n} } \right) -  \Phi\left( - 
+        \frac{\epsilon}{ \sigma / \sqrt{n} } \right) &amp; = 0.90 \\
+        \Phi\left( \frac{\epsilon}{ \sigma / \sqrt{n} } \right) - \left[ 1 - \Phi\left(
+        \frac{\epsilon}{ \sigma / \sqrt{n} } \right) \right] &amp; = 0.90 \\
+        2\Phi\left( \frac{\epsilon}{ \sigma / \sqrt{n} } \right) - 1 &amp; =0.90
+        \end{aligned}
+        $$
+        In the second line here we use the central limit theorem, which we know is the probability distribution for the sum of random variables.  In the third line we
+        use the fact that the normal distribution function is an odd function.  Rearranging the above tells us that our error bars are given by:
+        $$ 
+        \epsilon = \frac{\sigma}{\sqrt{n}} \Phi^{-1}\left( \frac{1.90}{2} \right)
+        $$
+        The variance ($\sigma^2$) for a Bernoulli random variable is given by $\sigma^2=p(1-p)$.  So in our case this is 0.231.  Substituting this and the value of $n$ into the above gives:
+        $$
+        \epsilon \approx \frac{\sqrt{0.231}}{\sqrt{141}} \Phi^{-1}\left( \frac{1.90}{2} \right) \approx 0.0405 \times 1.6449 \approx 0.667
+        $$
+        This is not a sensible way of calculating the probability as serving on championship point is nothing like serving during the normal course of the match.  The individual random variables 
+        are not identically distributed
+      </SOLUTION>
+    </EXAMPLE> 
+   </QUESTION_GROUP>
+ <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
 In the Smoky Mountains National Park 55 % of the hawks are female.  Estimate the number of birds, $n$, that you would have to catch for there to be
 a probability of 0.9 of at least 50 % female birds in your sample.  Explain any assumptions you make in your derivation.
 </QUESTION>
@@ -165,7 +214,7 @@ We can use the central limit theorem to estimate the value of $n$ such that:
 P\left( \frac{S_n/n - \mu}{\sigma/\sqrt{n}} \le z \right) = 0.9
 \]
 where $\frac{S_n}{n} = 0.5$ as we want at least half of birds to be female,
-$\mu=0.55$ as this is the mean of our Bernoulli random variable and $\sigma = 
+$\mu=0.55$ as this is the mean of our Bernoulli random variable and $\sigma =
 \sqrt{0.55(0.45)} = 0.497$ as this is variance of a Bernoulli random variable.
 We can find the value of $z$ from the tables by looking up the inverse function
 for the normal distribution.  We want to find $z$ such that:
@@ -174,7 +223,7 @@ for the normal distribution.  We want to find $z$ such that:
 \]
 We thus have (for minimal sample size) i.e. $\frac{S_n/n - \mu}{\sigma/\sqrt{n}} = z$:
 \[
- \frac{0.5 - 0.55}{0.497/\sqrt{n} } = 1.2816 \quad \rightarrow \quad n = \left( 
+ \frac{0.5 - 0.55}{0.497/\sqrt{n} } = 1.2816 \quad \rightarrow \quad n = \left(
 \frac{1.2816 \times 0.497}{-0.05}\right)^2 \approx 163
 \]
 </SOLUTION>

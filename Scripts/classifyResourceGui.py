@@ -71,7 +71,7 @@ class AddResourceDialogue(QDialog):
        return True
 
    def browsefiles( self ):
-       filename = QFileDialog.getOpenFileName(self, 'Add resource file', 'Resources', "Files (*.ipynb *.pdf *.xml *.zip)" )
+       filename = QFileDialog.getOpenFileName(self, 'Add resource file', 'Resources', "Files (*.ipynb *.pdf *.xml *.zip *.tex)" )
        splitup = filename.split("/")
        if splitup[len(splitup)-2] != "Resources" : 
           error = QErrorMessage(self)

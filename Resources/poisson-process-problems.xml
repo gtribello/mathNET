@@ -1,0 +1,44 @@
+<PAGE>
+  <TITLE>Poisson Process Problems</TITLE>
+  <DESCRIPTION>
+  The problems below provide some further examples of problems that we can solve using this particular 
+  continuous time Markov chain.
+  </DESCRIPTION>
+  <QUESTION_GROUP>
+    <EXAMPLE>
+      <QUESTION>
+         The servers for the email system in a large company store all the emails that are sent or received on a hard drive.
+         Once this hard drive fills with data the system administrators must replace the drive.  If no emails arrive during this process this piece of routine
+         maintenance takes a total of $c$ hours.  However, this time is extended by an additional $d$ hours if any emails arrive as they are replacing the drive.
+         Show that the expected time to replace the hard drive is given by:
+         \[
+         \mathbb{E}(D) = (c+d) - de^{-\lambda c}
+         \]
+         if emails arrive in accordance with a Poisson process with a rate of $\lambda$ per hour.  If you are the manager of these engineers how much time should you allocate them to
+         complete the job of replacing the drive?
+      </QUESTION>
+      <SOLUTION>
+         As the emails arrive in accordance with a Poisson process the arrival time for the first email, $T$, is an exponentially distributed random variable with parameter $\lambda$
+         \[
+          P(T \le t ) = 1 - e^{-\lambda t} \qquad \rightarrow \qquad P(T = t ) = 
+         \frac{\textrm{d}P(T \le t)}{\textrm{d}t} = \lambda e^{-\lambda t}
+         \]
+         We can thus calculate the expectated time to complete the job by conditioning on the arrival time of first email.  We have:
+         \[
+          \mathbb{E}(D) = (c+d)\int_0^c \lambda e^{-\lambda t} \textrm{d}t + c \int_c^\infty \lambda e^{-\lambda t} \textrm{d}t
+         \]
+         This integral is solved as follows: 
+         \[
+         \begin{aligned}
+          \mathbb{E}(D) &amp; = (c+d)\lambda \int_0^c e^{-\lambda t} \textrm{d}t + c\lambda \int_c^\infty e^{-\lambda t} \textrm{d}t \\
+                        &amp; = (c+d)\lambda \left[ -\frac{1}{\lambda}e^{-\lambda t} \right]_0^c + c\lambda \left[ -\frac{1}{\lambda} e^{-\lambda t} \right]_c^\infty \\
+                        &amp; = (c+d)[1 - e^{-\lambda c}] + ce^{-\lambda c} \\
+                        &amp; = (c+d) - de^{-\lambda c} 
+         \end{aligned}
+         \]
+         It will take the engineers either $c$ hours or $c+d$ hours to complete the job.  The time they take <b> will never</b> be equal to the expectation.  Hence you
+         should allocate $c+d$ hours of their time as this is the longer of the two times.
+      </SOLUTION>
+    </EXAMPLE> 
+  </QUESTION_GROUP>
+</PAGE>

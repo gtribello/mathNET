@@ -12,3 +12,4 @@ LEARNINGOUTCOMES:
 
 END:
 PHASE_TRANSITIONS INTRO XML AMA4004 phase-transitions-video G.~Tribello An explanation of the difference between first order and continuous phase transitions.
+PHASE_TRANSITIONS INTRO XML AMA4004 ising-model-phase-trans-video G.~Tribello A video discussing how the behavior of systems at phase transitions can be reconciled with the predictions of statistical thermodynamics.

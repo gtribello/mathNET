@@ -11,3 +11,4 @@ LEARNINGOUTCOMES:
 END:
 LATTICE_GAS EXERCISE XML AMA4004 lattice-gas-problems G.~Tribello Exericses on calculating partition functions for model systems.
 LATTICE_GAS EXERCISE GEOGEBRA AMA4004 two-state-model-exercise G.~Tribello An exercise on understanding the statistical mechanics of two state systems.
+LATTICE_GAS INTRO XML AMA4004 lattice-gas-video G.~Tribello An video showing how the partition function for a system of non-interacting particles sat on lattice sites is calculated

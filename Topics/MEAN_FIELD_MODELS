@@ -14,3 +14,4 @@ END:
 MEAN_FIELD_MODELS EXERCISE XML AMA4004 mean-field-problems G.~Tribello Problems in which the mean field approximation is used to examine Ising models in one and two dimensions.
 MEAN_FIELD_MODELS EXERCISE GEOGEBRA AMA4004 mean-field-ex-one G.~Tribello Understanding the behavior of the magnetization for the mean-field, 1D Ising model
 MEAN_FIELD_MODELS EXERCISE GEOGEBRA AMA4004 mean-field-ex-two G.~Tribello Understanding the free energy landscape for the mean-field, 1D Ising model
+MEAN_FIELD_MODELS INTRO XML AMA4004 mean-field-approx-video G.~Tribello An video describing how we can use the mean field approximation to calculate an approximation to the partition function for the Ising model.

@@ -1,0 +1,16 @@
+<PAGE>
+  <TITLE>The Ising Model </TITLE>
+  <VIDEO> https://www.youtube.com/embed/2HehOGh0j7M </VIDEO>
+  <UL>
+    <LI> Give an expression for the Ising model Hamiltonian </LI>
+    <LI> Explain how the spins interact in the Ising model by making reference to the Hamiltonian you wrote out </LI>
+    <LI> Explain the distinction between a closed Ising model and an open Ising model </LI>   
+    <LI> Draw a table with three columns and consider an closed Ising model system containing only two spins.  In the first column of your table write out the various possible microstates this system could adopt.  Use the Ising model Hamiltonian to calculate the energy of the microstates and write this in the second column.  Lastly, in the third column write the contribution this microstate would make to the partition function.  Sum all the elements in the third column to get the partition function for this particular system.  </LI>
+    <LI> What is the transfer matrix equal to for a system of Ising spins? </LI>
+    <LI> The video tells us that we can calculate this partition function by taking the trace of the square of transfer matrix. Calculate this matrix trace and confirm that it is equal to the value that you obtained by manually enumerating all the states</LI>
+    <LI> Explain the meanings of the terms eigenvalue and eigenvector and explain how a diagonalizable matrix can be decomposed in terms of its eigenvalues and eigenvectors </LI>
+    <LI> Explain why the partition function for the Ising model is equal to the sum of the eigenvalues of the transfer matrix raised to the power of the number of spins in the system </LI>
+    <LI> What value do the eigenvalues of the transfer matrix take when $H \ne 0$ and when $H=0$? </LI> 
+    <LI> What is the partition function for a system of Ising spins </LI>
+  </UL>
+</PAGE>

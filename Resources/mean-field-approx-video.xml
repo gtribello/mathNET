@@ -1,0 +1,11 @@
+<PAGE>
+  <TITLE>The mean field approximation</TITLE>
+  <VIDEO> https://www.youtube.com/embed/kyfQhlH_0qA </VIDEO>
+  <UL>
+    <LI> Explain how the Hamiltonian for the Ising model can be approximated using the mean field approximation. </LI>
+    <LI> Explain why approximating the Ising model Hamiltonian in this way simplifies the calculation of the partition function </LI>
+    <LI> Write out an expression for the partition function of the Ising model when it is calculated using the mean field approximation. </LI>
+    <LI> Explain how one can calculate the average spin term $\langle S \rangle$ that appears in the expression for the partition function that you have just written out by taking suitable derivatives of the partition function </LI>
+    <LI> Write out an expression for the average spin that involves the $\tanh$ function </LI> 
+  </UL>
+</PAGE>

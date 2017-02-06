@@ -28,3 +28,4 @@ LEARNINGOUTCOMES:
 
 END:
 ISING_MODEL EXERCISE XML AMA4004 ising-model-problems G.~Tribello Problems on using transfer matrices to calculate partition functions and ensemble averages for interacting systems
+ISING_MODEL INTRO XML AMA4004 ising-model-video G.~Tribello A video that explains how the partition function for a one dimensional system of Ising spins can be calculated exactly.

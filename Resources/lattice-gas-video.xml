@@ -1,0 +1,14 @@
+<PAGE>
+  <TITLE>Lattice Gasses</TITLE>
+  <VIDEO> https://www.youtube.com/embed/-LGHCcr6LOM </VIDEO>
+  <UL>
+    <LI> What two factors is it important to consider when calculating the partition function for a model system? </LI>
+    <LI> What Hamiltonian is stuided in this video?  What do all the terms in the Hamiltonian describe?  What does the sum run over? </LI>
+    <LI> How many states can each of the spins be in? </LI>
+    <LI> Why is it significant that each term in the summation in the Hamiltonian depends on the value of only one spin variable? </LI>
+    <LI> Suppose each spin could be in one of three states rather than one of two states.  How many different microstates would there be for a system containing $N$ such spins? </LI>
+    <LI> Explain why (using the arguments in the video) the partition function for the lattice spins is $Z=2^N \cosh(\beta \mu H)$ </LI>
+    <LI> How is the average energy of the system calculated from the partition function?  What is the average energy for the system of spins under study in this exercise? </LI> 
+    <LI> What happens to the the average energy of the system in the low and high-temperature limits? What does this imply about the behavior of the psins? </LI>
+  </UL>
+</PAGE>

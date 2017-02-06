@@ -1,0 +1,13 @@
+<PAGE>
+  <TITLE>Phase transitions in the Ising Model</TITLE>
+  <VIDEO> https://www.youtube.com/embed/xzR7J0uqStM </VIDEO>
+  <UL>
+    <LI> Explain the meanings of the terms first order phase transition and continuous phase transition </LI>
+    <LI> Explain how statistical mechanics shows that finite sized systems do not exhibit phase transitions </LI>
+    <LI> Explain the meaning of the term thermodynamic limit </LI>
+    <LI> Explain why the free energy of the Ising model is given by $F=-k_B T \ln \lambda_1$ in the thermodynamic limit.  In this expression $\lambda_1$ is the principle eigenvalue of the transfer matrix </LI>
+    <LI> Derive an expression for the average magnetisation of the Ising model in the thermodynamic limit </LI>
+    <LI> Explain how the magnetic suceptibility is calculated and derive an expression for this quantity for the Ising model in the thermodynamic limit. </LI>
+    <LI> Discuss the behavior of the suceptibility of the Ising model as the temperature goes to zero and whether or not this behavior is indivative of a phase transition. </LI>
+  </UL>
+</PAGE>

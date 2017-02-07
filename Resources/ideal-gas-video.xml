@@ -1,0 +1,14 @@
+<PAGE>
+  <TITLE>The ideal gas</TITLE>
+  <VIDEO> https://www.youtube.com/embed/MOOV1K5mKeY </VIDEO>
+  <UL>
+    <LI> Explain how an ideal gas differs from a lattice gas </LI>
+    <LI> How do the particles that make up an ideal gas interact. </LI>
+    <LI> Give an expression for the Hamiltonian for a system of $N$ ideal gas atoms </LI>
+    <LI> Describe the set of microstates than an ideal gas can occupy </LI>
+    <LI> Give an expression for the partition function of a single gas atom and explain how you arrived at this expression </LI> 
+    <LI> Explain why Plancks constant appears in the expression for the partition function for an ideal gas </LI>
+    <LI> Explain Gibbs paradox and how this problem is resolved in practise </LI>
+    <LI> Explain how the well-known equation of state for the ideal gas is derived by taking suitable derivatives of the partition function </LI>
+  </UL>
+</PAGE>

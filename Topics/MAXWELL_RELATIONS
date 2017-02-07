@@ -2,9 +2,12 @@ TITLE: Maxwell relations
 
 DESCRIPTION:
 
+The Maxwell relations are a set of equations in thermodynamics which are derivable from the symmetry of 
+second derivatives and from the definitions of the thermodynamic potentials. 
+
 LEARNINGOUTCOMES:
 
-- You should be able to derive Maxwell relations.
+- You should be able to derive Maxwell relations starting from all the thermodynamic potentials.
 
 END:
 MAXWELL_RELATIONS INTRO XML AMA4004 maxwell-relations-video G.~Tribello An explanation as to how to derive a Maxwell relation from the definition of the thermodynamic potentials.

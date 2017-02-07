@@ -84,6 +84,23 @@
                                     <div class="col-md-7">
                                         <h3 class="no-margin no-padding">Theory of exact differentials</h3>
                                         <p align="justify">
+A differential, $\textrm{d}f$, is said to be exact if:
+$$
+\oint \textrm{d}f = 0
+$$ 
+An exact differential, $\textrm{d}f=C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}x$, has the following important property:
+$$
+\frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x}
+$$
+Therefore: 
+$$
+\left(\frac{\partial C_1}{\partial y}\right)_x = \left(\frac{\partial C_2}{\partial x}\right)_y 
+$$
+which follows by remembering that $\textrm{d}f = \left(\frac{\partial f}{\partial x}\right)_y \textrm{d}x + \left(\frac{\partial f}{\partial y}\right)_x \textrm{d}y$ for an exact differential.  
+Two final useful results can be obtained by comparing coefficients of $\textrm{d}x$ and $\textrm{d}y$ in
+ $\textrm{d}f=C_1(x,y)\textrm{d}x + C_2(x,y)\textrm{d}y$ and  
+$\textrm{d}f = \left(\frac{\partial f}{\partial x}\right)_y \textrm{d}x + \left(\frac{\partial f}{\partial y}\right)_x \textrm{d}y$.
+
 <H4> Learning outcomes </H4> 
 <ul> 
 <li type="square"> You should be able to test differentials of the form $\textrm{d}u = C_1(x,y) \textrm{d}x + C_2(x,y) \textrm{d}y$ for exactness.

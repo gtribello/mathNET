@@ -84,6 +84,35 @@
                                     <div class="col-md-7">
                                         <h3 class="no-margin no-padding">Thermodynamic Potentials</h3>
                                         <p align="justify">
+A thermodynamic potential is a scalar, extensive quantity that can be used to represnet the thermodynamic state of a system.
+The first thermodynamic potential you are typically introduced to is the internal energy and from the first and second laws
+of thermodynamics we know that, in a system that can only do PV work, infinitessimal changes in internal energy can be 
+calculated using:
+$$
+\textrm{d}E = T\textrm{d}S - P\textrm{d}V
+$$
+New themodynamic potentials are introduced by considering a system in contact with a reservoir.  Some important thermodynamic 
+potentials include:
+$$
+\begin{aligned} 
+\textrm{Enthalpy} &amp; \qquad H = E + PV \\
+\textrm{Helmholts free energy} &amp; \qquad F = E - TS \\
+\textrm{Gibbs free energy} &amp; \qquad G = E + PV - TS \\
+\textrm{Grand potential} &amp; \qquad \Omega = E - TS - \sum_i \mu_i N_i
+\end{aligned}
+$$
+The differentials of these quantities are:
+$$
+\begin{aligned}
+\textrm{Enthalpy} &amp; \qquad \textrm{d}H = T\textrm{d}S + V\textrm{d}P \\
+\textrm{Helmholts free energy} &amp; \qquad \textrm{d}F = -P\textrm{d}V - S\textrm{d}T \\
+\textrm{Gibbs free energy} &amp; \qquad \textrm{d}G = V\textrm{d}P - S\textrm{d}T \\
+\textrm{Grand potential} &amp; \qquad \textrm{d}\Omega = -P\textrm{d}V - S\textrm{d}T - \sum_i N_i \textrm{d}\mu_i 
+\end{aligned}
+$$
+It is possible to use these results, together with the fact that all thermodynamic potentials are exact differentials, 
+to relate all the thermodynamic variables to partial derivatives of thermodynamic potentials.
+
 <H4> Learning outcomes </H4> 
 <ul> 
 <li type="square"> You should be able to give the definitions for the enthalpy, helmholtz free energy, gibbs free energy and grand potential.

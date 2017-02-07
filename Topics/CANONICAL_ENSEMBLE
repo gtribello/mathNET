@@ -41,3 +41,4 @@ LEARNINGOUTCOMES:
 END:
 CANONICAL_ENSEMBLE INTRO XML PHY9038/AMA4004 canonical-ensemble-video1 G.~Tribello A video in which the canonical ensemble is derived from the generalised partition function
 CANONICAL_ENSEMBLE INTRO XML PHY9038/AMA4004 canonical-ensemble-video2 G.~Tribello A video which shows how ensemble averages for the energy can be found by taking derivatives of the canonical partition function.
+CANONICAL_ENSEMBLE INTRO PDF AMA4004 ensembles-notes.pdf G.~Tribello Some notes on the various different thermodynamic ensembles

@@ -12,19 +12,20 @@ $$
 New themodynamic potentials are introduced by considering a system in contact with a reservoir.  Some important thermodynamic 
 potentials include:
 $$
-begin{aligned} 
-\textrm{Enthalpy} & \qquad H = E + PV \\
-\textrm{Helmholts free energy} & \qquad F = E - TS \\
-\textrm{Gibbs free energy} & \qquad G = E + PV - TS \\
-\textrm{Grand potential & \qquad \Omega = E - TS - \sum_i \mu_i N_i  
+\begin{aligned} 
+\textrm{Enthalpy} &amp; \qquad H = E + PV \\
+\textrm{Helmholts free energy} &amp; \qquad F = E - TS \\
+\textrm{Gibbs free energy} &amp; \qquad G = E + PV - TS \\
+\textrm{Grand potential} &amp; \qquad \Omega = E - TS - \sum_i \mu_i N_i
 \end{aligned}
 $$
 The differentials of these quantities are:
 $$
-\textrm{Enthalpy} & \qquad \textrm{d}H = T\textrm{d}S + V\textrm{d}P \\
-\textrm{Helmholts free energy} & \qquad F = -P\textrm{d}V - S\textrm{d}T \\
-\textrm{Gibbs free energy} & \qquad G = V\textrm{d}P - S\textrm{d}T \\
-\textrm{Grand potential & \qquad \Omega = -P\textrm{d}V - S\textrm{d}T - \sum_i N_i \textrm{d}\mu_i 
+\begin{aligned}
+\textrm{Enthalpy} &amp; \qquad \textrm{d}H = T\textrm{d}S + V\textrm{d}P \\
+\textrm{Helmholts free energy} &amp; \qquad \textrm{d}F = -P\textrm{d}V - S\textrm{d}T \\
+\textrm{Gibbs free energy} &amp; \qquad \textrm{d}G = V\textrm{d}P - S\textrm{d}T \\
+\textrm{Grand potential} &amp; \qquad \textrm{d}\Omega = -P\textrm{d}V - S\textrm{d}T - \sum_i N_i \textrm{d}\mu_i 
 \end{aligned}
 $$
 It is possible to use these results, together with the fact that all thermodynamic potentials are exact differentials, 

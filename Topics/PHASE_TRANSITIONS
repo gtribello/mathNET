@@ -2,10 +2,35 @@ TITLE: The theory of phase transitions
 
 DESCRIPTION:
 
+The term phase transition is most commonly used to describe the transitions between the solid, liquid and gaseous states
+of matter.  Gibbs phase rule tells us that if the solid and liquid states of a one-component substaance are in equilibrium 
+only one thermodynamic variable is required to specify that systems thermodynamic state.  In other words, if I am told that 
+I have water and its vapour in equilibrium and I am told the pressure I can calculate the temperature.  Consequently, if we 
+draw a phase diagram showing what state the system will be in under different temperature and pressure conditions we find that 
+the boundaries between the states are lines.  Furthermore, when the system crosses one of these boundaries between different 
+different states the values of thermodynamic variables change discontinuously.  For example when a liquid is evaporated the volume
+of the system changes dramatically.
+
+As we have learnt elsewhere the values of all the thermodynamic variables can be calculated by taking suitable derivatives of 
+the thermodynamic potential/logarithm of the partition function.  When we cross a phase boundary and observe a discontinuous change 
+in the value of a thermodynamic variable the thermodynamic potential must change in a manner that is not-analytic.  In other words,
+the value of the thermodynamic potential cannot be calculated using the Taylor series:
+$$
+F(x + \delta x ) = F(x) + \frac{\partial F}{\partial x} \delta x + \frac{1}{2!} \frac{\partial^2 F}{\partial x^2} (\delta x)^2 + \dots 
+$$
+if in moving from point $x$ to point $x+\delta x$ the system crosses a phase boundary. 
+
+This observation about phase transitions proved difficult to reconcile with the predictions of statistical mechanics.  In fact
+statistical mechanics predicts that finite sized systems do not undergo phase transitions.  Phase transitions are only possible
+in systems containing infinite numbers of particles.  Phase transitions only appear when we consider systems in the so-called 
+thermodynamic limit.
+
 LEARNINGOUTCOMES:
 
 - You should be able to explain what distinguishes a first-order phase transition and a continuous phase transition by making reference to the first and higher derivatives of thermodynamic potentials.
-- You should be able to discuss how an infinite 1D-closed Ising model undergoes a phase transition at $T=0$ if there is no applied magnetic field.
+- You should be able to explain why statisical mechanics predicts that there are no phase transitions in finite sized systems.
+- You should be able to explain what is meant by the thermodynamic limit and you should be able to calculate the free energy, the magnetization and the suceptibility for the Ising model in the thermodynamic limit.
+- You should be able to discuss how an infinite 1D-closed Ising model undergoes a "phase transition" at $T=0$ if there is no applied magnetic field.
 - You should be able to use the transfer matrix approach to calculate the average spin for a closed 1D-Ising model.
 - You should be able to use the transfer matrix approach to calculate the covariance of the spins in a closed 1D-Ising model.
 

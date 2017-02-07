@@ -2,6 +2,14 @@ TITLE: The mean field approximation
 
 DESCRIPTION:
 
+The mean field approximation is a technique that can be used to calculate approximate partition functions for systems composed 
+of interacting particles.  The problem with calculating such partition functions exactly comes when one attempts to enumerate
+all the possible microstates and calculate their energy.  This combinatorial problem is too expensive to solve by brute force 
+and is impossible to solve for complex Hamiltonians.  In mean field theory the $N$-body system is thus replaced by a 1-body system
+that sits in a suitably chosen external field.  This external field is set equal to the average field due to the 
+remaining particles.   In essence mean field theory is an approximation technique that allows us to map a multi-body problem onto 
+a one-body problem.  Similar techiniques appear in many different fields within physics and are often given different names.
+
 LEARNINGOUTCOMES:
 
 - You should be able to write down the mean field Hamiltonian for the 1D and 2D closed Ising models.

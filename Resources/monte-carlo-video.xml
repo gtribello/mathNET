@@ -1,0 +1,15 @@
+<PAGE>
+  <TITLE>Monte Carlo Simulation</TITLE>
+  <VIDEO>  https://www.youtube.com/embed/gZQ3AUbjJJc </VIDEO>
+  <UL>
+    <LI> Explain why it is not possible to calculate the partition function exactly for many complex systems of interest? </LI>
+    <LI> Give a formula that allows one to calculate the value of an ensemble average </LI>
+    <LI> How is the ensemble average related to the expectation of a random variable </LI>
+    <LI> State the law of large numbers and define all the symbols in this expression </LI>
+    <LI> Explain how and why we can calculate ensemble averages approximately by generating multiple random variables </LI>
+    <LI> Explain the Markov property </LI>
+    <LI> Explain the ergodic property that some Markov chains possess </LI>
+    <LI> Explain in your own words why we can estimate an ensemble average by sampling from a Markov chain </LI>
+    <LI> Explain the metropolis sampling algorithm </LI> 
+  </UL>
+</PAGE>

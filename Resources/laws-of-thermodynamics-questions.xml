@@ -190,7 +190,7 @@ as required.
       <QUESTION>
 A quantity of water, initially at 10$^\circ$C, is brought into content with a heat reservoir at a temperature of 90$^\circ$C.  The constant volume 
 heat capacity, $C_v$ of the water is defined as $\textrm{d} q=C_v\textrm{d}T$.   If the waters volume is fixed (i.e. if no work is done on or by the system) 
-explain why the change in the internal energy is during an infinitesimal change in temperature is given by $\textrm{d}E = C_v \textrm{d}T$.
+explain why the change in the internal energy during an infinitesimal change in temperature is given by $\textrm{d}E = C_v \textrm{d}T$.
 Use this result, and the second law of (equilibrium) thermodynamics, $\textrm{d}S = \frac{\textrm{d}q}{T}$, to demonstrate that the change in entropy 
 during an infinitesimal change in the temperature of the water is given by:
 $$

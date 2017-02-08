@@ -1,0 +1,16 @@
+<PAGE>
+  <TITLE>The cluster expansion</TITLE>
+  <VIDEO> https://www.youtube.com/embed/O8EafwqqXsQ</VIDEO>
+  <UL>
+    <LI> Write an expression for the Hamiltonian of a system of particles that interact through a two-body potential and that do not sit on lattice sites.</LI>
+    <LI> Explain why when this Hamiltonian is inserted into our expression for the canonical partition function the resulting integral separates into a product of an integral over the momentum coordinates and a integral over the position coordinates.  Discuss how one the integral over the momentum coordinates can be solved exactly. </LI>
+    <LI> Explain how the cluster expansion allows one to rewrite the integral over the position coordinates introduced in the above as a sum of integrals. </LI>
+    <LI> Discuss the result that you obtain if you truncate the expansion introduced in the previous part and only include the first term </LI>
+    <LI> If the sum of integral that you have introduced is truncated after the second term what assumption are you making about the interactions between the particles </LI>
+    <LI> Discuss how the second term in the cluster expansion integral is solved in general and what assumptions are made about the interaction during the derivation </LI>
+    <LI> Describe the shape of the hard spheres potential and show that $\int_0^\infty f_{12} r^2 \textrm{d}r = -A + \beta B$ for this potential.  How are the values of $A$ and $B$ calculated from the parameters of the hard sphere potential? </LI> 
+    <LI> Give an expression for the free energy of the van der Waals gas and explain how this quantity is derived from the partition function for a system of hard spheres </LI>
+    <LI> Show how the equation of state for the van-der-Waals gas can be derived from the partition function for a system of hard spheres and explain the various assmptions made during this derivation </LI>
+    <LI> Discuss the form of the van der Waals equation of state and explain how one could argue qualitatively for this form based on an understanding of the difference between real atoms and idealised atoms and on a knowledge of the equation of state for an ideal gas. </LI>
+  </UL>
+</PAGE>

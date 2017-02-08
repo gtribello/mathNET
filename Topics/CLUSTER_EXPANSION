@@ -26,3 +26,4 @@ LEARNINGOUTCOMES:
 - You should be able to show how the van der Waals equation of state can be derived by using the cluster expansion.
 
 END:
+CLUSTER_EXPANSION INTRO XML AMA4004 cluster-expansion-video G.~Tribello A video explaining how the van der Waals equation of state can be derived by considering a gas of hard spheres.

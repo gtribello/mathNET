@@ -1,0 +1,14 @@
+<PAGE>
+  <TITLE>Molecular gasses</TITLE>
+  <VIDEO> https://www.youtube.com/embed/fyqj7g68Fps </VIDEO>
+  <UL>
+    <LI> Describe the three assumptions that are made in the derivation of the ideal gas law that cause there to be deviations between the behavior of an ideal gas and the behavoir of real gasses. </LI>
+    <LI> Explain how having Hamiltonians that are summations of functions of different variables simplifies the calculation of the partition function. </LI>
+    <LI> How many degrees of freedom does a molecule consisiting of $N$ atoms possess? </LI>
+    <LI> How many of these degrees of freedom are translational degrees of freedom of the center of mass? </LI> 
+    <LI> How many of these degrees of freedom are rotational degrees of freedom? </LI>
+    <LI> How many vibrational degrees of freedom will the atom therefore possess? </LI>
+    <LI> Consider a molecule containing only two atoms.  What shape will this molecule have and how many translational, rotational and vibrational degrees of freedom will it possess? </LI>
+    <LI> When we write the Hamiltonian as a sum of a translational, a rotational and a vibrational part what assumptions are we making.  What is the justification for making these assumptions? </LI>
+  </UL>
+</PAGE>

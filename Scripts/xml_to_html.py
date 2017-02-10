@@ -1,6 +1,9 @@
+import os
 import sys
+import shutil
 import module
 import xml.etree.ElementTree as ET
+import subprocess
 import lxml.etree as ET
 
 def build_html_file( infile ):
@@ -36,10 +39,14 @@ def build_html_file( infile ):
     if template=="video" :
        page = page.replace( "INSERT VIDEO", tree.find("VIDEO").text )    
        page = page.replace( "INSERT QUESTIONS", ET.tostring( tree.find("UL"), encoding="unicode", method="xml") )
+       page = page.replace( "INSERT-FILENAME", infile )
+       generate_pdf_worksheet( tree, infile )
     elif template=="geogebra" :
        page = page.replace( "INSERT GEOGEBRA", tree.find("GEOGEBRA").text )
        page = page.replace( "INSERT DESCRIPTION", tree.find("DESCRIPTION").text )
        page = page.replace( "INSERT QUESTIONS", ET.tostring( tree.find("UL"), encoding="unicode", method="xml") )
+       page = page.replace( "INSERT-FILENAME", infile )
+       generate_pdf_worksheet( tree, infile )
     else : 
        html_string = "<H1> Introduction </H1>\n" 
        html_string += ET.tostring( tree.find("DESCRIPTION"), encoding="unicode", method="xml" ) 
@@ -113,4 +120,36 @@ def questionsToHTML( iq, child ):
            iq += 1
     return iq, html_string
 
+def generate_pdf_worksheet( tree, infile ):
+    # Read in latex template file
+    g = open( 'Templates/latex-template.tex', 'r')
+    worksheet = g.read();
+    g.close()
+    # Generate the latex worksheet
+    worksheet = worksheet.replace( "INSERT TOPIC TITLE", tree.find('TITLE').text )
+    latex_questions = "\\begin{itemize}\n"
+    for child in tree.find("UL") :
+        latex_questions += "\\item "
+        latex_questions += ET.tostring( child, encoding="unicode", method="xml" ).replace("<b>","{\\bf").replace("</b>","}").replace("<LI>","").replace("</LI>","").replace("&gt;",">").replace("&lt;","<")
+        latex_questions += "\\vspace{4.5cm}\n"
+    latex_questions += "\\end{itemize}\n"
+    worksheet = worksheet.replace("INSERT QUESTIONS", latex_questions )
+    # And output a latex file 
+    g = open('latex/' + infile + '.tex', 'w' )
+    g.write( worksheet )
+    g.close()
+    # Run latex to generate pdf files
+    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/" + infile + ".tex" ]
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    shutil.copy( infile + ".pdf", "html/worksheets/" + infile + ".pdf" )   
+    if not proc.returncode == 0 :
+       os.unlink( "latex/" + infile + ".tex" )
+       raise ValueError("Error compling latex worksheet for exercise " + infile )
+    # Delete files we don't need after latex has run  
+    for filen in os.listdir("."):
+        if filen.startswith( infile ):
+           os.remove(filen)
 

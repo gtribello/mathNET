@@ -95,6 +95,7 @@ class mainWindow(QWidget):
                if (ff.endswith(".html")) | (ff.endswith(".svg")) :
                   os.remove("html/" + ff)
            shutil.rmtree('html/resources')
+           shutil.rmtree('html/worksheets')
            shutil.rmtree('html/assets')
            shutil.rmtree('html/Images')
 
@@ -111,6 +112,10 @@ class mainWindow(QWidget):
          except:
             os.mkdir('html/resources')
          try:
+            os.stat('html/worksheets')
+         except:
+            os.mkdir('html/worksheets')
+         try:
             os.stat('html/Images')
          except:
             shutil.copytree('Resources/Images', 'html/Images')
@@ -122,6 +127,10 @@ class mainWindow(QWidget):
          shutil.copytree('Resources/Images', 'html/Images')
          # Make a resources directory
          os.mkdir('html/resources')
+         # Make a worksheets directory
+         os.mkdir('html/worksheets') 
+       # Make a latex directory
+       os.mkdir('latex')
 
        # Read in topics
        mytopics = topiclist()
@@ -157,6 +166,8 @@ class mainWindow(QWidget):
            if not os.path.isfile('html/' + mod + '.svg' ) :
               modtopics = mymodules.get( mod ).getTopicList()
               mygraph.printGraphWithPath( modtopics, mod )
+       # Remove the latex directory
+       shutil.rmtree('latex')
 
 # This is done on start up.  The full website is constructed and the main editor window is opened
 if __name__ == "__main__":

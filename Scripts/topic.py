@@ -73,7 +73,7 @@ class topic(object) :
                sys.error("found LEARNINGOUTCOMES: before DESCRIPTION:")
             inlearn=1
             indesc=0
-            explanation += "<H4> Learning outcomes </H4> \n"
+            explanation += "<H4> Syllabus Aims </H4> \n"
             explanation += "<ul> \n"
          elif "END:" in line :
             if inlearn!=1 :

@@ -11,6 +11,9 @@ fi
 rev=$(git rev-parse --short HEAD)
 
 cd html
+# Retrieve blockly 
+git clone https://github.com/google/blockly.git
+
 git init
 git config user.name "gtribello"
 git config user.email "gareth.tribello@gmail.com"

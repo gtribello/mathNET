@@ -16,12 +16,16 @@ def build_html_file( infile ):
            template = "video" 
         elif child.tag=="GEOGEBRA" :
            template = "geogebra"
+        elif child.tag=="WORKSPACE" :
+           template = "blockly"
 
     # Read in the video template
     if template=="geogebra" :
         f = open( 'Templates/geogebra-template.html', 'r')
     elif template=="video" :
         f = open( 'Templates/video_template.html', 'r')
+    elif template=="blockly" :
+        f = open( 'Templates/blockly-template.html', 'r')
     else :
         f = open( 'Templates/exercise_template.html', 'r')
 
@@ -47,6 +51,16 @@ def build_html_file( infile ):
        page = page.replace( "INSERT QUESTIONS", ET.tostring( tree.find("UL"), encoding="unicode", method="xml") )
        page = page.replace( "INSERT-FILENAME", infile )
        generate_pdf_worksheet( tree, infile )
+    elif template=="blockly" :
+       page = page.replace( "INSERT API FUNCTIONS", tree.find("APIFUNCTIONS").text )
+       page = page.replace( "INSERT WORKSPACE BLOCKS", tree.find("BLOCKS").text )
+       page = page.replace( "INSERT WORKSPACE SLIDERS", ET.tostring( tree.find("SLIDERS"), encoding="unicode", method="xml").replace("<SLIDERS>","").replace("</SLIDERS>","") ) 
+       page = page.replace( "INSERT APP SCRIPTS", tree.find("SCRIPTS").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") )
+       page = page.replace( "INSERT WORKSPACE STARTUP", tree.find("STARTUP").text )
+       page = page.replace( "INSERT WORKSPACE", ET.tostring( tree.find("WORKSPACE"), encoding="unicode", method="xml").replace("<WORKSPACE>","").replace("</WORKSPACE>","") )
+       page = page.replace( "INSERT LEVEL XML", infile + ".xml" )
+       # Copy xml to html directory 
+       shutil.copy( "Resources/" + infile + ".xml" , "html/" + infile + ".xml" ) 
     else : 
        html_string = "<H1> Introduction </H1>\n" 
        html_string += ET.tostring( tree.find("DESCRIPTION"), encoding="unicode", method="xml" ) 

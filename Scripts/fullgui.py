@@ -97,6 +97,7 @@ class mainWindow(QWidget):
            shutil.rmtree('html/resources')
            shutil.rmtree('html/worksheets')
            shutil.rmtree('html/assets')
+           shutil.rmtree('html/blockly')
            shutil.rmtree('html/Images')
 
        # See if the html directory is there and create it 
@@ -107,6 +108,10 @@ class mainWindow(QWidget):
             os.stat('html/assets')
          except:
             shutil.copytree('Templates/assets', 'html/assets')
+         try:
+            os.stat('html/blockly')
+         except:
+            shutil.copytree('Templates/blockly', 'html/blockly')
          try:
             os.stat('html/resources')
          except:
@@ -123,6 +128,8 @@ class mainWindow(QWidget):
          os.mkdir('html')
          # Copy the assets to the html directory
          shutil.copytree('Templates/assets', 'html/assets')
+         # Copy blockly to the html directory  
+         shutil.copytree('Templates/blockly', 'html/blockly')
          # Copy the images to the html directory
          shutil.copytree('Resources/Images', 'html/Images')
          # Make a resources directory

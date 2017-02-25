@@ -1,0 +1,384 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Title -->
+	<title>INSERT TOPIC TITLE : Exercise</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- W3 style --> 
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <style>
+          .w3-badge {cursor:pointer}
+          .w3-badge {height:13px;width:13px;padding:0}
+        </style>
+	<!-- Favicon -->
+	<link href="favicon.html" rel="shortcut icon">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
+</head>
+<body>
+	<div id="pre_header" class="visible-lg"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="index.html" title="">
+					<img src="assets/img/logo.png" alt="Logo" />
+				</a>
+			</div>
+			<!-- End Logo -->
+			<!-- Top Menu -->
+			<div class="col-md-12 margin-top-30">
+				<div id="hornav" class="pull-right visible-lg">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+                                                <li><span>Modules</span>
+                                                <ul>
+                                                  INSERT MODULE LIST
+					        </ul>				</div>
+				</div>
+				<div class="clear"></div>
+				<!-- End Top Menu -->
+			</div>
+		</div>
+		<!-- === END HEADER === -->
+		<!-- === BEGIN CONTENT === -->
+		<div id="content" class="container">
+                    <div class="panel panel-blue">
+                      <div class="panel-heading">
+                          <div class="row">
+                             <h1 class="panel-title"> INSERT TOPIC TITLE : Blockly exercise </h1>
+                          </div> 
+                      </div>
+                     </div>
+                      <div class="row margin-vert-30">
+                      <div class="panel panel-primary">
+                        <div class="panel-heading">
+                         <h4 class="panel-title">
+                           Use the blocks in the toolbox to solve the problems described below the exercise
+                         </h4>
+                        </div>
+                        <div class="panel-body">
+                          <div class="row" id="appPanel">
+                             <div class="col-md-4">
+                               <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button>
+                               <button onclick="myApp.stepCode()" id="stepButton" disabled="disabled">Step Code</button>
+                               <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button>
+                             </div>
+                               <div class="col-md-8">
+                               <div id="levelIndicator" class="w3-center w3-section w3-large w3-text-black w3-display-topleft" style="width:60%" align="right"> </div>
+                             </div>
+                             <br/><br/>
+                           INSERT WORKSPACE SLIDERS
+                           <table>
+                             <tr>
+                               <td>
+                                 <div id="visualization" style="width: 400px"> INSERT WORKSPACE </div>
+                               </td>
+                               <td width="20px"> &nbsp;&nbsp; </td>
+                               <td>
+                                 <div id="blocklyDiv" style="height: 400px"></div>
+                               </td>
+                             </tr>
+                           </table>    
+                           <div id="explanation"> </div>
+
+                           <xml id="toolbox" style="display: none">
+                             <category name="Variables" custom="VARIABLE"></category>
+                             <category name="Program">
+                                <block type="controls_repeat_ext"></block>
+                                <block type="math_arithmetic"></block>
+                                <block type="math_number"></block>
+                             </category>
+                             <category name="Microstate">
+                                <block type="get_nspins"></block>
+                                <block type="get_spin"></block>
+                                <block type="set_spin"></block>
+                             </category>
+                           </xml>
+                           <script>
+                              // This puts everything we need into the API for the 
+                              // javascript interpreter
+                              function initApi( interpreter, scope ) {
+                                 // Add an API function for the alert() block.
+                                 var wrapper = function(text) {
+                                   text = text ? text.toString() : '';
+                                   return interpreter.createPrimitive(alert(text));
+                                 };
+                                 interpreter.setProperty(scope, 'alert', interpreter.createNativeFunction(wrapper));
+                              
+                                 // Add an API function for the prompt() block.
+                                 var wrapper = function(text) {
+                                   text = text ? text.toString() : '';
+                                   return interpreter.createPrimitive(prompt(text));
+                                 };
+                                 interpreter.setProperty(scope, 'prompt', interpreter.createNativeFunction(wrapper));
+                              
+                                 // Add an API function for highlighting blocks.
+                                 var wrapper = function(id) {
+                                   id = id ? id.toString() : '';
+                                   return interpreter.createPrimitive(myApp.highlightBlock(id));
+                                 };
+                                 interpreter.setProperty(scope, 'highlightBlock', interpreter.createNativeFunction(wrapper));
+                                 // Add API functions for workspace functions
+                                 INSERT API FUNCTIONS
+                              };
+
+                              INSERT WORKSPACE BLOCKS
+
+                              // Construct the namespace for the app 
+                              var myApp = {};
+                              // Blockly workspace for this app
+                              myApp.workspace = null;
+                              // Control block highlighting for this app
+                              myApp.highlightPause = false;
+                              // Details of levels for this game
+                              myApp.xmlLevelDoc = null;
+                              myApp.active = [];
+                              myApp.mylevel = 0;
+
+                              INSERT APP SCRIPTS
+
+                              // This highlights blocks
+                              myApp.highlightBlock = function(id) {
+                                myApp.workspace.highlightBlock(id);
+                                myApp.highlightPause = true;
+                              };
+
+                              // This parses blocks - turns it to code 
+                              myApp.parseCode=function( workspace, initApi ) {
+                                 // Generate JavaScript code and parse it.
+                                 Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
+                                 Blockly.JavaScript.addReservedWords('highlightBlock');
+                                 var code = Blockly.JavaScript.workspaceToCode(workspace);
+                                 myApp.workspace = workspace;
+                                 myApp.myInterpreter = new Interpreter(code, initApi);
+                                 // Generate python code for student to see
+                                 var pcode = Blockly.Python.workspaceToCode(workspace);
+                                 alert('Ready to execute this code:\n\n' + pcode);
+                                 document.getElementById('stepButton').disabled = '';
+                                 document.getElementById('runButton').disabled = '';
+                                 myApp.highlightPause = false;
+                                 myApp.highlightBlock(null);
+                              };
+
+                              // This steps the code
+                              myApp.stepCode = function() {
+                                 try {
+                                   var ok = myApp.myInterpreter.step();
+                                 } finally {
+                                   if (!ok) {
+                                     // Program complete, no more code to execute.
+                                     document.getElementById('stepButton').disabled = 'disabled';
+                                     document.getElementById('runButton').disabled = 'disabled';
+                                     myApp.highlightBlock(null);
+                                     return;
+                                   }
+                                 }
+                                 if (myApp.highlightPause) {
+                                   // A block has been highlighted.  Pause execution here.
+                                   myApp.highlightPause = false;
+                                 } else {
+                                   // Keep executing until a highlight statement is reached.
+                                   myApp.stepCode();
+                                 }
+                              };
+
+                              // This runs the code
+                              myApp.runCode = function() {
+                                 if( myApp.myInterpreter.step() ){
+                                    window.setTimeout(myApp.runCode.bind(myApp), 10 );
+                                 } else {
+                                    // Program complete, no more code to execute.
+                                    document.getElementById('stepButton').disabled = 'disabled';
+                                    document.getElementById('runButton').disabled = 'disabled';
+                                    myApp.highlightBlock(null);
+                                    return;
+                                 } 
+                                 // Now check for level end
+                                 myApp.checkLevelEnd() 
+                              }; 
+
+                              myApp.checkLevelEnd = function() {
+                                 myApp.active[myApp.mylevel + 1] = true;
+                                 myApp.setLevel( myApp.mylevel + 1 );
+                              };
+
+                              // This sets the level
+                              myApp.setLevel = function(n) {
+                                 if( n >= myApp.active.length ){
+                                    myApp.mylevel = self.active.length - 1;
+                                 } else if( n < 0 ){
+                                    myApp.mylevel = 0;
+                                 } else {
+                                    myApp.mylevel = n;
+                                 }
+                                 // Don't allow users to change to levels that above those they haven't completed
+                                 if( !myApp.active[myApp.mylevel] ){
+                                     alert("You do not have access to this level yet");
+                                     return;
+                                 }
+                                 var dots = document.getElementsByClassName("demo");
+                                 for(var i=0; i < myApp.active.length ; i++ ){
+                                   dots[i].className = dots[i].className.replace(" w3-black", "");
+                                 }
+                                 dots[myApp.mylevel].className += " w3-black";
+                                 // We now need to load the contents of the level 
+                                 var levels = myApp.xmlLevelDoc.getElementsByTagName("LEVEL");
+                                 var desc = levels[n].getElementsByTagName("DESCRIPTION");
+                                 // Load the contents of the level
+                                 var g = document.getElementById("explanation");
+                                 g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+                                 // Load the new blockly toolbox
+                                 myApp.workspace.updateToolbox( levels[n].getElementsByTagName("TOOLBOX")[0] );
+                              };
+
+                              /**
+                               * Force Blockly to resize into the available width.
+                              */
+                              myApp.resize = function() {
+                                var width = Math.max(document.getElementById("appPanel").offsetWidth - 440, 250);
+                                document.getElementById('blocklyDiv').style.width = width + 'px';
+                                Blockly.svgResize(myApp.workspace);
+                              };
+                              /**
+                               * Initialize Blockly and the graph.  Called on page load.
+                              */
+                              myApp.init = function() {
+                                // Setup workspace for game
+                                INSERT WORKSPACE STARTUP 
+
+                                // Setup blockly
+                                myApp.workspace = Blockly.inject('blocklyDiv',
+                                    {collapse: false,
+                                     disable: false,
+                                     media: 'Blockly/media/',
+                                     toolbox: document.getElementById('toolbox')});
+                                myApp.workspace.clearUndo();
+                                myApp.resize();
+                                // Setup level controls
+                                var xhttp;
+                                if (window.XMLHttpRequest) {
+                                   xhttp = new XMLHttpRequest();
+                                } else {    // IE 5/6
+                                   xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                                }
+                                xhttp.overrideMimeType('text/xml');
+                                xhttp.open("GET", "INSERT LEVEL XML", false);
+                                xhttp.send(null);
+                                myApp.xmlLevelDoc = xhttp.responseXML;
+                                alert( myApp.xmlLevelDoc.getElementsByTagName("WELCOME")[0].childNodes[0].nodeValue );
+
+                                // Create all the levels
+                                var levdesc = "";
+                                var nlev = myApp.xmlLevelDoc.getElementsByTagName("LEVEL").length;
+                                for(var i=0;i<nlev;i++){
+                                  myApp.active.push(false); 
+                                  levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myapp.levelController.setLevel(' + i + ')"></span>\n'
+                                }
+                                // This bit creates the level indicator
+                                var g = document.getElementById("levelIndicator");
+                                g.innerHTML = levdesc;
+                                // Make sure we can set first level
+                                myApp.active[0]=true; 
+                                // Start in level 0
+                                myApp.setLevel(0);
+                              };
+
+                              window.addEventListener('load', myApp.init);
+                              window.addEventListener('resize', myApp.resize);
+                           </script>
+
+                          </div>
+                        </div>
+                      </div>
+		</div>
+	</div>
+	<!-- === END CONTENT === -->
+	<!-- === BEGIN FOOTER === -->
+	<div id="base">
+		<div class="container padding-vert-30">
+			<div class="row">
+					<!-- Contact Details -->
+					<div class="col-md-3 margin-bottom-20">
+						<h3 class="margin-bottom-10">Contact Details</h3>
+						<p>School of Mathematics and Physics,<br />
+						Queen's University Belfast,<br />
+						Belfast,<br />
+						BT7 1NN</p>
+						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+					</div>
+					<!-- End Contact Details -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Menu -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="col-md-4">
+						<p>(c) 2016 Gareth Tribello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->

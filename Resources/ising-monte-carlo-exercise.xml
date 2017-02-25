@@ -1,0 +1,393 @@
+<PAGE>
+  <TITLE> Ising Model Monte Carlo </TITLE>
+  <WELCOME>
+     This exercise will teach you how Monte Carlo simulations work.  You will, through the course of the 
+     exercise, learn how to write your own Monte Carlo code for simulating a one dimensional closed Ising Model.
+  </WELCOME>
+  <SLIDERS>
+    <div id="nslider">
+      Number of spins: <input id="slide" type="range" min="5" max="100" step="5" value="25" onchange="myApp.setNumberOfSpins(this.value)"/> 
+    </div>
+    <div id="hslider">
+      Magnetic field strength: <input id="slide" type="range" min="-5" max="5" step="1" value="0" onchange="myApp.setMagneticField(this.value)"/>
+    </div>
+    <div id="tslider">
+      Temperature:  <input id="slide" type="range" min="0" max="10" step="1" value="1" onchange="myApp.setTemperature(this.value)"/> 
+    </div>
+  </SLIDERS>
+  <WORKSPACE>
+    <canvas id="myCanvas" width="400" height="400"></canvas>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add API functions for number of spins
+    var wrapper = function(){
+      return interpreter.createPrimitive(myApp.getNumberOfSpins());
+    };
+    interpreter.setProperty(scope, 'getNumberOfSpins', interpreter.createNativeFunction(wrapper));
+   
+    // Add API function for setting spins
+    var wrapper = function(ida, idb){
+      ida = ida ? ida.toString() : '';
+      idb = idb ? idb.toString() : '';
+      return interpreter.createPrimitive(myApp.setSpinValue(ida,idb));
+    };
+    interpreter.setProperty(scope, 'setSpinValue', interpreter.createNativeFunction(wrapper));
+   
+    // Add API function for getting spins
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.getSpinValue(id));
+    };
+    interpreter.setProperty(scope, 'getSpinValue', interpreter.createNativeFunction(wrapper))
+  </APIFUNCTIONS>
+  <BLOCKS>
+    // Return the number of spins in the system
+    Blockly.Blocks["get_nspins"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "number of spins",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+    
+    Blockly.JavaScript['get_nspins'] = function(block) {
+      var code = 'getNumberOfSpins()';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+    
+    Blockly.Python['get_nspins'] = function(block) {
+      var code = 'nspins';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+    
+    // Get the value of the ith spin
+    Blockly.Blocks["get_spin"] = {
+      // take input and plot it on y
+      init: function() {
+        this.jsonInit({
+          "message0": "get spin %1",
+          "args0": [
+            {
+              "type": "input_value",
+              "name": "n",
+              "check": "Number"
+            }
+          ],
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+    
+    Blockly.JavaScript['get_spin'] = function(block) {
+      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var code = 'getSpinValue(' + s  + ')';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+    
+    Blockly.Python['get_spin'] = function(block) {
+      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
+      var code = 'spins[' + s  + ']';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+    
+    Blockly.Blocks["set_spin"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "set spin %1",
+          "args0": [
+            {
+              "type": "input_value",
+              "name": "n",
+              "check": "Number"
+            }
+          ],
+          "message1": " to %1",
+          "args1": [
+            {
+              "type": "input_value",
+              "name": "v",
+              "check": "Number"
+            }
+          ],
+          "inputsInline": true,
+          "nextStatement": null,
+          "previousStatement": null,
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+    
+    Blockly.JavaScript['set_spin'] = function(block) {
+      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var v = Blockly.JavaScript.valueToCode(block, 'v', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var code = 'setSpinValue(' + s + ',' + v + ');\n';
+      return code;
+    };
+    
+    Blockly.Python['set_spin'] = function(block) {
+      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
+      var v = Blockly.Python.valueToCode(block, 'v', Blockly.Python.ORDER_ATOMIC) || '0';
+      var code = 'spins[' + s + '] = ' + v + '\n';
+      return code;
+    };
+  </BLOCKS>
+  <SCRIPTS>
+    myApp.spins = new Array(); 
+
+    myApp.drawSpin = function( snum ){
+      ctx = document.getElementById("myCanvas").getContext("2d");
+      if ( ctx==null ){ return; }
+      var num = parseInt( snum );
+
+      ctx.beginPath(); var unit = 2*Math.PI/myApp.spins.length; var radius=200; var infr=0.9;
+      ctx.moveTo(radius+radius*Math.cos((num+1)*unit),radius+radius*Math.sin((num+1)*unit));
+      ctx.lineTo(radius+infr*radius*Math.cos((num+1)*unit),radius+infr*radius*Math.sin((num+1)*unit));
+      ctx.lineTo(radius+infr*radius*Math.cos(num*unit),radius+infr*radius*Math.sin(num*unit));
+      ctx.lineTo(radius+radius*Math.cos(num*unit),radius+radius*Math.sin(num*unit));
+      ctx.closePath();
+
+      if( myApp.spins[num]==0 ){
+         ctx.stroke();
+         return;
+      }
+      if (myApp.spins[num] == 1 ) {
+         ctx.fillStyle = '#8ED6FF';
+      } else {
+         ctx.fillStyle = '#FF0000';
+      }
+      ctx.stroke();
+      ctx.fill();
+   };
+  
+   myApp.getSpinValue=function( n ) {
+     if( n&gt;=this.spins.length || n &lt; 0 ){
+         alert( "spin " + n + " does not exist" );
+     }
+     return this.spins[n];
+   };
+
+   myApp.setSpinValue=function( n, val ) {
+     if( n>=this.spins.length || n &lt; 0 ){
+         alert( "spin " + n + " does not exist" );
+     }
+     if( val!=1 &amp;&amp; val!=-1 ){
+         alert( val + " is not a valid spin value" );
+     }
+     myApp.spins[n] = val;
+     myApp.drawSpin( n );
+   };
+
+   myApp.setNumberOfSpins=function( nspins ) {
+      myApp.spins = []; ctx = document.getElementById("myCanvas").getContext("2d");
+      if( ctx!=null ){ ctx.clearRect(0,0,400,400); }
+      for(var i = 0; i &lt; nspins; i++){ myApp.spins.push( 0 ); }
+      for(var i = 0; i &lt; nspins; i++){ myApp.drawSpin( i ); }
+    }; 
+    myApp.getNumberOfSpins=function() {
+     return myApp.spins.length;
+   };
+  </SCRIPTS>
+  <STARTUP>
+    myApp.setNumberOfSpins(25)
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks provided to set the microscopic coordinates of all the spins in the system equal to 1 
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks provided to set the microscopic coordinates of all the odd numbered spins in the system to 1 and all the even 
+      numbered spins in the system to -1.  
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>       
+        <block type="math_number_property">
+        <value name="NUMBER_TO_CHECK">
+          <shadow type="math_number">
+            <field name="NUM">0</field>
+          </shadow>
+        </value>
+      </block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block> 
+         <block type="set_spin"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
+      Then select one of the spin coordinates at random and flip the value of this spin.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+ <LEVEL>
+    <DESCRIPTION>
+      Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
+      Then select one of the spin coordinates at random and flip the value of this spin.  Make your code repeat this 
+      process of flipping one randomly chosen spin a total of 10 times.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="get_spin"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      At the end of the previous level we implemented a Monte Carlo integrator that operated at infiite temperature.  To
+      operate at finite temperature we are going to have to calculate the energy.  Consequentially, the blocks shown
+      generate a particular configuration for the microscopic coordinates of all the spins.  Add further blocks to  
+      calculate the energy of this microstate using the Ising model Hamiltonian.  Once the energy has been calculated you 
+      should report it by using the print block.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="get_spin"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Lets now generate a trajectory of 11 frames using what we learnt while programming the code for the last but one level.
+      Calculate the energy using the Ising model Hamiltonian for each of the microstates you generate and report these to screen.
+      On top of this calculate the average energy of your 11 configurations and report this to screen.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="get_spin"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Here is something like the arrangement of blocks you should have just arrived at.  We now have almost everything we need for our 
+      Monte Carlo integrator.  Can you finish off the code by implementing the Metropolis accept/reject criteria in this code.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="get_spin"></block>
+      </category>
+     <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+    </TOOLBOX>
+  </LEVEL>
+</PAGE>

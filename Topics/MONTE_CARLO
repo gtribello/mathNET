@@ -19,3 +19,4 @@ LEARNINGOUTCOMES:
 END:
 MONTE_CARLO INTRO PDF SOR3012 jim-chap17.pdf J.~F.~McCann Notes on the theory of Monte Carlo simulation.
 MONTE_CARLO INTRO XML AMA4004 monte-carlo-video G.~Tribello A very brief introduction to the theory of Monte Carlo sampling.
+MONTE_CARLO EXERCISE XML AMA4004 ising-monte-carlo-exercise G.~Tribello An exercise that will take you through the process of writing your own Monte Carlo code.

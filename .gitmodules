@@ -1,0 +1,3 @@
+[submodule "Templates/blockly"]
+	path = Templates/blockly
+	url = https://github.com/google/blockly.git

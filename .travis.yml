@@ -2,6 +2,7 @@ language: python
 python:
   - "3.5"
 before_install:
+    - git submodule update --init --recursive
     - sudo mkdir -p /downloads
     - sudo chmod a+rw /downloads
     - "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-full texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"

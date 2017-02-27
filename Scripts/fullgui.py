@@ -112,8 +112,8 @@ class mainWindow(QWidget):
             os.stat('html/blockly')
          except:
             shutil.copytree('Templates/blockly', 'html/blockly')
-            shutil.rmtree('Templates/blockly/.git')
-            shutil.remove('Templates/blockly/.gitignore')
+            shutil.remove('html/blockly/.git')
+            shutil.remove('html/blockly/.gitignore')
          try:
             os.stat('html/resources')
          except:
@@ -132,8 +132,8 @@ class mainWindow(QWidget):
          shutil.copytree('Templates/assets', 'html/assets')
          # Copy blockly to the html directory  
          shutil.copytree('Templates/blockly', 'html/blockly')
-         shutil.rmtree('Templates/blockly/.git')
-         shutil.remove('Templates/blockly/.gitignore')
+         shutil.remove('html/blockly/.git')
+         shutil.remove('html/blockly/.gitignore')
          # Copy the images to the html directory
          shutil.copytree('Resources/Images', 'html/Images')
          # Make a resources directory

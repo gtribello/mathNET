@@ -160,6 +160,30 @@
                                  INSERT API FUNCTIONS
                               };
 
+                              // Define a custom block to generate uniform random variables
+                              Blockly.Blocks["uniform_random"] = {
+                                // take input and plot it on y
+                                init: function() {
+                                  this.jsonInit({
+                                    "message0": "uniform random variable between 0 and 1",
+                                    "output": "Number",
+                                    "colour": Blockly.Blocks.variables.HUE,
+                                    "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+                                    "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+                                  })
+                                }
+                              };
+
+                              Blockly.JavaScript['uniform_random'] = function(block) {
+                                var code = 'Math.random()'; 
+                                return [code, Blockly.JavaScript.ORDER_ATOMIC]; 
+                              };
+
+                              Blockly.Python['uniform_random'] = function(block) {
+                                var code = 'random.uniform(0,1)'; 
+                                return [code, Blockly.Python.ORDER_ATOMIC];
+                              };
+
                               INSERT WORKSPACE BLOCKS
 
                               // Construct the namespace for the app 

@@ -215,6 +215,12 @@
          <block type="set_spin"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -243,6 +249,13 @@
          <block type="set_spin"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( i%2==0 &amp;&amp; myApp.spins[i]!=-1 ){ levelcomplete=false; }
+           if( i%2==1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -267,6 +280,12 @@
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH> 
+       levelcomplete=true;
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -291,6 +310,9 @@
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+           levelcomplete=true;
+    </FINISH>
   </LEVEL>
  <LEVEL>
     <DESCRIPTION>
@@ -317,6 +339,9 @@
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+           levelcomplete=true;
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -338,6 +363,9 @@
          <block type="get_spin"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+           levelcomplete=true;
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -364,6 +392,9 @@
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+           levelcomplete=true;
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -389,5 +420,8 @@
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+           levelcomplete=true;
+    </FINISH>
   </LEVEL>
 </PAGE>

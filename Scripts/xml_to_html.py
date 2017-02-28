@@ -59,6 +59,14 @@ def build_html_file( infile ):
        page = page.replace( "INSERT WORKSPACE STARTUP", tree.find("STARTUP").text )
        page = page.replace( "INSERT WORKSPACE", ET.tostring( tree.find("WORKSPACE"), encoding="unicode", method="xml").replace("<WORKSPACE>","").replace("</WORKSPACE>","") )
        page = page.replace( "INSERT LEVEL XML", infile + ".xml" )
+       # This constructs the ends of levels 
+       n, levels, levelcomplete = 0, tree.findall("LEVEL"), ""
+       for lev in levels :
+           levelcomplete += "case " + str(n) + ":"
+           levelcomplete += lev.find("FINISH").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") 
+           levelcomplete += "break; \n"
+           n += 1
+       page = page.replace( "INSERT LEVEL COMPLETION", levelcomplete )
        # Copy xml to html directory 
        shutil.copy( "Resources/" + infile + ".xml" , "html/" + infile + ".xml" ) 
     else : 

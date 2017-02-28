@@ -236,8 +236,19 @@
                               }; 
 
                               myApp.checkLevelEnd = function() {
-                                 myApp.active[myApp.mylevel + 1] = true;
-                                 myApp.setLevel( myApp.mylevel + 1 );
+                                 levelcomplete = true;
+                                 switch( myApp.mylevel ){
+                                     INSERT LEVEL COMPLETION
+                                 }
+                                 if( levelcomplete ){
+                                     alert("Congratulations! Your program is correct.  Now see how you do on the next level")
+                                     INSERT WORKSPACE STARTUP
+                                     myApp.workspace.clear()
+                                     myApp.active[myApp.mylevel + 1] = true;
+                                     myApp.setLevel( myApp.mylevel + 1 );
+                                 } else {
+                                     alert("Your program is not quite right.  Have another go and see if you can fix it")
+                                 }
                               };
 
                               // This sets the level

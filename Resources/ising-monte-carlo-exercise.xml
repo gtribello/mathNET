@@ -235,14 +235,9 @@
          <block type="math_number"></block>
       </category>
       <category name="Logic">
-        <block type="controls_if"></block>       
-        <block type="math_number_property">
-        <value name="NUMBER_TO_CHECK">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-      </block>
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block> 
@@ -267,10 +262,11 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
-         <block type="math_round"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
@@ -281,7 +277,11 @@
       </category>
     </TOOLBOX>
     <FINISH> 
-       levelcomplete=true;
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks(); 
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ levelcomplete=true; }
+       }
        for(var i=0; i &lt; myApp.spins.length; i++ ){
            if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
        }
@@ -298,37 +298,12 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_round"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
-      </category>
-      <category name="Microstate">
-         <block type="get_nspins"></block>
-         <block type="set_spin"></block>
-      </category>
-      <category name="Random">
-         <block type="uniform_random"></block>
-      </category>
-    </TOOLBOX>
-    <FINISH>
-           levelcomplete=true;
-    </FINISH>
-  </LEVEL>
- <LEVEL>
-    <DESCRIPTION>
-      Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
-      Then select one of the spin coordinates at random and flip the value of this spin.  Make your code repeat this 
-      process of flipping one randomly chosen spin a total of 10 times.
-    </DESCRIPTION>
-    <TOOLBOX>
-      <category name="Variables" custom="VARIABLE"></category>
-      <category name="Program">
-         <block type="controls_repeat_ext"></block>
-         <block type="math_arithmetic"></block>
-         <block type="math_number"></block>
-      </category>
-      <category name="Logic">
-        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
@@ -340,12 +315,63 @@
       </category>
     </TOOLBOX>
     <FINISH>
-           levelcomplete=true;
+       nuniform = 0;
+       nsp_cal = 0
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]=="number of spins" ){ nsp_cal += 1; }
+       }
+       if( nuniform!=2 || nsp_cal!=2 ){ levelcomplete = false; }
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
+  </LEVEL>
+ <LEVEL>
+    <DESCRIPTION>
+      Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
+      Then make your code repeat the process of flipping one randomly chosen spin a total of 10 times.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block> 
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="get_spin"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       ndo = 0;
+       nuniform = 0;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]="repeat" ){ ndo += 1; }
+       }
+       if( nuniform!=2 ||  ndo!=2 ){ levelcomplete = false; }
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }    
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      At the end of the previous level we implemented a Monte Carlo integrator that operated at infiite temperature.  To
+      At the end of the previous level we implemented a Monte Carlo integrator that accepted all moves and that therefore operated at infiite temperature.  To
       operate at finite temperature we are going to have to calculate the energy.  Consequentially, the blocks shown
       generate a particular configuration for the microscopic coordinates of all the spins.  Add further blocks to  
       calculate the energy of this microstate using the Ising model Hamiltonian.  Once the energy has been calculated you 

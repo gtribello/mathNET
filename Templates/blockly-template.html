@@ -192,6 +192,9 @@
                               myApp.workspace = null;
                               // Control block highlighting for this app
                               myApp.highlightPause = false;
+                              // This ensures that the user can kill rogue calculations
+                              myApp.killJob = false;
+                              myApp.runningJob = false;
                               // Details of levels for this game
                               myApp.xmlLevelDoc = null;
                               myApp.active = [];
@@ -207,6 +210,7 @@
 
                               // This parses blocks - turns it to code 
                               myApp.parseCode=function( workspace, initApi ) {
+                                 if( myApp.runningJob ) myApp.killJob=true;
                                  // Generate JavaScript code and parse it.
                                  Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
                                  Blockly.JavaScript.addReservedWords('highlightBlock');
@@ -246,13 +250,19 @@
 
                               // This runs the code
                               myApp.runCode = function() {
-                                 if( myApp.myInterpreter.step() ){
+                                 myApp.runningJob = true; 
+                                 if( myApp.myInterpreter.step() && !myApp.killJob ){
                                     window.setTimeout(myApp.runCode.bind(myApp), 10 );
                                  } else {
                                     // Program complete, no more code to execute.
                                     document.getElementById('stepButton').disabled = 'disabled';
                                     document.getElementById('runButton').disabled = 'disabled';
                                     myApp.highlightBlock(null);
+                                    myApp.runningJob = false;
+                                    if( myApp.killJob ){ 
+                                        myApp.killJob=false; 
+                                        return; 
+                                    }
                                     // Now check for level end
                                     myApp.checkLevelEnd();
                                     return;

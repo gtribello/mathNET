@@ -132,11 +132,12 @@ class topic(object) :
 class topiclist(object) :
   def __init__(self) :
      self.tlist = []
-     self.labellist = []
-     self.topiclist = os.listdir('Topics')
-     for this in self.topiclist :
+     self.topiclist, self.labellist = [], []
+     tlist = os.listdir('Topics')
+     for this in tlist :
          # Make sure swap files are ignored 
          if not this.startswith('.') : 
+            self.topiclist.append( this )
             newtopic = topic( this )
             newtopic.readName()
             self.labellist.append( newtopic.label )

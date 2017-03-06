@@ -180,6 +180,18 @@
       return interpreter.createPrimitive(myApp.getNumberOfSpins());
     };
     interpreter.setProperty(scope, 'getNumberOfSpins', interpreter.createNativeFunction(wrapper));
+
+    // Add API functions for magnetic field strength
+    var wrapper = function(){
+      return interpreter.createPrimitive(myApp.getMagneticField());
+    };
+    interpreter.setProperty(scope, 'getMagneticField', interpreter.createNativeFunction(wrapper));
+
+    // Add API functions for temperature
+    var wrapper = function(){
+      return interpreter.createPrimitive(myApp.getTemperature());
+    };
+    interpreter.setProperty(scope, 'getTemperature', interpreter.createNativeFunction(wrapper));
    
     // Add API function for setting spins
     var wrapper = function(ida, idb){
@@ -195,10 +207,64 @@
       return interpreter.createPrimitive(myApp.getSpinValue(id));
     };
     interpreter.setProperty(scope, 'getSpinValue', interpreter.createNativeFunction(wrapper))
+ 
+    // Add API function for printing energy
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.printEnergy(id));
+    };
+    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper)) 
   
                               };
 
+                              // Define a custom block to generate uniform random variables
+                              Blockly.Blocks["uniform_random"] = {
+                                // take input and plot it on y
+                                init: function() {
+                                  this.jsonInit({
+                                    "message0": "uniform random variable between 0 and 1",
+                                    "output": "Number",
+                                    "colour": Blockly.Blocks.variables.HUE,
+                                    "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+                                    "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+                                  })
+                                }
+                              };
+
+                              Blockly.JavaScript['uniform_random'] = function(block) {
+                                var code = 'Math.random()'; 
+                                return [code, Blockly.JavaScript.ORDER_ATOMIC]; 
+                              };
+
+                              Blockly.Python['uniform_random'] = function(block) {
+                                var code = 'random.uniform(0,1)'; 
+                                return [code, Blockly.Python.ORDER_ATOMIC];
+                              };
+
                               
+    // Return the magnetic field strength
+    Blockly.Blocks["get_field"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "get magnetic field strength",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+   
+    Blockly.JavaScript['get_field'] = function(block) {
+      var code = 'getMagneticField()';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+   
+    Blockly.Python['get_field'] = function(block) {
+      var code = 'magnetic_field_strength';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+
     // Return the number of spins in the system
     Blockly.Blocks["get_nspins"] = {
       init: function() {
@@ -210,6 +276,42 @@
           "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
         })
       }
+    };
+
+    // Return the temperature
+    Blockly.Blocks["get_temperature"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "get temperature",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+    
+    Blockly.JavaScript['get_temperature'] = function(block) {
+      var code = 'getTemperature()';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+    
+    Blockly.Python['get_temperature'] = function(block) {
+      var code = 'temperature';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+    
+    // Return the number of spins in the system
+    Blockly.Blocks["get_nspins"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "number of spins",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      } 
     };
     
     Blockly.JavaScript['get_nspins'] = function(block) {
@@ -297,6 +399,39 @@
       var code = 'spins[' + s + '] = ' + v + '\n';
       return code;
     };
+
+    Blockly.Blocks["print_energy"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "print energy %1",
+          "args0": [
+            {
+              "type": "input_value",
+              "name": "n",
+              "check": "Number"
+            }
+          ],
+          "inputsInline": true,
+          "nextStatement": null,
+          "previousStatement": null,
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+
+    Blockly.JavaScript['print_energy'] = function(block) {
+      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var code = 'printEnergy(' + s + ');\n';
+      return code;
+    };
+
+    Blockly.Python['print_energy'] = function(block) {
+      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
+      var code = 'print("Energy equals",' + s + ')\n';
+      return code;
+    };
   
 
                               // Construct the namespace for the app 
@@ -305,13 +440,43 @@
                               myApp.workspace = null;
                               // Control block highlighting for this app
                               myApp.highlightPause = false;
+                              // This ensures that the user can kill rogue calculations
+                              myApp.killJob = false;
+                              myApp.runningJob = false;
                               // Details of levels for this game
                               myApp.xmlLevelDoc = null;
                               myApp.active = [];
                               myApp.mylevel = 0;
 
                               
-    myApp.spins = new Array(); 
+    myApp.spins = []; myApp.nspins = 25;
+    myApp.magneticFieldStrength = 0;
+    myApp.temperature = 1;
+    myApp.mismatchedEnergy = false;
+
+    myApp.printEnergy = function( eng ){
+      ctx = document.getElementById("myCanvas").getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo( 100,100 );
+      ctx.lineTo( 100,300 );
+      ctx.lineTo( 300,300 );
+      ctx.lineTo( 300,100 );
+      ctx.lineTo( 100,100 );
+      ctx.closePath();
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fill(); 
+      energy = -myApp.spins[0]*myApp.spins[myApp.spins.length-1] - myApp.spins[0]*myApp.magneticFieldStrength;
+      for(var i = 1; i < myApp.spins.length; i++){
+          energy += -myApp.spins[i-1]*myApp.spins[i] - myApp.magneticFieldStrength*myApp.spins[i];
+      }
+      if( energy != eng ){ 
+          alert("mismatch for system energy expecting " + energy + " got " + eng );
+          myApp.mismatchedEnergy = true; 
+      }
+      ctx.fillStyle = '#000000';
+      ctx.font="20px Georgia";
+      ctx.fillText("Energy equals " + eng,110,180);
+    };
 
     myApp.drawSpin = function( snum ){
       ctx = document.getElementById("myCanvas").getContext("2d");
@@ -339,14 +504,17 @@
    };
   
    myApp.getSpinValue=function( n ) {
-     if( n>=this.spins.length || n < 0 ){
+     if( n>=myApp.spins.length || n < 0 ){
          alert( "spin " + n + " does not exist" );
      }
-     return this.spins[n];
+     if( myApp.spins[n]!=1 && myApp.spins[n]!=-1 ){
+         alert( "spin " + n + " has illegal value");
+     }
+     return myApp.spins[n];
    };
 
    myApp.setSpinValue=function( n, val ) {
-     if( n>=this.spins.length || n < 0 ){
+     if( n>=myApp.spins.length || n < 0 ){
          alert( "spin " + n + " does not exist" );
      }
      if( val!=1 && val!=-1 ){
@@ -357,13 +525,26 @@
    };
 
    myApp.setNumberOfSpins=function( nspins ) {
-      myApp.spins = []; ctx = document.getElementById("myCanvas").getContext("2d");
+      myApp.nspins=nspins; myApp.spins = []; 
+      ctx = document.getElementById("myCanvas").getContext("2d");
       if( ctx!=null ){ ctx.clearRect(0,0,400,400); }
       for(var i = 0; i < nspins; i++){ myApp.spins.push( 0 ); }
       for(var i = 0; i < nspins; i++){ myApp.drawSpin( i ); }
-    }; 
-    myApp.getNumberOfSpins=function() {
+   }; 
+   myApp.getNumberOfSpins=function() {
      return myApp.spins.length;
+   };
+   myApp.setMagneticField=function(val) {
+     myApp.magneticFieldStrength = val; 
+   };
+   myApp.getMagneticField=function() {
+     return myApp.magneticFieldStrength;
+   };
+   myApp.setTemperature=function(val) {
+     myApp.temperature = val;
+   };
+   myApp.getTemperature=function() {
+     return myApp.temperature;
    };
   
 
@@ -375,6 +556,16 @@
 
                               // This parses blocks - turns it to code 
                               myApp.parseCode=function( workspace, initApi ) {
+                                 // Ideally want to get rid of this in the future but don't know how for the moment
+                                 ww = myApp.workspace.getAllBlocks();
+                                 for(var i=0; i<ww.length; i++ ){
+                                     if( ww[i].toString().search("change")>=0 ){
+                                         alert("Please replace all uses of change variable blocks with set variable and get variable blocks");
+                                         return;
+                                     }
+                                 }
+                                 // End of bit we want to get rid of 
+                                 if( myApp.runningJob ) myApp.killJob=true;
                                  // Generate JavaScript code and parse it.
                                  Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
                                  Blockly.JavaScript.addReservedWords('highlightBlock');
@@ -414,13 +605,19 @@
 
                               // This runs the code
                               myApp.runCode = function() {
-                                 if( myApp.myInterpreter.step() ){
+                                 myApp.runningJob = true; 
+                                 if( myApp.myInterpreter.step() && !myApp.killJob ){
                                     window.setTimeout(myApp.runCode.bind(myApp), 10 );
                                  } else {
                                     // Program complete, no more code to execute.
                                     document.getElementById('stepButton').disabled = 'disabled';
                                     document.getElementById('runButton').disabled = 'disabled';
                                     myApp.highlightBlock(null);
+                                    myApp.runningJob = false;
+                                    if( myApp.killJob ){ 
+                                        myApp.killJob=false; 
+                                        return; 
+                                    }
                                     // Now check for level end
                                     myApp.checkLevelEnd();
                                     return;
@@ -428,8 +625,132 @@
                               }; 
 
                               myApp.checkLevelEnd = function() {
-                                 myApp.active[myApp.mylevel + 1] = true;
-                                 myApp.setLevel( myApp.mylevel + 1 );
+                                 levelcomplete = true;
+                                 switch( myApp.mylevel ){
+                                     case 0:
+       levelcomplete=true;
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    break; 
+case 1:
+       levelcomplete=true;
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( i%2==0 && myApp.spins[i]!=-1 ){ levelcomplete=false; }
+           if( i%2==1 && myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    break; 
+case 2: 
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks(); 
+       for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ levelcomplete=true; }
+       }
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 && myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    break; 
+case 3:
+       nuniform = 0;
+       nsp_cal = 0
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]=="number of spins" ){ nsp_cal += 1; }
+       }
+       if( nuniform!=2 || nsp_cal!=2 ){ levelcomplete = false; }
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 && myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    break; 
+case 4:
+       ndo = 0;
+       nuniform = 0;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i].toString().search("repeat") >= 0 ){ ndo += 1; }
+       }
+       if( nuniform!=2 ||  ndo!=2 ){ levelcomplete = false; }
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 && myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }    
+    break; 
+case 5:
+       peng = 0;
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="get magnetic field strength" ){ levelcomplete=true; }
+           if( ww[i].toString().search("print energy") >=0 ){ peng += 1; }
+       }
+       if( peng==0 ){ levelcomplete=false; }
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 && myApp.spins[i]!=1 ){ levelcomplete=false; }
+       } 
+       if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
+    break; 
+case 6:
+       ndo = 0;
+       peng = 0;
+       nfunc = 0;
+       nuniform = 0;
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i < ww.length; i++ ){
+           if( ww[i].toString().search("repeat") >= 0 ){ ndo += 1; }
+           if( ww[i].toString().search("return") >= 0 ){ nfunc += 1; }
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]=="get magnetic field strength" ){ levelcomplete=true; }
+           if( ww[i].toString().search("print energy") >=0 ){ peng += 1; } 
+       }   
+       if( peng == 0 || ndo < 3 || nfunc < 1 || nuniform < 2 ){ levelcomplete=false; } 
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 && myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }   
+       if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
+    break; 
+case 7:
+       ndo = 0;
+       nif = 0;
+       peng = 0;
+       nfunc = 0;
+       nuniform = 0; 
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i < ww.length; i++ ){
+           if( ww[i].toString().search("repeat") >=0 ){ ndo += 1; }
+           if( ww[i].toString().search("return") >=0 ){ nfunc += 1; }
+           if( ww[i].toString().search("if") >= 0 ){ nif += 1; }
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]=="get magnetic field strength" ){ levelcomplete=true; }
+           if( ww[i].toString().search("print energy") >=0 ){ peng += 1; }
+       }
+       if( peng==0 || ndo < 3 || nfunc < 1 || nuniform < 3 || nif < 2 ){ levelcomplete=false; }
+       for(var i=0; i < myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 && myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+       if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
+    break; 
+
+                                 }
+                                 if( levelcomplete ){
+                                     alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+                                     
+    myApp.setNumberOfSpins(myApp.nspins);
+    myApp.setMagneticField(0);
+  
+                                     myApp.active[myApp.mylevel + 1] = true;
+                                     myApp.setLevel( myApp.mylevel + 1 );
+                                 } else {
+                                     alert("Your program is not quite right.  Have another go and see if you can fix it")
+                                 }
+                              };
+
+                              // This clears before setting the level
+                              myApp.clearAndSetLevel = function(n) {
+                                 myApp.workspace.clear(); 
+                                 myApp.setLevel(n);
                               };
 
                               // This sets the level
@@ -475,7 +796,8 @@
                               myApp.init = function() {
                                 // Setup workspace for game
                                 
-    myApp.setNumberOfSpins(25)
+    myApp.setNumberOfSpins(myApp.nspins);
+    myApp.setMagneticField(0);
    
 
                                 // Setup blockly
@@ -504,7 +826,7 @@
                                 var nlev = myApp.xmlLevelDoc.getElementsByTagName("LEVEL").length;
                                 for(var i=0;i<nlev;i++){
                                   myApp.active.push(false); 
-                                  levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myapp.levelController.setLevel(' + i + ')"></span>\n'
+                                  levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myApp.clearAndSetLevel(' + i + ')"></span>\n'
                                 }
                                 // This bit creates the level indicator
                                 var g = document.getElementById("levelIndicator");
@@ -512,7 +834,7 @@
                                 // Make sure we can set first level
                                 myApp.active[0]=true; 
                                 // Start in level 0
-                                myApp.setLevel(0);
+                                myApp.clearAndSetLevel(0);
                               };
 
                               window.addEventListener('load', myApp.init);

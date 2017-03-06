@@ -24,6 +24,18 @@
       return interpreter.createPrimitive(myApp.getNumberOfSpins());
     };
     interpreter.setProperty(scope, 'getNumberOfSpins', interpreter.createNativeFunction(wrapper));
+
+    // Add API functions for magnetic field strength
+    var wrapper = function(){
+      return interpreter.createPrimitive(myApp.getMagneticField());
+    };
+    interpreter.setProperty(scope, 'getMagneticField', interpreter.createNativeFunction(wrapper));
+
+    // Add API functions for temperature
+    var wrapper = function(){
+      return interpreter.createPrimitive(myApp.getTemperature());
+    };
+    interpreter.setProperty(scope, 'getTemperature', interpreter.createNativeFunction(wrapper));
    
     // Add API function for setting spins
     var wrapper = function(ida, idb){
@@ -39,8 +51,38 @@
       return interpreter.createPrimitive(myApp.getSpinValue(id));
     };
     interpreter.setProperty(scope, 'getSpinValue', interpreter.createNativeFunction(wrapper))
+ 
+    // Add API function for printing energy
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.printEnergy(id));
+    };
+    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper)) 
   </APIFUNCTIONS>
   <BLOCKS>
+    // Return the magnetic field strength
+    Blockly.Blocks["get_field"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "get magnetic field strength",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+   
+    Blockly.JavaScript['get_field'] = function(block) {
+      var code = 'getMagneticField()';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+   
+    Blockly.Python['get_field'] = function(block) {
+      var code = 'magnetic_field_strength';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+
     // Return the number of spins in the system
     Blockly.Blocks["get_nspins"] = {
       init: function() {
@@ -52,6 +94,42 @@
           "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
         })
       }
+    };
+
+    // Return the temperature
+    Blockly.Blocks["get_temperature"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "get temperature",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+    
+    Blockly.JavaScript['get_temperature'] = function(block) {
+      var code = 'getTemperature()';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+    
+    Blockly.Python['get_temperature'] = function(block) {
+      var code = 'temperature';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+    
+    // Return the number of spins in the system
+    Blockly.Blocks["get_nspins"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "number of spins",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      } 
     };
     
     Blockly.JavaScript['get_nspins'] = function(block) {
@@ -139,9 +217,69 @@
       var code = 'spins[' + s + '] = ' + v + '\n';
       return code;
     };
+
+    Blockly.Blocks["print_energy"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "print energy %1",
+          "args0": [
+            {
+              "type": "input_value",
+              "name": "n",
+              "check": "Number"
+            }
+          ],
+          "inputsInline": true,
+          "nextStatement": null,
+          "previousStatement": null,
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+
+    Blockly.JavaScript['print_energy'] = function(block) {
+      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var code = 'printEnergy(' + s + ');\n';
+      return code;
+    };
+
+    Blockly.Python['print_energy'] = function(block) {
+      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
+      var code = 'print("Energy equals",' + s + ')\n';
+      return code;
+    };
   </BLOCKS>
   <SCRIPTS>
-    myApp.spins = new Array(); 
+    myApp.spins = []; myApp.nspins = 25;
+    myApp.magneticFieldStrength = 0;
+    myApp.temperature = 1;
+    myApp.mismatchedEnergy = false;
+
+    myApp.printEnergy = function( eng ){
+      ctx = document.getElementById("myCanvas").getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo( 100,100 );
+      ctx.lineTo( 100,300 );
+      ctx.lineTo( 300,300 );
+      ctx.lineTo( 300,100 );
+      ctx.lineTo( 100,100 );
+      ctx.closePath();
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fill(); 
+      energy = -myApp.spins[0]*myApp.spins[myApp.spins.length-1] - myApp.spins[0]*myApp.magneticFieldStrength;
+      for(var i = 1; i &lt; myApp.spins.length; i++){
+          energy += -myApp.spins[i-1]*myApp.spins[i] - myApp.magneticFieldStrength*myApp.spins[i];
+      }
+      if( energy != eng ){ 
+          alert("mismatch for system energy expecting " + energy + " got " + eng );
+          myApp.mismatchedEnergy = true; 
+      }
+      ctx.fillStyle = '#000000';
+      ctx.font="20px Georgia";
+      ctx.fillText("Energy equals " + eng,110,180);
+    };
 
     myApp.drawSpin = function( snum ){
       ctx = document.getElementById("myCanvas").getContext("2d");
@@ -169,14 +307,17 @@
    };
   
    myApp.getSpinValue=function( n ) {
-     if( n&gt;=this.spins.length || n &lt; 0 ){
+     if( n&gt;=myApp.spins.length || n &lt; 0 ){
          alert( "spin " + n + " does not exist" );
      }
-     return this.spins[n];
+     if( myApp.spins[n]!=1 &amp;&amp; myApp.spins[n]!=-1 ){
+         alert( "spin " + n + " has illegal value");
+     }
+     return myApp.spins[n];
    };
 
    myApp.setSpinValue=function( n, val ) {
-     if( n>=this.spins.length || n &lt; 0 ){
+     if( n>=myApp.spins.length || n &lt; 0 ){
          alert( "spin " + n + " does not exist" );
      }
      if( val!=1 &amp;&amp; val!=-1 ){
@@ -187,17 +328,31 @@
    };
 
    myApp.setNumberOfSpins=function( nspins ) {
-      myApp.spins = []; ctx = document.getElementById("myCanvas").getContext("2d");
+      myApp.nspins=nspins; myApp.spins = []; 
+      ctx = document.getElementById("myCanvas").getContext("2d");
       if( ctx!=null ){ ctx.clearRect(0,0,400,400); }
       for(var i = 0; i &lt; nspins; i++){ myApp.spins.push( 0 ); }
       for(var i = 0; i &lt; nspins; i++){ myApp.drawSpin( i ); }
-    }; 
-    myApp.getNumberOfSpins=function() {
+   }; 
+   myApp.getNumberOfSpins=function() {
      return myApp.spins.length;
+   };
+   myApp.setMagneticField=function(val) {
+     myApp.magneticFieldStrength = val; 
+   };
+   myApp.getMagneticField=function() {
+     return myApp.magneticFieldStrength;
+   };
+   myApp.setTemperature=function(val) {
+     myApp.temperature = val;
+   };
+   myApp.getTemperature=function() {
+     return myApp.temperature;
    };
   </SCRIPTS>
   <STARTUP>
-    myApp.setNumberOfSpins(25)
+    myApp.setNumberOfSpins(myApp.nspins);
+    myApp.setMagneticField(0);
   </STARTUP>
   <LEVEL>
     <DESCRIPTION>
@@ -215,6 +370,12 @@
          <block type="set_spin"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -229,20 +390,22 @@
          <block type="math_number"></block>
       </category>
       <category name="Logic">
-        <block type="controls_if"></block>       
-        <block type="math_number_property">
-        <value name="NUMBER_TO_CHECK">
-          <shadow type="math_number">
-            <field name="NUM">0</field>
-          </shadow>
-        </value>
-      </block>
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block> 
          <block type="set_spin"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( i%2==0 &amp;&amp; myApp.spins[i]!=-1 ){ levelcomplete=false; }
+           if( i%2==1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -254,10 +417,11 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
-         <block type="math_round"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
@@ -267,6 +431,16 @@
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH> 
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks(); 
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ levelcomplete=true; }
+       }
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -279,24 +453,40 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_round"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
          <block type="set_spin"></block>
+         <block type="get_spin"></block>
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+       nuniform = 0;
+       nsp_cal = 0
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]=="number of spins" ){ nsp_cal += 1; }
+       }
+       if( nuniform!=2 || nsp_cal!=2 ){ levelcomplete = false; }
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
   </LEVEL>
  <LEVEL>
     <DESCRIPTION>
       Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
-      Then select one of the spin coordinates at random and flip the value of this spin.  Make your code repeat this 
-      process of flipping one randomly chosen spin a total of 10 times.
+      Then make your code repeat the process of flipping one randomly chosen spin a total of 10 times.
     </DESCRIPTION>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
@@ -304,9 +494,12 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_round"></block> 
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
@@ -317,14 +510,26 @@
          <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+       ndo = 0;
+       nuniform = 0;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i].toString().search("repeat") &gt;= 0 ){ ndo += 1; }
+       }
+       if( nuniform!=2 ||  ndo!=2 ){ levelcomplete = false; }
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }    
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      At the end of the previous level we implemented a Monte Carlo integrator that operated at infiite temperature.  To
-      operate at finite temperature we are going to have to calculate the energy.  Consequentially, the blocks shown
-      generate a particular configuration for the microscopic coordinates of all the spins.  Add further blocks to  
+      At the end of the previous level we implemented a Monte Carlo integrator that accepted all moves and that therefore operated at infiite temperature.  To
+      operate at finite temperature we are going to have to calculate the energy.  Use the blocks provided to generate a random configuration of spins and then  
       calculate the energy of this microstate using the Ising model Hamiltonian.  Once the energy has been calculated you 
-      should report it by using the print block.
+      should report it to the screen using the print energy block.
     </DESCRIPTION>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
@@ -333,17 +538,43 @@
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
       </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
+      </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
+         <block type="get_field"></block> 
+         <block type="set_spin"></block>
          <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
       </category>
     </TOOLBOX>
+    <FINISH>
+       peng = 0;
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="get magnetic field strength" ){ levelcomplete=true; }
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng += 1; }
+       }
+       if( peng==0 ){ levelcomplete=false; }
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       } 
+       if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
       Lets now generate a trajectory of 11 frames using what we learnt while programming the code for the last but one level.
-      Calculate the energy using the Ising model Hamiltonian for each of the microstates you generate and report these to screen.
-      On top of this calculate the average energy of your 11 configurations and report this to screen.
+      Generate a first configuration at random and then calculate the energy using the Ising model Hamiltonian for each of the microstates 
+      you generate by flipping, randomly-chosen individual spins and report these to screen.  You will need to include the code to calculate the energy 
+      of the system twice in this program so you will probably find it useful to write a function that calculates the energy and returns it.
     </DESCRIPTION>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
@@ -351,24 +582,51 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_round"></block> 
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
          <block type="set_spin"></block>
+         <block type="get_field"></block>
          <block type="get_spin"></block>
+         <block type="print_energy"></block>
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
       </category>
+      <category name="Functions" custom="PROCEDURE"></category>
     </TOOLBOX>
+    <FINISH>
+       ndo = 0;
+       peng = 0;
+       nfunc = 0;
+       nuniform = 0;
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("repeat") &gt;= 0 ){ ndo += 1; }
+           if( ww[i].toString().search("return") &gt;= 0 ){ nfunc += 1; }
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]=="get magnetic field strength" ){ levelcomplete=true; }
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng += 1; } 
+       }   
+       if( peng == 0 || ndo &lt; 3 || nfunc &lt; 1 || nuniform &lt; 2 ){ levelcomplete=false; } 
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }   
+       if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
+    </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      Here is something like the arrangement of blocks you should have just arrived at.  We now have almost everything we need for our 
-      Monte Carlo integrator.  Can you finish off the code by implementing the Metropolis accept/reject criteria in this code.
+      The arrangement of blocks you should have just arrived at provides almost everything we need for our 
+      Monte Carlo integrator.  Can you finish off the code by implementing the Metropolis accept/reject criteria as well.
+      Make sure you only report the energies of the accepted configurations to screen.
     </DESCRIPTION>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
@@ -376,18 +634,47 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_round"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
       </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
          <block type="set_spin"></block>
          <block type="get_spin"></block>
+         <block type="get_temperature"></block>
+         <block type="print_energy"></block>
       </category>
      <category name="Random">
          <block type="uniform_random"></block>
       </category>
+      <category name="Functions" custom="PROCEDURE"></category>
     </TOOLBOX>
+    <FINISH>
+       ndo = 0;
+       nif = 0;
+       peng = 0;
+       nfunc = 0;
+       nuniform = 0; 
+       levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("repeat") &gt;=0 ){ ndo += 1; }
+           if( ww[i].toString().search("return") &gt;=0 ){ nfunc += 1; }
+           if( ww[i].toString().search("if") &gt;= 0 ){ nif += 1; }
+           if( ww[i]=="uniform random variable between 0 and 1" ){ nuniform += 1; }
+           if( ww[i]=="get magnetic field strength" ){ levelcomplete=true; }
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng += 1; }
+       }
+       if( peng==0 || ndo &lt; 3 || nfunc &lt; 1 || nuniform &lt; 3 || nif &lt; 2 ){ levelcomplete=false; }
+       for(var i=0; i &lt; myApp.spins.length; i++ ){
+           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       }
+       if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
+    </FINISH>
   </LEVEL>
 </PAGE>

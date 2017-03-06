@@ -210,6 +210,15 @@
 
                               // This parses blocks - turns it to code 
                               myApp.parseCode=function( workspace, initApi ) {
+                                 // Ideally want to get rid of this in the future but don't know how for the moment
+                                 ww = myApp.workspace.getAllBlocks();
+                                 for(var i=0; i<ww.length; i++ ){
+                                     if( ww[i].toString().search("change")>=0 ){
+                                         alert("Please replace all uses of change variable blocks with set variable and get variable blocks");
+                                         return;
+                                     }
+                                 }
+                                 // End of bit we want to get rid of 
                                  if( myApp.runningJob ) myApp.killJob=true;
                                  // Generate JavaScript code and parse it.
                                  Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
@@ -275,14 +284,19 @@
                                      INSERT LEVEL COMPLETION
                                  }
                                  if( levelcomplete ){
-                                     alert("Congratulations! Your program is correct.  Now see how you do on the next level")
+                                     alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
                                      INSERT WORKSPACE STARTUP
-                                     myApp.workspace.clear()
                                      myApp.active[myApp.mylevel + 1] = true;
                                      myApp.setLevel( myApp.mylevel + 1 );
                                  } else {
                                      alert("Your program is not quite right.  Have another go and see if you can fix it")
                                  }
+                              };
+
+                              // This clears before setting the level
+                              myApp.clearAndSetLevel = function(n) {
+                                 myApp.workspace.clear(); 
+                                 myApp.setLevel(n);
                               };
 
                               // This sets the level
@@ -355,7 +369,7 @@
                                 var nlev = myApp.xmlLevelDoc.getElementsByTagName("LEVEL").length;
                                 for(var i=0;i<nlev;i++){
                                   myApp.active.push(false); 
-                                  levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myApp.setLevel(' + i + ')"></span>\n'
+                                  levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myApp.clearAndSetLevel(' + i + ')"></span>\n'
                                 }
                                 // This bit creates the level indicator
                                 var g = document.getElementById("levelIndicator");
@@ -363,7 +377,7 @@
                                 // Make sure we can set first level
                                 myApp.active[0]=true; 
                                 // Start in level 0
-                                myApp.setLevel(0);
+                                myApp.clearAndSetLevel(0);
                               };
 
                               window.addEventListener('load', myApp.init);

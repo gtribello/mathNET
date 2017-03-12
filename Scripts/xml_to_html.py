@@ -52,6 +52,7 @@ def build_html_file( infile ):
        page = page.replace( "INSERT-FILENAME", infile )
        generate_pdf_worksheet( tree, infile )
     elif template=="blockly" :
+       page = page.replace( "INSERT HEADER",  ET.tostring( tree.find("HEADER"), encoding="unicode", method="xml").replace("<HEADER>","").replace("</HEADER>","") ) 
        page = page.replace( "INSERT API FUNCTIONS", tree.find("APIFUNCTIONS").text )
        page = page.replace( "INSERT WORKSPACE BLOCKS", tree.find("BLOCKS").text )
        page = page.replace( "INSERT WORKSPACE SLIDERS", ET.tostring( tree.find("SLIDERS"), encoding="unicode", method="xml").replace("<SLIDERS>","").replace("</SLIDERS>","") ) 

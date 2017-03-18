@@ -7,7 +7,7 @@
      This exercise will teach you how Monte Carlo simulations work.  You will, through the course of the 
      exercise, learn how to write your own Monte Carlo code for simulating a one dimensional closed Ising Model.
   </WELCOME>
-  <SLIDERS>
+  <WORKSPACE>
     <div id="nslider">
       Number of spins: <input id="slide" type="range" min="5" max="100" step="5" value="25" onchange="ising.setNumberOfSpins(this.value)"/> 
     </div>
@@ -17,9 +17,17 @@
     <div id="tslider">
       Temperature:  <input id="slide" type="range" min="0" max="10" step="1" value="1" onchange="ising.setTemperature(this.value)"/> 
     </div>
-  </SLIDERS>
-  <WORKSPACE>
-    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <table>
+      <tr>
+        <td>
+          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+        </td>
+        <td width="20px"> nbsp;nbsp; </td>
+        <td>
+          <div id="blocklyDiv" style="height: 800px"></div>
+        </td>
+      </tr>
+    </table>
   </WORKSPACE>
   <APIFUNCTIONS>
     // Add ising functions to API
@@ -30,7 +38,7 @@
       id = id ? id.toString() : '';
       return interpreter.createPrimitive(myApp.printEnergy(id));
     };
-    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper)) 
+    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper)); 
   </APIFUNCTIONS>
   <BLOCKS>
     Blockly.Blocks["print_energy"] = {
@@ -94,6 +102,7 @@
     };
   </SCRIPTS>
   <STARTUP>
+    ising.radius=200;
     ising.setNumberOfSpins(ising.nspins);
     ising.setMagneticField(0);
   </STARTUP>

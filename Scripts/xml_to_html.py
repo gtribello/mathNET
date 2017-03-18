@@ -55,10 +55,9 @@ def build_html_file( infile ):
        page = page.replace( "INSERT HEADER",  ET.tostring( tree.find("HEADER"), encoding="unicode", method="xml").replace("<HEADER>","").replace("</HEADER>","") ) 
        page = page.replace( "INSERT API FUNCTIONS", tree.find("APIFUNCTIONS").text )
        page = page.replace( "INSERT WORKSPACE BLOCKS", tree.find("BLOCKS").text )
-       page = page.replace( "INSERT WORKSPACE SLIDERS", ET.tostring( tree.find("SLIDERS"), encoding="unicode", method="xml").replace("<SLIDERS>","").replace("</SLIDERS>","") ) 
        page = page.replace( "INSERT APP SCRIPTS", tree.find("SCRIPTS").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") )
        page = page.replace( "INSERT WORKSPACE STARTUP", tree.find("STARTUP").text )
-       page = page.replace( "INSERT WORKSPACE", ET.tostring( tree.find("WORKSPACE"), encoding="unicode", method="xml").replace("<WORKSPACE>","").replace("</WORKSPACE>","") )
+       page = page.replace( "INSERT WORKSPACE", ET.tostring( tree.find("WORKSPACE"), encoding="unicode", method="xml").replace("<WORKSPACE>","").replace("</WORKSPACE>","") ).replace("nbsp;","&nbsp;")
        page = page.replace( "INSERT LEVEL XML", infile + ".xml" )
        # This constructs the ends of levels 
        n, levels, levelcomplete = 0, tree.findall("LEVEL"), ""

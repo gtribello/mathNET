@@ -41,13 +41,14 @@ function isingSpinControls(){
     this.spins = []; this.nspins = 25;
     this.magneticFieldStrength = 0;
     this.temperature = 1;
+    this.radius = 200;
 
     this.drawSpin = function( snum ){
       var ctx = document.getElementById("myCanvas").getContext("2d");
       if ( ctx==null ){ return; }
       var num = parseInt( snum );
 
-      ctx.beginPath(); var unit = 2*Math.PI/this.spins.length; var radius=200; var infr=0.9;
+      ctx.beginPath(); var unit = 2*Math.PI/this.spins.length; var radius=this.radius; var infr=0.9;
       ctx.moveTo(radius+radius*Math.cos((num+1)*unit),radius+radius*Math.sin((num+1)*unit));
       ctx.lineTo(radius+infr*radius*Math.cos((num+1)*unit),radius+infr*radius*Math.sin((num+1)*unit));
       ctx.lineTo(radius+infr*radius*Math.cos(num*unit),radius+infr*radius*Math.sin(num*unit));
@@ -84,7 +85,7 @@ function isingSpinControls(){
      if( val!=1 && val!=-1 ){
          alert( val + " is not a valid spin value" );
      }
-     this.spins[n] = val;
+     this.spins[n] = parseInt( val );
      this.drawSpin( n );
    };
 

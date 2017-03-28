@@ -1,0 +1,318 @@
+<PAGE>
+  <TITLE> Phase transitions and the ising model </TITLE>
+  <HEADER>
+     <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     For this exercise we are going to construct a Monte Carlo code to simulate the Ising model.  We are going to use the mean field Hamiltonian for 
+     this system and then we are going to use the code we have written to look into what phase transitions are.
+  </WELCOME>
+  <WORKSPACE>
+    <div id="nslider">
+      Number of spins: <input id="slide" type="range" min="5" max="100" step="5" value="25" onchange="ising.setNumberOfSpins(this.value)"/>
+    </div>
+    <div id="hslider">
+      Magnetic field strength: <input id="slide" type="range" min="-5" max="5" step="1" value="0" onchange="ising.setMagneticField(this.value)"/>
+    </div>
+    <div id="tslider">
+      Temperature:  <input id="slide" type="range" min="0" max="10" step="1" value="1" onchange="ising.setTemperature(this.value)"/>
+    </div>
+    <table>
+      <tr>
+        <td>
+          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 800px"> </div>
+        </td> 
+      </tr>
+      <tr>
+        <td> <div id="graph" style="width: 400px"></div> </td>
+        <td width="10px"> nbsp;nbsp; </td>
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add ising functions to API
+    addIsingFunctionsToApi( interpreter, scope );
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
+
+    // Add API function for printing energy
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.printEnergy(id));
+    };
+    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper));
+
+    // Add API function for getting average spin
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.getAverageSpin(id));
+    }; 
+    interpreter.setProperty(scope, 'getAverageSpin', interpreter.createNativeFunction(wrapper));
+
+    // Add API function for calculating energy
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.getEnergy(id));
+    }; 
+    interpreter.setProperty(scope, 'getEnergy', interpreter.createNativeFunction(wrapper));
+  </APIFUNCTIONS>
+  <BLOCKS>
+    Blockly.Blocks["print_energy"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "print energy %1",
+          "args0": [
+            { 
+              "type": "input_value",
+              "name": "n",
+              "check": "Number"
+            }
+          ],
+          "inputsInline": true,
+          "nextStatement": null,
+          "previousStatement": null,
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+
+    Blockly.JavaScript['print_energy'] = function(block) {
+      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var code = 'printEnergy(' + s + ');\n';
+      return code;
+    };
+
+    Blockly.Python['print_energy'] = function(block) {
+      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
+      var code = 'print("Energy equals",' + s + ')\n';
+      return code;
+    };
+
+    // Return the magnetic field strength
+    Blockly.Blocks["get_average_spin"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "get average spin",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+    
+    Blockly.JavaScript['get_average_spin'] = function(block) {
+      var code = 'getAverageSpin()';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+    
+    Blockly.Python['get_average_spin'] = function(block) {
+      var code = 'getAverageSpin()';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+
+    // Return the magnetic field strength
+    Blockly.Blocks["get_energy"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "get energy",
+          "output": "Number",
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }   
+    };  
+      
+    Blockly.JavaScript['get_energy'] = function(block) {
+      var code = 'getEnergy()';
+      return [code, Blockly.JavaScript.ORDER_ATOMIC];
+    };
+      
+    Blockly.Python['get_energy'] = function(block) {
+      var code = 'magnetic_field_strength';
+      return [code, Blockly.Python.ORDER_ATOMIC];
+    };
+  </BLOCKS>
+  <SCRIPTS>
+    myplot.data = [];
+    myApp.mismatchedEnergy = false;
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
+
+    myApp.printEnergy = function( eng ){
+      ctx = document.getElementById("myCanvas").getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo( 100,100 );
+      ctx.lineTo( 100,300 );
+      ctx.lineTo( 300,300 );
+      ctx.lineTo( 300,100 );
+      ctx.lineTo( 100,100 );
+      ctx.closePath();
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fill(); 
+      if( myApp.getEnergy()!= eng ){
+          alert("mismatch for system energy expecting " + myApp.getEnergy() + " got " + eng );
+          myApp.mismatchedEnergy = true;
+      }
+      ctx.fillStyle = '#000000';
+      ctx.font="20px Georgia";
+      ctx.fillText("Energy equals " + eng,110,180);
+    };
+
+    myApp.getAverageSpin = function() {
+      var tspin = 0;
+      for(var i=0 ; i &lt; ising.spins.length ; i++ ){
+          tspin += ising.spins[i];
+      }
+      return tspin / ising.spins.length;
+    };
+
+    myApp.getEnergy = function() {
+      var aspin = myApp.getAverageSpin(); var eng = 0;
+      for(var i=0 ; i &lt; ising.spins.length ; i++ ){
+          eng += ( aspin + ising.magneticFieldStrength )*ising.spins[i];
+      }
+      return eng;
+    };
+  </SCRIPTS>
+  <STARTUP>
+    ising.radius=200;
+    ising.setNumberOfSpins(ising.nspins);
+    ising.setMagneticField(0);
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks below to generate a random configuration for the spins of the Ising model.  Then calculate the average spin for 
+       this particular configuration.  Once you have the average spin you should be able to calculate the energy using the mean field
+       Hamiltonian for this system.  Calculate the energy and then use the print block to print the energy to screen.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="get_spin"></block>
+         <block type="get_field"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       peng = 0; pmag = 0; levelcomplete=false;
+       ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="get magnetic field strength" ){ pmag += 1; }
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; } 
+           if( ww[i]=="uniform random variable between 0 and 1" ){ levelcomplete=true; }
+       }
+       if( peng==0 || pmag==0 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
+       }
+       if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       Calculating the energy and the average spin using blockly directly is rather slow so for this next exercise I have written some blocks
+       that you can call directly to calculate the energy and the average spin.  Use these blocks and the other blocks here to generate a random
+       configuration for the spins of the Ising model.  Then make your code repeat the process of flipping one randomly chosen spin a total of 10
+       times.  Calculate the average spin for each of the configurations you visit and then use the new plotting block to make a graph showing average 
+       spin versus time.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="get_spin"></block>
+         <block type="get_average_spin"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX> 
+    <FINISH>
+       pplot=0; prand=0; levelcomplete=false;
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+           if( ww[i].toString().search("plot point") &gt;=0 ){ pplot += 1; }
+           if( ww[i]=="get average spin" ){ levelcomplete=true; }
+       }
+       if( pplot==0 || prand &lt; 2 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       Now add the Metropolis accept reject criterion into your code so that you can sample from the Boltzmann distribution at finite temperature.
+       As in the previous exercise use the plotting block to make a graph showing how the average spin changes with time.  Notice, however, that you
+       should only plot the average spin if the move is accepted.  You should not plot average spins for configurations that have been rejected.
+       Use the code you have written to investigate how the average spin changes when the temperature is high and when the temperature is low and 
+       when a magnetic field is present and when it is not.  
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX> 
+    <FINISH>
+       levelcomplete=true;
+    </FINISH>
+  </LEVEL> 
+</PAGE>

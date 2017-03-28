@@ -1,223 +1,46 @@
 <PAGE>
   <TITLE> Ising Model Monte Carlo </TITLE>
+  <HEADER>
+     <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+  </HEADER>
   <WELCOME>
      This exercise will teach you how Monte Carlo simulations work.  You will, through the course of the 
      exercise, learn how to write your own Monte Carlo code for simulating a one dimensional closed Ising Model.
   </WELCOME>
-  <SLIDERS>
+  <WORKSPACE>
     <div id="nslider">
-      Number of spins: <input id="slide" type="range" min="5" max="100" step="5" value="25" onchange="myApp.setNumberOfSpins(this.value)"/> 
+      Number of spins: <input id="slide" type="range" min="5" max="100" step="5" value="25" onchange="ising.setNumberOfSpins(this.value)"/> 
     </div>
     <div id="hslider">
-      Magnetic field strength: <input id="slide" type="range" min="-5" max="5" step="1" value="0" onchange="myApp.setMagneticField(this.value)"/>
+      Magnetic field strength: <input id="slide" type="range" min="-5" max="5" step="1" value="0" onchange="ising.setMagneticField(this.value)"/>
     </div>
     <div id="tslider">
-      Temperature:  <input id="slide" type="range" min="0" max="10" step="1" value="1" onchange="myApp.setTemperature(this.value)"/> 
+      Temperature:  <input id="slide" type="range" min="0" max="10" step="1" value="1" onchange="ising.setTemperature(this.value)"/> 
     </div>
-  </SLIDERS>
-  <WORKSPACE>
-    <canvas id="myCanvas" width="400" height="400"></canvas>
+    <table>
+      <tr>
+        <td>
+          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+        </td>
+        <td width="20px"> nbsp;nbsp; </td>
+        <td>
+          <div id="blocklyDiv" style="height: 800px"></div>
+        </td>
+      </tr>
+    </table>
   </WORKSPACE>
   <APIFUNCTIONS>
-    // Add API functions for number of spins
-    var wrapper = function(){
-      return interpreter.createPrimitive(myApp.getNumberOfSpins());
-    };
-    interpreter.setProperty(scope, 'getNumberOfSpins', interpreter.createNativeFunction(wrapper));
+    // Add ising functions to API
+    addIsingFunctionsToApi( interpreter, scope );     
 
-    // Add API functions for magnetic field strength
-    var wrapper = function(){
-      return interpreter.createPrimitive(myApp.getMagneticField());
-    };
-    interpreter.setProperty(scope, 'getMagneticField', interpreter.createNativeFunction(wrapper));
-
-    // Add API functions for temperature
-    var wrapper = function(){
-      return interpreter.createPrimitive(myApp.getTemperature());
-    };
-    interpreter.setProperty(scope, 'getTemperature', interpreter.createNativeFunction(wrapper));
-   
-    // Add API function for setting spins
-    var wrapper = function(ida, idb){
-      ida = ida ? ida.toString() : '';
-      idb = idb ? idb.toString() : '';
-      return interpreter.createPrimitive(myApp.setSpinValue(ida,idb));
-    };
-    interpreter.setProperty(scope, 'setSpinValue', interpreter.createNativeFunction(wrapper));
-   
-    // Add API function for getting spins
-    var wrapper = function(id){
-      id = id ? id.toString() : '';
-      return interpreter.createPrimitive(myApp.getSpinValue(id));
-    };
-    interpreter.setProperty(scope, 'getSpinValue', interpreter.createNativeFunction(wrapper))
- 
     // Add API function for printing energy
     var wrapper = function(id){
       id = id ? id.toString() : '';
       return interpreter.createPrimitive(myApp.printEnergy(id));
     };
-    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper)) 
+    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper)); 
   </APIFUNCTIONS>
   <BLOCKS>
-    // Return the magnetic field strength
-    Blockly.Blocks["get_field"] = {
-      init: function() {
-        this.jsonInit({
-          "message0": "get magnetic field strength",
-          "output": "Number",
-          "colour": Blockly.Blocks.variables.HUE,
-          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
-          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
-        })
-      }
-    };
-   
-    Blockly.JavaScript['get_field'] = function(block) {
-      var code = 'getMagneticField()';
-      return [code, Blockly.JavaScript.ORDER_ATOMIC];
-    };
-   
-    Blockly.Python['get_field'] = function(block) {
-      var code = 'magnetic_field_strength';
-      return [code, Blockly.Python.ORDER_ATOMIC];
-    };
-
-    // Return the number of spins in the system
-    Blockly.Blocks["get_nspins"] = {
-      init: function() {
-        this.jsonInit({
-          "message0": "number of spins",
-          "output": "Number",
-          "colour": Blockly.Blocks.variables.HUE,
-          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
-          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
-        })
-      }
-    };
-
-    // Return the temperature
-    Blockly.Blocks["get_temperature"] = {
-      init: function() {
-        this.jsonInit({
-          "message0": "get temperature",
-          "output": "Number",
-          "colour": Blockly.Blocks.variables.HUE,
-          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
-          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
-        })
-      }
-    };
-    
-    Blockly.JavaScript['get_temperature'] = function(block) {
-      var code = 'getTemperature()';
-      return [code, Blockly.JavaScript.ORDER_ATOMIC];
-    };
-    
-    Blockly.Python['get_temperature'] = function(block) {
-      var code = 'temperature';
-      return [code, Blockly.Python.ORDER_ATOMIC];
-    };
-    
-    // Return the number of spins in the system
-    Blockly.Blocks["get_nspins"] = {
-      init: function() {
-        this.jsonInit({
-          "message0": "number of spins",
-          "output": "Number",
-          "colour": Blockly.Blocks.variables.HUE,
-          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
-          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
-        })
-      } 
-    };
-    
-    Blockly.JavaScript['get_nspins'] = function(block) {
-      var code = 'getNumberOfSpins()';
-      return [code, Blockly.JavaScript.ORDER_ATOMIC];
-    };
-    
-    Blockly.Python['get_nspins'] = function(block) {
-      var code = 'nspins';
-      return [code, Blockly.Python.ORDER_ATOMIC];
-    };
-    
-    // Get the value of the ith spin
-    Blockly.Blocks["get_spin"] = {
-      // take input and plot it on y
-      init: function() {
-        this.jsonInit({
-          "message0": "get spin %1",
-          "args0": [
-            {
-              "type": "input_value",
-              "name": "n",
-              "check": "Number"
-            }
-          ],
-          "output": "Number",
-          "colour": Blockly.Blocks.variables.HUE,
-          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
-          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
-        })
-      }
-    };
-    
-    Blockly.JavaScript['get_spin'] = function(block) {
-      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
-      var code = 'getSpinValue(' + s  + ')';
-      return [code, Blockly.JavaScript.ORDER_ATOMIC];
-    };
-    
-    Blockly.Python['get_spin'] = function(block) {
-      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
-      var code = 'spins[' + s  + ']';
-      return [code, Blockly.Python.ORDER_ATOMIC];
-    };
-    
-    Blockly.Blocks["set_spin"] = {
-      init: function() {
-        this.jsonInit({
-          "message0": "set spin %1",
-          "args0": [
-            {
-              "type": "input_value",
-              "name": "n",
-              "check": "Number"
-            }
-          ],
-          "message1": " to %1",
-          "args1": [
-            {
-              "type": "input_value",
-              "name": "v",
-              "check": "Number"
-            }
-          ],
-          "inputsInline": true,
-          "nextStatement": null,
-          "previousStatement": null,
-          "colour": Blockly.Blocks.variables.HUE,
-          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
-          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
-        })
-      }
-    };
-    
-    Blockly.JavaScript['set_spin'] = function(block) {
-      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
-      var v = Blockly.JavaScript.valueToCode(block, 'v', Blockly.JavaScript.ORDER_ATOMIC) || '0';
-      var code = 'setSpinValue(' + s + ',' + v + ');\n';
-      return code;
-    };
-    
-    Blockly.Python['set_spin'] = function(block) {
-      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
-      var v = Blockly.Python.valueToCode(block, 'v', Blockly.Python.ORDER_ATOMIC) || '0';
-      var code = 'spins[' + s + '] = ' + v + '\n';
-      return code;
-    };
-
     Blockly.Blocks["print_energy"] = {
       init: function() {
         this.jsonInit({
@@ -252,9 +75,6 @@
     };
   </BLOCKS>
   <SCRIPTS>
-    myApp.spins = []; myApp.nspins = 25;
-    myApp.magneticFieldStrength = 0;
-    myApp.temperature = 1;
     myApp.mismatchedEnergy = false;
 
     myApp.printEnergy = function( eng ){
@@ -268,9 +88,9 @@
       ctx.closePath();
       ctx.fillStyle = '#FFFFFF';
       ctx.fill(); 
-      energy = -myApp.spins[0]*myApp.spins[myApp.spins.length-1] - myApp.spins[0]*myApp.magneticFieldStrength;
-      for(var i = 1; i &lt; myApp.spins.length; i++){
-          energy += -myApp.spins[i-1]*myApp.spins[i] - myApp.magneticFieldStrength*myApp.spins[i];
+      energy = -ising.spins[0]*ising.spins[ising.spins.length-1] - ising.spins[0]*ising.magneticFieldStrength;
+      for(var i = 1; i &lt; ising.spins.length; i++){
+          energy += -ising.spins[i-1]*ising.spins[i] - ising.magneticFieldStrength*ising.spins[i];
       }
       if( energy != eng ){ 
           alert("mismatch for system energy expecting " + energy + " got " + eng );
@@ -280,79 +100,11 @@
       ctx.font="20px Georgia";
       ctx.fillText("Energy equals " + eng,110,180);
     };
-
-    myApp.drawSpin = function( snum ){
-      ctx = document.getElementById("myCanvas").getContext("2d");
-      if ( ctx==null ){ return; }
-      var num = parseInt( snum );
-
-      ctx.beginPath(); var unit = 2*Math.PI/myApp.spins.length; var radius=200; var infr=0.9;
-      ctx.moveTo(radius+radius*Math.cos((num+1)*unit),radius+radius*Math.sin((num+1)*unit));
-      ctx.lineTo(radius+infr*radius*Math.cos((num+1)*unit),radius+infr*radius*Math.sin((num+1)*unit));
-      ctx.lineTo(radius+infr*radius*Math.cos(num*unit),radius+infr*radius*Math.sin(num*unit));
-      ctx.lineTo(radius+radius*Math.cos(num*unit),radius+radius*Math.sin(num*unit));
-      ctx.closePath();
-
-      if( myApp.spins[num]==0 ){
-         ctx.stroke();
-         return;
-      }
-      if (myApp.spins[num] == 1 ) {
-         ctx.fillStyle = '#8ED6FF';
-      } else {
-         ctx.fillStyle = '#FF0000';
-      }
-      ctx.stroke();
-      ctx.fill();
-   };
-  
-   myApp.getSpinValue=function( n ) {
-     if( n&gt;=myApp.spins.length || n &lt; 0 ){
-         alert( "spin " + n + " does not exist" );
-     }
-     if( myApp.spins[n]!=1 &amp;&amp; myApp.spins[n]!=-1 ){
-         alert( "spin " + n + " has illegal value");
-     }
-     return myApp.spins[n];
-   };
-
-   myApp.setSpinValue=function( n, val ) {
-     if( n>=myApp.spins.length || n &lt; 0 ){
-         alert( "spin " + n + " does not exist" );
-     }
-     if( val!=1 &amp;&amp; val!=-1 ){
-         alert( val + " is not a valid spin value" );
-     }
-     myApp.spins[n] = val;
-     myApp.drawSpin( n );
-   };
-
-   myApp.setNumberOfSpins=function( nspins ) {
-      myApp.nspins=nspins; myApp.spins = []; 
-      ctx = document.getElementById("myCanvas").getContext("2d");
-      if( ctx!=null ){ ctx.clearRect(0,0,400,400); }
-      for(var i = 0; i &lt; nspins; i++){ myApp.spins.push( 0 ); }
-      for(var i = 0; i &lt; nspins; i++){ myApp.drawSpin( i ); }
-   }; 
-   myApp.getNumberOfSpins=function() {
-     return myApp.spins.length;
-   };
-   myApp.setMagneticField=function(val) {
-     myApp.magneticFieldStrength = val; 
-   };
-   myApp.getMagneticField=function() {
-     return myApp.magneticFieldStrength;
-   };
-   myApp.setTemperature=function(val) {
-     myApp.temperature = val;
-   };
-   myApp.getTemperature=function() {
-     return myApp.temperature;
-   };
   </SCRIPTS>
   <STARTUP>
-    myApp.setNumberOfSpins(myApp.nspins);
-    myApp.setMagneticField(0);
+    ising.radius=200;
+    ising.setNumberOfSpins(ising.nspins);
+    ising.setMagneticField(0);
   </STARTUP>
   <LEVEL>
     <DESCRIPTION>
@@ -372,8 +124,8 @@
     </TOOLBOX>
     <FINISH>
        levelcomplete=true;
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=1 ){ levelcomplete=false; }
        }
     </FINISH>
   </LEVEL>
@@ -401,9 +153,9 @@
     </TOOLBOX>
     <FINISH>
        levelcomplete=true;
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( i%2==0 &amp;&amp; myApp.spins[i]!=-1 ){ levelcomplete=false; }
-           if( i%2==1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( i%2==0 &amp;&amp; ising.spins[i]!=-1 ){ levelcomplete=false; }
+           if( i%2==1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
        }
     </FINISH>
   </LEVEL>
@@ -437,8 +189,8 @@
        for(var i=0; i &lt; ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ levelcomplete=true; }
        }
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
        }
     </FINISH>
   </LEVEL>
@@ -478,8 +230,8 @@
            if( ww[i]=="number of spins" ){ nsp_cal += 1; }
        }
        if( nuniform!=2 || nsp_cal!=2 ){ levelcomplete = false; }
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
        }
     </FINISH>
   </LEVEL>
@@ -519,8 +271,8 @@
            if( ww[i].toString().search("repeat") &gt;= 0 ){ ndo += 1; }
        }
        if( nuniform!=2 ||  ndo!=2 ){ levelcomplete = false; }
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
        }    
     </FINISH>
   </LEVEL>
@@ -563,8 +315,8 @@
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng += 1; }
        }
        if( peng==0 ){ levelcomplete=false; }
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
        } 
        if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
     </FINISH>
@@ -616,8 +368,8 @@
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng += 1; } 
        }   
        if( peng == 0 || ndo &lt; 3 || nfunc &lt; 1 || nuniform &lt; 2 ){ levelcomplete=false; } 
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
        }   
        if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
     </FINISH>
@@ -671,8 +423,8 @@
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng += 1; }
        }
        if( peng==0 || ndo &lt; 3 || nfunc &lt; 1 || nuniform &lt; 3 || nif &lt; 2 ){ levelcomplete=false; }
-       for(var i=0; i &lt; myApp.spins.length; i++ ){
-           if( myApp.spins[i]!=-1 &amp;&amp; myApp.spins[i]!=1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
        }
        if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
     </FINISH>

@@ -24,6 +24,11 @@ function plotter(){
     this.addDataToGraph = function( x, y ) {
       // Add data to the array containing the data
       this.data.push([x, y]); 
+      // And plot the data
+      this.plotGraph();
+    };
+
+    this.plotGraph = function() {
       // Create the data table from the stored data.
       var data = google.visualization.arrayToDataTable(this.data);
       // Create and draw the visualization, passing in the data and options.

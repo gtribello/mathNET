@@ -372,7 +372,7 @@
     myApp.getEnergy = function() {
       var aspin = myApp.getAverageSpin(); var eng = 0;
       for(var i=0 ; i < ising.spins.length ; i++ ){
-          eng += ( aspin + ising.magneticFieldStrength )*ising.spins[i];
+          eng += -( 2*aspin + ising.magneticFieldStrength )*ising.spins[i];
       }
       return eng;
     };
@@ -484,7 +484,17 @@ case 1:
        }
     break; 
 case 2:
-       levelcomplete=true;
+       pplot=0; prand=0; neng=0; levelcomplete=false;
+       for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+           if( ww[i].toString().search("plot point") >=0 ){ pplot += 1; }
+           if( ww[i]=="get energy" ){ neng += 1; }
+           if( ww[i]=="get average spin" ){ levelcomplete=true; }
+       }  
+       if( pplot==0 || prand < 2 || neng < 1 ){ levelcomplete=false; }
+       for(var i=0; i < ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 && ising.spins[i]!=1 ){ levelcomplete=false; }
+       }
     break; 
 
                                  }
@@ -494,7 +504,9 @@ case 2:
     ising.radius=200;
     ising.setNumberOfSpins(ising.nspins);
     ising.setMagneticField(0);
+    myplot.data.length = 0; 
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph();
   
                                      myApp.active[myApp.mylevel + 1] = true;
                                      myApp.setLevel( myApp.mylevel + 1 );
@@ -504,7 +516,9 @@ case 2:
     ising.radius=200;
     ising.setNumberOfSpins(ising.nspins);
     ising.setMagneticField(0);
+    myplot.data.length = 0; 
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph();
   
                                  }
                               };
@@ -561,7 +575,9 @@ case 2:
     ising.radius=200;
     ising.setNumberOfSpins(ising.nspins);
     ising.setMagneticField(0);
+    myplot.data.length = 0; 
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph();
    
 
                                 // Setup blockly

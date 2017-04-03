@@ -184,7 +184,7 @@
     myApp.getEnergy = function() {
       var aspin = myApp.getAverageSpin(); var eng = 0;
       for(var i=0 ; i &lt; ising.spins.length ; i++ ){
-          eng += ( aspin + ising.magneticFieldStrength )*ising.spins[i];
+          eng += -( 2*aspin + ising.magneticFieldStrength )*ising.spins[i];
       }
       return eng;
     };
@@ -193,7 +193,9 @@
     ising.radius=200;
     ising.setNumberOfSpins(ising.nspins);
     ising.setMagneticField(0);
+    myplot.data.length = 0; 
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph();
   </STARTUP>
   <LEVEL>
     <DESCRIPTION>
@@ -299,6 +301,7 @@
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
          <block type="math_round"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -308,11 +311,25 @@
          <block type="get_nspins"></block>
          <block type="set_spin"></block>
          <block type="get_spin"></block>
-         <block type="print_energy"></block>
+         <block type="get_average_spin"></block>
+         <block type="get_energy"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
       </category>
     </TOOLBOX> 
     <FINISH>
-       levelcomplete=true;
+       pplot=0; prand=0; neng=0; levelcomplete=false;
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+           if( ww[i].toString().search("plot point") &gt;=0 ){ pplot += 1; }
+           if( ww[i]=="get energy" ){ neng += 1; }
+           if( ww[i]=="get average spin" ){ levelcomplete=true; }
+       }  
+       if( pplot==0 || prand &lt; 2 || neng &lt; 1 ){ levelcomplete=false; }
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=-1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
+       }
     </FINISH>
   </LEVEL> 
 </PAGE>

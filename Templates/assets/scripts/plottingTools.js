@@ -25,14 +25,20 @@ function plotter(){
       // Add data to the array containing the data
       this.data.push([x, y]); 
       // And plot the data
-      this.plotGraph();
+      this.plotGraph('graph','scatter');
     };
 
-    this.plotGraph = function() {
+    this.plotGraph = function(div_id,gtype) {
       // Create the data table from the stored data.
       var data = google.visualization.arrayToDataTable(this.data);
       // Create and draw the visualization, passing in the data and options.
-      new google.visualization.ScatterChart(document.getElementById('graph')).draw(data, this.options_);
+      if( gtype=='scatter' ){
+         new google.visualization.ScatterChart(document.getElementById(div_id)).draw(data, this.options_);
+      } else if( gtype=='column' ){
+         new google.visualization.ColumnChart(document.getElementById(div_id)).draw(data, this.options_);
+      } else if( gtype=='line' ){
+         new google.visualization.LineChart(document.getElementById(div_id)).draw(data, this.options_);
+      }
     };
 }
 

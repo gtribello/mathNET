@@ -1,0 +1,345 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Title -->
+	<title>Ising Model Monte Carlo: Exercise</title>
+	<!-- Meta -->
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- W3 style --> 
+        <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+        <style>
+          .w3-badge {cursor:pointer}
+          .w3-badge {height:13px;width:13px;padding:0}
+        </style>
+	<!-- Favicon -->
+	<link href="favicon.html" rel="shortcut icon">
+	<!-- Bootstrap Core CSS -->
+	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+	<!-- Template CSS -->
+	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+	<!-- Google Fonts-->
+	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
+</head>
+<body>
+	<div id="pre_header" class="visible-lg"></div>
+	<div id="header" class="container">
+		<div class="row">
+			<!-- Logo -->
+			<div class="logo">
+				<a href="index.html" title="">
+					<img src="assets/img/logo.png" alt="Logo" />
+				</a>
+			</div>
+			<!-- End Logo -->
+			<!-- Top Menu -->
+			<div class="col-md-12 margin-top-30">
+				<div id="hornav" class="pull-right visible-lg">
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+                                                <li><span>Modules</span>
+                                                <ul>
+                                                  INSERT MODULE LIST
+					        </ul>				</div>
+				</div>
+				<div class="clear"></div>
+				<!-- End Top Menu -->
+			</div>
+		</div>
+		<!-- === END HEADER === -->
+		<!-- === BEGIN CONTENT === -->
+		<div id="content" class="container">
+                    <div class="panel panel-blue">
+                      <div class="panel-heading">
+                          <div class="row">
+                             <h1 class="panel-title"> Ising Model Monte Carlo: Exercises </h1>
+                          </div> 
+                      </div>
+                     </div>
+                      <div class="row margin-vert-30">
+                      <div class="panel panel-primary">
+                        <div class="panel-heading">
+                         <h4 class="panel-title">
+                           Use the app below to investigate the Ising model with different parameters and different Hamiltonians
+                         </h4>
+                        </div>
+                        <div class="panel-body">
+                          <div class="row" id="appPanel">
+                             <table>
+                             <tr>
+                             <td> <input type="checkbox" id="mean_field" value="0"> <label for="mean_field">Mean field Hamiltonian</label> </td>
+                             <td width="10px"> &nbsp;&nbsp; </td>
+                             <td> <button onclick="changeRunState()">PLAY</button> </td>
+                             <td width="10px"> &nbsp;&nbsp; </td> 
+                             <td> Temperature: </td> <td id="show-temp"> 1.0 </td>
+                             <td width="10px"> &nbsp;&nbsp; </td> 
+                             <td> Magnetic Field: </td> <td id="show-field"> 0.0 </td>
+                             </tr>
+                             </table>
+                             <br/><br/>
+                               <div id="nslider">
+                                 Number of spins: <input id="slide" type="range" min="20" max="200" step="20" value="100" onchange="myApp.setNumberOfSpins(this.value)"/>
+                               </div>
+                               <div id="hslider">
+                                 Magnetic field strength: <input id="slide" type="range" min="-2" max="2" step="0.1" value="0" onchange="myApp.setMagneticField(this.value)"/>
+                               </div>
+                               <div id="tslider">
+                                 Temperature:  <input id="slide" type="range" min="0" max="5" step="0.2" value="1" onchange="myApp.setTemperature(this.value)"/>
+                               </div>
+                               <table>
+                                 <tr>
+                                   <td rowspan=2>
+                                     <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+                                   </td>
+                                   <td width="10px"> &nbsp;&nbsp; </td>
+                                   <td> <div id="average_graph" style="width: 200px"></div> </td>
+                                   <td width="10px"> &nbsp;&nbsp; </td>
+                                   <td> <div id="corr_graph" style="width: 200px"></div> </td>
+                                   <td width="10px"> &nbsp;&nbsp; </td>
+                                 </tr>
+                                 <tr>
+                                   <td width="10px"> &nbsp;&nbsp; </td>
+                                   <td colspan=3> <div id="histo_graph" style="width: 400px"></div> </td> 
+                                 </tr>
+                               </table>
+                           <div id="explanation">
+                              <p>
+                              The app above allows you to run simulations of a one dimensional Ising model using either the correct Hamiltonian or an 
+                              approximate mean field Hamiltonian.  When you run your simulations information about the average behavior of the spins is
+                              provided in the three graphs on the right.  The top left graph shows how the estimate of the average magentisation of the spins
+                              changes during the simulation.  The top left graph gives the current estimate for the average spin-spin correlation function.  The 
+                              x-axis of this figure shows the distance between the spins, while the y-axis gives the average degree to which spins this far apart
+                              are correlated.  The graph at the bottom gives a histogram and shows how often the magnetisation takes each of the possible values it
+                              can take. 
+                              </p>
+
+                              <b> Use this tool to probe the behavior of the Ising model at different temperatures and different magentic field strengths. Write a short
+                                  report describing what you tried and why you tried those things.  Then comment on the results that you obtained while making reference to
+                                  what you have learnt about the Ising model during this course. </b>    
+                           </div>
+
+                           <script>
+                              // Construct the namespace for the app 
+                              var myApp = {};
+                              myApp.avmag = 0.;
+                              myApp.correlation = [];
+                              var averageplot = new plotter();
+                              var histoplot = new plotter();
+                              var runstate = 0;
+                              var stepnumber = 0;
+
+                              // Setup a callback object to redraw the image every time we make a step
+                              var requestAnimationFrame =  
+                                      window.requestAnimationFrame ||
+                                      window.webkitRequestAnimationFrame ||
+                                      window.mozRequestAnimationFrame ||
+                                      window.msRequestAnimationFrame ||
+                                      window.oRequestAnimationFrame ||
+                                      function(callback) {
+                                        return setTimeout(callback, 1);
+                                      };
+
+                              // Load the Google Chart Tools Visualization API and the chart package.
+                              if (typeof google == 'object') {
+                                google.load('visualization', '1', {packages: ['corechart']});
+                              } else {
+                                alert('Unable to load Google\'s chart API.\n' +
+                                      'Are you connected to the Internet?');
+                              } 
+
+                              var changeRunState = function(){
+                                 if( runstate == 0 ){
+                                     runstate=1; stepnumber=0; runSimulation(100);      
+                                 } else {
+                                     runstate=0; myApp.resetGraphs();
+                                 } 
+                              };
+
+                              var drawScene = function(){
+                                 for(var i=0;i<ising.spins.length;++i){ ising.setSpinValue( i, ising.spins[i] ); }
+                                 averageplot.plotGraph("average_graph","scatter");
+                                 histoplot.plotGraph("histo_graph","column");
+                                 myplot.plotGraph("corr_graph","line");
+                              };
+
+                              var runSimulation = function(framelag) {
+                                 var start = new Date().getTime();
+                              
+                                 var step = function() {
+                                     var timestamp = new Date().getTime(); var ceng; var neng;
+                                     if( document.getElementById("mean_field").checked ){ ceng = ising.hamiltonian(true); }
+                                     else { ceng = ising.hamiltonian(false); }
+                                     var rand1=Math.floor( ising.spins.length*Math.random() );
+                                     ising.spins[rand1] = -1*ising.spins[rand1];
+                                     if( document.getElementById("mean_field").checked ){ neng = ising.hamiltonian(true); }
+                                     else { neng = ising.hamiltonian(false); }
+                                     if( Math.random()>=Math.exp((ceng-neng)/ising.temperature) ){
+                                        ising.spins[rand1] = -1*ising.spins[rand1];
+                                     }
+                                     // Increment counters and histogram
+                                     if( stepnumber%ising.spins.length==0 ){
+                                         var mag=0;
+                                         for(num=0;num<ising.spins.length;num++){ mag+=ising.spins[num]; }
+                                         histoplot.data[1+mag+ising.spins.length] = [mag, histoplot.data[1+mag+ising.spins.length][1] + 1]; 
+                                         myApp.avmag += mag; var mm = myApp.avmag / (averageplot.data.length-1);
+                                         averageplot.data.push( [stepnumber, mm] );
+                                         // Spatial correlations
+                                         for(spini=0;spini<ising.spins.length;spini++){
+                                             for(spinj=0;spinj<ising.spins.length/2;spinj++){
+                                                 myApp.correlation[spinj] += ising.spins[spini]*ising.spins[(spini+spinj)%ising.spins.length];
+                                                 mspin = spini - spinj
+                                                 if( mspin < 0 ){ mspin = ising.spins.length + mspin; }
+                                                 myApp.correlation[spinj] += ising.spins[spini]*ising.spins[mspin]; 
+                                             }
+                                         }
+                                         var mmm = mm / ising.spins.length;
+                                         for(var i=0;i<ising.spins.length/2;++i){ 
+                                             myplot.data[i+1] = [ i, myApp.correlation[i] / myApp.correlation[0] ]; // - mmm*mmm ]; 
+                                         }
+                                         drawScene();
+                                     }           
+                                     if( runstate==1 ){ requestAnimationFrame(step); }
+                                     stepnumber++;
+                                 };
+                              
+                                 // Start the animation
+                                 return step();
+                              };
+
+                              myApp.setNumberOfSpins = function(nspins) {
+                                ising.setNumberOfSpins(nspins); myApp.resetGraphs();
+                                if( runstate==1 ) changeRunState();
+                              };
+                              myApp.setMagneticField = function(h) {
+                                if( runstate==1 ) changeRunState();
+                                ising.setMagneticField(h);
+                                document.getElementById("show-field").innerHTML = h.toString();
+                              }
+                              myApp.setTemperature = function(temp) {
+                                if( runstate==1 ) changeRunState();
+                                ising.setTemperature(temp);
+                                document.getElementById("show-temp").innerHTML = temp.toString();
+                              };
+                              myApp.resetGraphs = function() {
+                                for(var i=0;i<ising.spins.length;++i){
+                                    if( Math.random()<0.5 ){ 
+                                       ising.spins[i]=-1; 
+                                    } else {
+                                       ising.spins[i]=1;
+                                    }
+                                }
+                                myplot.options_.width=200; myplot.options_.height=200;
+                                myplot.data.length = 0;
+                                myplot.data.unshift(['x', 'y']); myApp.correlation.length = 0;
+                                for(var i=0;i<ising.spins.length/2;++i){ myApp.correlation.push(0); myplot.data.push([i,0]); }
+                                myplot.plotGraph("corr_graph","line");
+                                averageplot.options_.width=200; averageplot.options_.height=200;
+                                myApp.avmag=0; averageplot.data.length = 0;
+                                averageplot.data.unshift(['x', 'y'], [0, 0]);
+                                averageplot.plotGraph("average_graph","scatter");
+                                histoplot.options_.width=400; histoplot.options_.height=200; 
+                                histoplot.data.length = 0;
+                                histoplot.data.unshift(['x', 'y']);
+                                for(var i=0;i<2*ising.spins.length+1;++i){ histoplot.data.push( [i-ising.spins.length, 0] ); } 
+                                histoplot.plotGraph("histo_graph","column");
+                                
+                              };
+                              myApp.init = function() {
+                                ising.setNumberOfSpins(100);
+                                ising.setMagneticField(0);
+                                myApp.resetGraphs();
+                              };
+                              window.addEventListener('load', myApp.init);
+                           </script>
+
+                          </div>
+                        </div>
+                      </div>
+		</div>
+	</div>
+	<!-- === END CONTENT === -->
+	<!-- === BEGIN FOOTER === -->
+	<div id="base">
+		<div class="container padding-vert-30">
+			<div class="row">
+					<!-- Contact Details -->
+					<div class="col-md-3 margin-bottom-20">
+						<h3 class="margin-bottom-10">Contact Details</h3>
+						<p>School of Mathematics and Physics,<br />
+						Queen's University Belfast,<br />
+						Belfast,<br />
+						BT7 1NN</p>
+						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+					</div>
+					<!-- End Contact Details -->
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer Menu -->
+		<div id="footer">
+			<div class="container">
+				<div class="row">
+					<div id="copyright" class="col-md-4">
+						<p>(c) 2016 Gareth Tribello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Footer Menu -->
+</div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="assets/js/scripts.js"></script>
+<!-- Isotope - Portfolio Sorting -->
+<script type="text/javascript" src="assets/js/jquery.isotope.js" type="text/javascript"></script>
+<!-- Mobile Menu - Slicknav -->
+<script type="text/javascript" src="assets/js/jquery.slicknav.js" type="text/javascript"></script>
+<!-- Animate on Scroll-->
+<script type="text/javascript" src="assets/js/jquery.visible.js" charset="utf-8"></script>
+<!-- Slimbox2-->
+<script type="text/javascript" src="assets/js/slimbox2.js" charset="utf-8"></script>
+<!-- Modernizr -->
+<script src="assets/js/modernizr.custom.js" type="text/javascript"></script>
+<!-- End JS -->
+</body>
+</html>
+<!-- === END FOOTER === -->

@@ -75,6 +75,11 @@ class resource(object) :
             else :
                 table += '<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td>' 
             table += '<a href="' + self.linkb + '.html">' + self.description + '</a></td>' 
+       elif( self.rtype=="HTML") :
+            assert( self.loc=="EXERCISE")
+            if not os.path.isfile("html/" + self.linkb + ".html") :
+               shutil.copy("Resources/" + self.linkb + ".html", "html/" + self.linkb + ".html")
+            table += '<td></td><td><i class="fa fa-signal fa-3x"></i></td><td><a href="' + self.linkb + '.html">' + self.description + '</a></td>'
        elif( self.rtype=="GEOGEBRA"):
             if( self.loc=="EXERCISE"):
                 if not os.path.isfile("html/" + self.linkb + ".html") :

@@ -39,8 +39,8 @@ function addIsingFunctionsToApi( interpreter, scope ){
 
 function isingSpinControls(){
     this.spins = []; this.nspins = 25;
-    this.magneticFieldStrength = 0;
-    this.temperature = 1;
+    this.magneticFieldStrength = 0.;
+    this.temperature = 1.;
     this.radius = 200;
 
     this.drawSpin = function( snum ){
@@ -66,6 +66,29 @@ function isingSpinControls(){
       }
       ctx.stroke();
       ctx.fill();
+   };
+
+   this.getAverageSpin = function() {
+      var tspin = 0.;
+      for(var i=0 ; i < this.spins.length ; i++ ){ 
+          tspin += this.spins[i];
+      }
+      return tspin / this.spins.length;
+   };
+
+   this.hamiltonian=function( meanfield ){
+      if( meanfield ){
+          var aspin = this.getAverageSpin(); var eng = 0.;
+          for(var i=0 ; i < this.spins.length ; i++ ){
+              eng += -( 2*aspin + this.magneticFieldStrength )*this.spins[i];
+          }
+          return eng;
+      } 
+      var eng = 0.; eng += -this.spins[0]*this.spins[this.spins.length-1] - this.spins[0]*this.magneticFieldStrength;
+      for(var i = 1; i < this.spins.length; i++){
+          eng += -this.spins[i-1]*this.spins[i] - this.magneticFieldStrength*this.spins[i];
+      } 
+      return eng;
    };
 
    this.getSpinValue=function( n ) {

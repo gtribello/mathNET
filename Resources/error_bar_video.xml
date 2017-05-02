@@ -27,7 +27,7 @@
       Give the expression that allows you to calculate an estimate of the true population from a sample taken from that population and explain how this result is derived.
     </LI>
     <LI>
-      We can calculate a weighted sample average as $\mu_S = \frac{1}{W} \sum_{i=1}^{N_S} w_i x_i$, where $W= \sum_{i=1}^{N_S} w_i$.  In these expressions the $x_i$s are the values of the quantities in our samples and the $w_i$s are the sample weights.  Show, using the maths from the video, that an appropriate estimator for the popupation variance for this weighted sample is $\sigma^2 = \frac{W}{W - \frac{W_2}{W} } \frac{1}{W} \sum_{i=1}^{N_S} w_i (x_i - \mu_S)^2$.
+      We can calculate a weighted sample average as $\mu_S = \frac{1}{W} \sum_{i=1}^{N_S} w_i x_i$, where $W= \sum_{i=1}^{N_S} w_i$.  In these expressions the $x_i$s are the values of the quantities in our samples and the $w_i$s are the sample weights.  Show, using the maths from the video, that an appropriate estimator for the popupation variance for this weighted sample is $\sigma^2 = \frac{W}{W - \frac{W_2}{W} } \frac{1}{W} \sum_{i=1}^{N_S} w_i (x_i - \mu_S)^2$, where $W_2 = \sum_{i=1}^{N_S} w_i^2$.
     </LI>
   </UL>
 </PAGE>

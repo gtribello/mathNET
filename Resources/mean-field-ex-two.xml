@@ -12,9 +12,9 @@
   <UL>
     <LI>  What is significant about the points where the black curve intercepts with the $x$ axis? </LI>
     <LI>  When the applied field $H$ is equal to 0 at how many points does the black line intercept with the $x$ axis?  What happens as the the inverse temperature is increased? </LI>
-    <LI>  Describe the shape of the green curve when $H=0$ and when (a) $T &lt; 0.5$ and when (b) $T &gt; 0.5$.  How does the shape of this curve differ in these two regimes?  What happens to the derivative of the free energy with respect to $\langle M \rangle$ at $H=0$ when $T=0.5$? </LI>
+    <LI>  Describe the shape of the green curve when $H=0$ and when (a) $T &lt; 2 \frac{k_B T}{J}$ and when (b) $T &gt; 2 \frac{k_B T}{J}$.  How does the shape of this curve differ in these two regimes?  What happens to the derivative of the free energy with respect to $\langle M \rangle$ at $H=0$ when $T=2 \frac{k_B T}{J}$? </LI>
     <LI>  What happens to the shape of the green curve when $H \ne 0$.  Comment on the behavior of the turning points and the way this number changes with field strength and temperature. </LI>
-    <LI>  Given what you have discussed explain how the magnetization behaves as you move from the $T &gt; 0.5$ regime to the $T &lt; 0.5$ regime in the absense of an applied field </LI>
+    <LI>  Given what you have discussed explain how the magnetization behaves as you move from the $T &gt; 2 \frac{k_B T}{J}$ regime to the $T &lt; 2 \frac{k_B T}{J}$ regime in the absense of an applied field </LI>
     <LI>  How does the magnetisation behave as the temperature is increased in the presence of an applied magentic field? </LI>
   </UL>
 </PAGE>

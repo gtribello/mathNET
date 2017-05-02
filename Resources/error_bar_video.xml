@@ -1,0 +1,33 @@
+<PAGE>
+  <TITLE> Understanding statistical error bars </TITLE>
+  <VIDEO> https://www.youtube.com/embed/LOFnWyocr40 </VIDEO> 
+  <UL>
+    <LI>
+      Why should we quote error bars on our measurements?
+    </LI>
+    <LI>
+      What distinguishes a sample mean from a population mean? 
+    </LI>
+    <LI>
+      What integrals should be calculated to give the expectation and variance? 
+    </LI>
+    <LI>
+      State the central limit theorem and explain what each of the terms in this theorem represent.
+    </LI>
+    <LI>
+      How is the cumulative probability distribution function defined and how is the probability density function defined? 
+    </LI>
+    <LI>
+      What is the variance of the random variable $S = \frac{1}{N} \sum_{i=1}^N X_i$ if each of the $X_i$s in this sum is a independent and identically distributed random variable taken from a distribution with variance $\sigma$? 
+    </LI> 
+    <LI>
+      Explain in your own words why a sample mean gives an estimate of the true population mean.
+    </LI>
+    <LI>
+      Give the expression that allows you to calculate an estimate of the true population from a sample taken from that population and explain how this result is derived.
+    </LI>
+    <LI>
+      We can calculate a weighted sample average as $\mu_S = \frac{1}{W} \sum_{i=1}^N_S w_i x_i$, where $W= \sum_{i=1}^N_S w_i$.  In these expressions the $x_i$s are the values of the quantities in our samples and the $w_i$s are the sample weights.  Show, using the maths from the video, that an appropriate estimator for the popupation variance for this weighted sample is $\sigma^2 = \frac{W}{W - \frac{W_2}{W} } \frac{1}{W} \sum_{i=1}^N_S w_i (x_i - \mu_S)^2$.
+    </LI>
+  </UL>
+</PAGE>

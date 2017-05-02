@@ -1,0 +1,36 @@
+<PAGE>
+  <TITLE> Understanding block averaging </TITLE>
+  <VIDEO> https://www.youtube.com/embed/0KqCK0yG9T0 </VIDEO> 
+  <UL>
+    <LI> 
+       Explain in your own words what we mean by a collective variable.  If we have a trajectory of $N$ calculated over $N$ timesteps how many values of the collective variables should we calculate.
+    </LI> 
+    <LI>
+       State the central limit theorem and define all the terms in this theorem carefully.
+    </LI>
+    <LI>
+       What is the variance of the random variable $S = \frac{1}{N} \sum_{i=1}^N X_i$ if each of the $X_i$s in this sum is a independent and identically distributed random variable taken from a distribution with variance $\sigma$?
+    </LI>
+    <LI>
+      Why can we not use the central limit theorem to analyse correlated random variables?  What kind of random variables can we analyse using the central limit theorem?
+    </LI>
+    <LI>
+      Explain how the autocorrelation function is defined.  Sketch what this function looks like if we have a time series of uncorrelated random variables and what this function looks like when there are correlations in our time series.
+    </LI>
+    <LI>
+      Explain what when we state that a time series of random variables has the stationarity property.  In your answer you should discuss how the value of the random variable "fluctuates around a mean" in these two types of data series.
+    </LI> 
+    <LI>
+      Explain what we mean by a block average and discuss why we calculate block averages by making reference to the autocorrelation function.
+    </LI>
+    <LI>
+      Explain why the estimate that we get for the expectation by performing a block average is an estimate of the estimate for the distribution the stationary distribution that is being sampled during Monte Carlo simulation.  How is the variance calculated during from the block averages and what does this variance represent (hint: it is not the variance of the stationary distribution from which we are sampling in the Monte Carlo simulation). 
+    </LI>
+    <LI>
+      Explain how the final error bar is calculated when we perform block averaging
+    </LI>
+    <LI>
+      Discuss how in practise you would go about deciding how long to set the block averages when analysing a simulation trajectory.
+    </LI>
+  </UL>
+</PAGE>

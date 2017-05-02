@@ -21,3 +21,4 @@ MONTE_CARLO INTRO PDF SOR3012 jim-chap17.pdf J.~F.~McCann Notes on the theory of
 MONTE_CARLO INTRO XML AMA4004 monte-carlo-video G.~Tribello A very brief introduction to the theory of Monte Carlo sampling.
 MONTE_CARLO EXERCISE XML AMA4004 ising-monte-carlo-exercise G.~Tribello An exercise that will take you through the process of writing your own Monte Carlo code.
 MONTE_CARLO EXERCISE XML AMA4004 ising-mean-field-exercise G.~Tribello A programming exercise that calls on you to build a Monte Carlo code and to investigate how the properties of the system change with temperature and field strength.
+MONTE_CARLO INTRO XML AMA4004 block_averaging_video G.~Tribello Video explaining how block averages should be calculated from correlated data sets. 

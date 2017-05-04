@@ -15,7 +15,7 @@
      <LI> What is significant about the points where the red line intersects the green line? </LI>
      <LI> When the applied field $H$ is equal to 0 at how many points does the red line intersect with the green line?  What happens as the the inverse temperature is increased? </LI>
      <LI> Based on your answer to the previous question how does the magnetization of the system behave when there is zero applied field and when (a) $T$ &gt; 2 $\frac{k_B T}{J}$ and (b) $T$ &lt; 2 $\frac{k_B T}{J}$? How do the spins behave in these differnt regimes?  What is significant about the temperature $T=2 \frac{k_B T}{J}$? </LI>
-     <LI> What is the derivative of $\tanh\left[ \beta ( H + 2J\langle M \rangle ) \right]$ with respect to $\langle M \rangle$ equal to when $H=0$ and when $\beta=2 \frac{J}{k_B T}$?  Explain why this is significant given your answers to the previous questions and the figure above. </LI>
+     <LI> What is the derivative of $\tanh\left[ \beta ( H + 2J\langle M \rangle ) \right]$ with respect to $\langle M \rangle$ equal to when $H=0$ and when $\beta=0.5 \frac{J}{k_B T}$?  Explain why this is significant given your answers to the previous questions and the figure above. </LI>
      <LI> Describe how the curve changes when $H \ne 0$.  How does the number of times the green line intercepts with the red line change as the strength of the field and the temperature are changed?  Describe how the positions of these various intercepts changes with field strength? </LI>
   </UL>
 </PAGE>

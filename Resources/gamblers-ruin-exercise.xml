@@ -1,0 +1,125 @@
+<PAGE>
+  <TITLE> Gamblers ruin and Markov chains </TITLE>
+  <HEADER>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     In this exercise we are going to learn how to model a discrete random walk.  The aim is to come up with a numerical solution to a problem 
+     which you will then learn to solve analytically.  The reason for modelling this process numerically is to better understand the problem that 
+     we are trying to solve and to better understand how we can use computers to solve more complex equations.
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 800px"> </div>
+        </td> 
+      </tr>
+      <tr>
+        <td> <div id="graph" style="width: 400px"></div> </td>
+        <td width="10px"> nbsp;nbsp; </td>
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+  </APIFUNCTIONS>
+  <BLOCKS>
+  </BLOCKS>
+  <SCRIPTS>
+  </SCRIPTS>
+  <STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+      Consider a walker who takes a pace of length 1m forward once a second.  Suppose the walker begins walking at a point 5 m from the origin and that s/he is walking 
+      away from the origin.  Use the blocks below to draw a diagram showing the position the walker takes relative to the origin during each of the next 100 seconds.  
+      Your graph should consist of a set of 100 points and time should be shown on the $x$ axis while position should be shown on the $y$ axis.  
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Now suppose that the walker is drunk and that as such half of his/her one-meter-long strides are away from the origin and half of his one-meter-long strides are 
+      towards the origin.  Use the blocks below and a bernoulli random variable to show one path that the walker might take during each of the next 100 seconds.  Once 
+      again your graphs should consist of a set of 100 points, time should be shown in the $x$ axis while position should be shown on the $y$ axis.  As in the previous 
+      example the walker should starts from a point 5 m from the origin.   
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX> 
+    <FINISH>
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Consider our drunk walker once more.  The pub at which s/he did her/his night of drinking is at the origin and his home is a mere 20 m from the pub.  Use the blocks 
+      below to generate an instance of a random walk once more.  This time, however, the walk should only stop once the walker has arrived back at the pub or at his home.  As
+      in the previous questions assume that his/her walk begins at a point that is 5 metres from the origin.  Output two random variables from your program.  The first of these
+      two random variables should equal 0 if the walker finishes at home and 1 if the walker finishes at the pub.  The second of the random variables should be equal to the number 
+      of steps the walker took before arriving at either the pub or at his/her home.    
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+    </FINISH>
+  </LEVEL> 
+  <REVIEW>
+     The exercise you have just performed has taught you how we can generate the two random variables that are at the heart of problem of the gamblers ruin with absorbing boundary conditions.
+     In the language of the exercise we have just performed these random variables are: a bernoulli random variable that tells us whether the walker arrives in the pub or at home and a discrete 
+     random variable that tells us how many steps the walker will take before arriving at either the pub or at home.
+
+     To consolidate what you have learnt write a python notebook that generates multiple instances of the two random variables in this problem.  Use the data that you obtain to estimate the 
+     expectations for these two random variables and to give a 90 % confidence limit on your estimates of these expectation values.  Go through the exercises on the analytical solution to this 
+     problem and compare the values that you obtain from this numerical procedure with the analytic values for these quantities.  As a final (programming) exercise calculate an estimate for 
+     the probability mass function for the random variables that measures how many steps the walker will take before arriving at either the pub or at home.
+  </REVIEW>
+</PAGE>

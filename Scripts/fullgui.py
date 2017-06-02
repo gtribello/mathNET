@@ -132,8 +132,9 @@ class mainWindow(QWidget):
          shutil.copytree('Templates/assets', 'html/assets')
          # Copy blockly to the html directory  
          shutil.copytree('Templates/blockly', 'html/blockly')
-         os.remove('html/blockly/.git')
-         os.remove('html/blockly/.gitignore')
+         if os.path.isfile('html/blockly/.gitignore'):
+             os.remove('html/blockly/.git')
+             os.remove('html/blockly/.gitignore')
          # Copy the images to the html directory
          shutil.copytree('Resources/Images', 'html/Images')
          # Make a resources directory

@@ -1,0 +1,131 @@
+<PAGE>
+  <TITLE> Ehrenfest urns and stationary Markov chains </TITLE>
+  <HEADER>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     In this exercise we are going to learn how to model a Markov chain that was first developed to model the diffusion of a gas.  The aim is to come up 
+     with a numerical solution to a problem which you will then learn to solve analytically.  The reason for modelling this process numerically is to better 
+     understand the problem that we are trying to solve and to better understand how we can use computers to solve more complex equations.
+
+     The problem we are going to look at is as follows.  There are a set of six balls with the numbers 1 to 6 written on them.  These balls are divided (not necessarily equally)
+     between two containers A and B.  At each instance in time you roll a six-sided dice to generate a uniformly-distributed random integer between 1 and 6.  When you have done
+     this you find the ball with that number and if the ball you found is in container A you move it to container B.  If by contrast the ball with the number you generate is in 
+     container B you move it to container A.  We would like to generate a set of random variables that tells us how the number of balls in container A changes (randomly) with 
+     time.  
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 800px"> </div>
+        </td> 
+      </tr>
+      <tr>
+        <td> <div id="graph" style="width: 400px"></div> </td>
+        <td width="10px"> nbsp;nbsp; </td>
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+  </APIFUNCTIONS>
+  <BLOCKS>
+  </BLOCKS>
+  <SCRIPTS>
+  </SCRIPTS>
+  <STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+      Let's start by modelling a simplified version of the problem.  We will suppose that there are initially 3 balls in container A and 3 balls in container B.  After 
+      completing the dice roll there will thus be either 2 balls in container A or 4 balls in container A.  Use the blocks below to generate a random variable, $X_i$,
+      that tells us how many balls there are in container A after the dice is rolled and we do the appropriate moving of balls about.  Suppose for this initial exercise
+      that the balls are reset so that there are 3 balls in container A once more when the dice is rolled again.  Generate 10 instances of your random variable and plot
+      the values of each random variable on the graph at the point $(i,X_i)$, where the $i$s are the integers between 1 and 10. 
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Let's continue modelling simplified versions of the problem.  This time we will suppose that there are initially 2 balls in container A and 4 balls in container B.  After
+      completing the dice roll there will thus be either 1 ball in container A or 3 balls in container A.  Use the blocks below to generate a random variable, $X_i$,
+      that tells us how many balls there are in container A after the dice is rolled and we do the appropriate moving of balls about.  Suppose for this initial exercise
+      that the balls are reset so that there are 2 balls in container A once more when the dice is rolled again.  Generate 10 instances of your random variable and plot
+      the values of each random variable on the graph at the point $(i,X_i)$, where the $i$s are the integers between 1 and 10.
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX> 
+    <FINISH>
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Let's now try to bring everything we have learnt together and to model the actual Markov chain.  Let's once again start with 2 balls in container A and 4 balls in container B.
+      Now though the system will not be reset after the dice has been rolled.  Instead the Markov chain will continue from a situation in which there is either 1 ball or 3 balls in 
+      container A.  Use the blocks below to model 200 steps of this Markov chain and draw a graph showing how the number of balls in container A with the number of rolls of the dice. 
+    </DESCRIPTION>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+    </FINISH>
+  </LEVEL> 
+  <REVIEW>
+     The exercise you have just performed has taught you how to simulate the markov chain known as the Ehrenfest urn.  This Markov chain has a stationary distribution and one of the things I 
+     would like you to do now is to try to work through the derivation of the analytical expression for the limiting probability of being in each state of the chain.  In addition, and in order
+     to consolidate what you have just learnt, write a python notebook that contains programs to simulate this Markov chain.  Run a simulation of this chain and calculate a histogram for the 
+     random variable that tells you the number of balls in container A from the time series for this random variable that this random variable estimates.  Try to calculate suitable error bars 
+     around your estimates for these probabilities.  Notice when you do this, however, that this is not simply a matter of applying the usual procedure because of a particular feature of the 
+     random variables that you have generated that makes analysing them using ideas based on the central limit theorem not very sensible.  Hence, in order to calculate these error bars you 
+     are going to have to do a little bit of research online.
+  </REVIEW>
+</PAGE>

@@ -7,6 +7,7 @@ import subprocess
 import lxml.etree as ET
 
 def build_html_file( infile ):
+    print("WORKING ON " + infile )
     tree = ET.parse( "Resources/" + infile + ".xml" )
     root = tree.getroot()
     # Find appropriate template to use
@@ -57,16 +58,21 @@ def build_html_file( infile ):
        page = page.replace( "INSERT WORKSPACE BLOCKS", tree.find("BLOCKS").text )
        page = page.replace( "INSERT APP SCRIPTS", tree.find("SCRIPTS").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") )
        page = page.replace( "INSERT WORKSPACE STARTUP", tree.find("STARTUP").text )
+       page = page.replace( "INSERT REVIEW TEXT", tree.find("REVIEW").text.replace("\n","") )
        page = page.replace( "INSERT WORKSPACE", ET.tostring( tree.find("WORKSPACE"), encoding="unicode", method="xml").replace("<WORKSPACE>","").replace("</WORKSPACE>","") ).replace("nbsp;","&nbsp;")
        page = page.replace( "INSERT LEVEL XML", infile + ".xml" )
        # This constructs the ends of levels 
-       n, levels, levelcomplete = 0, tree.findall("LEVEL"), ""
+       n, levels, levelcomplete, levelhints = 0, tree.findall("LEVEL"), "", ""
        for lev in levels :
            levelcomplete += "case " + str(n) + ":"
            levelcomplete += lev.find("FINISH").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") 
            levelcomplete += "break; \n"
+           levelhints += "case " + str(n) + ": \n"
+           levelhints += 'hint += "' + lev.find("HINT").text.replace("\n","") + '"\n';
+           levelhints += "break; \n"
            n += 1
        page = page.replace( "INSERT LEVEL COMPLETION", levelcomplete )
+       page = page.replace( "INSERT LEVEL CLUES", levelhints )
        # Copy xml to html directory 
        shutil.copy( "Resources/" + infile + ".xml" , "html/" + infile + ".xml" ) 
     else : 

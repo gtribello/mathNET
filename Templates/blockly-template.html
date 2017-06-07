@@ -98,12 +98,13 @@
                         </div>
                         <div class="panel-body">
                           <div class="row" id="appPanel">
-                             <div class="col-md-4">
+                             <div class="col-md-6">
                                <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button>
                                <button onclick="myApp.stepCode()" id="stepButton" disabled="disabled">Step Code</button>
                                <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button>
+                               <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button>
                              </div>
-                               <div class="col-md-8">
+                               <div class="col-md-6">
                                <div id="levelIndicator" class="w3-center w3-section w3-large w3-text-black w3-display-topleft" style="width:60%" align="right"> </div>
                              </div>
                              <br/><br/>
@@ -147,6 +148,14 @@
                                    return interpreter.createPrimitive(myApp.highlightBlock(id));
                                  };
                                  interpreter.setProperty(scope, 'highlightBlock', interpreter.createNativeFunction(wrapper));
+
+                                 // Add an API function for normal random variables
+                                 var wrapper = function(id) {
+                                   id = id ? id.toString() : '';
+                                   return interpreter.createPrimitive(myApp.normalRandom(id));
+                                 };
+                                 interpreter.setProperty(scope, 'normalRandom', interpreter.createNativeFunction(wrapper));
+
                                  // Add API functions for workspace functions
                                  INSERT API FUNCTIONS
                               };
@@ -171,7 +180,31 @@
                               };
 
                               Blockly.Python['uniform_random'] = function(block) {
-                                var code = 'random.uniform(0,1)'; 
+                                var code = 'numpy.random.uniform(0,1)'; 
+                                return [code, Blockly.Python.ORDER_ATOMIC];
+                              };
+
+                              // Define a custom block to generate normal random variables
+                              Blockly.Blocks["normal_random"] = {
+                                // take input and plot it on y
+                                init: function() {
+                                  this.jsonInit({
+                                    "message0": "standard normal random variable",
+                                    "output": "Number",
+                                    "colour": Blockly.Blocks.variables.HUE,
+                                    "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+                                    "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+                                  })
+                                }
+                              };
+
+                              Blockly.JavaScript['normal_random'] = function(block) {
+                                var code = 'normalRandom()'; 
+                                return [code, Blockly.JavaScript.ORDER_ATOMIC]; 
+                              };
+
+                              Blockly.Python['normal_random'] = function(block) {
+                                var code = 'numpy.random.normal()'; 
                                 return [code, Blockly.Python.ORDER_ATOMIC];
                               };
 
@@ -190,8 +223,23 @@
                               myApp.xmlLevelDoc = null;
                               myApp.active = [];
                               myApp.mylevel = 0;
+                              // Saves students answers on previous levels
+                              myApp.answers = [];  
 
                               INSERT APP SCRIPTS
+
+                              // This generates normal random variables
+                              myApp.normalRandom = function() {
+                                 var V1, V2, S;
+                                  do {
+                                    var U1 = Math.random();
+                                    var U2 = Math.random();
+                                    V1 = 2 * U1 - 1;
+                                    V2 = 2 * U2 - 1;
+                                    S = V1 * V1 + V2 * V2;
+                                  } while (S > 1);
+                                  return Math.sqrt(-2 * Math.log(S) / S) * V1;
+                              };
 
                               // This highlights blocks
                               myApp.highlightBlock = function(id) {
@@ -269,14 +317,32 @@
                                  } 
                               }; 
 
+                              // This shows an answer
+                              myApp.showAnswer = function() {
+                                 if( myApp.mylevel < myApp.answers.length ) {
+                                     myApp.workspace.clear();
+                                     Blockly.Xml.domToWorkspace( myApp.answers[myApp.mylevel], myApp.workspace );
+                                 } else {
+                                     var hint = "As if I'm going to make it that easy!  \n \n If you go back to a level later you can see the right answer you gave by pressing this button.  For now though this button only gives you the following clue \n \n"; 
+                                     switch( myApp.mylevel ){
+                                         INSERT LEVEL CLUES
+                                     }
+                                     alert( hint );
+                                 }
+                              };
+
                               myApp.checkLevelEnd = function() {
                                  levelcomplete = true;
                                  switch( myApp.mylevel ){
                                      INSERT LEVEL COMPLETION
                                  }
-                                 if( levelcomplete ){
+                                 if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){
+                                     myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );
+                                     alert("INSERT REVIEW TEXT");
+                                 } else if( levelcomplete ){
                                      alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
                                      INSERT WORKSPACE STARTUP
+                                     if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }
                                      myApp.active[myApp.mylevel + 1] = true;
                                      myApp.setLevel( myApp.mylevel + 1 );
                                  } else {
@@ -304,7 +370,7 @@
                                  if( !myApp.active[myApp.mylevel] ){
                                      alert("You do not have access to this level yet");
                                      return;
-                                 }
+                                 } 
                                  var dots = document.getElementsByClassName("demo");
                                  for(var i=0; i < myApp.active.length ; i++ ){
                                    dots[i].className = dots[i].className.replace(" w3-black", "");
@@ -316,6 +382,8 @@
                                  // Load the contents of the level
                                  var g = document.getElementById("explanation");
                                  g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+                                 // Typeset maths using mathJAX
+                                 MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
                                  // Load the new blockly toolbox
                                  myApp.workspace.updateToolbox( levels[n].getElementsByTagName("TOOLBOX")[0] );
                               };

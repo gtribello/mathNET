@@ -110,6 +110,8 @@
     <DESCRIPTION>
       Use the blocks provided to set the microscopic coordinates of all the spins in the system equal to 1 
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -134,6 +136,8 @@
       Use the blocks provided to set the microscopic coordinates of all the odd numbered spins in the system to 1 and all the even 
       numbered spins in the system to -1.  
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -163,6 +167,8 @@
     <DESCRIPTION>
       Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -199,6 +205,8 @@
       Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
       Then select one of the spin coordinates at random and flip the value of this spin.
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -240,6 +248,8 @@
       Use the blocks provided to generate a random configuration for the microscopic coordinates of all the spins.
       Then make your code repeat the process of flipping one randomly chosen spin a total of 10 times.
     </DESCRIPTION>
+    <HINT>   
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -283,6 +293,8 @@
       calculate the energy of this microstate using the Ising model Hamiltonian.  Once the energy has been calculated you 
       should report it to the screen using the print energy block.
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -328,6 +340,8 @@
       you generate by flipping, randomly-chosen individual spins and report these to screen.  You will need to include the code to calculate the energy 
       of the system twice in this program so you will probably find it useful to write a function that calculates the energy and returns it.
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -380,6 +394,8 @@
       Monte Carlo integrator.  Can you finish off the code by implementing the Metropolis accept/reject criteria as well.
       Make sure you only report the energies of the accepted configurations to screen.
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -429,4 +445,6 @@
        if( myApp.mismatchedEnergy ){ levelcomplete=false; myApp.mismatchedEnergy=false; }
     </FINISH>
   </LEVEL>
+  <REVIEW>
+  </REVIEW>
 </PAGE>

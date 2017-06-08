@@ -100,9 +100,11 @@
                           <div class="row" id="appPanel">
                              <div class="col-md-6">
                                <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button>
-                               <button onclick="myApp.stepCode()" id="stepButton" disabled="disabled">Step Code</button>
+                               <!-- <button onclick="myApp.stepCode()" id="stepButton" disabled="disabled">Step Code</button> -->
                                <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button>
                                <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button>
+                               <!-- <button onclick="myApp.save()" id="saveButton">Save workspace</button>
+                               <button onclick="myApp.load()" id="loadButton">Load solution</button> -->
                              </div>
                                <div class="col-md-6">
                                <div id="levelIndicator" class="w3-center w3-section w3-large w3-text-black w3-display-topleft" style="width:60%" align="right"> </div>
@@ -268,7 +270,7 @@
                                  // Generate python code for student to see
                                  var pcode = Blockly.Python.workspaceToCode(workspace);
                                  alert('Ready to execute this code:\n\n' + pcode);
-                                 document.getElementById('stepButton').disabled = '';
+                                 //document.getElementById('stepButton').disabled = '';
                                  document.getElementById('runButton').disabled = '';
                                  myApp.highlightPause = false;
                                  myApp.highlightBlock(null);
@@ -281,7 +283,7 @@
                                  } finally {
                                    if (!ok) {
                                      // Program complete, no more code to execute.
-                                     document.getElementById('stepButton').disabled = 'disabled';
+                                     //document.getElementById('stepButton').disabled = 'disabled';
                                      document.getElementById('runButton').disabled = 'disabled';
                                      myApp.highlightBlock(null);
                                      return;
@@ -303,7 +305,7 @@
                                     window.setTimeout(myApp.runCode.bind(myApp), 10 );
                                  } else {
                                     // Program complete, no more code to execute.
-                                    document.getElementById('stepButton').disabled = 'disabled';
+                                    //document.getElementById('stepButton').disabled = 'disabled';
                                     document.getElementById('runButton').disabled = 'disabled';
                                     myApp.highlightBlock(null);
                                     myApp.runningJob = false;
@@ -328,6 +330,21 @@
                                          INSERT LEVEL CLUES
                                      }
                                      alert( hint );
+                                 }
+                              };
+
+                              myApp.save = function() {
+                                 var xmlDom = Blockly.Xml.workspaceToDom(myApp.workspace);
+                                 var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+                                 localStorage.setItem("INSERT TOPIC TITLE Level" + myApp.mylevel + ".xml", xmlText); 
+                              };
+
+                              myApp.load = function() {
+                                 var xmlText = localStorage.getItem("INSERT TOPIC TITLE Level" + myApp.mylevel + ".xml");
+                                 if( xmlText ){
+                                     myApp.workspace.clear();
+                                     xmlDom = Blockly.Xml.textToDom(xmlText);
+                                     Blockly.Xml.domToWorkspace(myApp.workspace,xmlDom);    
                                  }
                               };
 

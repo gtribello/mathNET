@@ -180,7 +180,7 @@
        random variable fell into each of the intervals of interest on the $y$ axis and the value at the center of the sub-range on the $x$.  
     </DESCRIPTION>
     <HINT>
-       In the previous exercise we could use the value of the random variable to determine what element of the list we had to add one to to get our updated histogram.  We cannot do the same here as the random variables we generate are real numbers and not integers.  Notice, however, if we divide the random variable value we generate by 0.4 and if we then round down we do get an integer.   
+       In the previous exercise we could use the value of the random variable to determine what element of the list we had to add one to to get our updated histogram.  We cannot do the same here as the random variables we generate are real numbers and not integers.  Notice, however, if we divide the random variable value we generate by 0.4 and if we then round down we do get an integer. Notice that the integer you get by doing so might be negative and that the indices you use to specify a position in the list always be greater than one. 
     </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>

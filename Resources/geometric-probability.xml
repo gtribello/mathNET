@@ -4,39 +4,51 @@
      <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
   </HEADER>
   <WELCOME>
-     This exercise is going to teach you about how we can use probability theory to solve geometric problems.  We will start with a classic problem about
-     estimating $\pi$ and will then move on to something a little more interesting that has some profound consequences in terms of the way that we think
-     about statistics.
+     This exercise is going to teach you about how we can use probability theory to solve geometric problems.  We will start with a classic problem about estimating pi and will then move on to something a little more interesting that has some intriguiing consequences in terms of the way that we think about probability and statistics.
   </WELCOME>
   <WORKSPACE>
-    <table>
+   <table>
       <tr>
         <td>
-          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+          <div id="graph" style="width: 400px"></div>
         </td>
         <td width="10px"> nbsp;nbsp; </td>
         <td rowspan="2">
-          <div id="blocklyDiv" style="height: 800px"> </div>
-        </td> 
-      </tr>
-      <tr>
-        <td> <div id="graph" style="width: 400px"></div> </td>
-        <td width="10px"> nbsp;nbsp; </td>
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td>
       </tr>
     </table>
   </WORKSPACE>
   <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
   </APIFUNCTIONS>
   <BLOCKS>
   </BLOCKS>
   <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
   </SCRIPTS>
   <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
   <LEVEL>
     <DESCRIPTION>
-       This exercise should be revision: Use the block below to generate 100 pairs of uniform random variables $X_i$ and $Y_i$ that each lie between 0 and 1.
+       This exercise should be revision: Use the block below to generate 20 pairs of uniform random variables $X_i$ and $Y_i$ that each lie between 0 and 1.
        Then plot each of these pairs of random variables at $(X_i, Y_i)$.   All the points you show should have $0 &lt; X_i &lt; 1$ and $0 &lt; Y_i &lt; 1$.
     </DESCRIPTION>
+    <HINT>
+       You learnt how to do this in the blockly exercise on understanding correlation.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -52,6 +64,15 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }   
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0] &lt; 0 || myplot.data[i][1] &lt; 0 || myplot.data[i][0] &gt; 1 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL> 
   <LEVEL>
@@ -60,6 +81,9 @@
       random variable $Z_i$.  $Z_i$ should be equal to one if the point $(X_i,Y_i)$ is within a circle of radius one centered on the origin and it should be 
       zero otherwise.  You should use the blocks provided to plot each of the values that you obtain for $Z_i$ at the point $(i,Z_i)$.
     </DESCRIPTION>
+    <HINT>
+      You need to calculate the distance between the point (X_i,Y_i) and the origin and determine if this quantity is less than 1.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -79,14 +103,27 @@
       </category>
     </TOOLBOX> 
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }   
+      levelcomplete=true; 
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; } 
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+           if( myplot.data[i][1] != 0 &amp;&amp; myplot.data[i][1] != 1 ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-      Now use what you have learnt in other exercise about the central limit theorem to show how the sample mean for the random variable $Z$ changes as the number of 
-      indepedent random variables in the sample (the number of $Z_i$ values) increases.  In other words, plot a graph with points at $(i,\mu_i)$ for $i$ values between 0
-      and 100.  Describe the shape of this curve in your notes. 
+      Now use what you have learnt in other exercise about the central limit theorem to show how the sample mean for the random variable $Z$ that you generated in the last 
+      exercise changes as the number of indepedent random variables in the sample (the number of $Z_i$ values) increases.  In other words, plot a graph with points at 
+      $(i,\mu_i)$ for $i$ values between 0 and 20.  Describe the shape of this curve in your notes. 
     </DESCRIPTION>
+    <HINT>
+      Remember the sample mean is just the sum of all your random variables divided by the total number of random variables you have generated.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -106,26 +143,40 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }  
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
       At the end of the last exercise you should have found that the sample mean converged to a value of $\frac{\pi}{4}$.  The reason this happens in this case is connected 
       to the fact that the area of the region where points can be generated is equal to one.  The area of the quarter circle in which points have $X_i^2 + Y_i^2 &lt; 1$ and 
-      which are thus inside the circle of radius 1 is by contrast $\frac{pi}{4}$.  The probability of generating a point in this circle is (in this case) thus simply the area 
+      which are thus inside the circle of radius 1 is by contrast $\frac{\pi}{4}$.  The probability of generating a point in this circle is (in this case) thus simply the area 
       of the quarter circle divided by the area of the square and is thus $\frac{\pi}{4}$.
 
       It is tempting to assume that we can use this geometric extension of the classical interpretation of probability in all cases.  What we will see in the remaining exercises
-      here is that life is not that simple.  For this purpose we are going to study a random variable whose value is determined based on the construction shown here, which consists
-      of an equilateral triangle inside a circle.  As a first step in doing so generate 10 uniformly distributed points that lie on the circumference of the circle shown here, which 
-      has a radius of one.
+      here is that life is not that simple.  For this purpose we are going to study a random variable whose value is determined based on a construction which consists
+      of an equilateral triangle inside a circle.  As a first step in solving this problem generate 10 uniformly distributed points that lie on the circumference of a circle, 
+      which has a radius of one and plot these points using the plotting tools.
     </DESCRIPTION>
+    <HINT>
+      To specify a point on the circumference of a circle in cartesian coordinates you need to provide two numbers.  To generate these two numbers you begin by generating a uniform random variable between 0 and 360 degrees. You can then use the unit circle construction to convert this random angle into a pair of x and y coordinates that lie on the circumference of the unit circle.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_trig"></block>
+         <block type="math_constant"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -139,24 +190,40 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }  
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+          var thet1 = Math.acos(myplot.data[i][0]); var thet2=Math.asin(myplot.data[i][1]);
+          if( Math.sin(thet1) &gt; myplot.data[i][1]+0.001 &amp;&amp; Math.sin(thet1) &lt; myplot.data[i][1]-0.001 &amp;&amp; Math.cos(thet2) &gt; myplot.data[i][1]+0.001 &amp;&amp; Math.cos(thet2) &lt; myplot.data[i][1]-0.001 ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
       We are now going to use what you learnt in the previous exercise about generating uniformly distributed points on the circumference of a circle to estimate the probability that a 
       chord that connects two points on the circumference of the circle and that is generated at random has a length longer than one of the sides of the equililateral triangle.  We will 
-      do this by generating 100 random variables.  Each of these random variables will be equal to one when the corresponding chord has a length longer than side of the triangle and 
+      do this by generating 50 random variables.  Each of these random variables will be equal to one when the corresponding chord has a length longer than side of the triangle and 
       will be zero otherwise.  Furthermore, the length of each chord will be calculated by generating two (uniformly distributed) random points on the circumference and by calculating the 
       distance between these two points using Pythagoras theorem.  Use the blocks below to calculate the length of the side of the equililateral triangle using trigonometry and then generate 
-      100 independent values for the random variable $Z$.  Plot a graph showing how the sample mean $\mu_i$ that you estimate from these random variables changes as you increase the number of 
+      50 independent values for the random variable $Z$.  Plot a graph showing how the sample mean $\mu_i$ that you estimate from these random variables changes as you increase the number of 
       points in your sample.  Describe the shape of the curve you obtain in your notes on this exercise. 
     </DESCRIPTION>
+    <HINT>
+      To measure the length of the chord you need to calculate the (2D) vector connecting the two randomly generated points on the circumference.  You then need to calculate the norm of this vector.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_trig"></block>
+         <block type="math_constant"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -170,25 +237,40 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }   
+      levelcomplete=true; 
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; }
+      }  
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
       At the end of the previous exercise you should have seen that the sample mean for $Z$ converges to a value of $\frac{1}{3}$.  In this exercise we are going to check this estimate 
-      that the probability that a randomly-generated chord has a length longer than one of the sides of the equililateral triangle.  Once again we will do this by generating 100 random variables, $Z'$
-      and once again each of these random variables will be equal to one when the corresponding chord has a length longer than side of the triangle and will be zero otherwise.  The difference will 
+      that the probability that a randomly-generated chord has a length longer than one of the sides of the equililateral triangle.  Once again we will do this by generating 50 random variables, $Z'$.
+      Once again each of these random variables will be equal to one when the corresponding chord has a length longer than side of the triangle and will be zero otherwise.  The difference will 
       be how we generate the chords.  This time we will generate only one point on the circumference of the circle and a second point will generated at some point on the radius that connects the 
       point on the circumference to the center of the circle.  The chord will then be drawn perpendicular to this radius so that it connects two points on the circumference of the circle.  You should 
       be able to calculate the length of the chord generated in this way using Pythagoras theorem.  Therefore, use the blocks below to calculate the length of the side of the equililateral triangle 
-      using trigonometry and then generate 100 independent values for the random variable $Z'$.  Plot a graph showing how the sample mean $\mu_i$ that you estimate from these random variables changes 
+      using trigonometry and then generate 50 independent values for the random variable $Z'$.  Plot a graph showing how the sample mean $\mu_i$ that you estimate from these random variables changes 
       as you increase the number of points in your sample.  Describe the shape of the curve you obtain in your notes on this exercise. 
     </DESCRIPTION>
+    <HINT>
+      Draw a diagram of a chord inside the circle and a radius that is perpendicular to your chord.  Remember that we have a unit circle so the length of any vector that connects the center of the circle to the cirumference is equal to one.  Also note that the vector connecting the center of the circle to one of the corners of the triangle will bisect the angle between the two sides of the triangle.  Lastly note that all angles should be given in degrees and not radians.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_trig"></block>
+         <block type="math_constant"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -202,18 +284,20 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }  
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <REVIEW>
-     You should have found that the sample mean converges to a value of $\frac{1}{2}$ in this second case.  The estimates for the mean that we get from these two different methods of generating
-     the chord are different.  This is because the statement of the problem "calcualte the probability that a randomly generated chord that connects two points on the circumference of a circle 
-     has a length longer than the side of the equililateral triangle that fits in that same circle" is ill posed.  There is not enough information in the statement of the problem to determine the 
-     solution as we also have to describe the manner in which the chords are generated.  This is, in fact, a well known problem called the Bertrand Paradox and you can read more about it here:
-     https://en.wikipedia.org/wiki/Bertrand_paradox_(probability).
+     You should have found that the sample mean converges to a value of a half in this second case.  The estimates for the mean that we get from these two different methods of generating the chord are different.  This is because the statement of the problem - calculate the probability that a randomly generated chord that connects two points on the circumference of a circle has a length longer than the side of the equililateral triangle that fits in that same circle - is ill posed.  There is not enough information in the statement of the problem to determine the solution as we also have to describe the manner in which the chords are generated.  This is, in fact, a well known problem called the Bertrand Paradox and you can read more about online.
 
-     To consolidate what you have learnt write a python notebook that solves the three problems described in the exercise above.  Now though as well as calculating estimates for the sample means also 
-     calculate error bars around your estimates of the mean that represent the 90 % confidence limit.  The three problems in question are: calculating that a pair of uniform random variables between 0 and 
-     1 are within an circle of radius one centered on the origin and the two different ways of calculating the probability that a randomly-generated chord that connects two points on the circumference of a 
-     circle has a length longer than the side of the equiliteral triangle that fits inside that same circle.
+     To consolidate what you have learnt write a python notebook that solves the three problems described in the exercise above.  Now though as well as calculating estimates for the sample means also calculate error bars around your estimates of the mean that represent the 90 % confidence limit.  Remember the three problems in question were: calculating that a pair of uniform random variables between 0 and 1 are within an circle of radius one centered on the origin and the two different ways of calculating the probability that a randomly-generated chord that connects two points on the circumference of a circle has a length longer than the side of the equiliteral triangle that fits inside that same circle.
   </REVIEW>
 </PAGE>

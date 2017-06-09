@@ -52,3 +52,4 @@ GAMBLERS_RUIN EXERCISE LATEX SOR3012 gamblers-ruin-expectation.tex G.~Tribello D
 GAMBLERS_RUIN INTRO PDF SOR3012 jim-chap08.pdf J.~F.~McCann Some introductory notes on random walks.
 GAMBLERS_RUIN INTRO PDF SOR3012 jim-chap09.pdf J.~F.~McCann Some notes on how the expected number of games is worked out in the gamblers ruin problem.
 GAMBLERS_RUIN EXERCISE XML SOR3012 gamblers-ruin-problems G.~Tribello Some exercises that use the solutions of the gamblers ruin problem.
+GAMBLERS_RUIN EXERCISE XML SOR3012 gamblers-ruin-exercise G.~Tribello A programming exercise that introduces you to the Gamblers ruin problem.

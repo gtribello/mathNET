@@ -4,40 +4,52 @@
      <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
   </HEADER>
   <WELCOME>
-     In this exercise we are going to learn how to model a discrete random walk.  The aim is to come up with a numerical solution to a problem 
-     which you will then learn to solve analytically.  The reason for modelling this process numerically is to better understand the problem that 
-     we are trying to solve and to better understand how we can use computers to solve more complex equations.
+     In this exercise we are going to learn how to model a discrete random walk.  The aim is to come up with a numerical solution to a problem which you will then learn to solve analytically.  The reason for modelling this process numerically is to better understand the problem that we are trying to solve and to better understand how we can use computers to solve more complex problems.
   </WELCOME>
   <WORKSPACE>
-    <table>
+   <table>
       <tr>
         <td>
-          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+          <div id="graph" style="width: 400px"></div>
         </td>
         <td width="10px"> nbsp;nbsp; </td>
         <td rowspan="2">
-          <div id="blocklyDiv" style="height: 800px"> </div>
-        </td> 
-      </tr>
-      <tr>
-        <td> <div id="graph" style="width: 400px"></div> </td>
-        <td width="10px"> nbsp;nbsp; </td>
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td>
       </tr>
     </table>
   </WORKSPACE>
   <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
   </APIFUNCTIONS>
   <BLOCKS>
   </BLOCKS>
   <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
   </SCRIPTS>
   <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
   <LEVEL>
     <DESCRIPTION>
       Consider a walker who takes a pace of length 1m forward once a second.  Suppose the walker begins walking at a point 5 m from the origin and that s/he is walking 
-      away from the origin.  Use the blocks below to draw a diagram showing the position the walker takes relative to the origin during each of the next 100 seconds.  
-      Your graph should consist of a set of 100 points and time should be shown on the $x$ axis while position should be shown on the $y$ axis.  
+      away from the origin.  Use the blocks below to draw a diagram showing the position the walker takes relative to the origin at $t=0$ and during each of the next 20 seconds.  
+      Your graph should consist of a set of 20 points and time should be shown on the $x$ axis while position should be shown on the $y$ axis.  
     </DESCRIPTION>
+    <HINT>
+      This is very simple as there is no component of randomness in the statement of the problem.  What the walker does in the future is completely deterministic.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -53,15 +65,27 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }    
+      levelcomplete=true;
+      if( prand != 0 || myplot.data.length &lt; 3 || myplot.data[2][1]!=5 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){ 
+           if( myplot.data[i][0]!=(i-2) || myplot.data[i][1]!=(i+3) ){ levelcomplete=false; }
+      } 
     </FINISH>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
       Now suppose that the walker is drunk and that as such half of his/her one-meter-long strides are away from the origin and half of his one-meter-long strides are 
-      towards the origin.  Use the blocks below and a bernoulli random variable to show one path that the walker might take during each of the next 100 seconds.  Once 
-      again your graphs should consist of a set of 100 points, time should be shown in the $x$ axis while position should be shown on the $y$ axis.  As in the previous 
-      example the walker should starts from a point 5 m from the origin.   
+      towards the origin.  Use the blocks below and a bernoulli random variable to show one path that the walker might take during each of the next 20 seconds.  Once 
+      again the first point in your graph should be the position of the walker at time $t=0$.  There should then be a further set of 20 points, time should be shown 
+      in the $x$ axis while position should be shown on the $y$ axis.  As in the previous example the walker should starts from a point 5 m from the origin.   
     </DESCRIPTION>
+    <HINT>
+      Now we need a random component our program.  The problem is still very simple though. 
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -81,6 +105,18 @@
       </category>
     </TOOLBOX> 
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }   
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 || myplot.data[2][1]!=5 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-2) || myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0  ){ levelcomplete=false; }
+           if( i>2 ){
+               if( Math.abs( myplot.data[i][1]-myplot.data[i-1][1] ) != 1 ){ levelcomplete=false; }
+           }
+      }
     </FINISH>
   </LEVEL> 
   <LEVEL>
@@ -91,9 +127,13 @@
       two random variables should equal 0 if the walker finishes at home and 1 if the walker finishes at the pub.  The second of the random variables should be equal to the number 
       of steps the walker took before arriving at either the pub or at his/her home.    
     </DESCRIPTION>
+    <HINT>
+      Notice that I have given you a block to create a while loop and a logic block that allows you to check if statement A AND statement B is true.  Also note that the last point plotted should be equal to 0 or 20.  That is to say the drunk should finish either at home or in the pub. 
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
+         <block type="controls_whileUntil"></block> 
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
@@ -101,6 +141,7 @@
       <category name="Logic">
         <block type="controls_if"></block>
         <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
@@ -110,16 +151,24 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 || myplot.data[2][1]!=5 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-2) || myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0 || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 20  ){ levelcomplete=false; }
+           if( i>2 ){
+               if( Math.abs( myplot.data[i][1]-myplot.data[i-1][1] ) != 1 ){ levelcomplete=false; }
+           }
+      }
+      if( myplot.data[myplot.data.length-1][1] != 0 &amp;&amp; myplot.data[myplot.data.length-1][1] != 20 ){ levelcomplete=false; }
     </FINISH>
   </LEVEL> 
   <REVIEW>
-     The exercise you have just performed has taught you how we can generate the two random variables that are at the heart of problem of the gamblers ruin with absorbing boundary conditions.
-     In the language of the exercise we have just performed these random variables are: a bernoulli random variable that tells us whether the walker arrives in the pub or at home and a discrete 
-     random variable that tells us how many steps the walker will take before arriving at either the pub or at home.
+     The exercise you have just performed has taught you how we can generate the two random variables that are at the heart of problem of the gamblers ruin with absorbing boundary conditions.  In the language of the exercise we have just performed these random variables are: a bernoulli random variable that tells us whether the walker arrives in the pub or at home and a discrete random variable that tells us how many steps the walker will take before arriving at either the pub or at home.  
 
-     To consolidate what you have learnt write a python notebook that generates multiple instances of the two random variables in this problem.  Use the data that you obtain to estimate the 
-     expectations for these two random variables and to give a 90 % confidence limit on your estimates of these expectation values.  Go through the exercises on the analytical solution to this 
-     problem and compare the values that you obtain from this numerical procedure with the analytic values for these quantities.  As a final (programming) exercise calculate an estimate for 
-     the probability mass function for the random variables that measures how many steps the walker will take before arriving at either the pub or at home.
+To consolidate what you have learnt write a python notebook that generates multiple instances of the two random variables in this problem.  Use the data that you obtain to estimate the expectations for these two random variables and to give a 90 % confidence limit on your estimates of these expectation values.  Go through the exercises on the analytical solution to this problem and compare the values that you obtain from this numerical procedure with the analytic values for these quantities.  As a final (programming) exercise calculate an estimate for the probability mass function for the random variables that measures how many steps the walker will take before arriving at either the pub or at home.
   </REVIEW>
 </PAGE>

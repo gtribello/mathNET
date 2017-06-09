@@ -34,3 +34,4 @@ STATIONARY_DIST_MARKOV INTRO PDF SOR3012 jim-chap14.pdf J.~F.~McCann Notes on th
 STATIONARY_DIST_MARKOV INTRO PDF SOR3012 jim-chap15.pdf J.~F.~McCann More notes on the ergodic distribution and the stationary distribution of Markov chains.
 STATIONARY_DIST_MARKOV INTRO XML SOR3012 limiting-stationary-dist-video1 G.~Tribello	 A video explaining the derivation of the ergodic theorem 
 STATIONARY_DIST_MARKOV INTRO XML SOR3012 limiting-stationary-dist-video2 G.~Tribello	 A video explaining why the limiting stationary distribution of an ergodic markov chain can be found by finding the principle left eigenvector of the transition matrix.
+STATIONARY_DIST_MARKOV EXERCISE XML SOR3012 ehrenfest-urns-exercise G.~Tribello A programming exercise on simulating an ergodic markov chain.

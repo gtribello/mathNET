@@ -24,7 +24,7 @@ function addGraphFunctionsToApi( interpreter, scope ){
       return interpreter.createPrimitive(myplot.drawBarGraphFromTable(x,y));
     };
     interpreter.setProperty(scope, 'drawBarGraphFromTable', interpreter.createNativeFunction(wrapper));
-    // Add an API function for drawing horizontal lines
+    // Add an API function for drawing lines
     var wrapper = function(x1,y1,x2,y2) {
       x1 = x1 ? x1.toString() : '';
       y1 = y1 ? y1.toString() : '';
@@ -33,17 +33,28 @@ function addGraphFunctionsToApi( interpreter, scope ){
       return interpreter.createPrimitive(myplot.drawLine(x1,y1,x2,y2));
     };
     interpreter.setProperty(scope, 'drawLine', interpreter.createNativeFunction(wrapper));
+    // Add an API function for adding error lines
+    var wrapper = function(e) {
+      e = e ? e.toString() : '';
+      return interpreter.createPrimitive(myplot.addErrorVal(e));
+    };
+    interpreter.setProperty(scope, 'addErrorVal', interpreter.createNativeFunction(wrapper));
 }
 
 function plotter(){
     this.data = [];
     this.lines = [];
+    this.error = [];
 
     this.options_ = {
       //curveType: 'function',
       width: 400, height: 400,
       chartArea: {left: '10%', width: '85%', height: '85%'}
     };
+
+    this.addErrorVal = function( z ) {
+       this.error.push( z );
+    }
 
     this.addDataToGraph = function( x, y ) {
       // Add data to the array containing the data
@@ -81,7 +92,22 @@ function plotter(){
     };
 
     this.plotGraph = function(div_id,gtype) {
-      if( this.lines.length>0 ){
+      if( this.error.length>0 ){
+          var data = new google.visualization.DataTable();
+          data.addColumn('number', this.data[0] );
+          data.addColumn('number', this.data[1] );
+          data.addColumn({type: 'number', id: "errtop", role: 'interval'});
+          data.addColumn({type: 'number', id: "errbot", role: 'interval'}); 
+          for(var i=1;i<this.data.length;i++){
+              var y = this.data[i][1]-0; var err = this.error[i-1]-0;
+              data.addRow([this.data[i][0]-0,y,y+err,y-err]);
+          }
+          new google.visualization.ScatterChart(document.getElementById(div_id)).draw(data,{
+             width: 400, height: 400,
+             chartArea: {left: '10%', width: '85%', height: '85%'},
+             intervals: { style: 'bars' }   
+          });
+      } else if( this.lines.length>0 ){
           var data = new google.visualization.DataTable();
           data.addColumn('number', this.data[0] );
           data.addColumn('number', this.data[1] );
@@ -123,6 +149,52 @@ function plotter(){
       }
     };
 }
+
+// Define a custom block to add data to the graph
+Blockly.Blocks["draw_error_bar"] = {
+  // take input and plot it on y
+  init: function() {
+    this.jsonInit({
+      "message0": "plot point at x = %1 and %2 with y-error bar %3",
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+         "type": "input_value",
+         "name": "Y"
+        },
+        {
+         "type": "input_value",
+         "name": "Z"
+        }
+      ],
+      "inputsInline": true,
+      "nextStatement": null,
+      "previousStatement": null,
+      "colour": Blockly.Blocks.variables.HUE,
+      "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+      "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+    });
+  }
+};
+
+Blockly.JavaScript['draw_error_bar'] = function(block) {
+  var x = Blockly.JavaScript.valueToCode(block, 'X', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  var y = Blockly.JavaScript.valueToCode(block, 'Y', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  var z = Blockly.JavaScript.valueToCode(block, 'Z', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  var code = 'addErrorVal(' + z + ');\naddDataToGraph(' + x + ', ' + y + ');\n';
+  return code;
+};
+
+Blockly.Python['draw_error_bar'] = function(block) {
+  var x = Blockly.Python.valueToCode(block, 'X', Blockly.Python.ORDER_ATOMIC) || '0';
+  var y = Blockly.Python.valueToCode(block, 'Y', Blockly.Python.ORDER_ATOMIC) || '0';
+  var z = Blockly.Python.valueToCode(block, 'Z', Blockly.Python.ORDER_ATOMIC) || '0';
+  var code = 'addDataWithErrorToGraph(' + x + ', ' + y + ',' + z + ')\n';
+  return code;
+};
 
 // Define a custom block to add data to the graph
 Blockly.Blocks["draw_point"] = {

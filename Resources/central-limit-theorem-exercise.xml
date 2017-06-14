@@ -159,6 +159,8 @@
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.lines.length = 0;
+    myplot.error.length = 0;
+    if( myApp.mylevel==4 || myApp.mylevel==5 ){ myplot.error.unshift(0); }
     myplot.plotGraph('graph','scatter');
   </STARTUP>
   <LEVEL>
@@ -389,6 +391,7 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_single"></block>
          <block type="math_normal"></block>
       </category>
       <category name="Random">
@@ -405,7 +408,7 @@
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( !myplot.drawnerrors || prand != 1 || myplot.data.length &lt; 3 || myplot.data.length &gt; 12 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length &lt; 3 || myplot.data.length &gt; 12 ){ levelcomplete=false; }
       for(var i=2; i &lt; myplot.data.length; i++ ){
            if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
       }

@@ -35,3 +35,4 @@ CENTRAL_LIMIT_THEOREM EXERCISE XML SOR3012 central-limit-theorem-problems G.~Tri
 CENTRAL_LIMIT_THEOREM EXERCISE IPYTHON SOR3012 sor3012-confidence-limits.ipynb G.~Tribello A programming exercise on confidence limits
 CENTRAL_LIMIT_THEOREM INTRO XML SOR3012 central-limit-theorem-video G.~Tribello Video introducing confidence limits and the central limit theorem
 CENTRAL_LIMIT_THEOREM INTRO XML SOR3012 error_bar_video G.~Tribello Video explaining how statistical error bars should be calculated and interpretted. 
+CENTRAL_LIMIT_THEOREM EXERCISE XML SOR3012 central-limit-theorem-exercise G.~Tribello Programming exercise to explain the central limit theorem to you.

@@ -11,26 +11,37 @@
     <table>
       <tr>
         <td>
-          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+          <div id="graph" style="width: 400px"></div>
         </td>
         <td width="10px"> nbsp;nbsp; </td>
         <td rowspan="2">
-          <div id="blocklyDiv" style="height: 800px"> </div>
+          <div id="blocklyDiv" style="height: 400px"> </div>
         </td> 
-      </tr>
-      <tr>
-        <td> <div id="graph" style="width: 400px"></div> </td>
-        <td width="10px"> nbsp;nbsp; </td>
       </tr>
     </table>
   </WORKSPACE>
   <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
   </APIFUNCTIONS>
   <BLOCKS>
   </BLOCKS>
   <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
   </SCRIPTS>
   <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
   <LEVEL>
     <DESCRIPTION>
       This first exercise should largely be revision.  We are going to look at one way of generating a Poisson process.  The way this method works is that 
@@ -39,12 +50,21 @@
       simulating a set of discrete time intervals of with length $t=1$.  Simulate at least 20 of these intervals and use the blocks to plot the total number 
       of events that have occured as a function of time.
     </DESCRIPTION>
+    <HINT>
+       You learnt how to generate Poisson random variables in the first blockly exercise you did for this module on generating random variables.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
+         <block type="controls_whileUntil"></block>
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_single"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
@@ -54,6 +74,19 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0 ){ levelcomplete=false; }
+           if( i>2 ){
+               if( myplot.data[i-1][1] &gt; myplot.data[i][1] ){ levelcomplete=false; }
+           }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL> 
   <LEVEL>
@@ -63,12 +96,17 @@
       in question.  With this information in mind adjust the blocks and generate the times at which each of the events occurs.  Then adjust the blocks that you wrote in 
       the previous exercise so that the graph only shows an increase in the number of events at exactly the times at which the random events occur.  
     </DESCRIPTION>
+    <HINT>
+      Lets suppose that you have generated a Poisson variable and thus determined that 3 events occur in time window of length 1.  What the description here tells you is that we can determine times at which these events occur by generating 3 uniform random variables between 0 and 1.  In other words, you can generate times at which these events occured by generating 3 random variables in a list and then sorting this list so that the times are in ascending order  
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
+         <block type="controls_whileUntil"></block>
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -77,11 +115,30 @@
       <category name="Random">
          <block type="uniform_random"></block>
       </category>
+      <category name="Lists">
+         <block type="lists_repeat"> </block>
+         <block type="lists_sort"> </block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
       <category name="Plotting">
          <block type="draw_point"></block>
       </category>
     </TOOLBOX> 
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }    
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){ 
+           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0 ){ levelcomplete=false; }
+           if( i>2 ){
+               if( myplot.data[i][1]-myplot.data[i-1][1] != 1 ){ levelcomplete=false; }
+               if( myplot.data[i][0] &lt; myplot.data[i-1][0] ){ levelcomplete=false; }
+           }
+      } 
     </FINISH>
   </LEVEL> 
   <LEVEL>
@@ -90,12 +147,16 @@
       50 such random variables, $X_i$, and draw a graph showing in which each of your random variables is plotted at $(i,X_i)$.  Each of the $i$s here should just be one of 
       the set of integers between 1 and 50.
     </DESCRIPTION>
+    <HINT>
+      To do this you generate a uniform random variable between 0 and 1.  You then invert the cumulative probability distribution function for this variable and calculate the value of this inverse function for the random variable you generated.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -109,6 +170,15 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL> 
   <LEVEL>
@@ -118,12 +188,16 @@
       poisson process.  Use the plotting tools to show the number of events that occur as a function of time.  Your program should work in a manner that is 
       different from the program that you wrote in earlier exercises to simulate the Poisson process. 
     </DESCRIPTION>
+    <HINT>
+      This is a matter of using what you learnt about generating exponential random vairables in the previous exercise to generate a collection of events.  They key phrase from the question is that the time between each pair of events should be given by an exponentially distributed random variable.  
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -137,19 +211,36 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0 ){ levelcomplete=false; }
+           if( i>2 ){
+               if( myplot.data[i][1]-myplot.data[i-1][1] != 1 ){ levelcomplete=false; }
+               if( myplot.data[i][0] &lt; myplot.data[i-1][0] ){ levelcomplete=false; }
+           }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-       The ammount of money spent in a particular 24-hour shop can be modelled using a Compound Poisson process with parameters $\lambda=5$, $\mu=10$ and $\sigma^2=15$.
+       The ammount of money spent in a particular 24-hour shop can be modelled using a Compound Poisson process with parameters $\lambda=5$, $\mu=4$ and $\sigma^2=1$.
        Use the blocks below to draw a graph that shows the result from a simulation that models how the ammount of money spent in this shop changes as a function of time. 
     </DESCRIPTION>
+    <HINT>
+       Notice that in a compound poisson process the total spend increases when an event occurs is a random variable.  In a poisson process the total number of events just increases by one when an event occurs.  
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -157,12 +248,26 @@
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
+         <block type="normal_random"></block>
       </category>
       <category name="Plotting">
          <block type="draw_point"></block>
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0; pnorm = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+           if( ww[i]=="standard normal random variable" ){ pnorm += 1; }
+      }
+      levelcomplete=true;  
+      if( prand != 1 || pnorm != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( i>2 ){
+               if( myplot.data[i][1]-myplot.data[i-1][1] &lt; 0 ){ levelcomplete=false; }
+               if( myplot.data[i][0] &lt; myplot.data[i-1][0] ){ levelcomplete=false; }
+           }
+      }
     </FINISH>
   </LEVEL>
   <REVIEW>

@@ -24,10 +24,20 @@ function addGraphFunctionsToApi( interpreter, scope ){
       return interpreter.createPrimitive(myplot.drawBarGraphFromTable(x,y));
     };
     interpreter.setProperty(scope, 'drawBarGraphFromTable', interpreter.createNativeFunction(wrapper));
+    // Add an API function for drawing horizontal lines
+    var wrapper = function(x1,y1,x2,y2) {
+      x1 = x1 ? x1.toString() : '';
+      y1 = y1 ? y1.toString() : '';
+      x2 = x2 ? x1.toString() : '';
+      y2 = y2 ? y1.toString() : '';
+      return interpreter.createPrimitive(myplot.drawLine(x1,y1,x2,y2));
+    };
+    interpreter.setProperty(scope, 'drawLine', interpreter.createNativeFunction(wrapper));
 }
 
 function plotter(){
     this.data = [];
+    this.lines = [];
 
     this.options_ = {
       //curveType: 'function',
@@ -66,16 +76,50 @@ function plotter(){
       this.plotGraph('graph','column');
     };
 
+    this.drawLine = function( x1,y1,x2,y2 ) {
+      this.lines.push([x1-0,y1-0,x2-0,y2-0]);
+    };
+
     this.plotGraph = function(div_id,gtype) {
-      // Create the data table from the stored data.
-      var data = google.visualization.arrayToDataTable(this.data);
-      // Create and draw the visualization, passing in the data and options.
-      if( gtype=='scatter' ){
-         new google.visualization.ScatterChart(document.getElementById(div_id)).draw(data, this.options_);
-      } else if( gtype=='column' ){
-         new google.visualization.ColumnChart(document.getElementById(div_id)).draw(data, this.options_);
-      } else if( gtype=='line' ){
-         new google.visualization.LineChart(document.getElementById(div_id)).draw(data, this.options_);
+      if( this.lines.length>0 ){
+          var data = new google.visualization.DataTable();
+          data.addColumn('number', this.data[0] );
+          data.addColumn('number', this.data[1] );
+          var firstrow = []; firstrow.push(0); firstrow.push(null);
+          for(var i=0;i<this.lines.length;i++){ 
+              data.addColumn('number','line' + i ); 
+              firstrow.push(this.lines[i][1]);
+          } 
+          data.addRow(firstrow);
+          for(var i=1;i<this.data.length;i++){ 
+              var row = []; row.push(this.data[i][0]-0); row.push(this.data[i][1]-0);
+              for(var j=0;j<this.lines.length;j++){ row.push(null); }
+              data.addRow(row); 
+          }
+          var lastrow = []; lastrow.push(10); lastrow.push(null);
+          for(var i=0;i<this.lines.length;i++){ lastrow.push(this.lines[i][1]); }
+          data.addRow(lastrow);
+          new google.visualization.ComboChart(document.getElementById(div_id)).draw(data,{
+             width: 400, height: 400,
+             chartArea: {left: '10%', width: '85%', height: '85%'},
+             interpolateNulls: true,
+             series: {
+                0: { pointShape: 'circle', type: 'scatter' },
+                1: { type: 'line' },
+                2: { type: 'line' }
+             } 
+          });
+      } else {
+          // Create the data table from the stored data.
+          var data = google.visualization.arrayToDataTable(this.data);
+          // Create and draw the visualization, passing in the data and options.
+          if( gtype=='scatter' ){
+             new google.visualization.ScatterChart(document.getElementById(div_id)).draw(data, this.options_);
+          } else if( gtype=='column' ){
+             new google.visualization.ColumnChart(document.getElementById(div_id)).draw(data, this.options_);
+          } else if( gtype=='line' ){
+             new google.visualization.LineChart(document.getElementById(div_id)).draw(data, this.options_);
+          }
       }
     };
 }
@@ -210,5 +254,60 @@ Blockly.Python['draw_bar_chart'] = function(block) {
   var x = Blockly.Python.valueToCode(block, 'X', Blockly.Python.ORDER_ATOMIC) || '0';
   var y = Blockly.Python.valueToCode(block, 'Y', Blockly.Python.ORDER_ATOMIC) || '0';
   var code = 'matplotlib.pyplot.bar(' + x + ', ' + y + ', 0.4 )\nmatplotlib.pyplot.show()';
+  return code;
+};
+
+// Define a custom block to draw a horizontal or vertical line
+Blockly.Blocks["draw_line"] = {
+  // take input and plot it on y
+  init: function() {
+    this.jsonInit({
+      "message0": "draw %1 line at %2",
+      "args0": [
+         {
+           "type": "field_dropdown",
+           "name": "OP",
+           "options": [
+             ['horizontal', 'HORIZONTAL'],
+             ['vertical', 'VERTICAL']
+           ]
+         },
+         {
+           "type": "input_value",
+           "name": "NUM",
+           "check": "Number"
+         }
+      ],
+      "inputsInline": true,
+      "nextStatement": null,
+      "previousStatement": null,
+      "colour": Blockly.Blocks.variables.HUE,
+      "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+      "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+    });  
+  }      
+};
+
+Blockly.JavaScript['draw_line'] = function(block) {
+  var code; var ftype = block.getFieldValue('OP');
+  var x = Blockly.JavaScript.valueToCode(block, 'NUM', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  switch(ftype){ 
+  case("HORIZONTAL") :
+     var x1=0; var x2=10; code = 'drawLine(' + x1 + ','  + x  + ',' + x2 + ',' + x + ')\n'; break; 
+  case("VERTICAL") : 
+     var y1=0; var y2=1; code = 'drawLine(' + x + ',' + y1 + ',' + x + ',' + y2 + ')\n'; break; 
+  } 
+  return code; 
+}; 
+
+Blockly.Python['draw_line'] = function(block) {
+  var code; var ftype = block.getFieldValue('OP');
+  var x = Blockly.Python.valueToCode(block, 'NUM', Blockly.Python.ORDER_ATOMIC) || '0';
+  switch(ftype){ 
+  case("HORIZONTAL") : 
+     code = 'matplotlib.pyplot.plot( [0,10],[' +  x  + ',' + x + '], k- )\n'; break; 
+  case("VERTICAL") : 
+     code = 'matplotlib.pyplot.plot([' + x + ',' + x + '], [0,1], k- )\n'; break; 
+  } 
   return code;
 };

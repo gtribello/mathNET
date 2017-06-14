@@ -39,3 +39,4 @@ POISSON_PROCESS INTRO XML SOR3012 poisson-process-video G.~Tribello A video intr
 POISSON_PROCESS INTRO PDF SOR3012 jim-chap19.pdf J.~F.~McCann Some notes on the poisson process and its derivation.
 POISSON_PROCESS INTRO PDF SOR3012 jim-chap20.pdf J.~F.~McCann More notes on the properties of the Poisson process.
 POISSON_PROCESS EXERCISE XML SOR3012 poisson-process-problems G.~Tribello Some problems involving the poisson process
+POISSON_PROCESS EXERCISE XML SOR3012 poisson-process-exercise G.~Tribello A programming exercise that shows you how we can simulate poisson processes and compound poisson processes.

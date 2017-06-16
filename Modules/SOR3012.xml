@@ -1,0 +1,60 @@
+<PAGE>
+  <TITLE> Stochastic Processes and Risk </TITLE>
+  <DESCRIPTION>
+     The theory of stochastic process is used to model the future behavior of systems in fields ranging from finance to weather forecasing. 
+     In stochastic models the future behavior of the system is modelled using random variables and probability.  One can thus obtain information
+     on the likelihood that the future will transpire in a particular way.
+     
+     In this module we focus primarily on probabilistic models that have the Markov property.  In these models the probability of the future transpiring in a 
+     particular way depends only on the present state of the system and not on what happened in the past. These models find application in physics, quantitative
+     finance and machine learning.  A particularly important application of Markov processes is the method of Monte Carlo integration.  We will thus finish by 
+     studying this technique and its application to problems in Bayesian inference.
+  </DESCRIPTION> 
+  <AIMS>
+     <UL> 
+       <LI> You should be able to calculate expectations and variances directly, using the moment generating function and by using the conditional expectation theorem.  You should also be able to explain what predictions can be made given the expectation and/or the variance. </LI>
+       <LI> You should be able to recognise which type of random variable is appropriate for modelling a given phenomenon, identify the assumptions that they have made in constructing this model and critically assess their validity. </LI>
+       <LI> You should be able to explain what it means when we state that a time dependent process has independent and stationary increments and how this differs from a Markov process.  By using your understanding of this distinction you should be able to construct probabilistic models for time dependent phenomena, explain the assumptions that have been made in the constructing these models and critically assess their validity. </LI>
+     </UL>
+  </AIMS>
+  <CHAPTER>
+     <TITLE> Random variables </TITLE>
+     <TOPIC> RANDOM_VARIABLES </TOPIC>
+     <TOPIC> BERNOULI_RANDOM_VARIABLE </TOPIC>
+     <TOPIC> BINOMIAL_RANDOM_VARIABLE </TOPIC>
+     <TOPIC> GEOMETRIC_RANDOM_VARIABLE </TOPIC>
+     <TOPIC> POISSON_RANDOM_VARIABLE </TOPIC>
+     <TOPIC> EXPECTATION </TOPIC>
+     <TOPIC> VARIANCE </TOPIC>
+     <TOPIC> MOMENT_GENERATING_FUNCTION </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> The central limit theorem </TITLE>
+     <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>
+     <TOPIC> INDEPENDENT_RANDOM_VARIABLES </TOPIC>
+     <TOPIC> BAYES_THEOREM </TOPIC>
+     <TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
+     <TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
+     <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+     <TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> Markov chains in discrete time </TITLE>
+     <TOPIC> MARKOV_PROPERTY </TOPIC>
+     <TOPIC> TRANSITION_MATRIX_OF_MARKOV_CHAIN </TOPIC>
+     <TOPIC> CHAPMAN_KOLMOGOROV_RELATION </TOPIC>
+     <TOPIC> TRANSIENT_RECURRENT_STATES </TOPIC>
+     <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+     <TOPIC> HITTING_PROBABILITIES </TOPIC>
+     <TOPIC> GAMBLERS_RUIN </TOPIC> 
+  </CHAPTER>
+  <CHAPTER> 
+     <TITLE> Markov chains in continuous time </TITLE>
+     <TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
+     <TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
+     <TOPIC> POISSON_PROCESS </TOPIC>
+     <TOPIC> MM1_QUEUE </TOPIC>
+     <TOPIC> INHOMOGENEOUS_POISSON_PROCESS </TOPIC>
+     <TOPIC> COMPOUND_POISSON_PROCESS </TOPIC>
+  </CHAPTER>
+</PAGE>

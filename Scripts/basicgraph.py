@@ -38,6 +38,28 @@ class basicgraph:
           self.tlist.append( (r0[i], self.nodes[i]) )
       self.tlist.sort(key=lambda x: x[0])
 
+   def printChapterGraph(self,tlist,chapter):
+      graphstr = "digraph { \n" 
+      graphstr += "bgcolor=transparent \n" 
+      graphstr += "node [style=rounded shape=box]\n"
+      # Draw all nodes 
+      for inode in tlist :
+          label = self.labels[self.nodes.index(inode)]
+          graphstr += inode + ' [label=<' + label + '> URL="' + inode + '.html" target="_top"];\n'  
+      # Add the connections 
+      for inode in tlist :
+          iind = self.nodes.index(inode)
+          for jnode in tlist :
+              jind = self.nodes.index(jnode)
+              if self.graph[iind, jind] == 1 :
+                 graphstr += self.nodes[iind] + " -> " + self.nodes[jind] + '\n'
+      # And finish printing the dot file
+      graphstr += "}"
+      src = Source( graphstr, format='svg' )
+      src.render("html/" + chapter)
+      # Delete the dot file
+      os.remove("html/" + chapter) 
+
    def printNodeGraph(self,node):
       label = self.labels[self.nodes.index(node)]
       graphstr = "digraph { \n" 

@@ -4,40 +4,52 @@
      <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
   </HEADER>
   <WELCOME>
-     In the previous exercises we have dealt mostly with single random variables.  What we want to assess in many branches of statistics, however, is 
-     what effect the value of one random variable, $X$, has on another different random variable, $Y$.  In other words, we want to understand the degree
-     to which the random variables $X$ and $Y$ are correlated.  This exercise is meant to allow you to visualize what it means when we state that two 
-     variables are correlated and what it means when we state that two variables are correlated. 
+     In the previous exercises we have dealt mostly with single random variables.  What we want to assess in many branches of statistics, however, is what effect the value of one random variable, X, has on another different random variable, Y.  In other words, we want to understand the degree to which the random variables X and Y are correlated.  This exercise is meant to allow you to visualize what it means when we state that two variables are correlated and what it means when we state that two variables are correlated. 
   </WELCOME>
   <WORKSPACE>
-    <table>
+   <table>
       <tr>
         <td>
-          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+          <div id="graph" style="width: 400px"></div>
         </td>
         <td width="10px"> nbsp;nbsp; </td>
         <td rowspan="2">
-          <div id="blocklyDiv" style="height: 800px"> </div>
-        </td> 
-      </tr>
-      <tr>
-        <td> <div id="graph" style="width: 400px"></div> </td>
-        <td width="10px"> nbsp;nbsp; </td>
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td>
       </tr>
     </table>
   </WORKSPACE>
   <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
   </APIFUNCTIONS>
   <BLOCKS>
   </BLOCKS>
   <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
   </SCRIPTS>
   <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.lines.length = 0;
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
   <LEVEL>
     <DESCRIPTION>
-       This exercise is revision: Use the block below to generate 100 pairs of uniform random variables $X_i$ and $Y_i$ that each lie between 0 and 1.  
+       This exercise is revision: Use the block below to generate 20 pairs of uniform random variables $X_i$ and $Y_i$ that each lie between 0 and 1.  
        Then plot each of these pairs of random variables at $(X_i, Y_i)$.   All the points you show should have $0 &lt; X_i &lt; 1$ and $0 &lt; Y_i &lt; 1$. 
     </DESCRIPTION>
+    <HINT>
+       Notice that the x coordinate that you plot and the y coordinate that you plot both need to be random.
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -53,12 +65,29 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0] &lt; 0 || myplot.data[i][0] &gt; 1 || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-      Now see if you can generate and plot 100 pairs of uniform random variables that all lie inside the red box shown in the graph on the right.
+      Now see if you can generate and plot 20 pairs of uniform random variables that all lie inside the box shown in the graph on the right.
     </DESCRIPTION>
+    <HINT>
+      You know how to make it so that the x and y coordinate lie between 0 and 1.  What can you do to any number between 0 and 1 in order to ensure that it is between 0 and 0.2?
+    </HINT>
+    <STARTUP>
+       myplot.drawLine(0.0,0.0,0.0,0.2); myplot.drawLine(0.0,0.2,1.0,0.2); 
+       myplot.drawLine(1.0,0.2,1.0,0.0); myplot.drawLine(0.0,0.0,1.0,0.0); 
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -74,11 +103,29 @@
       </category>
     </TOOLBOX> 
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0] &lt; 0 || myplot.data[i][0] &gt; 1 || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 0.2  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL> 
+  <LEVEL>
    <DESCRIPTION>
-      Now see if you can generate and plot 100 pairs of uniform random variables that all lie inside the red box shown in the graph on the right.
+      Now see if you can generate and plot 20 pairs of uniform random variables that all lie inside the box shown in the graph on the right.
     </DESCRIPTION>
+    <HINT> 
+      Really, you could do the last exercise but you can't do this one?
+    </HINT>
+    <STARTUP>
+       myplot.drawLine(0.0,0.0,0.2,0.0); myplot.drawLine(0.2,0.0,0.2,1.0);
+       myplot.drawLine(0.0,1.0,0.2,1.0); myplot.drawLine(0.0,0.0,0.0,1.0);
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -94,12 +141,29 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0] &lt; 0 || myplot.data[i][0] &gt; 0.2 || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1.0  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
-      Now see if you can generate and plot 100 pairs of uniform random variables that all lie inside the red box shown in the graph on the right.
+      Now see if you can generate and plot 20 pairs of uniform random variables that all lie inside the box shown in the graph on the right.
     </DESCRIPTION>
+    <HINT>
+      Really you still haven't got the idea? 
+    </HINT>  
+    <STARTUP>
+       myplot.drawLine(0.0,0.0,0.6,0.0); myplot.drawLine(0.6,0.0,0.6,0.4);
+       myplot.drawLine(0.0,0.0,0.0,0.4); myplot.drawLine(0.0,0.4,0.6,0.4);
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -115,12 +179,29 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0] &lt; 0 || myplot.data[i][0] &gt; 0.6|| myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 0.4  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
-      Now see if you can generate and plot 100 pairs of uniform random variables that all lie inside the red box shown in the graph on the right.
+      Now see if you can generate and plot 10 pairs of uniform random variables that all lie inside the box shown in the graph on the right.
     </DESCRIPTION>
+    <HINT>
+      This time we need to ensure that X is not less than 0.2.  What can we do to ensure that the random variable is not less than 0.2?
+    </HINT>
+    <STARTUP>
+       myplot.drawLine(0.2,0.0,0.8,0.0); myplot.drawLine(0.2,0.0,0.2,0.4);
+       myplot.drawLine(0.8,0.0,0.8,0.4); myplot.drawLine(0.2,0.4,0.8,0.4);
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -136,12 +217,29 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0] &lt; 0.2 || myplot.data[i][0] &gt; 0.8 || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 0.4  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
-      Now see if you can generate and plot 100 pairs of uniform random variables that all lie inside the red box shown in the graph on the right.
+      Now see if you can generate and plot 20 pairs of uniform random variables that all lie inside the box shown in the graph on the right.
     </DESCRIPTION>
+    <HINT>
+      This should be easy if you could do the previous exercise
+    </HINT>
+    <STARTUP>
+       myplot.drawLine(0.2,0.2,0.8,0.2); myplot.drawLine(0.2,0.2,0.2,0.6);
+       myplot.drawLine(0.2,0.6,0.8,0.6); myplot.drawLine(0.8,0.2,0.8,0.6);
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -157,34 +255,29 @@
       </category>
     </TOOLBOX>
     <FINISH>
-    </FINISH>
-  </LEVEL>
-  <LEVEL>
-   <DESCRIPTION>
-      Now see if you can generate and plot 100 pairs of uniform random variables that all lie inside the red box shown in the graph on the right.
-    </DESCRIPTION>
-    <TOOLBOX>
-      <category name="Variables" custom="VARIABLE"></category>
-      <category name="Program">
-         <block type="controls_repeat_ext"></block>
-         <block type="math_arithmetic"></block>
-         <block type="math_number"></block>
-      </category>
-      <category name="Random">
-         <block type="uniform_random"></block>
-      </category>
-      <category name="Plotting">
-         <block type="draw_point"></block>
-      </category>
-    </TOOLBOX>
-    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0] &lt; 0.2 || myplot.data[i][0] &gt; 0.8 || myplot.data[i][1] &lt; 0.2 || myplot.data[i][1] &gt; 0.6  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
      All the variables we have generated thus far have been uncorrelated.  Lets now make things more dificult by introducing correlated random variables.
-     Can you generate and plot 100 pairs of random variables that lie between the red lines shown here.
+     Can you generate and plot 20 pairs of random variables that lie between the lines shown here.
     </DESCRIPTION>
+    <HINT>
+     You still should need to use two random variables here.  Remember the equation for a straight line. 
+    </HINT>
+    <STARTUP>
+       myplot.drawLine(0.0,0.2,1.0,1.2); myplot.drawLine(0.0,-0.2,1.0,0.8);
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -200,12 +293,28 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+          if( (myplot.data[i][0]+0.2) &lt; myplot.data[i][1] || (myplot.data[i][0]-0.2) &gt; myplot.data[i][1]  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
-     Can you generate and plot 100 pairs of random variables that lie between the red lines shown here.
+     Can you generate and plot 20 pairs of random variables that lie between the lines shown here.
     </DESCRIPTION>
+    <HINT> 
+     Notice that the gradient of the lines shown here is lower than the gradient of the lines in the previous examples
+    </HINT>
+    <STARTUP>
+       myplot.drawLine(0.0,0.2,1.0,0.7); myplot.drawLine(0.0,-0.2,1.0,0.3);
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -221,12 +330,28 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+          if( 0.5*myplot.data[i][0]+0.2 &lt; myplot.data[i][1] || 0.5*myplot.data[i][0]-0.2 &gt; myplot.data[i][1]  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
-     Can you generate and plot 100 pairs of random variables that lie between the red lines shown here.
+     Can you generate and plot 20 pairs of random variables that lie between the lines shown here.
     </DESCRIPTION>
+    <HINT>
+     Here look at the intercept of the lines with the y axis.
+    </HINT>
+    <STARTUP>
+       myplot.drawLine(0.0,0.7,1.0,1.2); myplot.drawLine(0.0,0.3,1.0,0.8);
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -242,13 +367,33 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+          if( 0.5*myplot.data[i][0]+0.7 &lt; myplot.data[i][1] || 0.5*myplot.data[i][0]+0.3 &gt; myplot.data[i][1]  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
-     Now try to generate and plot 100 pairs of random variables that lie between the red lines at $y_1 = x^2 - 0.2$ and $y_2 = x^2 + 0.2$ that 
+     Now try to generate and plot 20 pairs of random variables that lie between the lines at $y_1 = x^2 - 0.2$ and $y_2 = x^2 + 0.2$ that 
      are shown here.
     </DESCRIPTION>
+    <HINT>
+     The correlation between the two variables is now non-linear.  The principle is similar to what you did in previous exercises though.  Think about the formula you have been given.  
+    </HINT>
+    <STARTUP>
+       var incr = 1.0 / 20.0;
+       for(var i = 0; i &lt; 20 ; i++ ){
+           myplot.drawLine( i*incr, i*i*incr*incr - 0.2 , (i+1)*incr, (i+1)*(i+1)*incr*incr - 0.2 );
+           myplot.drawLine( i*incr, i*i*incr*incr + 0.2 , (i+1)*incr, (i+1)*(i+1)*incr*incr + 0.2 );
+       }
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -264,19 +409,41 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+          if( myplot.data[i][0]*myplot.data[i][0]-0.2 &gt; myplot.data[i][1] || myplot.data[i][0]*myplot.data[i][0]+0.2 &lt; myplot.data[i][1]  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <LEVEL>
    <DESCRIPTION>
-     Now try to generate and plot 100 pairs of random variables that lie between the red lines at $y_1 = \sin(4x) - 0.1$ and $y_2 = \sin(4x) + 0.1$ that
-     are shown here.
+     Now try to generate and plot 20 pairs of random variables that lie between the lines at $y_1 = \sin(4x) - 0.1$ and $y_2 = \sin(4x) + 0.1$ that
+     are shown here.  Notice that $x$ in these formulas is given in radians.
     </DESCRIPTION>
+    <HINT>
+     This is once again a variation on the principle that was introdcued in the last exercise.  Rember also that the sin block takes an angle in degrees as input.
+    </HINT>
+    <STARTUP>
+       var incr = 1.0 / 20.0;
+       for(var i = 0; i &lt; 20 ; i++ ){
+           myplot.drawLine( i*incr, Math.sin(4*i*incr) - 0.1, (i+1)*incr, Math.sin(4*(i+1)*incr) - 0.1 );
+           myplot.drawLine( i*incr, Math.sin(4*i*incr) + 0.1, (i+1)*incr, Math.sin(4*(i+1)*incr) + 0.1 );
+       }
+       myplot.plotGraph('graph','scatter');
+    </STARTUP>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_trig"></block>
+         <block type="math_constant"></block>
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
@@ -286,13 +453,18 @@
       </category>
     </TOOLBOX>
     <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+          if( Math.sin(4*myplot.data[i][0])-0.1 &gt; myplot.data[i][1] || Math.sin(4*myplot.data[i][0])+0.1 &lt; myplot.data[i][1]  ){ levelcomplete=false; }
+      }
     </FINISH>
   </LEVEL>
   <REVIEW>
-    If you have got here well done.  To consolidate what you have learnt explain in your notes how you would assess if two random variables $X$ and $Y$ are related
-    via the following three equations:
-    $$
-    Y = mX + c \qquad \qquad Y = mX^2 + c \qquad \qquad Y = m\sin(X) + c
-    $$
+    If you have got here well done.  Now lets look at how we can use probability when we study problems involving geometry. 
   </REVIEW>
 </PAGE>

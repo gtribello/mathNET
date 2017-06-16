@@ -61,8 +61,8 @@ def build_html_file( infile ):
        page = page.replace( "INSERT REVIEW TEXT", tree.find("REVIEW").text.replace("\n","") )
        page = page.replace( "INSERT WORKSPACE", ET.tostring( tree.find("WORKSPACE"), encoding="unicode", method="xml").replace("<WORKSPACE>","").replace("</WORKSPACE>","") ).replace("nbsp;","&nbsp;")
        page = page.replace( "INSERT LEVEL XML", infile + ".xml" )
-       # This constructs the ends of levels 
-       n, levels, levelcomplete, levelhints = 0, tree.findall("LEVEL"), "", ""
+       # This constructs the levels 
+       n, levels, startup, levelcomplete, levelhints = 0, tree.findall("LEVEL"), "", "", ""
        for lev in levels :
            levelcomplete += "case " + str(n) + ":"
            levelcomplete += lev.find("FINISH").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") 
@@ -70,9 +70,18 @@ def build_html_file( infile ):
            levelhints += "case " + str(n) + ": \n"
            levelhints += 'hint += "' + lev.find("HINT").text.replace("\n","") + '"\n';
            levelhints += "break; \n"
+           if lev.find("STARTUP") is not None :
+               startup += "case " + str(n) + ":"
+               startup += lev.find("STARTUP").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&")
+               startup += "break; \n" 
            n += 1
        page = page.replace( "INSERT LEVEL COMPLETION", levelcomplete )
        page = page.replace( "INSERT LEVEL CLUES", levelhints )
+       if not startup :
+           page = page.replace("INSERT LEVEL START SCRIPTS", "" )
+       else :
+           startup = "switch( myApp.mylevel ){ \n" + startup + "}\n"
+           page = page.replace("INSERT LEVEL START SCRIPTS", startup ) 
        # Copy xml to html directory 
        shutil.copy( "Resources/" + infile + ".xml" , "html/" + infile + ".xml" ) 
     else : 

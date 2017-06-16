@@ -111,24 +111,34 @@ function plotter(){
           var data = new google.visualization.DataTable();
           data.addColumn('number', this.data[0] );
           data.addColumn('number', this.data[1] );
-          var firstrow = []; firstrow.push(0); firstrow.push(null);
-          for(var i=0;i<this.lines.length;i++){ 
-              data.addColumn('number','line' + i ); 
-              firstrow.push(this.lines[i][1]);
-          } 
-          data.addRow(firstrow);
+          // Add columns for lines
+          for(var i=0;i<this.lines.length;i++){ data.addColumn('number','line' + i ); }
+          // Add first row for lines
+          for(var i=0;i<this.lines.length;i++){
+              var firstrow = []; firstrow.push(this.lines[i][0]-0); firstrow.push(null);
+              for(var j=0;j<i;j++){ firstrow.push(null); }
+              firstrow.push(this.lines[i][1]-0);
+              for(var j=i+1;j<this.lines.length;j++){ firstrow.push(null); }
+              data.addRow(firstrow);
+          }              
           for(var i=1;i<this.data.length;i++){ 
               var row = []; row.push(this.data[i][0]-0); row.push(this.data[i][1]-0);
               for(var j=0;j<this.lines.length;j++){ row.push(null); }
               data.addRow(row); 
           }
-          var lastrow = []; lastrow.push(10); lastrow.push(null);
-          for(var i=0;i<this.lines.length;i++){ lastrow.push(this.lines[i][1]); }
-          data.addRow(lastrow);
+          // Add last row for lines
+          for(var i=0;i<this.lines.length;i++){
+              var lastrow = []; lastrow.push(this.lines[i][2]-0); lastrow.push(null);
+              for(var j=0;j<i;j++){ lastrow.push(null); }
+              lastrow.push(this.lines[i][3]-0);
+              for(var j=i+1;j<this.lines.length;j++){ lastrow.push(null); }
+              data.addRow(lastrow);
+          }
           new google.visualization.ComboChart(document.getElementById(div_id)).draw(data,{
              width: 400, height: 400,
              chartArea: {left: '10%', width: '85%', height: '85%'},
              interpolateNulls: true,
+             colors: ['blue'],
              series: {
                 0: { pointShape: 'circle', type: 'scatter' },
                 1: { type: 'line' },

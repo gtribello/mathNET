@@ -415,6 +415,6 @@
     </FINISH>
   </LEVEL>
   <REVIEW>
-     To consolidate what you have learnt write a python notebook to estimate the $p$ parameter for a Bernoulli random variable that is equal to one when a sample mean calculated from 20 uniform random variables falls within the 90 % confidence limit of the true expectation for these random variables and that is zero otherwise.  In your code you should also calculate error bars that represent a 90 % confidence limit on your estimate of the parameter.  Estimate the size of these error bars from the sample variance.  Don't use the expression you know for the variance of the Bernoulli random variable.
+     To consolidate what you have learnt write a python notebook to estimate the p parameter for a Bernoulli random variable that is equal to one when a sample mean calculated from 20 uniform random variables falls within the 90 % confidence limit of the true expectation for these random variables and that is zero otherwise.  In your code you should also calculate error bars that represent a 90 % confidence limit on your estimate of the parameter.  Estimate the size of these error bars from the sample variance.  Don't use the expression you know for the variance of the Bernoulli random variable.
   </REVIEW>
 </PAGE>

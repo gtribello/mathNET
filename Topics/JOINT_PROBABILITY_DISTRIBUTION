@@ -30,3 +30,4 @@ END:
 JOINT_PROBABILITY_DISTRIBUTION EXERCISE XML SOR3012 joint-probability-problems G.~Tribello Exercises involving joint probability distributions
 JOINT_PROBABILITY_DISTRIBUTION EXERCISE IPYTHON SOR3012 sor3012-pairs-of-random-varaiables.ipynb G.~Tribello An exercise on simulating correlated variables.
 JOINT_PROBABILITY_DISTRIBUTION INTRO PDF SOR3012 jim-chap06.pdf J.~F.~McCann A description of joint probability functions including a derivation of the Cauchy Schwartz inequality.
+JOINT_PROBABILITY_DISTRIBUTION EXERCISE XML SOR3012 correlation-exercise G.~Tribello A programming exercise in which geometry is used to better understand what it means when we say random variables are correlated.

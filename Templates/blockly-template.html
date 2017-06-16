@@ -230,6 +230,10 @@
 
                               INSERT APP SCRIPTS
 
+                              myApp.stuffToDoOnLevelLoad = function(n) {
+                                 INSERT LEVEL START SCRIPTS
+                              };
+
                               // This generates normal random variables
                               myApp.normalRandom = function() {
                                  var V1, V2, S;
@@ -365,6 +369,7 @@
                                  } else {
                                      alert("Your program is not quite right.  Have another go and see if you can fix it")
                                      INSERT WORKSPACE STARTUP
+                                     myApp.stuffToDoOnLevelLoad( myApp.mylevel )
                                  }
                               };
 
@@ -403,6 +408,8 @@
                                  MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
                                  // Load the new blockly toolbox
                                  myApp.workspace.updateToolbox( levels[n].getElementsByTagName("TOOLBOX")[0] );
+                                 // Other level stuff
+                                 myApp.stuffToDoOnLevelLoad( n )
                               };
 
                               /**

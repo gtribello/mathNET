@@ -34,7 +34,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> INDEPENDENT_RANDOM_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> independence </LINK>
@@ -45,7 +45,7 @@ An explanation of what we mean by independence in statistics
 </RESOURCE>
 <RESOURCE>
 <TOPIC> INDEPENDENT_RANDOM_VARIABLES </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> independent-random-variables-problems </LINK>

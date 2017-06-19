@@ -60,7 +60,7 @@ If the random variables $X$ and $Y$ are independent.  This equation does not hol
   </AIMS>
 <RESOURCE>
 <TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> conditional-expectation-video </LINK>
@@ -71,7 +71,7 @@ Using the conditional expectation theorem to calculate the expectation and varia
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> conditional-expectation-problems </LINK>
@@ -82,7 +82,7 @@ Problems involving using the conditional expectation theorem to calculate expect
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap07.pdf </LINK>

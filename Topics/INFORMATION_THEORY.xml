@@ -48,7 +48,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> INFORMATION_THEORY </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> info-theory-video1 </LINK>
@@ -59,7 +59,7 @@ A video on the Khinchine axioms for information theory in which the information 
 </RESOURCE>
 <RESOURCE>
 <TOPIC> INFORMATION_THEORY </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> info-theory-video2 </LINK>

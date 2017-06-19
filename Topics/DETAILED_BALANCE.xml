@@ -36,7 +36,7 @@ distribution.
   </AIMS>
 <RESOURCE>
 <TOPIC> DETAILED_BALANCE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> detailed-balance-problems </LINK>
@@ -47,7 +47,7 @@ Problems involving using detailed balance to find the limiting stationary distri
 </RESOURCE>
 <RESOURCE>
 <TOPIC> DETAILED_BALANCE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap16.pdf </LINK>

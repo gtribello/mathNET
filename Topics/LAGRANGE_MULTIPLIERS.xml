@@ -34,7 +34,7 @@ for $L(x,y,\lambda)$ are the same as the values of $x$ and $y$ at the constraine
   </AIMS>
 <RESOURCE>
 <TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> lagrange-multipliers-video </LINK>
@@ -45,7 +45,7 @@ A video explaining Lagrange's method of undetermined multipliers.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> lagrange-multipliers-problems </LINK>

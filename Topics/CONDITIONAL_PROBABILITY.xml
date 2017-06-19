@@ -40,7 +40,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> conditional-probability-video </LINK>
@@ -51,7 +51,7 @@ Introduction to conditional probability
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> conditional-probability-problems </LINK>
@@ -62,7 +62,7 @@ Exercises on conditional probability
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> partition-theorem-video </LINK>
@@ -73,7 +73,7 @@ A video explaining the partition theorem in statistics
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap03.pdf </LINK>

@@ -70,7 +70,7 @@ the expectation this new random variable can be calulated from the expectation, 
   </AIMS>
 <RESOURCE>
 <TOPIC> EXPECTATION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> expectation-video </LINK>
@@ -81,7 +81,7 @@ Introducing the expectation
 </RESOURCE>
 <RESOURCE>
 <TOPIC> EXPECTATION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> expectation-problems </LINK>
@@ -92,7 +92,7 @@ Exercises involving the calculation of the expectation for a random variable
 </RESOURCE>
 <RESOURCE>
 <TOPIC> EXPECTATION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap05.pdf </LINK>

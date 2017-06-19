@@ -32,7 +32,7 @@ as you can see by looking at the definition of conditional probability.
   </AIMS>
 <RESOURCE>
 <TOPIC> BAYES_THEOREM </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> bayes_theorem_video </LINK>
@@ -43,18 +43,7 @@ A video introducing Bayes theorem
 </RESOURCE>
 <RESOURCE>
 <TOPIC> BAYES_THEOREM </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-6-bayes-theorem.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise to help you get to grip with Bayes theorem
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> BAYES_THEOREM </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> bayes-theorem-problems </LINK>
@@ -76,7 +65,7 @@ Kahn academy video on bayes theorem.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> BAYES_THEOREM </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> bayes-theorem-exercise </LINK>

@@ -5,12 +5,10 @@
 
 The Langumuir adsorption model can be used to model the adsorption of particles onto a surface.  To derive this model we 
 
-begin by noting that if we have $N \lt M$ atoms adsorbed on $M$ adsorption sites the canonical partition function is given by:
+begin by noting that if we have $N &lt; M$ atoms adsorbed on $M$ adsorption sites the canonical partition function is given by:
 
 $$
-
 Z(N) = \frac{M!}{N!(M-N)!} \zeta^N
-
 $$ 
 
 where $\zeta$ is the partition function for a single adsorbed particle.  Also notice that in writing the above we have assumed
@@ -20,9 +18,7 @@ that there is no interaction between the adsorbed particles.  We then recall tha
 be calculated from the canonical partition function using:
 
 $$
-
 Z(\mu) = \sum_{N=0}^M e^{\mu \beta N} Z(N) = \sum_{N=0}^M \frac{M!}{N!(M-N)!} (e^{\mu\beta} \zeta)^N = ( 1 +  e^{\mu\beta} \zeta)^M 
-
 $$ 
 
 where $\mu$ is the chemical potential.  The last result here holds because of the binomial theorem.  We then recall that
@@ -30,9 +26,7 @@ where $\mu$ is the chemical potential.  The last result here holds because of th
 we can get the fraction of the sites on the surface that are occupied by gas particles by calculating:
 
 $$
-
 \langle K \rangle = \frac{1}{M} \frac{\partial \ln Z(\mu) }{\partial (\beta \mu) } = \frac{ e^{\mu\beta} \zeta }{1 +  e^{\mu\beta} \zeta }
-
 $$
 
 
@@ -48,7 +42,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> ADSORPTION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> adsorbtion-problems </LINK>

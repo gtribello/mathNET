@@ -36,7 +36,7 @@ thermodynamic variables that characterize state of the two phases must be equal.
   </AIMS>
 <RESOURCE>
 <TOPIC> THERMODYNAMIC_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> thermodymaic-variables-video </LINK>
@@ -47,7 +47,7 @@ An introduction to thermodynamic variables and the distinction between intenstiv
 </RESOURCE>
 <RESOURCE>
 <TOPIC> THERMODYNAMIC_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> work-and-heat-video </LINK>
@@ -58,7 +58,7 @@ An introduction to the roles played by work and heat in classical thermodynamics
 </RESOURCE>
 <RESOURCE>
 <TOPIC> THERMODYNAMIC_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> thermodynamic-variables.pdf </LINK>

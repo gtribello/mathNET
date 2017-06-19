@@ -56,7 +56,7 @@ affect the outcomes of other experiments).
   </AIMS>
 <RESOURCE>
 <TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> central-limit-theorem-problems </LINK>
@@ -67,18 +67,7 @@ Exercises in which the central limit theorem is used to estimate probabilities
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-confidence-limits.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise on confidence limits
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> central-limit-theorem-video </LINK>
@@ -89,7 +78,7 @@ Video introducing confidence limits and the central limit theorem
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> error_bar_video </LINK>
@@ -100,7 +89,7 @@ Video explaining how statistical error bars should be calculated and interprette
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> central-limit-theorem-exercise </LINK>

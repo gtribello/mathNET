@@ -1,5 +1,6 @@
-import module
+import glob
 import os
+import lxml.etree as ET
 
 def printHeader( pagename, of ) :
     f = open( 'Templates/header.html', 'r' )
@@ -22,14 +23,22 @@ def printTopMenuBar( of ) :
     of.write('                <div class="col-md-12 margin-top-30">\n')
     of.write('                        <div id="hornav" class="pull-right visible-lg">\n')
     of.write('                                <ul class="nav navbar-nav">\n')
-    of.write('                                        <li><a href="index.html">Home</a></li>\n')
     of.write('                                          <li><span>Modules</span>\n')
     of.write('                                          <ul>\n')
-    # Read in the module list
-    mymodules=module.listofmodules()
-    # And get the module menu
-    of.write( mymodules.getModuleMenu() )                                           
+    for mod in glob.glob("Modules/*.xml") :
+        print("FOUND MODULE " + mod )
+        modname = mod.replace("Modules/","").replace(".xml","")
+        tree = ET.parse( mod )
+        of.write('<li class="parent"><span>' + modname + '</span>')
+        of.write('<ul>')
+        n = 0
+        for chp in tree.findall("CHAPTER") :
+            n = n + 1
+            of.write('<li><a href="' + modname + str(n) + '-overview.html"> ' + chp.find("TITLE").text +  '</a></li>')
+        of.write('</ul>')
+        of.write('</li>')
     of.write('                                          </ul>\n')                         
+    of.write('                                        <li><a href="index.html">Home</a></li>\n')
     of.write('                        </div>\n')
     of.write('                </div>\n')
     of.write('                <div class="clear"></div>\n')

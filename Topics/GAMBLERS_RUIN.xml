@@ -15,17 +15,17 @@ M = \left(
 
 \begin{matrix}
 
-1 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 0 \\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; 0 &amp; 0 \\
 
-q & r & p & 0 & 0 & \dots & 0 & 0 & 0 \\ 
+q &amp; r &amp; p &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; 0 &amp; 0 \\ 
 
-0 & q & r & p & 0 & \dots & 0 & 0 & 0 \\
+0 &amp; q &amp; r &amp; p &amp; 0 &amp; \dots &amp; 0 &amp; 0 &amp; 0 \\
 
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots &amp; \vdots \\
 
-0 & 0 & 0 & 0 & 0 & \dots & q & r & p \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; q &amp; r &amp; p \\
 
-0 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 1
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; 0 &amp; 1
 
 \end{matrix}
 
@@ -84,18 +84,7 @@ the probabilities in this limit.
   </AIMS>
 <RESOURCE>
 <TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-gamblers-ruin.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise on gamblers ruin
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> gamblers-runs-video </LINK>
@@ -106,7 +95,7 @@ A video explaining the gamblers ruin problem and the derivation of the differenc
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> PYTHON </LEVEL>
 <TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> gamblers-ruin-probability.tex </LINK>
@@ -117,7 +106,7 @@ Deriving the probability of ruin in gamblers ruin
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> PYTHON </LEVEL>
 <TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> gamblers-ruin-expectation.tex </LINK>
@@ -128,7 +117,7 @@ Deriving the expected length of the game in the gamblers ruin problem
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap08.pdf </LINK>
@@ -139,7 +128,7 @@ Some introductory notes on random walks.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap09.pdf </LINK>
@@ -150,7 +139,7 @@ Some notes on how the expected number of games is worked out in the gamblers rui
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> gamblers-ruin-problems </LINK>
@@ -161,7 +150,7 @@ Some exercises that use the solutions of the gamblers ruin problem.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> gamblers-ruin-exercise </LINK>

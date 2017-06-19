@@ -28,7 +28,7 @@ Here $C$ is the number of components in the system (i.e. the number of chemicall
   </AIMS>
 <RESOURCE>
 <TOPIC> GIBBS_PHASE_RULE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> gibbs-phase-rule-video </LINK>
@@ -39,7 +39,7 @@ An introduction to Gibb's phase rule.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GIBBS_PHASE_RULE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> gibbs-phase-rule-problems </LINK>

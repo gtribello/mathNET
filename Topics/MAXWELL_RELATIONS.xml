@@ -18,7 +18,7 @@ second derivatives and from the definitions of the thermodynamic potentials.
   </AIMS>
 <RESOURCE>
 <TOPIC> MAXWELL_RELATIONS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> maxwell-relations-video </LINK>
@@ -29,7 +29,7 @@ An explanation as to how to derive a Maxwell relation from the definition of the
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MAXWELL_RELATIONS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> maxwell-relations-exercise </LINK>

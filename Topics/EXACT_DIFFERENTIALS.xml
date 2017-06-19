@@ -48,7 +48,7 @@ $\textrm{d}f = \left(\frac{\partial f}{\partial x}\right)_y \textrm{d}x + \left(
   </AIMS>
 <RESOURCE>
 <TOPIC> EXACT_DIFFERENTIALS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> exact-differential-problems </LINK>

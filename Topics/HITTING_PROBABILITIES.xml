@@ -48,7 +48,7 @@ Here $\mathbf{1}$ is a column vector containing all ones.
   </AIMS>
 <RESOURCE>
 <TOPIC> HITTING_PROBABILITIES </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> hitting-time-problems </LINK>
@@ -59,7 +59,7 @@ Problems on setting up Markov chains with transient and absorbing states and on 
 </RESOURCE>
 <RESOURCE>
 <TOPIC> HITTING_PROBABILITIES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> hitting-times-video </LINK>

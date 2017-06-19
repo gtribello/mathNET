@@ -44,18 +44,7 @@ where $\mu$ and $\sigma$ are the expectation and variance for the random variabl
   </AIMS>
 <RESOURCE>
 <TOPIC> COMPOUND_POISSON_PROCESS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-compound-poisson.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise on the compound poisson process
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> COMPOUND_POISSON_PROCESS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> compound-poisson-process-video </LINK>
@@ -66,7 +55,7 @@ A video explaining how to calculate the expectation and variance for the compoun
 </RESOURCE>
 <RESOURCE>
 <TOPIC> COMPOUND_POISSON_PROCESS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap21.pdf </LINK>
@@ -77,7 +66,7 @@ Notes on the compound poisson process
 </RESOURCE>
 <RESOURCE>
 <TOPIC> COMPOUND_POISSON_PROCESS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> compound-poisson-process-questions </LINK>

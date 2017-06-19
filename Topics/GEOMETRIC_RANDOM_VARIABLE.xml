@@ -48,18 +48,7 @@ and $\textrm{var}(X) = \frac{1-p}{p^2}$ respectively.
   </AIMS>
 <RESOURCE>
 <TOPIC> GEOMETRIC_RANDOM_VARIABLE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-2-binomial-geometric.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-Write a program to generate binomial and geometric random variables
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> GEOMETRIC_RANDOM_VARIABLE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> geometric-random-variable-problems </LINK>
@@ -70,7 +59,7 @@ Problems involving the geometric random variable
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GEOMETRIC_RANDOM_VARIABLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> geometric-random-variable-video </LINK>

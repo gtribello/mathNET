@@ -48,7 +48,7 @@ is the expectation of the return time to state $i$.
   </AIMS>
 <RESOURCE>
 <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> markov-stationary-distribution-problems </LINK>
@@ -59,29 +59,7 @@ Problems on finding the stationary distribution of ergodic Markov chians
 </RESOURCE>
 <RESOURCE>
 <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> Ergodic-markov-chains.ipynb.zip </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise in which you will simulate an ergodic markov chain
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-ehrenfest-urns.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise that involves simulating a more complex discrete time Markov chain.
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap14.pdf </LINK>
@@ -92,7 +70,7 @@ Notes on the ergodic theorem and the stationary distribution of Markov chains in
 </RESOURCE>
 <RESOURCE>
 <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap15.pdf </LINK>
@@ -103,7 +81,7 @@ More notes on the ergodic distribution and the stationary distribution of Markov
 </RESOURCE>
 <RESOURCE>
 <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> limiting-stationary-dist-video1 </LINK>
@@ -114,7 +92,7 @@ A video explaining the derivation of the ergodic theorem
 </RESOURCE>
 <RESOURCE>
 <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> limiting-stationary-dist-video2 </LINK>
@@ -125,7 +103,7 @@ A video explaining why the limiting stationary distribution of an ergodic markov
 </RESOURCE>
 <RESOURCE>
 <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> ehrenfest-urns-exercise </LINK>

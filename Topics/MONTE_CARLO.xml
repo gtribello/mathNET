@@ -32,7 +32,7 @@ variables.
   </AIMS>
 <RESOURCE>
 <TOPIC> MONTE_CARLO </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap17.pdf </LINK>
@@ -43,7 +43,7 @@ Notes on the theory of Monte Carlo simulation.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MONTE_CARLO </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> monte-carlo-video </LINK>
@@ -54,7 +54,7 @@ A very brief introduction to the theory of Monte Carlo sampling.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MONTE_CARLO </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ising-monte-carlo-exercise </LINK>
@@ -65,7 +65,7 @@ An exercise that will take you through the process of writing your own Monte Car
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MONTE_CARLO </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ising-mean-field-exercise </LINK>
@@ -76,7 +76,7 @@ A programming exercise that calls on you to build a Monte Carlo code and to inve
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MONTE_CARLO </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> block_averaging_video </LINK>

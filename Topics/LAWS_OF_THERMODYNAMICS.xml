@@ -104,7 +104,7 @@ where $E$ is the internal energy, $T$ is temperature, $S$ is entropy, $P$ is pre
   </AIMS>
 <RESOURCE>
 <TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> first-law-thermodynamics-video </LINK>
@@ -115,7 +115,7 @@ An introduction to the first law of thermodynamics.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> second-law-of-thermodynamics </LINK>
@@ -126,7 +126,7 @@ An introduction to the second law of thermodynamics
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> combining-the-laws-of-thermodynamics-video </LINK>
@@ -137,7 +137,7 @@ Combining the first and second laws of thermodynamics
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> laws-of-thermodynamics-questions </LINK>
@@ -148,7 +148,7 @@ Problems involving the first and second laws of thermodynamics.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> thermodynamics-notes.pdf </LINK>

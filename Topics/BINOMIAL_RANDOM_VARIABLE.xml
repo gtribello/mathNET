@@ -44,7 +44,7 @@ The expectation for this variable is $\mathbb{E}(X)=np$ and the variance is $\te
   </AIMS>
 <RESOURCE>
 <TOPIC> BINOMIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> binomial-random-variable-video </LINK>
@@ -55,18 +55,7 @@ A video explaining the derivation of the binomial random variable
 </RESOURCE>
 <RESOURCE>
 <TOPIC> BINOMIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-2-binomial-geometric.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A progrmming exercise about the binomail and geometric random variables
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> BINOMIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> binomial-random-variable-problems </LINK>

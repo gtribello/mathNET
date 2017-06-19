@@ -52,7 +52,7 @@ This equation comes about by setting $\frac{\textrm{d} \mathbf{P}(t)}{\textrm{d}
   </AIMS>
 <RESOURCE>
 <TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap23.pdf </LINK>
@@ -63,7 +63,7 @@ Notes on Markov chains in continuous time
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap25.pdf </LINK>
@@ -74,7 +74,7 @@ Notes on some examples of Markov chains in continuous time.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> continuous-time-markov </LINK>
@@ -85,7 +85,7 @@ A video introducing the theory of Markov chains in continuous time.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> continuous-time-markov-chains-problems </LINK>

@@ -29,6 +29,7 @@ $$
 
 where in a closed geometry $s_{N+1}=s_1$ and where $J$ and $H$ are parameters.
 
+</p>
 
 
   </DESCRIPTION>
@@ -52,7 +53,7 @@ where in a closed geometry $s_{N+1}=s_1$ and where $J$ and $H$ are parameters.
   </AIMS>
 <RESOURCE>
 <TOPIC> ISING_MODEL </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ising-model-problems </LINK>
@@ -63,7 +64,7 @@ Problems on using transfer matrices to calculate partition functions and ensembl
 </RESOURCE>
 <RESOURCE>
 <TOPIC> ISING_MODEL </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ising-model-video </LINK>
@@ -74,7 +75,7 @@ A video that explains how the partition function for a one dimensional system of
 </RESOURCE>
 <RESOURCE>
 <TOPIC> ISING_MODEL </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> HTML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ising-simulator </LINK>

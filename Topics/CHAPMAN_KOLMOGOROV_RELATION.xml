@@ -52,7 +52,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> CHAPMAN_KOLMOGOROV_RELATION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> chapman-kolmogorov-video </LINK>
@@ -63,7 +63,7 @@ An explanation of how the Chapman-Kolmogorov relation is derived
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CHAPMAN_KOLMOGOROV_RELATION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> chapman-kolmogorov-problems </LINK>

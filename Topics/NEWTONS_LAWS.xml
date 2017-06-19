@@ -38,7 +38,7 @@ These three laws state:
   </AIMS>
 <RESOURCE>
 <TOPIC> NEWTONS_LAWS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> newtons-first-law-video </LINK>
@@ -49,7 +49,7 @@ A video explaining Newton's first law
 </RESOURCE>
 <RESOURCE>
 <TOPIC> NEWTONS_LAWS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> newtons-second-law-video </LINK>
@@ -60,7 +60,7 @@ A video explaining Newton's second law.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> NEWTONS_LAWS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> newtons-third-law-video </LINK>

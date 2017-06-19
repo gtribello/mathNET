@@ -28,7 +28,7 @@ requirement that heat should not move up a temperature gradient without performi
   </AIMS>
 <RESOURCE>
 <TOPIC> CARNOT_CYCLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> carnot-video-1 </LINK>
@@ -39,7 +39,7 @@ An explanation of the various stages in the operation of a Carnot engine and an 
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CARNOT_CYCLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> temperature-video </LINK>
@@ -50,7 +50,7 @@ An explanation of Kelvin's universal calibration for temperature.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CARNOT_CYCLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> adiabatic-work-video </LINK>
@@ -61,7 +61,7 @@ An explanation of how much work when the volume of a system changes adiabaticall
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CARNOT_CYCLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> carnot-entropy-video </LINK>
@@ -72,7 +72,7 @@ The Claussius inequality and entropy explained by comparing the efficiency of re
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CARNOT_CYCLE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> carnot-fridge-problem </LINK>

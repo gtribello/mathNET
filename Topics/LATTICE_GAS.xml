@@ -30,7 +30,7 @@ the power $N$.
   </AIMS>
 <RESOURCE>
 <TOPIC> LATTICE_GAS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> lattice-gas-video </LINK>
@@ -41,7 +41,7 @@ An video showing how the partition function for a system of non-interacting part
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LATTICE_GAS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> lattice-gas-problems </LINK>
@@ -52,7 +52,7 @@ Exericses on calculating partition functions for model systems.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LATTICE_GAS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> GEOGEBRA </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> two-state-model-exercise </LINK>

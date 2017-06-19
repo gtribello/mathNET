@@ -13,11 +13,11 @@ $$
 
 f_X(x) = P(X=x) = \begin{cases}
 
- 1-p  & \textrm{if} \quad x=0 \\
+ 1-p  &amp; \textrm{if} \quad x=0 \\
 
- p & \textrm{if} \quad x=1 \\
+ p &amp; \textrm{if} \quad x=1 \\
 
- 0 & \textrm{otherwise}
+ 0 &amp; \textrm{otherwise}
 
 \end{cases}
 

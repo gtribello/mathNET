@@ -17,13 +17,13 @@ Q = \left(
 
 \begin{matrix}
 
--\lambda & \lambda & 0 & 0 & 0 & \dots & 0 & 0 \\
+-\lambda &amp; \lambda &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; 0 \\
 
-\mu & -\lambda-\mu & \lambda & 0 & 0 & \dots & 0 & 0 \\ 
+\mu &amp; -\lambda-\mu &amp; \lambda &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; 0 \\ 
 
-0 & \mu & -\lambda-\mu & \lambda & 0 & \dots & 0 & 0 \\ 
+0 &amp; \mu &amp; -\lambda-\mu &amp; \lambda &amp; 0 &amp; \dots &amp; 0 &amp; 0 \\ 
 
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots 
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots 
 
 \end{matrix}
 
@@ -39,15 +39,15 @@ Q = \left(
 
 \begin{matrix}
 
--\lambda & \lambda & 0 & 0 & 0 & \dots & 0 & 0 \\
+-\lambda &amp; \lambda &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; 0 \\
 
-\mu & -\lambda-\mu & \lambda & 0 & 0 & \dots & 0 & 0 \\ 
+\mu &amp; -\lambda-\mu &amp; \lambda &amp; 0 &amp; 0 &amp; \dots &amp; 0 &amp; 0 \\ 
 
-0 & \mu & -\lambda-\mu & \lambda & 0 & \dots & 0 & 0 \\ 
+0 &amp; \mu &amp; -\lambda-\mu &amp; \lambda &amp; 0 &amp; \dots &amp; 0 &amp; 0 \\ 
 
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\
 
-0 & 0 & 0 & 0 & 0 & \dots & \mu & -\mu 
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; \dots &amp; \mu &amp; -\mu 
 
 \end{matrix}
 
@@ -55,7 +55,7 @@ Q = \left(
 
 $$
 
-Both these processes have a limiting stationary distribution when $\frac{\lambda}{\mu}<1$.  
+Both these processes have a limiting stationary distribution when $\frac{\lambda}{\mu} &lt; 1$.  
 
 This stationary distribution is only valid when the average rate at which people arrive in the queue
 
@@ -98,18 +98,7 @@ where in this second expression $N$ is the maximum capacity of the queue.
   </AIMS>
 <RESOURCE>
 <TOPIC> MM1_QUEUE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-mm1-queue.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exericse on the M/M/1 queue
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> MM1_QUEUE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> mm1-queue-video </LINK>
@@ -120,7 +109,7 @@ A video introducing the M/M/1 Queue with infinite capacity
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MM1_QUEUE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap24.pdf </LINK>
@@ -131,7 +120,7 @@ Notes on the M/M/1 Queue
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MM1_QUEUE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> queues-problems </LINK>

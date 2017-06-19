@@ -21,13 +21,13 @@ $$
 
 \begin{matrix}
 
-1 &  0  & \cdots  &    0 \\
+1 &amp;  0  &amp; \cdots  &amp;    0 \\
 
-0  & 1  &  \cdots  &   0  \\
+0  &amp; 1  &amp;  \cdots  &amp;   0  \\
 
-\vdots  &  \vdots   & \ddots &  \vdots \\
+\vdots  &amp;  \vdots   &amp; \ddots &amp;  \vdots \\
 
-0 & 0 &  \cdots &  1  \\
+0 &amp; 0 &amp;  \cdots &amp;  1  \\
 
 \end{matrix}
 
@@ -50,7 +50,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> MATRIX_INVERSE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> matrix-inverse-problems </LINK>

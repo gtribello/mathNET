@@ -28,7 +28,7 @@ where $N$ is the number of columns in the matrix $A$ and the number of rows in m
   </AIMS>
 <RESOURCE>
 <TOPIC> MATRIX_MULTIPLICATION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> matrix-multiplication-problems </LINK>

@@ -36,7 +36,7 @@ a one-body problem.  Similar techiniques appear in many different fields within 
   </AIMS>
 <RESOURCE>
 <TOPIC> MEAN_FIELD_MODELS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> mean-field-problems </LINK>
@@ -47,7 +47,7 @@ Problems in which the mean field approximation is used to examine Ising models i
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MEAN_FIELD_MODELS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> GEOGEBRA </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> mean-field-ex-one </LINK>
@@ -58,7 +58,7 @@ Understanding the behavior of the magnetization for the mean-field, 1D Ising mod
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MEAN_FIELD_MODELS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> GEOGEBRA </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> mean-field-ex-two </LINK>
@@ -69,7 +69,7 @@ Understanding the free energy landscape for the mean-field, 1D Ising model
 </RESOURCE>
 <RESOURCE>
 <TOPIC> MEAN_FIELD_MODELS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> mean-field-approx-video </LINK>

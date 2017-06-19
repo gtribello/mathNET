@@ -62,18 +62,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> POISSON_PROCESS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-poisson-process.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exericse on simulating the poisson process
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> POISSON_PROCESS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> poisson-process-video </LINK>
@@ -84,7 +73,7 @@ A video introducing the poisson process as a continuous time Markov chain
 </RESOURCE>
 <RESOURCE>
 <TOPIC> POISSON_PROCESS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap19.pdf </LINK>
@@ -95,7 +84,7 @@ Some notes on the poisson process and its derivation.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> POISSON_PROCESS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap20.pdf </LINK>
@@ -106,7 +95,7 @@ More notes on the properties of the Poisson process.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> POISSON_PROCESS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> poisson-process-problems </LINK>
@@ -117,7 +106,7 @@ Some problems involving the poisson process
 </RESOURCE>
 <RESOURCE>
 <TOPIC> POISSON_PROCESS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> poisson-process-exercise </LINK>

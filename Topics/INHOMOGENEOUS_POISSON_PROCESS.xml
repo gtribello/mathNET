@@ -25,13 +25,13 @@ $$
 
 \begin{matrix}
 
--\lambda(t) & \lambda(t) & 0 & 0 & 0 & \dots \\
+-\lambda(t) &amp; \lambda(t) &amp; 0 &amp; 0 &amp; 0 &amp; \dots \\
 
-0 & -\lambda(t) & \lambda(t) & 0 & 0 & \dots \\
+0 &amp; -\lambda(t) &amp; \lambda(t) &amp; 0 &amp; 0 &amp; \dots \\
 
-0 & 0 & -\lambda(t) & \lambda(t) & 0 & \dots \\
+0 &amp; 0 &amp; -\lambda(t) &amp; \lambda(t) &amp; 0 &amp; \dots \\
 
-\vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots
 
 \end{matrix} 
 
@@ -74,7 +74,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> INHOMOGENEOUS_POISSON_PROCESS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> inhomogeneous-poisson-process-video </LINK>
@@ -85,7 +85,7 @@ A video introducing the inhomogeneous poisson process
 </RESOURCE>
 <RESOURCE>
 <TOPIC> INHOMOGENEOUS_POISSON_PROCESS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap22.pdf </LINK>
@@ -96,7 +96,7 @@ Notes on the inhomogeneous poisson process.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> INHOMOGENEOUS_POISSON_PROCESS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> inhomogeneous-poisson-process-problems </LINK>

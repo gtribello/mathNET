@@ -68,7 +68,7 @@ thermodynamic limit.
   </AIMS>
 <RESOURCE>
 <TOPIC> PHASE_TRANSITIONS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> phase-transitions-video </LINK>
@@ -79,7 +79,7 @@ An explanation of the difference between first order and continuous phase transi
 </RESOURCE>
 <RESOURCE>
 <TOPIC> PHASE_TRANSITIONS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ising-model-phase-trans-video </LINK>

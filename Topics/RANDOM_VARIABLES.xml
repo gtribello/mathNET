@@ -54,18 +54,7 @@ equal $x$.
   </AIMS>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-1-coins-and-dice.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-Write a program to generate random variables
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> classical_probability_video </LINK>
@@ -76,7 +65,7 @@ The classical interpretation of probability explained
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> non-classical-probability-video </LINK>
@@ -87,7 +76,7 @@ An introduction to the cumulative probability distribution function
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> probability-functions </LINK>
@@ -98,7 +87,7 @@ An introduction to the probability mass and probabillity density
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> random-variables-problems </LINK>
@@ -109,7 +98,7 @@ Some simple exercises on random variables
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap02.pdf </LINK>
@@ -120,7 +109,7 @@ Some introductory notes on probability
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap04.pdf </LINK>
@@ -131,7 +120,7 @@ Introductory material on discrete random variables including descriptions of the
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap10.pdf </LINK>
@@ -142,7 +131,7 @@ Some notes on continuous random variables including descriptions of the uniform,
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RANDOM_VARIABLES </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> random-variables-exercise </LINK>

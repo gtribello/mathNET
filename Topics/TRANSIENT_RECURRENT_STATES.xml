@@ -7,7 +7,7 @@ A state in a Markov chain is said to be transient if:
 
 $$
 
-P(R_i \le \infty ) < 1
+P(R_i \le \infty ) &lt; 1
 
 $$
 
@@ -38,7 +38,7 @@ end in state $i$.
   </AIMS>
 <RESOURCE>
 <TOPIC> TRANSIENT_RECURRENT_STATES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> transient-recurrent-video </LINK>
@@ -49,7 +49,7 @@ An explanation of the limiting behavior of Markov chains and the meanings of the
 </RESOURCE>
 <RESOURCE>
 <TOPIC> TRANSIENT_RECURRENT_STATES </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> transient-recurrent-problems </LINK>
@@ -60,7 +60,7 @@ Problems on drawing transition graphs for Markov chains and on identifying trans
 </RESOURCE>
 <RESOURCE>
 <TOPIC> TRANSIENT_RECURRENT_STATES </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap13.pdf </LINK>

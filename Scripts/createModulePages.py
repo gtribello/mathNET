@@ -13,6 +13,7 @@ def printModuleSidebar( modname, of ):
     of.write('      <li class="list-group-item"><a href="' + modname + '-fproject.html">Final project</a></li>\n')
     of.write('      <li class="list-group-item"><a href="' + modname + '-practise.html">Extend</a></li>\n')
     of.write('      <li class="list-group-item"><a href="' + modname + '-apply.html">Apply</a></li>\n')
+    of.write('      <li class="list-group-item"><a href="' + modname + '-examples.html">Examples</a></li>\n')
     of.write('      <li class="list-group-item"><a href="' + modname + '-understand.html">Understand</a></li>\n')
     of.write('      <li class="list-group-item"><a href="' + modname + '-content.html">Content</a></li>\n')
     of.write('   </ul>')
@@ -82,10 +83,10 @@ def buildModulePage( mname ):
         of.write('      </div>\n')
         of.write('      <div class="col-md-4">\n')
         of.write('<table>\n')
-        of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        #of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
         reslist, topictab  = [], ""
         for top in chp_topics :
-            tstring, reslis = mytopics.get(top).getResourceForModule( mname, reslist )
+            tstring, reslis = mytopics.get(top).getRelevantResources( mname, "PYTHON", reslist, 2 )
             topictab += tstring
         of.write( topictab )
         of.write('</table>\n')
@@ -117,10 +118,10 @@ def buildModulePage( mname ):
         of.write('      </div>\n')
         of.write('      <div class="col-md-4">\n')
         of.write('<table>\n')
-        of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        #of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
         reslist, topictab  = [], ""
         for top in chp_topics :
-            tstring, reslis = mytopics.get(top).getResourceForModule( mname, reslist )
+            tstring, reslis = mytopics.get(top).getRelevantResources( mname, "BLOCKLY", reslist, 2 )
             topictab += tstring
         of.write( topictab )
         of.write('</table>\n')
@@ -128,6 +129,34 @@ def buildModulePage( mname ):
         of.write('   </div>\n')
         of.write('</div>\n')
         pageelements.printFooter( of ) 
+        of.close()
+        # Print examples page for this project
+        of = open( "html/" + modname + "-examples.html", "w" )
+        pageelements.printHeader( modname + " overview", of )
+        pageelements.printTopMenuBar( of )
+        of.write('<div id="content" class="container">\n')
+        of.write('   <div class="row margin-vert-30">\n')
+        printModuleSidebar( modname, of )
+        of.write('      <div class="col-md-6">\n')
+        of.write('         <h2> Applying your knowledge: ' + chp.find("TITLE").text + '</h2>\n')
+        of.write('             <p>')
+        of.write('The panel on the right of this page contains links to some example problems that have been solved using the material that is covered in this chapter.  ')
+        of.write('You will find the problems and the solutions together on these pages.  However, please try to solve the problem yourself before you consult the solution.')
+        of.write('             </p>')
+        of.write('      </div>\n')
+        of.write('      <div class="col-md-4">\n')
+        of.write('<table>\n')
+        #of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        reslist, topictab  = [], ""
+        for top in chp_topics :
+            tstring, reslis = mytopics.get(top).getRelevantResources( mname, "EXAMPLES", reslist, 2 )
+            topictab += tstring
+        of.write( topictab )
+        of.write('</table>\n')
+        of.write('      </div>\n')
+        of.write('   </div>\n')
+        of.write('</div>\n')
+        pageelements.printFooter( of )
         of.close()
         # Print understand page for this project
         of = open( "html/" + modname + "-understand.html", "w" )
@@ -147,10 +176,10 @@ def buildModulePage( mname ):
         of.write('      </div>\n')
         of.write('      <div class="col-md-4">\n')
         of.write('<table>\n')
-        of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        #of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
         reslist, topictab  = [], ""
         for top in chp_topics :
-            tstring, reslis = mytopics.get(top).getResourceForModule( mname, reslist )
+            tstring, reslis = mytopics.get(top).getRelevantResources( mname, "VIDEO", reslist, 2 )
             topictab += tstring
         of.write( topictab )
         of.write('</table>\n')
@@ -177,10 +206,10 @@ def buildModulePage( mname ):
         of.write('      </div>\n')
         of.write('      <div class="col-md-4">\n')
         of.write('<table>\n')
-        of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        #of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
         reslist, topictab  = [], ""
         for top in chp_topics : 
-            tstring, reslis = mytopics.get(top).getResourceForModule( mname, reslist )
+            tstring, reslis = mytopics.get(top).getRelevantResources( mname, "READING", reslist, 2 )
             topictab += tstring
         of.write( topictab )
         of.write('</table>\n')

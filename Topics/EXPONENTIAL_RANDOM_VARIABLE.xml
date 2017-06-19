@@ -25,9 +25,9 @@ $$
 
 \begin{matrix}
 
- -\lambda & \lambda \\
+ -\lambda &amp; \lambda \\
 
- 0 & 0
+ 0 &amp; 0
 
 \end{matrix}
 
@@ -74,7 +74,7 @@ The expectation and variance of this random variable are $\mathbb{E}(T)=\frac{1}
   </AIMS>
 <RESOURCE>
 <TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> exponential-random-variable-video </LINK>
@@ -85,7 +85,7 @@ Introduction to the exponential random variable
 </RESOURCE>
 <RESOURCE>
 <TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> pairs-of-exponentials </LINK>
@@ -96,7 +96,7 @@ Calculating the probability that one exponential random variable is less than an
 </RESOURCE>
 <RESOURCE>
 <TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap18.pdf </LINK>
@@ -107,7 +107,7 @@ Notes on the derivation of the exponenitial random variable.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> exponential-random-variable-problems </LINK>

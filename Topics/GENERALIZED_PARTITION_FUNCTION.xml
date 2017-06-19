@@ -64,7 +64,7 @@ Z =  = \sum_i e^{-\sum_j \lambda^{(j)} b^{(j)}_i}
   </AIMS>
 <RESOURCE>
 <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> statistical-mechanics-intro-video </LINK>
@@ -75,7 +75,7 @@ An introductory video on statistical mechanics that introduces the terms microst
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> generalised-partition-video </LINK>
@@ -86,7 +86,7 @@ A video introducing in which the form of the generalised partition function is d
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> entropy-statistical-mechanics-video </LINK>
@@ -97,7 +97,7 @@ A video explaining how the entropy in the generalised ensemble is calculated.
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> entropy-changes-statistical-mechanics-video </LINK>
@@ -108,7 +108,7 @@ A video explaining how an expression for the change in entropy can be derived in
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> generalised-ensemble.pdf </LINK>
@@ -119,7 +119,7 @@ notes summarising all the important information you need to know about the gener
 </RESOURCE>
 <RESOURCE>
 <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ensemble-averages-by-differentiation-video </LINK>

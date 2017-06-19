@@ -46,18 +46,7 @@ This expression cannot be used if your random variable has $\mathbb{E}(X) = \inf
   </AIMS>
 <RESOURCE>
 <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-3-law-of-large-numbers.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise to get you to grips with the law of large numbers
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> law-of-large-numbers-video </LINK>
@@ -68,18 +57,7 @@ Introducing the law of large numbers
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-calculating-histograms.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise on calculating histograms
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> histogram-video </LINK>
@@ -90,18 +68,7 @@ A video explaining how the law of large numbers is used when calculating a histo
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> Betrand-paradox.ipynb.zip </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-An exercise that will help you to understand why the cumulative probability distribution function is necessary.
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap11.pdf </LINK>
@@ -112,7 +79,7 @@ Some notes on the law of large numbers and the central limit theorem. These note
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> histograms-exercise </LINK>
@@ -123,7 +90,7 @@ A programming exercise about estimating histograms by performing repeated experi
 </RESOURCE>
 <RESOURCE>
 <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> geometric-probability </LINK>

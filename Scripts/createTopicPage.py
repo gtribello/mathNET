@@ -15,7 +15,9 @@ def buildTopicPage( tname ):
     mygraph.setNodes(mytopics.topiclist, mytopics.labellist)
     # Create the connections for the graph
     mygraph.setConnections()
-    of = open( "html/" + tname + ".html", "a" ) 
+    # Create the graph for this topic
+    mygraph.printNodeGraph( tname )
+    of = open( "html/" + tname + ".html", "w" ) 
     # Print header and top menu bar for this page
     pageelements.printHeader( tname, of )
     pageelements.printTopMenuBar( of )
@@ -36,26 +38,58 @@ def buildTopicPage( tname ):
     of.write('   <div id="accordion" class="panel-group">')
     content = "<table>\n"
     content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
+    # Reading resources
     reslist = []
-    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "INTRO", reslist )
+    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "READING", reslist, 1 )
     content += tstring
     content += "</table>\n"
-    pageelements.printPanel( of, "default", "collapse-two", "Introductory Material", content )
+    pageelements.printPanel( of, "default", "collapse-two", "Written Notes", content )
     content = "<table>\n"
     content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
+    # Videos
     reslist = []
-    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "EXERCISE", reslist )
-    content += tstring
-    content += "</table>\n"
-    pageelements.printPanel( of, "default", "collapse-three", "Exercises", content )
-    content = "<table>\n"
-    content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "VIDEO", reslist, 1 )
+    if len(reslist)>0 :
+       content += tstring
+       content += "</table>\n"
+       pageelements.printPanel( of, "default", "collapse-four", "Videos", content )
+       content = "<table>\n"
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+    # Examples
     reslist = []
-    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "EXTERNAL", reslist )
-    content += tstring
-    content += "</table>\n"
-    pageelements.printPanel( of, "default", "collapse-four", "External Resources", content )
-    of.write('   </div>')
+    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "EXAMPLES", reslist, 1 )
+    if len(reslist)>0 :
+       content += tstring
+       content += "</table>\n"
+       pageelements.printPanel( of, "default", "collapse-three", "Worked examples", content )
+       content = "<table>\n"
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+    # Blockly
+    reslist = []
+    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "BLOCKLY", reslist, 1 )
+    if len(reslist)>0 :
+       content += tstring
+       content += "</table>\n"
+       pageelements.printPanel( of, "default", "collapse-five", "Applying your knowledge", content )
+       content = "<table>\n"
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+    # Python 
+    reslist = []
+    tstring, reslist = mytopics.get(tname).getRelevantResources( "", "PYTHON", reslist, 1 )
+    if len(reslist)>0 : 
+       content += tstring
+       content += "</table>\n"
+       pageelements.printPanel( of, "default", "collapse-six", "Extending your understanding", content )
+       content = "<table>\n"
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+    # External resources
+    reslist = []
+    if len(reslist)>0 :
+       tstring, reslist = mytopics.get(tname).getRelevantResources( "", "EXTERNAL", reslist, 1 )
+       content += tstring
+       content += "</table>\n"
+       pageelements.printPanel( of, "default", "collapse-seven", "External Resources", content )
+       of.write('   </div>')
     # Print the footer
     of.write("</div>\n")
     pageelements.printFooter( of )

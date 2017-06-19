@@ -15,13 +15,13 @@ A =
 
 \begin{matrix}
 
-a_{11} & a_{12} & \cdots  &   a_{1n} \\
+a_{11} &amp; a_{12} &amp; \cdots  &amp;   a_{1n} \\
 
-a_{21} &      &    \cdots  & a_{2n}  \\
+a_{21} &amp;      &amp;    \cdots  &amp; a_{2n}  \\
 
-\vdots  &  \vdots   &   &  \vdots \\
+\vdots  &amp;  \vdots   &amp;   &amp;  \vdots \\
 
-a_{m1} & a_{m2} &  \cdots & a_{mn} \\
+a_{m1} &amp; a_{m2} &amp;  \cdots &amp; a_{mn} \\
 
 \end{matrix}
 
@@ -46,7 +46,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> MATRIX_INTRO </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> intro-matrix-problems </LINK>

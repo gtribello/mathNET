@@ -24,7 +24,7 @@ the conditional probability of being in state $j$ at time $t+1$ if you are in st
   </AIMS>
 <RESOURCE>
 <TOPIC> TRANSITION_MATRIX_OF_MARKOV_CHAIN </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> markov-property-video </LINK>

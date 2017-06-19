@@ -12,7 +12,7 @@
   </AIMS>
 <RESOURCE>
 <TOPIC> RESPONSE_FUNCTIONS </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> response-functions-video </LINK>
@@ -23,7 +23,7 @@ An explanation as to how inequalities involving response functions can be derive
 </RESOURCE>
 <RESOURCE>
 <TOPIC> RESPONSE_FUNCTIONS </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> response-functions-problems </LINK>

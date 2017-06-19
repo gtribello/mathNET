@@ -48,7 +48,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> joint-probability-problems </LINK>
@@ -59,18 +59,7 @@ Exercises involving joint probability distributions
 </RESOURCE>
 <RESOURCE>
 <TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
-<TYPE> IPYTHON </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> sor3012-pairs-of-random-varaiables.ipynb </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-An exercise on simulating correlated variables.
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> jim-chap06.pdf </LINK>
@@ -81,7 +70,7 @@ A description of joint probability functions including a derivation of the Cauch
 </RESOURCE>
 <RESOURCE>
 <TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
-<LEVEL> EXERCISE </LEVEL>
+<LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
 <LINK> correlation-exercise </LINK>

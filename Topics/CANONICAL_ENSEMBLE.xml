@@ -76,7 +76,7 @@ $$
   </AIMS>
 <RESOURCE>
 <TOPIC> CANONICAL_ENSEMBLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> canonical-ensemble-video1 </LINK>
@@ -87,7 +87,7 @@ A video in which the canonical ensemble is derived from the generalised partitio
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CANONICAL_ENSEMBLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> VIDEO </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> PHY9038/AMA4004 </MODULE>
 <LINK> canonical-ensemble-video2 </LINK>
@@ -98,7 +98,7 @@ A video which shows how ensemble averages for the energy can be found by taking 
 </RESOURCE>
 <RESOURCE>
 <TOPIC> CANONICAL_ENSEMBLE </TOPIC>
-<LEVEL> INTRO </LEVEL>
+<LEVEL> READING </LEVEL>
 <TYPE> PDF </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ensembles-notes.pdf </LINK>

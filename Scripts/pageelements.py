@@ -1,16 +1,13 @@
 import module
 import os
 
-def printHeader( pagename, pageout ) :
+def printHeader( pagename, of ) :
     f = open( 'Templates/header.html', 'r' )
     header = f.read()
     f.close()
-    of = open( pageout, 'w' )
     of.write( header.replace( "PAGE NAME", pagename ) )
-    of.close()
 
-def printTopMenuBar( pageout ) :
-    of = open( pageout, 'a' )
+def printTopMenuBar( of ) :
     of.write('<div id="pre_header" class="visible-lg"></div>\n')
     of.write('<div id="header" class="container">\n')
     of.write('        <div class="row">\n')
@@ -40,12 +37,33 @@ def printTopMenuBar( pageout ) :
     of.write('        </div>\n')
     of.write('</div>\n')
     of.write('<!-- === END HEADER === -->\n')
-    of.close()
 
-def printFooter( pageout ) :
+def printPanel( of, ptype, collapse_str, title, content ) :
+    if ptype == "primary" :
+       of.write('<div class="panel panel-primary">')
+    else :
+       of.write('<div class="panel panel-default">')
+    of.write('    <div class="panel-heading">')
+    of.write('        <h4 class="panel-title">')
+    of.write('        <a class="accordion-toggle" href="#' + collapse_str + '" data-parent="#accordion" data-toggle="collapse">')
+    of.write( title )
+    of.write('        </a>')
+    of.write('        </h4>')
+    of.write('    </div>')
+    if ptype == "primary" :
+       of.write('    <div id="' + collapse_str + '" class="accordion-body collapse in">')
+    else :
+       of.write('    <div id="' + collapse_str + '" class="accordion-body collapse">')
+    of.write('        <div class="panel-body">')
+    of.write('            <div class="row">')
+    of.write( content )
+    of.write('            </div>')
+    of.write('        </div>')
+    of.write('    </div>')
+    of.write('</div>')
+
+def printFooter( of ) :
     f = open( 'Templates/footer.html', 'r' )
     footer = f.read()
     f.close()
-    of = open( pageout, 'a') 
     of.write( footer )
-    of.close() 

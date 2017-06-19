@@ -1,0 +1,72 @@
+<PAGE>
+  <TITLE> Newtons Laws of Motion </TITLE>
+  <DESCRIPTION>
+
+
+Newton's three laws of motion are the bedrock upon which classical mechanics is built.
+
+These three laws state:
+
+
+
+<ul>
+
+<li> A body remains at rest or travelling at a constant speed unless acted upon by an external force. </li>
+
+<li> The force acting on a body is equal to the rate of change of the bodies momentum </li>
+
+<li> Every action has an equal and opposite reaction </li>
+
+</ul>
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to state Newton's law of motion.
+ </LI>
+    <LI>  You should be able to explain how the terms system, envinroment and state are used to mean in classical mechanics.
+ </LI>
+    <LI>  You should be able to write out a mathematical statement of Newton's second law using a derivative.
+ </LI>
+    <LI>  You should be able to explain the connection between Newton's third law and the conservation principles that are at the heart of physics.
+ </LI>
+    <LI>  You should be able to explain what we mean when we refer to a potential in physics and how forces can be calculated from potentials.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> NEWTONS_LAWS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> newtons-first-law-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining Newton's first law
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> NEWTONS_LAWS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> newtons-second-law-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining Newton's second law.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> NEWTONS_LAWS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> newtons-third-law-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining Newton's third law
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

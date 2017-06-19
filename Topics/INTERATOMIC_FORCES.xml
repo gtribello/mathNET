@@ -1,0 +1,35 @@
+<PAGE>
+  <TITLE> Interatomic forces </TITLE>
+  <DESCRIPTION>
+
+
+We can describe the interatomic forces that act between pairs of atoms using a potential.  More accurate methods for calculating
+
+these forces involving solving the Schrodinger equation and using the tools of quantum mechanics.  This is computationally expensive, 
+
+however, and so we oftentimes we use more approximate classical models.  These potentials include terms to describe the covalent bonds
+
+between molecules (intra-molecular terms) and other terms to include the various kinds of inter-molecular forces that act between pairs
+
+of atoms.  These inter-molecular terms are often broken down into three components: the electrostic interaction between charges, the 
+
+short range repulstion that occurs when the electron clouds around atoms begin to overlap and the dispersion interaction.  
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the distinction between inter and intramolecular forces in classical potentials.
+ </LI>
+    <LI>  You should be able to explain the physical origin for intermolecular interactions and give mathematical expressions that are often employed to model the potential due to these kinds of interactions.
+ </LI>
+    <LI>  You should be able to explain the physical origin for the electrostiatic interaction and give an expression for the potential due to this interaction.
+ </LI>
+    <LI>  You should be able to explain the physical origin for the short-repulsion and give some examples of the classical terms that we use to model the potential due to this interaction.
+ </LI>
+    <LI>  You should be able to explain the physical origin for the dispersion interaction between atoms and give an expression that can be used to model the effect of this interaction.
+ </LI>
+    </UL>
+  </AIMS>
+</PAGE>

@@ -1,0 +1,92 @@
+<PAGE>
+  <TITLE> The grand canonical ensemble </TITLE>
+  <DESCRIPTION>
+
+
+The grand canonical ensemble is a statistical model that can be used to describe the behavior of a system
+
+with a constant temperature, a constant chemical potential and a constant volume/pressure.  (In what follows
+
+we will enforce constant a volume.)  If we have a Hamiltonian, $H(x,p)$, for the system the isothermal-isobaric 
+
+partition function can be calculated using:
+
+$$
+
+Z_{gc} = \sum_i e^{-\beta H(x_i,p_i) } e^{\beta \mu N(x_i,p_i) }
+
+$$
+
+The sum here runs over all the microstates in the system and is replaced by an integral if you have a continuous
+
+rather than a discrete state space.  $\beta$, meanwhile, is equal to one divided by the temperature, $T$, multiplied by
+
+Boltzmann's constant, $k_B$.  That is to say $\beta = \frac{1}{k_B T}$.
+
+
+
+The probabibility of being with an individual microstate in the grand canonical ensemble is given by:
+
+$$
+
+p_i = \frac{ e^{-\beta H(x_i,p_i)} e^{\beta \mu N(x_i,p_i) } }{ Z_i }
+
+$$
+
+We can thus calculate the average number of atoms in the system by computing an emsemble average using:
+
+$$
+
+\langle N \rangle = \sum_i N(x_i,p_i) p_i
+
+$$
+
+or by using the analytical result below:
+
+$$
+
+\langle N \rangle = \frac{ \partial \ln Z_{gc} }{\partial (\beta \mu) }
+
+$$
+
+There is a similar result that relates the second derivative of the logarithm of the partition function with the fluctuations
+
+in the number of atoms:
+
+$$
+
+\langle (N - \langle N \rangle)^2 \rangle = \left(  \frac{\partial^2 \ln Z_{gc}(\mu,V,T)}{\partial (\beta \mu)^2} \right)
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to write an expression for the grand canonical partition function.
+ </LI>
+    <LI>  You should be able to write an expression for the probability of being in a particular micostate if the system has constant chemical potnetial, constant volume/pressure and constant temperature.
+ </LI>
+    <LI>  You should be able to explain how the grand potential and the grand canonical partition function are related.
+ </LI>
+    <LI>  You should be able to explain how ensemble averages are calculated in the grand canonical ensemble
+ </LI>
+    <LI>  You should be able to explain how we can calculate the ensemble average of the number of atoms by taking a derivative of the grand canonical partition function.
+ </LI>
+    <LI>  You should be able to explain why the second derivative of the partition function must be positive using considerations based on fluctuations.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> GRAND_CANONICAL_ENSEMBLE </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> grand-canoncial-ensemble-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on deriving the properties of the grand canonical ensemble.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

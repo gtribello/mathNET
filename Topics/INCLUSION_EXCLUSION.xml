@@ -1,0 +1,50 @@
+<PAGE>
+  <TITLE> Inclusion-exclusion principle </TITLE>
+  <DESCRIPTION>
+
+
+In combinatorics the inclusion exclusion principle is a couting technique which allows 
+
+you to determine the cardinality of the union of two finite sets.  For two sets the 
+
+inclusion-exclusion principle states:
+
+
+
+$$
+
+| A \cup B | = |A| + |B| - | A \cup B |
+
+$$
+
+
+
+Where $A$ and $B$ are sets and the vertical lines tell us that we are taking the cardinality
+
+of these sets.  The cardinality is the number of elements in the set.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to state the inclusion exclusion principle.
+ </LI>
+    <LI>  You should be able to explain the derivation of the inclusion exclusion principle using Venn diagrams.
+ </LI>
+    <LI>  You should be able to explain how the inclusion exclusion principle can be used to calculate probabilities such as $P(X=1 \vee Y=1)$
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> INCLUSION_EXCLUSION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> exclusion-inclusion-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video illustrating how the inclusion exclusion principle can be used to calculate the probability that event A or event B occurs.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

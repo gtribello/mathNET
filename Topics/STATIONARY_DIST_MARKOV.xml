@@ -1,0 +1,137 @@
+<PAGE>
+  <TITLE> Ergodic Markov chains </TITLE>
+  <DESCRIPTION>
+
+
+A Markov chain is said to be ergodic if it has a limiting stationary distribution.
+
+This limiting stationary distribution tells one the probability that you will be in 
+
+each of the states of the Markov chain.  Hence, for an ergodic Markov chain with $n$ states
+
+the stationary distribution is an $n$-dimensional vector of probabilities.  
+
+
+
+The stationary distribution of a Markov chain can be found by finding the top (left) eigenvector of 
+
+the one-step transition probability matrix using Gaussian elimination.  In addition, the elements of 
+
+this matrix satisfy the ergodic theorem:
+
+$$
+
+\lim_{n \rightarrow \infty} \frac{M_i(n)}{n} = \frac{1}{\mathbb{E}(T_i)}
+
+$$
+
+where $M_i$ is the number of visits to state $i$ if there have been $n$ steps in your Markov chain and $\mathbb{E}(T_i)$
+
+is the expectation of the return time to state $i$. 
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the properties that characterise an ergodic markov chain.
+ </LI>
+    <LI>  You should be able to determine whether or not a Markov chain has a limiting stationary distribution.
+ </LI>
+    <LI>  You should be able to explain the significance of the limiting stationary distribution.
+ </LI>
+    <LI>  You should be able to calculate the limiting stationary distribution of a Markov chain using Gaussian elimination.
+ </LI>
+    <LI>  You should be able to use the ergodic theorem to calculate return times from limiting stationary distribution.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> markov-stationary-distribution-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems on finding the stationary distribution of ergodic Markov chians
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> Ergodic-markov-chains.ipynb.zip </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise in which you will simulate an ergodic markov chain
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-ehrenfest-urns.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise that involves simulating a more complex discrete time Markov chain.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap14.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Notes on the ergodic theorem and the stationary distribution of Markov chains in general
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap15.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+More notes on the ergodic distribution and the stationary distribution of Markov chains.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> limiting-stationary-dist-video1 </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining the derivation of the ergodic theorem
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> limiting-stationary-dist-video2 </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining why the limiting stationary distribution of an ergodic markov chain can be found by finding the principle left eigenvector of the transition matrix.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> ehrenfest-urns-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise on simulating an ergodic markov chain.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

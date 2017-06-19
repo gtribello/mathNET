@@ -1,0 +1,36 @@
+<PAGE>
+  <TITLE> Markovian transition matrix </TITLE>
+  <DESCRIPTION>
+
+
+The transition matrix for a Markov chain with $n$ states is an $n\times n$ square matrix in which the $i,j$ element gives you 
+
+the conditional probability of being in state $j$ at time $t+1$ if you are in state $i$ at time $t$.  
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to interpret the elements of the transition probability matrix by making reference to the Markov property.
+ </LI>
+    <LI>  You should be able to extract transition probabilities between states from the transition probability matrix.
+ </LI>
+    <LI>  You should be able to draw the transition graph when given the transition probability matrix.
+ </LI>
+    <LI>  You should be able to write out the transition proability matrix when given the transition graph.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> TRANSITION_MATRIX_OF_MARKOV_CHAIN </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> markov-property-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Introducing Markov chains
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

@@ -1,0 +1,35 @@
+<PAGE>
+  <TITLE> Partition (set theory) </TITLE>
+  <DESCRIPTION>
+
+
+If we have a set $\Omega$ a partition, $\{ A_k \}$, of $\Omega$ is a set 
+
+of $n$ subsets of $\Omega$ that have the following properties:
+
+
+
+$$
+
+ A_j \cap A_j = \emptyset \quad \forall \quad i \ne j \qquad \textrm{and} \qquad \bigcup_{j=1}^n A_j = \Omega
+
+$$
+
+
+
+Here $\emptyset$ is the empty set $\cap$ denotes the intersection of two sets and $\bigcup$ denotes the union of the $n$ sets in the partition. 
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the properties of a partition of a set.
+ </LI>
+    <LI>  You should be able to draw a Venn diagram illustrating a partition of a set.
+ </LI>
+    <LI>  You should be able to explain how partitions of the sample space are used in the construction of random variables in statistics.
+ </LI>
+    </UL>
+  </AIMS>
+</PAGE>

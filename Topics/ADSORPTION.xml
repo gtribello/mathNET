@@ -1,0 +1,60 @@
+<PAGE>
+  <TITLE> Statistical mechanics of adsorption </TITLE>
+  <DESCRIPTION>
+
+
+The Langumuir adsorption model can be used to model the adsorption of particles onto a surface.  To derive this model we 
+
+begin by noting that if we have $N \lt M$ atoms adsorbed on $M$ adsorption sites the canonical partition function is given by:
+
+$$
+
+Z(N) = \frac{M!}{N!(M-N)!} \zeta^N
+
+$$ 
+
+where $\zeta$ is the partition function for a single adsorbed particle.  Also notice that in writing the above we have assumed
+
+that there is no interaction between the adsorbed particles.  We then recall that the grand canonical partiton function can 
+
+be calculated from the canonical partition function using:
+
+$$
+
+Z(\mu) = \sum_{N=0}^M e^{\mu \beta N} Z(N) = \sum_{N=0}^M \frac{M!}{N!(M-N)!} (e^{\mu\beta} \zeta)^N = ( 1 +  e^{\mu\beta} \zeta)^M 
+
+$$ 
+
+where $\mu$ is the chemical potential.  The last result here holds because of the binomial theorem.  We then recall that
+
+we can get the fraction of the sites on the surface that are occupied by gas particles by calculating:
+
+$$
+
+\langle K \rangle = \frac{1}{M} \frac{\partial \ln Z(\mu) }{\partial (\beta \mu) } = \frac{ e^{\mu\beta} \zeta }{1 +  e^{\mu\beta} \zeta }
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to calculate the canonical paritition function for $N$ atoms adsorbed on a surface and the grand canonical parition function for this system.
+ </LI>
+    <LI>  You should thus be able to derive the Langmuir adsorption isotherm and explain the assumptions that are used when this model is used to analyse data on the adsorption of gasses on surfaces.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> ADSORPTION </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> adsorbtion-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise involving the derivation of the Langmuir adsorption isotherm.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

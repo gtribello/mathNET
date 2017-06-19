@@ -1,0 +1,49 @@
+<PAGE>
+  <TITLE> The Markov Property </TITLE>
+  <DESCRIPTION>
+
+
+A time series of random variables, $X_1, X_2, X_3, \dots$, is said to be a Markov chain if it has the following property:
+
+$$
+
+P(X_t=x_t|X_0=x_0,X_1=x_1,\dots,X_{t-1}=x_{t-1}) = P(X_t=x_t|X_{t-1}=x_{t-1})
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to write out the definition of the Markov property.
+ </LI>
+    <LI>  You should be able to explain why the Markov property ensures that we can represent a Markov chain using a transition graph.
+ </LI>
+    <LI>  You should be able to interpret the elements of the transition probability matrix by making reference to the Markov property.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MARKOV_PROPERTY </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> markov-property-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Introduction to the Markov property
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MARKOV_PROPERTY </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap12.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Introductory notes on Markov chains and the Markov property.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

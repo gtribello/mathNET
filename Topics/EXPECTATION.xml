@@ -1,0 +1,104 @@
+<PAGE>
+  <TITLE> Expectation  </TITLE>
+  <DESCRIPTION>
+
+
+The expectation, $\mathbb{E}(X)$, of a discrete random variable, $X$, can be calculated using:
+
+$$
+
+\mathbb{E}(X) = \sum_{i=0}^\infty x_i P(X=x_i)
+
+$$
+
+The expectation, $\mathbb{E}(Y)$, of a continuous random variable, $Y$, can be calculated using:
+
+$$
+
+\mathbb{E}(Y) = \int_{-\infty}^\infty y f_Y(y) \textrm{d}y
+
+$$
+
+where $f_Y(y)$ is the probability density function for the random variable.
+
+
+
+Complex random variables can be constructed by taking functions of simpler random variables.  When this is done the 
+
+expectation, $\mathbb{E}[g(X)]$, of a function, $g(x)$, of a discrete random variable, $X$, can be calculated using:
+
+$$
+
+\mathbb{E}[g(X)] = \sum_{i=0}^\infty g(x_i) P(X=x_i)
+
+$$
+
+The expectation, $\mathbb{E}[g(Y)]$, of a function, $f(y)$, of a continuous random variable, $Y$, can be calculated using:
+
+$$
+
+\mathbb{E}(Y) = \int_{-\infty}^\infty f(y) f_Y(y) \textrm{d}y
+
+$$
+
+where $f_Y(y)$ is the probability density function for the random variable.  If the function of the random variable is linear and you 
+
+are being asked to calculate an expection of the form $\mathbb{E}(aX+c)$, where $X$ is a random area and $a$ and $b$ are fixed parameters then 
+
+the expectation this new random variable can be calulated from the expectation, $\mathbb{E}(X)$ using:
+
+\[
+
+ \mathbb{E}(aX + c ) = a\mathbb{E}(X) + c
+
+\]
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain how expectations of discrete and continuous random variables are calculated.
+ </LI>
+    <LI>  You should be able to explain how functions of discrete and continuous random variables are calculated.
+ </LI>
+    <LI>  You should be able to calculate the expectation of a linear function of a random variable from the expectation of the underlying random variable.
+ </LI>
+    <LI>  You should be able to derive expressions for the expectation of bernoulli, binomial, geometric, poisson, uniform, exponential and normal random variables.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> EXPECTATION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> expectation-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Introducing the expectation
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> EXPECTATION </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> expectation-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Exercises involving the calculation of the expectation for a random variable
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> EXPECTATION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap05.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+An explanation of how the expectation, variance and moment generating function are calculated.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

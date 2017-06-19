@@ -1,0 +1,49 @@
+<PAGE>
+  <TITLE> Geometric series </TITLE>
+  <DESCRIPTION>
+
+
+In mathematics a geometric series is a series with a constant ration between successive terms.  For example:
+
+$$
+
+\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \frac{1}{16} + \dots
+
+$$
+
+The sum of a geometric series with $n$ terms is given by:
+
+$$
+
+\sum_{i=0}^{n} x^{i}= 1+x+x^{2}+ \cdots + x^{n} = 
+
+{1-x^{n+1} \over 1-x}
+
+$$
+
+If  $\vert x \vert <1$:
+
+$$
+
+\sum_{i=0}^{\infty} x^{i}= 1+x+x^{2}+ \cdots + x^{n} + \cdots  =
+
+{1 \over 1-x} \qquad .
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to recognise geometric series.
+ </LI>
+    <LI>  You should be able to write out and manipulate geometric series using the capital sigma notation.
+ </LI>
+    <LI>  You should be able to give an expression for the sum of an geometric series with a finite number of terms.
+ </LI>
+    <LI>  You should be able to explain the conditions under which a geometric series with an infinite number of terms converges to a finite value and you should be able to write down the expression for the sum of such series. 
+ </LI>
+    </UL>
+  </AIMS>
+</PAGE>

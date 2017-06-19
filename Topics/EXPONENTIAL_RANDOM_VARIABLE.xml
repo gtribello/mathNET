@@ -1,0 +1,119 @@
+<PAGE>
+  <TITLE> Exponential random variable </TITLE>
+  <DESCRIPTION>
+
+
+The exponential random variable is the continuous analogue of the geometric distribution.
+
+This random variable has the key property of being memoryless meaning that the exponential
+
+random variable $T$ has the following property:
+
+$$
+
+P(T>t+s)=P(T>t)P(T>s)
+
+$$
+
+The exponential random variable is the solution of the Kolmogorov equation for the two-state
+
+jump rate matrix:
+
+$$
+
+\mathbf{Q} = \left(
+
+\begin{matrix}
+
+ -\lambda & \lambda \\
+
+ 0 & 0
+
+\end{matrix}
+
+\right)
+
+$$
+
+The probability distribution function for this random variable is:
+
+$$
+
+F_T(t)= P(T\le t) = 1 - e^{-\lambda t}
+
+$$
+
+while the probability density is:
+
+$$
+
+f_T(t) = \lambda e^{-\lambda t}
+
+$$
+
+The expectation and variance of this random variable are $\mathbb{E}(T)=\frac{1}{\lambda}$ and $\textrm{var}(T) = \frac{1}{\lambda^2}$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the meaning of the memoryless property and why this property is important.
+ </LI>
+    <LI>  You should be able to write out a jump rate matrix for an exponential random variable and draw the corresponding transition graph.
+ </LI>
+    <LI>  You should be able to derive the probability distribution function for the exponential random variable by solving the Kolmogorov forward equation.
+ </LI>
+    <LI>  You should be able to write out the probability distribution function and the probability density function for the exponential random variable.
+ </LI>
+    <LI>  You should be able to obtain expressions for the expectation and variance of an exponential random variable by means of integration by parts.
+ </LI>
+    <LI>  You should be able to calculate the probability that event $X$ happens before event $Y$ given that the arrival time of both $X$ and $Y$ are independent random variables that can be described using exponential random variables.  
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> exponential-random-variable-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Introduction to the exponential random variable
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> pairs-of-exponentials </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Calculating the probability that one exponential random variable is less than another.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap18.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Notes on the derivation of the exponenitial random variable.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> exponential-random-variable-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems involving the exponential random variable
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

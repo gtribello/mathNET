@@ -1,0 +1,33 @@
+<PAGE>
+  <TITLE> Gaussian Elimination </TITLE>
+  <DESCRIPTION>
+
+
+The system of linear equations involving the unknown vector $\mathbf{x}$, 
+
+the known vector $\mathbf{b}$ and the square invertible matrix $\mathbf{A}$;
+
+$$
+
+\mathbf{Ax}=\mathbf{b}
+
+$$
+
+can be solved using Gaussian elimination. During this process the matrix
+
+$\mathbf{A}$ is converted to upper-triangular form.  The elements of
+
+$\mathbf{x}$ and then found by back-substitution.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to use Gaussian elimination to solve systems of two to three linear equations using pen and paper.
+ </LI>
+    <LI>  You should be able to use appropriate python libaries to solve systems of equations involving large numbers of linear equations using Gaussian elimination.
+ </LI>
+    </UL>
+  </AIMS>
+</PAGE>

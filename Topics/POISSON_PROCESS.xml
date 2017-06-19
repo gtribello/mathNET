@@ -1,0 +1,129 @@
+<PAGE>
+  <TITLE> Poisson Process </TITLE>
+  <DESCRIPTION>
+
+
+The Poisson process is a continuous time Markov chain that can be used to model the 
+
+process of waiting for events to happen.  As an example this random variable could be used to model the
+
+number of radioactive decays a sample will undergo during a time window of a particular length.
+
+As anywhere between 0 and an infinite number of events can occur in any given time window this particular 
+
+Markov chain has an infinite number of states.  The jump rate matrix is thus the infinity
+
+by infinity square matrix shown below:
+
+$$
+
+\mathbf{Q} = \left( 
+
+\begin{matrix}
+
+-\lambda &amp; \lambda &amp; 0 &amp; 0 &amp; 0 &amp; \dots \\
+
+0 &amp; -\lambda &amp; \lambda &amp; 0 &amp; 0 &amp; \dots \\ 
+
+0 &amp; 0 &amp; -\lambda &amp; \lambda &amp; 0 &amp; \dots \\
+
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots
+
+\end{matrix} 
+
+\right)
+
+$$
+
+It is possible to show by induction that the solution to the resulting family of differential 
+
+equations for the probabilities of having $n$ events during a time window of length $t$ is given by:
+
+$$
+
+p_n(t) = \frac{(\lambda t)^n}{n!} e^{-\lambda t}
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the assumptions that are made when a process is modelled using a Poisson random variable.
+ </LI>
+    <LI>  You should be able to draw the transition graph for a Poisson Process.
+ </LI>
+    <LI>  You should be able to write out the jump rate matrix for a Poisson Process.
+ </LI>
+    <LI>  You should be able to derive and solve the Kolmogorov equation for a Poisson Process.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> POISSON_PROCESS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-poisson-process.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exericse on simulating the poisson process
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> POISSON_PROCESS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> poisson-process-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video introducing the poisson process as a continuous time Markov chain
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> POISSON_PROCESS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap19.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Some notes on the poisson process and its derivation.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> POISSON_PROCESS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap20.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+More notes on the properties of the Poisson process.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> POISSON_PROCESS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> poisson-process-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some problems involving the poisson process
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> POISSON_PROCESS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> poisson-process-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise that shows you how we can simulate poisson processes and compound poisson processes.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

@@ -1,0 +1,68 @@
+<PAGE>
+  <TITLE> Lagrange multipliers </TITLE>
+  <DESCRIPTION>
+
+
+The method of Lagrange multipliers is a method for finding an optimum in a function subject to 
+
+some equality constraints.  As an example this method can be used to find an optmum in the function
+
+$f(x,y)$ subject to the constraint $g(x,y)=a$.  This method does so by introducing a new variable
+
+$\lambda$ called a Lagrange multiplier.  The extended function $L(x,y,\lambda)$ below is then 
+
+introduced:
+
+$$
+
+L(x,y,\lambda) = f(x,y) - (\lambda - a)g(x,y)
+
+$$ 
+
+is then introduced.  It can then be shown that the values of $x$ and $y$ in the unconstrained opimum 
+
+for $L(x,y,\lambda)$ are the same as the values of $x$ and $y$ at the constrained optimum in $f(x,y)$ 
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to use Lagrange's method of undetermined multipliers to perform an optimization of a $N$-dimensional function subject to $M$ constraints
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> lagrange-multipliers-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining Lagrange's method of undetermined multipliers.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> lagrange-multipliers-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some problems that require you to use Lagrange's method of undetermined multipliers.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
+<LEVEL> EXTERNAL </LEVEL>
+<TYPE> WEBSITE </TYPE>
+<MODULE> module </MODULE>
+<LINK> http://tutorial.math.lamar.edu/Classes/CalcIII/LagrangeMultipliers.aspx </LINK>
+<AUTHOR> blank </AUTHOR>
+<DESCRIPTION>
+A tutorial on Lagrange multipliers with many nice examples.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

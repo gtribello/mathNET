@@ -1,0 +1,41 @@
+<PAGE>
+  <TITLE> Maxwell relations </TITLE>
+  <DESCRIPTION>
+
+
+The Maxwell relations are a set of equations in thermodynamics which are derivable from the symmetry of 
+
+second derivatives and from the definitions of the thermodynamic potentials. 
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to derive Maxwell relations starting from all the thermodynamic potentials.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MAXWELL_RELATIONS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> maxwell-relations-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An explanation as to how to derive a Maxwell relation from the definition of the thermodynamic potentials.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MAXWELL_RELATIONS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> maxwell-relations-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on deriving Maxwell relations in a less familiar setting
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

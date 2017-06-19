@@ -1,0 +1,52 @@
+<PAGE>
+  <TITLE> Limit of a function </TITLE>
+  <DESCRIPTION>
+
+
+In mathematics a limit of a function is the value the function approaches as the input approaches some value.  Limits are essential to calculus and are used to define continuity, derivatives and integrals.  In formulas, a limit is usually written as:
+
+$$
+
+\lim_{n \rightarrow c} f(n) = L
+
+$$
+
+which is read as "in the limit as $n$ approaches $c$ the function $f(n)$ equals $L$."
+
+
+
+Limits often appear when you have functions that are quotients:
+
+$$
+
+f(x) = \frac{g(x)}{h(x)}
+
+$$
+
+the reason being that if there can be values of $x$ for which the function in the numerator, $g(x)$, and the function in the denominator, $h(x)$, both equal either $0$ or $\infty$.  The values of $\frac{0}{0}$ and $\frac{\infty}{\infty}$ are both undefined. 
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain what we mean by a limit and why limits are important in mathematics.
+ </LI>
+    <LI>  You should be able to explain when we need to find the value of a function by solving a limit.  In other words, you should be able to recognise the input values at which the function is undefined.
+ </LI>
+    <LI>  You should be able to find the values of limits of quotients by manipulating the expression into a more pliant form using algebraic arguments. 
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> LIMITS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> limit-squeeze-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on solving limits using squeeze inequalities
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

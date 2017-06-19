@@ -1,0 +1,160 @@
+<PAGE>
+  <TITLE> The first and second laws of thermodynamics </TITLE>
+  <DESCRIPTION>
+
+
+<p>
+
+<b> The first law of thermodynamics </b> states:
+
+\[
+
+\textrm{d}E = \textrm{d}q + \textrm{d}w 
+
+\]
+
+In other words we measure the change in internal energy by adding together the work done one the system and the heat absorbed by the system.  We assume that the internal energy is an exact differential.  This has three important consequences:
+
+<ul>
+
+<li> The change in internal energy on moving from equilibrium state A to state B does not depend on the path taken. </li>
+
+<li> The change in internal energy on moving around a closed path that starts and ends in equilibrium state A is zero. </li>
+
+<li> The internal energy of an isolated system is constant.</li>
+
+</ul>
+
+</p>
+
+
+
+<p>
+
+<b> The second law of thermodynamics </b> states:
+
+\[
+
+\Delta_{A\rightarrow B} S \ge \int_A^B \frac{\textrm{d}q}{T}
+
+\]
+
+The equality sign holds when the transition is reversible, the inequality holds when the transition is irreversible.  The entropy is once again an exact differential so:
+
+<ul>
+
+<li> The change in entropy on moving from equilibrium state A to state B does not depend on the path taken. </li>
+
+<li> The change in entropy on moving around a closed path that starts and ends in equilibrium state A is zero. </li>
+
+</ul>
+
+Importantly, however, because of the inequality sign in the second law of thermodynamics, the heat absorbed during a transition will depend on the path taken and during moves around closed paths heat will be input/output from the system.  The consequence of this is that it is impossible to build an engine that converts 100% all of the heat it absorbs into work.
+
+</p>
+
+
+
+<p>
+
+<b> By combining the laws of thermodynamics </b> we can arrive at:
+
+\[
+
+\textrm{d}E = T\textrm{d}S - P\textrm{d}V + \mu \textrm{d}N
+
+\]
+
+where $E$ is the internal energy, $T$ is temperature, $S$ is entropy, $P$ is pressure, $V$ is volume, $\mu$ is the chemical potential and $N$ is the number of atoms.
+
+</p>
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to state the first law of thermodynamics.
+ </LI>
+    <LI>  You should be able to state the second law of thermodynamics and the Clausius inequality.
+ </LI>
+    <LI>  You should be able to determine, by reading a description of a physical process, whether or not heat/work is output/input from the system during said process.
+ </LI>
+    <LI>  You should be able to construct partial differential equations using the equation of state for the ideal gas.
+ </LI>
+    <LI>  You should be able to explain what it means when we state that entropy is a state function or exact differential.
+ </LI>
+    <LI>  You should be able to derive an expression for the work done by a system when it expands adiabatically.
+ </LI>
+    <LI>  You should be able to distinguish processes in which the entropy changes from those in which it does not.
+ </LI>
+    <LI>  You should be able to write expressions for the change in internal energy during adiabatic and isochoric processes.
+ </LI>
+    <LI>  You should be able to relate intensive thermodynamic variables to partial derivatives of the internal energy.
+ </LI>
+    <LI>  You should be able to combine the first and second laws of thermodynamics in order to get an expression for an infinitesimal change in the internal energy.
+ </LI>
+    <LI>  You should be able to write an expression for the change in internal energy that occurs when the value of one particular extensive variable changes while all others remain fixed.
+ </LI>
+    <LI>  You should be able to explain why the intensive quantities have a uniform value across all phases that are in equilibrium.
+ </LI>
+    <LI>  You should be able to state the optimality conditions placed on the internal energy and entropy for a system in equilibrium.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> first-law-thermodynamics-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An introduction to the first law of thermodynamics.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> second-law-of-thermodynamics </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An introduction to the second law of thermodynamics
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> combining-the-laws-of-thermodynamics-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Combining the first and second laws of thermodynamics
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> laws-of-thermodynamics-questions </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems involving the first and second laws of thermodynamics.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> thermodynamics-notes.pdf </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some written notes on the laws of thermodynamics and their consequences.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

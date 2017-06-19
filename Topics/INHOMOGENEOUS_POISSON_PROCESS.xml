@@ -1,0 +1,108 @@
+<PAGE>
+  <TITLE> Inhomogeneous Poisson Process </TITLE>
+  <DESCRIPTION>
+
+
+The inhomogeneous Poisson Process is similar to an ordinary Poisson process.  The main difference is that 
+
+in an inhomogeneous Poisson Process the average rate of arrivals is allowed to vary with time.  This is useful 
+
+as many applications that generate random points in time are modelled more faithfully when these non-homogeneous 
+
+processes.
+
+
+
+To understand the derivation of the inhomogeneous Poisson process we can start by introducing something akin to the 
+
+jump rate matrix.  However, because the rate of arrivals is now a function of time, the elements of this matrix are now
+
+functions rather than numbers as shown below.
+
+$$
+
+\mathbf{Q}(t) = \left(
+
+\begin{matrix}
+
+-\lambda(t) & \lambda(t) & 0 & 0 & 0 & \dots \\
+
+0 & -\lambda(t) & \lambda(t) & 0 & 0 & \dots \\
+
+0 & 0 & -\lambda(t) & \lambda(t) & 0 & \dots \\
+
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots
+
+\end{matrix} 
+
+\right)
+
+$$
+
+This matrix can be inserted into the following differential equation:
+
+$$
+
+\frac{\textrm{d}\mathbf{P}}{\textrm{d}t } = \mathbf{P}(t) \mathbf{Q}(t)
+
+$$
+
+which is akin to the Kolomogorov equation.  When the matrix equation above is multiplied above 
+
+the resulting family of differential equations for the probabilities of having $n$ events during a time window of length $t$ 
+
+can be solved giving: 
+
+$$
+
+p_n(t) = \frac{(\int_0^t \lambda(t) \textrm{d}t')^n}{n!} e^{-\int_0^t \lambda(t) \textrm{d}t'}
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the difference between a inhomogeneous Poisson Process and a homogeneous Poisson Process.
+ </LI>
+    <LI>  You should be able to write out the inhomgeneous jump rate matrix for the inhomgeneous Poisson Process.
+ </LI>
+    <LI>  You shoulod be able to write out and solve the inhomgeneous Kolmogorov equation for an inhomogeneous Poisson Process.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> INHOMOGENEOUS_POISSON_PROCESS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> inhomogeneous-poisson-process-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video introducing the inhomogeneous poisson process
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> INHOMOGENEOUS_POISSON_PROCESS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap22.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Notes on the inhomogeneous poisson process.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> INHOMOGENEOUS_POISSON_PROCESS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> inhomogeneous-poisson-process-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems involving the inhomogeneous poisson process
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

@@ -1,0 +1,47 @@
+<PAGE>
+  <TITLE> Combinatorics </TITLE>
+  <DESCRIPTION>
+
+
+If we have $n$ distinguishable objects (i.e. $n$ things that we can tell apart) 
+
+then there are $n!$ different ways we can order these objects.  
+
+
+
+If we have $n$ objects and only 
+
+$r$ of them are distinguishable - in other words if our $n$ objects contain 
+
+$(n-r)$ copies of the same item - then there are $\frac{n!}{(n-r)!}$ ways of 
+
+ordering these objects.  
+
+To be clear these  $\frac{n!}{(n-r)!}$ arrangements of the objects are the ones 
+
+we can tell apart.  Obviously, if we swap the indistinguishable items we get the 
+
+same pattern and thus it is not possible to distinguish between the two arrangements.  
+
+
+
+If we have $n$ objects: $r$ objects of one type and $(n-r)$ objects of a second different 
+
+type, then there are $\frac{n!}{r!(n-r)!}$ distinct ways of ordering our objects.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should understand what we mean when we state that two objects are distinguishable and when objects are indistinguishable.
+ </LI>
+    <LI>  You should be able to explain why there are $n!$ ways of arranging $n$ distinguishable objects.
+ </LI>
+    <LI>  You should be able to explain why there are $\frac{n!}{(n-r)!}$ ways of arranging $n$ objects if only $r$ of them are distinguishable
+ </LI>
+    <LI>  You should be able to explain why there are $\frac{n!}{r!(n-r)!}$ distinct ways of ordering $r$ objects of one type and $(n-r)$ objects of a second different type
+ </LI>
+    </UL>
+  </AIMS>
+</PAGE>

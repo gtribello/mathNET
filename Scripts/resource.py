@@ -3,23 +3,41 @@ import shutil
 import topic
 import subprocess
 import xml_to_html
+import lxml.etree as ET
 
 class resource(object) :
-  def __init__(self,description) :
-       dlist=description.split()
-       self.author=dlist[5].replace("~"," ") # The author of the resource
-       del dlist[5] 
-       self.linkb=dlist[4]  # The actual web link you are using
-       del dlist[4]
-       self.module=dlist[3].split("/")
-       del dlist[3]
-       self.rtype=dlist[2] # What kind of resource is this video etc
-       del dlist[2] 
-       self.loc=dlist[1]    # Is this an exercise or notes
-       del dlist[1]
-       self.topic=dlist[0]  # What topic should this be filed under
-       del dlist[0]
-       self.description=" ".join(dlist)
+  def __init__(self,tree) :
+      self.author, self.linkb = tree.find("AUTHOR").text.strip(), tree.find("LINK").text.strip()
+      self.module, self.rtype = tree.findall("MODULE"), tree.find("TYPE").text.strip()
+      self.loc, self.topic = tree.find("LEVEL").text.strip(), tree.find("TOPIC").text.strip()
+      self.description = tree.find("DESCRIPTION").text.strip()
+
+  def ofModAndLevel(self, module, level ) :
+      if module=="" and level==self.loc : 
+         return True
+      else :
+         for mod in self.module :
+            if module==mod.text.strip() and level=="" :
+               return True 
+            elif module==mod.text.strip() and level==self.loc :
+               return True
+      return False
+
+#  def __init__(self,description) :
+#       dlist=description.split()
+#       self.author=dlist[5].replace("~"," ") # The author of the resource
+#       del dlist[5] 
+#       self.linkb=dlist[4]  # The actual web link you are using
+#       del dlist[4]
+#       self.module=dlist[3].split("/")
+#       del dlist[3]
+#       self.rtype=dlist[2] # What kind of resource is this video etc
+#       del dlist[2] 
+#       self.loc=dlist[1]    # Is this an exercise or notes
+#       del dlist[1]
+#       self.topic=dlist[0]  # What topic should this be filed under
+#       del dlist[0]
+#       self.description=" ".join(dlist)
 
   def getResourceHTML(self,printmodule):
        table = "<tr> \n"

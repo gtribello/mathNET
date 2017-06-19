@@ -1,0 +1,44 @@
+<PAGE>
+  <TITLE> The Cauchy Schwartz Inequality in Statistics </TITLE>
+  <DESCRIPTION>
+
+
+In statistics the Cauchy Schwartz Inequality states that:
+
+
+
+$$
+
+[\mathbb{E}(XY) ]^2 \le \mathbb{E}(X^2)\mathbb{E}(Y^2)
+
+$$
+
+
+
+where $X$ and $Y$ are two random variables.  This is a particular
+
+manifestation of a deeper theorem of the same name.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to derive the Cauchy-Schwartz inequality that appears in statistics.
+ </LI>
+    <LI>  You should be able to show that the correlation coefficient for two random variables must be between -1 and +1 by making use of the Cauchy Schwartz theorem.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> CAUCHY_SCHWARTZ_INEQUALITY_STATS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> cauchy-schwartz-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video that goes through the derivation of the Caucy-Schwartz inequality
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

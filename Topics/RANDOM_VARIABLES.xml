@@ -1,0 +1,154 @@
+<PAGE>
+  <TITLE> Random variables </TITLE>
+  <DESCRIPTION>
+
+
+Imagine an experiment performed in the future. 
+
+The outcome from this experiment is a number $X$ that we cannot possibly know 
+
+in advance of doing the experiment. At the very least however we know that $X$ 
+
+will be a number from the set of all real numbers $\mathcal{R}$. We may know 
+
+more than this, however, so we define a function, $F_X(x)$, called the 
+
+cumulative probability distribution function, which somehow encodes all the 
+
+information we know about the most likely outcome of the experiment. This 
+
+function has the following three properties:
+
+$$
+
+ \lim_{x\rightarrow -\infty} F_X(x) = 0 \qquad \lim_{x\rightarrow \infty} 
+
+F_X(x) = 1 \qquad \lim_{\epsilon\rightarrow 0} F_X(x+\epsilon) = F_X(x)
+
+$$
+
+and is given by $F_X(x) = P(X\le x)$.  In other words $F_X(x)$ is the 
+
+probability that the random variable, $X$, has a value that is less than or 
+
+equal $x$.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the classical interpretation of probability using notions from set theory.
+ </LI>
+    <LI>  You should be able to calculate probabilities using the classical interpretation of probability. In other words you should be able to do this by enumerating all the outcomes in the sample space.
+ </LI>
+    <LI>  You should be able to explain the limitations of the classical interpretation of probability.
+ </LI>
+    <LI>  You should be able to list the properties of a probability distribution function and explain how this function should be interpreted.
+ </LI>
+    <LI>  You should be able to explain the relationship between the probability mass function for a discrete random variable and the probability distribution function. 
+ </LI>
+    <LI>  You should be able to explain the relationship between the probability density function for a continuous random variable and the probability distribution function.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-1-coins-and-dice.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Write a program to generate random variables
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> classical_probability_video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+The classical interpretation of probability explained
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> non-classical-probability-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An introduction to the cumulative probability distribution function
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> probability-functions </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An introduction to the probability mass and probabillity density
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> random-variables-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some simple exercises on random variables
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap02.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Some introductory notes on probability
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap04.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Introductory material on discrete random variables including descriptions of the binomial, geometric and poisson random variables.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap10.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Some notes on continuous random variables including descriptions of the uniform, exponential and normal random variables.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> random-variables-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Programming exercises involving generating various types of random variables
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

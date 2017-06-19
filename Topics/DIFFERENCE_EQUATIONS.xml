@@ -1,0 +1,49 @@
+<PAGE>
+  <TITLE> Difference equations </TITLE>
+  <DESCRIPTION>
+
+
+The linear equation for the unknown vector $\mathbf{x}$, involving the
+
+known vector $\mathbf{b}$ 
+
+and the matrix, $\mathbf{A}$, with rank less than the dimension of $\mathbf{b}$;
+
+$$
+
+\mathbf{Ax}=\mathbf{b}  \quad ,
+
+$$
+
+has a general solution that  can be written in terms of the homogeneous solution
+
+(null-space/kernel  vector) and the particular solution:
+
+$$
+
+\mathbf{x}=\mathbf{x}_{\rm homo}+\mathbf{x}_{\rm part}
+
+$$
+
+where:
+
+$$
+
+\mathbf{Ax}_{\rm homo}=0 \qquad, \qquad \mathbf{Ax}_{\rm part} =\mathbf{b} \quad
+
+.
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the difference between a homogeneous difference equations and an inhomogeneous difference equations.
+ </LI>
+    <LI>  You should be able to solve homogeneous difference equations and inhomogeneous difference equations.
+ </LI>
+    </UL>
+  </AIMS>
+</PAGE>

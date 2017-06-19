@@ -1,0 +1,40 @@
+<PAGE>
+  <TITLE> Matrix multiplication </TITLE>
+  <DESCRIPTION>
+
+
+The $ij$ element of the product of two matrices $A$ and $B$ is calculated using:
+
+$$
+
+(A B)_{ij} = \sum_{k=1}^N A_{ik}B_{kj}
+
+$$
+
+where $N$ is the number of columns in the matrix $A$ and the number of rows in matrix $B$.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to write out an expression for the elements of a product of two matrices using summation notation.
+ </LI>
+    <LI>  You should be able to calculate products of matrices with (at most) 5 rows or columns using pen and paper. 
+ </LI>
+    <LI>  You should be able to write a program in python that uses nested for loops to calculate the product of two matrices.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MATRIX_MULTIPLICATION </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> matrix-multiplication-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some matrix multiplication problems
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

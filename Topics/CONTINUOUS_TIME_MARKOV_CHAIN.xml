@@ -1,0 +1,97 @@
+<PAGE>
+  <TITLE> Markov chains in continuous time </TITLE>
+  <DESCRIPTION>
+
+
+The central equation in the theory of continuous time Markov chains is the Kolmogorov equation:
+
+$$
+
+\frac{\textrm{d} \mathbf{P}(t)}{\textrm{d}t} = \mathbf{P(t)}\mathbf{Q}
+
+$$
+
+In this equation $\mathbf{Q}$ is the so called jump rate matrix, which is the following matrix of limits.
+
+$$
+
+\lim_{\delta t \rightarrow 0} \frac{P(\delta t) - \mathbf{I}}{\delta t}
+
+$$
+
+The first of these two equations has the differential of a matrix of probabilities on the left hand side.  
+
+A continuous time Markov chain thus has a limiting stationary distribution $\pi$ if there is any non-zero 
+
+vector that satisfies:
+
+$$
+
+\pi \mathbf{Q} = 0
+
+$$
+
+This equation comes about by setting $\frac{\textrm{d} \mathbf{P}(t)}{\textrm{d}t}=0$ in the first equation.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain why the Chapman-Kolmogorov relation is particularly useful in the context of continuous time Markov chains.
+ </LI>
+    <LI>  You should be able to explain what is meant by the jump-rate matrix for a continuous time Markov chain.
+ </LI>
+    <LI>  You should be able to derive the Kolmogorov relation for continuous-time Markov chains.
+ </LI>
+    <LI>  You should be able to show that the exponential of the jump rate matrix multiplied by time is the solution of the Kolmogorov relation
+ </LI>
+    <LI>  You should be able to explain what conditions must be satisfied by the jump rate matrix of a continuous time Markov chain in order for it to have a stationary distribution.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap23.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Notes on Markov chains in continuous time
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap25.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Notes on some examples of Markov chains in continuous time.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> continuous-time-markov </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video introducing the theory of Markov chains in continuous time.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> continuous-time-markov-chains-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems involving simple continuous time Markov chains
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

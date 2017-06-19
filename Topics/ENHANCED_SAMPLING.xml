@@ -1,0 +1,42 @@
+<PAGE>
+  <TITLE> Enhanced sampling </TITLE>
+  <DESCRIPTION>
+
+
+A problem arises when Monte Carlo or molecular dynamics is used to sample energy landscapes that contain
+
+high energetic barriers.  The random moves in these methods are generally small local moves.  That is 
+
+to say the moves generally do not take the system from one local minimum to another. This is a problem 
+
+as the probability that the system will cross any energetic barriers by making these local moves is very 
+
+low.  Thankfully a number of enhanced sampling algorithms exist that can be used to force these barrier 
+
+crossing events to occur in relatively short simulation timescales.  Many of these methods work by introducing
+
+additional bias terms into the Hamiltonian.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain how simulation biases are used to force the system to sample different parts of configuration space.
+ </LI>
+    <LI>  You should be able to list a range of different enhanced sampling techniques and discuss the relative merits and demerits of each one.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> ENHANCED_SAMPLING </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> enhanced-sampling-notes.pdf </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some notes on different methods for performing enhanced sampling calculations.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

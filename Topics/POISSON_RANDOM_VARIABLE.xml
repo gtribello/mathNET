@@ -1,0 +1,42 @@
+<PAGE>
+  <TITLE> The poisson random variable </TITLE>
+  <DESCRIPTION>
+
+
+The probability mass function for a Poisson random variable is:
+
+$$
+
+f_X(x) = P(X=x) = \frac{\lambda^x}{x!} e^{-\lambda}
+
+$$
+
+where $\lambda$ is a parameter.  The expectation and variance of this random variable are $\mathbb{E}(X) = \lambda$ and $\textrm{var}(X) = \lambda$.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain how the Poisson distribution can be derived from the binomial distribution in the limit as $n \rightarrow \infty$
+ </LI>
+    <LI>  You should be able to write out the probability mass function for the Poisson random variable.
+ </LI>
+    <LI>  You should be able to show that the Poisson random variable is properly normalised.
+ </LI>
+    <LI>  You should be able to derive the moment generating functions for the poisson random variable and hence obtain the expectation and variance for this random variable
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> POISSON_RANDOM_VARIABLE </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> poisson-random-variable-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems involving the Poisson Random variable.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

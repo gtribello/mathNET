@@ -1,0 +1,56 @@
+<PAGE>
+  <TITLE> Quadratic functions </TITLE>
+  <DESCRIPTION>
+
+
+A quadratic function is any function having the form:
+
+$$
+
+f(x) = ax^2 + bx + c 
+
+$$
+
+where $a$, $b$ and $c$ are parameters and where $a \ne 0$.  Quadratics can be written
+
+in a range of forms.  A very important result is the equation for the roots of the 
+
+qudaratic (the points where $f(x)=0$).  This equation is:
+
+
+
+$$
+
+x = \frac{ -b \pm \sqrt{b^2 - 4ac} }{2 a} 
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to factorise quadratics and multiply out factorised quadratics.
+ </LI>
+    <LI>  You should be able to find the roots of a quadratic equation.
+ </LI>
+    <LI>  You should be able to find the intercept for a quadratic equation.
+ </LI>
+    <LI>  You should be able to complete the square in order to find the location of the minimum/maximum for a quadratic equation.
+ </LI>
+    <LI>  When given the equation of a quadratic you should be able to draw a sketch of the graph and indicate where the graph crosses the $x$ and $y$ axis and the location of the minimum/maximum for the curve.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> QUADRATIC_EQUATIONS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> GEOGEBRA </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> quadratic-equation-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on sketching quadratic equations.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

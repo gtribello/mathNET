@@ -1,0 +1,94 @@
+<PAGE>
+  <TITLE> Conditional expectation </TITLE>
+  <DESCRIPTION>
+
+
+The conditional expectation of a discrete random variable $X$ given that the random variable $Y$ equals $y_i$ is given by:
+
+
+
+$$
+
+\mathbb{E}(X|Y=y_i) = \sum_{j=0}^\infty x_j P(X=x_j | Y=y_i )
+
+$$
+
+
+
+Conditional expectation values are useful because we can use them to calculate absolute expectation values using the conditional 
+
+expectation theorem:
+
+
+
+$$
+
+\mathbb{E}(X) = \sum_{i=0}^\infty \mathbb{E}(X|Y=y_i) P(Y=y_i)
+
+$$
+
+
+
+Another useful result that is derived using similar logic involves the fact that the expectation $\mathbb{E}(XY)$ can be calculated as:
+
+
+
+$$
+
+\mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y)
+
+$$
+
+
+
+If the random variables $X$ and $Y$ are independent.  This equation does not hold in general when the variables are not independent.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain what a conditional expectation value of a random variable measures.
+ </LI>
+    <LI>  You should be able to write out the conditional expectation theorem.
+ </LI>
+    <LI>  You should be able to calculate the mean and variance of the geometric random variable using the conditional expectation theorem.
+ </LI>
+    <LI>  You should be able to explain when the expectation $\mathbb{E}(XY)$ can be calculated as $\mathbb{E}(X)\mathbb{E}(Y)$.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> conditional-expectation-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Using the conditional expectation theorem to calculate the expectation and variance of the geometric random variable
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> conditional-expectation-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems involving using the conditional expectation theorem to calculate expectation values.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap07.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+A description of the conditional expectation theorem and an explanation of how it can be used to calculate expectation values.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

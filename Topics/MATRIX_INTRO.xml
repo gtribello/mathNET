@@ -1,0 +1,80 @@
+<PAGE>
+  <TITLE> Introduction to matrices </TITLE>
+  <DESCRIPTION>
+
+
+An $m \times n$ matrix, $\mathbf{A}$,  is a rectangular array of numbers like
+
+this:
+
+$$
+
+A = 
+
+\left(
+
+\begin{matrix}
+
+a_{11} & a_{12} & \cdots  &   a_{1n} \\
+
+a_{21} &      &    \cdots  & a_{2n}  \\
+
+\vdots  &  \vdots   &   &  \vdots \\
+
+a_{m1} & a_{m2} &  \cdots & a_{mn} \\
+
+\end{matrix}
+
+\right)
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  When given a matrix you should be able to determine the number of rows and columns it has.
+ </LI>
+    <LI>  You should be able to explain what it means when we say that a matrix is square.
+ </LI>
+    <LI>  When given a matrix you should be able to find the value of element $(i,j)$.
+ </LI>
+    <LI>  You should be able to write python programs involving matrices using numpy arrays.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MATRIX_INTRO </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> intro-matrix-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems on matrix addition and the multiplication of matrices by scalars
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MATRIX_INTRO </TOPIC>
+<LEVEL> EXTERNAL </LEVEL>
+<TYPE> WEBSITE </TYPE>
+<MODULE> module </MODULE>
+<LINK> https://en.wikipedia.org/wiki/Matrix_(mathematics) </LINK>
+<AUTHOR> Wikipedia </AUTHOR>
+<DESCRIPTION>
+article on matrices
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MATRIX_INTRO </TOPIC>
+<LEVEL> EXTERNAL </LEVEL>
+<TYPE> VIDEO </TYPE>
+<MODULE> module </MODULE>
+<LINK> https://www.khanacademy.org/math/precalculus/precalc-matrices/intro-to-matrices/v/introduction-to-the-matrix </LINK>
+<AUTHOR> Videos </AUTHOR>
+<DESCRIPTION>
+on matrices from the kahn academy
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

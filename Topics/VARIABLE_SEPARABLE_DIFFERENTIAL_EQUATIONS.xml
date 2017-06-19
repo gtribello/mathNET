@@ -1,0 +1,48 @@
+<PAGE>
+  <TITLE> Variable separable differential equations </TITLE>
+  <DESCRIPTION>
+
+
+A differential equation is said to be separable if the variables can be separated.  That is, a 
+
+separable equation is one that can be written in the form:
+
+$$
+
+\textrm{d}f = g(x) \textrm{d}x
+
+$$
+
+
+
+The general solution to these types of differential equations is:
+
+$$
+
+f(x) = \exp\left( -\int_0^x g(x') \textrm{d}x' \right)
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to recognize when a differential equation can be solved by separation of variables.
+ </LI>
+    <LI>  You should be able to use the method of separation of variables to solve differential equations.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> VARIABLE_SEPARABLE_DIFFERENTIAL_EQUATIONS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> differential-equation-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Exercises on solving variable separable differential equations.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

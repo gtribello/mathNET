@@ -1,6 +1,7 @@
 import resource
 import module
 import os
+import lxml.etree as ET
 
 class topic(object) :
   def __init__(self,name) :
@@ -104,6 +105,16 @@ class topic(object) :
      outfilecontents = outfilecontents.replace("INSERT FULL DESCRIPTION", explanation )
      ofile.write( outfilecontents )
      ofile.close()
+
+  def getRelevantResources(self,modname,ltype,reslist):
+    tree = ET.parse( "Topics/" + self.name + ".xml" )
+    resources, intro_table = tree.findall("RESOURCE"), ""
+    for res in resources :
+        res_obj = resource.resource( res )
+        if res_obj.ofModAndLevel( modname, ltype ) : 
+            reslist.append(res_obj.linkb) 
+            intro_table += res_obj.getResourceHTML( 2 )  
+    return intro_table, reslist
 
   def getResourceForModule(self,modname,reslist):
     ifile = open( "Topics/" + self.name, 'r' )

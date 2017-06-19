@@ -1,4 +1,3 @@
-import numpy as np
 import shutil
 import topic
 import basicgraph
@@ -7,8 +6,7 @@ import sys
 import os
 import lxml.etree as ET
 
-def printModuleSidebar( modname, pageout ):
-    of = open( pageout, "a" )
+def printModuleSidebar( modname, of ):
     of.write('<div class="col-md-2">\n')
     of.write('   <ul class="list-group sidebar-nav" id="sidebar-nav">\n')
     of.write('      <li class="list-group-item"><a href="' + modname + '-overview.html">Overview</a></li>\n')
@@ -19,7 +17,6 @@ def printModuleSidebar( modname, pageout ):
     of.write('      <li class="list-group-item"><a href="' + modname + '-content.html">Content</a></li>\n')
     of.write('   </ul>')
     of.write('</div>')
-    of.close()
 
 
 def buildModulePage( mname ):
@@ -37,40 +34,40 @@ def buildModulePage( mname ):
         modname, chp_topics_t, chp_topics = mname + str(n), chp.findall("TOPIC"), []
         for tp in chp_topics_t : chp_topics.append( tp.text.strip() )
         # Print overview page for this project
-        pageelements.printHeader( modname + " overview", "html/" + modname + "-overview.html" )
-        pageelements.printTopMenuBar( "html/" + modname + "-overview.html" )
-        of = open( "html/" + modname + "-overview.html", "a" )
+        of = open( "html/" + modname + "-overview.html", "w" )
+        pageelements.printHeader( modname + " overview", of ) 
+        pageelements.printTopMenuBar( of ) 
         of.write('<div id="content" class="container">\n')
         of.write('   <div class="row margin-vert-30">\n')
-        printModuleSidebar( modname, "html/" + modname + "-overview.html")
+        printModuleSidebar( modname, of )
         of.write('      <div class="col-md-10">\n')
         of.write('         <h2> Overview: ' + chp.find("TITLE").text + '</h2>\n')
         of.write('      </div>\n')
         of.write('   </div>\n')
         of.write('</div>\n')
+        pageelements.printFooter( of )
         of.close()
-        pageelements.printFooter( "html/" + modname + "-overview.html" )
         # Print final project page for this project
-        pageelements.printHeader( modname + " overview", "html/" + modname + "-fproject.html" )
-        pageelements.printTopMenuBar( "html/" + modname + "-fproject.html" )
-        of = open( "html/" + modname + "-fproject.html", "a" )
+        of = open( "html/" + modname + "-fproject.html", "w" )
+        pageelements.printHeader( modname + " overview", of )
+        pageelements.printTopMenuBar( of ) 
         of.write('<div id="content" class="container">\n')
         of.write('   <div class="row margin-vert-30">\n')
-        printModuleSidebar( modname, "html/" + modname + "-fproject.html")
+        printModuleSidebar( modname, of ) 
         of.write('      <div class="col-md-10">\n')
         of.write('         <h2> Final project: ' + chp.find("TITLE").text + '  </h2>\n')
         of.write('      </div>\n')
         of.write('   </div>\n')
         of.write('</div>\n') 
+        pageelements.printFooter( of ) 
         of.close()
-        pageelements.printFooter( "html/" + modname + "-fproject.html" )
         # Print practise exercises for this project
-        pageelements.printHeader( modname + " overview", "html/" + modname + "-practise.html" )
-        pageelements.printTopMenuBar( "html/" + modname + "-practise.html" )
-        of = open( "html/" + modname + "-practise.html", "a" )
+        of = open( "html/" + modname + "-practise.html", "w" )
+        pageelements.printHeader( modname + " overview", of ) 
+        pageelements.printTopMenuBar( of ) 
         of.write('<div id="content" class="container">\n')
         of.write('   <div class="row margin-vert-30">\n')
-        printModuleSidebar( modname, "html/" + modname + "-practise.html")
+        printModuleSidebar( modname, of ) 
         of.write('      <div class="col-md-6">\n')
         of.write('         <h2> Practise projects: ' + chp.find("TITLE").text + '</h2>\n')
         of.write('             <p>')
@@ -83,17 +80,27 @@ def buildModulePage( mname ):
         of.write('<p> If you would like to download the python notebook system onto your own laptop you can find it here:</p>')
         of.write('<a href="https://www.continuum.io/downloads"> https://www.continuum.io/downloads </a>')
         of.write('      </div>\n')
+        of.write('      <div class="col-md-4">\n')
+        of.write('<table>\n')
+        of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        reslist, topictab  = [], ""
+        for top in chp_topics :
+            tstring, reslis = mytopics.get(top).getResourceForModule( mname, reslist )
+            topictab += tstring
+        of.write( topictab )
+        of.write('</table>\n')
+        of.write('      </div>\n')
         of.write('   </div>\n')
         of.write('</div>\n')
+        pageelements.printFooter( of ) 
         of.close()
-        pageelements.printFooter( "html/" + modname + "-practise.html" )
         # Print apply page for this project
-        pageelements.printHeader( modname + " overview", "html/" + modname + "-apply.html" )
-        pageelements.printTopMenuBar( "html/" + modname + "-apply.html" )
-        of = open( "html/" + modname + "-apply.html", "a" )
+        of = open( "html/" + modname + "-apply.html", "w" )
+        pageelements.printHeader( modname + " overview", of ) 
+        pageelements.printTopMenuBar( of ) 
         of.write('<div id="content" class="container">\n')
         of.write('   <div class="row margin-vert-30">\n')
-        printModuleSidebar( modname, "html/" + modname + "-apply.html")
+        printModuleSidebar( modname, of ) 
         of.write('      <div class="col-md-6">\n')
         of.write('         <h2> Applying your knowledge: ' + chp.find("TITLE").text + '</h2>\n')
         of.write('             <p>')
@@ -108,17 +115,27 @@ def buildModulePage( mname ):
         of.write('<button type="button" class="btn btn-primary">Loops</button>')
         of.write('<button type="button" class="btn btn-primary">Lists</button>')
         of.write('      </div>\n')
+        of.write('      <div class="col-md-4">\n')
+        of.write('<table>\n')
+        of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        reslist, topictab  = [], ""
+        for top in chp_topics :
+            tstring, reslis = mytopics.get(top).getResourceForModule( mname, reslist )
+            topictab += tstring
+        of.write( topictab )
+        of.write('</table>\n')
+        of.write('      </div>\n')
         of.write('   </div>\n')
         of.write('</div>\n')
+        pageelements.printFooter( of ) 
         of.close()
-        pageelements.printFooter( "html/" + modname + "-apply.html" )
         # Print understand page for this project
-        pageelements.printHeader( modname + " overview", "html/" + modname + "-understand.html" )
-        pageelements.printTopMenuBar( "html/" + modname + "-understand.html" )
-        of = open( "html/" + modname + "-understand.html", "a" )
+        of = open( "html/" + modname + "-understand.html", "w" )
+        pageelements.printHeader( modname + " overview", of ) 
+        pageelements.printTopMenuBar( of ) 
         of.write('<div id="content" class="container">\n')
         of.write('   <div class="row margin-vert-30">\n')
-        printModuleSidebar( modname, "html/" + modname + "-understand.html")
+        printModuleSidebar( modname, of ) 
         of.write('      <div class="col-md-6">\n')
         of.write('         <h2> Understanding the content: ' + chp.find("TITLE").text + '</h2>\n')
         of.write('           <p>') 
@@ -128,17 +145,27 @@ def buildModulePage( mname ):
         of.write('in the video.  If you are struggling to answer any question please come and ask.'); 
         of.write('           </p>')                
         of.write('      </div>\n')
+        of.write('      <div class="col-md-4">\n')
+        of.write('<table>\n')
+        of.write('<tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description </h4> </td> <td width="15%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>\n')
+        reslist, topictab  = [], ""
+        for top in chp_topics :
+            tstring, reslis = mytopics.get(top).getResourceForModule( mname, reslist )
+            topictab += tstring
+        of.write( topictab )
+        of.write('</table>\n')
+        of.write('      </div>\n')
         of.write('   </div>\n')
         of.write('</div>\n')
+        pageelements.printFooter( of ) 
         of.close()
-        pageelements.printFooter( "html/" + modname + "-understand.html" )
         # Print content page for this project
-        pageelements.printHeader( modname + " overview", "html/" + modname + "-content.html" )
-        pageelements.printTopMenuBar( "html/" + modname + "-content.html" )
-        of = open( "html/" + modname + "-content.html", "a" )
+        of = open( "html/" + modname + "-content.html", "w" )
+        pageelements.printHeader( modname + " overview", of )
+        pageelements.printTopMenuBar( of ) 
         of.write('<div id="content" class="container">\n')
         of.write('   <div class="row margin-vert-30">\n')
-        printModuleSidebar( modname, "html/" + modname + "-content.html")
+        printModuleSidebar( modname, of ) 
         of.write('      <div class="col-md-6">\n')
         of.write('         <h2> Chapter content: ' + chp.find("TITLE").text + '</h2>\n')
         of.write('           <p>')
@@ -160,8 +187,8 @@ def buildModulePage( mname ):
         of.write('      </div>\n')
         of.write('   </div>\n')
         of.write('</div>\n')
-        of.close()
-        pageelements.printFooter( "html/" + modname + "-content.html" )
+        pageelements.printFooter( of ) 
+        of.close() 
 
 
 if __name__ == "__main__" :

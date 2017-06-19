@@ -1,0 +1,38 @@
+<PAGE>
+  <TITLE> Product Rule </TITLE>
+  <DESCRIPTION>
+
+
+The derivative of a product of functions, $f(x) = g(x)h(x)$, with respect to $x$ is given by the product rule:
+
+$$
+
+\frac{\textrm{d}f(x)}{\textrm{d}x} = h(x)\frac{\textrm{d}g(x)}{\textrm x} g(x)\frac{\textrm{d}h(x)}{\textrm{x}}
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to write out the product rule.
+ </LI>
+    <LI>  You should be able to use the product rule to calculate the derivative of products of functions.
+ </LI>
+    <LI>  You should be able to use the product rule in tandem with the chain rule to find derivatives for particularly complicated functions.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> PRODUCT_RULE </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038 </MODULE>
+<LINK> advanced-differentiation-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems that require you to use the chain and product rules in tandem
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

@@ -1,0 +1,81 @@
+<PAGE>
+  <TITLE> The mean field approximation </TITLE>
+  <DESCRIPTION>
+
+
+The mean field approximation is a technique that can be used to calculate approximate partition functions for systems composed 
+
+of interacting particles.  The problem with calculating such partition functions exactly comes when one attempts to enumerate
+
+all the possible microstates and calculate their energy.  This combinatorial problem is too expensive to solve by brute force 
+
+and is impossible to solve for complex Hamiltonians.  In mean field theory the $N$-body system is thus replaced by a 1-body system
+
+that sits in a suitably chosen external field.  This external field is set equal to the average field due to the 
+
+remaining particles.   In essence mean field theory is an approximation technique that allows us to map a multi-body problem onto 
+
+a one-body problem.  Similar techiniques appear in many different fields within physics and are often given different names.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to write down the mean field Hamiltonian for the 1D and 2D closed Ising models.
+ </LI>
+    <LI>  You should be able to derive expressions for the mean field canonical partition function for 1D and 2D Ising models.
+ </LI>
+    <LI>  You should be able to find average energies and average spins for 1D and 2D, mean-field Ising models by taking appropriate derivatives of the partition function.
+ </LI>
+    <LI>  You should be able to find the temperature at which the order disorder transition takes place for an Ising model simulated using mean field theory.
+ </LI>
+    <LI>  You should be able to perform derivations with more refined mean field theories in which the interaction between a subset of the spins are modelled explicitly.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems in which the mean field approximation is used to examine Ising models in one and two dimensions.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> GEOGEBRA </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-ex-one </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Understanding the behavior of the magnetization for the mean-field, 1D Ising model
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> GEOGEBRA </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-ex-two </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Understanding the free energy landscape for the mean-field, 1D Ising model
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-approx-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An video describing how we can use the mean field approximation to calculate an approximation to the partition function for the Ising model.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

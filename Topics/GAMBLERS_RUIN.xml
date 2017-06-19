@@ -1,0 +1,173 @@
+<PAGE>
+  <TITLE> Gamblers ruin </TITLE>
+  <DESCRIPTION>
+
+
+Gamblers ruin is a problem involving a particular discrete time Markov chain.
+
+The transition matrix for the Gamblers ruin problem is the following $(N+1) \times (N+1)$ 
+
+square matrix:
+
+$$
+
+M = \left(
+
+\begin{matrix}
+
+1 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 0 \\
+
+q & r & p & 0 & 0 & \dots & 0 & 0 & 0 \\ 
+
+0 & q & r & p & 0 & \dots & 0 & 0 & 0 \\
+
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+
+0 & 0 & 0 & 0 & 0 & \dots & q & r & p \\
+
+0 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 1
+
+\end{matrix}
+
+\right)
+
+$$
+
+where $q + r + p = 1$.  This chain has ($N-1$) transient states and two recurrent states so 
+
+solving this problem ammounts to finding hitting times and hitting probabilities.  What makes
+
+this particular chain interesting is that the symmetry of the matrix ensures that it is possible to 
+
+find the hitting probabilities by solving a homogeneous difference equation.  Furthermore, we can find the 
+
+hitting times by solving an inhomogenous difference equation.   When these two probelms are solved we find that
+
+the conditional probability, $\pi_k$, of finishing in state $0$ given that we start in state $k$ is given by:
+
+$$
+
+\pi_k = \frac {\left( \frac{q}{p}\right)^k - \left(\frac{q}{p}\right)^N }{ 1 - \left(\frac{q}{p}\right)^N } 
+
+$$
+
+The expected time to arrival in either state $0$ or state $N$ given that we start in state $k$ is by contrast:
+
+$$
+
+d_k = \frac{k}{q-p} - \frac{N(1-\pi_k)}{q-p}
+
+$$
+
+Notice that these equations are NOT valid in the limit when $q=p$ and that l'Hopital's rule must be used to find
+
+the probabilities in this limit. 
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to write out the transition graph and the transition matrix for the gamblers ruin problem.
+ </LI>
+    <LI>  You should be able to classify the states in the gamblers ruin problem as transient/recurrent.
+ </LI>
+    <LI>  You should be able to derive an expression for the probability of ruin in the gamblers run problem.
+ </LI>
+    <LI>  You should be able to calculate the probability of ruin in the limit of equal forward and backward jump probabilities ($p=q$) using l'Hopital's rule.
+ </LI>
+    <LI>  You should be able to use condition expectation to obtain a difference equation the solution of which tells one the length of the game in gamblers ruin.
+ </LI>
+    <LI>  You should be able to solve the difference equation for the length of the game to find an expression for the expected length of the game.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-gamblers-ruin.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise on gamblers ruin
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> gamblers-runs-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining the gamblers ruin problem and the derivation of the difference equations.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> gamblers-ruin-probability.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Deriving the probability of ruin in gamblers ruin
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> gamblers-ruin-expectation.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Deriving the expected length of the game in the gamblers ruin problem
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap08.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Some introductory notes on random walks.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap09.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Some notes on how the expected number of games is worked out in the gamblers ruin problem.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> gamblers-ruin-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some exercises that use the solutions of the gamblers ruin problem.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> gamblers-ruin-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise that introduces you to the Gamblers ruin problem.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

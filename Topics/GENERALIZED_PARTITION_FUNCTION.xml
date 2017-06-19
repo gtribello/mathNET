@@ -1,0 +1,131 @@
+<PAGE>
+  <TITLE> The generalized partition function </TITLE>
+  <DESCRIPTION>
+
+
+A partition function describes the statistical properties of a system in thermodynamic
+
+equilibrium.  Partition functions are functions of the thermodynamic state variables
+
+such as the temperature and volume.  Each partition function is constructed to represent
+
+a particulr statistical ensemble.  We can derive a generalized form for the partition function 
+
+by requiring that, if each of the microstates in phase space has some set of properties $\{b^{(j)}\}_i$,
+
+ (a volume, energy, number of atoms, etc) the ensemble average for each of these properties $\langle B^{(j)} \rangle$ 
+
+should be finite.  In other words:
+
+\[
+
+\sum_i p_i b^{(j)}_i = \langle B^{(j)} \rangle
+
+\]
+
+We can then use Lagrange's method of undetermined multipliers to derive the probability of being in a 
+
+microstate as:
+
+\[
+
+p_i = \frac{e^{-\sum_j \lambda^{(j)} b^{(j)}_i}}{Z} 
+
+\]
+
+where $Z$ is the partition function, which is given by:
+
+\[
+
+Z =  = \sum_i e^{-\sum_j \lambda^{(j)} b^{(j)}_i} 
+
+\]
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the meanings of the terms microstate and phase space.
+ </LI>
+    <LI>  You should be able to state the principle of equal apriori probabilities in statistical mechanics.
+ </LI>
+    <LI>  You should be able to use Lagrange's method of undetermined multipliers to derive the generalised partition function.
+ </LI>
+    <LI>  You should be able to explain how entropy and information are related.
+ </LI>
+    <LI>  You should be able to write an expression for the entropy of a uniform distribution and the entropy for the generalised ensemble.
+ </LI>
+    <LI>  You should be able to write an expression for the infinitesimal change of entropy that occurs when the constrained extensive variables are changed by an infinitesimal amount.
+ </LI>
+    <LI>  You should be able to differentiate the generalised partition function (and functions thereof) with respect to $\lambda_k$ and $\alpha^{(j)}$
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> statistical-mechanics-intro-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An introductory video on statistical mechanics that introduces the terms microstates and phase space.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> generalised-partition-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video introducing in which the form of the generalised partition function is derived by performing a constrained optimisation of the information.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> entropy-statistical-mechanics-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining how the entropy in the generalised ensemble is calculated.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> entropy-changes-statistical-mechanics-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining how an expression for the change in entropy can be derived in statistical mechanics.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> generalised-ensemble.pdf </LINK>
+<AUTHOR> Some </AUTHOR>
+<DESCRIPTION>
+notes summarising all the important information you need to know about the generalised partition function.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> ensemble-averages-by-differentiation-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video demonstrating how some ensemble averages can be calculated by taking derivatives of the partition function.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

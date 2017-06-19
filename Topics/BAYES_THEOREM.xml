@@ -1,0 +1,88 @@
+<PAGE>
+  <TITLE> Bayes theorem </TITLE>
+  <DESCRIPTION>
+
+
+Bayes theorem is a commonly used theorem in statistics.  This theorem states that:
+
+
+
+\[
+
+ P(X=1|Y=2)P(Y=2) = P(Y=2|X=1)P(X=1)
+
+\]
+
+
+
+This equality stems from the fact that $P(X=1|Y=2)P(Y=2)$ and $P(Y=2|X=1)P(X=1)$ are just two different ways of writing $P(X=1 \wedge Y=2)$ 
+
+as you can see by looking at the definition of conditional probability.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should understand the derivation of Bayes theorem.
+ </LI>
+    <LI>  You should be able to use Bayes theorem to interpret probabilisitc information.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> BAYES_THEOREM </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> bayes_theorem_video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video introducing Bayes theorem
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> BAYES_THEOREM </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-6-bayes-theorem.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise to help you get to grip with Bayes theorem
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> BAYES_THEOREM </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> bayes-theorem-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems on Bayes theorem
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> BAYES_THEOREM </TOPIC>
+<LEVEL> EXTERNAL </LEVEL>
+<TYPE> VIDEO </TYPE>
+<MODULE> module </MODULE>
+<LINK> https://www.khanacademy.org/math/precalculus/prob-comb/dependent-events-precalc/v/bayes-theorem-visualized </LINK>
+<AUTHOR> blank </AUTHOR>
+<DESCRIPTION>
+Kahn academy video on bayes theorem.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> BAYES_THEOREM </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> bayes-theorem-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise that will help you understand Bayes theorem and conditional probability.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

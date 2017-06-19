@@ -1,0 +1,57 @@
+<PAGE>
+  <TITLE> Independent random variables </TITLE>
+  <DESCRIPTION>
+
+
+Two random variables are said to be independent if:
+
+$$
+
+P(X=x|Y=y) = P(X=x) \qquad \forall \quad i,j
+
+$$
+
+If two random variables are indpendent (<b> and only if they are independent</b>) the joint probability mass function, $f_{XY}(x,y)$ can be calculated 
+
+from the marginals, $f_X(x)$ and $f_Y(y)$, using:
+
+$$
+
+f_{XY}(x,y) = f_X(x)f_Y(y)
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain in terms of conditional probability what it means for events to be independent.
+ </LI>
+    <LI>  You should be able to calculate the joint probability mass function, $f_{XY}(x,y)$ for a pair of independent variables, $X$ and $Y$, from the two individual marginal probability mass functions, $f_X(x)$ and $f_Y(y)$. 
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> INDEPENDENT_RANDOM_VARIABLES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> independence </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An explanation of what we mean by independence in statistics
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> INDEPENDENT_RANDOM_VARIABLES </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> independent-random-variables-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Exercises dealing with independent random variables and the inclusion exclusion principle
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

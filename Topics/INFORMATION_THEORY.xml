@@ -1,0 +1,71 @@
+<PAGE>
+  <TITLE> Information theory  </TITLE>
+  <DESCRIPTION>
+
+
+We define a quantity $I$ (the information) contained in a prob- ability distribution by requiring that this quantity has the following properties (Khinchine)
+
+
+
+- The information depends only on the probability distribution 
+
+- The uniform distribution contains the minimum information.
+
+- If we enhance the sample space with impossible events the information does not increase.
+
+- Information is additive
+
+
+
+It is possible to show, starting from these axioms, that the information contained in a 
+
+probability distribution that has $N$ possible outcomes in the sample space, $\Omega$, that 
+
+have probabilities given by the vector $\mathbf{p}$, is equal to:
+
+$$
+
+I(\mathbf{p}) = k \sum_{i=1}^N p_i \ln p_i
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to state the Khinchine axioms of information theory
+ </LI>
+    <LI>  You should be able to give an expression for the information contained in a uniform distribution.
+ </LI>
+    <LI>  You should be able to give an expression for the information contained in a non-uniform distribution.
+ </LI>
+    <LI>  You should be able to explain how entropy and information are related.
+ </LI>
+    <LI>  You should be able to write an expression for the entropy of a uniform distribution
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> INFORMATION_THEORY </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> info-theory-video1 </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video on the Khinchine axioms for information theory in which the information contained in a uniform distribution is derived.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> INFORMATION_THEORY </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> PHY9038/AMA4004 </MODULE>
+<LINK> info-theory-video2 </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video in which the information contained in a non-uniform distribution is derived.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

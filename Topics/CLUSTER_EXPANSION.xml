@@ -1,0 +1,62 @@
+<PAGE>
+  <TITLE> The Cluster expansion approximation </TITLE>
+  <DESCRIPTION>
+
+
+The cluster expansion is an expansion that can be used to calculate the partition function for a system of non-interacting 
+
+particles.  Suppose that we have a system of $N$ particles and that the interaction potential between particles $i$ and $j$ 
+
+is given by $v_{ij}$.  The partition function of this system is then:
+
+$$
+
+Z = \frac{1}{N!} \left( \frac{2\pi m}{\beta h^2} \right)^\frac{3N}{2} \int \int \dots \int \textrm{d}x_1 \textrm{d}x_2 \dots \textrm{d}x_{3N} \prod_{i=2}^N \prod_{j=1}^{i-1} 1 + f_{ij}
+
+$$
+
+where $f_{ij} = e^{-\beta v_{ij}}-1$.  We arrive at the cluster expansion by recognising that the integral over the spatial coordinates above can be rewritten as the following sum of integrals:
+
+$$
+
+\int \int \dots \int \textrm{d}x_1 \textrm{d}x_2 \dots \textrm{d}x_{3N} \prod_{i=2}^N \prod_{j=1}^{i-1} 1 + f_{ij} = \int \int \dots \int \textrm{d}x_1 \textrm{d}x_2 \dots \textrm{d}x_{3N} + \int \int \dots \int \textrm{d}x_1 \textrm{d}x_2 \dots \textrm{d}x_{3N} \sum_{i=2}^N \sum_{j=1}^{i-1} f_{ij} + \dots  
+
+$$
+
+If we take the first two terms in this expansion only and thus assume that the particles are weakly interacting it is possible
+
+to show that when we take suitable derivatives of the partition function that emerges by solving the integral we get the van 
+
+der Waals equation of state:
+
+$$
+
+\left[ P + \frac{B}{2} \left(\frac{N}{V}\right)^2 \right] \left( V - \frac{AN}{2} \right) = Nk_B T
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain how the cluster expansion can be used to calculate the partition function approximately.
+ </LI>
+    <LI>  You should be able to discuss the types of systems in which it is valid to truncate these expansions.
+ </LI>
+    <LI>  You should be able to show how the van der Waals equation of state can be derived by using the cluster expansion.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> CLUSTER_EXPANSION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> cluster-expansion-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining how the van der Waals equation of state can be derived by considering a gas of hard spheres.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

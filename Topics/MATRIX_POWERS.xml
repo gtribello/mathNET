@@ -1,0 +1,50 @@
+<PAGE>
+  <TITLE> Taking positive integer powers of a square matrix </TITLE>
+  <DESCRIPTION>
+
+
+We can calculate the second power of a square matrix, $\mathbf{A}$, by multiplying it by itself:
+
+$$
+
+(A^2)_{ij} = \sum_k A_{ik} A_{kj}
+
+$$
+
+If we thus multiply the square of the matrix, $\mathbf{A}^2$, by $\mathbf{A}$ we get the cube of a matrix.
+
+We thus arrive at the following general rule:
+
+$$
+
+\mathbf{A}^{n+m} = \mathbf{A}^n \mathbf{A}^m \qquad \forall n,m > 0
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain how the powers of a square matrix are calculated.
+ </LI>
+    <LI>  You should be able to write a python program that calculates the powers of a matrix by performing matrix multiplications.
+ </LI>
+    <LI>  You should be able to write a program for calculating the powers of a diagonal matrix that scales linearly with the size of the matrix.
+ </LI>
+    <LI>  You should be able to write a program that expoits the eigendecomposition of a square matrix in order to calculate matrix powers quickly.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MATRIX_POWERS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> matrix-powers </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on taking powers of square matrices.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

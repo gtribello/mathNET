@@ -1,0 +1,56 @@
+<PAGE>
+  <TITLE> The partition function for molecular gasses </TITLE>
+  <DESCRIPTION>
+
+
+It is common to assume that there are no intermolecular interactions between molecules when calculating the partition 
+
+function for a molecular gas.  Furthermore, it is also common to assume that the Hamiltonian for the molecules can be 
+
+written as a sum of electronic, $H_e$, translational, $H_t$, rotational, $H_r$ and vibrational, $H_v$, parts as shown below:
+
+$$
+
+H = H_e + H_t + H_r + H_v
+
+$$ 
+
+as if the Hamiltonian can be written in this way the partition function can be written as a product of electronic, 
+
+translational, rotational and vibrational parts:
+
+$$
+
+Z = Z_e \times Z_t \times Z_r \times Z_v
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain why the partition function can be written as a product of vibrational, electronic, translational and vibrational parts.
+ </LI>
+    <LI>  You should be able to determine how many degrees of freedom a molecule contaning $N$ atoms possesses and how many of these degrees of freedom are translations, how many are rotational and how many are vibrational.
+ </LI>
+    <LI>  You should be able to write an expression for the translational partition function based on your knowledge of the ideal gas model.- You should be able to derive an expression for the partition function of a harmonic vibrational degree of freedom.
+ </LI>
+    <LI>  You should be able to derive expressions for the partition function of a rigid rotor, a symmetric top an assymetric top and a linear molecule.
+ </LI>
+    <LI>  You should be able to explain what the equipartition principle tells us about the average energy of each degree of freedom of the molecule.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> PARTITION_FUNCTION_FOR_MOLECULES </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> molecular-gas-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video describing how the partition function for a molecular gas can be decomposed in terms of translational, rotational and vibrational parts.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

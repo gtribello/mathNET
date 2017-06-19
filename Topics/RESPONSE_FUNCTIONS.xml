@@ -1,0 +1,35 @@
+<PAGE>
+  <TITLE> Response functions </TITLE>
+  <DESCRIPTION>
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the constraints on the first and second derivatives of the internal energy, enthalpy, Helmholtz free energy and Gibbs free energy at equilibrium and explain how these place constraints on the response functions.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> RESPONSE_FUNCTIONS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> response-functions-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An explanation as to how inequalities involving response functions can be derived.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> RESPONSE_FUNCTIONS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> response-functions-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Exercises that require you to use all you have learnt about classical thermodynamics.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

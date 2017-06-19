@@ -1,0 +1,93 @@
+<PAGE>
+  <TITLE> Joint probability distribution </TITLE>
+  <DESCRIPTION>
+
+
+If you have a pair of random variables $X$ and $Y$ the joint probability distribution function, $F_{XY}(x,y)$ tells you the following probability.
+
+$$
+
+F_{XY}(x,y) = P( X \le x \wedge Y \le y )
+
+$$
+
+This function does not appear that often and it is more common to work with the joint probability mass function if the random variables are discrete:
+
+$$
+
+f_{XY}(x,y) = P( X=x \wedge Y=y )
+
+$$
+
+You can calculate the marginal distribution, $f_X(x)$, for the random variable $X$ from the joint probability mass function using:
+
+$$
+
+f_X(x) = P( X=x ) = \sum_{i=0}^\infty f_{XY}(x,y_i)
+
+$$
+
+Similarly the marginal distribution, $f_Y(y)$, for the random variable $Y$ can be found using:
+
+$$
+
+f_Y(y) = P( Y=y ) = \sum_{i=0}^\infty f_{XY}(x_i,y)
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain the meanings of the joint probability mass function and joint probability distribution functions for a pair of random variables.
+ </LI>
+    <LI>  You should be able to derive the marginal probability mass function for a discrete random variable from the joint probability mass function.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> joint-probability-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Exercises involving joint probability distributions
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-pairs-of-random-varaiables.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on simulating correlated variables.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap06.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+A description of joint probability functions including a derivation of the Cauchy Schwartz inequality.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> correlation-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise in which geometry is used to better understand what it means when we say random variables are correlated.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

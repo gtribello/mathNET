@@ -1,0 +1,42 @@
+<PAGE>
+  <TITLE> Integration by parts </TITLE>
+  <DESCRIPTION>
+
+
+Integration by parts involves using the product rule in reverse.  In essence you recognise the following equality 
+
+when you apply the fundamental theorem of calculus to the product rule:
+
+
+
+$$
+
+\int u {dv \over dx} dx = uv - \int v {du \over dx} . dx  \quad .
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to solve definite and indefinite integrals using integration by parts.
+ </LI>
+    <LI>  You should be able to solve more complex integrals by using integration by parts multiple times.
+ </LI>
+    <LI>  You should be able to solve more complex definite and indefinite integrals using a combination of integration by substitution and integration by parts.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> INTEGRATION_BY_PARTS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> integration-by-parts-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some problems where integration by parts must be used
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

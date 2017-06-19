@@ -1,0 +1,84 @@
+<PAGE>
+  <TITLE> The Carnot Cycle </TITLE>
+  <DESCRIPTION>
+
+
+The Carnot cycle is a thermodynamic cycle that describes the set of changes of state that occur in the gas in an idealised engine.  
+
+It is possible to show that the Carnot engine is the most efficient engine that can be constructed and as such this cycle plays 
+
+an important role in thermodynamics.  A universal calibration for temperature (the Kelvin scale) can be constructed by using considerations based on the
+
+Carnot cycle.  Furthermore, considerations based on Carnot cycle allow us to demonstrate that the second law of thermodynamic is consistent with the 
+
+requirement that heat should not move up a temperature gradient without performing additional work.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to describe the transitions that take place during the Carnot cycle and the work and heat that is transferred between the gas in the piston and its surroundings during these transitions.
+ </LI>
+    <LI>  You should be able to explain why the Carnot engine is the most efficient engine that can be constructed.
+ </LI>
+    <LI>  You should be able to explain how Kelvin's universal calibration for temperature is constructed using considerations based on the Carnot cycle.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> CARNOT_CYCLE </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> carnot-video-1 </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An explanation of the various stages in the operation of a Carnot engine and an explanation as to why this is the most efficient engine that can be constructed.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CARNOT_CYCLE </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> temperature-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An explanation of Kelvin's universal calibration for temperature.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CARNOT_CYCLE </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> adiabatic-work-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An explanation of how much work when the volume of a system changes adiabatically.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CARNOT_CYCLE </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> carnot-entropy-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+The Claussius inequality and entropy explained by comparing the efficiency of real engines with that of the Carnot engine.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CARNOT_CYCLE </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> carnot-fridge-problem </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise to consolidate what you have learnt about the Carnot engine.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

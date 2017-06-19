@@ -1,0 +1,27 @@
+<PAGE>
+  <TITLE> Molecular dynamics simulation </TITLE>
+  <DESCRIPTION>
+
+
+Molecular dynamics is a computer simulation method for studying the physical movements 
+
+of atoms and molecules.  In this method the forces between atoms are computed so that the 
+
+positions and velocities of the atoms can be updated using Newton's Laws of motion, which are
+
+solved numerically. 
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to implement the velocity verlet algorithm and thus write your own code for performing molecular dynamics simulations.
+ </LI>
+    <LI>  You should be able to explain how the temperature in a molecular dynamics simulation can be kept fixed by using a thermostat.
+ </LI>
+    <LI>  You should be able to explain how ensemble averages can be computed from molecular dynamics trajectories.
+ </LI>
+    </UL>
+  </AIMS>
+</PAGE>

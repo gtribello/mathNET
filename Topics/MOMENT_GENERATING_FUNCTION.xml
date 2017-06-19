@@ -1,0 +1,54 @@
+<PAGE>
+  <TITLE> The moment generating function </TITLE>
+  <DESCRIPTION>
+
+
+The moment generating function, $M_X(t)$, of a random variable, $X$, is defined as:
+
+$$
+
+ M_X(t) = \mathbb{E}(e^{tX})
+
+$$
+
+You can calculate the $n$th moment of a random variable, $\mathbb{E}(X^n)$ from the moment 
+
+generating function as follows:
+
+$$
+
+ \mathbb{E}(X^n) = \frac{\textrm{d}^n M_X(0)}{\textrm{d}t^n}
+
+$$
+
+In other words the value of the $n$th derivative of the moment generating function at $t=0$ is 
+
+equal to the $n$th moment.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to explain what is meant by the $n$th moment of a random variable and the $n$th central moment.
+ </LI>
+    <LI>  You should be able to write an expression for the moment generating function of both continuous and discrete random variables.
+ </LI>
+    <LI>  You should be able to explain how to calculate the $n$th moment of a random variable from the moment generating function.
+ </LI>
+    <LI>  You should be able to derive the moment generating functions for Binomial and Poisson random variables.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MOMENT_GENERATING_FUNCTION </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> expectation-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Introducing the expectation, variance and moment generating function
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

@@ -1,0 +1,58 @@
+<PAGE>
+  <TITLE> Differential equations and integrating factors </TITLE>
+  <DESCRIPTION>
+
+
+The first-order (ordinary linear) differential equation:
+
+$$
+
+{d y \over dx} + p(x) y = q(x) \qquad ,
+
+$$
+
+can be rearranged using an {\em integrating factor}, into the form:
+
+$$
+
+{ d \over dx} \left(  y(x)  \ e^{ \int p\  dx } \right)  = \ e^{ \int p\  dx }
+
+q(x)  \qquad , 
+
+$$
+
+The solution of this differential equation is then:
+
+$$
+
+y(x) =  \ e^{- \int p  \ dx } \times \int  e^{ \int p\ dx}  \ q(x)  \ dx  \qquad
+
+.
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to determine when it is appropriate to use the integrating factor method to solve a differential equation.
+ </LI>
+    <LI>  You should be able to explain why the integrating factor method works by making reference to the product rule.
+ </LI>
+    <LI>  You should be use the integrating factor method to solve differential equations.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> SOVING_DIFFERENTIAL_EQUATIONS_USING_INTEGRATING_FACTORS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> integrating-factor-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems involving solving differential equations using an integrating factor
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

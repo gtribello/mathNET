@@ -1,0 +1,135 @@
+<PAGE>
+  <TITLE> The law of large numbers </TITLE>
+  <DESCRIPTION>
+
+
+The law of large numbers states that for a set of independent and 
+
+identically distributed random variables, $X_1$, $X_2$, $\dots$ the following 
+
+holds:
+
+
+
+\begin{equation}
+
+ \lim_{n\rightarrow \infty} P\left( \left| \frac{S_n}{n} - \mathbb{E}(X) \right| >
+
+\epsilon \right) = 0
+
+\nonumber
+
+\end{equation}
+
+
+
+where $n$ is the number of random variables, $S_n = X_1 + X_2 + \dots$ and $\epsilon$
+
+is a small number.
+
+
+
+This expression cannot be used if your random variable has $\mathbb{E}(X) = \infty$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to write down the law of large numbers without the proof.
+ </LI>
+    <LI>  You should be able to explain why the the expectation of random variables are useful by making reference to the law of large numbers.
+ </LI>
+    <LI>  You should be able to explain the random variables for which the law of large numbers does not hold.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-3-law-of-large-numbers.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise to get you to grips with the law of large numbers
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> law-of-large-numbers-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Introducing the law of large numbers
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-calculating-histograms.ipynb </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise on calculating histograms
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> histogram-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining how the law of large numbers is used when calculating a histogram
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> IPYTHON </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> Betrand-paradox.ipynb.zip </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise that will help you to understand why the cumulative probability distribution function is necessary.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> PDF </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> jim-chap11.pdf </LINK>
+<AUTHOR> J.~F.~McCann </AUTHOR>
+<DESCRIPTION>
+Some notes on the law of large numbers and the central limit theorem. These notes include proofs for these two theorems.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> histograms-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise about estimating histograms by performing repeated experiments.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> geometric-probability </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercises on the estimating probabilities using geometric arguments.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

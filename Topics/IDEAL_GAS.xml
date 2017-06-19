@@ -1,0 +1,62 @@
+<PAGE>
+  <TITLE> The ideal gas model </TITLE>
+  <DESCRIPTION>
+
+
+The simplest theoretical model of a gas is known as an ideal gas.  This ideal gas is composed of $N$ randomly moving 
+
+point particles.  It is possible to show that the canonical partition function of the ideal gas model is given by:
+
+$$
+
+Z = \frac{1}{N!} \left[ \frac{V}{h^3} \left( \frac{2\pi m}{\beta} \right)^\frac{3}{2} \right]^N
+
+$$
+
+By taking suitable partial derivatives of this function you can show that the equation of state for this model is:
+
+$$
+
+PV = Nk_B T
+
+$$
+
+and that the average energy of the gas is:
+
+$$
+
+E = \frac{3}{2} Nk_B T
+
+$$
+
+and that the constant volume heat capacity is thus constant and equal to $\frac{3}{2} N k_B$.
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to describe how the particles interact within an ideal gas.
+ </LI>
+    <LI>  You should be able to write out the equation of state for the ideal gas model.
+ </LI>
+    <LI>  You should be able to derive an expression for the canonical partition function of an ideal gas.
+ </LI>
+    <LI>  You should be able to derive the equation of state for the ideal gas and the expression for the average energy of an ideal gas by taking suitable derivatives of the partition function.
+ </LI>
+    <LI>  You should be able to explain the limitations of the ideal gas model and the ways in which real gasses differ from ideal gasses.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> IDEAL_GAS </TOPIC>
+<LEVEL> INTRO </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> ideal-gas-video </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A video explaining how an expression for the partition function of an ideal gas is calculated.
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

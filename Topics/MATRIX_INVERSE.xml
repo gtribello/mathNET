@@ -1,0 +1,62 @@
+<PAGE>
+  <TITLE> The matrix inverse </TITLE>
+  <DESCRIPTION>
+
+
+The inverse of a square matrix $\mathbf{A}$ (if it exists) is the matrix $\mathbf{A}^{-1}$ which satisfies:
+
+$$
+
+\mathbf{A}^{-1}\mathbf{A}=\mathbf{A} \mathbf{A}^{-1}=\mathbf{I}
+
+$$
+
+where $\mathbf{I}$ is the unit matrix:
+
+$$
+
+\mathbf{I} = 
+
+\left(
+
+\begin{matrix}
+
+1 &  0  & \cdots  &    0 \\
+
+0  & 1  &  \cdots  &   0  \\
+
+\vdots  &  \vdots   & \ddots &  \vdots \\
+
+0 & 0 &  \cdots &  1  \\
+
+\end{matrix}
+
+\right)
+
+$$
+
+
+
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+    <LI>  You should be able to invert $2x2$ and $3x3$ matrices using pen and paper.
+ </LI>
+    <LI>  You should be able write python programs that use libraries to calculate the inverse of a square matrix
+ </LI>
+    <LI>  You should be able to explain how the matrix inverse is used to solve systems of linear equations.
+ </LI>
+    </UL>
+  </AIMS>
+<RESOURCE>
+<TOPIC> MATRIX_INVERSE </TOPIC>
+<LEVEL> EXERCISE </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> matrix-inverse-problems </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Problems on calculating the inverse of 2x2 and 3x3 matrices
+</DESCRIPTION>
+</RESOURCE>
+</PAGE>

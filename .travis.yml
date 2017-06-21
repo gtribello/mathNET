@@ -41,7 +41,7 @@ install:
     # lxml
     - pip install lxml
 script:
-  - python Scripts/build-website.py
+  - make
 
 after_success:
   - bash deploy.sh

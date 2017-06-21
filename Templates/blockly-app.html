@@ -1,0 +1,228 @@
+// This puts everything we need into the API for the 
+// javascript interpreter
+function initApi( interpreter, scope ) {
+   // Add an API function for the alert() block.
+   var wrapper = function(text) {
+     text = text ? text.toString() : '';
+     return interpreter.createPrimitive(alert(text));
+   };
+   interpreter.setProperty(scope, 'alert', interpreter.createNativeFunction(wrapper));
+
+   // Add an API function for the prompt() block.
+   var wrapper = function(text) {
+     text = text ? text.toString() : '';
+     return interpreter.createPrimitive(prompt(text));
+   };
+   interpreter.setProperty(scope, 'prompt', interpreter.createNativeFunction(wrapper));
+
+   // Add an API function for highlighting blocks.
+   var wrapper = function(id) {
+     id = id ? id.toString() : '';
+     return interpreter.createPrimitive(myApp.highlightBlock(id));
+   };
+   interpreter.setProperty(scope, 'highlightBlock', interpreter.createNativeFunction(wrapper));
+
+   // Add an API function for normal random variables
+   addRandomVariablesApi( interpreter, scope );
+
+   // Add API functions for workspace functions
+   INSERT API FUNCTIONS
+};
+
+// Construct the namespace for the app 
+var myApp = {};
+// Blockly workspace for this app
+myApp.workspace = null;
+// Control block highlighting for this app
+myApp.highlightPause = false;
+// This ensures that the user can kill rogue calculations
+myApp.killJob = false;
+myApp.runningJob = false;
+// Details of levels for this game
+myApp.xmlLevelDoc = null;
+myApp.active = [];
+myApp.mylevel = 0;
+// Saves students answers on previous levels
+myApp.answers = [];  
+
+// This highlights blocks
+myApp.highlightBlock = function(id) {
+  myApp.workspace.highlightBlock(id);
+  myApp.highlightPause = true;
+};
+
+// This parses blocks - turns it to code 
+myApp.parseCode=function( workspace, initApi ) {
+   // Ideally want to get rid of this in the future but don't know how for the moment
+   ww = myApp.workspace.getAllBlocks();
+   for(var i=0; i<ww.length; i++ ){
+       if( ww[i].toString().search("change")>=0 ){
+           alert("Please replace all uses of change variable blocks with set variable and get variable blocks");
+           return;
+       }
+   }
+   // End of bit we want to get rid of 
+   if( myApp.runningJob ) myApp.killJob=true;
+   // Generate JavaScript code and parse it.
+   Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
+   Blockly.JavaScript.addReservedWords('highlightBlock');
+   var code = Blockly.JavaScript.workspaceToCode(workspace);
+   myApp.workspace = workspace;
+   myApp.myInterpreter = new Interpreter(code, initApi);
+   // Generate python code for student to see
+   var pcode = Blockly.Python.workspaceToCode(workspace);
+   alert('Ready to execute this code:\n\n' + pcode);
+   //document.getElementById('stepButton').disabled = '';
+   document.getElementById('runButton').disabled = '';
+   myApp.highlightPause = false;
+   myApp.highlightBlock(null);
+};
+
+// This runs the code
+myApp.runCode = function() {
+   myApp.runningJob = true; 
+   if( myApp.myInterpreter.step() && !myApp.killJob ){
+      window.setTimeout(myApp.runCode.bind(myApp), 10 );
+   } else {
+      // Program complete, no more code to execute.
+      document.getElementById('runButton').disabled = 'disabled';
+      myApp.highlightBlock(null);
+      myApp.runningJob = false;
+      if( myApp.killJob ){ 
+          myApp.killJob=false; 
+          return; 
+      }
+      // Now check for level end
+      myApp.checkLevelEnd();
+      return;
+   } 
+}; 
+
+// This shows an answer
+myApp.showAnswer = function() {
+   if( myApp.mylevel < myApp.answers.length ) {
+       myApp.workspace.clear();
+       Blockly.Xml.domToWorkspace( myApp.answers[myApp.mylevel], myApp.workspace );
+   } else {
+       var hint = "As if I'm going to make it that easy!  \n \n If you go back to a level later you can see the right answer you gave by pressing this button.  For now though this button only gives you the following clue \n \n"; 
+       hint += myApp.retrieveFromXML("LEVEL")[myApp.mylevel].getElementsByTagName("HINT")[0].childNodes[0].nodeValue;
+       alert( hint );
+   }
+};
+
+myApp.save = function() {
+   var xmlDom = Blockly.Xml.workspaceToDom(myApp.workspace);
+   var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+   var title = myApp.retrieveFromXML("TITLE")[0].childNodes[0].nodeValue;
+   localStorage.setItem( title + " Level" + myApp.mylevel + ".xml", xmlText); 
+};
+
+myApp.load = function() {
+   
+   var title = myApp.retrieveFromXML("TITLE")[0].childNodes[0].nodeValue;
+   var xmlText = localStorage.getItem(title + " Level" + myApp.mylevel + ".xml");
+   if( xmlText ){
+       myApp.workspace.clear();
+       xmlDom = Blockly.Xml.textToDom(xmlText);
+       Blockly.Xml.domToWorkspace(myApp.workspace,xmlDom);    
+   }
+};
+
+// This clears before setting the level
+myApp.clearAndSetLevel = function(n) {
+   myApp.workspace.clear(); 
+   myApp.setLevel(n);
+};
+
+// This sets the level
+myApp.setLevel = function(n) {
+   if( n >= myApp.active.length ){
+      myApp.mylevel = self.active.length - 1;
+   } else if( n < 0 ){
+      myApp.mylevel = 0;
+   } else {
+      myApp.mylevel = n;
+   }
+   // Don't allow users to change to levels that above those they haven't completed
+   if( !myApp.active[myApp.mylevel] ){
+       alert("You do not have access to this level yet");
+       return;
+   } 
+   var dots = document.getElementsByClassName("demo");
+   for(var i=0; i < myApp.active.length ; i++ ){
+     dots[i].className = dots[i].className.replace(" w3-black", "");
+   }
+   dots[myApp.mylevel].className += " w3-black";
+   // We now need to load the contents of the level 
+   var levels = myApp.xmlLevelDoc.getElementsByTagName("LEVEL");
+   var desc = levels[n].getElementsByTagName("DESCRIPTION");
+   // Load the contents of the level
+   var g = document.getElementById("explanation");
+   g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+   // Typeset maths using mathJAX
+   MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
+   // Load the new blockly toolbox
+   myApp.workspace.updateToolbox( levels[n].getElementsByTagName("TOOLBOX")[0] );
+   // Other level stuff
+   myApp.stuffToDoOnLevelLoad( n )
+};
+
+myApp.retrieveFromXML = function( str ) {
+  // Setup level controls
+  var xhttp;
+  if (window.XMLHttpRequest) {
+     xhttp = new XMLHttpRequest();
+  } else {    // IE 5/6
+     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.overrideMimeType('text/xml');
+  xhttp.open("GET", "INSERT LEVEL XML", false);
+  xhttp.send(null);
+  myApp.xmlLevelDoc = xhttp.responseXML;
+  return myApp.xmlLevelDoc.getElementsByTagName( str );
+};
+
+/**
+ * Force Blockly to resize into the available width.
+*/
+myApp.resize = function() {
+  var width = Math.max(document.getElementById("appPanel").offsetWidth - 440, 250);
+  document.getElementById('blocklyDiv').style.width = width + 'px';
+  Blockly.svgResize(myApp.workspace);
+};
+/**
+ * Initialize Blockly and the graph.  Called on page load.
+*/
+myApp.init = function() {
+  // Setup workspace for game
+  INSERT WORKSPACE STARTUP 
+
+  // Setup blockly
+  myApp.workspace = Blockly.inject('blocklyDiv',
+      {collapse: false,
+       disable: false,
+       media: 'Blockly/media/',
+       toolbox: document.getElementById('toolbox')});
+  myApp.workspace.clearUndo();
+  myApp.resize();
+  // Setup level controls
+  alert( myApp.retrieveFromXML("WELCOME")[0].childNodes[0].nodeValue );
+
+  // Create all the levels
+  var levdesc = "";
+  var nlev = myApp.retrieveFromXML("LEVEL").length;
+  for(var i=0;i<nlev;i++){
+    myApp.active.push(false); 
+    levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myApp.clearAndSetLevel(' + i + ')"></span>\n'
+  }
+  // This bit creates the level indicator
+  var g = document.getElementById("levelIndicator");
+  g.innerHTML = levdesc;
+  // Make sure we can set first level
+  myApp.active[0]=true; 
+  // Start in level 0
+  myApp.clearAndSetLevel(0);
+};
+
+window.addEventListener('load', myApp.init);
+window.addEventListener('resize', myApp.resize);

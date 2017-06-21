@@ -100,7 +100,7 @@ class resource(object) :
        if( printmodule==1 ):
             table += '<td>'
             for mod in self.module :
-                table += '<a href="' + mod +'.html">' + mod + "</a>"
+                table += '<a href="' + mod.text +'.html">' + mod.text + "</a>"
                 if mod != self.module[-1] :
                    table += ' / '
             table += '</td> <td>' + self.author + "</td></tr> \n"

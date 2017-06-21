@@ -6,8 +6,8 @@ import sys
 import os   
 import lxml.etree as ET
 
-def buildTopicPage( tname ):
-    tree = ET.parse( "Topics/" + tname + ".xml" ) 
+def buildTopicPage( tfile ):
+    tree, tname = ET.parse( "Topics/" + tfile ), tfile.replace(".xml","")
     # Read in topics
     mytopics = topic.topiclist()
     # Create graph and setup the nodes
@@ -41,11 +41,12 @@ def buildTopicPage( tname ):
     # Reading resources
     reslist = []
     tstring, reslist = mytopics.get(tname).getRelevantResources( "", "READING", reslist, 1 )
-    content += tstring
-    content += "</table>\n"
-    pageelements.printPanel( of, "default", "collapse-two", "Written Notes", content )
-    content = "<table>\n"
-    content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
+    if len(reslist)>0  :
+       content += tstring
+       content += "</table>\n"
+       pageelements.printPanel( of, "default", "collapse-two", "Written Notes", content )
+       content = "<table>\n"
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
     # Videos
     reslist = []
     tstring, reslist = mytopics.get(tname).getRelevantResources( "", "VIDEO", reslist, 1 )
@@ -54,7 +55,7 @@ def buildTopicPage( tname ):
        content += "</table>\n"
        pageelements.printPanel( of, "default", "collapse-four", "Videos", content )
        content = "<table>\n"
-       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
     # Examples
     reslist = []
     tstring, reslist = mytopics.get(tname).getRelevantResources( "", "EXAMPLES", reslist, 1 )
@@ -63,7 +64,7 @@ def buildTopicPage( tname ):
        content += "</table>\n"
        pageelements.printPanel( of, "default", "collapse-three", "Worked examples", content )
        content = "<table>\n"
-       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
     # Blockly
     reslist = []
     tstring, reslist = mytopics.get(tname).getRelevantResources( "", "BLOCKLY", reslist, 1 )
@@ -72,7 +73,7 @@ def buildTopicPage( tname ):
        content += "</table>\n"
        pageelements.printPanel( of, "default", "collapse-five", "Applying your knowledge", content )
        content = "<table>\n"
-       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
     # Python 
     reslist = []
     tstring, reslist = mytopics.get(tname).getRelevantResources( "", "PYTHON", reslist, 1 )
@@ -81,7 +82,7 @@ def buildTopicPage( tname ):
        content += "</table>\n"
        pageelements.printPanel( of, "default", "collapse-six", "Extending your understanding", content )
        content = "<table>\n"
-       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>'
+       content += '<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>'
     # External resources
     reslist = []
     if len(reslist)>0 :
@@ -98,5 +99,8 @@ def buildTopicPage( tname ):
 if __name__ == "__main__" :
     if len(sys.argv)==2 :
        buildTopicPage( sys.argv[1] )
+    elif len(sys.argv)==3 :
+       os.chdir(sys.argv[2])	
+       buildTopicPage( sys.argv[1] )  
     else :
        print("wrong number of command line arguments expecting 2 found " + str(len(sys.argv)) + " " + str(sys.argv) )

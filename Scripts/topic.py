@@ -57,9 +57,10 @@ class topiclist(object) :
      tlist = os.listdir('Topics')
      for this in tlist :
          # Make sure swap files are ignored 
-         if not this.startswith('.') : 
-            self.topiclist.append( this.replace(".xml","") )
-            newtopic = topic( this.replace(".xml","") )
+         if this.endswith('.xml') : 
+            tname = this.replace(".xml","")
+            self.topiclist.append( tname )
+            newtopic = topic( tname )
             newtopic.readName()
             self.labellist.append( newtopic.label )
             self.tlist.append( newtopic )

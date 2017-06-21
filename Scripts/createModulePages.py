@@ -20,9 +20,8 @@ def printModuleSidebar( modname, of ):
     of.write('</div>')
 
 
-def buildModulePage( mname ):
-    tree = ET.parse( "Modules/" + mname + ".xml" )  
-    n, chapters = 0, tree.findall("CHAPTER")
+def buildModulePage( modn ):
+    tree, mname = ET.parse( "Modules/" + modn ), modn.replace(".xml","")
     # Read in topics
     mytopics = topic.topiclist()
     # Create graph and setup the nodes
@@ -30,6 +29,19 @@ def buildModulePage( mname ):
     mygraph.setNodes(mytopics.topiclist, mytopics.labellist)
     # Create the connections for the graph
     mygraph.setConnections()
+    # Print overview page for module
+    of = open( "html/" + mname + ".html", "w" ) 
+    pageelements.printHeader( mname + " overview", of ) 
+    pageelements.printTopMenuBar( of ) 
+    of.write('<div id="content" class="container">\n')
+    of.write('   <div class="row margin-vert-30">\n') 
+    of.write('      <div class="col-md-10">\n')
+    of.write('      </div>\n')
+    of.write('   </div>\n')
+    of.write('</div>\n')
+    pageelements.printFooter( of )
+    of.close()
+    n, chapters = 0, tree.findall("CHAPTER")
     for chp in chapters :
         n = n + 1
         modname, chp_topics_t, chp_topics = mname + str(n), chp.findall("TOPIC"), []
@@ -223,5 +235,8 @@ def buildModulePage( mname ):
 if __name__ == "__main__" :
     if len(sys.argv)==2 :
        buildModulePage( sys.argv[1] ) 
+    if len(sys.argv)==3 :
+       os.chdir(sys.argv[2])
+       buildModulePage( sys.argv[1] )
     else :
        print("wrong number of command line arguments expecting 2 found " + str(len(sys.argv)) + " " + str(sys.argv) )

@@ -4,27 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>Central limit theorem
- : Exercise</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>central-limit-theorem-problems</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -34,57 +35,48 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <div class="row">
-                             <div class="col-md-8">
-                                 <h1 class="panel-title"> Central limit theorem
- : Exercises</h1>
-                             </div>
-                             <div class="col-md-4" align="right">
-                                 <!-- Web2PDF Converter Button BEGIN -->
-                                 <script type="text/javascript">
-                                 var
-                                 pdfbuttonlabel="Save page as PDF"
-                                 </script>
-                                 <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
-                                 <!-- Web2PDF Converter Button END -->
-                             </div>
-                          </div>
-                      </div>
-                      <H1> Introduction </H1>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
+                        </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">            <div class="col-md-8">                <h1 class="panel-title">Central limit theorem
+: Exercises</h1>            </div>            <div class="col-md-4" align="right">                  <!-- Web2PDF Converter Button BEGIN -->                   <script type="text/javascript">                   var                   pdfbuttonlabel="Save page as PDF"                   </script>                   <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>                   <!-- Web2PDF Converter Button END -->            </div>         </div>      </div>      <H1> Introduction </H1>
 <DESCRIPTION>
 The central limit theorem states that for a set of independent and
 identically distributed random variables, $X_1$, $X_2$, $\dots$ the following
@@ -103,24 +95,13 @@ using the central limit theorem.
 </DESCRIPTION>
   <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+<h4> Problem 1</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Analysis of commuter travel  shows that the number of passenger per car, $X$, 
 is a discrete random variable with independent, identical distributions, such that 
 $\mathbb{E}(X)=1.2$ and $\textrm{var}(X) = 1.0$.  Use the central-limit theorem  to estimate 
 the probability that, in a sample of $n=100$ cars, the total number of passengers is 140 or fewer. 
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-0" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-0" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Just substuting the numbers from the question into the central limit theorem here gives:
 $$
  x = \frac{ S_n / n - \mu }{ \sigma / \sqrt{n} } = \frac{ 140/100 - 1.2 }{
@@ -131,17 +112,7 @@ $$
  P( N \le 140 ) \approx \Phi(x) \approx \Phi(2) \approx 0.9772 \nonumber
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 2</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 The share price of SOR plc  varies in  a random manner, such that 
 the price increase each minute is described by a discrete 
 random variable  $X$ (measured in pounds), with the following probability mass:
@@ -158,13 +129,7 @@ $$
 Calculate $\mathbb{E}(X)=\mu$ and $\sqrt{\textrm{var}(X)}=\sigma$ and hence use the central limit 
 theorem to estimate the probability  that the price will increase by £1.20 , or more,  after 3  hours. 
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-1" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-1" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 WE are given information on a random variable in the question.  We can use this information to 
 calcualte the expectation as shown below:
 $$
@@ -201,29 +166,13 @@ $$
  P( s &gt; 1.2 ) = 1 - P( s \le 1.2 ) = 1 - 0.15625 = 0.844 \nonumber 
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 3</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 During the course of a single season a particular football player has 213 penalty attempts and scores 175 of them. 
 Given this information calculate the probability he will score during his next penalty attempt and explain the 
 assumptions that you have made in your calculation. Please give appropriate error bars for a 95 % confidence 
 level on your numerical estimate.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-2" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-2" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We will assume that each penalty attempt is the generation of a random number
 from a Bernoulli random variable, $X$.  In other words for every penalty we
 assume that the underlying probability of the footballer scoring is the same.
@@ -267,29 +216,13 @@ $$
 \epsilon = \frac{\sqrt{0.146}}{\sqrt{213}} \Phi^{-1}\left( \frac{1.95}{2} \right) \approx 0.0262*1.9600 \approx 0.05135
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 4</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse"><QUESTION>
        Roger Federer has championship point in the Wimbledon Final. Thus far in the match he served 141 times and  90 of those serves have
        landed in the service box. Use the central-limit theorem to estimate the probability that his first serve will be in during the championship point and
        provide error bars for a 90% confidence level on your numerical estimate.  Discuss what approximations you have made in doing this calculation and whether or not you
        think they are sensible.
       </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-3" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-3" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
         We will assume that each serve is the generation of a random number from a Bernoulli random variable, $X$.  In other words we will assume that the
         probability of getting each serve in is a constant.  The number of services that landed in is thus the sum of many of these random numbers. That is to say it
         is:
@@ -328,27 +261,11 @@ $$
         This is not a sensible way of calculating the probability as serving on championship point is nothing like serving during the normal course of the match.  The individual random variables 
         are not identically distributed
       </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 5</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 5</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 In the Smoky Mountains National Park 55 % of the hawks are female.  Estimate the number of birds, $n$, that you would have to catch for there to be
 a probability of 0.9 of at least 50 % female birds in your sample.  Explain any assumptions you make in your derivation.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-4" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-4" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 When we select a bird we are generating a Bernoulli random variable.
 This assumes that the genders of our selected birds are all independent.
 <br/>
@@ -370,49 +287,37 @@ We thus have (for minimal sample size) i.e. $\frac{S_n/n - \mu}{\sigma/\sqrt{n}}
 \frac{1.2816 \times 0.497}{-0.05}\right)^2 \approx 163
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
+                </div>        </div>    </div></div>   </div></div><!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
-</br>
- 
-                    </div> 
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
-</div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -430,4 +335,3 @@ We thus have (for minimal sample size) i.e. $\frac{S_n/n - \mu}{\sigma/\sqrt{n}}
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

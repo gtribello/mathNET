@@ -4,26 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>Detailed balance</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>DETAILED_BALANCE</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -33,186 +35,126 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <h1 class="panel-title"> Detailed balance</h1>
-                      </div>
-                    </div> 
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                            <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion" data-toggle="collapse">
-                                Short description and context
-                            </a>
-                            </h4>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
                         </div>
-                        <div id="collapse-One" class="accordion-body collapse in">
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <h3 class="no-margin no-padding">Detailed balance</h3>
-                                        <p align="justify">
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">
+   <div class="panel panel-blue">
+       <div class="panel-heading">
+           <h1 class="panel-title">  Detailed balance  </h1>
+       </div>
+   </div>
+<div class="panel panel-primary">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-one" data-parent="#accordion" data-toggle="collapse">Short description and context        </a>        </h4>    </div>    <div id="collapse-one" class="accordion-body collapse in">        <div class="panel-body">            <div class="row"><div class="col-md-7"><h3 class="no-margin no-padding"> Detailed balance </h3><p align="justify">
+
+
 Some ergodic Markov chains satisfy a condition known as detailed balance:
+
 $$
+
 \pi_i p_{ij} = \pi_j p_{ji}
+
 $$
+
 where $\pi_i$ and $\pi_j$ are the $i$th and $j$th components of the limiting stationary distribution and $p_{ij}$ and $p_{ji}$ are 
+
 elements of the 1-step transition probability matrix.  In cases where the detailed balance condition holds (you will be told in the exam)
+
 you can use this, rather than Gaussian elimination, to determine a set of simultaneous equations to solve to find the limiting stationary 
+
 distribution.
 
-<H4> Syllabus Aims </H4> 
-<ul> 
-<li type="square"> You should be able to write out the detailed balance condition.
-</li> 
-<li type="square"> You should be able to give some examples of Markov chains that do not satisify detailed balance.
-</li> 
-<li type="square"> You should be able to use the detailed balance condition to find the stationary distribution of an ergodic markov chain.
-</li> 
-<li type="square"> You should be able to explain why the detailed balance condition is important in the context of Markov Chain Monte Carlo.
-</li> 
-</ul> 
-</p>
-                                    </div>
-                                    <div class="col-md-5"><object data="DETAILED_BALANCE.svg" type="image/svg+xml" width="100%"></object></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="accordion" class="panel-group">
-                        <!-- Start of introductory panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion" data-toggle="collapse">
-                                    Introductory Material
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Two" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr> 
-                                          <tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap16.pdf">Notes on reversibility and detailed balance for Markov chains.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>J. F. McCann</td></tr> 
 
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Start of exercises panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Three" data-parent="#accordion" data-toggle="collapse">
-                                    Exercises
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Three" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>
-                                          <tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="detailed-balance-problems.html">Problems involving using detailed balance to find the limiting stationary distribution of Markov chains</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
 
-                                        </table>
-                                     </div>
+  </p><H4> Syllabus Aims </H4> 
+<AIMS>
+    <UL>
+    <LI>  You should be able to write out the detailed balance condition.
+ </LI>
+    <LI>  You should be able to give some examples of Markov chains that do not satisify detailed balance.
+ </LI>
+    <LI>  You should be able to use the detailed balance condition to find the stationary distribution of an ergodic markov chain.
+ </LI>
+    <LI>  You should be able to explain why the detailed balance condition is important in the context of Markov Chain Monte Carlo.
+ </LI>
+    </UL>
+  </AIMS>
+</div><div class="col-md-5"><object data="DETAILED_BALANCE.svg" type="image/svg+xml" width="100%"></object></div>            </div>        </div>    </div></div>   <div id="accordion" class="panel-group"><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-two" data-parent="#accordion" data-toggle="collapse">Written Notes        </a>        </h4>    </div>    <div id="collapse-two" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap16.pdf"><b>Notes on reversibility and detailed balance for Markov chains.</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>J. F. McCann</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-three" data-parent="#accordion" data-toggle="collapse">Worked examples        </a>        </h4>    </div>    <div id="collapse-three" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="detailed-balance-problems.html"><b>Problems involving using detailed balance to find the limiting stationary distribution of Markov chains</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div></div>
+<!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
                                 </div>
-                            </div>
                         </div>
-                        <!-- Start of external resources panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Four" data-parent="#accordion" data-toggle="collapse">
-                                    External resources
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Four" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                         <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>
-                                          
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
+                </div>
+        </div>
 </div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -230,4 +172,3 @@ distribution.
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

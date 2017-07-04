@@ -4,26 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>Gamblers ruin</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>GAMBLERS_RUIN</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -33,222 +35,190 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <h1 class="panel-title"> Gamblers ruin</h1>
-                      </div>
-                    </div> 
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                            <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion" data-toggle="collapse">
-                                Short description and context
-                            </a>
-                            </h4>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
                         </div>
-                        <div id="collapse-One" class="accordion-body collapse in">
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <h3 class="no-margin no-padding">Gamblers ruin</h3>
-                                        <p align="justify">
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">
+   <div class="panel panel-blue">
+       <div class="panel-heading">
+           <h1 class="panel-title">  Gamblers ruin  </h1>
+       </div>
+   </div>
+<div class="panel panel-primary">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-one" data-parent="#accordion" data-toggle="collapse">Short description and context        </a>        </h4>    </div>    <div id="collapse-one" class="accordion-body collapse in">        <div class="panel-body">            <div class="row"><div class="col-md-7"><h3 class="no-margin no-padding"> Gamblers ruin </h3><p align="justify">
+
+
 Gamblers ruin is a problem involving a particular discrete time Markov chain.
+
 The transition matrix for the Gamblers ruin problem is the following $(N+1) \times (N+1)$ 
+
 square matrix:
+
 $$
+
 M = \left(
+
 \begin{matrix}
+
 1 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 0 \\
+
 q & r & p & 0 & 0 & \dots & 0 & 0 & 0 \\ 
+
 0 & q & r & p & 0 & \dots & 0 & 0 & 0 \\
+
 \vdots & \vdots & \vdots & \vdots & \vdots & \ddots & \vdots & \vdots & \vdots \\
+
 0 & 0 & 0 & 0 & 0 & \dots & q & r & p \\
+
 0 & 0 & 0 & 0 & 0 & \dots & 0 & 0 & 1
+
 \end{matrix}
+
 \right)
+
 $$
+
 where $q + r + p = 1$.  This chain has ($N-1$) transient states and two recurrent states so 
+
 solving this problem ammounts to finding hitting times and hitting probabilities.  What makes
+
 this particular chain interesting is that the symmetry of the matrix ensures that it is possible to 
+
 find the hitting probabilities by solving a homogeneous difference equation.  Furthermore, we can find the 
+
 hitting times by solving an inhomogenous difference equation.   When these two probelms are solved we find that
+
 the conditional probability, $\pi_k$, of finishing in state $0$ given that we start in state $k$ is given by:
+
 $$
+
 \pi_k = \frac {\left( \frac{q}{p}\right)^k - \left(\frac{q}{p}\right)^N }{ 1 - \left(\frac{q}{p}\right)^N } 
+
 $$
+
 The expected time to arrival in either state $0$ or state $N$ given that we start in state $k$ is by contrast:
+
 $$
+
 d_k = \frac{k}{q-p} - \frac{N(1-\pi_k)}{q-p}
+
 $$
+
 Notice that these equations are NOT valid in the limit when $q=p$ and that l'Hopital's rule must be used to find
+
 the probabilities in this limit. 
 
-<H4> Syllabus Aims </H4> 
-<ul> 
-<li type="square"> You should be able to write out the transition graph and the transition matrix for the gamblers ruin problem.
-</li> 
-<li type="square"> You should be able to classify the states in the gamblers ruin problem as transient/recurrent.
-</li> 
-<li type="square"> You should be able to derive an expression for the probability of ruin in the gamblers run problem.
-</li> 
-<li type="square"> You should be able to calculate the probability of ruin in the limit of equal forward and backward jump probabilities ($p=q$) using l'Hopital's rule.
-</li> 
-<li type="square"> You should be able to use condition expectation to obtain a difference equation the solution of which tells one the length of the game in gamblers ruin.
-</li> 
-<li type="square"> You should be able to solve the difference equation for the length of the game to find an expression for the expected length of the game.
-</li> 
-</ul> 
-</p>
-                                    </div>
-                                    <div class="col-md-5"><object data="GAMBLERS_RUIN.svg" type="image/svg+xml" width="100%"></object></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="accordion" class="panel-group">
-                        <!-- Start of introductory panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion" data-toggle="collapse">
-                                    Introductory Material
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Two" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr> 
-                                          <tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="gamblers-runs-video.html">A video explaining the gamblers ruin problem and the derivation of the difference equations.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap08.pdf">Some introductory notes on random walks.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap09.pdf">Some notes on how the expected number of games is worked out in the gamblers ruin problem.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>J. F. McCann</td></tr> 
 
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Start of exercises panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Three" data-parent="#accordion" data-toggle="collapse">
-                                    Exercises
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Three" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>
-                                          <tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-gamblers-ruin.ipynb" download="sor3012-gamblers-ruin.ipynb"> A programming exercise on gamblers ruin</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="resources/gamblers-ruin-probability.pdf">Deriving the probability of ruin in gamblers ruin</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="resources/gamblers-ruin-expectation.pdf">Deriving the expected length of the game in the gamblers ruin problem</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="gamblers-ruin-problems.html">Some exercises that use the solutions of the gamblers ruin problem.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
 
-                                        </table>
-                                     </div>
+  </p><H4> Syllabus Aims </H4> 
+<AIMS>
+    <UL>
+    <LI>  You should be able to write out the transition graph and the transition matrix for the gamblers ruin problem.
+ </LI>
+    <LI>  You should be able to classify the states in the gamblers ruin problem as transient/recurrent.
+ </LI>
+    <LI>  You should be able to derive an expression for the probability of ruin in the gamblers run problem.
+ </LI>
+    <LI>  You should be able to calculate the probability of ruin in the limit of equal forward and backward jump probabilities ($p=q$) using l'Hopital's rule.
+ </LI>
+    <LI>  You should be able to use condition expectation to obtain a difference equation the solution of which tells one the length of the game in gamblers ruin.
+ </LI>
+    <LI>  You should be able to solve the difference equation for the length of the game to find an expression for the expected length of the game.
+ </LI>
+    </UL>
+  </AIMS>
+</div><div class="col-md-5"><object data="GAMBLERS_RUIN.svg" type="image/svg+xml" width="100%"></object></div>            </div>        </div>    </div></div>   <div id="accordion" class="panel-group"><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-two" data-parent="#accordion" data-toggle="collapse">Written Notes        </a>        </h4>    </div>    <div id="collapse-two" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap08.pdf"><b>Some introductory notes on random walks.</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>J. F. McCann</td></tr> 
+<tr> 
+<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap09.pdf"><b>Some notes on how the expected number of games is worked out in the gamblers ruin problem.</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>J. F. McCann</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-four" data-parent="#accordion" data-toggle="collapse">Videos        </a>        </h4>    </div>    <div id="collapse-four" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="gamblers-runs-video.html"><b>A video explaining the gamblers ruin problem and the derivation of the difference equations.</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-three" data-parent="#accordion" data-toggle="collapse">Worked examples        </a>        </h4>    </div>    <div id="collapse-three" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="gamblers-ruin-problems.html"><b>Some exercises that use the solutions of the gamblers ruin problem.</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-five" data-parent="#accordion" data-toggle="collapse">Applying your knowledge        </a>        </h4>    </div>    <div id="collapse-five" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td><a href="gamblers-ruin-exercise.html"><b>A programming exercise that introduces you to the Gamblers ruin problem.</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-six" data-parent="#accordion" data-toggle="collapse">Extending your understanding        </a>        </h4>    </div>    <div id="collapse-six" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/gamblers-ruin-probability.pdf"><b>Deriving the probability of ruin in gamblers ruin</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+<tr> 
+<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/gamblers-ruin-expectation.pdf"><b>Deriving the expected length of the game in the gamblers ruin problem</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div></div>
+<!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
                                 </div>
-                            </div>
                         </div>
-                        <!-- Start of external resources panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Four" data-parent="#accordion" data-toggle="collapse">
-                                    External resources
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Four" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                         <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>
-                                          
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
+                </div>
+        </div>
 </div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -266,4 +236,3 @@ the probabilities in this limit.
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

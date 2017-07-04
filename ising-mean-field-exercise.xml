@@ -195,7 +195,7 @@
     ising.setMagneticField(0);
     myplot.data.length = 0; 
     myplot.data.unshift(['x', 'y'], [0, 0]);
-    myplot.plotGraph();
+    myplot.plotGraph('graph','scatter');
   </STARTUP>
   <LEVEL>
     <DESCRIPTION>
@@ -203,6 +203,8 @@
        this particular configuration.  Once you have the average spin you should be able to calculate the energy using the mean field
        Hamiltonian for this system.  Calculate the energy and then use the print block to print the energy to screen.
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -248,6 +250,8 @@
        times.  Calculate the average spin for each of the configurations you visit and then use the new plotting block to make a graph showing average 
        spin versus time.
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -294,6 +298,8 @@
        Use the code you have written to investigate how the average spin changes when the temperature is high and when the temperature is low and 
        when a magnetic field is present and when it is not.  
     </DESCRIPTION>
+    <HINT>
+    </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -332,4 +338,6 @@
        }
     </FINISH>
   </LEVEL> 
+  <REVIEW>
+  </REVIEW>
 </PAGE>

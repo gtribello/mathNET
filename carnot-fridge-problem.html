@@ -4,26 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title> Understanding the Carnot Cycle better  : Exercise</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>carnot-fridge-problem</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -33,56 +35,47 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <div class="row">
-                             <div class="col-md-8">
-                                 <h1 class="panel-title">  Understanding the Carnot Cycle better  : Exercises</h1>
-                             </div>
-                             <div class="col-md-4" align="right">
-                                 <!-- Web2PDF Converter Button BEGIN -->
-                                 <script type="text/javascript">
-                                 var
-                                 pdfbuttonlabel="Save page as PDF"
-                                 </script>
-                                 <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
-                                 <!-- Web2PDF Converter Button END -->
-                             </div>
-                          </div>
-                      </div>
-                      <H1> Introduction </H1>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
+                        </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">            <div class="col-md-8">                <h1 class="panel-title"> Understanding the Carnot Cycle better : Exercises</h1>            </div>            <div class="col-md-4" align="right">                  <!-- Web2PDF Converter Button BEGIN -->                   <script type="text/javascript">                   var                   pdfbuttonlabel="Save page as PDF"                   </script>                   <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>                   <!-- Web2PDF Converter Button END -->            </div>         </div>      </div>      <H1> Introduction </H1>
 <DESCRIPTION>
     <b>
     In this exercise we are going to consider how a refrigerator works.  Read the text that follows that explains how a refrigerator 
@@ -108,21 +101,10 @@
   </DESCRIPTION>
   <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+<h4> Problem 1</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse"><QUESTION>
         Draw a diagram illustrating the changes in the volume and pressure that take place during each of the four transitions that take place for the freon gas inside the engine.
       </QUESTION> 
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-0" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-0" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
         The important things to note from the information in the question here are that:
         <ol>
         <li> The volume does not change in steps 1 and 2 but the temperature increases during these stages.  Gibbs Phase Rule tells us that for a one component one phase system like this one there can only be two indepdenent thermodynamic variables.  Consequently, because the temperature changes but the volume doesn't the pressure of the freon must change in steps 1 and 3. In particular, the pressure increases during step 1 (as the temperature goes up) and the pressure decreases during step 3 (as the temperature goes down).</li>
@@ -130,146 +112,50 @@
         </ol>
         The above realisations provide sufficient information to draw the thermodynamic cycle.
       </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse"><QUESTION>
          In which of the four transitions is heat transferred from the freon gas into the surroundings?  For the purposes of this question the heat 
          <b>output</b> during these stages will be referred to as $q_1$ in the questions that follow.  Will $q_1$ have a positive or negative sign?
        </QUESTION>
-               </a>
-        </h4>
-    </div>
-    <div id="collapse-1" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+               </a>        </h4>    </div>    <div id="collapse-1" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          Heat is transferred from the freon gas into the surroundings during steps 3 and 4. $q_1$ will have a negative sign as heat is being transferred
          away from freon gas and into the surroundings.  The entropy of the freon gas is therefore lowered during these transitions.
        </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse"><QUESTION>
          In which of the four transitions transfer is heat transferred from the surroundings into the freon gas?   For the purposes of this question the 
          heat <b>input</b> during these stages will be referred to as $q_2$ in the questions that follow.  Will $q_2$ have a positive or negative sign?
        </QUESTION>
-               </a>
-        </h4>
-    </div>
-    <div id="collapse-2" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+               </a>        </h4>    </div>    <div id="collapse-2" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          Heat is transferred from the surroudnigs into the freon gas during steps 1 and 2.  $q_2$ will have a positive sign as heat is being transferred
          into the freon gas from the surroudnings.  The entropy of the freon gas is therefore increased during these transitions.
        </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>    
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse"><QUESTION>    
          Ideally we would like $q_2-q_1 \lt 0$.  Why?
        </QUESTION>
-               </a>
-        </h4>
-    </div>
-    <div id="collapse-3" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+               </a>        </h4>    </div>    <div id="collapse-3" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          We want our fridge to transfer heat from its interior to the outside world.  If $q_2-q_1&gt;0$ this tells us that there is a net transfer of heat
          from the environment to the inside of the fridge, which would render this device for keeping food cool rather useless.
        </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse"><QUESTION>
          In which of the four transition is work done on the freon gas?  For the purposes of this question the work done during these stages will be referred to 
          as $w_1$ in the questions that follows.  Will $w_1$ have a positive or negative sign?
       </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-4" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-4" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          Work is done on the freon gas during stage 2 when it is compressed.  The volume of the gas will decrease during this stage and as such $\textrm{d}V$ will be 
          negative.  $-P\textrm{d}V$ will, therefore, be positive so $w_1$ will have a positive sign.
       </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse"><QUESTION>
          In which of the four transition is work done by the freon gas on its surroundings?  For the purposes of this question the work done during these 
          stages will be referred to as $w_2$ in the questions that follows.  Will $w_2$ have a positive or negative sign?
       </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-5" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-5" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          Work is done by the freon gas during stage 4 when it is expanded.  The volume of the gas will increase during this stage and as such $\textrm{d}V$ will be
          positive.  $-P\textrm{d}V$ will, therefore, be negative so $w_2$ will have a negative sign.
        </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse"><QUESTION>
          Given that the freon reverts to its original state when a cycle completes what must $q_2 - q_1 + w_1 - w_2$ equal to?  Use this result to show 
          that $\frac{q_1 - q_2}{w_1} = \frac{w_1 - w_2}{w_1}$.  Consider the Carnot cycle and explain why this quantity is important and why this expression is significant.
        </QUESTION>
-               </a>
-        </h4>
-    </div>
-    <div id="collapse-6" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+               </a>        </h4>    </div>    <div id="collapse-6" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          <p>
          $q_2-q_1 + w_1 - w_2$ must be equal to zero.  By the first law of thermodynamics this sum is equal to the total change in the internal energy.  We know, however,
          that internal energy is a function of state.  The energy of the system thus only depends on the state we are in.  If we are in the same state at the end of the
@@ -293,17 +179,7 @@
           heat transferred away to the amount of work done.  It is thus a measure of the efficiency of the fridge. 
           </p>
        </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse"><QUESTION>
          <p>
          We are now going to prove that the refrigerator described above is the most efficient refrigerator that can be constructed.  We will do so by 
          imagining that a second more efficient refrigerator does indeed exist.  In this hypothetical fridge doing you have $q_1'-q_2'=q_1-q_2$, where $q_1$ and $q_2$ 
@@ -316,13 +192,7 @@
           Explain why $w_2' \lt w_2$ where $w_2'$ is the amount of work done by our new (more efficient refridgerator) and $w_2$ is as it is above.
           </p>
        </QUESTION>
-               </a>
-        </h4>
-    </div>
-    <div id="collapse-7" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+               </a>        </h4>    </div>    <div id="collapse-7" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
           Our more efficient energy must return to the same thermodynamic state on completion of a cycle, however, and it must also obey the first law 
           of thermodynamics.  As such:
           $$
@@ -346,29 +216,13 @@
           $$
           Therefore if $w_1' \lt w_1$ then $w_2' \lt w_2$ in order to ensure that the above equality holds.
       </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse"><QUESTION>
           Lets now suppose that the heat output from our hypothetical fridge is used to drive the fridge that was described at the start of this page in the reverse direction.  
           Calculate the total amount of heat exchanged between the fridges during this process and the amount of work that is done during each of the constant 
           pressure stages (steps 2 and 4) of the two fridges' operation.  Use these considerations to prove that no fridge can be more efficient than the 
           fridge we examined at the start of this question.  Hint: Something similar was done for the Carnot engine in the video so use that as your guide.
        </QUESTION>
-               </a>
-        </h4>
-    </div>
-    <div id="collapse-8" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+               </a>        </h4>    </div>    <div id="collapse-8" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          <b> HEAT TRANFER </b> 
          <br/> <br/>
          
@@ -425,17 +279,7 @@
          that all we have done is swap round the roles played by the heat $q$ and the work $w$ in the two derivations.  
          </p>
       </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 2</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse"><QUESTION>
          Consider now a fictitious heating device that stores and releases energy by dissolving a salt in a solution.  The charging and heating 
          stages for this device together constitute a thermodynamic cycle involving the following four (isochoric) stages. 
          
@@ -449,60 +293,42 @@
          Use the fact that on completion of the four stages of the devices operation the solution returns to its original thermodynamic state and the fact that
          that $T_2&gt;T_1$ to determine whether the reaction in which the salt dissolves in the solution is exothermic or endothermic.  Justify your answer.
       </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-9" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-9" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
          The problem here is once again a variant on the Carnot cycle.  As such you should start by thinking about which of the stages in the devices operation output
          heat/work and which stages in the devices operation take heat/work in.  Remember that work must be done on the system to increase the number of atoms in the 
          solution as $\textrm{d}w = \mu \textrm{d}N$. 
       </SOLUTION>
-             </div>
-      </div>
-   </div>
+                </div>        </div>    </div></div>   </div></div><!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
-</br>
- 
-                    </div> 
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
-</div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -520,4 +346,3 @@
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

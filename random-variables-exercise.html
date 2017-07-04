@@ -1,0 +1,447 @@
+<!-- === BEGIN HEADER === -->
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+        <!-- Title -->
+        <title>random-variables-exercise</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
+</head>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
+                        </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Understanding random variables : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
+                 <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> 
+                 <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button> 
+                 <!-- <button onclick="myApp.save()" id="saveButton">Save workspace</button> 
+                 <button onclick="myApp.load()" id="loadButton">Load solution</button> --> 
+               </div>                 <div class="col-md-6">                 <div id="levelIndicator" class="w3-center w3-section w3-large w3-text-black w3-display-topleft" style="width:60%; height:100px" align="right"> </div>               </div>               <br/><br/>
+    <table>
+      <tr>
+        <td>
+          <div id="graph" style="width: 400px"/>
+        </td>
+        <td width="10px"> &nbsp;&nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td> 
+      </tr>
+    </table>
+  
+               <div id="explanation"> </div> 
+             <xml id="toolbox" style="display: none">             <category name="Variables" custom="VARIABLE"></category>             </xml><script> 
+
+  // This puts everything we need into the API for the 
+// javascript interpreter
+function initApi( interpreter, scope ) {
+   // Add an API function for the alert() block.
+   var wrapper = function(text) {
+     text = text ? text.toString() : '';
+     return interpreter.createPrimitive(alert(text));
+   };
+   interpreter.setProperty(scope, 'alert', interpreter.createNativeFunction(wrapper));
+
+   // Add an API function for the prompt() block.
+   var wrapper = function(text) {
+     text = text ? text.toString() : '';
+     return interpreter.createPrimitive(prompt(text));
+   };
+   interpreter.setProperty(scope, 'prompt', interpreter.createNativeFunction(wrapper));
+
+   // Add an API function for highlighting blocks.
+   var wrapper = function(id) {
+     id = id ? id.toString() : '';
+     return interpreter.createPrimitive(myApp.highlightBlock(id));
+   };
+   interpreter.setProperty(scope, 'highlightBlock', interpreter.createNativeFunction(wrapper));
+
+   // Add an API function for normal random variables
+   addRandomVariablesApi( interpreter, scope );
+
+   // Add API functions for workspace functions
+   
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
+  
+};
+
+// Construct the namespace for the app 
+var myApp = {};
+// Blockly workspace for this app
+myApp.workspace = null;
+// Control block highlighting for this app
+myApp.highlightPause = false;
+// This ensures that the user can kill rogue calculations
+myApp.killJob = false;
+myApp.runningJob = false;
+// Details of levels for this game
+myApp.xmlLevelDoc = null;
+myApp.active = [];
+myApp.mylevel = 0;
+// Saves students answers on previous levels
+myApp.answers = [];  
+
+// This highlights blocks
+myApp.highlightBlock = function(id) {
+  myApp.workspace.highlightBlock(id);
+  myApp.highlightPause = true;
+};
+
+// This parses blocks - turns it to code 
+myApp.parseCode=function( workspace, initApi ) {
+   // Ideally want to get rid of this in the future but don't know how for the moment
+   ww = myApp.workspace.getAllBlocks();
+   for(var i=0; i<ww.length; i++ ){
+       if( ww[i].toString().search("change")>=0 ){
+           alert("Please replace all uses of change variable blocks with set variable and get variable blocks");
+           return;
+       }
+   }
+   // End of bit we want to get rid of 
+   if( myApp.runningJob ) myApp.killJob=true;
+   // Generate JavaScript code and parse it.
+   Blockly.JavaScript.STATEMENT_PREFIX = 'highlightBlock(%1);\n';
+   Blockly.JavaScript.addReservedWords('highlightBlock');
+   var code = Blockly.JavaScript.workspaceToCode(workspace);
+   myApp.workspace = workspace;
+   myApp.myInterpreter = new Interpreter(code, initApi);
+   // Generate python code for student to see
+   var pcode = Blockly.Python.workspaceToCode(workspace);
+   alert('Ready to execute this code:\n\n' + pcode);
+   //document.getElementById('stepButton').disabled = '';
+   document.getElementById('runButton').disabled = '';
+   myApp.highlightPause = false;
+   myApp.highlightBlock(null);
+};
+
+// This runs the code
+myApp.runCode = function() {
+   myApp.runningJob = true; 
+   if( myApp.myInterpreter.step() && !myApp.killJob ){
+      window.setTimeout(myApp.runCode.bind(myApp), 10 );
+   } else {
+      // Program complete, no more code to execute.
+      document.getElementById('runButton').disabled = 'disabled';
+      myApp.highlightBlock(null);
+      myApp.runningJob = false;
+      if( myApp.killJob ){ 
+          myApp.killJob=false; 
+          return; 
+      }
+      // Now check for level end
+      myApp.checkLevelEnd();
+      return;
+   } 
+}; 
+
+// This shows an answer
+myApp.showAnswer = function() {
+   if( myApp.mylevel < myApp.answers.length ) {
+       myApp.workspace.clear();
+       Blockly.Xml.domToWorkspace( myApp.answers[myApp.mylevel], myApp.workspace );
+   } else {
+       var hint = "As if I'm going to make it that easy!  \n \n If you go back to a level later you can see the right answer you gave by pressing this button.  For now though this button only gives you the following clue \n \n"; 
+       hint += myApp.retrieveFromXML("LEVEL")[myApp.mylevel].getElementsByTagName("HINT")[0].childNodes[0].nodeValue;
+       alert( hint );
+   }
+};
+
+myApp.save = function() {
+   var xmlDom = Blockly.Xml.workspaceToDom(myApp.workspace);
+   var xmlText = Blockly.Xml.domToPrettyText(xmlDom);
+   var title = myApp.retrieveFromXML("TITLE")[0].childNodes[0].nodeValue;
+   localStorage.setItem( title + " Level" + myApp.mylevel + ".xml", xmlText); 
+};
+
+myApp.load = function() {
+   
+   var title = myApp.retrieveFromXML("TITLE")[0].childNodes[0].nodeValue;
+   var xmlText = localStorage.getItem(title + " Level" + myApp.mylevel + ".xml");
+   if( xmlText ){
+       myApp.workspace.clear();
+       xmlDom = Blockly.Xml.textToDom(xmlText);
+       Blockly.Xml.domToWorkspace(myApp.workspace,xmlDom);    
+   }
+};
+
+// This clears before setting the level
+myApp.clearAndSetLevel = function(n) {
+   myApp.workspace.clear(); 
+   myApp.setLevel(n);
+};
+
+// This sets the level
+myApp.setLevel = function(n) {
+   if( n >= myApp.active.length ){
+      myApp.mylevel = self.active.length - 1;
+   } else if( n < 0 ){
+      myApp.mylevel = 0;
+   } else {
+      myApp.mylevel = n;
+   }
+   // Don't allow users to change to levels that above those they haven't completed
+   if( !myApp.active[myApp.mylevel] ){
+       alert("You do not have access to this level yet");
+       return;
+   } 
+   var dots = document.getElementsByClassName("demo");
+   for(var i=0; i < myApp.active.length ; i++ ){
+     dots[i].className = dots[i].className.replace(" w3-black", "");
+   }
+   dots[myApp.mylevel].className += " w3-black";
+   // We now need to load the contents of the level 
+   var levels = myApp.xmlLevelDoc.getElementsByTagName("LEVEL");
+   var desc = levels[n].getElementsByTagName("DESCRIPTION");
+   // Load the contents of the level
+   var g = document.getElementById("explanation");
+   g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+   // Typeset maths using mathJAX
+   MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
+   // Load the new blockly toolbox
+   myApp.workspace.updateToolbox( levels[n].getElementsByTagName("TOOLBOX")[0] );
+   // Other level stuff
+   myApp.stuffToDoOnLevelLoad( n )
+};
+
+myApp.retrieveFromXML = function( str ) {
+  // Setup level controls
+  var xhttp;
+  if (window.XMLHttpRequest) {
+     xhttp = new XMLHttpRequest();
+  } else {    // IE 5/6
+     xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.overrideMimeType('text/xml');
+  xhttp.open("GET", "random-variables-exercise.xml", false);
+  xhttp.send(null);
+  myApp.xmlLevelDoc = xhttp.responseXML;
+  return myApp.xmlLevelDoc.getElementsByTagName( str );
+};
+
+/**
+ * Force Blockly to resize into the available width.
+*/
+myApp.resize = function() {
+  var width = Math.max(document.getElementById("appPanel").offsetWidth - 440, 250);
+  document.getElementById('blocklyDiv').style.width = width + 'px';
+  Blockly.svgResize(myApp.workspace);
+};
+/**
+ * Initialize Blockly and the graph.  Called on page load.
+*/
+myApp.init = function() {
+  // Setup workspace for game
+  
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+   
+
+  // Setup blockly
+  myApp.workspace = Blockly.inject('blocklyDiv',
+      {collapse: false,
+       disable: false,
+       media: 'Blockly/media/',
+       toolbox: document.getElementById('toolbox')});
+  myApp.workspace.clearUndo();
+  myApp.resize();
+  // Setup level controls
+  alert( myApp.retrieveFromXML("WELCOME")[0].childNodes[0].nodeValue );
+
+  // Create all the levels
+  var levdesc = "";
+  var nlev = myApp.retrieveFromXML("LEVEL").length;
+  for(var i=0;i<nlev;i++){
+    myApp.active.push(false); 
+    levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myApp.clearAndSetLevel(' + i + ')"></span>\n'
+  }
+  // This bit creates the level indicator
+  var g = document.getElementById("levelIndicator");
+  g.innerHTML = levdesc;
+  // Make sure we can set first level
+  myApp.active[0]=true; 
+  // Start in level 0
+  myApp.clearAndSetLevel(0);
+};
+
+window.addEventListener('load', myApp.init);
+window.addEventListener('resize', myApp.resize);
+
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    } 
+  myApp.stuffToDoOnLevelLoad = function(n) {switch( myApp.mylevel ){ 
+}
+};myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length != 3 || myplot.data[2][0]!=1 ){ levelcomplete=false; }
+    break;case 1:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] < 0 || myplot.data[i][1] > 1  ){ levelcomplete=false; }
+      }
+    break;case 2:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){ 
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; } 
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 && myplot.data[i][1]!=1 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    break;case 3:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true; 
+      if( prand != 1 && myplot.data.length < 3 ){ levelcomplete=false; } 
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 && myplot.data[i][1]!=1 && myplot.data[i][1]!=2 && myplot.data[i][1]!=3 && myplot.data[i][1]!=4 && myplot.data[i][1]!=5 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    break;case 4:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; } 
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1]==0 || myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
+      }
+    break;case 5:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 && myplot.data[i][1]!=1 && myplot.data[i][1]!=2 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
+      }
+    break;case 6:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){ 
+           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
+      }
+    break;case 7:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1] < 0 || myplot.data[i][1] > 1  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    break;case 8:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="standard normal random variable" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("       Transplant everything you have learnt from this exercise about generating different types of random variables into a python notebook.  In this notebook you should generate and plot a set of points generated from the bernoulli, binomial, geometric, poisson and normal distributions.  When doing this task you should make sure your code is fast by using lists in the manner you learnt about in the final exercise of the task.   ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+         if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }       myApp.active[myApp.mylevel + 1] = true;       myApp.setLevel( myApp.mylevel + 1 );   } else {       alert("Your program is not quite right.  Have another go and see if you can fix it")
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+         myApp.stuffToDoOnLevelLoad( myApp.mylevel )   }};</script>

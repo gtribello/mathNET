@@ -4,26 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>The Chapman Kolmogorov Relation</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>CHAPMAN_KOLMOGOROV_RELATION</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -33,195 +35,142 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <h1 class="panel-title"> The Chapman Kolmogorov Relation</h1>
-                      </div>
-                    </div> 
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                            <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion" data-toggle="collapse">
-                                Short description and context
-                            </a>
-                            </h4>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
                         </div>
-                        <div id="collapse-One" class="accordion-body collapse in">
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <h3 class="no-margin no-padding">The Chapman Kolmogorov Relation</h3>
-                                        <p align="justify">
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">
+   <div class="panel panel-blue">
+       <div class="panel-heading">
+           <h1 class="panel-title">  The Chapman Kolmogorov Relation  </h1>
+       </div>
+   </div>
+<div class="panel panel-primary">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-one" data-parent="#accordion" data-toggle="collapse">Short description and context        </a>        </h4>    </div>    <div id="collapse-one" class="accordion-body collapse in">        <div class="panel-body">            <div class="row"><div class="col-md-7"><h3 class="no-margin no-padding"> The Chapman Kolmogorov Relation </h3><p align="justify">
+
+
 The Chapman Kolmogorov relation is an important result in the theory of (discrete) Markov chains as
+
 it provides a method for calculating the $n$-step transition probability matrix 
+
 of a Markov chain from the 1-step transition probability matrix of a Markov chain.  The Chapman-Kolmogorov
+
 relation can be written as follows:
+
 $$
+
 \mathbf{P}^{n+m} = \mathbf{P}^n\mathbf{P}^m
+
 $$
+
 Here $\mathbf{P}^{n+m}$ is the $n+m$-step transition probability matrix, $\mathbf{P}^{n}$ is the $n$-step transition probability matrix
+
 and $\mathbf{P}^{m}$ is the $m$-step transition probability matrix.
 
+
+
 The above equation holds for discrete Markov chains.  For continuous time Markov chains the elements of the transition probability matrix
+
 are written as a function of time.  For continuous time Markov chains the Chapman Komogorov relation is written as:
+
 $$
+
 \mathbf{P}(t + s ) = \mathbf{P}(t)\mathbf{P}(s)
+
 $$
 
-<H4> Syllabus Aims </H4> 
-<ul> 
-<li type="square"> You should be able to derive the Chapman Kolmogorov relation for a discrete Markov chain.
-</li> 
-<li type="square"> You should be able to explain what the Chapman Kolmogorov relation allows you to calculate.
-</li> 
-<li type="square"> You should be able to write out the Chapman Kolmogorov relation in both the discrete and continuous cases.
-</li> 
-<li type="square"> You should be able to use the Chapman Kolmogorov relation to calculate 2 and 3 step transition probabilities from the one step transition probability matrix of a discrete time Markov chain.
-</li> 
-<li type="square"> You should be able to explain how the Chapman Kolmogorov relation is used in the derivation of the Kolmogorov relation for continuous time Markov chains.
-</li> 
-</ul> 
-</p>
-                                    </div>
-                                    <div class="col-md-5"><object data="CHAPMAN_KOLMOGOROV_RELATION.svg" type="image/svg+xml" width="100%"></object></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="accordion" class="panel-group">
-                        <!-- Start of introductory panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion" data-toggle="collapse">
-                                    Introductory Material
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Two" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr> 
-                                          <tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="chapman-kolmogorov-video.html">An explanation of how the Chapman-Kolmogorov relation is derived</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
 
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Start of exercises panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Three" data-parent="#accordion" data-toggle="collapse">
-                                    Exercises
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Three" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>
-                                          <tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="chapman-kolmogorov-problems.html">Problems in which the Chapman-Kolmogorov relation is used to calculate probabilities.</a></td><td><a href="SOR3012.html">SOR3012</a></td><td>G. Tribello</td></tr> 
 
-                                        </table>
-                                     </div>
+  </p><H4> Syllabus Aims </H4> 
+<AIMS>
+    <UL>
+    <LI>  You should be able to derive the Chapman Kolmogorov relation for a discrete Markov chain.
+ </LI>
+    <LI>  You should be able to explain what the Chapman Kolmogorov relation allows you to calculate.
+ </LI>
+    <LI>  You should be able to write out the Chapman Kolmogorov relation in both the discrete and continuous cases.
+ </LI>
+    <LI>  You should be able to use the Chapman Kolmogorov relation to calculate 2 and 3 step transition probabilities from the one step transition probability matrix of a discrete time Markov chain.
+ </LI>
+    <LI>  You should be able to explain how the Chapman Kolmogorov relation is used in the derivation of the Kolmogorov relation for continuous time Markov chains.
+ </LI>
+    </UL>
+  </AIMS>
+</div><div class="col-md-5"><object data="CHAPMAN_KOLMOGOROV_RELATION.svg" type="image/svg+xml" width="100%"></object></div>            </div>        </div>    </div></div>   <div id="accordion" class="panel-group"><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-four" data-parent="#accordion" data-toggle="collapse">Videos        </a>        </h4>    </div>    <div id="collapse-four" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="chapman-kolmogorov-video.html"><b>An explanation of how the Chapman-Kolmogorov relation is derived</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-three" data-parent="#accordion" data-toggle="collapse">Worked examples        </a>        </h4>    </div>    <div id="collapse-three" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="chapman-kolmogorov-problems.html"><b>Problems in which the Chapman-Kolmogorov relation is used to calculate probabilities.</b></a></td><td><a href=" SOR3012 .html"> SOR3012 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div></div>
+<!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
                                 </div>
-                            </div>
                         </div>
-                        <!-- Start of external resources panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Four" data-parent="#accordion" data-toggle="collapse">
-                                    External resources
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Four" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                         <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>
-                                          
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
+                </div>
+        </div>
 </div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -239,4 +188,3 @@ $$
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

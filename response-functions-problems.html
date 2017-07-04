@@ -4,27 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>Classical thermodynamics
- : Exercise</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>response-functions-problems</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -34,103 +35,67 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <div class="row">
-                             <div class="col-md-8">
-                                 <h1 class="panel-title"> Classical thermodynamics
- : Exercises</h1>
-                             </div>
-                             <div class="col-md-4" align="right">
-                                 <!-- Web2PDF Converter Button BEGIN -->
-                                 <script type="text/javascript">
-                                 var
-                                 pdfbuttonlabel="Save page as PDF"
-                                 </script>
-                                 <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
-                                 <!-- Web2PDF Converter Button END -->
-                             </div>
-                          </div>
-                      </div>
-                      <H1> Introduction </H1>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
+                        </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">            <div class="col-md-8">                <h1 class="panel-title">Classical thermodynamics
+: Exercises</h1>            </div>            <div class="col-md-4" align="right">                  <!-- Web2PDF Converter Button BEGIN -->                   <script type="text/javascript">                   var                   pdfbuttonlabel="Save page as PDF"                   </script>                   <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>                   <!-- Web2PDF Converter Button END -->            </div>         </div>      </div>      <H1> Introduction </H1>
 <DESCRIPTION>
 To solve the problems below you will need to use everything that you have learnt about classical thermodynamics 
 during this course.
 </DESCRIPTION>
   <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+<h4> Problem 1</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Magnetisation, $M$, is an extensive thermodynamic variable that measures the degree of magnetic polarisation in a material.  The conjugate intensive thermodynamic variable this quantity is the magnetic field strength, $H$.  Write an expression for the infinitesimal change in energy $\textrm{d}E$ that takes place when the magnetisation changes by an infinitesimal amount, $\textrm{d}M$.  Assume that the number of atoms, the entropy and the volume of the system are kept fixed during this change.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-0" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-0" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The change in energy that takes place when the magnetisation changes by a small amount $\textrm{d}M$ can be calculated using:
 $$
  \textrm{d}E = H \textrm{d}M
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Write an expression that connects the magnetic field strength, $H$, to a first partial derivative of the internal energy $E$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-1" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-1" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We can combine the first law of thermodynamics, $\textrm{d}E = \textrm{d}q + \textrm{d}w$, and the second laws of (equilibrium) thermodynamics, $\textrm{d}q = T\textrm{d}S$, to 
 give:
 $$
@@ -145,26 +110,10 @@ $$
 H = \left( \frac{\partial E}{\partial M}\right) 
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 The magnetic susceptibility is given by $\chi = \left( \frac{\partial M}{\partial H} \right)$ show that this quantity must be positive by demonstrating that it can be related to a second derivative of the internal energy.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-2" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-2" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 To answer this question we first need to derive an expression for the appropriate thermodynamic potential.  In particular we will use the 
 following quantity, $P$, which is given by:
 $$
@@ -206,29 +155,13 @@ $$
 $$
 The derivative on the left hand side is equal to one over the susceptibility and, consequently, the susceptibility must be positive.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 2</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Write an expression for $\textrm{d}F$ in terms of $\textrm{d}V$, $\textrm{d}T$, $P$ and $S$.  Here $F$ is the Helmholtz free energy.  Use the expression you have written and the fact that $F$ is an exact differential to show that:
 $$
 \left(\frac{\partial S}{\partial V}\right)_T = \left( \frac{\partial P}{\partial T}\right)_V
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-3" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-3" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We begin by recalling that the differential of the Helmholtz free energy, $\textrm{d}F$, is given by:
 $$
 \textrm{d}F = -S\textrm{d}T - P\textrm{d}V 
@@ -245,26 +178,10 @@ We arrive at the result asked for in the question by noting that the cross deriv
 $\frac{ \partial^2 F}{\partial V \partial T} = \frac{ \partial^2 F}{\partial T \partial V}$ must also be equal because
 $F$ is an exact differential.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Explain why the constant volume heat capacity can be calculated using $C_v = T \left( \frac{\partial S}{\partial T}\right)_V$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-4" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-4" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We know that the constant volume heat capacity is defined as:
 $$
 \textrm{d}E = C_v \textrm{d}T = \textrm{d} q + \textrm{d} w = T\textrm{d}S - \textrm{d} w = T\textrm{d}S
@@ -276,17 +193,7 @@ $$
 C_v = T \left( \frac{\partial S}{\partial T} \right)_V
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 A van der Waals gas obeys the following mechanical equation of state:
 $$
 \left( P + \frac{aN^2}{V^2} \right)\left(\frac{V}{N} - b \right) = k_B T
@@ -297,43 +204,21 @@ $$
 $$
 for a van der Waals gas.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-5" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-5" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We can rearrange the mechanical equation state for the van der Waals gas that we were given in the question and differentiate as follows:
 $$
 P = \frac{k_B T}{ \frac{V}{N} - b} - \frac{aN^2}{V^2} \quad \rightarrow \quad \left(\frac{\partial P}{\partial T}\right)_V = \frac{k_B}{\frac{V}{N} - b}
 $$
 We then invoke the Maxwell relation we just derived to get the result required by the question.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the results from the first three parts of this question and the fact that $S$ is an exact differential to show that:
 $$
 \left( \frac{\partial C_v}{\partial V} \right)_T = 0
 $$
 for a van der Waals gas.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-6" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-6" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We can differentiate $C_v$ wrt $V$ at constant $T$ as follows:
 $$
 \left(\frac{\partial C_v}{\partial V} \right)_T = T \frac{\partial^2 S}{\partial V \partial T} = T \frac{\partial^2 S}{\partial T \partial V}
@@ -348,29 +233,13 @@ $$
 P = \frac{k_B T}{ \frac{V}{N} - b} - \frac{aN^2}{V^2} \quad \rightarrow \quad \left(\frac{\partial P}{\partial T}\right)_V = \frac{k_B}{\frac{V}{N} - b} \quad \rightarrow \quad T \frac{\partial }{\partial T} \left( \frac{\partial P}{\partial T}\right)_V = 0
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Show, by considering a transition between two states $i$ and $j$  during which the internal energy does not change, that:
 $$
 \left(\frac{\partial T}{\partial V}\right)_E  = - \frac{1}{ C_v } \left(\frac{\partial E}{\partial V}\right)_T
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-7" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-7" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We know that the internal energy is a state function and hence that the change in internal energy on moving between state $i$ and state $j$ is independent 
 of the path taken.  We can thus consider a reversible path connecting these two points and use the fact that at all points along this path the system is 
 equilibrium.  Because the system is always at equilibrium we can thus write the internal energy as a function of any pair of thermodynamic variables we so 
@@ -385,30 +254,14 @@ $$
 $$
 We now note that $\left(\frac{\partial E}{\partial T}\right)_V = C_v$ by definition. 
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the combined form of the first and second laws of thermodynamics and the fact that, at equilibrium, the entropy can be expressed as a 
 function of the temperature and the volume to show that:
 $$ 
 \left(\frac{\partial E}{\partial V}\right)_T = T\left(\frac{\partial P}{\partial T}\right)_V - P
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-8" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-8" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The combined form of the first and second laws of thermodynamics tells us that:
 $$
 \textrm{d}E = T\textrm{d}S - P\textrm{d}V
@@ -431,17 +284,7 @@ $$
 $$
 To get the second equality here we used the Maxwell relation derived from the Helmholtz free energy that we derived in the first part of this question.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the results obtained in the previous two questions together with the mechanical equation of state for a van der Waals gas to show that the amount a 
 van der Waals gas' temperature will change during an expansion from an initial volume $V_i$ to a final volume $V_f$ is given by:
 $$
@@ -449,13 +292,7 @@ $$
 $$
 Assume that $C_v$ is independent of temperature.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-9" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-9" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The left hand side shown below appears on the left hand side of the expression we just derived in the previous part.  We can 
 use the mehcanical equation of state to calculate the derivative here and thus simplify this expression as shown:
 $$
@@ -473,26 +310,10 @@ $$
 \Delta T = - \int_{V_i}^{V_f} \frac{aN^2}{V^2 C_v} \textrm{d}V = - \frac{aN^2}{C_v} \int_{V_i}^{V_f} \frac{\textrm{d}V}{V^2} = \frac{aN^2}{C_v} \left[ \frac{1}{V} \right]_{V_i}^{V_f} = \frac{aN^2}{C_v} \left[ \frac{1}{V_f} - \frac{1}{V_i} \right]
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 3</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Prove that $\left( \frac{\partial S}{\partial P}\right)_H = -\frac{V}{T}$ and explain why this derivative must be less than zero.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-10" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-10" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Recall that $H=U+PV$ and hence that the differential of the enthalpy, $\textrm{d}H$, must be given by:
 \[
 \textrm{d}H = \textrm{d}U + \textrm{P}\textrm{d}V + V\textrm{d}P = T\textrm{d}S - P\textrm{d}V + \textrm{P}\textrm{d}V + V\textrm{d}P =  T\textrm{d}S + V\textrm{d}P
@@ -511,17 +332,7 @@ $$
 $$
 This quantity must be negative as neither volume nor {\bf absolute} temperature (i.e. in Kelvin) can be less than zero. 
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 The Joule-Thomson process involves the slow passage of a gas from one container to another through a porous wall across a pressure gradient and 
 is isoenthalpic (constant $H$).  This technique can be used to condense gases as the gas will cool down or warm up in accordance with the sign of 
 the Joule-Thomson coefficient:
@@ -531,13 +342,7 @@ $$
 Show that $C_{JT} = \frac{V}{C_p}(T \alpha_P - 1 )$, where $\alpha_P=\frac{1}{V} \left( \frac{\partial V}{\partial T} \right)_P$ and 
 $C_p=\left( \frac{\partial H}{\partial T} \right)_P$ the constant pressure heat capacity.  
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-11" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-11" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We have an isoenthalpic process that takes us from state $i$ to state $j$. Lets further suppose that at all points along the path connecting 
 the two states we can write $H=H(T,P)$.  That is to say we will assume that the system is in equilibrium with its environment at all points 
 during the transition.  Pulling these ideas together we have:
@@ -575,26 +380,10 @@ Substituting this into the equation we derived earlier for $C_{JT}$ gives:
 C_{JT} = - \frac{1}{C_P} \left( \frac{\partial H}{\partial P} \right)_T = \frac{V}{C_P} (T\alpha_P -1)
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-12" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-12" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Show that $C_{JT}=0$ is always zero for an ideal gas.  
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-12" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-12" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 For an ideal gas $V=\frac{N k_B T}{P}$ hence: 
 \[
 \alpha_P =  \frac{1}{V} \left( \frac{\partial V}{\partial T} \right)_P = \frac{1}{V} \frac{N k_B}{P}
@@ -606,56 +395,24 @@ C_{JT} = \frac{V}{C_P} (T\alpha_P -1) = \frac{V}{C_P}\left( \frac{N k_B T}{PV} -
 where we have used the fact that $\frac{N k_B T}{PV}=1$ for ideal gas which we can work out based on the mechanical equation 
 of state $PV = N k_B T$ 
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-13" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 4</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-13" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 The laws of thermodynamics can be used to describe systems that are liquid and solid as well as systems that are gaseous.  Often when we do so we have to 
 consider forms of work other than PV-work.  For example if we have an elastic bar then we will have to do work to extend the length of the bar against a 
 tensile force, $f$, that will try to pull the bar back to its equilibrium length $L_0$.  Write an expression that is analogous to 
 $\textrm{d}E = T\textrm{d}S - P\textrm{d}V$ for this system.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-13" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-13" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 \[
 \textrm{d}E = \textrm{d} q + \textrm{d} w = T\textrm{d}S + f\textrm{d}L
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-14" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-14" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Show that:
 $$
 \left( \frac{\partial E }{\partial T} \right)_L = T \left(\frac{\partial S}{\partial T}\right)_L \qquad \textrm{and} \qquad \left( \frac{\partial E}{\partial L}\right)_T = T\left( \frac{\partial S}{\partial L} \right)_T + f 
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-14" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-14" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We know that at all points during the transition between states the system is in equilibrium.  As a consequence we know that 
 we can calculate $S$ if we are given the values of two thermodynamic variables (Gibbs phase rule) in this case we will choose $L$ and $T$ and hence write:
 $$
@@ -671,29 +428,13 @@ $$
 $$
 and hence by equating coefficients of $\textrm{d}T$ and $\textrm{d}L$ in the previous two equations we arrive at the desired results.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-15" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-15" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the definition of the Helmholtz free energy $F=E-TS$ (an exact differential) and the result obtained in the first part of this question to show that:
 \[
 \left( \frac{\partial S}{\partial L}\right)_T = -\left( \frac{\partial f}{\partial T}\right)_L
 \]
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-15" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-15" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Firstly:
 \[
 \textrm{d}F = \textrm{d}E - T\textrm{d}S - S\textrm{d}T = T\textrm{d}S+f\textrm{d}L - T\textrm{d}S - S\textrm{d}T  = f\textrm{d}L - S\textrm{d}T
@@ -711,29 +452,13 @@ S &amp;= -\left(\frac{\partial F}{\partial T}\right)_L \qquad \rightarrow \qquad
 $$
 The required result is obtained by noting that the cross derivatives in the above are equal because $F$ is an exact differential.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-16" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-16" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 If the mechanical equation of state of the bar is $f=aT^2[L-L_0]$, where $a$ is a positive constant show that:
 \[
 \left( \frac{\partial S}{\partial L}\right)_T = -2aT[L-L_0]
 \]
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-16" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-16" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 From the previous parts we have:
 \[
 \left( \frac{\partial S}{\partial L}\right)_T = -\left( \frac{\partial f}{\partial T}\right)_L
@@ -743,27 +468,11 @@ We can calculate $\left( \frac{\partial f}{\partial T}\right)_L$ from the mechan
 \left( \frac{\partial f}{\partial T}\right)_L = 2aT[L-L_0]
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-17" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-17" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Explain why $\left( \frac{\partial S}{\partial T }\right)_L=\frac{C_L}{T}$ where $C_L$ is the 
 constant length heat capacity $C_L=\left( \frac{\partial E}{\partial T} \right)_L$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-17" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-17" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Rearranging what we are told in the question:
 \[
 \textrm{d}E = C_L \textrm{d}T
@@ -781,17 +490,7 @@ we can thus write
 \textrm{d}S = \frac{C_L\textrm{d}T}{T} \qquad \rightarrow \qquad \left( \frac{\partial S}{\partial T} \right)_L = \frac{C_L}{T}
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-18" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-18" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the results from the previous two parts and the fact that the entropy (an exact differential) can be written as a function of $L$ and $T$ - i.e. $S(L,T)$ 
 to show that
 \[
@@ -799,13 +498,7 @@ C_L(L,T) = -aT(L-L_0)^2 + bT
 \]
 You will need to use the fact that $C_L=bT$ when $L=L_0$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-18" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-18" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Because we have $S=S(L,T)$ we can write:
 \[
 \textrm{d}S = \left( \frac{\partial S}{\partial L} \right)_T \textrm{d}L + \left(\frac{\partial S}{\partial T}\right)_L \textrm{d}T 
@@ -829,29 +522,13 @@ To determine $K(T)$ note from the question that $C_L(L_0,T)=bT$ hence:
 C_L(L_0,T) = -aT(L_0 - L_0)^2 - L_0^2 + K(T) = K(T) - L_0^2 = bT \qquad \rightarrow \qquad K(T) = bT +L_0^2
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-19" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-19" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use all the results you have arrived at previously and the fact that $S_0=S(L_0,T_0)$ to show that:
 \[
 S(L,T) = b(T-T_0) - aT(L-L_0)^2 + S_0
 \]
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-19" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-19" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We know from the previous parts and basic integration that:
 $$
 \left(\frac{\partial S}{\partial L} \right)_T = -2aT(L-L_0) \qquad \rightarrow \qquad S(L,T) = -aT(L^2 - 2L_0L) + f(T)
@@ -880,27 +557,11 @@ S_0 = -aTL(L_0-L_0)^2 + bT_0 + C \qquad \rightarrow \qquad C=S_0 - bT_0
 \]
 When this value of $C$ is inserted into the equation that we have derived for $S(L,T)$ we get the result the question asks for.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-20" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-20" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 If the bar is at temperature $T_i$ and if it has length $L_i$ and a tensile force is applied until the bar reaches a length of 
 $L_f$ derive an expression for the value of the final temperature $T_f$ if this extension (change of thermodynamic state) is performed adiabatically.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-20" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-20" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 It is important to remember at this stage that because the change in length takes place adiabatically there is no associated change in 
 entropy.  This implies: 
 $$
@@ -919,49 +580,37 @@ $$
 $$
 In other words, stretching the bar heats it up.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
+                </div>        </div>    </div></div>   </div></div><!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
-</br>
- 
-                    </div> 
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
-</div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -979,4 +628,3 @@ In other words, stretching the bar heats it up.
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

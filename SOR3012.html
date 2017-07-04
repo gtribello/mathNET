@@ -4,345 +4,114 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>SOR3012</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>SOR3012 overview</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- MathJax -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+        </script>
+        <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                  <li><span>Modules</span>
-                                                  <ul>
-                                                    <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					          </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                        <div class="panel panel-blue">
-                          <div class="panel-heading">
-                            <h1 class="panel-title"> SOR3012:  Stochastic Processes and Risk
- </h1>
-		          </div>
-			</div>
-                        <div class="panel panel-primary">
-                          <div class="panel-heading">
-                           <h4 class="panel-title">
-                             Description and study plan
-                           </h4>
-                          </div>
-                          <div class="panel-body"> 
-                            <div class="row">
-                               <div class="col-md-5">
-                                  <h4>Description</h4> 
-                                  <p align="justify">
-The theory of stochastic process is used to model the future behavior of systems in fields ranging from finance to weather forecasing. 
-In stochastic models the future behavior of the system is modelled using random variables and probability.  One can thus obtain information
-on the likelihood that the future will transpire in a particular way.
-
-In this module we focus primarily on probabilistic models that have the Markov property.  In these models the probability of the future transpiring in a 
-particular way depends only on the present state of the system and not on what happened in the past. These models find application in physics, quantitative
-finance and machine learning.  A particularly important application of Markov processes is the method of Monte Carlo integration.  We will thus finish by 
-studying this technique and its application to problems in Bayesian inference.
-
-</p>
-                                  <h4>Learning Outcomes</h4>
-                                  <ul> 
-<li type="square"> You should be able to calculate expectations and variances directly, using the moment generating function and by using the conditional expectation theorem.  You should also be able to explain what predictions can be made given the expectation and/or the variance.
-</li> 
-<li type="square"> You should be able to recognise which type of random variable is appropriate for modelling a given phenomenon, identify the assumptions that they have made in constructing this model and critically assess their validity. 
-</li> 
-<li type="square"> You should be able to explain what it means when we state that a time dependent process has independent and stationary increments and how this differs from a Markov process.  By using your understanding of this distinction you should be able to construct probabilistic models for time dependent phenomena, explain the assumptions that have been made in the constructing these models and critically assess their validity.
-</li> 
-</ul>
-
-                                  <h4>Key Topics </h4>
-                                  <h3><a href="RANDOM_VARIABLES.html">Random variables</a> | <a href="CONTINUOUS_TIME_MARKOV_CHAIN.html">Markov chains in continuous time</a> | <a href="EXPECTATION.html">Expectation </a> | <a href="CONDITIONAL_PROBABILITY.html">Conditional probability</a> | <a href="POISSON_PROCESS.html">Poisson Process</a> </h3>
-                               </div>
-                               <div class="col-md-7">
-                                     <table>
-                                     <tr> <td width="2%"></td> <td width="10%"> </td> <td width="50%"> <h4> Description and link </h4> </td> <td width="20%"> <h4> Topic </h4> </td> <td> <h4> Author </h4> </td> </tr>
-
-                                  <tr><td></td><td></td><td><b> WEEK 1 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="classical_probability_video.html">The classical interpretation of probability explained</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="non-classical-probability-video.html">An introduction to the cumulative probability distribution function</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="probability-functions.html">An introduction to the probability mass and probabillity density</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap02.pdf">Some introductory notes on probability</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap04.pdf">Introductory material on discrete random variables including descriptions of the binomial, geometric and poisson random variables.</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap10.pdf">Some notes on continuous random variables including descriptions of the uniform, exponential and normal random variables.</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-1-coins-and-dice.ipynb" download="sor3012-1-coins-and-dice.ipynb"> Write a program to generate random variables</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="random-variables-problems.html">Some simple exercises on random variables</a></td><td><a href="RANDOM_VARIABLES.html">Random variables</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="binomial-random-variable-video.html">A video explaining the derivation of the binomial random variable</a></td><td><a href="BINOMIAL_RANDOM_VARIABLE.html">Binomial random variable</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-2-binomial-geometric.ipynb" download="sor3012-2-binomial-geometric.ipynb"> A progrmming exercise about the binomail and geometric random variables</a></td><td><a href="BINOMIAL_RANDOM_VARIABLE.html">Binomial random variable</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="binomial-random-variable-problems.html">Problems involving the binomial random variable</a></td><td><a href="BINOMIAL_RANDOM_VARIABLE.html">Binomial random variable</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="geometric-random-variable-video.html">A video explaining the derivation of the geometric random variable</a></td><td><a href="GEOMETRIC_RANDOM_VARIABLE.html">The geometric random variable</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="geometric-random-variable-problems.html">Problems involving the geometric random variable</a></td><td><a href="GEOMETRIC_RANDOM_VARIABLE.html">The geometric random variable</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="poisson-random-variable-problems.html">Problems involving the Poisson Random variable.</a></td><td><a href="POISSON_RANDOM_VARIABLE.html">The poisson random variable</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 2 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="expectation-video.html">Introducing the expectation</a></td><td><a href="EXPECTATION.html">Expectation </a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap05.pdf">An explanation of how the expectation, variance and moment generating function are calculated.</a></td><td><a href="EXPECTATION.html">Expectation </a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="expectation-problems.html">Exercises involving the calculation of the expectation for a random variable</a></td><td><a href="EXPECTATION.html">Expectation </a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="law-of-large-numbers-video.html">Introducing the law of large numbers</a></td><td><a href="LAW_OF_LARGE_NUMBERS.html">The law of large numbers</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="histogram-video.html">A video explaining how the law of large numbers is used when calculating a histogram</a></td><td><a href="LAW_OF_LARGE_NUMBERS.html">The law of large numbers</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap11.pdf">Some notes on the law of large numbers and the central limit theorem. These notes include proofs for these two theorems.</a></td><td><a href="LAW_OF_LARGE_NUMBERS.html">The law of large numbers</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-3-law-of-large-numbers.ipynb" download="sor3012-3-law-of-large-numbers.ipynb"> A programming exercise to get you to grips with the law of large numbers</a></td><td><a href="LAW_OF_LARGE_NUMBERS.html">The law of large numbers</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-calculating-histograms.ipynb" download="sor3012-calculating-histograms.ipynb"> A programming exercise on calculating histograms</a></td><td><a href="LAW_OF_LARGE_NUMBERS.html">The law of large numbers</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/Betrand-paradox.ipynb.zip" download="Betrand-paradox.ipynb.zip"> An exercise that will help you to understand why the cumulative probability distribution function is necessary.</a></td><td><a href="LAW_OF_LARGE_NUMBERS.html">The law of large numbers</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 3 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="central-limit-theorem-video.html">Video introducing confidence limits and the central limit theorem</a></td><td><a href="CENTRAL_LIMIT_THEOREM.html">The central limit theorem</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="error_bar_video.html">Video explaining how statistical error bars should be calculated and interpretted.</a></td><td><a href="CENTRAL_LIMIT_THEOREM.html">The central limit theorem</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="central-limit-theorem-problems.html">Exercises in which the central limit theorem is used to estimate probabilities</a></td><td><a href="CENTRAL_LIMIT_THEOREM.html">The central limit theorem</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-confidence-limits.ipynb" download="sor3012-confidence-limits.ipynb"> A programming exercise on confidence limits</a></td><td><a href="CENTRAL_LIMIT_THEOREM.html">The central limit theorem</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 4 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="conditional-probability-video.html">Introduction to conditional probability</a></td><td><a href="CONDITIONAL_PROBABILITY.html">Conditional probability</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="partition-theorem-video.html">A video explaining the partition theorem in statistics</a></td><td><a href="CONDITIONAL_PROBABILITY.html">Conditional probability</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap03.pdf">Introductory material on conditional probability.</a></td><td><a href="CONDITIONAL_PROBABILITY.html">Conditional probability</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="conditional-probability-problems.html">Exercises on conditional probability</a></td><td><a href="CONDITIONAL_PROBABILITY.html">Conditional probability</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="independence.html">An explanation of what we mean by independence in statistics</a></td><td><a href="INDEPENDENT_RANDOM_VARIABLES.html">Independent random variables</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="independent-random-variables-problems.html">Exercises dealing with independent random variables and the inclusion exclusion principle</a></td><td><a href="INDEPENDENT_RANDOM_VARIABLES.html">Independent random variables</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="bayes_theorem_video.html">A video introducing Bayes theorem</a></td><td><a href="BAYES_THEOREM.html">Bayes theorem</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-6-bayes-theorem.ipynb" download="sor3012-6-bayes-theorem.ipynb"> A programming exercise to help you get to grip with Bayes theorem</a></td><td><a href="BAYES_THEOREM.html">Bayes theorem</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="bayes-theorem-problems.html">Problems on Bayes theorem</a></td><td><a href="BAYES_THEOREM.html">Bayes theorem</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="conditional-expectation-video.html">Using the conditional expectation theorem to calculate the expectation and variance of the geometric random variable</a></td><td><a href="CONDITIONAL_EXPECTATION.html">Conditional expectation</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap07.pdf">A description of the conditional expectation theorem and an explanation of how it can be used to calculate expectation values.</a></td><td><a href="CONDITIONAL_EXPECTATION.html">Conditional expectation</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="conditional-expectation-problems.html">Problems involving using the conditional expectation theorem to calculate expectation values.</a></td><td><a href="CONDITIONAL_EXPECTATION.html">Conditional expectation</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap06.pdf">A description of joint probability functions including a derivation of the Cauchy Schwartz inequality.</a></td><td><a href="JOINT_PROBABILITY_DISTRIBUTION.html">Joint probability distribution</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="joint-probability-problems.html">Exercises involving joint probability distributions</a></td><td><a href="JOINT_PROBABILITY_DISTRIBUTION.html">Joint probability distribution</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-pairs-of-random-varaiables.ipynb" download="sor3012-pairs-of-random-varaiables.ipynb"> An exercise on simulating correlated variables.</a></td><td><a href="JOINT_PROBABILITY_DISTRIBUTION.html">Joint probability distribution</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="cauchy-schwartz-video.html">A video that goes through the derivation of the Caucy-Schwartz inequality</a></td><td><a href="CAUCHY_SCHWARTZ_INEQUALITY_STATS.html">The Cauchy Schwartz Inequality in Statistics</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 5 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="markov-property-video.html">Introduction to the Markov property</a></td><td><a href="MARKOV_PROPERTY.html">The Markov Property</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap12.pdf">Introductory notes on Markov chains and the Markov property.</a></td><td><a href="MARKOV_PROPERTY.html">The Markov Property</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="chapman-kolmogorov-video.html">An explanation of how the Chapman-Kolmogorov relation is derived</a></td><td><a href="CHAPMAN_KOLMOGOROV_RELATION.html">The Chapman Kolmogorov Relation</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="chapman-kolmogorov-problems.html">Problems in which the Chapman-Kolmogorov relation is used to calculate probabilities.</a></td><td><a href="CHAPMAN_KOLMOGOROV_RELATION.html">The Chapman Kolmogorov Relation</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="transient-recurrent-video.html">An explanation of the limiting behavior of Markov chains and the meanings of the terms transient and recurrent.</a></td><td><a href="TRANSIENT_RECURRENT_STATES.html">Transient and recurrent states in Markov chains</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap13.pdf">Some notes that introduce the limiting behavior of Markov chains and the definitions of transient and recurrent states.</a></td><td><a href="TRANSIENT_RECURRENT_STATES.html">Transient and recurrent states in Markov chains</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="transient-recurrent-problems.html">Problems on drawing transition graphs for Markov chains and on identifying transient and recurrent states.</a></td><td><a href="TRANSIENT_RECURRENT_STATES.html">Transient and recurrent states in Markov chains</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 6 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap14.pdf">Notes on the ergodic theorem and the stationary distribution of Markov chains in general</a></td><td><a href="STATIONARY_DIST_MARKOV.html">Ergodic Markov chains</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap15.pdf">More notes on the ergodic distribution and the stationary distribution of Markov chains.</a></td><td><a href="STATIONARY_DIST_MARKOV.html">Ergodic Markov chains</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="limiting-stationary-dist-video1.html">A video explaining the derivation of the ergodic theorem</a></td><td><a href="STATIONARY_DIST_MARKOV.html">Ergodic Markov chains</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="limiting-stationary-dist-video2.html">A video explaining why the limiting stationary distribution of an ergodic markov chain can be found by finding the principle left eigenvector of the transition matrix.</a></td><td><a href="STATIONARY_DIST_MARKOV.html">Ergodic Markov chains</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="markov-stationary-distribution-problems.html">Problems on finding the stationary distribution of ergodic Markov chians</a></td><td><a href="STATIONARY_DIST_MARKOV.html">Ergodic Markov chains</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/Ergodic-markov-chains.ipynb.zip" download="Ergodic-markov-chains.ipynb.zip"> A programming exercise in which you will simulate an ergodic markov chain</a></td><td><a href="STATIONARY_DIST_MARKOV.html">Ergodic Markov chains</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-ehrenfest-urns.ipynb" download="sor3012-ehrenfest-urns.ipynb"> A programming exercise that involves simulating a more complex discrete time Markov chain.</a></td><td><a href="STATIONARY_DIST_MARKOV.html">Ergodic Markov chains</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="hitting-times-video.html">A video explaining how the hitting times and hitting probabilities are calculated</a></td><td><a href="HITTING_PROBABILITIES.html">Hitting time and hitting probability</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="hitting-time-problems.html">Problems on setting up Markov chains with transient and absorbing states and on calculating hitting times and hitting probabilities.</a></td><td><a href="HITTING_PROBABILITIES.html">Hitting time and hitting probability</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 7 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="gamblers-runs-video.html">A video explaining the gamblers ruin problem and the derivation of the difference equations.</a></td><td><a href="GAMBLERS_RUIN.html">Gamblers ruin</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap08.pdf">Some introductory notes on random walks.</a></td><td><a href="GAMBLERS_RUIN.html">Gamblers ruin</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap09.pdf">Some notes on how the expected number of games is worked out in the gamblers ruin problem.</a></td><td><a href="GAMBLERS_RUIN.html">Gamblers ruin</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-gamblers-ruin.ipynb" download="sor3012-gamblers-ruin.ipynb"> A programming exercise on gamblers ruin</a></td><td><a href="GAMBLERS_RUIN.html">Gamblers ruin</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="resources/gamblers-ruin-probability.pdf">Deriving the probability of ruin in gamblers ruin</a></td><td><a href="GAMBLERS_RUIN.html">Gamblers ruin</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="resources/gamblers-ruin-expectation.pdf">Deriving the expected length of the game in the gamblers ruin problem</a></td><td><a href="GAMBLERS_RUIN.html">Gamblers ruin</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="gamblers-ruin-problems.html">Some exercises that use the solutions of the gamblers ruin problem.</a></td><td><a href="GAMBLERS_RUIN.html">Gamblers ruin</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 8 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap23.pdf">Notes on Markov chains in continuous time</a></td><td><a href="CONTINUOUS_TIME_MARKOV_CHAIN.html">Markov chains in continuous time</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap25.pdf">Notes on some examples of Markov chains in continuous time.</a></td><td><a href="CONTINUOUS_TIME_MARKOV_CHAIN.html">Markov chains in continuous time</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="continuous-time-markov.html">A video introducing the theory of Markov chains in continuous time.</a></td><td><a href="CONTINUOUS_TIME_MARKOV_CHAIN.html">Markov chains in continuous time</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="continuous-time-markov-chains-problems.html">Problems involving simple continuous time Markov chains</a></td><td><a href="CONTINUOUS_TIME_MARKOV_CHAIN.html">Markov chains in continuous time</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="exponential-random-variable-video.html">Introduction to the exponential random variable</a></td><td><a href="EXPONENTIAL_RANDOM_VARIABLE.html">Exponential random variable</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="pairs-of-exponentials.html">Calculating the probability that one exponential random variable is less than another.</a></td><td><a href="EXPONENTIAL_RANDOM_VARIABLE.html">Exponential random variable</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap18.pdf">Notes on the derivation of the exponenitial random variable.</a></td><td><a href="EXPONENTIAL_RANDOM_VARIABLE.html">Exponential random variable</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="exponential-random-variable-problems.html">Problems involving the exponential random variable</a></td><td><a href="EXPONENTIAL_RANDOM_VARIABLE.html">Exponential random variable</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 9 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="poisson-process-video.html">A video introducing the poisson process as a continuous time Markov chain</a></td><td><a href="POISSON_PROCESS.html">Poisson Process</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap19.pdf">Some notes on the poisson process and its derivation.</a></td><td><a href="POISSON_PROCESS.html">Poisson Process</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap20.pdf">More notes on the properties of the Poisson process.</a></td><td><a href="POISSON_PROCESS.html">Poisson Process</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-poisson-process.ipynb" download="sor3012-poisson-process.ipynb"> A programming exericse on simulating the poisson process</a></td><td><a href="POISSON_PROCESS.html">Poisson Process</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="poisson-process-problems.html">Some problems involving the poisson process</a></td><td><a href="POISSON_PROCESS.html">Poisson Process</a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 10 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="mm1-queue-video.html">A video introducing the M/M/1 Queue with infinite capacity</a></td><td><a href="MM1_QUEUE.html">The M/M/1 Queue </a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap24.pdf">Notes on the M/M/1 Queue</a></td><td><a href="MM1_QUEUE.html">The M/M/1 Queue </a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-mm1-queue.ipynb" download="sor3012-mm1-queue.ipynb"> A programming exericse on the M/M/1 queue</a></td><td><a href="MM1_QUEUE.html">The M/M/1 Queue </a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="queues-problems.html">Some exercises involving the M/M/1 Queue</a></td><td><a href="MM1_QUEUE.html">The M/M/1 Queue </a></td><td>G. Tribello</td></tr> 
-<tr><td></td><td></td><td><b> WEEK 11 </b></td><td></td></tr>
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="inhomogeneous-poisson-process-video.html">A video introducing the inhomogeneous poisson process</a></td><td><a href="INHOMOGENEOUS_POISSON_PROCESS.html">Inhomogeneous Poisson Process</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap22.pdf">Notes on the inhomogeneous poisson process.</a></td><td><a href="INHOMOGENEOUS_POISSON_PROCESS.html">Inhomogeneous Poisson Process</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="inhomogeneous-poisson-process-problems.html">Problems involving the inhomogeneous poisson process</a></td><td><a href="INHOMOGENEOUS_POISSON_PROCESS.html">Inhomogeneous Poisson Process</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="compound-poisson-process-video.html">A video explaining how to calculate the expectation and variance for the compound poisson process.</a></td><td><a href="COMPOUND_POISSON_PROCESS.html">Compound Poisson Process</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/jim-chap21.pdf">Notes on the compound poisson process</a></td><td><a href="COMPOUND_POISSON_PROCESS.html">Compound Poisson Process</a></td><td>J. F. McCann</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-laptop fa-3x"></i></td><td><a href="resources/sor3012-compound-poisson.ipynb" download="sor3012-compound-poisson.ipynb"> A programming exercise on the compound poisson process</a></td><td><a href="COMPOUND_POISSON_PROCESS.html">Compound Poisson Process</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="compound-poisson-process-questions.html">Some exercises involving the compound Poisson process</a></td><td><a href="COMPOUND_POISSON_PROCESS.html">Compound Poisson Process</a></td><td>G. Tribello</td></tr> 
-
-                                     </table>
-                               </div>
-                            </div>
-                          </div>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
                         </div>
-                        <div class="panel panel-primary">
-                          <div class="panel-heading">
-                           <h4 class="panel-title">
-                             Topic graph for this module
-                           </h4>
-                          </div>
-                          <div class="panel-body"> 
-                            <object data="SOR3012.svg" type="image/svg+xml" width="100%"> </object>
-                          </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">
+   <div class="row margin-vert-30">
+      <div class="col-md-10">
+      </div>
+   </div>
+</div>
+<!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
                         </div>
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
+                </div>
+        </div>
 </div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -360,4 +129,3 @@ studying this technique and its application to problems in Bayesian inference.
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

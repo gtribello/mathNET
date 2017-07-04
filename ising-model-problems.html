@@ -4,27 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>Ising model 
- : Exercise</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>ising-model-problems</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -34,57 +35,48 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <div class="row">
-                             <div class="col-md-8">
-                                 <h1 class="panel-title"> Ising model 
- : Exercises</h1>
-                             </div>
-                             <div class="col-md-4" align="right">
-                                 <!-- Web2PDF Converter Button BEGIN -->
-                                 <script type="text/javascript">
-                                 var
-                                 pdfbuttonlabel="Save page as PDF"
-                                 </script>
-                                 <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
-                                 <!-- Web2PDF Converter Button END -->
-                             </div>
-                          </div>
-                      </div>
-                      <H1> Introduction </H1>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
+                        </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">            <div class="col-md-8">                <h1 class="panel-title">Ising model 
+: Exercises</h1>            </div>            <div class="col-md-4" align="right">                  <!-- Web2PDF Converter Button BEGIN -->                   <script type="text/javascript">                   var                   pdfbuttonlabel="Save page as PDF"                   </script>                   <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>                   <!-- Web2PDF Converter Button END -->            </div>         </div>      </div>      <H1> Introduction </H1>
 <DESCRIPTION>
 The questions below require you to find partition functions using the transfer matrix technique 
 that was introduced in the video on finding the partition function for the 1D-closed Ising model.
@@ -93,12 +85,7 @@ They are here mostly to show you the scope of this technique.
 </DESCRIPTION>
   <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+<h4> Problem 1</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 In the video on the closed, 1D Ising model we calculated the canonical partition function for a system of $N$ spins using the transfer matrix method.
 We are now going to use this method to calculate the ensemble average for the $i$th of our spin variables, $\langle S_i \rangle$, instead.  Explain why I 
 can calculate this quantity using the following equation:
@@ -107,13 +94,7 @@ can calculate this quantity using the following equation:
 \]
 where as always $z(0)=-1$, $z(1)=1$ and $s_{N+1}=s_1$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-0" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-0" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We note that the probability, $P_i$, of being in microstate $i$ (if we are in the canonical ensemble) is equal to:
 \[
 P_i = \frac{ e^{-\beta E_i}}{Z_c}
@@ -128,17 +109,7 @@ for an Ising system we consider write one summation sign (over the two states ea
 thus enumerate over all possible states.  If we do the summation above using the value of the $i$th spin as our property $A$ we get the expression 
 in the question above.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Given that I can express the value of the spin variable using the Pauli spin matrix:
 \[
 \sigma = \left(
@@ -150,13 +121,7 @@ Given that I can express the value of the spin variable using the Pauli spin mat
 \]
 how might I rewrite the summation in the previous question using the transfer matrix approach.  
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-1" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-1" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 From the first question we have:
 \[
 \langle S_i \rangle = \frac{1}{Z_c} \sum_{s_1=0}^1 \sum_{s_2=0}^1 \sum_{s_3=0}^1 \dots \sum_{s_{N}=0}^1 z(s_i) \exp\left[ \beta J \sum_{j=1}^{N} z(s_j)z(s_{j+1}) + \beta H \sum_{j=1}^N z(s_j) \right]
@@ -196,17 +161,7 @@ is is important as we can use this fact to rewrite the above as
 We get to the final result here by using the fact that the canonical partition function, $Z_c$, is equal to the trace of the 
 transfer matrix, $\mathbf{P}$.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the result from the previous calculation and the fact that:
 \[
 \mathbf{S} = \mathbf{V}^{-1} \sigma \mathbf{V} = 
@@ -219,13 +174,7 @@ c &amp; d
 \]
 where $a$, $b$, $c$ and $d$ are parameters to calculate $\langle S_i \rangle$ 
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-2" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-2" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We begin by recalling that we can write $\mathbf{P}^N$ as:
 \[
 \mathbf{P}^N = \mathbf{V}\mathbf{\Lambda^N} \mathbf{V}^{-1}
@@ -331,30 +280,14 @@ c\lambda_1^N &amp; d \lambda_2^N
 Notice how we have used the fact that the trace of a product of matrices is invariant to cyclic permutations in the order of the matrix 
 multiplications in the above.  
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Now suppose that I want to calculate whether or not (on average) the spin on the $i$th site and the $(i+r)$th site are arranged parallel or antiparallel,
  $\langle s_i s_{i+r} \rangle$.  Write an expression for this quantity using summation notation and show that when this is rewritten using transfer matrices you obtain.
 \[
 \langle s_i s_{i+r} \rangle = \frac{ \textrm{Tr}(\sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} )}{\textrm{Tr}(\mathbf{P}^N)}
 \]
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-3" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-3" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The average we have been asked to calculate can be calculated using the following summation
 \[
 \begin{aligned}
@@ -373,27 +306,11 @@ Where here we once again have $z(0)=-1$ and $z(1)=1$.  When we introduce the tra
 where we again use the fact that we can permute the order of the matrices when we calculate the trace of their product.  To get 
 the result in the question you use the fact that $Z_c = \textrm{Tr}(\mathbf{P}^N)$.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the result from the previous question to express the ensemble average $\langle S_i S_j \rangle$ in terms of the parameters $a$, $b$, $c$ and $d$ and
 the eigenvalues of the transfer matrix $\lambda_1$ and $\lambda_2$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-4" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-4" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 At the end of the previous question we arrrived at:
 \[
 \langle S_i S_j \rangle = \frac{1}{Z_c} \textrm{Tr}( \sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} )
@@ -459,26 +376,10 @@ Inserting this into the question at the start (and using the value we know for f
 \langle S_i S_j \rangle = \frac{1}{Z_c} \textrm{Tr}( \sigma \mathbf{P}^r\sigma \mathbf{P}^{N-r} ) = \frac{\left[ a^2 + d^2 \left(\frac{\lambda_2}{\lambda_1}\right)^N \right] + bc \left[ \left(\frac{\lambda_2}{\lambda_1}\right)^r + \left(\frac{\lambda_2}{\lambda_1}\right)^{N-r} \right]}{\left[ 1 + \left(\frac{\lambda_2}{\lambda_1}\right)^N\right]} 
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 2</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Consider a 1-D open chain Ising model with $N$ spins in an external magnetic field $H$.  Each spin will interact with its neighbours and with the external field.  Write an expression that can be used calculate the energy of a microstate of this system.  Remember in this model, at variance with the closed Ising model, the 1st spin <b>does not</b> interact with the $N$th spin.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-5" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-5" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The energy of a microstate can be calculated using:
 \[
 E = -\sum_{i=1}^{N-1} J s_i s_{i+1} - \sum_{i=1}^N H s_i =  -\frac{H}{2}s_1 - \sum_{i=1}^{N-1} \left[J s_i s_{i+1} + \frac{H}{2}(s_i + s_{i+1}) \right] - \frac{H}{2}s_N
@@ -487,17 +388,7 @@ The important difference from the 1D-closed Ising model is that the first sum in
 did in the closed case.  The reason for this is that $s_{N+1} \ne s_1$ as it was for the closed Ising model.  Now $s_{N+1}$ is a spin variable that 
 just does not exist as the spins are now on a line and not on a circle.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the summation notation that we used to solve the closed, 1D Ising model to show that the canonical partition function for open, 1D Ising model is given by:
 \[
 \begin{aligned}
@@ -522,13 +413,7 @@ $\mathbf{s}^T$ is the (row vector) transpose of $\mathbf{s}$.  (N.B. One way to 
 open-1D ising model with two spins, work out the energy of each and the contribution they make to the partition function.  You could then 
 compare the result you get by summing all these contributions to the result that you get by evaluating the above matrix product with $N=2$)
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-6" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-6" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Once again in what follows we have $z(0)=-1$ and $Z(1)=1$.  We can write the sum over microstates that we have to perform in order to evaluate 
 the canonical partition function for this system as:
 \[
@@ -559,17 +444,7 @@ Z_c = \mathbf{s}^T \mathbf{P}^{N-1}\mathbf{s}
 \]
 Cool huh!
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Show that when $H = 0$ the eigenvectors of the transfer matrix, $\mathbf{P}$, are equal to:
 \[
 v_1 = \frac{1}{\sqrt{2}} \left( \begin{matrix} 1 \\ 1 \end{matrix} \right) \qquad \textrm{and} \qquad v_2 = \frac{1}{\sqrt{2}} \left( \begin{matrix} 1 \\ -1 \end{matrix} \right)
@@ -581,13 +456,7 @@ $$
 Z_c = 2^N\cosh^{N-1}(\beta J)
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-7" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-7" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The eigenvalues we obtained for the transfer matrix $\mathbf{P}$ in the derivation for the 1D-Ising model were:
 \[
 \lambda = e^{\beta J} \cosh(\beta H) \pm \sqrt{ e^{2\beta J}\sinh^2(\beta H) + e^{-2\beta J} }
@@ -782,26 +651,10 @@ Z_c &amp; =
 Notice that in the first line of the above we have used $H=0$ for the $\mathbf{s}$ vectors that were introduced in part (b).  In the final part I have 
 inserted in the value of the first eigenvalue.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Calculate the ensemble average of the energy $\langle E \rangle$ for an open, 1D Ising model with $H=0$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-8" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-8" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The ensemble average of the energy is given by: 
 $$
 \langle E \rangle = -\left(\frac{\partial \ln Z_c }{\partial \beta } \right)
@@ -811,17 +664,7 @@ $$
 \langle E \rangle = -(N-1)J\tanh(\beta J)
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 3</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 The energy of a microstatestate in the Potts model is given by:
 \[
 E = -J \sum_{i=1}^{N}\delta(\sigma_i,\sigma_{i+1})  \qquad \textrm{where} \qquad \sigma_{N+1}=\sigma_1
@@ -836,40 +679,18 @@ where $\sigma_i$ is the value of the spin variable on site $i$.  This can take v
 \]
 Which sites interact in the Potts model?  When is the interaction energy between two interacting sites in the Potts model non-zero?
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-9" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-9" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Neighboring spins interact in the Pots model and the spins are arranged on a circle so that each spin variable can interact with two neighbors.  
 The interaction between two neighbouring sites is non zero when they have the same value for their spin variables.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the summation notation that we have used in exercises 5 and 6 to show that the canonical partition function for a Potts model 
 with $N$ sites that can each be in one of $p$ sites can be written as:
 \[
 Z_c = \sum_{s_1=1}^p \sum_{s_2=1}^p e^{J\beta  \delta(\sigma_1,\sigma_2)} \dots \sum_{s_N=1}^p e^{J\beta  \delta(\sigma_{N-1},\sigma_N)}  e^{J\beta  \delta(\sigma_N,\sigma_1)}
 \]
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-10" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-10" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The canonical partition function is:
 \[
 \begin{aligned}
@@ -879,17 +700,7 @@ Z_c &amp; = \sum_{s_1=1}^p \sum_{s_2=1}^p \dots \sum_{s_N=1}^p e^{J\beta \sum_{i
 \end{aligned}
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 We are going to find the canonical partition function for the Potts model using a transfer matrix in a manner similar to what we did for the closed and open Ising models.  
 Show that the transfer matrix, $\mathbf{P}$, is given by:
 \[
@@ -912,13 +723,7 @@ e^{\beta J} - 1 &amp; 0 &amp; 0 &amp; \dots &amp; 0 \\
 \right)
 \]
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-11" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-11" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The formula for the partition function we wrote out in the previous part tells us that should calculate the elements of the 
 transition matrix using $e^{J\beta  \delta(\sigma_N,\sigma_1)}$. The transfer matrix is thus:
 \[
@@ -934,17 +739,7 @@ e^{\beta J} &amp; 1 &amp; 1 &amp; \dots &amp; 1 \\
 \]
 This can be decomposed into the sum of matrices that is required in the question.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-12" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-12" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 To determine the partition function we will use the tricks that we have used for the open and closed Ising models.  In other words we are going to 
 take the trace of the transfer matrix raised to the power $N$.  Furthermore, we are going to do this by taking the sum of the powers of the eigenvalues 
 as usual.  As per usual the first step in doing this is to determine the eigenvalues.  Show that for this system the first of these is given by:
@@ -956,13 +751,7 @@ and that the remaining eigenvalues are all equal to:
 \lambda_i = e^{\beta J} -1
 \]
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-12" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-12" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Remember the eigenvalue equation is:
 \[
 \mathbf{P}\mathbf{v} = \lambda \mathbf{v}
@@ -1110,27 +899,11 @@ which is equal to:
 \]
 and as we now know the trace of a matrix is equal to the sum of its eigenvalues.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-13" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-13" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use the eigenvalues that you determined in the previous question to determine the canonical partition function for a system of $N$ Potts sites.
 Use the expression you derived to evaluate the average energy.  Explain how you would calculate the heat capacity from the average energy.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-13" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-13" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We calculate the canonical partition function by taking the sum of the powers of the eigenvalues as we did when we examined the closed 1D Ising model.  This gives us:
 \[
 Z_c = \lambda_1^N + (p-1)\lambda_2^N = (e^{\beta J} + p -1)^N + (p-1)(e^{\beta J} -1)^N
@@ -1150,49 +923,37 @@ C_v =  \frac{1}{N} \left( \frac{\partial \langle E \rangle }{\partial \beta} \ri
 \]
 The differentiation here is going to be a nightmare so it is not worth doing
 </SOLUTION>
-             </div>
-      </div>
-   </div>
+                </div>        </div>    </div></div>   </div></div><!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
-</br>
- 
-                    </div> 
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
-</div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -1210,4 +971,3 @@ The differentiation here is going to be a nightmare so it is not worth doing
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

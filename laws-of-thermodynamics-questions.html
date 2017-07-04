@@ -4,27 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>Applying the laws of thermodynamics 
- : Exercise</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>laws-of-thermodynamics-questions</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -34,57 +35,48 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <div class="row">
-                             <div class="col-md-8">
-                                 <h1 class="panel-title"> Applying the laws of thermodynamics 
- : Exercises</h1>
-                             </div>
-                             <div class="col-md-4" align="right">
-                                 <!-- Web2PDF Converter Button BEGIN -->
-                                 <script type="text/javascript">
-                                 var
-                                 pdfbuttonlabel="Save page as PDF"
-                                 </script>
-                                 <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
-                                 <!-- Web2PDF Converter Button END -->
-                             </div>
-                          </div>
-                      </div>
-                      <H1> Introduction </H1>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
+                        </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">            <div class="col-md-8">                <h1 class="panel-title">Applying the laws of thermodynamics 
+: Exercises</h1>            </div>            <div class="col-md-4" align="right">                  <!-- Web2PDF Converter Button BEGIN -->                   <script type="text/javascript">                   var                   pdfbuttonlabel="Save page as PDF"                   </script>                   <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>                   <!-- Web2PDF Converter Button END -->            </div>         </div>      </div>      <H1> Introduction </H1>
 <DESCRIPTION>
 In the questions that follow we are going to use the laws of thermodynamics to calculate the amount the entropy changes
 by in an ideal gas.   The focus here is on solving the partial differential equations.  We will leave deriving the 
@@ -95,74 +87,31 @@ follow, $k_B$ is Boltzmann's constant, $T$ is the absolute temperature, $V$ is t
 </DESCRIPTION>
   <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+<h4> Problem 1</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 A sample of (ideal) gas is compressed from the volume $2V$ to $V$ at constant temperature.  If the gas is isolated from the rest of the universe what is the change in the internal energy?
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-0" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-0" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We know from the description above that:
 $$
 E = \frac{3}{2} Nk_B T \qquad \rightarrow \qquad \left( \frac{\partial E}{\partial V} \right)_T = 0 
 $$
 Hence there is no change in internal energy.  The value of the internal energy does not depend on the volume (for an ideal gas)
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 During the compression the gas experiences an external pressure from the surroundings of $P$.  Write an expression for the work done, $\textrm{d}w$, during during an infinititisimal change in volume $\textrm{d}V$?  Show how you arrived at this expression.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-1" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-1" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The work done on the gas is given by:
 $$
 \textrm{d}w = -P_{\textrm{ext}}\textrm{d}V 
 $$
 There are long discussions on the derivation of this expression in the videos.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Rearrange the equation of state for an ideal gas and obtain an expression that allows one to calculate the pressure, $P$, from the temperature $T$ and 
 the volume $V$.  Use the expression that you get for $P$ to calculate the work done on the gas during the compression from $2V$ to $V$. 
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-2" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-2" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Rearranging the equation of state gives us:
 $$
 P = \frac{N k_B T}{V}
@@ -173,27 +122,11 @@ $$
 \Delta w = -\int_{2V}^V P\textrm{d}V' = -\int_{2V}^V \frac{N k_B T}{V'} \textrm{d}V' = -\left[ N k_B T \ln \left( V' \right) \right]_{2V}^V = - N k_B T \ln \left( \frac{V}{2V} \right) = N k_B T \ln ( 2)
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use what you know about the change in energy that occurs as an ideal gas is compressed from a volume of $2V$ to a volume of $V$ to determine how much heat 
 must be emitted/absorbed during the compression of the gas?
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-3" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-3" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The first law of thermodynamics tells us that:
 $$
 \Delta E = \Delta q + \Delta w
@@ -205,26 +138,10 @@ $$
 \Delta q = - N k_B T \ln ( 2)
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Calculate how much the entropy of an ideal gas changes by during a compression from $2V$ to $V$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-4" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-4" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The second law of thermodynamics tells us that if the system is at equilibrium at all points during the transition:
 $$
 \Delta S = \frac{\Delta q}{T} 
@@ -234,29 +151,13 @@ $$
 \Delta S = \frac{- N k_B T \ln ( 2)}{T} = - N k_B \ln ( 2)
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 2</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Starting from the following statements of the first and second laws of equilibrium thermodynamics $\textrm{d}E = \textrm{d} q + \textrm{d} w$ and $\textrm{d}S = \frac{\textrm{d}q}{T}$ and assuming only $PV$-work is done on the system show that:
 $$
 \textrm{d}S = \frac{1}{T} \textrm{d}E + \frac{P}{T} \textrm{d}V
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-5" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-5" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Consider a transition involving an infinitesimal change in volume.  The work done during such a transition will be:
 $$
 \textrm{d}w_{rev} = -P\textrm{d}V
@@ -286,30 +187,14 @@ which can be rearranged to give the answer required for this question.
 <b> The fact that that the heat output and the work done depend on the path the transition takes and that the internal energy does not depend on the path taken
 is a subtle and important point.  You must mention it in your solutions. </b>
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 $\textrm{d}S$ is an exact differential.  Use this information to write an expression for $\textrm{d}S$ in terms of $\left( \frac{\partial S}{\partial E} \right)_V$, $\left( \frac{\partial S}{\partial V} \right)_E$, $\textrm{d}E$ and $\textrm{d}V$ and hence show that for an ideal gas:
 $$
 \left( \frac{\partial S}{\partial E} \right)_V = \frac{3Nk_B}{2E} \qquad \textrm{and} \qquad \left( \frac{\partial S}{\partial V} \right)_E = \frac{Nk_B}{V}
 $$
 You will need the expression for the internal energy of an ideal monoatomic gas $E= \frac{3}{2} N k_B T$ and the mechanical equation of state for an ideal gas $PV = Nk_B T$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-6" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-6" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The fact that $S$ is an exact differential ensures that we can write:
 $$
 \textrm{d}S = \left( \frac{\partial S}{\partial E} \right)_V \textrm{d}E + \left( \frac{\partial S}{\partial V} \right)_E \textrm{d}V
@@ -325,30 +210,14 @@ The equation for the internal energy of an ideal gas that was given in the quest
 equation of state for the ideal gas can be rearranged to give $\frac{P}{T} = \frac{N k_B }{V}$.  When the factors of $\frac{1}{T}$ and $\frac{P}{T}$ in the right hand
 sides of the above expressions are replaced by the right hand sides of these expressions we get to the desired results. 
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Integrate the partial differential equations that you derived in the previous question and demonstrate that:
 $$
 S(E,V) = N k_B\ln(E^{\frac{3}{2}} V) + k
 $$
 for an ideal gas.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-7" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-7" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The first result that was derived in the previous question tells us that:
 $$
 \left( \frac{\partial S}{\partial E} \right)_V = \frac{3 N k_B }{2E} \quad \rightarrow \quad S(E,V) = \frac{3N k_B}{2} \ln(E) + f(V)
@@ -374,17 +243,7 @@ S(E,V) = \frac{3N k_B}{2} \ln(E) + N k_B \ln(V) + k = N k_B\ln(E^{\frac{3}{2}} V
 $$
 as required.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 3</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 A quantity of water, initially at 10$^\circ$C, is brought into content with a heat reservoir at a temperature of 90$^\circ$C.  The constant volume 
 heat capacity, $C_v$ of the water is defined as $\textrm{d} q=C_v\textrm{d}T$.   If the waters volume is fixed (i.e. if no work is done on or by the system) 
 explain why the change in the internal energy during an infinitesimal change in temperature is given by $\textrm{d}E = C_v \textrm{d}T$.
@@ -394,13 +253,7 @@ $$
 \textrm{d}S = \frac{C_v \textrm{d}T }{T}
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-8" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-8" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Recall the first law of thermodynamics tells us that:
 $$
 \textrm{d}E = \textrm{d} q + \textrm{d} w 
@@ -418,52 +271,20 @@ $$
 \textrm{d}S = \frac{\textrm{d} q}{T} = \frac{ C_v \textrm{d}T}{T}
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Determine the change in the entropy of the water when it is heated from 10$^\circ$C to 90$^\circ$C.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-9" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-9" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 To calculate the change in entropy required we must integrate the result we arrived at in the previous question as shown below:
 $$
 \Delta S_{water} = \int_{10}^{90} \frac{C_v \textrm{d}T}{T} = \left[ C_v \ln (T) \right]_{10}^{90} = 2C_v \ln(3)
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Now determine how much heat must flow from the reservoir to the water in order to heat the water from 10$^\circ$C to 90$^\circ$C
 and the change in the entropy of the reservoir that occurs as a consequence of this outflow of heat.  
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-10" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-10" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 We determine the ammount of heat that must flow by integrating $\textrm{d} q = C_v \textrm{d} T$ as shown below:
 $$
 \Delta q = -\int_{10}^{90} C_v \textrm{d}T  = -C_v \int_{10}^{90} \textrm{d}T = - C_v ( 90 - 10 ) = -80C_v
@@ -476,28 +297,12 @@ $$
 \Delta S_{reservoir} = \frac{\Delta q_{rev}}{T} = -\frac{80C_v}{90} = -\frac{8}{9}C_v
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 What are the changes of entropy for the water and the reservoirs if two reservoirs are used to heat the system rather than one?  The first of 
 these reservoirs is at 50$^\circ$C and so it heats the system from 10$^\circ$C to 50$^\circ$C, while the second is at 90$^\circ$C and it heats 
 the system from 50$^\circ$C to 90$^\circ$C.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-11" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-11" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 To tackle this part of the question we have to recognise that the answers to the questions above tell us that if we change the temperature 
 from $T_i$ to $T_f$ the change in the entropy of the water will be:
 $$
@@ -531,27 +336,11 @@ $$
 This is larger than it was in the previous part.  Noice, however, that we have changed this part of the the system (we now have two reservoirs).
 The fact that we have a different entropy change is a consequence of this change.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-12" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-12" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Now suppose that an infinite number of reservoirs are used.  What is the entropy change for the entire system (water+all reservoirs) 
 when the system is heated from 10$^\circ$C to 90$^\circ$C?
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-12" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-12" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Lets do the easy part of this question first.  We know entropy is a state function so we know that, even with this infinite number of reservoirs, 
 the entropy change for the water (a closed system) is going to be given by:
 $$
@@ -576,49 +365,37 @@ as the external temperature of the reservoir.
 Notice that the maths here works even if $C_v$ is not temperature independent.  If $C_v$ did depend on temperature the entropy change for the water would be an 
 integral involving the function $C_v(T)$ and the entropy change for the reservoirs would just be minus that integral.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
+                </div>        </div>    </div></div>   </div></div><!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
-</br>
- 
-                    </div> 
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
-</div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -636,4 +413,3 @@ integral involving the function $C_v(T)$ and the entropy change for the reservoi
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

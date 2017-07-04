@@ -4,27 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>Distinguishable non-interacting systems
- : Exercise</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>lattice-gas-problems</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -34,57 +35,48 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <div class="row">
-                             <div class="col-md-8">
-                                 <h1 class="panel-title"> Distinguishable non-interacting systems
- : Exercises</h1>
-                             </div>
-                             <div class="col-md-4" align="right">
-                                 <!-- Web2PDF Converter Button BEGIN -->
-                                 <script type="text/javascript">
-                                 var
-                                 pdfbuttonlabel="Save page as PDF"
-                                 </script>
-                                 <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
-                                 <!-- Web2PDF Converter Button END -->
-                             </div>
-                          </div>
-                      </div>
-                      <H1> Introduction </H1>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
+                        </div>
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
+</div>
+<!-- === END HEADER === -->
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">            <div class="col-md-8">                <h1 class="panel-title">Distinguishable non-interacting systems
+: Exercises</h1>            </div>            <div class="col-md-4" align="right">                  <!-- Web2PDF Converter Button BEGIN -->                   <script type="text/javascript">                   var                   pdfbuttonlabel="Save page as PDF"                   </script>                   <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>                   <!-- Web2PDF Converter Button END -->            </div>         </div>      </div>      <H1> Introduction </H1>
 <DESCRIPTION>
 The following questions all involve systems of non-interacting particles that sit on lattice sites.
 An exact expression for th canonical partition function for these systems of so-called independent-disinguishable particles 
@@ -93,12 +85,7 @@ of these systems exactly.
 </DESCRIPTION>
   <H1> Example problems </H1>
 <p> Click on the problems to reveal the solution </p> 
-<h4> Problem 1</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+<h4> Problem 1</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-0" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Consider a system of $N$ distinguishable, non-interacting spins in a magnetic field $H$.  Each spin will have an associated magnetic moment $\mu$, which can point either parallel or anti-parallel to the field.  The state of the system will be characterised by the set of spin variables $\{n\}$, where $n_i = \pm 1$ represents the fact that spin $i$ can be in one of two possible configurations (spin-up or spin-down).  The total energy, $E$, of all the spins will be given by:
 \[
 E = -\sum_{i=1}^N n_i \mu H
@@ -111,13 +98,7 @@ are kept fixed.  Write an expression for the partition function for this ensembl
 You will need the definition of the hyperbolic trig function $\cosh(\theta) = \frac{ e^\theta + e^{-\theta}}{2}$.
 </p>
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-0" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-0" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Lets start by considering the partition function for a single spin.
 We are in the canonical ensemble.  We have constant $N$, constant $H$ and constant $T$.  In the canonical ensemble for a (quantum) system that 
 occupies a discrete set of levels we have:
@@ -152,29 +133,13 @@ $$
 Z_c(N,H,T) = 2^N \cosh^N(\beta \mu H)
 $$
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-1" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Consider the system of $N$ distinguishable, non-interacting spins in a magnetic field $H$ that were introduced in the previous exercise and 
 use the expression that you obtained for the partition function to calculate the average internal energy of the system of $N$ spins and the average
 magnetisation, $\langle M \rangle = \langle \sum_{i=1}^N \mu n_i \rangle$, of the spins.  Use the expressions you derive to discuss the behavior of the 
 spins in the limit as  limit as $T\rightarrow \infty$ and in the limit as $T\rightarrow 0$.  
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-1" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-1" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 In the canonical ensemble the ensemble average for the energy is given by::
 \[
 \langle E \rangle = -\left( \frac{\partial \ln(Z_c) }{\partial \beta} \right) 
@@ -206,26 +171,10 @@ $\langle M \rangle \rightarrow N\mu$ . In the zero temperature limit we can thus
 want to be in the state with the lowest energy.
 </p>
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-2" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Derive an expression for the entropy of a system of $N$ distinguishable, non-interacting spins in a magnetic field $H$ as a function of $\beta$, $H$ and $N$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-2" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-2" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 In the canonical ensemble the entropy is given by:
 \[
 \frac{S}{k_B} = \ln Z_c + \frac{ \langle E \rangle }{k_B T}
@@ -235,28 +184,12 @@ So given the expression we have just derived for the canonical partition functio
 S = k_B N\ln\left[2\cosh(\beta \mu H)\right] - \frac{N\mu H}{T} \tanh(\beta \mu H)
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 2</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 2</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-3" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 A lattice gas consists of a lattice of $N$ sties.  Each of these sites can be either empty in which case the 
 energy due that site is zero or occupied in which case the energy dues to that site is $\epsilon$.  Use this
 information to calculate the canonical partition function for a system of $N$ lattice gas sites.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-3" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-3" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The canonical partition function is given by $Z_c = \sum_j = e^{-\beta E_j}$ so for a single lattice gas site this is a sum over 
 the two possible states:
 \[
@@ -272,28 +205,12 @@ Z_c(N) &amp; =  \sum_{s_1=1}^2  \sum_{s_2=1}^2 \dots  \sum_{s_N=1}^2 e^{-\beta \
 \end{aligned}
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-4" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Evaluate the average energy $\langle E \rangle$ and the average number of lattice sites that are occupied when the the lattice gas described in the 
 previous parts is at a temperature of $T$.  N.B.  Notice from the first part of the question that the energy of a microstate $E$ is related to the number 
 of occupied sites, $n$, via $\mathbf{E} = n\epsilon$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-4" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-4" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The average energy can be calculated using $\langle E \rangle = - \frac{\partial \ln Z_c }{\partial \beta}$.  For the lattice gas we thus have:
 \[
 \langle E \rangle = - \frac{\partial }{\partial \beta} N\ln(1+e^{-\beta \epsilon})  = \frac{N\epsilon e^{-\beta \epsilon} }{1+e^{-\beta \epsilon}}
@@ -303,28 +220,12 @@ From the information in the question the total energy can be written in terms of
 \langle N_{occ} \rangle = \frac{\langle E \rangle }{\epsilon} = \frac{Ne^{-\beta \epsilon} }{1+e^{-\beta \epsilon}}
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-5" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Suppose now that each <b>occupied</b> lattice site has a magnetic moment of magnitude $\mu$, which in the presence of an applied magnetic field, $H$, 
 can adopt one of two orientations.  These two orientations have energies $\epsilon - \mu H$ and $\epsilon + \mu H$.  Calculate the canonical partition 
 function for this new system.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-5" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-5" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The essential difference between this new system and the previous one is that each site can now be in one of three states.  It can be unoccupied, occupied 
 with a spin up moment or occupied with a spin down moment.  We thus write the single particle canonical partition function as a sum over these three possible states:
 \[
@@ -340,27 +241,11 @@ Z_c(N) = [ 1 + 2e^{-\beta\epsilon}\cosh(\beta \mu H) ]^N
 \]
 for reasons that have been explained in the answers to the previous parts above.
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-6" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Evaluate the average energy and the average magnetisation of the system that was introduced in the previous question by taking derivatives of 
 the logarithm of the partition function
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-6" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-6" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The average energy can be calculated using:
 \[
 \begin{aligned}
@@ -381,84 +266,36 @@ We get to last line by multiplying top and bottom by $e^{\beta \epsilon}$.  From
 \end{aligned}
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 3</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 3</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-7" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 A simple model for a polymer can be constructed by considering a linear chain composed of $N$ non-interacting, molecular units.  These units can 
 exist in one of two states: state 1 has a length $l_1$ and energy $\epsilon_1$, while state 2 has length $l_2$ and energy $\epsilon_2$.  The 
 work done when the polymers length is changed by an infinitesimal amount $\textrm{d}L$ is given by $\textrm{d}w=f\textrm{d}L$, where $f$ is the 
 tensile force acting on the polymer.  Given this use the laws of classical thermodynamics to derive an expression for the infinitesimal change in 
 entropy, $\textrm{d}S$,  for infinitesimal changes in the internal energy, $\textrm{d}E$, and polymer length, $\textrm{d}L$.
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-7" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-7" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 \[
 \textrm{d}S = \frac{1}{T} \textrm{d}E - \frac{f}{T}\textrm{d}L
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-8" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Use statistical mechanics to derive an expression for the infinitesimal change in entropy $\textrm{d}S$ that would accompany an 
 infinitessimal change in the number of polymber units, the average energy or the average length of the chain.  Use your result and the result
 from classical thermodynamics that you found in the previous part to derive an expression for the partition function for an $N$-monomer chain
 in an ensemble in which the temperature, $T$, the number of monomer units, $N$, and the tensile force, $f$ on the polymer are fixed. 
 then explain why the partition function for an $N$-monomer chain is given by:
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-8" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-8" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 The final partition function is:
 \[
 Z(N,T,f) = \left[ e^{-\frac{\epsilon_1-f l_1}{k_B T}} + e^{-\frac{\epsilon_2-f l_2}{k_B T}}\right]^N
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-9" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Derive expressions for the average length of a polymer consisting of $N$ monomers and the polymers average energy.  
 These expressions should be a function of the temperature, $T$, and tensile force, $f$.   
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-9" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-9" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 Average energy:
 \[
 \langle E \rangle = \frac{N\left( \epsilon_1 e^{-\beta(\epsilon_1-f l_1)} + \epsilon_2 e^{-\beta(\epsilon_2-f l_2)} \right)}{e^{-\beta(\epsilon_1-f l_1)} + e^{-\beta(\epsilon_2-f l_2)}}
@@ -468,105 +305,61 @@ Average length:
 \langle L \rangle = = \frac{N\left( l_1 e^{-\beta(\epsilon_1-f l_1)} + l_2 e^{-\beta(\epsilon_2-f l_2)} \right)}{e^{-\beta(\epsilon_1-f l_1)} + e^{-\beta(\epsilon_2-f l_2)}}
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<h4> Problem 4</h4><div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><h4> Problem 4</h4><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-10" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 The energy of an atom with angular momentum $J\hbar$ in an applied magnetic field $H$ is given by $U=g\mu H m$, where $g$ is 
 the so called electron g-factor, $\mu$ is the electron's magnetic moment or Bohr magneton and $m$ is the atom's magnetic 
 quantum number, which can take values $m=-J, -J+1,\dots,-1,0,1 \dots, J-1, J$.  Write an expression the canonical partition 
 function for a system composed of $N$ of such atom on a lattice.  In doing this question you should assume that the atoms  
 do not interact
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-10" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-10" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 \[
 Z_c = \left[ \sum_{m=-J}^J e^{\beta g \mu H m} \right]^N
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
-</div>
-</br>
-<div id="accordion" class="panel-group"> 
-<div class="panel panel-default">
-    <div class="panel-heading">
-        <h4 class="panel-title">
-        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse">
-<QUESTION>
+                </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-11" data-parent="#accordion" data-toggle="collapse"><QUESTION>
 Write an expression for the average energy of the lattice gas introduced in the previous part in terms of the
 Brillouin function:
 $$
 B_J(x) = \frac{\partial }{\partial x} \ln\left( \sum_{m=-J}^J e^{xm} \right) = \frac{2J +1}{2J} \coth\left( \frac{2J+1}{2J} x \right) - \frac{1}{2J} \coth\left( \frac{1}{2J}x\right)
 $$
 </QUESTION>
-              </a>
-        </h4>
-    </div>
-    <div id="collapse-11" class="accordion-body collapse">
-        <div class="panel-body">
-           <div class="row">
-<SOLUTION>
+              </a>        </h4>    </div>    <div id="collapse-11" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><SOLUTION>
 \[
 \langle E \rangle = -N  g \mu H B_J(\beta g \mu H)
 \]
 </SOLUTION>
-             </div>
-      </div>
-   </div>
+                </div>        </div>    </div></div>   </div></div><!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
-</br>
- 
-                    </div> 
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
-</div>
-</div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -584,4 +377,3 @@ $$
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

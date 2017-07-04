@@ -4,26 +4,28 @@
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
-	<!-- Title -->
-	<title>The first and second laws of thermodynamics</title>
-	<!-- Meta -->
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-	<!-- Favicon -->
-	<link href="favicon.html" rel="shortcut icon">
-	<!-- Bootstrap Core CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
-	<!-- Template CSS -->
-	<link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
-	<!-- Google Fonts-->
-	<link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+        <!-- Title -->
+        <title>LAWS_OF_THERMODYNAMICS</title>
+        <!-- Meta -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <!-- Favicon -->
+        <link href="favicon.html" rel="shortcut icon">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.css" rel="stylesheet">
+        <!-- W3 stylesheet for badges in level indicator -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <!-- Template CSS -->
+        <link rel="stylesheet" href="assets/css/animate.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/font-awesome.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/nexus.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/responsive.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/custom.css" rel="stylesheet">
+        <!-- Google Fonts-->
+        <link href="http://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
         <!-- MathJax -->
         <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -33,235 +35,134 @@
         <script type="text/javascript" async
           src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
         </script> 
+        <!-- Blockly -->
+        <script src="https://www.google.com/jsapi"></script>
+        <script src="blockly/demos/interpreter/acorn_interpreter.js"></script>
+        <script src="blockly/blockly_compressed.js"></script>
+        <script src="blockly/blocks_compressed.js"></script>
+        <script src="blockly/javascript_compressed.js"></script>
+        <script src="blockly/python_compressed.js"></script>
+        <script src="blockly/msg/js/en.js"></script>
+        <!-- My tools -->
+        <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+        <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+        <script src="assets/scripts/randomVariables.js" type="text/javascript"> </script>
+        <style>
+           .w3-badge {cursor:pointer}
+           .w3-badge {height:13px;width:13px;padding:0}
+        </style>
 </head>
-<body>
-	<div id="pre_header" class="visible-lg"></div>
-	<div id="header" class="container">
-		<div class="row">
-			<!-- Logo -->
-			<div class="logo">
-				<a href="index.html" title="">
-					<img src="assets/img/logo.png" alt="Logo" />
-				</a>
-			</div>
-			<!-- End Logo -->
-			<!-- Top Menu -->
-			<div class="col-md-12 margin-top-30">
-				<div id="hornav" class="pull-right visible-lg">
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-                                                <li><span>Modules</span>
-                                                <ul>
-                                                  <li><span><a href="PHY9038.html">PHY9038</a></span></li>
-<li><span><a href="AMA4004.html">AMA4004</a></span></li>
-<li><span><a href="SOR3012.html">SOR3012</a></span></li>
-
-					        </ul>				</div>
-				</div>
-				<div class="clear"></div>
-				<!-- End Top Menu -->
-			</div>
-		</div>
-		<!-- === END HEADER === -->
-		<!-- === BEGIN CONTENT === -->
-		<div id="content" class="container">
-                    <div class="panel panel-blue">
-                      <div class="panel-heading">
-                          <h1 class="panel-title"> The first and second laws of thermodynamics</h1>
-                      </div>
-                    </div> 
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                            <a class="accordion-toggle" href="#collapse-One" data-parent="#accordion" data-toggle="collapse">
-                                Short description and context
-                            </a>
-                            </h4>
+<div id="pre_header" class="visible-lg"></div>
+<div id="header" class="container">
+        <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                        <a href="index.html" title="">
+                                <img src="assets/img/logo.png" alt="Logo" />
+                        </a>
+                </div>
+                <!-- End Logo -->                <!-- Top Menu -->                <div class="col-md-12 margin-top-30">
+                        <div id="hornav" class="pull-right visible-lg">
+                                <ul class="nav navbar-nav">
+                                          <li><span>Modules</span>
+                                          <ul>
+<li class="parent"><span>SOR3012</span><ul><li><a href="SOR30121-overview.html">  Random variables </a></li><li><a href="SOR30122-overview.html">  The central limit theorem </a></li><li><a href="SOR30123-overview.html">  Markov chains in discrete time </a></li><li><a href="SOR30124-overview.html">  Markov chains in continuous time </a></li></ul></li>                                          </ul>
+                                        <li><a href="index.html">Home</a></li>
                         </div>
-                        <div id="collapse-One" class="accordion-body collapse in">
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-7">
-                                        <h3 class="no-margin no-padding">The first and second laws of thermodynamics</h3>
-                                        <p align="justify">
-<p>
-<b> The first law of thermodynamics </b> states:
-\[
-\textrm{d}E = \textrm{d}q + \textrm{d}w 
-\]
-In other words we measure the change in internal energy by adding together the work done one the system and the heat absorbed by the system.  We assume that the internal energy is an exact differential.  This has three important consequences:
-<ul>
-<li> The change in internal energy on moving from equilibrium state A to state B does not depend on the path taken. </li>
-<li> The change in internal energy on moving around a closed path that starts and ends in equilibrium state A is zero. </li>
-<li> The internal energy of an isolated system is constant.</li>
-</ul>
-</p>
-
-<p>
-<b> The second law of thermodynamics </b> states:
-\[
-\Delta_{A\rightarrow B} S \ge \int_A^B \frac{\textrm{d}q}{T}
-\]
-The equality sign holds when the transition is reversible, the inequality holds when the transition is irreversible.  The entropy is once again an exact differential so:
-<ul>
-<li> The change in entropy on moving from equilibrium state A to state B does not depend on the path taken. </li>
-<li> The change in entropy on moving around a closed path that starts and ends in equilibrium state A is zero. </li>
-</ul>
-Importantly, however, because of the inequality sign in the second law of thermodynamics, the heat absorbed during a transition will depend on the path taken and during moves around closed paths heat will be input/output from the system.  The consequence of this is that it is impossible to build an engine that converts 100% all of the heat it absorbs into work.
-</p>
-
-<p>
-<b> By combining the laws of thermodynamics </b> we can arrive at:
-\[
-\textrm{d}E = T\textrm{d}S - P\textrm{d}V + \mu \textrm{d}N
-\]
-where $E$ is the internal energy, $T$ is temperature, $S$ is entropy, $P$ is pressure, $V$ is volume, $\mu$ is the chemical potential and $N$ is the number of atoms.
-</p>
-
-<H4> Syllabus Aims </H4> 
-<ul> 
-<li type="square"> You should be able to state the first law of thermodynamics.
-</li> 
-<li type="square"> You should be able to state the second law of thermodynamics and the Clausius inequality.
-</li> 
-<li type="square"> You should be able to determine, by reading a description of a physical process, whether or not heat/work is output/input from the system during said process.
-</li> 
-<li type="square"> You should be able to construct partial differential equations using the equation of state for the ideal gas.
-</li> 
-<li type="square"> You should be able to explain what it means when we state that entropy is a state function or exact differential.
-</li> 
-<li type="square"> You should be able to derive an expression for the work done by a system when it expands adiabatically.
-</li> 
-<li type="square"> You should be able to distinguish processes in which the entropy changes from those in which it does not.
-</li> 
-<li type="square"> You should be able to write expressions for the change in internal energy during adiabatic and isochoric processes.
-</li> 
-<li type="square"> You should be able to relate intensive thermodynamic variables to partial derivatives of the internal energy.
-</li> 
-<li type="square"> You should be able to combine the first and second laws of thermodynamics in order to get an expression for an infinitesimal change in the internal energy.
-</li> 
-<li type="square"> You should be able to write an expression for the change in internal energy that occurs when the value of one particular extensive variable changes while all others remain fixed.
-</li> 
-<li type="square"> You should be able to explain why the intensive quantities have a uniform value across all phases that are in equilibrium.
-</li> 
-<li type="square"> You should be able to state the optimality conditions placed on the internal energy and entropy for a system in equilibrium.
-</li> 
-</ul> 
-</p>
-                                    </div>
-                                    <div class="col-md-5"><object data="LAWS_OF_THERMODYNAMICS.svg" type="image/svg+xml" width="100%"></object></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="accordion" class="panel-group">
-                        <!-- Start of introductory panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Two" data-parent="#accordion" data-toggle="collapse">
-                                    Introductory Material
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Two" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr> 
-                                          <tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="first-law-thermodynamics-video.html">An introduction to the first law of thermodynamics.</a></td><td><a href="AMA4004.html">AMA4004</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="second-law-of-thermodynamics.html">An introduction to the second law of thermodynamics</a></td><td><a href="AMA4004.html">AMA4004</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="combining-the-laws-of-thermodynamics-video.html">Combining the first and second laws of thermodynamics</a></td><td><a href="AMA4004.html">AMA4004</a></td><td>G. Tribello</td></tr> 
-<tr> 
-<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/thermodynamics-notes.pdf">Some written notes on the laws of thermodynamics and their consequences.</a></td><td><a href="AMA4004.html">AMA4004</a></td><td>G. Tribello</td></tr> 
-
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Start of exercises panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Three" data-parent="#accordion" data-toggle="collapse">
-                                    Exercises
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Three" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                        <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr>
-                                          <tr> 
-<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="laws-of-thermodynamics-questions.html">Problems involving the first and second laws of thermodynamics.</a></td><td><a href="AMA4004.html">AMA4004</a></td><td>G. Tribello</td></tr> 
-
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Start of external resources panel -->
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h4 class="panel-title">
-                                <a class="accordion-toggle" href="#collapse-Four" data-parent="#accordion" data-toggle="collapse">
-                                    External resources
-                                </a>
-                                </h4>
-                            </div>
-                            <div id="collapse-Four" class="accordion-body collapse">
-                                <div class="panel-body">
-                                     <div class="row">
-                                        <table>
-                                         <tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> </tr>
-                                          
-                                        </table>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-		</div>
-	</div>
-	<!-- === END CONTENT === -->
-	<!-- === BEGIN FOOTER === -->
-	<div id="base">
-		<div class="container padding-vert-30">
-			<div class="row">
-					<!-- Contact Details -->
-					<div class="col-md-3 margin-bottom-20">
-						<h3 class="margin-bottom-10">Contact Details</h3>
-						<p>School of Mathematics and Physics,<br />
-						Queen's University Belfast,<br />
-						Belfast,<br />
-						BT7 1NN</p>
-						<p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
-						Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
-					</div>
-					<!-- End Contact Details -->
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-		<!-- Footer Menu -->
-		<div id="footer">
-			<div class="container">
-				<div class="row">
-					<div id="copyright" class="col-md-4">
-						<p>(c) 2016 Gareth Tribello</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Footer Menu -->
+                </div>
+                <div class="clear"></div>
+                <!-- End Top Menu -->
+        </div>
 </div>
+<!-- === END HEADER === -->
+<div id="content" class="container">
+   <div class="panel panel-blue">
+       <div class="panel-heading">
+           <h1 class="panel-title">  The first and second laws of thermodynamics  </h1>
+       </div>
+   </div>
+<div class="panel panel-primary">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-one" data-parent="#accordion" data-toggle="collapse">Short description and context        </a>        </h4>    </div>    <div id="collapse-one" class="accordion-body collapse in">        <div class="panel-body">            <div class="row"><div class="col-md-7"><h3 class="no-margin no-padding"> The first and second laws of thermodynamics </h3><p align="justify">
+
+
+</p><H4> Syllabus Aims </H4> 
+<AIMS>
+    <UL>
+    <LI>  You should be able to state the first law of thermodynamics.
+ </LI>
+    <LI>  You should be able to state the second law of thermodynamics and the Clausius inequality.
+ </LI>
+    <LI>  You should be able to determine, by reading a description of a physical process, whether or not heat/work is output/input from the system during said process.
+ </LI>
+    <LI>  You should be able to construct partial differential equations using the equation of state for the ideal gas.
+ </LI>
+    <LI>  You should be able to explain what it means when we state that entropy is a state function or exact differential.
+ </LI>
+    <LI>  You should be able to derive an expression for the work done by a system when it expands adiabatically.
+ </LI>
+    <LI>  You should be able to distinguish processes in which the entropy changes from those in which it does not.
+ </LI>
+    <LI>  You should be able to write expressions for the change in internal energy during adiabatic and isochoric processes.
+ </LI>
+    <LI>  You should be able to relate intensive thermodynamic variables to partial derivatives of the internal energy.
+ </LI>
+    <LI>  You should be able to combine the first and second laws of thermodynamics in order to get an expression for an infinitesimal change in the internal energy.
+ </LI>
+    <LI>  You should be able to write an expression for the change in internal energy that occurs when the value of one particular extensive variable changes while all others remain fixed.
+ </LI>
+    <LI>  You should be able to explain why the intensive quantities have a uniform value across all phases that are in equilibrium.
+ </LI>
+    <LI>  You should be able to state the optimality conditions placed on the internal energy and entropy for a system in equilibrium.
+ </LI>
+    </UL>
+  </AIMS>
+</div><div class="col-md-5"><object data="LAWS_OF_THERMODYNAMICS.svg" type="image/svg+xml" width="100%"></object></div>            </div>        </div>    </div></div>   <div id="accordion" class="panel-group"><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-two" data-parent="#accordion" data-toggle="collapse">Written Notes        </a>        </h4>    </div>    <div id="collapse-two" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-book fa-3x"></i></td><td><a href="resources/thermodynamics-notes.pdf"><b>Some written notes on the laws of thermodynamics and their consequences.</b></a></td><td><a href=" AMA4004 .html"> AMA4004 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-four" data-parent="#accordion" data-toggle="collapse">Videos        </a>        </h4>    </div>    <div id="collapse-four" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="first-law-thermodynamics-video.html"><b>An introduction to the first law of thermodynamics.</b></a></td><td><a href=" AMA4004 .html"> AMA4004 </a></td> <td>G. Tribello</td></tr> 
+<tr> 
+<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="second-law-of-thermodynamics.html"><b>An introduction to the second law of thermodynamics</b></a></td><td><a href=" AMA4004 .html"> AMA4004 </a></td> <td>G. Tribello</td></tr> 
+<tr> 
+<td></td><td><i class="fa fa-video-camera fa-3x"></i></td><td><a href="combining-the-laws-of-thermodynamics-video.html"><b>Combining the first and second laws of thermodynamics</b></a></td><td><a href=" AMA4004 .html"> AMA4004 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading">        <h4 class="panel-title">        <a class="accordion-toggle" href="#collapse-three" data-parent="#accordion" data-toggle="collapse">Worked examples        </a>        </h4>    </div>    <div id="collapse-three" class="accordion-body collapse">        <div class="panel-body">            <div class="row"><table>
+<tr> <td width="2%"></td> <td width="10%"> </td> <td width="70%"> <h3> Description and link </h3> </td> <td width="10%"> <h3> Module </h3> </td> <td width="10%"> <h3> Author </h3> </td> </tr><tr> 
+<td></td><td><i class="fa fa-pencil fa-3x"></i></td><td><a href="laws-of-thermodynamics-questions.html"><b>Problems involving the first and second laws of thermodynamics.</b></a></td><td><a href=" AMA4004 .html"> AMA4004 </a></td> <td>G. Tribello</td></tr> 
+</table>
+            </div>        </div>    </div></div></div>
+<!-- === END CONTENT === -->
+<!-- === BEGIN FOOTER === -->
+<div id="base">
+        <div class="container padding-vert-30">
+                <div class="row">
+                       <!-- Contact Details -->
+                       <div class="col-md-3 margin-bottom-20">
+                               <h3 class="margin-bottom-10">Contact Details</h3>
+                               <p>School of Mathematics and Physics,<br />
+                               Queen's University Belfast,<br />
+                               Belfast,<br />
+                               BT7 1NN</p>
+                               <p>Email: <a href="mailto:g.tribello@qub.ac.uk">g.tribello@qub.ac.uk</a><br />
+                               Website: <a href="http://titus.phy.qub.ac.uk/members/gareth/">mywebsite</a></p>
+                       </div>
+                       <!-- End Contact Details -->
+                       <div class="clearfix"></div>
+                </div>
+        </div>
+        <!-- Footer Menu -->
+        <div id="footer">
+                <div class="container">
+                        <div class="row">
+                                <div id="copyright" class="col-md-4">
+                                        <p>(c) 2016 Gareth Tribello</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
 </div>
+<!-- End Footer Menu -->
 <!-- JS -->
 <script type="text/javascript" src="assets/js/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js" type="text/javascript"></script>
@@ -279,4 +180,3 @@ where $E$ is the internal energy, $T$ is temperature, $S$ is entropy, $P$ is pre
 <!-- End JS -->
 </body>
 </html>
-<!-- === END FOOTER === -->

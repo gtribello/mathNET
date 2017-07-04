@@ -1,0 +1,402 @@
+<PAGE>
+  <TITLE> Understanding random variables </TITLE>
+  <HEADER>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     This exercise is going to teach you how we can use python to generate various types of random variables. Use all your notes on these types of random variables and any resources you find online as you work through this exercise.  Also make sure that you look at the working python code that is generated from the blocks as ultimately you will want to use this code in your own programs.  
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="graph" style="width: 400px"></div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td> 
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
+  </APIFUNCTIONS>
+  <BLOCKS>
+  </BLOCKS>
+  <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    } 
+  </SCRIPTS>
+  <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks to generate a uniform random variable, $X$.  Plot a point on the graph at $(1,X)$. 
+    </DESCRIPTION>
+    <HINT>
+       Under plotting you have a block that allows you to draw points on the graph and under random you have a block that will generate uniform random variables for you.  
+    </HINT>
+    <TOOLBOX>
+      <category name="Program">
+         <block type="math_number"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length != 3 || myplot.data[2][0]!=1 ){ levelcomplete=false; }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks to generate 50 uniform random variables.  You should plot each of these random variables on the graph.
+       The $i$th random variable you generate, $X_i$, should be at the coordinate $(i,X_i)$. 
+    </DESCRIPTION>
+    <HINT>
+       You can now create variables using the blocks under the variables category.  In addition you can also repeat blocks of instructions by using one of the new blocks you have under the Program category. 
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       A Bernoulli random variable (or Bernoulli trial) can take one of two values 0 or 1.  For this type of random variable the probability that the random variable takes 
+       a value of 1 is equal to $p$ and the probability that the random variable takes a value of 0 is equal to $(1-p)$.  Use the blocks to generate
+       50 random variables from a bernoulli distribution with $p=0.75$.  You should plot each of these random variables on the graph.  The $i$th 
+       random variable you generate, $Y_i$, should be at the coordinates $(i,Y_i)$.
+    </DESCRIPTION>
+    <HINT>
+       Notice that you now have some blocks under the logic category that allow you to only execute certain instructions if a condition is satisfied.  What instruction could you only excute if a uniform random variable is less than a certain target value to help you in this case?
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX> 
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){ 
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; } 
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 &amp;&amp; myplot.data[i][1]!=1 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       We use a binomial random variables to describe the result from an experiment in which $N$ bernoulli trials are performed.  The binomial random variable 
+       tells you how many of these trials were sucessful.  We can generate a binomial random variable by generating $N$ bernoulli random variables 
+       and adding them all together.  Use the blocks to generate 50 random variables from a binomial distribution with $p=0.75$ and $N=5$.  
+       You should plot each of these random variables on the graph.  The $i$th random variable you generate, $Y_i$, should be at the coordinates $(i,Y_i)$.
+    </DESCRIPTION>
+    <HINT>
+       When generating each binomial random variable we need to do repeated bernoulli trials.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true; 
+      if( prand != 1 &amp;&amp; myplot.data.length &lt; 3 ){ levelcomplete=false; } 
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 &amp;&amp; myplot.data[i][1]!=1 &amp;&amp; myplot.data[i][1]!=2 &amp;&amp; myplot.data[i][1]!=3 &amp;&amp; myplot.data[i][1]!=4 &amp;&amp; myplot.data[i][1]!=5 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       We use geometric random variables to describe the result from experiments in which bernoulli trials are performed until sucess is acchieved.  A geometric random
+       variable measures how many trials were required to achieve a sucess.  We can generate a geometric random variable by generating bernoulli random variables until 
+       sucess is achieved.  The geometric random variable is then equal to the number of trials we performed.  Use the blocks to generate 50 random variables from 
+       a geometric distribution with $p=0.25$ You should plot each of these random variables on the graph.  The $i$th random variable you generate, $Y_i$, should be at 
+       the coordinates $(i,Y_i)$.  
+    </DESCRIPTION>
+    <HINT>
+       Notice that you have a new block under the program category that will allow you to repeat a set of instructions until a condition is satisfied.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_whileUntil"></block>
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; } 
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]==0 || myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
+      }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+       Consider a random variable that can take one of three possible values 0, 1 or 2.  Suppose that the probabilities for each of these outcomes are $P(X=0)=0.2$,
+       $P(X=1)=0.3$ and $P(X=2)=0.5$.  Use the block that generates a uniform random variable and an if-elseif block as well as the other blocks to generate
+       50 random variables from this distribution.  You should plot each of these random variables on the graph.  The $i$th random variable you generate, $Y_i$, should be 
+       at the coordinates $(i,Y_i)$.    
+    </DESCRIPTION>
+    <HINT>
+       Clicking the blue symbol on the corner of the if do block allows you to convert an if block into an if-elseif block.  
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 &amp;&amp; myplot.data[i][1]!=1 &amp;&amp; myplot.data[i][1]!=2 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
+      }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+       The probability mass function for the poisson random variable is $f_X(x) = \frac{\lambda^x}{x!} e^{-\lambda}$ and $x$ can take any integer value that is greater 
+       than or equal to zero.  Use the blocks to generate 50 random variables from a poisson distribution with $\lambda=2$.   You should plot each of these random 
+       variables on the graph.  The $i$th random variable you generate, $Y_i$, should be at the coordinates $(i,Y_i)$.   
+    </DESCRIPTION>
+    <HINT>
+       The trick in the last exercise was to generate a uniform random variable X.  The final random variable was then 0 if X was less than P(0), 1 if it was not 0 and if X was less than P(0)+P(1) and 2 if it was neither 0 or 1 and if X was less than P(0)+P(1)+P(2).  How can we use a while loop to implement this code and how can the same trick be used here?
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_whileUntil"></block>
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_single"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){ 
+           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
+      }
+    </FINISH>
+  </LEVEL>
+  <LEVEL> 
+    <DESCRIPTION>
+      If we generate a set of random variables $\{X_i\}$ it is often useful to calculate the sample mean using $\mu = \frac{1}{N} \sum_{i=1}^N X_i$, where
+      $N$ is the number of random variables in our set.  This quantity is still random as it is the sum of a set of random variables but as we will see in 
+      subsequent exercises it is easier to make predictions about the value of this sum.  Use the blocks to calculate 10 $\mu$ values.  Each of these 
+      $\mu$ values should be calculated by adding together 5 uniform random variables.  You should plot each of these values for $\mu$ on the graph.  The $i$th 
+      $\mu$ value you generate, $Y_i$, should be at the coordinates $(i,\mu_i)$.
+    </DESCRIPTION>
+    <HINT>
+      Read the instructions again.  Remember that each random variable is a sum of variables.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Drawing graphs is computationally expensive and this business of adding a new point every time we generate a new random variable is slowing our codes down
+      enormously.  To avoid this expense use the blocks to generate 10 normal random variables from a distribution with $\mu=0$ and $\sigma=1$.  This time, 
+      however, instead of plotting them instantly store them in a list and only plot the graph once all the data is generated.
+    </DESCRIPTION>
+    <HINT>
+      The new plotting tool here takes two lists.  The first is the list of x coordinates and the second is the corresponding list of y coordinates.    
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+         <block type="normal_random"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_create_empty"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_list"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="standard normal random variable" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH> 
+   </LEVEL>
+   <REVIEW>
+       Transplant everything you have learnt from this exercise about generating different types of random variables into a python notebook.  In this notebook you should generate and plot a set of points generated from the bernoulli, binomial, geometric, poisson and normal distributions.  When doing this task you should make sure your code is fast by using lists in the manner you learnt about in the final exercise of the task.
+   </REVIEW>
+</PAGE>

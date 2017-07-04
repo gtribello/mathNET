@@ -19,6 +19,23 @@
   </AIMS>
   <CHAPTER>
      <TITLE> Random variables </TITLE>
+     <PROJECT>
+        <TITLE> Investigating other random variables </TITLE>
+        <DESCRIPTION>
+           Performing the exercises in the apply and extend parts of this project will teach you how to generate uniform, bernoulli, binomial,poisson, geometric and normal random variables.
+           You will learn how to derive expressions for the expectations and variances of these different types of random variables from the random variables parameters.  Furthermore, you 
+           will learn about the law of large numbers and how we can estimate expectations and probability distribution functions by repeatedly generating random variables from a particular 
+           distribution.  The final exercises listed below take these ideas a little further.  You will need to research these topics online and you may also want to discuss them with your 
+           lecturer.
+
+           <UL>
+              <LI> As part of your project on random variables you wrote a program to estimate the probability mass/density function for a particular random variable that worked by generating a large number of identically distributed random variables.  Now write a program to estimate the cumulative probability distribution function for the same kind of random variable you wrote your project on. </LI> 
+              <LI> Suppose that $X$ is a geometric random variable with $p=0.5$.  Now suppose that we generate a random variable $Z$ that is a function of $X$ using $Z = 2^X$.  Write a python notebook that generates multiple instances of this random variable $\{ Z_i \}$.  Draw a graph that shows how the sample mean, $\mu_n = \frac{1}{N} \sum_{i=1}^n Z_i$, changes as the number of variables it is calculated from increases.  Discuss the behaviour of this sample mean and compare it to the behaviour that you observed for the other random variables you have investigated.  Derive an expression for the expression for the expectation of this random variable and use this expression to explain why the sample mean for this random variable behaves in the way you observe. </LI> 
+              <LI> Write a program that generates random variables from a Cauchy distribution.  Generate a large number of identically distributed Cauchy random variables and use this data to estimate the probability mass function for your random variable.  </LI>
+              <LI> Discuss how Student's-t-distribution arises from sampling and how this distribution differs from the standard normal distribution.  You should write a program that generates random variable from Student's-t-distribution and make sure that you plot the a graph of showing how the shape of the $t$ distribution changes as the number of degrees of freedom is increased. </LI>
+           <UL>
+        </DESCRIPTION>
+     </PROJECT>
      <TOPIC> RANDOM_VARIABLES </TOPIC>
      <TOPIC> BERNOULI_RANDOM_VARIABLE </TOPIC>
      <TOPIC> BINOMIAL_RANDOM_VARIABLE </TOPIC>
@@ -27,19 +44,43 @@
      <TOPIC> EXPECTATION </TOPIC>
      <TOPIC> VARIANCE </TOPIC>
      <TOPIC> MOMENT_GENERATING_FUNCTION </TOPIC>
+     <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
   </CHAPTER>
   <CHAPTER>
      <TITLE> The central limit theorem </TITLE>
+     <PROJECT>
+        <TITLE> Understanding fractals with random variables </TITLE>
+        <DESCRIPTION>
+           The figure on the left of this slide shows an image of the Mandelbrot set.  This set contains all the complex numbers, $c$, for which the orbit of 0 under 
+           iteration of the quadratic map:
+           $$
+           z_{n+1} = z_n + c
+           $$ 
+           remains bounded.  The python script below gives a method for calculating the area of the Mandelbrot set.  Discuss how this code works and try to extend it 
+           so that is also outputs confidence limits on the estimate of the area.  Then try and see if you can write a piece of software to esimtate the fractal 
+           dimension of the Mandelbrot set. 
+        </DESCRIPTION>
+     </PROJECT>
      <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>
      <TOPIC> INDEPENDENT_RANDOM_VARIABLES </TOPIC>
      <TOPIC> BAYES_THEOREM </TOPIC>
      <TOPIC> CONDITIONAL_EXPECTATION </TOPIC>
      <TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
-     <TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
      <TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
   </CHAPTER>
   <CHAPTER>
      <TITLE> Markov chains in discrete time </TITLE>
+     <PROJECT>
+       <TITLE> Teaching with Markov chains </TITLE>
+       <DESCRIPTION>
+          For each of the four projects that you will perform in this course you will find a graph indicating the connectivity between the various topics that we are studying
+          in those weeks if you click on menu item content.  Pick one of these graphs and write a program to simulate a discrete time Markov chain that has this particular connectivity between its states.
+          Discuss whether each of the topics in the graph is transient or recurrent and whether or not the graphs have a stationary distribution.  If the chains do not have a stationary
+          distributon calculate the hitting times and hitting probabilities for the adsorbing states in the chain.  Once you have done this modify the transition graph and add connections so 
+          that the Markov chain does have a stationary distribution. Calculate the elements of this stationary distribution.  Discuss how graphs and Markov chains might be used to understand how 
+          people learn and understand new ideas. 
+       </DESCRIPTION>
+     </PROJECT>
      <TOPIC> MARKOV_PROPERTY </TOPIC>
      <TOPIC> TRANSITION_MATRIX_OF_MARKOV_CHAIN </TOPIC>
      <TOPIC> CHAPMAN_KOLMOGOROV_RELATION </TOPIC>
@@ -50,6 +91,21 @@
   </CHAPTER>
   <CHAPTER> 
      <TITLE> Markov chains in continuous time </TITLE>
+     <PROJECT>
+       <TITLE> Field tests for Glaucoma </TITLE>
+       <DESCRIPTION>
+          Glaucoma is a disease of the eyes that affects old people.  One of the symptoms of this disease is a loss of periferal vision and a narrowing of the patients 
+          field of vision.  Patients who have Glaucoma thus undergo regular visual field tests in order to monitor the progress of the disease.  When a person undergoes 
+          a field test their head is placed in a machine like that shown in the image on the right here with one eye blindfolded.  The patient stares at an led in the center
+          of the machine, while short and sharp burst appear at various points in the remainder of the machine.  The patient must then push a button whenever s/he sees one of these
+          bursts of light.
+
+          <UL>
+            <LI> Write a program that could be used to control where and when the points of light are generated inside a machine for performing field tests and how bright they are.  Explain how your program addresses the fact that people are primed to recognize regular repeating patterns in the intervals between events when there are repeated stimuli.  This is a problem for field tests as people's subconciouses might lead them to see lights that simply are not there if the timing between each light being generated is too regular. </LI>
+            <LI> Write a program that is able to simulate the patients response (pressing the button) in repsonse to each of the light pulses generated by your program.  Discuss what experiments you would need to do on patients in order to determine how to set the parameters in your algorithm for generating light pulses.  
+          </UL> 
+       </DESCRIPTION>
+     </PROJECT>
      <TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
      <TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
      <TOPIC> POISSON_PROCESS </TOPIC>

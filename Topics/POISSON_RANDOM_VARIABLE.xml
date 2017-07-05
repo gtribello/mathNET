@@ -39,4 +39,15 @@ where $\lambda$ is a parameter.  The expectation and variance of this random var
 Problems involving the Poisson Random variable.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+  <TOPIC> POISSON_RANDOM_VARIABLE </TOPIC>
+  <LEVEL> PYTHON </LEVEL>
+  <TYPE> LATEX </TYPE>
+  <MODULE> SOR3012 </MODULE>
+  <LINK> poisson-random-variable-project.tex </LINK>
+  <AUTHOR> G.~Tribello </AUTHOR>
+  <DESCRIPTION>
+   Writing a short project on poisson random variables that includes some small programming components.
+  </DESCRIPTION>
+  </RESOURCE>
 </PAGE>

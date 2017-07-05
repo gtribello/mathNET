@@ -38,4 +38,15 @@ are $\mathbb{E}(X) = \mu$ and $\textrm{var}(X) = \sigma^2$
  </LI>
     </UL>
   </AIMS>
+<RESOURCE>
+  <TOPIC> NORMAL_RANDOM_VARIABLE </TOPIC>
+  <LEVEL> PYTHON </LEVEL>
+  <TYPE> LATEX </TYPE>
+  <MODULE> SOR3012 </MODULE>
+  <LINK> normal-random-variable-project.tex </LINK>
+  <AUTHOR> G.~Tribello </AUTHOR>
+  <DESCRIPTION>
+   Writing a short project on normal random variables that includes some small programming components.
+  </DESCRIPTION>
+  </RESOURCE>
 </PAGE>

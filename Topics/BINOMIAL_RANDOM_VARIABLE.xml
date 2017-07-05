@@ -64,4 +64,15 @@ A video explaining the derivation of the binomial random variable
 Problems involving the binomial random variable
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+  <TOPIC> BINOMIAL_RANDOM_VARIABLE </TOPIC>
+  <LEVEL> PYTHON </LEVEL>
+  <TYPE> LATEX </TYPE>
+  <MODULE> SOR3012 </MODULE>
+  <LINK> binomial-random-variable-project.tex </LINK>
+  <AUTHOR> G.~Tribello </AUTHOR>
+  <DESCRIPTION>
+   Writing a short project on binomial random variables that includes some small programming components.
+  </DESCRIPTION>
+  </RESOURCE>
 </PAGE>

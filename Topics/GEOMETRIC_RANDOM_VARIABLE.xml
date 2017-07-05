@@ -68,4 +68,15 @@ Problems involving the geometric random variable
 A video explaining the derivation of the geometric random variable
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+  <TOPIC> GEOMETRIC_RANDOM_VARIABLE </TOPIC>
+  <LEVEL> PYTHON </LEVEL>
+  <TYPE> LATEX </TYPE>
+  <MODULE> SOR3012 </MODULE>
+  <LINK> geometric-random-variable-project.tex </LINK>
+  <AUTHOR> G.~Tribello </AUTHOR>
+  <DESCRIPTION>
+   Writing a short project on geometric random variables that includes some small programming components.
+  </DESCRIPTION>
+  </RESOURCE>
 </PAGE>

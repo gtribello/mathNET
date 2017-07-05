@@ -42,4 +42,15 @@ and the expectation and variance are $\mathbb{E}(X) = \frac{1}{2}(a+b)$ and $\te
  </LI>
     </UL>
   </AIMS>
+  <RESOURCE>
+  <TOPIC> UNIFORM_RANDOM_VARIABLE </TOPIC>
+  <LEVEL> PYTHON </LEVEL>
+  <TYPE> LATEX </TYPE>
+  <MODULE> SOR3012 </MODULE>
+  <LINK> uniform-random-variable-project.tex </LINK>
+  <AUTHOR> G.~Tribello </AUTHOR>
+  <DESCRIPTION>
+   Writing a short project on uniform random variables that includes some small programming components.
+  </DESCRIPTION>
+  </RESOURCE>
 </PAGE>

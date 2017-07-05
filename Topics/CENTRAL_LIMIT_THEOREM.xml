@@ -88,6 +88,17 @@ Video explaining how statistical error bars should be calculated and interprette
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>
+<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> geometric-probability </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercises on estimating probabilities using geometric arguments.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
 <TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
 <LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>

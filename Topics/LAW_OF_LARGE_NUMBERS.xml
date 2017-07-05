@@ -88,15 +88,4 @@ Some notes on the law of large numbers and the central limit theorem. These note
 A programming exercise about estimating histograms by performing repeated experiments.
 </DESCRIPTION>
 </RESOURCE>
-<RESOURCE>
-<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> BLOCKLY </LEVEL>
-<TYPE> XML </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> geometric-probability </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercises on the estimating probabilities using geometric arguments.
-</DESCRIPTION>
-</RESOURCE>
 </PAGE>

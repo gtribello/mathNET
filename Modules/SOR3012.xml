@@ -19,10 +19,26 @@
   </AIMS>
   <CHAPTER>
      <TITLE> Random variables </TITLE>
+     <INTRO>
+        <DESCRIPTION> 
+           The first project in the course is all about revisiting the material on random variables and probability theory that you learnt in the level one course.  During this part of the course you 
+           will learn about uniform, bernoulli, binomial, poisson, geometric and normal random variables.  You will revise important concepts in probability theory and statistics such as expectation,
+           variance, independence, cumulative probability distribution functions, probability density functions and probability mass fuctions.  You will also be introduced to the moment generating 
+           function.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to explain how the cumulative probability distribution function and the probabiltiy mass/density function are related. </LI>
+              <LI> You should be able to write out the probability mass functions for the bernoulli, binomial, poisson and geometric rando variables.  You should be able to write out the probability density functions for the uniform and normal random variables. </LI>
+              <LI> You should be able to calculate expectations and variances directly, using the moment generating function and by using the conditional expectation theorem. </LI>
+              <LI> You should be able to write programs to generate uniform, bernoulli, binomial, poisson, geometric and normal random variables. </LI>
+           </UL>
+        </AIMS> 
+     </INTRO>
      <PROJECT>
         <TITLE> Investigating other random variables </TITLE>
         <DESCRIPTION>
-           Performing the exercises in the apply and extend parts of this project will teach you how to generate uniform, bernoulli, binomial,poisson, geometric and normal random variables.
+           Performing the exercises in the apply and extend parts of this project will teach you how to generate uniform, bernoulli, binomial, poisson, geometric and normal random variables.
            You will learn how to derive expressions for the expectations and variances of these different types of random variables from the random variables parameters.  Furthermore, you 
            will learn about the law of large numbers and how we can estimate expectations and probability distribution functions by repeatedly generating random variables from a particular 
            distribution.  The final exercises listed below take these ideas a little further.  You will need to research these topics online and you may also want to discuss them with your 
@@ -31,7 +47,7 @@
            <UL>
               <LI> As part of your project on random variables you wrote a program to estimate the probability mass/density function for a particular random variable that worked by generating a large number of identically distributed random variables.  Now write a program to estimate the cumulative probability distribution function for the same kind of random variable you wrote your project on. </LI> 
               <LI> Suppose that $X$ is a geometric random variable with $p=0.5$.  Now suppose that we generate a random variable $Z$ that is a function of $X$ using $Z = 2^X$.  Write a python notebook that generates multiple instances of this random variable $\{ Z_i \}$.  Draw a graph that shows how the sample mean, $\mu_n = \frac{1}{N} \sum_{i=1}^n Z_i$, changes as the number of variables it is calculated from increases.  Discuss the behaviour of this sample mean and compare it to the behaviour that you observed for the other random variables you have investigated.  Derive an expression for the expression for the expectation of this random variable and use this expression to explain why the sample mean for this random variable behaves in the way you observe. </LI> 
-              <LI> Write a program that generates random variables from a Cauchy distribution.  Generate a large number of identically distributed Cauchy random variables and use this data to estimate the probability mass function for your random variable.  </LI>
+              <LI> Write a program that generates random variables from a Cauchy distribution.  Generate a large number of identically distributed Cauchy random variables and use this data to estimate the probability density function for your random variable.  </LI>
               <LI> Discuss how Student's-t-distribution arises from sampling and how this distribution differs from the standard normal distribution.  You should write a program that generates random variable from Student's-t-distribution and make sure that you plot the a graph of showing how the shape of the $t$ distribution changes as the number of degrees of freedom is increased. </LI>
            </UL>
         </DESCRIPTION>
@@ -48,6 +64,22 @@
   </CHAPTER>
   <CHAPTER>
      <TITLE> The central limit theorem </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           The second project in the course is all about the central limit theorem, which is arguably the central theorem in statistics.  Once again you learnt about this theorem in level one but this 
+           material is difficult so it bears repeating.  The central idea idea that we are trying to get at with this part of the course concerns using probability theory to develop a numerical measure 
+           for the degree of confidence that we have in a particular (quantitative) statement.  The simple version of this idea is that if we have two measurements of some quantity that are very similar 
+           we are more likely to believe that each of the individual measurements represent something close to the truth.  We are mathematicians though so we would like to develop a more quantitative version 
+           of this intuition.  This is what the central limit theorem allows us to do.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to explain the difference between systematic and random error. </LI> 
+              <LI> You should be able to state the central limit theorem and define all the terms in this theorem correctly. </LI>
+              <LI> You should be able to calculate confidence limits that give a measure of the random error in the sample mean calculated from a set of indepdendent random variables. </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
      <PROJECT>
         <TITLE> Understanding fractals with random variables </TITLE>
         <DESCRIPTION>
@@ -70,6 +102,22 @@
   </CHAPTER>
   <CHAPTER>
      <TITLE> Markov chains in discrete time </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           In this third project we introduce the Markov property and thus begin our study of random, time-dependent processes.  In this part of the course we assume that we are monitoring our 
+           random process at particular points in time rather than assuming we are monitoring the random process continuously.  Furthermore, we assume that the random variable whose value we 
+           are monitoring in time can only take integer values.  To describe these processes we introduce the notion of a transition graph and a transition matrix.  You will learn how to write programs
+           to simulate Markov chains and will learn how quantitative predictions can be made for these random processes by examining the limiting behavior of the chains.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to state what it means when we say that a time series of random variables has the Markov property </LI>
+              <LI> You should be able to interpret transition graphs and transition probability matrices and you should also be able to use the Chapman-Kolmogorov relation to calculate the $n$-step transition probability matrix from the 1-step transition probability matrix. </LI>
+              <LI> You should be able to discuss the limiting behavior of Markov chains.  This means you should be able to calculate limiting stationary distributions, hitting times and hitting probabilities. </LI>
+              <LI> You should be able to write a computer program to simulate a random walk in one dimension. </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
      <PROJECT>
        <TITLE> Teaching with Markov chains </TITLE>
        <DESCRIPTION>
@@ -78,7 +126,7 @@
           Discuss whether each of the topics in the graph is transient or recurrent and whether or not the graphs have a stationary distribution.  If the chains do not have a stationary
           distributon calculate the hitting times and hitting probabilities for the adsorbing states in the chain.  Once you have done this modify the transition graph and add connections so 
           that the Markov chain does have a stationary distribution. Calculate the elements of this stationary distribution.  Discuss how graphs and Markov chains might be used to understand how 
-          people learn and understand new ideas. 
+          people learn and understand new ideas and how we can use these ideas to categorize information. 
        </DESCRIPTION>
      </PROJECT>
      <TOPIC> MARKOV_PROPERTY </TOPIC>
@@ -91,6 +139,21 @@
   </CHAPTER>
   <CHAPTER> 
      <TITLE> Markov chains in continuous time </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           The final part of the course takes what you have learnt about discrete time Markov chains and extends it so that it also works in continuous time.  Doing so ensures that we can model processes
+           where there are discrete states and where the times between transitions between these states are random.  We can thus use the theory of Markov chains to model processes such as queues and the 
+           progression of diseases.  A discussion of Markov chains in continous time also allows us to move beyond the Markovian assumption and to thus introduce more complex time-dependent random processes.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to write out and solve the Kolmogorov forward equation. </LI>
+              <LI> You should be able to derive the equations of the Poisson process and you should also be able to write programs to simulate poisson processes. </LI>
+              <LI> You should be able to work with Markov models that describe queues. This includes being able to  write programs to simulate queues. </LI>
+              <LI> You should be able how models of random processes that relax the assumption of Markovianity can be developed. </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
      <PROJECT>
        <TITLE> Field tests for Glaucoma </TITLE>
        <DESCRIPTION>

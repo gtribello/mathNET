@@ -44,4 +44,15 @@ The expectation for a Bernoulli random variable, $X$, is $\mathbb{E}(X) = p$ and
  </LI>
     </UL>
   </AIMS>
+<RESOURCE>
+<TOPIC> BERNOULI_RANDOM_VARIABLE </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> HTML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> bernoulli-random-variables </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+EXAMPLE: project on bernoulli random variables
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

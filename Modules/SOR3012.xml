@@ -85,6 +85,8 @@
      <PROJECT>
         <TITLE> Understanding fractals with random variables </TITLE>
         <DESCRIPTION>
+           <table>
+           <tr> <td> 
            The figure on the left of this slide shows an image of the Mandelbrot set.  This set contains all the complex numbers, $c$, for which the orbit of 0 under 
            iteration of the quadratic map:
            $$
@@ -92,7 +94,32 @@
            $$ 
            remains bounded.  The python script below gives a method for calculating the area of the Mandelbrot set.  Discuss how this code works and try to extend it 
            so that is also outputs confidence limits on the estimate of the area.  Then try and see if you can write a piece of software to esimtate the fractal 
-           dimension of the Mandelbrot set. 
+           dimension of the Mandelbrot set.
+           </td> <td> <img src="Images/1280px-Mandel_zoom_00_mandelbrot_set.jpg"/> </td> </tr> 
+           </table>
+           <br/>
+           <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">cmath</span>
+
+<span class="n">npoints</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">maxiter</span> <span class="o">=</span> <span class="mi">10000</span>
+
+<span class="n">noutside</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">npoints</span><span class="p">)</span> <span class="p">:</span>
+    <span class="n">trialp</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span> <span class="o">+</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="mf">1.125</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">zn1</span> <span class="o">=</span> <span class="n">trialp</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">maxiter</span><span class="p">)</span> <span class="p">:</span>
+        <span class="n">zn1</span> <span class="o">=</span> <span class="n">zn1</span><span class="o">*</span><span class="n">zn1</span> <span class="o">+</span> <span class="n">trialp</span>
+        <span class="n">r</span><span class="p">,</span> <span class="n">thet</span> <span class="o">=</span> <span class="n">cmath</span><span class="o">.</span><span class="n">polar</span><span class="p">(</span><span class="n">zn1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">:</span>
+            <span class="n">noutside</span> <span class="o">=</span> <span class="n">noutside</span> <span class="o">+</span> <span class="mi">1</span>
+            <span class="k">break</span>
+
+<span class="n">ninside</span> <span class="o">=</span> <span class="n">npoints</span> <span class="o">-</span> <span class="n">noutside</span>
+<span class="n">area</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="p">(</span><span class="mf">2.5</span><span class="o">*</span><span class="mf">1.125</span><span class="p">)</span> <span class="o">*</span> <span class="n">ninside</span> <span class="o">/</span> <span class="n">npoints</span>
+
+<span class="nb">print</span><span class="p">(</span> <span class="n">ninside</span><span class="p">,</span> <span class="n">area</span> <span class="p">)</span>
+</pre></div>
         </DESCRIPTION>
      </PROJECT>
      <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>

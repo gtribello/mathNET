@@ -1,0 +1,80 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+\usepackage{makecell,pict2e}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{hyperref}
+
+\renewcommand\theadfont{\large}
+\newcommand{\gt}[1]{{\color{blue}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\renewcommand\theadfont{\large}
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\scshape}
+
+\includecomment{answers}
+% \excludecomment{answers}
+
+\usepackage[margin=2cm]{geometry}
+\setlength{\topmargin}{-2.cm}
+\setlength{\headheight}{1cm}
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\vek}[1]{\mbox{\boldmath $  #1$}}
+\newcommand{\ex}[1]{\ensuremath {\mathbb{E}} \left[ #1 \right]}
+\newcommand{\var}[1]{\ensuremath{{\rm var}\left[ #1 \right]}}
+
+\title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
+Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
+\huge Using random variables to estimate $\pi$ \\
+\horrule{2pt} \\[0.25cm]
+}
+\author{ \normalfont
+\normalsize
+        Gareth Tribello \\[-3pt] \normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+In the exercise: \\
+
+\href{http://gtribello.github.io/mathNET/geometric-probability.html}{http://gtribello.github.io/mathNET/geometric-probability.html} \\ 
+
+you learnt how we can arrive at an estimate of $\pi$ by generating pairs of uniform random variables.  Write a python notebook 
+that can be used to estimate in $\pi$ using the technique that you learnt.  At variance with what you did for the blockly exercise generate a large number 
+of random variables in your code (at least 10,000).  Discuss the sources of error in your calculation and make sure that you give suitable confidence limits 
+on the value of $\pi$ that you extract from your calculation.
+
+
+\end{document}

@@ -1,0 +1,598 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+\usepackage{makecell,pict2e}
+\usepackage{comment}
+\usepackage{wrapfig}
+\usepackage{color}
+
+\renewcommand\theadfont{\large}
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\scshape}
+
+
+\newcommand{\red}[1]{{\color{red}#1}}
+\newcommand{\gt}[1]{{\color{blue}#1}}
+
+
+%\includecomment{answers}
+%\excludecomment{questions}
+\includecomment{questions}
+\excludecomment{answers}
+
+\usepackage[margin=2cm]{geometry}
+\setlength{\topmargin}{-2.cm}
+\setlength{\headheight}{1cm}
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\vek}[1]{\mbox{\boldmath $  #1$}}
+\newcommand{\ex}[1]{\ensuremath {\mathbb{E}} \left[ #1 \right]}
+\newcommand{\var}[1]{\ensuremath{{\rm var}\left[ #1 \right]}}
+
+\title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
+Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
+\huge Proving the central limit theorem \\
+\horrule{2pt} \\[0.5cm]
+}
+\author{ \normalfont
+\normalsize
+        Gareth Tribello \\[-3pt] \normalsize
+        \today
+}
+\date{}
+%%% Begin document
+\begin{document}
+\maketitle
+
+\section{Purpose}
+
+In the lectures and exercises we have learnt about the law of large numbers and the central limit theorem.  We have largely focussed on how these theorems are used in statistics and have not worried 
+too much about how these theorems are proved.  We have done so because for statisticians knowing how to use these ideas is much more important than being able to reproduce these very standard proofs. 
+ Proving these theorems is not so difficult, however, and as such the following exercise explains how to go about the proof for those who are interested. 
+
+
+\section{Proof of the weak law of large numbers}
+
+One reason why expectation values are useful is that they allow us to
+simplify the information contained in the probability distribution.  Two
+particularly important examples of this in practise are explained below.
+
+\subsection{Markov Inequality}
+
+Notice that we can write the expectation value of a discrete random variable as:
+
+\begin{equation}
+ \mathbb{E}(X) = \sum_{x_i} x_i f_X(x_i) = \sum_{x_i<a} x_i f_X(x_i) + \sum_{x_i
+\ge a} x_i f_X(x_i)
+\end{equation}
+
+\noindent Alternatively, if the random variable is continuous we can write:
+
+\begin{equation}
+ \mathbb{E}(X) = \int_{-\infty}^a x f_X(x) \textrm{d}x + \int_a^{+\infty} x
+f_X(x) \textrm{d}x
+\end{equation}
+
+\noindent If $X \ge 0$ and $a > 0$ what does this imply about the following:
+
+\begin{equation}
+\begin{aligned}
+ \mathbb{E}(X) - \sum_{x_i \ge a} x_i f_X(x_i) &= \\
+ \mathbb{E}(X) - \int_a^{\infty} x f_X(x) \textrm{d}x &= 
+ \end{aligned}
+ \label{eqn:eqal}
+ \end{equation}
+
+
+\noindent Given that $x \ge 0$ and the fact that $f_X(x)$ is a probability
+density what can we immediately state about the expressions on the right had
+side of the equals signs above: 
+
+\begin{questions}
+\vspace{9cm}
+\end{questions}
+
+\begin{answers}
+\red{
+\vspace{0.25cm}
+First note $X\ge 0$ from question and $f_X(x) \ge 0$ because probability
+densities can't be negative. 
+We can thus write replace the equals sign in either of equations \ref{eqn:eqal}
+with an less than or equal sign and
+can rewrite the right hand side as a zero.  We then get to the following by
+adding and subtracting a $a$ ( which is positive) to (and from) the left hand
+side
+\begin{equation}
+\begin{aligned}
+\mathbb{E}(X) - \int_a^\infty ( x - a + a ) f_X(x) \textrm{d}x & \ge 0  \\
+\mathbb{E}(X) - \int_a^\infty ( x - a ) f_X(x)  \textrm{d}x  - a \int_a^\infty
+f_X(x) \textrm{d}x & \ge 0 \\ 
+\mathbb{E}(X) - a \int_a^\infty f_X(x) \textrm{d}x \ge 0 \\
+\mathbb{E}(X) - a P(X \ge a ) \ge 0 \\
+\rightarrow \qquad P(X\ge a ) \le \frac{\mathbb{E}(X)}{a}
+\end{aligned}
+\end{equation}
+
+In the second line we note that $\int_a^\infty ( x - a ) f_X(x)$ must be greater
+than zero so
+our inequality holds without this term.  In going from the third to the 4th line
+we use the fact that 
+$\int_a^\infty f_X(x) = P(X\ge a )$. 
+}
+\vspace{0.25cm}
+\end{answers}
+
+\noindent The relationship we have just derived is known as the Markov
+inequality.
+
+\subsection{Chebyshev Inequality}
+
+\begin{questions}
+\noindent If $|X| \ge a$ then $X^2 \qquad a^2$.  What does this allow us to say
+about:
+\end{questions}
+
+\begin{answers}
+\noindent If $|X| \ge a$ then $X^2 \red{\ge} a^2$.  What does this allow us to
+say
+about:
+\end{answers}
+
+\begin{questions}
+\begin{equation}
+ P(|X| \ge a) \qquad P(X^2 \ge a^2)
+\end{equation}
+\end{questions}
+
+\begin{answers}
+\begin{equation}
+ P(|X| \ge a) \red{=} P(X^2 \ge a^2)
+\end{equation}
+\end{answers}
+
+\noindent Given the Markov inequality derived in the previous section what can
+we thus say about $\frac{\mathbb{E}(X^2)}{a^2}$?
+
+\begin{questions}
+\vspace{2cm}
+\end{questions}
+
+\begin{answers}
+\vspace{0.25cm}
+\red{ 
+$P(|X| \ge a) = P(X^2 \ge a^2) \le \frac{\mathbb{E}(X^2)}{a^2}$ \\
+
+Taking the modulus of a number gives us a random variable that is always
+positive
+}
+\vspace{0.25cm}
+\end{answers}
+
+\noindent In the equation we just derived replace $X$ with $X-\mu$ (where $\mu$
+is $\mathbb{E}(X)$).  The resulting equation is the Chebyshev Inequality 
+
+\begin{questions}
+\vspace{2cm}
+\end{questions}
+
+\begin{answers}
+\vspace{0.25cm}
+\red{ 
+$P(|X - \mu | \ge a) = P[ (X-\mu)^2 \ge a^2] \le
+\frac{\mathbb{E}[(X-\mu)^2]}{a^2} 
+\qquad  \rightarrow \qquad P[ (X-\mu)^2 \ge a^2] \le \frac{\sigma^2}{a^2}$ \\
+
+where we have introduced $\sigma^2=\mathbb{E}[(X-\mu)^2]$, which is just the
+variance $\textrm{var}(X)$
+}
+\end{answers}
+
+\subsection{Sums of random variables}
+
+At school you will have learnt that the sample mean, $\mu$, is calculated using:
+%
+\begin{equation}
+ \mu = \frac{1}{N} \sum_{n=1}^N x_n 
+ \label{eqn:mean}
+\end{equation}
+%
+When we take a mean using this equation we assume that we have taken $N$ samples
+$X_1, X_2, X_3, \dots$ from an underlying probability distribution.  What is the
+expectation value for the quantity we calculate using
+equation \ref{eqn:mean}? 
+
+\begin{questions}
+\vspace{3cm}
+\end{questions}
+
+\begin{answers}
+\red{
+\begin{equation}
+\begin{aligned}
+\mathbb{E}(S_n) & = \mathbb{E}(X_1 + X_2 + X_3 + \dots + X_n ) \\
+ & = \mathbb{E}(X_1) + \mathbb{E}(X_2) + \mathbb{E}(X_3) + \dots +
+\mathbb{E}(X_n ) \\
+ & = n \mathbb{E}(X)
+\end{aligned}
+\end{equation}
+
+Second line follows because this is a linear function and third line because all
+experiments 
+are identical i.e. probability distribution functions for all $X_i$ are the
+same.
+\vspace{0.25cm}
+}
+\end{answers}
+
+\noindent We can derive something similar for the variance (although in this
+case we will divide it by $n$ for reasons that will become clear in a moment).
+
+\begin{equation}
+\begin{aligned}
+\textrm{var}\left(\frac{S_n}{n}\right) & = \frac{1}{n^2} \left(
+\mathbb{E}(S_n^2) - [\mathbb{E}(S_n)]^2 \right)  \\
+ & = \frac{1}{n^2} \left(  \mathbb{E}[ (X_1 + X_2 + X_3 + \dots + X_n)^2] -
+[n\mathbb{E}(X)]^2 \right) \\
+\end{aligned}
+\end{equation}
+
+When we expand $(X_1 + X_2 + X_3 + \dots + X_n)^2$ there are two types of terms.
+ Terms like 
+$\mathbb{E}(X_1^2)$ and terms like $\mathbb{E}(X_1X_2)$.  How many terms of each of these 
+two types are there:
+
+\begin{itemize}
+ \item Terms like $\mathbb{E}(X_1^2)$ : 
+ \item Terms like $\mathbb{E}(X_1X_2)$ :
+\end{itemize}
+
+How can we rewrite $\mathbb{E}(X_1X_2)$ if $X_1$ and $X_2$ are independent?
+
+\vspace{2cm}
+
+Given all this and the fact that the definition of the variance tells us that $\mathbb{E}(X^2) = \textrm{var}(X) + [\mathbb{E}(X)]^2$ show that:
+
+$$
+\textrm{var}\left(\frac{S_n}{n}\right) = \frac{1}{n} \textrm{var}(X)
+$$
+
+\vspace{5cm}
+
+\subsection{The weak law of large numbers}
+
+What does Chebyshev Inequality expression tell us above the value of (use what
+we know about the total variance $\textrm{var}(S_n)$ to help you:
+
+\begin{questions}
+\begin{equation}
+ P\left( \left | \frac{S_n}{N} - \mu \right | > \epsilon \right) \qquad \qquad 
+\end{equation}
+\end{questions}
+
+\begin{answers}
+\begin{equation}
+ P\left( \left | \frac{S_n}{N} - \mu \right | > \epsilon \right) \red{ \le
+\frac{ \textrm{var}(S_n) / n }{ \epsilon^2 } } 
+ \end{equation}
+\end{answers}
+
+\noindent where $S_n$ is the sum over all our samples from the distribution
+$S_n = X_1 + X_2 + X_3 + \dots$ \\
+
+\noindent What then is the value of the following limit:
+
+\begin{questions}
+\begin{equation}
+ \lim_{N \rightarrow \infty} P\left( \left | \frac{S_n}{n} - \mu \right | >
+\epsilon \right) \qquad \qquad
+\end{equation} 
+\end{questions}
+
+\begin{answers}
+\begin{equation}
+ \lim_{N \rightarrow \infty} P\left( \left | \frac{S_n}{n} - \mu \right | >
+\epsilon \right) \red{=0}
+\end{equation} 
+\red{
+In the limit $n\rightarrow\infty$ then $\frac{1}{n}\rightarrow 0$ and
+probabilities can't be less than zero
+}
+\vspace{0.25cm}
+\end{answers}
+
+\noindent The expression we have just derived is called the \emph{weak law of
+large numbers}.  What is the significance of this expression? 
+
+\vspace{3cm}
+
+\section{Proof of central limit theorem}
+
+\subsection{Moment generating function}
+
+The moment generating function is given by:
+
+\begin{equation}
+ M_X(t) = \mathbb{E}(e^{tX})
+\end{equation}
+
+\noindent One reason the moment generating function is important because there is a one-to-one relationship between the probability mass/density functions and the
+moment generating functions.  As such whatever we deduce to be true for the moment-generating function is also true for the corresponding probability
+mass/density function.  We can thus prove the central limit theorem by demonstrating that the moment generating for the sample variance is the same as
+the moment generating function for a normal distribution.  
+
+The variance, $\sigma^2$, can be calculated using:
+%
+\begin{equation}
+ \sigma^2 = \int_0^1 (X - \mathbf{E}[X])^2 \textrm{d}F_X(x)
+\end{equation}
+%
+Much as we did when we proved the law of large numbers we start by proving something about the variance, $\textrm{var}(S)$, of a random variable that is formed by taking
+the sum of a series of independent and identically distributed random variables i.e. $S = X_1 + X_2 + X_3 + \dots + X_n$.  In particular we wish to prove that 
+
+\begin{equation}
+\begin{aligned}
+ \textrm{var}(S) & = \textrm{var}( X_1 + X_2 + X_3 + \dots + X_n ) = n \textrm{var}(X) 
+ \end{aligned}
+\end{equation}
+%
+Use the space below to discuss how this proof is performed
+
+\vspace{3cm}
+
+
+\subsection{Step 1: Moment generating function for a Gaussian}
+
+\noindent What integral do we have to perform to calculate the moment generating
+function for a Gaussian distribution with $\mathbb{E}(X)=0$ and
+$\textrm{var}(X)=1$? 
+
+\begin{answers}
+\vspace{1cm}
+\red{
+ Look up probability density function for a Gaussian from lecture 5 and
+substitute this into equation
+ for the moment generating function above.
+ 
+ \begin{equation}
+ M_X(t) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{tx} e^{-x^2/2}
+\textrm{d}x =  \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{tx-x^2/2}
+\textrm{d}x
+ \end{equation} 
+}
+\end{answers}
+
+\clearpage
+
+\noindent Expand and simplify the following expression $\frac{1}{2}t^2 -
+\frac{1}{2}(x-t)^2$ 
+
+\begin{questions}
+\vspace{2cm}
+\end{questions}
+
+\begin{answers}
+\red{
+\begin{equation}
+\frac{1}{2}t^2 - \frac{1}{2}(x-t)^2 = \frac{1}{2}t^2 - \frac{1}{2} x^2 + xt -
+\frac{1}{2}t^2 = \frac{1}{2} x^2 + xt
+\end{equation}
+}
+\end{answers}
+
+\noindent Hence, by using the equality that you have arrived at above and the
+substitution $y=x-t$, show that the moment generating function for a Gaussian
+with $\mathbb{E}(X)=0$ and $\textrm{var}(X)=1$ is $M_X(t) = e^{t^2/2}$ 
+
+\begin{questions}
+\vspace{8cm}
+\end{questions}
+
+\begin{answers}
+\red{
+\begin{equation}
+\frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} e^{tx-x^2/2} \textrm{d}x =
+\frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} \exp\left( \frac{1}{2}t^2 -
+\frac{1}{2}(x-t)^2 \right) \textrm{d}x = \frac{ e^{t^2/2} }{\sqrt{2\pi}} 
+\int_{-\infty}^{+\infty} \exp\left(- \frac{1}{2}(x-t)^2 \right) \textrm{d}x
+\end{equation}
+
+Integration by substitution $y=x-t \qquad \rightarrow \qquad
+\frac{\textrm{d}y}{\textrm{d}x} = 1  \qquad \rightarrow \qquad \textrm{d}y =
+\textrm{d}x$ 
+
+Limits are the same
+
+\begin{equation}
+\frac{ e^{t^2/2} }{\sqrt{2\pi}} \int_{-\infty}^{+\infty} \exp\left(-
+\frac{1}{2}y^2 \right) \textrm{d}y = \frac{ e^{t^2/2} }{\sqrt{2\pi}} \sqrt{2\pi}
+= e^{t^2/2}
+\end{equation}
+
+The definite integral in the above is one of the most important in mathematics
+and is something you should know by heart.
+}
+\end{answers}
+
+\subsection{Step 2: Moment generating function for the experiment}
+
+\noindent Lets introduce the following random variable:
+
+\begin{equation}
+ Z = \frac{ (S_n/n) - \mu }{ \sigma /\sqrt{n} } = \frac{ S_n - n\mu}{
+n\sigma/\sqrt{n} } = \frac{ \sum_i X_i - \mu }{ \sigma \sqrt{n}}
+\end{equation}
+
+\noindent where $S_n$ is the sum over all our samples from the distribution $S_n = X_1 + X_2 + X_3 + \dots$ and $\sigma$ is the sample variance.  Show that this
+random variable has the following useful properties:
+%
+\begin{equation}
+ \mathbb{E}(Z) = \mathbb{E}\left( \frac{(S_n/n) - \mu}{\sigma/\sqrt{n}} \right)
+= 0
+\nonumber
+\end{equation}
+
+\vspace{5cm}
+
+%
+Now show that: 
+
+\begin{equation}
+ \var{Z} = \frac{\mathbb{E}(S_n^2)}{n\sigma^2 } - \frac{2\mathbb{E}(S_n)\mu}{\sigma^2} + \frac{ n\mu^2 }{\sigma^2}
+\end{equation}
+
+\vspace{5cm}
+
+%
+Use the fact from earlier that $\textrm{var}(S_n)=n\sigma^2$ to show that:
+
+\begin{equation}
+ \frac{\mathbb{E}(S_n^2)}{n\sigma^2 } - \frac{2\mathbb{E}(S_n)\mu}{\sigma^2} +
+\frac{n\mu^2}{\sigma^2} = 1
+\end{equation}
+
+\noindent We now note that the moment generating function of $Z$ is:
+
+\begin{equation}
+ M_z(t) = \mathbb{E}(e^{tX}) = \mathbb{E}\left[ \exp\left( \sum_{i=1}^n
+\frac{t}{\sigma\sqrt{n}} (X_i-\mu) \right) \right]
+\end{equation}
+
+\noindent How can we simplify this expression by using (1) the properties of a
+exponential of a sum of terms and (2) the fact that all our experiments are
+independent.
+
+\begin{questions}
+\vspace{5cm}
+\end{questions}
+
+\begin{answers}
+\vspace{0.25cm}
+\red{
+Exponential of a sum is a product of exponentials.  Hence:
+
+\begin{equation}
+\mathbb{E}\left[ \exp\left( \sum_{i=1}^n
+\frac{t}{\sigma\sqrt{n}} (X_i-\mu) \right) \right] = \mathbb{E}\left[
+\prod_{i=1}^n \frac{t}{\sigma\sqrt{n}} (X_i-\mu) \right]
+\end{equation}
+
+All experiments are identical so the product above is just a power.
+
+\begin{equation}
+\mathbb{E}\left[ \prod_{i=1}^n \frac{t}{\sigma\sqrt{n}} (X_i-\mu) \right] =
+\mathbb{E}\left[  \left(  \frac{t}{\sigma\sqrt{n}} (X-\mu) \right)^n \right] =
+\left[  \mathbb{E}\left(  \frac{t}{\sigma\sqrt{n}} (X-\mu) \right) \right]^n 
+\end{equation}
+
+Last equality holds because, if variables are independent then
+$\mathbb{E}(XY)=\mathbb{E}(X)\mathbb{E}(Y)$
+}
+\vspace{0.25cm}
+\end{answers}
+
+
+\noindent Through the above manipulations you arrive at a function of:
+
+\begin{equation}
+\exp\left( \frac{t(X-\mu)}{\sigma \sqrt{n}} \right) 
+\label{eqn:ll}
+\end{equation}
+
+\noindent Make a Maclaurin expansion for the exponential function
+above
+
+\begin{questions}
+\vspace{5cm}
+\end{questions}
+
+\begin{answers}
+\vspace{0.25cm}
+\red{
+\begin{equation}
+\exp\left( \frac{t(X-\mu)}{\sigma \sqrt{n}} \right)  = 1 +
+\frac{t(X-\mu)}{\sigma \sqrt{n}} + \frac{1}{2!} \left( \frac{t(X-\mu)}{\sigma
+\sqrt{n}}\right)^2 + \dots
+\end{equation}
+}
+\end{answers}
+
+\noindent Substitute this expansion into the equation for the expectation and
+simplify
+using the linearity of the expectation operator. 
+
+\begin{answers}
+\red{
+\begin{equation}
+\begin{aligned}
+ \left[  \mathbb{E}\left(  \frac{t}{\sigma\sqrt{n}} (X-\mu) \right) \right]^n &
+= \left[ \mathbb{E}\left(  1 + \frac{t(X-\mu)}{\sigma \sqrt{n}} + \frac{1}{2}
+\left( \frac{t(X-\mu)}{\sigma \sqrt{n}}\right)^2 + \dots \right) \right]^n \\
+  & = \left[ \mathbb{E}(1) + t \mathbb{E}\left( \frac{(X-\mu)}{\sigma \sqrt{n}}
+\right) + \frac{t^2}{2\sigma^2 n} \mathbb{E} \left[ \left(X-\mu\right)^2 \right]
++ \dots  \right]^n \\
+  & = \left[ 1 + 0 + \frac{t^2}{2n} + \dots \right]^n
+ \end{aligned} 
+\end{equation}
+}
+\end{answers}
+
+\clearpage
+
+\noindent Now substitute the sum of exponentials that you arrived at above into
+the expression that we arrived at for the moment generating function.  Note
+that in the limit as $n\rightarrow \infty$ all terms of higher order than $t^2$
+in your Maclaurin expansion are zero.  Furthermore, recall the Euler definition
+of the exponential function:
+
+\begin{equation}
+ e^x = \lim_{n\rightarrow \infty}  \left[ 1 + \frac{x}{n} \right]^n 
+\end{equation}
+
+\noindent Use these results to show that the Moment generating function for the
+random variable $Z$ is nothing more than $e^{t^2/2}$ as doing so will prove that
+the probability distribution function for $Z$ is a Normal distribution centred
+on 0 and with variance 1.
+
+\begin{answers}
+\red{
+\vspace{0.25cm}
+We want to calculate the following limit 
+
+\begin{equation}
+\lim_{n \rightarrow \infty}  \left[ 1 + \frac{t^2}{2n} + \dots \right]^n =
+\lim_{n \rightarrow \infty}  \left[ 1 + \frac{t^2}{2n} \right]^n = e^{t^2/2}
+\end{equation}
+
+First equality holds because all terms of higher order than $t^2$ are zero in
+the limit.  Second equality holds through Euler definition of exponential, which
+was given above.
+}
+\end{answers}
+
+\end{document}

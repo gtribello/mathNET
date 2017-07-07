@@ -109,4 +109,37 @@ A programming exercises on estimating probabilities using geometric arguments.
 Programming exercise to explain the central limit theorem to you.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> estimating-pi-project.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Extended programming exercise on estimating $\pi$ using random variables.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> betrand-paradox-project.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Extended programming exercise on the Bertrand paradox and systematic and random error.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> central-limit-theorem-proof.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on proving the central limit theorem
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

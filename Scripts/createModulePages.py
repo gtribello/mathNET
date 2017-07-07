@@ -112,7 +112,7 @@ def buildModulePage( modn ):
         of.write('<a href="https://matplotlib.org/users/pyplot_tutorial.html" type="button" class="btn btn-primary">Graphs</a>')
         of.write('<p> If you would like to download the python notebook system onto your own laptop you can find it here:</p>')
         of.write('<a href="https://www.continuum.io/downloads"> https://www.continuum.io/downloads </a>')
-        of.write('<p> There are some instructions on how to install it on your computer in <a href="https://mediasite.qub.ac.uk/Mediasite/Play/935be4295e7148dd91d6baf4cd2108281d"> this video </a> </p>')
+        of.write('<p> There are some instructions on how to install it on your computer in <a href="https://mediasite.qub.ac.uk/Mediasite/Play/935be4295e7148dd91d6baf4cd2108281d"> <b> this video </b> </a> </p>')
         of.write('      </div>\n')
         of.write('      <div class="col-md-4">\n')
         of.write('<table>\n')

@@ -42,7 +42,7 @@
 <polygon fill="black" stroke="black" points="166.616,-37.1558 156.08,-36.038 163.619,-43.482 166.616,-37.1558"/>
 </g>
 <!-- CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
-<g id="node6" class="node"><title>CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
+<g id="node8" class="node"><title>CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
 <a xlink:href="CAUCHY_SCHWARTZ_INEQUALITY_STATS.html" xlink:title=" The Cauchy Schwartz Inequality in Statistics " target="_top">
 <polyline fill="none" stroke="black" points="578,-36 266,-36 "/>
 <path fill="none" stroke="black" d="M266,-36C260,-36 254,-30 254,-24"/>
@@ -56,28 +56,47 @@
 </a>
 </g>
 <!-- JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
-<g id="edge6" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
+<g id="edge8" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
 <path fill="none" stroke="black" d="M308.356,-71.8314C328.504,-62.2874 353.375,-50.5065 374.708,-40.4013"/>
 <polygon fill="black" stroke="black" points="376.381,-43.482 383.92,-36.038 373.384,-37.1558 376.381,-43.482"/>
 </g>
 <!-- RANDOM_VARIABLES -->
 <g id="node2" class="node"><title>RANDOM_VARIABLES</title>
 <a xlink:href="RANDOM_VARIABLES.html" xlink:title=" Random variables " target="_top">
-<polyline fill="none" stroke="black" points="332,-180 208,-180 "/>
-<path fill="none" stroke="black" d="M208,-180C202,-180 196,-174 196,-168"/>
-<polyline fill="none" stroke="black" points="196,-168 196,-156 "/>
-<path fill="none" stroke="black" d="M196,-156C196,-150 202,-144 208,-144"/>
-<polyline fill="none" stroke="black" points="208,-144 332,-144 "/>
-<path fill="none" stroke="black" d="M332,-144C338,-144 344,-150 344,-156"/>
-<polyline fill="none" stroke="black" points="344,-156 344,-168 "/>
-<path fill="none" stroke="black" d="M344,-168C344,-174 338,-180 332,-180"/>
-<text text-anchor="start" x="204" y="-159.233" font-family="Times Roman,serif" font-size="14.00"> Random variables </text>
+<polyline fill="none" stroke="black" points="241,-180 117,-180 "/>
+<path fill="none" stroke="black" d="M117,-180C111,-180 105,-174 105,-168"/>
+<polyline fill="none" stroke="black" points="105,-168 105,-156 "/>
+<path fill="none" stroke="black" d="M105,-156C105,-150 111,-144 117,-144"/>
+<polyline fill="none" stroke="black" points="117,-144 241,-144 "/>
+<path fill="none" stroke="black" d="M241,-144C247,-144 253,-150 253,-156"/>
+<polyline fill="none" stroke="black" points="253,-156 253,-168 "/>
+<path fill="none" stroke="black" d="M253,-168C253,-174 247,-180 241,-180"/>
+<text text-anchor="start" x="113" y="-159.233" font-family="Times Roman,serif" font-size="14.00"> Random variables </text>
 </a>
 </g>
 <!-- RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION -->
 <g id="edge2" class="edge"><title>RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
-<path fill="none" stroke="black" d="M270,-143.831C270,-136.131 270,-126.974 270,-118.417"/>
-<polygon fill="black" stroke="black" points="273.5,-118.413 270,-108.413 266.5,-118.413 273.5,-118.413"/>
+<path fill="none" stroke="black" d="M201.963,-143.831C213.172,-134.963 226.821,-124.164 238.944,-114.572"/>
+<polygon fill="black" stroke="black" points="241.374,-117.112 247.044,-108.163 237.03,-111.623 241.374,-117.112"/>
+</g>
+<!-- CONDITIONAL_PROBABILITY -->
+<g id="node6" class="node"><title>CONDITIONAL_PROBABILITY</title>
+<a xlink:href="CONDITIONAL_PROBABILITY.html" xlink:title=" Conditional probability " target="_top">
+<polyline fill="none" stroke="black" points="441,-180 283,-180 "/>
+<path fill="none" stroke="black" d="M283,-180C277,-180 271,-174 271,-168"/>
+<polyline fill="none" stroke="black" points="271,-168 271,-156 "/>
+<path fill="none" stroke="black" d="M271,-156C271,-150 277,-144 283,-144"/>
+<polyline fill="none" stroke="black" points="283,-144 441,-144 "/>
+<path fill="none" stroke="black" d="M441,-144C447,-144 453,-150 453,-156"/>
+<polyline fill="none" stroke="black" points="453,-156 453,-168 "/>
+<path fill="none" stroke="black" d="M453,-168C453,-174 447,-180 441,-180"/>
+<text text-anchor="start" x="279.5" y="-159.233" font-family="Times Roman,serif" font-size="14.00"> Conditional probability </text>
+</a>
+</g>
+<!-- CONDITIONAL_PROBABILITY&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION -->
+<g id="edge6" class="edge"><title>CONDITIONAL_PROBABILITY&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
+<path fill="none" stroke="black" d="M338.785,-143.831C327.453,-134.963 313.654,-124.164 301.397,-114.572"/>
+<polygon fill="black" stroke="black" points="303.24,-111.57 293.208,-108.163 298.926,-117.082 303.24,-111.57"/>
 </g>
 </g>
 </svg>

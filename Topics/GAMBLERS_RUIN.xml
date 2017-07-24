@@ -98,6 +98,17 @@ A video explaining the gamblers ruin problem and the derivation of the differenc
 <LEVEL> PYTHON </LEVEL>
 <TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
+<LINK> gamblers-ruin-program.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Some more advanced exercises about writing programs to simulate one dimensional random walks.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
 <LINK> gamblers-ruin-probability.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>

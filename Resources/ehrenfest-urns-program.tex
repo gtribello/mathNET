@@ -1,0 +1,83 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+\usepackage{makecell,pict2e}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{hyperref}
+
+\renewcommand\theadfont{\large}
+\newcommand{\gt}[1]{{\color{blue}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\renewcommand\theadfont{\large}
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\scshape}
+
+\includecomment{answers}
+% \excludecomment{answers}
+
+\usepackage[margin=2cm]{geometry}
+\setlength{\topmargin}{-2.cm}
+\setlength{\headheight}{1cm}
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\vek}[1]{\mbox{\boldmath $  #1$}}
+\newcommand{\ex}[1]{\ensuremath {\mathbb{E}} \left[ #1 \right]}
+\newcommand{\var}[1]{\ensuremath{{\rm var}\left[ #1 \right]}}
+
+\title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
+Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
+\huge Programming the ehrenfest urn problem \\
+\horrule{2pt} \\[0.25cm]
+}
+\author{ \normalfont
+\normalsize
+        Gareth Tribello \\[-3pt] \normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+Suppose that you have two cups a pink one and a blue one and that you also have six numbered balls.  Suppose that three of these balls are in the blue cup and that
+the remaining three balls are in the pink cup and that you roll a dice and move a ball based on the number that comes up.  You have learnt in this exercise:
+
+\href{http://gtribello.github.io/mathNET/ehrenfest-urns-exercise.html}{http://gtribello.github.io/mathNET/ehrenfest-urns-exercise.html}
+
+how we can simulate this game as a markov chain.  Lets now transfer what you learnt from the Blockly exercise to a python notebook so that we can run long simulations 
+of this process.  In your python notebook you should first esimtate the probability mass function for the random variable $X(n)$ that tells you how many balls are in the 
+blue cup on step $n$ by calculating a histogram based on the behavior of the chain.  Next calculate the eigenvalues and eigenvectors of the one step transition matrix.  
+Discuss whether or not the histogram that you obtained in the first step represents a limiting stationary distribution for this chain based on the eigenvalues and eigenvectors 
+and discuss the behavior of this chain in the long time limit.  Discuss how you can modify the chain and thereby ensure that the distribution has a limiting stationary distribution
+In doing this exercise you may find it useful to consider the periodicity of each of the states in the Markov chain and to learn something about the eigenvalues of bipartite graphs.
+
+
+\end{document}

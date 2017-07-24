@@ -112,4 +112,15 @@ A video explaining why the limiting stationary distribution of an ergodic markov
 A programming exercise on simulating an ergodic markov chain.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> ehrenfest-urns-program.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise on simulating an ergodic markov chain.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

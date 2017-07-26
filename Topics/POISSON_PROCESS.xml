@@ -115,4 +115,15 @@ Some problems involving the poisson process
 A programming exercise that shows you how we can simulate poisson processes and compound poisson processes.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> POISSON_PROCESS </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> poisson-process-project.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  Writing a short project on the poisson process that includes some small programming components.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

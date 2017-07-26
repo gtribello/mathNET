@@ -129,4 +129,15 @@ Notes on the M/M/1 Queue
 Some exercises involving the M/M/1 Queue
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> MM1_QUEUE </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> queues-project.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  Writing a short project on queues that includes some small programming components.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

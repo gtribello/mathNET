@@ -4,6 +4,7 @@ import basicgraph
 import pageelements
 import sys
 import os
+import subprocess
 import lxml.etree as ET
 
 def printModuleSidebar( modname, of ):
@@ -18,6 +19,48 @@ def printModuleSidebar( modname, of ):
     of.write('      <li class="list-group-item"><a href="' + modname + '-content.html">Content</a></li>\n')
     of.write('   </ul>')
     of.write('</div>')
+
+def createPortfolioMarkscheme( modname, tree ) :
+    of = open( "latex/portfolio-assessment-" + modname +".tex", "w" )
+    of.write("\\documentclass[a4paper]{article} \n")
+    of.write("\\usepackage[margin=2.5cm,headheight=50pt,includeheadfoot]{geometry} \n")
+    of.write("\\usepackage{amsfonts} \n")
+    of.write("\\usepackage{amsmath} \n")
+    of.write("\\usepackage{graphicx} \n")
+    of.write("\\usepackage{fancyhdr} \n")
+    of.write("\pagestyle{fancy} \n")
+    of.write("\\renewcommand{\headrulewidth}{2pt} \n")
+    of.write("\\usepackage{xcolor} \n")
+    of.write("\\rhead{\includegraphics[width=5cm]{html/assets/img/logo.png}} \n")
+    of.write("\lhead{\Huge Portfolio Marking: " + modname + "} \n")
+    of.write("\\begin{document} \n")
+    for elem in tree.findall("COMPONENT") :
+        of.write("\\section{" + elem.find("TITLE").text + "} \n")
+        of.write( elem.find("DESCRIPTION").text + "\n" )
+        of.write("\\vspace{0.5cm}\n" )
+        of.write("\\begin{tabular}{l | l | p{10 cm} } \n")
+        of.write("{\\bf Classification } & {\\bf Range } & {\\bf Quality} \\\\ \\hline \n") 
+        for mark in elem.findall("RANGE") :
+            of.write( mark.find("CLASSIFICATION").text + "&" + mark.find("MARKS").text + "&" + mark.find("QUALITY").text + "\\\\[0.2cm]  \n" )  
+        of.write("\\end{tabular} \n")
+    of.write("\\end{document}")
+    of.close() 
+    # Run latex to generate pdf files
+    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/portfolio-assessment-" + modname + ".tex" ]
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    shutil.copy( "portfolio-assessment-" + modname + ".pdf", "html/portfolio-assessment-" + modname + ".pdf" )
+    if not proc.returncode == 0 :
+       os.unlink( "latex/portfolio-assessment-" + modname + ".tex" )
+       raise ValueError("Error compling latex markscheme for module " + modname )
+    # Delete files we don't need after latex has run  
+    for filen in os.listdir("."):
+        if filen.startswith( "portfolio-assessment-" + modname ):
+           os.remove(filen)
+
+
 
 
 def buildModulePage( modn ):
@@ -35,12 +78,24 @@ def buildModulePage( modn ):
     pageelements.printTopMenuBar( of ) 
     of.write('<div id="content" class="container">\n')
     of.write('   <div class="row margin-vert-30">\n') 
-    of.write('      <div class="col-md-10">\n')
-    of.write('      </div>\n')
+    of.write('   <H2> ' + mname + ': ' + tree.find("TITLE").text + '</H2>')
+    of.write('   <H3> Description </H3> <br/> ' )
+    of.write( tree.find("DESCRIPTION").text )
+    of.write('<br/> <br/>')
+    of.write('   <H3> Portfolio projects </H3> <br/> ' )
+    of.write('    <p>One aspect of the assessment of this module is a portfolio for which you must produce projects on the following: </p>')
+    of.write('<ul>')
+    n = 0
+    for chp in tree.findall("CHAPTER") :
+        n = n + 1  
+        of.write('<li><a href="' + mname + str(n) + '-overview.html"> ' + chp.find("TITLE").text +  '</a></li>')
+    of.write('</ul>')     
+    of.write("<p>Details on how your final portfolio will be assessed can be found by clicking <b> <a href='portfolio-assessment-" + mname + ".pdf'> here </a> </b>.</p>")
     of.write('   </div>\n')
     of.write('</div>\n')
     pageelements.printFooter( of )
     of.close()
+    createPortfolioMarkscheme( mname, tree.find("ASSESSMENT") )
     n, chapters = 0, tree.findall("CHAPTER")
     for chp in chapters :
         n = n + 1

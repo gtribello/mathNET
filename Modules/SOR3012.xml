@@ -13,10 +13,118 @@
   <AIMS>
      <UL> 
        <LI> You should be able to calculate expectations and variances directly, using the moment generating function and by using the conditional expectation theorem.  You should also be able to explain what predictions can be made given the expectation and/or the variance. </LI>
-       <LI> You should be able to recognise which type of random variable is appropriate for modelling a given phenomenon, identify the assumptions that they have made in constructing this model and critically assess their validity. </LI>
+       <LI> You should be able to recognise which type of random variable is appropriate for modelling a given phenomenon, identify the assumptions that they have made in constructing this model and critically assess their validity.
+</LI>
        <LI> You should be able to explain what it means when we state that a time dependent process has independent and stationary increments and how this differs from a Markov process.  By using your understanding of this distinction you should be able to construct probabilistic models for time dependent phenomena, explain the assumptions that have been made in the constructing these models and critically assess their validity. </LI>
      </UL>
   </AIMS>
+  <ASSESSMENT>
+     <COMPONENT>
+        <TITLE> Self study </TITLE>
+        <DESCRIPTION>
+            The first component of the assessment is based on how you have studied for the module.  You must hand in a half page report every week in which you detail what, when and how you 
+            intended to study during the week and what you actually achieved during the week.  You may choose to detail what resources you have used and what parts of the material you found 
+            easy and what you found difficult.  You might also want to talk about any conversatiosn you had the lecturer/teaching assistants.  You should also explain what resources you studied 
+            from and what resources were particularly useful.  Lastly, you should demonstrate that you have thought about what you did this week and how you might study more effectively in the 
+            future.
+        </DESCRIPTION>
+        <RANGE> 
+           <CLASSIFICATION> Excellent </CLASSIFICATION>
+           <MARKS> 5-6 </MARKS>
+           <QUALITY> 
+              The student outlines a clear plan detailing what and when they will study each week.  There is evidence that the student thinks about 
+              how well their plan has worked at the end of each week and evidence that they have though how to refine their plans in subsequent weeks.
+              They reflect well on their previous work and feedback and learn by evaluating both positive and negatives.  Excellent notes are kept and there 
+              evidence that these are used in subsequent work.  They contribute fully to the group and offer peers an opportunity for improved performance.
+           </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Good work </CLASSIFICATION>
+           <MARKS> 3-4 </MARKS>
+           <QUALITY> 
+               The student outlines a clear plan detailing what and when they will study each week but evidence that they have though about how well this plan is working is absent.  The student reflects on previous work and feedback and learns by evaluating both positive and negatives.  Notes are kept but there is no evidence that these have been used in subsequent work.  They contribute to the group but there is little evidence that they have responded to the feedback given. 
+           </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Adequate </CLASSIFICATION>
+           <MARKS> 1-2 </MARKS>
+           <QUALITY>
+               Some evidence that the student plans what items to study each week.  There is some evidence to support reflection although there could be more reference to previous work.  Group contribution is inconsistent and offers little opportunity for improved performance.
+           </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Fail </CLASSIFICATION>
+           <MARKS> 0 </MARKS>
+           <QUALITY> 
+               No evidence of regular self study.  No evidence of reflection.  Less than 75 \% attendance at tutorials and computer lab classes
+           </QUALITY>
+        </RANGE>
+     </COMPONENT>
+     <COMPONENT>
+        <TITLE> Research </TITLE>
+        <DESCRIPTION> 
+            For each of the projects you are expected to discuss the process that you went through in researching for the project.
+            In this document you should discuss what resources you used, any discussions you had with colleagues/the lecturer/the teaching assistants and how these various components 
+            helped.
+        </DESCRIPTION>
+        <RANGE>
+           <CLASSIFICATION> Excellent </CLASSIFICATION>
+           <MARKS> 6-7 </MARKS>
+           <QUALITY> The student provides evidence that their research went beyond the material provided. </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Good work </CLASSIFICATION>
+           <MARKS> 3-5 </MARKS>
+           <QUALITY> The student demonstrates that they have worked through all the preparatory exercises for this project and that they have mastered the concepts that were introduced. </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Adequate </CLASSIFICATION>
+           <MARKS> 1-2 </MARKS>
+           <QUALITY> The student demonstrates that they have only worked through a fraction of the preparatory exercises. </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Fail </CLASSIFICATION>
+           <MARKS> 0 </MARKS>
+           <QUALITY> No evidence of any research work is provided.  Less than 75 \% attendance at tutorials and computer lab classes. </QUALITY>
+        </RANGE>
+     </COMPONENT>
+    <COMPONENT>
+        <TITLE> Quality </TITLE>
+        <DESCRIPTION>
+            This part of the mark is for your final attempt at the project.  Notice that you get the majority of the marks in the quality section and the research section by 
+            demonstrating your process.  It is not so important to have a "correct" solution.  It is more important to clearly articulate the process you went through in producing
+            your solution.
+        </DESCRIPTION>
+        <RANGE>
+           <CLASSIFICATION> Excellent </CLASSIFICATION>
+           <MARKS> 6-7 </MARKS>
+           <QUALITY> 
+               A piece of working software has been designed that fully solves the problem that was introduced in the brief.  The student explains how the information they researched was used when writing the software.  The highest marks are reserved for students who extend the project by going beyond the brief. 
+            </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Good work </CLASSIFICATION>
+           <MARKS> 3-5 </MARKS>
+           <QUALITY> 
+              The student provides a working piece of software that addresses most aspects of the problem.  The student only provides a partial explanation as to how the information they researched was used when writing the software.
+           </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Adequate </CLASSIFICATION>
+           <MARKS> 1-2 </MARKS>
+           <QUALITY> 
+The student demonstrates an incomplete understanding of the problem.  A piece of software that only partially works is provided. There is relatively little explanation as to how the ideas that were investigated as part of the research work have been used in the writing of the software.
+               </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Fail </CLASSIFICATION>
+           <MARKS> 0 </MARKS>
+           <QUALITY>
+               The student makes no reference to the research work that they performed before writing the software.  The student does not complete all of the projects.  Less than 75 \% attendance at tutorials and computer lab classes.
+           </QUALITY>
+        </RANGE>
+     </COMPONENT>
+  </ASSESSMENT>
   <CHAPTER>
      <TITLE> Random variables </TITLE>
      <INTRO>

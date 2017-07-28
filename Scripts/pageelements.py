@@ -32,6 +32,7 @@ def printTopMenuBar( of ) :
         of.write('<li class="parent"><span>' + modname + '</span>')
         of.write('<ul>')
         n = 0
+        of.write('<li><a href="' + modname +'.html"> ' + modname + '</a></li>')
         for chp in tree.findall("CHAPTER") :
             n = n + 1
             of.write('<li><a href="' + modname + str(n) + '-overview.html"> ' + chp.find("TITLE").text +  '</a></li>')

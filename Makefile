@@ -9,6 +9,7 @@ html:
 	mkdir $@/worksheets
 	mkdir $@/resources
 	mkdir $@/Images
+	python Scripts/createMainPage.py
 
 assets: Templates/assets html
 	cp -pr $^ 

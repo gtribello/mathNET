@@ -114,5 +114,20 @@ References were stated & 1
 \end{tabular}
 \end{center}
 
+\section{Numerical algorithms for queues}
+
+In all the exercises we have performed prior to this one we have simulated the random events in "real time."  I mean by this 
+that the order in which the random numbers that underpin our phenomenon were generated was the same as the order in which 
+those events would happen in actuality.  We cannot perform simulations of a queue in the same way.  Instead we have to generate
+two lists of random numbers at the outset.  These lists contain:
+
+\begin{enumerate}
+\item The time at which each person who enters our queue arrives at the queue.  You should be able to generate this list easily using what you have learnt elsewhere.
+
+\item The length of time each person who enters the queue spends being served.  Again this list should be easy to generate given what you know about generating particular kinds of random variables.
+\end{enumerate}
+
+From these two lists you should then be able to determine the time at which each person enters service and the time at which they leave service by simple arithmatic.  You can thus determine the total amount of time each person spends in the queue.
+
 
 \end{document}

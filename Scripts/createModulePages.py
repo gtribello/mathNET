@@ -20,6 +20,67 @@ def printModuleSidebar( modname, of ):
     of.write('   </ul>')
     of.write('</div>')
 
+def createWorkloadModel( modname, tree ) :
+    of = open( "latex/workload-model-" + modname +".tex", "w" )
+    of.write("\\documentclass[a4paper]{article} \n")
+    of.write("\\usepackage[margin=2.5cm,headheight=50pt,includeheadfoot]{geometry} \n")
+    of.write("\\usepackage{amsfonts} \n")
+    of.write("\\usepackage{amsmath} \n")
+    of.write("\\usepackage{graphicx} \n")
+    of.write("\\usepackage{fancyhdr} \n")
+    of.write("\pagestyle{fancy} \n")
+    of.write("\\renewcommand{\headrulewidth}{2pt} \n")
+    of.write("\\usepackage{xcolor} \n")
+    of.write("\\rhead{\includegraphics[width=5cm]{html/assets/img/logo.png}} \n")
+    of.write("\lhead{\Huge Weekly workload: " + modname + "} \n") 
+    of.write("\\begin{document} \n")
+    of.write("At the start of the semster you should buy yourself a hardback notebook to keep your notes inside.  Stick the pages of this guide into the first few ")
+    of.write("pages of your notebook " )
+    of.write("and <b> make sure that you bring your notebook to all classes and tutorials </b>.  Similarly buy a usb memory key or create a folder on a cloud service such as ")
+    of.write("google drive or dropbox and use this to store all the word processed reports and python notebooks that you write for this module together with the feedback ")
+    of.write("I provide on these assignments.  If you have a laptop or tablet please feel free to bring it to all tutorials, lectures and computer classes. If you have this with ")
+    of.write("you it will allow you to access the resources on my website and other online resources.\n \n")
+    of.write("All the reports that you hand in to be assessed for this module should:")
+    of.write("\\begin{itemize} \n")
+    of.write("\\item Have your name written in the top right corner of the first page - if your name is not written on your assignment you will be awarded a mark of zero.\n")
+    of.write("\\item Be word processed - hand written assignments will be awarded a mark of zero.\n")
+    of.write("\\item Be free of spelling errors and basic grammatical errors - use a spell checker and/or a grammar checker (see www.grammarly.com for a free grammar checker) \n")
+    of.write("\\end{itemize} \n")
+    of.write( modname + " is a 20 CAT point module and as such you are expected to work for 200 hours on this module.  Over the course of twelve week semester this works out at")
+    of.write(" about 16 hours per week.  Subtracting from this the five contact hours a week you have for this module leaves 11 hours per week that you are")
+    of.write(" expected to spend doing self study for this module.  The following sections detail what I recommend you spend those 11 hours in each week working on. ")
+    of.write("Lastly, notice that the conceptual equivalents for a 2.1 at level 3 state that your work must provide:")
+    of.write("\\begin{quotation}\n")
+    of.write("Synthesis/integration of material from other modules/experience as well as the current module, well-developed arguments with evidence of independent thought and evidence of wide and relevant use of learning resources")
+    of.write("\\end{quotation}\n")
+    of.write("This is thus the main thing I am looking for when I mark the portfolio and report assignments for this module.")
+    n = 1
+    for elem in tree.findall("WEEK") :
+        of.write("\\subsection{Week " + str(n) + "}" )
+        of.write( elem.find("TRY").text )
+        of.write("\\paragraph{What we will be doing in the tutorial:}")
+        of.write( elem.find("TUTORIAL").text )
+        of.write("\\paragraph{What work should I be handing in this week:}")
+        for task in elem.findall("HANDIN") :
+            of.write( task.find("ITEM").text + ", which is due on " + task.find("DUE").text + ". " ) 
+        n += 1
+    of.write("\\end{document}")
+    of.close()
+    # Run latex to generate pdf files
+    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/workload-model-" + modname + ".tex" ]
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    shutil.copy( "workload-model-" + modname + ".pdf", "html/workload-model-" + modname + ".pdf" )
+    if not proc.returncode == 0 :
+       os.unlink( "latex/workload-model-" + modname + ".tex" )
+       raise ValueError("Error compling workload module for module " + modname )
+    # Delete files we don't need after latex has run  
+    for filen in os.listdir("."):
+        if filen.startswith( "workload-model-" + modname ):
+           os.remove(filen)
+
 def createPortfolioMarkscheme( modname, tree ) :
     of = open( "latex/portfolio-assessment-" + modname +".tex", "w" )
     of.write("\\documentclass[a4paper]{article} \n")
@@ -34,6 +95,7 @@ def createPortfolioMarkscheme( modname, tree ) :
     of.write("\\rhead{\includegraphics[width=5cm]{html/assets/img/logo.png}} \n")
     of.write("\lhead{\Huge Portfolio Marking: " + modname + "} \n")
     of.write("\\begin{document} \n")
+    of.write( tree.find("DESCRIPTION").text + "\n" )
     for elem in tree.findall("COMPONENT") :
         of.write("\\section{" + elem.find("TITLE").text + "} \n")
         of.write( elem.find("DESCRIPTION").text + "\n" )
@@ -82,8 +144,11 @@ def buildModulePage( modn ):
     of.write('   <H3> Description </H3> <br/> ' )
     of.write( tree.find("DESCRIPTION").text )
     of.write('<br/> <br/>')
+    of.write('   <H3> Assessment </H3> <br/> ' )
+    of.write('   <p>The module assessment consists of the following activities:</p>')
+    of.write("   <p>Details on what you are expected to work on during each week of the semester can be found by clicking <b><a href='workload-model-" + mname + ".pdf'> here </a> </b>.</p>") 
     of.write('   <H3> Portfolio projects </H3> <br/> ' )
-    of.write('    <p>One aspect of the assessment of this module is a portfolio for which you must produce projects on the following: </p>')
+    of.write('    <p>The final aspect of the assessment for this module is a portfolio for which you must produce projects on the following: </p>')
     of.write('<ul>')
     n = 0
     for chp in tree.findall("CHAPTER") :
@@ -95,7 +160,8 @@ def buildModulePage( modn ):
     of.write('</div>\n')
     pageelements.printFooter( of )
     of.close()
-    createPortfolioMarkscheme( mname, tree.find("ASSESSMENT") )
+    createWorkloadModel( mname, tree.find("HANDBOOK") )
+    createPortfolioMarkscheme( mname, tree.find("PORTFOLIO") )
     n, chapters = 0, tree.findall("CHAPTER")
     for chp in chapters :
         n = n + 1

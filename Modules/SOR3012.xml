@@ -18,11 +18,208 @@
        <LI> You should be able to explain what it means when we state that a time dependent process has independent and stationary increments and how this differs from a Markov process.  By using your understanding of this distinction you should be able to construct probabilistic models for time dependent phenomena, explain the assumptions that have been made in the constructing these models and critically assess their validity. </LI>
      </UL>
   </AIMS>
-  <ASSESSMENT>
+  <HANDBOOK>
+     <WEEK>
+        <HANDIN> 
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 2 </DUE>
+        </HANDIN>
+        <TRY> 
+            Read notes and watch all videos on random variables in content and understanding sections of website.  Use comprehension exercises to make notes on this material.    
+            Attempt programming exercises on random variables in apply section.
+        </TRY>
+        <TUTORIAL> No tutorial this week.  Ensure you know which tutorial you will attend next week. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN> 
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 3 </DUE>
+        </HANDIN>        
+        <TRY> 
+            Finish programming exercises on random variables in apply section.  Transfer what you have learnt about generating random variables from exercises in apply section
+            to a python notebook by performing exercises on random variable in extend section.  Begin writing first draft of random variable project.
+        </TRY>
+        <TUTORIAL> Bring mulitple copies of the report that you wrote for your portfolio.  We will be doing small group discussions that start by you reading each others reports on what aspects of the module you are finding easy/difficult. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 4 </DUE>
+        </HANDIN>        
+        <HANDIN>
+            <ITEM> Short report on random variables </ITEM>
+            <DUE>  16:00 on Tuesday of week 4 </DUE>
+        </HANDIN>
+        <TRY>
+            Finish random variable project and try the final projects on random variables.
+        </TRY>
+        <TUTORIAL> 
+            Bring a draft of your random variable report to the tutorial.  We will be doing small group discussions that start by you reading each others reports on 
+            random variables. 
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 5 </DUE>
+        </HANDIN>
+        <TRY>
+            Read notes and watch all videos on the central limit theorem in content and understanding sections of website.  Use comprehension exercises to make notes on this 
+            material.  Attempt programming exercises on the central limit theorem from the apply section.
+        </TRY>
+        <TUTORIAL> 
+            You will be attempting some short problems on the central limit theorem in groups during the tutorial.  Please make sure that you can state the central limit theorem
+            and that you know how to calculate a confidence limit before the tutorial.
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 6 </DUE>
+        </HANDIN>
+        <TRY>
+            Finish programming exercises on central limit theorem in apply section.  Transfer what you have learnt about the central limit theorem from exercises in 
+            apply section to a python notebook by performing exercises on the central limit theorem in the extend section.  
+        </TRY>
+        <TUTORIAL> 
+            Please bring your random variables report and the feedback that I wrote about your random variable report.  In class you will be doing a discussion exercise with
+            your peers in which you read my feedback and think about what you could do differently to make your subsequent projects better. 
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 7 </DUE>
+        </HANDIN>
+        <TRY>
+            Attempt to finish at least one of the projects from the extend section of the section of the website about the central limit theorem.  Attempt the problem on 
+            estimating the area of the Mandelbrot set.
+        </TRY>        
+        <TUTORIAL>  
+            Bring your ideas and notes on how to solve the final project for the central limit theorem.  To be clear the project in question is the one about determining the area 
+            of the Mandelbrot set. 
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 8 </DUE>
+        </HANDIN>
+        <TRY>
+            Read notes and watch all videos on Markov chains in discrete time in content and understanding sections of website.  Use comprehension exercises to make notes on this
+            material.  Attempt programming exercises on the Markov chains in discrete time from the apply section.
+        </TRY>        
+        <TUTORIAL> 
+            You will be attempting some short problems on Markov chains in discrete time during the tutorial.  Please make sure that you can state the Markov property, use
+            the Chapman-Komogorov relation and determine whether states in Markov chains are transient or recurrent before the tutorial.
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 9 </DUE>
+        </HANDIN>
+        <TRY>
+            Finish programming exercises on Markov chains in discrete time in apply section.  Transfer what you have learnt about Markov chains in discrete time from exercises in 
+            apply section to a python notebook by performing exercises on Markov chains in discrete time in extend section. 
+        </TRY>        
+        <TUTORIAL> 
+           You will be attempting some short problems on Markov chains in discrete time during the tutorial.  Please make sure that you can state the Markov property, use 
+           the Chapman-Komogorov relation, determine whether states in Markov chains are transient or recurrent, calculate stationary distributions for Markov chains and 
+           hitting times and hitting probabilities.  To do the last two of these things you will need to know how to use Gaussian elimination and how to invert matrices.
+           You have been shown in other modules how to multiply and invert matrices and how to use Gaussian elimination.  If you need to revise this material do so.  
+           I will not be going through it again. 
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 10 </DUE>
+        </HANDIN>
+        <TRY>
+            Finish programming exercises on Markov chains in discrete time in extend section.  These are more difficult than the projects in previous weeks so you may not have 
+            time to do the final project on Markov chains in discrete time.  If you have the time, however, you should definitely attempt it. 
+        </TRY>        
+        <TUTORIAL> 
+            You will be attempting some problems on Gamblers ruin and the Ehrenfest urns.  You should thus have familiarised yourself with these problems by performing the 
+            associated programming exercises in the extend section of the section of the website on Markov chains in discrete time. 
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 11 </DUE>
+        </HANDIN>
+        <TRY>
+            Read notes and watch all videos on Markov chains in continuous time in content and understanding sections of website.  Use comprehension exercises to make notes on this
+            material.  Attempt programming exercises on the Markov chains in continuous time from the apply section.
+        </TRY>        
+        <TUTORIAL> 
+            You will be attempting some short problems on the Poisson process during the tutorial.  You will do the questions under exam conditions but you will be allowed to use 
+            your notes.  To do these problems you will need to be able to solve varaible separable first order differential equations and to solve first order differential 
+            equations using an integrating factor.  Both of these techiniques are covered in the first year and I will not be going over this material again.  Therefore, if you 
+            need to revise this material please do so.  Furthermore, notice that the required mathematics is covered in the videos on the Poisson process.
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 12 </DUE>
+        </HANDIN>
+        <TRY>
+            Finish programming exercises on the Markov chains in continuous time from the apply section.  Transfer what you have learnt about Markov chains in continuous time
+            from exercises in apply section to a python notebook by performing exercises on random variable in extend section.  Begin writing first draft of project on 
+            Markov chains in continuuous time.
+        </TRY>        
+        <TUTORIAL> 
+            Bring a draft of your Markov chains in continuous time report to the tutorial.  We will be doing small group discussions that start by you reading each others reports on
+            Markov chains in continuous time.
+        </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Two best reports for portfolio - please hand in as a single document </ITEM>
+            <DUE>  16:00 on Tuesday of week 13 (i.e. first week of second semester) </DUE>
+        </HANDIN>
+        <HANDIN>
+            <ITEM> Report on continuous time Markov chains </ITEM>
+            <DUE>  16:00 on Tuesday 19th December </DUE>
+        </HANDIN>
+        <TRY>
+            Finish report on Markov chains in continuous time.  Attempt final project on Markov chains in continuous time and gather the two reports (which should by this stage 
+            already be written) to hand in for portfolio.
+        </TRY>        
+        <TUTORIAL> 
+           Drop in session for you to ask for advice about what to hand in for your portfolio.
+        </TUTORIAL>
+     </WEEK>
+  </HANDBOOK>
+  <PORTFOLIO>
+     <DESCRIPTION>
+        One of the components of the assessment for this module is a portfolio of work that you must produce over the course of the semester.  This portfolio counts for 20 
+        percent of your final module mark.  It should contain:
+
+        \begin{itemize}
+        \item[(A)] 10 reports describing what you have worked on each week.  These reports are due by 16:00 on Tuesday in weeks 2 through 12 of the semester.  
+            See the self study section of the markscheme below. 
+        
+        \item[(B)] Two attempts at the projects detailed in either the extend or final project sections of the module pages.  You should attempt as many of these projects as you can
+            over the course of the semester and hand in the two that you felt were your best attempts by 16:00 on the Tuesday of week 13.  You should not hand in the project 
+            on random variables that you produced in week 4 for this assessment or the project on continuous time Markov chains that you produced for week 12 to be reassessed 
+            as these projects are already assessed as part of a different module component.  Furthermore, top marks will only be awarded unless if you hand in the more difficult 
+            projects from the final project section of the module.  To be clear, however, a weak attempt at one of these more difficult projects will be given a lower
+            mark than a good attempt at one of the easier projects.  For more details on the marking criteria see the sections entitled Research and Quality.  Also note that you 
+            can (and are encouraged to) hand in practise attempts at the projects for feedback during the course of the semester. 
+        \end{itemize}
+
+        Notice that tutorials and the computer classes are compulsory and that you will be awarded a mark of zero for the portfolio project if you do not attend 70 percent 
+        of the tutorials and computer classes.  In addition, notice that your portfolio will be awarded a mark of zero if it does not contain all of the components detailed 
+        above (10 weekly reports and 2 project attempts).
+     </DESCRIPTION>
      <COMPONENT>
         <TITLE> Self study </TITLE>
         <DESCRIPTION>
-            The first component of the assessment is based on how you have studied for the module.  You must hand in a half page report every week in which you detail what, when and how you 
+            The first component of the assessment is based on how you have studied for the module.  You must hand in a report that is at least half a page in length every week in which you detail what, when and how you 
             intended to study during the week and what you actually achieved during the week.  You may choose to detail what resources you have used and what parts of the material you found 
             easy and what you found difficult.  You might also want to talk about any conversatiosn you had the lecturer/teaching assistants.  You should also explain what resources you studied 
             from and what resources were particularly useful.  Lastly, you should demonstrate that you have thought about what you did this week and how you might study more effectively in the 
@@ -124,7 +321,7 @@ The student demonstrates an incomplete understanding of the problem.  A piece of
            </QUALITY>
         </RANGE>
      </COMPONENT>
-  </ASSESSMENT>
+  </PORTFOLIO>
   <CHAPTER>
      <TITLE> Random variables </TITLE>
      <INTRO>

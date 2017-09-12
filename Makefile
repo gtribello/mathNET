@@ -19,13 +19,13 @@ blockly: Templates/blockly html
 	rm html/blockly/.git
 	rm html/blockly/.gitignore
 
-topics: html
+topics: html assets blockly
 	make -C Topics
 
 resources: html assets blockly
 	make -C Resources
 
-modules: html 
+modules: html assets blockly
 	make -C Modules
 
 latex: resources

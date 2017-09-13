@@ -19,6 +19,26 @@
      </UL>
   </AIMS>
   <HANDBOOK>
+     <ASSESSMENT>
+        <DESCRIPTION> One two page report on random variables </DESCRIPTION>
+        <WEIGHT> 10 </WEIGHT>
+        <WHEN> 16:00 Tuesday Week 4 </WHEN>
+     </ASSESSMENT>
+     <ASSESSMENT>
+        <DESCRIPTION> One two page report on continuous time Markov chains </DESCRIPTION>
+        <WEIGHT> 10 </WEIGHT>
+        <WHEN> 16:00 Tuesday 19th December </WHEN>
+     </ASSESSMENT>
+     <ASSESSMENT>
+        <DESCRIPTION> One portfolio of work done during the semester </DESCRIPTION>
+        <WEIGHT> 20 </WEIGHT>
+        <WHEN> 16:00 Tuesday Week 13 (1st week of second semester) </WHEN>
+     </ASSESSMENT>
+     <ASSESSMENT>
+        <DESCRIPTION> One three hour examination in which all questions on the paper must be answered </DESCRIPTION>
+        <WEIGHT> 60 </WEIGHT>
+        <WHEN> April exam period </WHEN>
+     </ASSESSMENT>
      <WEEK>
         <HANDIN> 
             <ITEM> Half page report for portfolio </ITEM>

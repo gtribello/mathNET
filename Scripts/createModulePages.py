@@ -20,6 +20,62 @@ def printModuleSidebar( modname, of ):
     of.write('   </ul>')
     of.write('</div>')
 
+def createLiturgy( modname, tree ) :
+   of = open( "latex/essential-ideas-" + modname +".tex", "w" )
+   of.write("\\documentclass[a4paper]{article}") 
+   of.write("\\usepackage{tcolorbox}")
+   of.write("\\usepackage{amsmath,amssymb,amsfonts}")
+   of.write("\\tcbuselibrary{skins}")
+   of.write("\\title{")
+   of.write("\\vspace{-3em}")
+   of.write("\\begin{tcolorbox}")
+   of.write("\\Huge\\sffamily Key Ideas : " + modname )   
+   of.write("\\end{tcolorbox}")
+   of.write("\\vspace{-3em}")
+   of.write("}")
+   of.write("\\date{}")
+   of.write("\\usepackage{background}")
+   of.write("\\SetBgScale{1}")
+   of.write("\\SetBgAngle{0}")
+   of.write("\\SetBgColor{red}")
+   #of.write("\\SetBgContents{\\rule[0em]{0pt}{\\textheight}}")
+   of.write("\\SetBgHshift{-2.3cm}")
+   of.write("\\SetBgVshift{0cm}")
+   of.write("\\usepackage[margin=1.5cm]{geometry}")
+   of.write("\\makeatletter")
+   of.write("\\def\cornell{\@ifnextchar[{\@with}{\@without}}")
+   of.write("\\def\@with[#1]#2#3{")
+   of.write("\\begin{tcolorbox}[enhanced,colback=white!15,colframe=white,colupper=gray]")
+   of.write("\\begin{tcolorbox}[enhanced,colback=gray,colframe=black,fonttitle=\\large\\bfseries\\sffamily,sidebyside=false, nobeforeafter,colupper=black,sidebyside align=top,opacityframe=0,opacityback=0.3,opacitybacktitle=1, opacitytext=1,segmentation style={black!55,solid,opacity=0,line width=1pt},title=#1]")
+   of.write("#3")
+   of.write("\\end{tcolorbox}")
+   of.write("\\end{tcolorbox}")
+   of.write("}")
+   of.write("\\def\\@without#1#2{")
+   of.write("\\begin{tcolorbox}[enhanced,colback=white!15,colframe=white,fonttitle=\\bfseries,sidebyside=true, nobeforeafter,before=\\vfil,after=\\vfil,colupper=blue,sidebyside align=top, lefthand width=.20\\textwidth, opacityframe=0,opacityback=0,opacitybacktitle=0, opacitytext=1, segmentation style={black!55,solid,opacity=0,line width=3pt} ]")
+   of.write("\\begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top, width=\\textwidth,nobeforeafter]#1\end{tcolorbox}")
+   of.write("\\tcblower")
+   of.write("\\sffamily")
+   of.write("\\begin{tcolorbox}[colback=blue!05,colframe=blue!10,width=1\\textwidth,nobeforeafter]")
+   of.write("#2")
+   of.write("\\end{tcolorbox}")
+   of.write("\\end{tcolorbox}")
+   of.write("}")
+   of.write("\\makeatother")
+   of.write("\\parindent=0pt")
+   of.write("\\providecommand{\LyX}{L\kern-.1667em\lower.25em\hbox{Y}\kern-.125emX\@}")
+   of.write("\\begin{document}") 
+   of.write("\\maketitle \n")
+   of.write("The baloons below contain many of the important ideas and theorems that are covered in this module.  If you have a good understanding of what ")
+   of.write("everything on this sheet means then you have a good understanding of the module content.  I would recommend that you stick these sheets in the ")
+   of.write("first few pages of the hardback book that you keep your notes inside and that you consult these notes regularly as you work through the module.")
+   for item in tree.findall("ITEM") :
+       of.write("\\cornell{" + item.find("CALL").text + "}{" + item.find("RESPONSE").text.replace("&lt;","<").replace("&gt;",">") + "}")
+   of.write("\\end{document}")
+   of.close()
+   # Run latex to generate pdf files
+   pageelements.create_pdf_from_latex( "essential-ideas-" + modname  )
+
 def createWorkloadModel( modname, tree ) :
     of = open( "latex/workload-model-" + modname +".tex", "w" )
     of.write("\\documentclass[a4paper]{article} \n")
@@ -73,19 +129,7 @@ def createWorkloadModel( modname, tree ) :
     of.write("\\end{document}")
     of.close()
     # Run latex to generate pdf files
-    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/workload-model-" + modname + ".tex" ]
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    shutil.copy( "workload-model-" + modname + ".pdf", "html/workload-model-" + modname + ".pdf" )
-    if not proc.returncode == 0 :
-       os.unlink( "latex/workload-model-" + modname + ".tex" )
-       raise ValueError("Error compling workload module for module " + modname )
-    # Delete files we don't need after latex has run  
-    for filen in os.listdir("."):
-        if filen.startswith( "workload-model-" + modname ):
-           os.remove(filen)
+    pageelements.create_pdf_from_latex( "workload-model-" + modname )
 
 def createPortfolioMarkscheme( modname, tree ) :
     of = open( "latex/portfolio-assessment-" + modname +".tex", "w" )
@@ -114,21 +158,7 @@ def createPortfolioMarkscheme( modname, tree ) :
     of.write("\\end{document}")
     of.close() 
     # Run latex to generate pdf files
-    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/portfolio-assessment-" + modname + ".tex" ]
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    shutil.copy( "portfolio-assessment-" + modname + ".pdf", "html/portfolio-assessment-" + modname + ".pdf" )
-    if not proc.returncode == 0 :
-       os.unlink( "latex/portfolio-assessment-" + modname + ".tex" )
-       raise ValueError("Error compling latex markscheme for module " + modname )
-    # Delete files we don't need after latex has run  
-    for filen in os.listdir("."):
-        if filen.startswith( "portfolio-assessment-" + modname ):
-           os.remove(filen)
-
-
+    pageelements.create_pdf_from_latex( "portfolio-assessment-" + modname )
 
 
 def buildModulePage( modn ):
@@ -153,6 +183,7 @@ def buildModulePage( modn ):
     of.write('   <H3> Assessment </H3> <br/> ' )
     of.write('   <p>The module assessment consists of the following activities:</p>')
     of.write("   <p>Details on what you are expected to work on during each week of the semester can be found by clicking <b><a href='workload-model-" + mname + ".pdf'> here </a> </b>.</p>") 
+    of.write("   <p>A summary of some of the key ideas and theorems that are introduced in this module can be found by clicking <b><a href='essential-ideas-" + mname + ".pdf'> here </a> </b>.</p>")
     of.write("   <table> \n")
     of.write("<tr><td><b> item </b></td><td><b> due date </b></td><td><b>weight</b></td></tr>")
     for assessment in tree.find("HANDBOOK").findall("ASSESSMENT") :
@@ -173,6 +204,7 @@ def buildModulePage( modn ):
     of.close()
     createWorkloadModel( mname, tree.find("HANDBOOK") )
     createPortfolioMarkscheme( mname, tree.find("PORTFOLIO") )
+    createLiturgy( mname, tree.find("LITURGY") )
     n, chapters = 0, tree.findall("CHAPTER")
     for chp in chapters :
         n = n + 1

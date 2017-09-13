@@ -211,19 +211,7 @@ def generate_pdf_worksheet( tree, infile ):
     g.write( worksheet )
     g.close()
     # Run latex to generate pdf files
-    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/" + infile + ".tex" ]
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    shutil.copy( infile + ".pdf", "html/worksheets/" + infile + ".pdf" )
-    if not proc.returncode == 0 :
-       os.unlink( "latex/" + infile + ".tex" )
-       raise ValueError("Error compling latex worksheet for exercise " + infile )
-    # Delete files we don't need after latex has run  
-    for filen in os.listdir("."):
-        if filen.startswith( infile ):
-           os.remove(filen)
+    pageelements.create_pdf_from_latex( infile )
 
 def buildPage( fname ) :
   tree = ET.parse( "Resources/" + fname )

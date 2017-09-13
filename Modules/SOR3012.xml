@@ -18,6 +18,230 @@
        <LI> You should be able to explain what it means when we state that a time dependent process has independent and stationary increments and how this differs from a Markov process.  By using your understanding of this distinction you should be able to construct probabilistic models for time dependent phenomena, explain the assumptions that have been made in the constructing these models and critically assess their validity. </LI>
      </UL>
   </AIMS>
+  <LITURGY>
+     <ITEM>
+        <CALL> How do we use capital letters in statistics? </CALL>
+        <RESPONSE> In statistics we use capital letters to denote the random outcomes from experiments performed in the future. </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How do we encode the information we have about what might happen in those experiments in the future mathematically?</CALL>
+        <RESPONSE> 
+           We encode our understanding of what might happen in those experiments in the future in a function known as the cumulative probability distribution function.  
+           The value of this function, $F_X(x)$, at small x tells you the probability that the random variable will take a value less than or equal to x.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What difference between discrete and continuous random variables? </CALL>
+        <RESPONSE> 
+           Discrete random variables cannot take any real value on the real axis.  They can only take particular (usually integer) values.
+           Continuous random variables can take any real value in a particular range. 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What does the probability mass function $f_X(x)$ measure? </CALL>
+        <RESPONSE>
+           The probability mass function $f_X(x)$ tells one the probability that the {\bf discrete} random variable (capital) $X$ will take a value of (small) $x$. 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What does the probability density function $f_X(x)$ measure? </CALL>
+        <RESPONSE>
+           The probability density function $f_X(x)$ is equal to the derivative of the cumulative probability distribution function for the {\bf continuous} random 
+           variable (capital) $X$ evaluated at the point (small) $x$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How do you calculate the expectation of a discrete random variable? </CALL>
+        <RESPONSE>
+           The expectation of a discrete random variable is equal to the sum over all the possible values that the random variable can take of 
+           $x_i$ multiplied by the probabiltiy mass function $f_X(x_i)$.  In other words, $\mathbb{E}[X] = \sum_{i=0}^\infty x_if_X(x_i)$
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How do you calculate the expectation of a continuous random variable? </CALL>
+        <RESPONSE>
+           The expectation of a continuous random variable is equal to the integral over all possible $x$ values of $x$ multiplied by the probability 
+           density function, $f_X(x)$.  In other words, $\mathbb{E}[X] = \int_{-\infty}^{\infty} x f_X(x) \textrm{d}x$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> Why is the expectation an important quantity? </CALL>
+        <RESPONSE>
+           The expectation is important because the sum of $n$ independent and identically distributed random variables divided by $n$ converges towards this 
+           particular value because of a result known as the law of large numbers.  The law of large number states:
+           $$
+           \lim_{n\rightarrow \infty} P\left( \left| \frac{S_n}{n} - \mathbb{E}(X) \right| &gt; \epsilon \right) = 0
+           $$
+           where $n$ is the number of independent random variables with expectation $\mathbf{E}(X)$ that have been added together to give $S_n$ and where $\epsilon$ 
+           is a small number.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What does the central limit theorem state? </CALL>
+        <RESPONSE>
+           The central limit theorem states that the cumulative probability distribution function for a sum of independent and identically distributed random variables of 
+           most types can be approximated using the cumulative probability distribution function of a normal distribution.  More precisely it states:
+           $$
+            \lim_{n \rightarrow \infty} P\left( \frac{S_n/n - \mu}{\sigma/\sqrt{n}} \le z \right) = \Phi(z)
+           $$
+           where $n$ is the number of independent random variables with expectation $\mu$ and variance $\sigma^2$ that have been added together to give $S_n$ and where 
+           $\Phi(z)$ is the cumulative probability distribution function for the standard normal distribution with expectation 0 and variance 1. 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What can we use to understand if the result from one experiment affects the outcome of a second, different experiment? </CALL>
+        <RESPONSE>
+           To understand if the result from one experiment, (capital) $X$, affects the outcome of a second, different experiment, (capital) $Y$ we use the 
+           conditional probability.  The conditional probability that $X=3$ given $Y=2$ is equal to the probability that $X=3$ AND $Y=2$ divided by the 
+           probability that $Y=2$.  In other words:
+           $$
+             P(X=3|Y=2) = \frac{ P(X=3 \wedge Y=2) }{ P(Y=2) }
+           $$ 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> If $X=2$ whenever $Y=4$ what can we say about the events $X=2$ and $Y=4$? </CALL>
+        <RESPONSE>
+             If $X=2$ whenever $Y=4$ then the events $X=2$ and $Y=4$ are concurrent.  These two events always happen at the same time and the conditional 
+             probablity $P(X=2|Y=4)$ is equal to one.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> If $X$ is never equal to 2 whenever $Y=4$ what can we say about the events $X=2$ and $Y=4$? </CALL>
+        <RESPONSE>
+           If $X$ is never equal to 2 whenever $Y=4$ then the events $X=2$ and $Y=4$ are mutually exclusive.  $Y$'s equalling 4 somehow prevents $X$ from equalling two 
+           and the conditional probability $P(X=2|Y=4)$ is equal to zero.  
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> 
+          If the value the random variable $X$ takes has no effect on the value on the value the random variable $Y$ takes what can we say about the 
+          random variables $X$ and $Y$ 
+        </CALL>
+        <RESPONSE>
+          If the value the random variable $X$ takes has no effect on the value on the value the random variable $Y$ the two random variables are said to 
+          be indepdent.  For all possible values of $x$ and $y$ the conditional probability $P(X=x|Y=y)=P(X=x)$ and the conditional probability $P(Y=y|X=x)=P(Y=y)$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> Can two events be both independent and mutually exclusive? </CALL>
+        <RESPONSE>
+          Two events $X=3$ and $Y=2$ cannot be independent and mutually exclusive as indepdences implies that the conditional probability $P(X=3|Y=2)=P(X=3)$, while
+          mutual exclusivity implies that the conditional probability $P(X=3|Y=2)=0$.  We can conclude from these two equations that $P(X=3)=0$ and hence that the 
+          event $X=3$ is impossible.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is a Bernoulli random variable? </CALL>
+        <RESPONSE>
+          A bernoulli random variable, $X$, is a discrete random variable that is used to model an experiment with two outcomes success and failure.  
+          For this variable failure is given a value of 
+          0 and success a value of 1.  The probability of success ($X=1$) is $p$.  The expectation of this random variable is $p$ and the variance is $p$ times $(1-p)$
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is a Binomial random variable? </CALL>
+        <RESPONSE>
+          A Binomial random variable is a discrete random variable that is used to model the number of successes amongst $n$ independent Bernoulli trials.  
+          The probability mass function 
+          for this random variable is equal to $\binom{n}{p} p^x(1-p)^{n-x}$   The expectation of this random variable is $np$, while the variance is $np(1-p)$  
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is a Geometric random variable? </CALL>
+        <RESPONSE>
+          A geometric random vairable is a discrete random variable that used to model the number of independent Bernoulli trials that need to be performed before 
+          you get a success.  The 
+          probability mass function for this random variable is equal to $(1-p)^{x-1}p$ The expectation of this random variable is $1/p$ while the variance is $(1-p)/p^2$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is an exponential random variable? </CALL>
+        <RESPONSE>
+          An exponential random variable is a continuous random variable that can be used to model the process of waiting for something to happen.  
+          This random variable is unique in that it has no memory.  The cumulative probability distribution function for this random variable is 
+          equal to $1-e^{-\lambda t}$ The expectation of this random variable is $\lambda$ and the variance is $1/\lambda^2$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is a poisson random variable? </CALL>
+        <RESPONSE>
+          A Poisson random variable is a discirete random variable, which can be thought of as a large $n$ limit for the binomial random variable.  
+          The probability mass function for this random variable is equal to $\frac{\lambda^x}{x!}e^{-\lambda}$.  The mean and variance of this 
+          random variable are both equal to $\lambda$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is a stochastic process? </CALL>
+        <RESPONSE>
+          A stochastic process is a time series of random variables. 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is the simplest kind of stochastic process? </CALL>
+        <RESPONSE>
+          The simplest kind of stochastic process is a Markov chain.  A time series of random variables is said to have to have the Markov property if 
+          the values the random variable take at future times depends only on the current value the random variable.  In other words, the values the
+          random takes in the future does not depend on the values random variables took during the past.  This is a rather colloquial definition a 
+          more formal definition for a Markov chain is a time series of random variables whose probability distribution functions have the following 
+          property:
+          $$
+           P(X_{t+1}=x_{t+1} | X_0=x_0 \wedge X_1=x_1 \wedge \dots \wedge X_{t}=x_t) = P( X_{t+1}=x_{t+1} | X_{t}=x_t)
+          $$ 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What mathematical object do we use to represent the one step transition probabilities for a Markov chain? </CALL>
+        <RESPONSE>
+          We use a matrix to represent the one-step transition probabilities.  Element $(i,j)$ of this matrix gives the probability that the system will 
+          transition from state $i$ to state $j$ in a single timestep.   
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How do we calculate the probability that the system will transition from state $i$ to state $j$ over the course of $n$ timesteps? </CALL>
+        <RESPONSE>
+          Element $(i,j)$ of the $n$th power of the one-step transition probability matrix is equal to the probability that the system will transition from state 
+          $i$ to state $j$ over the course of $n$ timesteps.  This result is known as the Chapman-Kolmogorov relation.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is the difference between a recurrent and a transient state of a Markov chain? </CALL>
+        <RESPONSE>
+           Any recurrent state is guaranteed to have a finite return time.  A transient state is not guaranteed to have a finite return time.  More formally
+           if a state is recurrent $\sum_{n=1}^\infty (\mathbf{P}^n)_{ii} = 1$ while if a state is transient $\sum_{n=1}^\infty (\mathbf{P}^n)_{ii} &lt; 1$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How do we measure the period of a state in a Markov chain? </CALL>
+        <RESPONSE>
+           The period of a state is equal to the greatest common divisor of the set of possible return times to that state.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> When does a Markov chain have a limiting stationary distribution? </CALL>
+        <RESPONSE>
+           A Markov chain has a limiting stationary distribution when all the states in the chain are recurrent.  A markov chain with a limiting stationary 
+           distribution is said to be ergodic.  This stationary distribution can be found by finding the top left eigenvector of the transition probability matrix.  
+           Furthermore, a Markov chain which has only recurrent states satisfies the ergodic theorem which tells us 1 over the expected return time to a state is 
+           equal to the fraction of time the system stays in that state.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is the Kolmogorov equation? </CALL>
+        <RESPONSE> 
+           The Kolmogorov equation is a differential equation that is at the heart of the theory of Markov chains in continuous time.  The Kolmogorov equation 
+           tells us that derivative of the transition probability matrix with respect to time is equal to the product of the jump rate matrix, $\mathbf{Q}$, 
+           with the transition probability matrix, $\mathbf{P}(t)$.  In other words, $\frac{\textrm{d} P(t)}{\textrm{d}t} = \mathbf{Q} \mathbf{P}(t)$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How is the jump rate matrix of a continuous time Markov chain defined? </CALL>
+        <RESPONSE> 
+           The jump rate matrix, $\mathbf{Q}$, of a continuous time Markov chain is equal to $\mathbf{P}(t)$ minus the identity over $t$ in the limit as $t$ tends to zero.
+           In other words, $\mathbf{Q} = \lim_{t \rightarrow 0} \frac{\mathbf{P}(t)-\mathbf{I} }{t}$. 
+        </RESPONSE>
+     </ITEM>
+  </LITURGY>
   <HANDBOOK>
      <ASSESSMENT>
         <DESCRIPTION> One two page report on random variables </DESCRIPTION>

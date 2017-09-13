@@ -4,6 +4,7 @@ import shutil
 import module
 import xml.etree.ElementTree as ET
 import subprocess
+import pageelements
 import lxml.etree as ET
 
 def build_html_file( infile ):
@@ -172,21 +173,4 @@ def generate_pdf_worksheet( tree, infile ):
     latex_questions += "\\end{itemize}\n"
     worksheet = worksheet.replace("INSERT QUESTIONS", latex_questions )
     # And output a latex file 
-    g = open('latex/' + infile + '.tex', 'w' )
-    g.write( worksheet )
-    g.close()
-    # Run latex to generate pdf files
-    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/" + infile + ".tex" ]
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    proc = subprocess.Popen(cmd)
-    proc.communicate()
-    shutil.copy( infile + ".pdf", "html/worksheets/" + infile + ".pdf" )   
-    if not proc.returncode == 0 :
-       os.unlink( "latex/" + infile + ".tex" )
-       raise ValueError("Error compling latex worksheet for exercise " + infile )
-    # Delete files we don't need after latex has run  
-    for filen in os.listdir("."):
-        if filen.startswith( infile ):
-           os.remove(filen)
-
+    pageelements.create_pdf_from_latex( infile )

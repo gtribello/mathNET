@@ -1,6 +1,23 @@
 import glob
 import os
+import subprocess
+import shutil
 import lxml.etree as ET
+
+def create_pdf_from_latex( filename ) :
+    cmd = ['pdflatex', '-interaction', 'nonstopmode', "latex/" + filename + ".tex" ]
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    proc = subprocess.Popen(cmd)
+    proc.communicate()
+    shutil.copy( filename + ".pdf", "html/" + filename + ".pdf" )
+    if not proc.returncode == 0 :
+       os.unlink( "latex/" + filename + ".tex" )
+       raise ValueError("Error compling latex for file " + filename )
+    # Delete files we don't need after latex has run  
+    for filen in os.listdir("."):
+        if filen.startswith( filename ):
+           os.remove(filen)
 
 def printHeader( pagename, of ) :
     f = open( 'Templates/header.html', 'r' )

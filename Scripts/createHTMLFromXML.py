@@ -17,7 +17,7 @@ def createVideoPage( ftype, name, tree, of ) :
     of.write('               <h1 class="panel-title">' +  title + '</h1>') 
     of.write('            </div>')
     of.write('            <div class="col-md-4" align="right">')
-    of.write('               <a href="worksheets/' + name.replace(".xml",".pdf") + '" class="btn btn-primary btn-lg active" role="button"> Get worksheet </a>')
+    of.write('               <a href="' + name.replace(".xml",".pdf") + '" class="btn btn-primary btn-lg active" role="button"> Get worksheet </a>')
     of.write('            </div>')
     of.write('         </div>') 
     of.write('     </div>')

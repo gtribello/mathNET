@@ -198,7 +198,7 @@ def buildModulePage( modn ):
         of.write('<li><a href="' + mname + str(n) + '-overview.html"> ' + chp.find("TITLE").text +  '</a></li>')
     of.write('</ul>')     
     of.write("<p>Details on how your final portfolio will be assessed can be found by clicking <b> <a href='portfolio-assessment-" + mname + ".pdf'> here </a> </b>.</p>")
-    of.write("<p>Some questions to think about when writing your weekly reports can be found by clicking <b> <a href='reflective-questions.pdf'> here </a> </b>.</p>")
+    of.write("<p>Some questions to think about when writing your weekly reports can be found by clicking <b> <a href='resources/reflective-questions.pdf'> here </a> </b>.</p>")
     of.write('   </div>\n')
     of.write('</div>\n')
     # Run latex to generate pdf files

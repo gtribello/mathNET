@@ -1,0 +1,90 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=2.5cm,headheight=50pt,includeheadfoot]{geometry}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{2pt}
+
+\usepackage{xcolor}
+
+\rhead{\includegraphics[width=5cm]{../../html/assets/img/logo.png}}
+\lhead{\Huge SOR3012: Tutorial week 4}
+
+\begin{document}
+
+\section{Aim}
+
+The aim of the tutorial this week is to understand the central limit theorem and to understand how confidence limits are calculated.  We are working on this material together as it is difficult.
+
+\section{Bring}
+
+Please bring all your notes for the module, paper to write with a suitable items of stationery.
+
+\section{Approach}
+
+You will work in groups of six.  Each group will try to work through as many of the problems below that they can for the first 20 minutes of the tutorial.  During the last 20 minutes of the tutorial 
+each group will then be asked to give a two minute presentation of the solution to one of the problems using the visualizer.  You will be told at the start of the tutorial what problem you are 
+presenting.  Remember, as you are presenting you should try to write out your solution neatly so that the other students can read what you have done.
+
+\section{Question 1}
+
+Analysis of commuter travel  shows that the number of passenger per car, $X$,
+is a discrete random variable with independent, identical distributions, such that
+$\mathbb{E}(X)=1.2$ and $\textrm{var}(X) = 1.0$.  Use the central-limit theorem  to estimate
+the probability that, in a sample of $n=100$ cars, the total number of passengers is 140 or fewer.
+
+
+\section{Question 2}
+
+The share price of SOR plc  varies in  a random manner, such that
+the price increase each minute is described by a discrete
+random variable  $X$ (measured in pounds), with the following probability mass:
+$$
+f_{X}(x) =
+\left\{
+\begin{array}{ll}
+0.5   &amp; \quad , \quad  x=+0.05  \\
+0.2  &amp; \quad , \quad x=\ \ \ 0.00  \\
+0.3   &amp; \quad , \quad  x=-0.05  \\
+\end{array}
+\right.
+$$
+Calculate $\mathbb{E}(X)=\mu$ and $\sqrt{\textrm{var}(X)}=\sigma$ and hence use the central limit
+theorem to estimate the probability  that the price will increase by £1.20 , or more,  after 3  hours.
+
+\section{Question 3}
+
+During the course of a single season a particular football player has 213 penalty attempts and scores 175 of them.
+Given this information calculate the probability he will score during his next penalty attempt and explain the
+assumptions that you have made in your calculation. Please give appropriate error bars for a 95 % confidence
+level on your numerical estimate.
+
+
+\section{Question 4}
+
+Roger Federer has championship point in the Wimbledon Final. Thus far in the match he served 141 times and  90 of those serves have
+       landed in the service box. Use the central-limit theorem to estimate the probability that his first serve will be in during the championship point and
+       provide error bars for a 90\% confidence level on your numerical estimate.  Discuss what approximations you have made in doing this calculation and whether or not you
+       think they are sensible.
+       
+\section{Question 5}
+
+In the Smoky Mountains National Park 55 \% of the hawks are female.  Estimate the number of birds, $n$, that you would have to catch for there to be
+a probability of 0.9 of at least 50 \% female birds in your sample.  Explain any assumptions you make in your derivation.
+
+\section{Question 6}
+
+One method that ecologists use to monitor the population of a particular animal in a particular area involves trapping animals, attaching a (harmless) plastic tag to their foot and
+releasing them.  In the first stage of such experiments they attach these tags to $K$ animals.  Then in the second stage of the experiment they catch animals again and monitor the fraction of
+animals that were caught in both the first and second stages of the experiment.  Estimate the population size if the biologists catch and tag $K=100$ animals in the first stage of the experiment and
+if 25
+\% of the animals they catch in the second half of the experiment were also caught in the first half of the experiment.  Give error bars for a 90 \% confidence interval in your estimate given that
+the ecologists catch 150 animals in the second half of the experiment and explain any assumptions that you make in the derivation.
+
+
+
+\end{document}

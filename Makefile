@@ -16,8 +16,8 @@ assets: Templates/assets html
 	
 blockly: Templates/blockly html
 	cp -pr $^ 
-	rm html/blockly/.git
-	rm html/blockly/.gitignore
+	rm -f html/blockly/.git
+	rm -f html/blockly/.gitignore
 
 topics: html assets blockly
 	make -C Topics

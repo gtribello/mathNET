@@ -180,33 +180,37 @@ def buildModulePage( modn ):
     of.write('   <H3> Description </H3> <br/> ' )
     of.write( tree.find("DESCRIPTION").text )
     of.write('<br/> <br/>')
-    of.write('   <H3> Assessment </H3> <br/> ' )
-    of.write('   <p>The module assessment consists of the following activities:</p>')
-    of.write("   <table> \n")
-    of.write("<tr><td><b> item </b></td><td><b> due date </b></td><td><b>weight</b></td></tr>")
-    for assessment in tree.find("HANDBOOK").findall("ASSESSMENT") :
-        of.write("<tr><td>" + assessment.find("DESCRIPTION").text + "</td><td>" + assessment.find("WHEN").text + "</td><td>" + assessment.find("WEIGHT").text + "</td></tr>") 
-    of.write("   </table> </br>\n")
-    of.write("   <p>Details on what you are expected to work on during each week of the semester can be found by clicking <b><a href='workload-model-" + mname + ".pdf'> here </a> </b>.</p>")
-    of.write("   <p>A summary of some of the key ideas and theorems that are introduced in this module can be found by clicking <b><a href='essential-ideas-" + mname + ".pdf'> here </a> </b>.</p>")
-    of.write('   <H3> Portfolio projects </H3> <br/> ' )
-    of.write('    <p>The final aspect of the assessment for this module is a portfolio for which you must produce projects on the following: </p>')
+    if tree.find("ASSESSMENT") :
+       of.write('   <H3> Assessment </H3> <br/> ' )
+       of.write('   <p>The module assessment consists of the following activities:</p>')
+       of.write("   <table> \n")
+       of.write("<tr><td><b> item </b></td><td><b> due date </b></td><td><b>weight</b></td></tr>")
+       for assessment in tree.find("HANDBOOK").findall("ASSESSMENT") :
+           of.write("<tr><td>" + assessment.find("DESCRIPTION").text + "</td><td>" + assessment.find("WHEN").text + "</td><td>" + assessment.find("WEIGHT").text + "</td></tr>") 
+       of.write("   </table> </br>\n")
+       of.write("   <p>Details on what you are expected to work on during each week of the semester can be found by clicking <b><a href='workload-model-" + mname + ".pdf'> here </a> </b>.</p>")
+    if tree.find("LITURGY") : 
+       of.write("   <p>A summary of some of the key ideas and theorems that are introduced in this module can be found by clicking <b><a href='essential-ideas-" + mname + ".pdf'> here </a> </b>.</p>")
+    if tree.find("PORTFOLIO") :
+       of.write('   <H3> Portfolio projects </H3> <br/> ' )
+       of.write('    <p>The final aspect of the assessment for this module is a portfolio for which you must produce projects on the following: </p>')
     of.write('<ul>')
     n = 0
     for chp in tree.findall("CHAPTER") :
         n = n + 1  
         of.write('<li><a href="' + mname + str(n) + '-overview.html"> ' + chp.find("TITLE").text +  '</a></li>')
-    of.write('</ul>')     
-    of.write("<p>Details on how your final portfolio will be assessed can be found by clicking <b> <a href='portfolio-assessment-" + mname + ".pdf'> here </a> </b>.</p>")
-    of.write("<p>Some questions to think about when writing your weekly reports can be found by clicking <b> <a href='resources/reflective-questions.pdf'> here </a> </b>.</p>")
+    of.write('</ul>') 
+    if tree.find("PORTFOLIO") :    
+       of.write("<p>Details on how your final portfolio will be assessed can be found by clicking <b> <a href='portfolio-assessment-" + mname + ".pdf'> here </a> </b>.</p>")
+       of.write("<p>Some questions to think about when writing your weekly reports can be found by clicking <b> <a href='resources/reflective-questions.pdf'> here </a> </b>.</p>")
     of.write('   </div>\n')
     of.write('</div>\n')
     # Run latex to generate pdf files
     pageelements.printFooter( of )
     of.close()
-    createWorkloadModel( mname, tree.find("HANDBOOK") )
-    createPortfolioMarkscheme( mname, tree.find("PORTFOLIO") )
-    createLiturgy( mname, tree.find("LITURGY") )
+    if tree.find("HANDBOOK") : createWorkloadModel( mname, tree.find("HANDBOOK") )
+    if tree.find("PORTFOLIO") : createPortfolioMarkscheme( mname, tree.find("PORTFOLIO") )
+    if tree.find("LITURGY") : createLiturgy( mname, tree.find("LITURGY") )
     n, chapters = 0, tree.findall("CHAPTER")
     for chp in chapters :
         n = n + 1

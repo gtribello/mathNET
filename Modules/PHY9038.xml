@@ -1,0 +1,116 @@
+<PAGE>
+  <TITLE> Materials Modelling and Simulation </TITLE>
+  <DESCRIPTION>
+      Due to the steady increase in computational power and the development of advanced simulation methods, computational 
+      modelling has become an almost indispensible tool in the analysis and developemnt of new materials.  This module 
+      will introduce students to a range of theoretical and computational techniques used in the modelling and simulation
+      of materials.  It starts by refresing and consolidating the students programming skills, then reviews the important 
+      concepts in classical mechanics and statistical mechanics.  The core topics of this module are: classical force fields and 
+      molecular dynamics.  Within the module there is a hands-on component that involves writing a simple molecular dynamics package 
+      and a final assignment that involves reviewing a paper from the literature on simulation.
+  </DESCRIPTION>
+  <AIMS>
+    <UL>
+      <LI>You should be able to write out Newton's laws of motion and explain how molecular dynamics algorithms work by making reference to these laws. </LI>
+      <LI>You should be able to explain the interactions between atoms are described using quantum mechanics and classical forcefields and should be able to explain the strengths and the limitations for each of these ways of modelling the interactions. </LI>
+      <LI>You should be able to explain what we mean by the term canonical ensemble and should also be able to explain how ensemble averages are calculated from molecular dynamics simulations.  You should then be able to explain how we can connect the results of simulations with those from experiments by calculating ensemble averages.</LI>
+      <LI>You should be able to read articles from the simulation literature and reflect critically on the strengths and the limitations of the methods used within them. </LI>
+    </UL>
+  </AIMS>
+  <CHAPTER>
+     <TITLE> Newtons laws </TITLE>
+     <INTRO> 
+        <DESCRIPTION>
+           In this chapter you will revise Newton's laws by writing some short computer programs that expoit these laws to solve mechanics problems. 
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to state Newton's first, second and third laws. </LI>
+              <LI> You should be able to discuss the meanings of the terms system, state, environment, force and potential. </LI>
+              <LI> You should understand how the derivative is defined </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>   
+     </PROJECT>
+     <TOPIC> NEWTONS_LAWS </TOPIC>
+     <TOPIC> DEFINITION_OF_DERIVATIVE </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> Mathematical prerequisits for statistical mechanics </TITLE>
+     <INTRO> 
+        <DESCRIPTION>
+           In this chapter you will revise the mathematics required to study statistical mechanics.  This will include the elementary rules for differentiation; namely, 
+           the chain and product rules.  In addition, you will need to know how to use the method of Lagrange multipliers.  In order to revise this material more thoroughly
+           you will learn about the ways that the interactions between atoms and molecules can be modelled mathematically.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to use the chain and product rules to calculate derivatives of functions of functions and derivatives of products of functions. </LI>
+              <LI> You should be able to use Lagrange's method of undetermined multipliers to determine solve constrained optimization problems. </LI>
+              <LI> You should be able to describe the differences between the interactions between the atoms in ionic solids, covalent solids and metallic solids and give suitable functional forms to describe these different types of interaction. </LI>
+              <LI> You should be able to discuss how the lattice energy of a molecular solid is partitioned between the inter and intra molecular components.  You should then be able to discuss how these inter and intra molecular terms are further decomposed into bond terms, angle terms, torsional terms, electrostatic terms, short-range repulsive terms and dispersive interactions.  You should be able to give suitable functional forms to describe all these various different types of interaction </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> CHAIN_RULE </TOPIC>
+     <TOPIC> PRODUCT_RULE </TOPIC> 
+     <TOPIC> INTERATOMIC_FORCES </TOPIC> 
+     <TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> Statistical mechanics </TITLE>
+     <INTRO> 
+        <DESCRIPTION>
+           In this chapter you will learn about the theoretical basis of statistical mechanics.  We will derive the key equations of this theory using an approach based on information
+           theory.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to write down an expression for the information contained in a non-uniform distribution. </LI>
+              <LI> You should be able to state the principle of equal apriori probabilities. </LI>
+              <LI> You should be able to use Lagrange's method of undetermined multipliers to derive the expressions for the generalized partition function.  In particular, you should be able to 
+                   derive expression for the probability of being in a microstate, an expression for the generalised partition function and expressions that relate ensemble averages of extensive quantities to partial derivatives of the partition function. </LI>
+              <LI> You should be able to derive the key expressions for the canonical distribution.  In particular, you should be able to derive an expression for the probability of being in a microstate, an expression for the canonical partition function and expressions that relate the ensemble average of the energy and the heat capacity to first and second derivatives of the partition function respectively. </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> INFORMATION_THEORY </TOPIC>
+     <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+     <TOPIC> CANONICAL_ENSEMBLE </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> Computer simulations </TITLE>
+     <INTRO> 
+        <DESCRIPTION>
+           In this chapter you will learn about how to calculate ensemble averages using molecular dynamics and Monte Carlo sampling.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> You should be able to write a molecular dynamics code to perform simulations of clusters of Lennard Jones particles.  </LI>
+              <LI> You should know at least two methods for caluclating the heat capacity from a molecular dynamics simulation. </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> MONTE_CARLO </TOPIC> 
+     <TOPIC> MOLECULAR_DYNAMICS </TOPIC>
+  </CHAPTER>
+</PAGE>

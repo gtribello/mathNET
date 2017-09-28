@@ -17,9 +17,9 @@ class resource(object) :
          return True
       else :
          for mod in self.module :
-            if module==mod.text.strip() and level=="" :
+            if mod.text.find(module) and level=="" :
                return True 
-            elif module==mod.text.strip() and level==self.loc :
+            elif mod.text.find(module) and level==self.loc :
                return True
       return False
 

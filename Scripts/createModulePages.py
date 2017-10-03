@@ -180,7 +180,7 @@ def buildModulePage( modn ):
     of.write('   <H3> Description </H3> <br/> ' )
     of.write( tree.find("DESCRIPTION").text )
     of.write('<br/> <br/>')
-    if tree.find("ASSESSMENT") :
+    if tree.find("HANDBOOK") is not None :
        of.write('   <H3> Assessment </H3> <br/> ' )
        of.write('   <p>The module assessment consists of the following activities:</p>')
        of.write("   <table> \n")
@@ -189,9 +189,9 @@ def buildModulePage( modn ):
            of.write("<tr><td>" + assessment.find("DESCRIPTION").text + "</td><td>" + assessment.find("WHEN").text + "</td><td>" + assessment.find("WEIGHT").text + "</td></tr>") 
        of.write("   </table> </br>\n")
        of.write("   <p>Details on what you are expected to work on during each week of the semester can be found by clicking <b><a href='workload-model-" + mname + ".pdf'> here </a> </b>.</p>")
-    if tree.find("LITURGY") : 
+    if tree.find("LITURGY") is not None : 
        of.write("   <p>A summary of some of the key ideas and theorems that are introduced in this module can be found by clicking <b><a href='essential-ideas-" + mname + ".pdf'> here </a> </b>.</p>")
-    if tree.find("PORTFOLIO") :
+    if tree.find("PORTFOLIO") is not None :
        of.write('   <H3> Portfolio projects </H3> <br/> ' )
        of.write('    <p>The final aspect of the assessment for this module is a portfolio for which you must produce projects on the following: </p>')
     of.write('<ul>')
@@ -200,7 +200,7 @@ def buildModulePage( modn ):
         n = n + 1  
         of.write('<li><a href="' + mname + str(n) + '-overview.html"> ' + chp.find("TITLE").text +  '</a></li>')
     of.write('</ul>') 
-    if tree.find("PORTFOLIO") :    
+    if tree.find("PORTFOLIO") is not None :    
        of.write("<p>Details on how your final portfolio will be assessed can be found by clicking <b> <a href='portfolio-assessment-" + mname + ".pdf'> here </a> </b>.</p>")
        of.write("<p>Some questions to think about when writing your weekly reports can be found by clicking <b> <a href='resources/reflective-questions.pdf'> here </a> </b>.</p>")
     of.write('   </div>\n')
@@ -208,9 +208,9 @@ def buildModulePage( modn ):
     # Run latex to generate pdf files
     pageelements.printFooter( of )
     of.close()
-    if tree.find("HANDBOOK") : createWorkloadModel( mname, tree.find("HANDBOOK") )
-    if tree.find("PORTFOLIO") : createPortfolioMarkscheme( mname, tree.find("PORTFOLIO") )
-    if tree.find("LITURGY") : createLiturgy( mname, tree.find("LITURGY") )
+    if tree.find("HANDBOOK") is not None : createWorkloadModel( mname, tree.find("HANDBOOK") )
+    if tree.find("PORTFOLIO") is not None : createPortfolioMarkscheme( mname, tree.find("PORTFOLIO") )
+    if tree.find("LITURGY") is not None : createLiturgy( mname, tree.find("LITURGY") )
     n, chapters = 0, tree.findall("CHAPTER")
     for chp in chapters :
         n = n + 1

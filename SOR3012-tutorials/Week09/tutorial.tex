@@ -1,0 +1,207 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=2.5cm,headheight=50pt,includeheadfoot]{geometry}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{2pt}
+
+\usepackage{xcolor}
+
+\rhead{\includegraphics[width=5cm]{../../html/assets/img/logo.png}}
+\lhead{\Huge SOR3012: Tutorial week 9}
+
+\begin{document}
+
+\section{Aim}
+
+The aim of the tutorial is to solve the gamblers ruin problem analytically.  
+
+\section{Bring}
+
+Please bring all your notes for this module as well as appropriate items of stationery.
+
+\section{Approach}
+
+You will be given one of the problems below and will be asked to work on it alone for 10 minutes.  You will then be put into groups of four.  Each group will work through one of the problems 
+below during the next 30 minutes of the tutorial.  During the last 20 minutes of the tutorial each group will then be asked to give a two minute presentation of the solution to one of the problems 
+using the visualizer.  You will be told at the start of the tutorial what problem you are presenting.  Remember, as you are presenting you should try to write out your solution neatly so that the 
+other students can read what you have done.
+
+\subsection{Gamblers ruin expectation}
+
+The essence of many gambling games is as follows: you place a stake of $x$ pounds on something or other.  This might be the spin of a wheel, a horse winning a race or some other event in the future.
+Regardless this event occurs with a probability of $p$.  If the event transpires you win back double your stake - $2x$ pounds - you will thus have $a + x$ pounds in total, where $a$ was your initial
+holding.  If it does not transpire you loose your stake and are thus left with $a - x$ pounds.
+
+The ideas in this first paragraph have been covered in the videos on the gamblers video and in the programming exercise.  We have shown how we can describe the above process using a Markov chain,
+what the transition graph is for this chain and what the associated one-step transition probability matrix is for this discrete Markov chain.  {\bf Before attempting this exercise make sure you are
+familiar with these ideas and that you can thus do the following items:}
+
+\begin{enumerate}
+ \item You must be able to explain why the gamblers ruin problem can be described using a Markov chain.
+ \item You must be able to write out the transition graph for the gamblers ruin problem.
+ \item You must be able to write out the one step transition probability matrix for the gamblers ruin problem.
+ \item You must be able to use the partition theorem to derive the homogeneous difference equation $\pi_k = \pi_{k+1} p + \pi_{k-1} q$, where $\pi_k$ is the conditional probability of ruin given that
+you start with $k$ pounds and where $p$ and $q$ are the probability of winning when you place each stake.
+\end{enumerate}
+
+{\bf If you cannot do all of the above things watch the video on gamblers ruin again.  If you are unable to do the above you will not understand the remainder of this exercise.}
+
+The purpose of this exercise is to find an exact expression for the conditional probability of ruin given that you start with exactly $k$ pounds, $\pi_k$.
+
+\clearpage
+
+\paragraph{Solution guidelines}
+
+\begin{enumerate}
+\item We would like to determine the probability of loosing all our money.  We could do this by partitioning the transition probability matrix for the gamblers ruin problem into $\mathbf{Q}$ and
+$\mathbf{R}$ parts and then substituting these into the formula $\mathbf{H} = (\mathbf{I} - \mathbf{Q})^{-1} \mathbf{R}$ that we learnt previously.  However, for this particular problem we generally
+adopt a different strategy.  We are instead going to the partition theorem and condition on the outcome of the first gamble.  Doing so allows us to write:
+allows us to write:
+\[
+ \pi_k = \pi_{k+1}p + \pi_{k-1}q
+\]
+This equation is a homogeneous difference equation, which we can rewrite as follows:
+\[
+\pi_k - \pi_{k+1}p - \pi_{k-1}q = 0
+\]
+To solve homogeneous difference equations we introduce a trial solution $\pi_k = \theta^k$ and find values of $\theta$ that satisfy the above equality.  $\pi_k$ is then a linear combination of the
+solutions we find - so for example if we find two solutions, $\theta_1$ and $\theta_2$, we could write $\pi_k$ as follows:
+\[
+ \phi_k = A \theta_1^k + B \theta_2^k
+\]
+{\bf Insert the trial solution $\pi_k = \theta^k$ into the homogeneous difference equation above remembering that $\phi_{k+1}=\theta^{k+1}$.  Factorise the resulting equation and hence show that:
+
+\begin{equation}
+ \pi_k = A + B \left( \frac{q}{p}\right)^k
+\label{eqn:soln}
+\end{equation}
+
+where $A$ and $B$ are as yet unknown parameters.}
+
+\item Think about what the quantity $\pi_k$ represents.  This is the probability of ruin given that you start with exactly $k$ pounds to your name.  Given the meaning of this quantity, $\pi_k$, {\bf
+what are the values of $\pi_0$ and $\pi_n$.}  Notice that here $n$ is the target amount of money the gambler wants to win.
+
+\item If you insert the values of $\pi_0$ and $\pi_n$ into the left hand side of equation \ref{eqn:soln} and the corresponding values of $k$ into the right hand side you get two simultaneous
+equation with two unknowns $A$ and $B$.  {\bf Solve this set of simultaneous equations and find values for $A$ and $B$.}  Hence, show that:
+\[
+ \pi_k = \frac{ \left( \frac{q}{p} \right)^k - \left( \frac{q}{p} \right)^n }{ 1 - \left( \frac{q}{p} \right)^n }
+\]
+
+\item Now use everything that you have derived above to show that the conditional probability, $s_k$, that the gambler wins the $n$ pounds he desires given that he starts with exactly $k$ pounds is
+given by:
+$$
+s_k = \frac{ 1 - \left( \frac{q}{p} \right)^k }{ 1 - \left( \frac{q}{p} \right)^n }
+$$
+
+\item Suppose that $p=0.5$.  Why is it not possible to use the equations above to calculate $\pi_k$ and $s_k$ in this limit?  Use l'Hopital's rule to show that when $p=0.5$ $\pi_k$ and
+$s_k$ are given by the expressions shown below:
+
+$$
+\pi_k = \frac{ n-k }{n } \qquad \qquad s_k = \frac{ k}{n} 
+$$
+
+\end{enumerate}
+
+\subsection{Gamblers ruin expectation}
+
+
+The essence of many gambling games is as follows: you place a stake of $x$ pounds on something or other.  This might be the spin of a wheel, a horse winning a race or some other event in the future.
+Regardless this event occurs with a probability of $p$.  Furthermore, if the event transpires you win back double your stake - $2x$ pounds - you will thus have $a + x$ pounds in total, where $a$ was
+your initial holding.  If the event does not transpire you loose your stake and are thus left with $a - x$ pounds.
+
+The ideas in this first paragraph have been covered in the videos on the gamblers video and in the programming exercise.  We have shown how we can describe the above process using a Markov chain,
+what the transition graph is for this chain and what the associated one-step transition probability matrix is for this discrete Markov chain.  We have also shown that we can solve a homogeneous
+difference equation to determine the probability of ruin given that you start with exactly $k$ pounds and that we get the following result when we do so:
+$$
+\pi_k = \frac{ \left( \frac{q}{p} \right)^k - \left( \frac{q}{p} \right)^n }{ 1 - \left( \frac{q}{p} \right)^n }
+$$
+{\bf Before attempting this exercise make sure you are familiar with these ideas and that you can thus do the following items:}
+
+\begin{enumerate}
+ \item You must be able to explain why the gamblers ruin problem can be described using a Markov chain.
+ \item You must be able to write out the transition graph for the gamblers ruin problem.
+ \item You must be able to write out the one step transition probability matrix for the gamblers ruin problem.
+ \item You must be able to use the conditional expectation theorem to derive the inhomogeneous homogeneous difference equation $d_k = (1+d_{k+1})p + (1 + d_{k-1})q$, where $d_k$ is the
+expected length of the game given that you start with $k$ pounds and where $p$ and $q$ are the probability of winning when you place each stake.
+\item You should be able to solve the homogeneous difference equation $\pi_k = \pi_{k+1} p + \pi_{k-1} q$ to show that $\pi_k = \frac{ \left( \frac{q}{p} \right)^k - \left( \frac{q}{p} 
+\right)^n }{ 1 - \left( \frac{q}{p} \right)^n }$
+\end{enumerate}
+
+{\bf If you cannot do all of the above things watch the video on gamblers ruin again and look again at exercise I.  If you are unable to do the above you will not understand the remainder of this
+exercise.}
+
+
+\paragraph{Solution guidelines}
+
+\begin{enumerate}
+ \item We now want to determine how many bets you would make on average.  We could do this by partitioning the matrix we obtained in question 3 into $\mathbf{Q}$ and $\mathbf{R}$
+parts and then substituting these into the formula $\mathbf{H} = (\mathbf{I} - \mathbf{Q})^{-1} \mathbf{1}$ that we learnt previously but we adopt a different strategy in this case.   When
+we use this strategy we state that $d_k$ is the expected number of bets we would expect to make if we started with $k$ pounds.  We then use the conditional expectation theorem to calculate the
+expected number of gambles we will make by conditioning on the outcome of the first game:
+\[
+ d_k = (1+d_{k+1})p + (1 + d_{k-1})q
+\]
+The equation above is an inhomogeneous difference equation, which we can write as follows:
+\begin{equation}
+ d_k - pd_{k+1} - qd_{k-1} = 1
+ \label{eqn:inhomo}
+\end{equation}
+The general solution to an inhomogeneous difference equation is a linear combination of the solution we would obtain for the corresponding homogeneous difference equation and a particular
+solution.  In other words, the solution will be:
+\[
+d_k =  A \theta_1^k + B \theta_2^k + d^{(\textrm{part})}_k % A + B \left( \frac{1-p}{p}\right)^k + bk
+\]
+In this case:
+$$
+d_k' = A \theta_1^k + B \theta_2^k
+$$
+Is the solution to the corresponding homogeneous difference equation:
+\begin{equation}
+d_k' - pd_{k+1}' - qd_{k-1}' = 0
+\label{eqn:homo}
+\end{equation}
+Notice that this equation has a zero on the left hand side as opposed to the one in equation \ref{eqn:inhomo}.  Further note that we already know the solution to this equation.  When we solved for
+the probability of ruin we found (by inserting the trial solution $d_k' = \theta^k$ into equation \ref{eqn:homo} and factorising) that:
+$$
+d_k' = A + B \left( \frac{q}{p} \right)^k
+$$
+The solution for the inhomogeneous equation (equation \ref{eqn:inhomo}) that we wish to solve must therefore be:
+$$
+d_k = 1 + \left( \frac{q}{p} \right)^k + d^{(\textrm{part})}_k
+$$
+Further note that if we substitute the $d_k'$ part of the above equation into equation \ref{eqn:inhomo} we get zero precisely because $d_k'$ is the solution of equation \ref{eqn:homo}.  We can thus
+confidently assert that:
+$$
+d^{(\textrm{part})}_k - p d^{(\textrm{part})}_{k+1} - q d^{(\textrm{part})}_{k-1} = 1
+$$
+We now proceed via a similar (in fact easier) route to the method we used to solve the homogeneous difference equation.  We insert a trial solution with some unknown parameters in to the above
+equation and rearrange the resulting equation to find a value for the parameter.  In this case the trial solution we are going to use is $d^{(\textrm{part})}_k = bk$.  {\bf Substitute this into the
+above equation now and rearrange to find a suitable value for the parameter $b$.}  As you do this note that $d^{(\textrm{part})}_{k+1} = b(k+1)$.  {\bf Use what you find and the information above to
+show that:}
+
+\begin{equation}
+d_k = A + B \left( \frac{q}{p} \right)^k + \frac{k}{q-p}
+\label{eqn:soln}
+\end{equation}
+
+\item Think about the transition graph and what the quantity $d_k$ represents.  Given the meaning of this quantity what are the values of $d_0$ and $d_n$.  Notice that $n$ is the amount of
+money the gambler wishes to win.  Insert the values of $d_0$ and $d_n$ into equation \ref{eqn:soln} and, by solving the resulting set of simultaneous equations, find the
+values of A and B. Hence, show that:
+$$
+d_k = \frac{k}{q-p} - \frac{s_k}{q-p}
+$$
+where
+$$
+s_k = \frac{ 1 - \left(\frac{q}{p} \right)^k}{ 1 - \left( \frac{q}{p} \right)^n }
+$$
+
+
+\end{enumerate}
+
+
+\end{document}

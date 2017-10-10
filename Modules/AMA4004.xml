@@ -1,0 +1,126 @@
+<PAGE>
+  <TITLE> Statistical Mechanics </TITLE>
+  <DESCRIPTION>
+     Statistical mechanics is a formalism that aims to explain the physical properties of matter at the
+     macroscopic level by considering the dynamical behaviour of matter's microscopic constituents - atoms and molecules.
+     The scope of the formalism is almost unlimited as it is applicable to matter in any state of aggregation,
+     ranging from gases, liquids and solids to matter in equilibrium with radiation and biological specimens.
+     The aim of this course is to introduce the basic principles and methods of statistical mechanics and to
+     apply them to a number of model systems in order to illustrate their use and potential in a systematic manner.
+     
+     We start by introducing the fundamentals of thermodynamics and then proceed to develop the concepts
+     and techniques needed to evaluate probability distributions and partition functions. This later quantity
+     establishes the link between the microscopic description of a system, based on quantum states or positions in phase space,
+     and the macroscopic characterisation provided by a small set of independent thermodynamic variables.  We discuss a number 
+     systems where the partition function can be calculated exactly and then show how we can use this function to rationalise 
+     the behavior of the constituent particles in these system at the microscopic and macroscopic scales.  Ultimately, however,
+     the exact solution for the partition function cannot be found for the majority of real systems of interest.  In the last
+     part of the course we therefore discuss how approximate ensemble averages are found by exploiting approximations or numerical
+     simulation techniques.
+  </DESCRIPTION>
+  <AIMS> 
+    <UL>
+      <LI> You should be able to state the laws of thermodynamics and explain what physical consequences these laws have on the behavior of matter by deriving the Maxwell relations and inequalities involving response functions. </LI> 
+      <LI> You should be able to explain how exact solutions for the partition function for a number of model Hamiltonians can be derived.  You should then be able to use these exact solutions to explain how the the component particles in these systems behave when the thermodynamic variables are changed. </LI>
+      <LI> You should be able to explain how the mean field and cluster expansion approximations work and how these techniques can be used to calculate approximate partition functions for interacting systems. </LI>
+      <LI> You should be able to explain how ensemble averages for interacting systems can be calculated approximately by using Monte Carlo integration or molecular dynamics.  You should be able to explain the limitations of this approach and discuss how these limitations can be overcome by making use of bias potentials. </LI>
+    </UL>
+  </AIMS>
+  <CHAPTER> 
+     <TITLE> Classical thermodynamics </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           In this chapter you will learn about classical thermodynamics. 
+        </DESCRIPTION> 
+        <AIMS>
+           <UL>
+              <LI> Something </LI>
+           </UL> 
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> THERMODYNAMIC_VARIABLES </TOPIC>
+     <TOPIC> GIBBS_PHASE_RULE </TOPIC>
+     <TOPIC> EXACT_DIFFERENTIALS </TOPIC>
+     <TOPIC> CARNOT_CYCLE </TOPIC>
+     <TOPIC> LAWS_OF_THERMODYNAMICS </TOPIC>
+     <TOPIC> THERMODYNAMIC_POTENTIALS </TOPIC>
+     <TOPIC> MAXWELL_RELATIONS </TOPIC>
+     <TOPIC> RESPONSE_FUNCTIONS </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> Statistical mechanics </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           In this chapter you will learn about statistical thermodynamics.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> Something </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> PRINCIPLE_OF_EQUAL_APRIORI_PROBABILITIES </TOPIC>
+     <TOPIC> INFORMATION_THEORY </TOPIC>
+     <TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
+     <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+     <TOPIC> CANONICAL_ENSEMBLE </TOPIC>
+     <TOPIC> ISOTHERMAL_ISOBARIC_ENSEMBLE </TOPIC>
+     <TOPIC> GRAND_CANONICAL_ENSEMBLE </TOPIC>
+     <TOPIC> LATTICE_GAS </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> Statistical mechanics applications </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           In this chapter you will learn about statistical thermodynamics.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> Something </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> IDEAL_GAS </TOPIC>
+     <TOPIC> PARTITION_FUNCTION_FOR_MOLECULES </TOPIC>
+     <TOPIC> ISING_MODEL </TOPIC> 
+     <TOPIC> PHASE_TRANSITIONS </TOPIC>
+     <TOPIC> MEAN_FIELD_MODELS </TOPIC>
+     <TOPIC> CLUSTER_EXPANSION </TOPIC>
+   </CHAPTER>
+  <CHAPTER>
+     <TITLE> Computer simulations </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           In this chapter you will learn about statistical thermodynamics.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> Something </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> MONTE_CARLO </TOPIC> 
+     <TOPIC> MOLECULAR_DYNAMICS </TOPIC>
+     <TOPIC> ENHANCED_SAMPLING </TOPIC>
+  </CHAPTER>
+</PAGE>

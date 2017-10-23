@@ -533,7 +533,7 @@ case 10:
       levelcomplete=true;
       if( prand != 2 || myplot.data.length < 3 ){ levelcomplete=false; }
       for(var i=2; i < myplot.data.length; i++ ){
-          if( (myplot.data[i][0]+0.2) < myplot.data[i][1] || (myplot.data[i][0]-0.2) > myplot.data[i][1]  ){ levelcomplete=false; }
+          if( (Number(myplot.data[i][0])+0.2) < myplot.data[i][1] || (Number(myplot.data[i][0])-0.2) > myplot.data[i][1]  ){ levelcomplete=false; }
       }
     break;case 7:
       prand = 0;

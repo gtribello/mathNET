@@ -300,7 +300,7 @@
       levelcomplete=true;
       if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
       for(var i=2; i &lt; myplot.data.length; i++ ){
-          if( (myplot.data[i][0]+0.2) &lt; myplot.data[i][1] || (myplot.data[i][0]-0.2) &gt; myplot.data[i][1]  ){ levelcomplete=false; }
+          if( (Number(myplot.data[i][0])+0.2) &lt; myplot.data[i][1] || (Number(myplot.data[i][0])-0.2) &gt; myplot.data[i][1]  ){ levelcomplete=false; }
       }
     </FINISH>
   </LEVEL>

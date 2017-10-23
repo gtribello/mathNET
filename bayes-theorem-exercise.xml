@@ -47,7 +47,7 @@
     <DESCRIPTION>
        Consider the following statement from the question "10 % of the population have the disease."  Use the blocks
        below to generate 40 random variables that represent each patient visiting the doctor.  These random variables should be equal to one if the patient
-       has the disease and they should be 0 otherwise.  Remember that 10 % of the population have the disease.  Plot a graph showing how the fraction of 
+       has the disease and they should be 0 otherwise.  Remember that 10 % of the population have the disease.  Plot a graph showing how the number of 
        patients visiting the doctor who have the disease changes as the number of patients that the doctor has seen increases.
     </DESCRIPTION>
     <HINT>

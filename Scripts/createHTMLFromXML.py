@@ -105,6 +105,7 @@ def createBlocklyPage( name, tree, of ) :
    # Script of stuff to do on level load
    of.write('myApp.stuffToDoOnLevelLoad = function(n) {')
    n, levels = 0, tree.findall("LEVEL")
+   of.write( tree.find("STARTUP").text )
    of.write("switch( myApp.mylevel ){ \n")
    for lev in levels :
        if lev.find("STARTUP") is not None :

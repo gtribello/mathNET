@@ -410,7 +410,12 @@ window.addEventListener('resize', myApp.resize);
       alert('Unable to load Google\'s chart API.\n' +
             'Are you connected to the Internet?');
     }
-  myApp.stuffToDoOnLevelLoad = function(n) {switch( myApp.mylevel ){ 
+  myApp.stuffToDoOnLevelLoad = function(n) {
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.lines.length = 0;
+    myplot.plotGraph('graph','scatter');
+  switch( myApp.mylevel ){ 
 case 1:
        myplot.drawLine(0.0,0.0,0.0,0.2); myplot.drawLine(0.0,0.2,1.0,0.2); 
        myplot.drawLine(1.0,0.2,1.0,0.0); myplot.drawLine(0.0,0.0,1.0,0.0); 

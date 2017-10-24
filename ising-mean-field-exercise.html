@@ -563,7 +563,14 @@ window.addEventListener('resize', myApp.resize);
       }
       return eng;
     };
-  myApp.stuffToDoOnLevelLoad = function(n) {switch( myApp.mylevel ){ 
+  myApp.stuffToDoOnLevelLoad = function(n) {
+    ising.radius=200;
+    ising.setNumberOfSpins(ising.nspins);
+    ising.setMagneticField(0);
+    myplot.data.length = 0; 
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  switch( myApp.mylevel ){ 
 }
 };myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
        peng = 0; pmag = 0; levelcomplete=false;

@@ -473,7 +473,11 @@ window.addEventListener('resize', myApp.resize);
       ctx.font="20px Georgia";
       ctx.fillText("Energy equals " + eng,110,180);
     };
-  myApp.stuffToDoOnLevelLoad = function(n) {switch( myApp.mylevel ){ 
+  myApp.stuffToDoOnLevelLoad = function(n) {
+    ising.radius=200;
+    ising.setNumberOfSpins(ising.nspins);
+    ising.setMagneticField(0);
+  switch( myApp.mylevel ){ 
 }
 };myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
        levelcomplete=true;

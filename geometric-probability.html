@@ -409,7 +409,11 @@ window.addEventListener('resize', myApp.resize);
       alert('Unable to load Google\'s chart API.\n' +
             'Are you connected to the Internet?');
     }
-  myApp.stuffToDoOnLevelLoad = function(n) {switch( myApp.mylevel ){ 
+  myApp.stuffToDoOnLevelLoad = function(n) {
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  switch( myApp.mylevel ){ 
 }
 };myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
       prand = 0;

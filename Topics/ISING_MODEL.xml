@@ -75,13 +75,79 @@ A video that explains how the partition function for a one dimensional system of
 </RESOURCE>
 <RESOURCE>
 <TOPIC> ISING_MODEL </TOPIC>
-<LEVEL> BLOCKLY </LEVEL>
+<LEVEL> EXAMPLES </LEVEL>
 <TYPE> HTML </TYPE>
 <MODULE> AMA4004 </MODULE>
 <LINK> ising-simulator </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
 An app which you can use to simulate the one dimensional ising model
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> ISING_MODEL </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> closed-1D-ising-model.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  A short project on investigating the properties of the one-dimensional ising model with closed boundary conditions.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> ISING_MODEL </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> lattice-hamiltonians </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise that will teach you how to write functions that evaluate Hamiltonians for various lattice systems.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> ISING_MODEL </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> stat-mech-histograms-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise that will teach you how to evaluate a weighted and unweighted histograms.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> ISING_MODEL </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> correlation-functions </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exericse that will teach you how to evaluate correlation functions between spins.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> ISING_MODEL </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> open-1D-ising-model.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  A short project on investigating the properties of the one-dimensional ising model with open boundary conditions.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> ISING_MODEL </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> potts-model.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  A short project on investigating the properties of the Potts model with open boundary conditions.
 </DESCRIPTION>
 </RESOURCE>
 </PAGE>

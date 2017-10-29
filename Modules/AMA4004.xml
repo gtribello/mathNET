@@ -53,7 +53,29 @@
      <TOPIC> RESPONSE_FUNCTIONS </TOPIC>
   </CHAPTER>
   <CHAPTER>
-     <TITLE> Statistical mechanics </TITLE>
+     <TITLE> Statistical mechanics applications </TITLE>
+     <INTRO>
+        <DESCRIPTION>
+           In this chapter you will learn about statistical thermodynamics.
+        </DESCRIPTION>
+        <AIMS>
+           <UL>
+              <LI> Something </LI>
+           </UL>
+        </AIMS>
+     </INTRO>
+     <PROJECT>
+        <TITLE> </TITLE>
+        <DESCRIPTION>
+        </DESCRIPTION>
+     </PROJECT>
+     <TOPIC> LATTICE_GAS </TOPIC>
+     <TOPIC> ISING_MODEL </TOPIC>
+     <TOPIC> CANONICAL_ENSEMBLE </TOPIC>
+     <TOPIC> MEAN_FIELD_MODELS </TOPIC>
+  </CHAPTER>
+  <CHAPTER>
+     <TITLE> Statistical mechanics theory </TITLE>
      <INTRO>
         <DESCRIPTION>
            In this chapter you will learn about statistical thermodynamics.
@@ -73,33 +95,11 @@
      <TOPIC> INFORMATION_THEORY </TOPIC>
      <TOPIC> LAGRANGE_MULTIPLIERS </TOPIC>
      <TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
-     <TOPIC> CANONICAL_ENSEMBLE </TOPIC>
+     <TOPIC> PARTITION_FUNCTION_FOR_MOLECULES </TOPIC>
      <TOPIC> ISOTHERMAL_ISOBARIC_ENSEMBLE </TOPIC>
      <TOPIC> GRAND_CANONICAL_ENSEMBLE </TOPIC>
-     <TOPIC> LATTICE_GAS </TOPIC>
-  </CHAPTER>
-  <CHAPTER>
-     <TITLE> Statistical mechanics applications </TITLE>
-     <INTRO>
-        <DESCRIPTION>
-           In this chapter you will learn about statistical thermodynamics.
-        </DESCRIPTION>
-        <AIMS>
-           <UL>
-              <LI> Something </LI>
-           </UL>
-        </AIMS>
-     </INTRO>
-     <PROJECT>
-        <TITLE> </TITLE>
-        <DESCRIPTION>
-        </DESCRIPTION>
-     </PROJECT>
      <TOPIC> IDEAL_GAS </TOPIC>
-     <TOPIC> PARTITION_FUNCTION_FOR_MOLECULES </TOPIC>
-     <TOPIC> ISING_MODEL </TOPIC> 
      <TOPIC> PHASE_TRANSITIONS </TOPIC>
-     <TOPIC> MEAN_FIELD_MODELS </TOPIC>
      <TOPIC> CLUSTER_EXPANSION </TOPIC>
    </CHAPTER>
   <CHAPTER>

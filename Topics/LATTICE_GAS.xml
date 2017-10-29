@@ -36,7 +36,7 @@ the power $N$.
 <LINK> lattice-gas-video </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-An video showing how the partition function for a system of non-interacting particles sat on lattice sites is calculated
+A video showing how the partition function for a system of non-interacting particles sat on lattice sites is calculated
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>
@@ -48,6 +48,17 @@ An video showing how the partition function for a system of non-interacting part
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
 Exericses on calculating partition functions for model systems.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> LATTICE_GAS </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> enumerating-exericse </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise that will teach you how to write a program that enumerates all the microstates of a lattice system explicitly.
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>

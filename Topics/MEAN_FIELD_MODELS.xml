@@ -78,4 +78,26 @@ Understanding the free energy landscape for the mean-field, 1D Ising model
 An video describing how we can use the mean field approximation to calculate an approximation to the partition function for the Ising model.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-ising-model.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  A short project on investigating the properties of the one-dimensional ising model simulated using a mean field theory.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-2-ising-model.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  A short project on investigating the properties of the one-dimensional ising model simulated using a more complicated mean field theory.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

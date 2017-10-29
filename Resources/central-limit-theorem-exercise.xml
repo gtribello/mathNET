@@ -337,9 +337,9 @@
       limits and that one falls outside of the 90 % confidence limits.  Some of you may see different results from this, however, because we are dealing with random variables.
 
       In the previous exercise we were helped because we knew the variance of the distribution.  Lets suppose that we don't know the value for the variance.  We can estimate the 
-      sample variance using $\sigma_n^2 = \frac{1}{n-1} \left[ \sum_{i=1}^n X_i^2 - \left( \frac{1}{n} \sum_{i=1}^n X_i \right)^2 \right]$.  Use the blocks below to generate 
+      sample variance using $\sigma_n^2 = \frac{1}{n-1} \left[ \sum_{i=1}^n X_i^2 - \frac{1}{n} \left( \sum_{i=1}^n X_i \right)^2 \right]$.  Use the blocks below to generate 
       50 uniform random variables and to plot points at $(n,\sigma_n^2)$.  There should be 50 such points as $n$ should take values from 1 to 50.  The sample variance $\sigma_20$
-      should be calculated from the values of the first 20 random variables you generated.
+      should be calculated from the values of the first 20 random variables you generated.  Be careful to set and plot the variance correctly when you have only one sample.
     </DESCRIPTION>
     <HINT>
       The code to calculate a sample is similar to the code for calculating a sample mean.  You just need to make sure you accumulate both the sum of all the random variables and the sum of the squares of the random variables.  Be careful with the Bessel correction!
@@ -378,7 +378,7 @@
     <DESCRIPTION>
       Now repeat the last but one exercise in which generated 10 values of $\mu_j=\frac{1}{n}\sum_{i=1}^n X_i$ by adding together $n=10$ uniform random variables.
       Also estimate the sample variance from each of these sets of $n$ data points using 
-      $\sigma_j^2 = \frac{1}{n-1} \left[ \sum_{i=1}^n X_i^2 - \left( \frac{1}{n} \sum_{i=1}^n X_i \right)^2 \right]$ and hence calculate the 90 % confidence limit 
+      $\sigma_j^2 = \frac{1}{n-1} \left[ \sum_{i=1}^n X_i^2 - \frac{1}{n} \left( \sum_{i=1}^n X_i \right)^2 \right]$ and hence calculate the 90 % confidence limit 
       around each of your estimates of the sample mean.  Draw 10 points on the graph at each of the coordinates $(j,\mu_j)$ and illustrate the confidence limit around
       your estimate of the sample variance using an error bar.
     </DESCRIPTION>

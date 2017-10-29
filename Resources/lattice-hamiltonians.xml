@@ -1,0 +1,366 @@
+<PAGE>
+  <TITLE> Understanding the lattice Hamiltonians </TITLE>
+  <HEADER>
+     <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     In this exercse we are going to learn how to write programs that calculate the energy for particular microstates of 
+     some of the Hamiltonians that we will encounter in the remainder of this course.
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+        </td>
+        <td width="20px"> nbsp;nbsp; </td>
+        <td>
+          <div id="blocklyDiv" style="height: 800px"></div>
+        </td>
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add ising functions to API
+    addIsingFunctionsToApi( interpreter, scope );
+
+    // Add API function for printing energy
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.printEnergy(id));
+    };
+    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper));
+  </APIFUNCTIONS>
+  <BLOCKS>
+    Blockly.Blocks["print_energy"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "print energy %1",
+          "args0": [
+            {
+              "type": "input_value",
+              "name": "n", 
+              "check": "Number"
+            }
+          ],
+          "inputsInline": true,
+          "nextStatement": null,
+          "previousStatement": null,
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+
+    Blockly.JavaScript['print_energy'] = function(block) {
+      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var code = 'printEnergy(' + s + ');\n';
+      return code;
+    };
+
+    Blockly.Python['print_energy'] = function(block) {
+      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
+      var code = 'print("Energy equals",' + s + ')\n';
+      return code;
+    };
+  </BLOCKS>
+  <SCRIPTS>
+    myApp.mismatchedEnergy = false;
+  
+    myApp.printEnergy = function( eng ){
+      ctx = document.getElementById("myCanvas").getContext("2d");
+      ctx.beginPath();
+      ctx.moveTo( 100,100 );
+      ctx.lineTo( 100,300 );
+      ctx.lineTo( 300,300 );
+      ctx.lineTo( 300,100 );
+      ctx.lineTo( 100,100 );
+      ctx.closePath();
+      ctx.fillStyle = '#FFFFFF';
+      ctx.fill();
+      energy = 0; 
+      if( myApp.mylevel==0 ) { 
+         for(var i = 0; i &lt; ising.spins.length; i++){ energy += -ising.magneticFieldStrength*ising.spins[i]; } 
+      } else if( myApp.mylevel==1 ) {
+         energy = -ising.spins[0]*ising.spins[ising.spins.length-1] - ising.spins[0]*ising.magneticFieldStrength;
+         for(var i = 1; i &lt; ising.spins.length; i++){
+             energy += -ising.spins[i-1]*ising.spins[i] - ising.magneticFieldStrength*ising.spins[i];
+         }
+      } else if( myApp.mylevel==2 ) {
+         energy = - ising.spins[0]*ising.magneticFieldStrength;
+         for(var i = 1; i &lt; ising.spins.length; i++){
+             energy += -ising.spins[i-1]*ising.spins[i] - ising.magneticFieldStrength*ising.spins[i];
+         }
+      } else if( myApp.mylevel==3 ) {
+         meanfield = ising.magneticFieldStrength;
+         for(var i = 0; i &lt; ising.spins.length; i++){ meanfield += 2*ising.spins[i]; }
+         for(var i = 0; i &lt; ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
+      } else if( myApp.mylevel==4 ) {
+         energy = 0;
+         meanfield = ising.magneticFieldStrength;
+         for(var i = 0; i &lt; ising.spins.length; i++){ meanfield += 2*ising.spins[i]; }
+         for(var i = 0; i &lt; ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
+         energy += -ising.spins[0]*ising.spins[ising.spins.length-1];
+         for(var i = 2; i &lt; ising.spins.length; i+=2) { energy += -ising.spins[i-1]*ising.spins[i]; }
+      } else if( myApp.mylevel==5 ) {
+         energy = 0; if( ising.spins[0]==ising.spins[ising.spins.length-1] ) energy = energy - 1; 
+         for(var i = 1; i &lt; ising.spins.length; i++){ 
+             if( isings.spins[i-1]==ising.spins[i] ) energy = energy - 1;
+         }
+      }
+      if( energy != eng ){
+          alert("mismatch for system energy expecting " + energy + " got " + eng );
+          myApp.mismatchedEnergy = true;
+      }
+      ctx.fillStyle = '#000000';
+      ctx.font="20px Georgia";
+      ctx.fillText("Energy equals " + eng,110,180);
+    };
+  </SCRIPTS>
+  <STARTUP>
+    ising.radius=200;
+    ising.setNumberOfSpins(100);
+    ising.setMagneticField(3);
+
+    for(var i = 0; i &lt; ising.spins.length; i++) { 
+        if( Math.random() &lt; 0.5 ) { ising.setSpinValue(i,-1); }
+        else { ising.setSpinValue(i,1); }
+    }
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+      The segments of the wheel on the right indicate the values of 100 non-interacting spins in a magnetic field.  Use the blocks below to calculate 
+      the energy of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print_energy block. 
+    </DESCRIPTION>
+    <HINT> 
+      The Hamiltonian for $N$ non-interacting spins is $H = -\sum_{i=1}^N H s_i$.
+    </HINT>
+    <STARTUP>
+      for(var i = 0; i &lt; ising.spins.length; i++) {
+          if( Math.random() &lt; 0.5 ) { ising.setSpinValue(i,-1); }
+          else { ising.setSpinValue(i,1); }
+      }
+    </STARTUP>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="get_field"></block>
+         <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete = !myApp.mismatchedEnergy;
+       peng=0; ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
+       }
+       if( peng==0 ) levelcomplete=false;
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
+      As is clear from the diagram the spins have a closed geometry.  Use the blocks below to calculate the energy of this microstate in atomic units.
+      Once you have calculated this energy print it to screen using the print_energy block.
+    </DESCRIPTION>
+    <HINT>
+      Use your notes to look up what the Hamiltonian for an Ising model in a closed geomtry is equal to.
+    </HINT>
+    <STARTUP>
+      for(var i = 0; i &lt; ising.spins.length; i++) {
+          if( Math.random() &lt; 0.5 ) { ising.setSpinValue(i,-1); }
+          else { ising.setSpinValue(i,1); }
+      }
+    </STARTUP>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="get_field"></block>
+         <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete = !myApp.mismatchedEnergy;
+       peng=0; ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
+       }
+       if( peng==0 ) levelcomplete=false;
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
+      At variance with the previous exercise the spins now have an open geometry so the first and last spins no longer interact.  Use the blocks below to calculate the energy 
+      of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print_energy block.
+    </DESCRIPTION>
+    <HINT>
+      The answer to this question is very similar to the answer to the last question you will just need to make one small change. 
+    </HINT>
+    <STARTUP>
+      for(var i = 0; i &lt; ising.spins.length; i++) {
+          if( Math.random() &lt; 0.5 ) { ising.setSpinValue(i,-1); }
+          else { ising.setSpinValue(i,1); }
+      }
+    </STARTUP>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="get_field"></block>
+         <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete = !myApp.mismatchedEnergy;
+       peng=0; ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
+       }
+       if( peng==0 ) levelcomplete=false;
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
+      Once again the geoemtry is closed so the first and last spin interact.  Use the blocks below to calculate the energy of this microstate in atomic units.  This time, however,
+      use a mean field model in which each spin interacts with the mean field due to its neighbors instead of the exact Hamiltonian.
+      Once you have calculated this energy print it to screen using the print_energy block.
+    </DESCRIPTION>
+    <HINT>
+      Look up how the mean field theory operates from your notes.
+    </HINT>
+    <STARTUP>
+      for(var i = 0; i &lt; ising.spins.length; i++) {
+          if( Math.random() &lt; 0.5 ) { ising.setSpinValue(i,-1); }
+          else { ising.setSpinValue(i,1); }
+      }
+    </STARTUP>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="get_field"></block>
+         <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete = !myApp.mismatchedEnergy;
+       peng=0; ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
+       }
+       if( peng==0 ) levelcomplete=false;
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
+      Once again the geoemtry is closed so the first and last spin interact.  Use the blocks below to calculate the energy of this microstate in atomic units.  This time, however,
+      use a mean field model in which each pair of spins interacts with one of its neighbors through the exact Hamiltonian and with the mean field of its other neighbor instead 
+      of the exact Hamiltonian.  Once you have calculated this energy print it to screen using the print_energy block.
+    </DESCRIPTION>
+    <HINT>
+      Look at some of the example questions on the mean field theory from elsewhere in the website.
+    </HINT>
+    <STARTUP>
+      for(var i = 0; i &lt; ising.spins.length; i++) {
+          if( Math.random() &lt; 0.5 ) { ising.setSpinValue(i,-1); }
+          else { ising.setSpinValue(i,1); }
+      }
+    </STARTUP>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="get_field"></block>
+         <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete = !myApp.mismatchedEnergy;
+       peng=0; ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
+       }
+       if( peng==0 ) levelcomplete=false;
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      The segments of the wheel on the right indicate 100 sites for a Potts model in which each site can be in one of four states (0, 1, 2 or 3).  The colors of the sites 
+      are used to indicate the state.  Once again the geoemtry is closed so the first and last site interact.  Use the blocks below to calculate the energy of this microstate 
+      in atomic units.  Once you have calculated this energy print it to screen using the print_energy block.
+    </DESCRIPTION>
+    <HINT>
+      Look at the example questions and you will find the Hamiltonian for a Potts model.
+    </HINT>
+    <STARTUP>
+      ising.potts = true;
+      for(var i = 0; i &lt; ising.spins.length; i++) {
+          var randomv = Math.random();
+          if( randomv &lt; 0.25 ) { ising.setSpinValue(i,0); }
+          else if( randomv &lt; 0.5 ) { ising.setSpinValue(i,1); } 
+          else if( randomv &lt; 0.75 ) { ising.setSpinValue(i,2); }
+          else { ising.setSpinValue(i,3); }
+      }
+    </STARTUP>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="get_field"></block>
+         <block type="get_spin"></block>
+         <block type="print_energy"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete = !myApp.mismatchedEnergy;
+       peng=0; ww = myApp.workspace.getAllBlocks();
+       for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
+       }
+       if( peng==0 ) levelcomplete=false;
+    </FINISH>
+  </LEVEL>
+  <REVIEW>
+  </REVIEW>
+</PAGE>

@@ -5,7 +5,7 @@
   </HEADER>
   <WELCOME>
      In this exercise we are going to learn how to write programs that generate all the possible microstates a system
-     composed of $N$ lattice sites that can each adopt a finite number ($M$) different states.
+     composed of N lattice sites that can each adopt a finite number (M) different states.
   </WELCOME>
   <WORKSPACE>
     <table>
@@ -15,7 +15,7 @@
         </td>
         <td width="20px"> nbsp;nbsp; </td>
         <td>
-          <div id="blocklyDiv" style="height: 800px"></div>
+          <div id="blocklyDiv" style="height: 400px"></div>
         </td>
       </tr>
     </table>
@@ -27,9 +27,9 @@
     // Add API function for printing energy
     var wrapper = function(id){
       id = id ? id.toString() : '';
-      return interpreter.createPrimitive(myApp.printEnergy(id));
+      return interpreter.createPrimitive(myApp.checkState(id));
     };
-    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper));
+    interpreter.setProperty(scope, 'checkState', interpreter.createNativeFunction(wrapper));
   </APIFUNCTIONS>
   <BLOCKS>
     Blockly.Blocks["check_microstate"] = {
@@ -53,13 +53,13 @@
       }
     };
 
-    Blockly.JavaScript['print_energy'] = function(block) {
+    Blockly.JavaScript['check_microstate'] = function(block) {
       var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
       var code = 'checkState(' + s + ');\n';
       return code;
     };
 
-    Blockly.Python['print_energy'] = function(block) {
+    Blockly.Python['check_microstate'] = function(block) {
       var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
       var code = '\n';
       return code;
@@ -70,14 +70,16 @@
     myApp.mismatchedState = false;
 
     myApp.checkState = function( state ){
-       remstate = state; myApp.nchecks = myApp.nchecks + 1 
+       remstate = state; myApp.nchecks = myApp.nchecks + 1;
        for(var i=0; i &lt; ising.spins.length; i++ ) {
            power = 2**(ising.spins.length-1-i);
-           spin = (remstate/power)%2;
+           spin = Math.floor(remstate/power);
            remstate = remstate - spin*power;
            if( spin==0 &amp;&amp; ising.spins[ising.spins.length-1-i]!=-1 ) {  myApp.mismatchedState = true; }
            else if( spin==1 &amp;&amp; ising.spins[ising.spins.length-1-i]!=1 ) { myApp.mismatchedState = true; }
        } 
+       if( !myApp.mismatchedState ){ ising.setNumberOfSpins(5); }
+       else { alert("Mismatch for state numbered " + state ); }
     };
   </SCRIPTS>
   <STARTUP>
@@ -168,13 +170,13 @@
     </TOOLBOX>
     <FINISH>
        levelcomplete=true;
-       if( ising.spins[0]!=1 || ising.spins[0]!=1 || ising.spins[0]!=-1 || ising.spins[0]!=-1 || ising.spins[0]!=1 ) { levelcomplete=false; }
+       if( ising.spins[0]!=1 || ising.spins[1]!=1 || ising.spins[2]!=-1 || ising.spins[3]!=-1 || ising.spins[4]!=1 ) { levelcomplete=false; }
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      We can write the microscopic coordinates for the microstate that you just generated as 11001, which is the number 25 in binary.  We might
-      therefore state that this particular microstate is the 25th of the possible microstates that this system of five spins can occupy.  Can you 
+      We can write the microscopic coordinates for the microstate that you just generated as 11001, which is the number 19 in binary.  We might
+      therefore state that this particular microstate is the 19th of the possible microstates that this system of five spins can occupy.  Can you 
       use the blocks below to generate the 12th?
     </DESCRIPTION>
     <HINT>
@@ -193,7 +195,7 @@
     </TOOLBOX>
     <FINISH>
        levelcomplete=true;
-       if( ising.spins[0]!=-1 || ising.spins[0]!=1 || ising.spins[0]!=1 || ising.spins[0]!=-1 || ising.spins[0]!=-1 ) { levelcomplete=false; }
+       if( ising.spins[0]!=-1 || ising.spins[1]!=-1 || ising.spins[2]!=1 || ising.spins[3]!=1 || ising.spins[4]!=-1 ) { levelcomplete=false; }
     </FINISH>
   </LEVEL>
   <LEVEL>
@@ -216,7 +218,7 @@
     </TOOLBOX>
     <FINISH>
        levelcomplete=true;
-       if( ising.spins[0]!=1 || ising.spins[0]!=-1 || ising.spins[0]!=-1 || ising.spins[0]!=1 || ising.spins[0]!=-1 ) { levelcomplete=false; }
+       if( ising.spins[0]!=-1 || ising.spins[1]!=1 || ising.spins[2]!=-1 || ising.spins[3]!=-1 || ising.spins[4]!=1 ) { levelcomplete=false; }
     </FINISH> 
   </LEVEL>
   <LEVEL>
@@ -237,6 +239,7 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_round"></block>
       </category>
       <category name="Logic">
         <block type="controls_if"></block>
@@ -250,12 +253,9 @@
       </category>
     </TOOLBOX>
     <FINISH>
-       levelcomplete=true;
-       prand = 0;
-       for(var i=0; i &lt; ww.length; i++ ){
-            if( ww[i]=="check is state" ){ prand += 1; }
-       }
-       if( prand != 1 || myApp.mismatchedState || myApp.nchecks!=32 ){ myApp.nchecks=0; levelcomplete = false; }
+       levelcomplete=true; prand = 0;
+       if( myApp.mismatchedState || myApp.nchecks!=32 ){ levelcomplete = false; }
+       myApp.nchecks=0;
     </FINISH>
   </LEVEL>
   <REVIEW>

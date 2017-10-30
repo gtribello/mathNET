@@ -1,0 +1,266 @@
+<PAGE>
+  <TITLE> Enumerating the states of a system </TITLE>
+  <HEADER>
+     <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     In this exercise we are going to learn how to write programs that generate all the possible microstates a system
+     composed of N lattice sites that can each adopt a finite number (M) different states.
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"></canvas> </div>
+        </td>
+        <td width="20px"> nbsp;nbsp; </td>
+        <td>
+          <div id="blocklyDiv" style="height: 400px"></div>
+        </td>
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add ising functions to API
+    addIsingFunctionsToApi( interpreter, scope );
+
+    // Add API function for printing energy
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(myApp.checkState(id));
+    };
+    interpreter.setProperty(scope, 'checkState', interpreter.createNativeFunction(wrapper));
+  </APIFUNCTIONS>
+  <BLOCKS>
+    Blockly.Blocks["check_microstate"] = {
+      init: function() {
+        this.jsonInit({
+          "message0": "check is state %1",
+          "args0": [
+            {
+              "type": "input_value",
+              "name": "n",
+              "check": "Number"
+            }
+          ],
+          "inputsInline": true,
+          "nextStatement": null,
+          "previousStatement": null,
+          "colour": Blockly.Blocks.variables.HUE,
+          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+        })
+      }
+    };
+
+    Blockly.JavaScript['check_microstate'] = function(block) {
+      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+      var code = 'checkState(' + s + ');\n';
+      return code;
+    };
+
+    Blockly.Python['check_microstate'] = function(block) {
+      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
+      var code = '\n';
+      return code;
+    };
+  </BLOCKS>
+  <SCRIPTS>
+    myApp.nchecks=0;
+    myApp.mismatchedState = false;
+
+    myApp.checkState = function( state ){
+       remstate = state; myApp.nchecks = myApp.nchecks + 1;
+       for(var i=0; i &lt; ising.spins.length; i++ ) {
+           power = 2**(ising.spins.length-1-i);
+           spin = Math.floor(remstate/power);
+           remstate = remstate - spin*power;
+           if( spin==0 &amp;&amp; ising.spins[ising.spins.length-1-i]!=-1 ) {  myApp.mismatchedState = true; }
+           else if( spin==1 &amp;&amp; ising.spins[ising.spins.length-1-i]!=1 ) { myApp.mismatchedState = true; }
+       } 
+       if( !myApp.mismatchedState ){ ising.setNumberOfSpins(5); }
+       else { alert("Mismatch for state numbered " + state ); }
+    };
+  </SCRIPTS>
+  <STARTUP>
+    ising.radius=200;
+    ising.setNumberOfSpins(5);
+    ising.setMagneticField(0);
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+      For this exercise we have five spins that can take have a microscopic coordinate of +1 or -1.  Use the blocks provided to set the microscopic 
+      coordinates of all the spins equal to 1. 
+    </DESCRIPTION>
+    <HINT>
+      Notice that each spin has an index associated with it and that these indices run from 1 to 5.  Also notice that you have a block to set a spin with a 
+      particular index to a particular value.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( ising.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks provided to set the microscopic coordinates of all the odd numbered spins in the system to 1 and all the even
+      numbered spins in the system to -1.
+    </DESCRIPTION>
+    <HINT>
+      Notice that you now have a if statement.  The code inside this piece is only executed if a particular logical condition is satisfied.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       for(var i=0; i &lt; ising.spins.length; i++ ){
+           if( i%2==0 &amp;&amp; ising.spins[i]!=-1 ){ levelcomplete=false; }
+           if( i%2==1 &amp;&amp; ising.spins[i]!=1 ){ levelcomplete=false; }
+       }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      We can write the coordinates of the microstate that you just generated as $(1,0,1,0,1)$.  Notice that we have used 0 in place of -1 here
+      for reasons that should become apparent by the end of this exericse.  Can you use the blocks below to generate the configuration 
+      $(1,1,0,0,1)$.
+    </DESCRIPTION>
+    <HINT>
+      At this stage it is probably best to do this using brute force.  Don't try to use a loop.  Instead just use five set spin blocks.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       if( ising.spins[0]!=1 || ising.spins[1]!=1 || ising.spins[2]!=-1 || ising.spins[3]!=-1 || ising.spins[4]!=1 ) { levelcomplete=false; }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      We can write the microscopic coordinates for the microstate that you just generated as 11001, which is the number 19 in binary.  We might
+      therefore state that this particular microstate is the 19th of the possible microstates that this system of five spins can occupy.  Can you 
+      use the blocks below to generate the 12th?
+    </DESCRIPTION>
+    <HINT>
+      To start on this exercise you need to write the number 12 in binary. 
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       if( ising.spins[0]!=-1 || ising.spins[1]!=-1 || ising.spins[2]!=1 || ising.spins[3]!=1 || ising.spins[4]!=-1 ) { levelcomplete=false; }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Now generate the 18th of the possible microstates.
+    </DESCRIPTION>
+    <HINT>
+      To start on this exercise you need to write the number 18 in binary.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete=true;
+       if( ising.spins[0]!=-1 || ising.spins[1]!=1 || ising.spins[2]!=-1 || ising.spins[3]!=-1 || ising.spins[4]!=1 ) { levelcomplete=false; }
+    </FINISH> 
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Now see if you can bring it all together.  Generate the 0th microstate, then the 1st microstate, then the 2nd microstate and so on until you  
+      have generated all of the microstates in sequence.  To check that your code is correct use the check microstate block after each block is 
+      generated each microstate to see if you are getting the correct sequence of microstates.  The check microstate block takes the number of the 
+      microstate in base 10 as input. 
+    </DESCRIPTION>
+    <HINT>
+      You are going to want to write a loop over all the possible microstates.  The first step is thus to determine how many microstates this system
+      has and to write a loop over them all.  Inside this loop you are going to have to implement a binary conversion algorithm that converts a counter
+      that is incremented by one each time you go through the loop to base 2.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="math_number_property"></block>
+      </category>
+      <category name="Microstate">
+         <block type="get_nspins"></block>
+         <block type="set_spin"></block>
+         <block type="check_microstate"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+       levelcomplete=true; prand = 0;
+       if( myApp.mismatchedState || myApp.nchecks!=32 ){ levelcomplete = false; }
+       myApp.nchecks=0;
+    </FINISH>
+  </LEVEL>
+  <REVIEW>
+      Transfer what you have learnt by performing this exercise to a python notebook.  To extend this exercise see if you can generate all the microstates
+      for a system of 5 coordinates in which each of the coordinates can take a value of 0, 1 or 2.  When you use the python don't worry about drawing the 
+      diagram of this spins as we did here.  Instead just output the microscopic coordinates of the particles in all the possible microstates.
+  </REVIEW>
+</PAGE>

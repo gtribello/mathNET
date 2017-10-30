@@ -38,6 +38,7 @@ function addIsingFunctionsToApi( interpreter, scope ){
 }
 
 function isingSpinControls(){
+    this.potts = false;
     this.spins = []; this.nspins = 25;
     this.magneticFieldStrength = 0.;
     this.temperature = 1.;
@@ -59,10 +60,22 @@ function isingSpinControls(){
          ctx.stroke();
          return;
       }
-      if (this.spins[num] == 1 ) {
-         ctx.fillStyle = '#8ED6FF';
+      if( this.potts ) {
+         if (this.spins[num] == 0 ) {
+            ctx.fillStyle = '#8ED6FF';
+         } else if( this.spins[num] == 1 ) {
+            ctx.fillStyle = '#FF0000';
+         } else if( this.spins[num] == 2 ) {
+            ctx.fillStyle = '#33FF36';
+         } else {
+            ctx.fillStyle = '#FF33CE';
+         }
       } else {
-         ctx.fillStyle = '#FF0000';
+         if (this.spins[num] == 1 ) {
+            ctx.fillStyle = '#8ED6FF';
+         } else {
+            ctx.fillStyle = '#FF0000';
+         }
       }
       ctx.stroke();
       ctx.fill();
@@ -105,7 +118,9 @@ function isingSpinControls(){
      if( n>=this.spins.length || n < 0 ){
          alert( "spin " + n + " does not exist" );
      }
-     if( val!=1 && val!=-1 ){
+     if( !this.potts & val!=1 && val!=-1 ){
+         alert( val + " is not a valid spin value" );
+     } else if( this.potts && val!=0 && val!=1 && val!=2 && val!=3 ) {
          alert( val + " is not a valid spin value" );
      }
      this.spins[n] = parseInt( val );

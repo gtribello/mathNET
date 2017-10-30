@@ -1,0 +1,275 @@
+<PAGE>
+  <TITLE> Estimating probability mass functions and probability density functions </TITLE>
+  <HEADER>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     This exercise is going to teach you about how we can obtain estimates for the probability mass/density functions.  
+     Make sure that you look at the working python code that is generated from the blocks as ultimately you will want to use this code in your own programs.  
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="graph" style="width: 400px"></div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td>
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
+  </APIFUNCTIONS>
+  <BLOCKS>
+  </BLOCKS>
+  <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
+  </SCRIPTS>
+  <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks below to generate 20 random variables each of which represents the outcome from rolling two dice.  
+       You should plot each of these random variables on the graph.  The $i$th random variable you generate, $X_i$, should be at the coordinate $(i,X_i)$. 
+    </DESCRIPTION>
+    <HINT>
+       Notice that you have a block for generating random numbers between 0 and 1.  If you multiply the outcome of this by six and round down the 
+       number you get to the nearest integer you will get a discrete uniform random variable with a sample space of $\{0,1,2,3,4,5\}$.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_round"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 ||  myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=2 &amp;&amp; myplot.data[i][1]!=3 &amp;&amp; myplot.data[i][1]!=4 &amp;&amp; myplot.data[i][1]!=5 &amp;&amp; myplot.data[i][1]!=6 &amp;&amp; myplot.data[i][1]!=7 &amp;&amp; myplot.data[i][1]!=8 &amp;&amp; myplot.data[i][1]!=9 &amp;&amp; myplot.data[i][1]!=10 &amp;&amp; myplot.data[i][1]!=11 &amp;&amp; myplot.data[i][1]!=12 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks below to generate 20 random variables from the distribution described in the previous execise.  Each of these random variables
+      will take a value of either 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12. Now instead of plotting each of the random variables on the graph I would like you to 
+      use the blocks below to count the number of times each of the random variables come up and to plot how these counts of the number times a 
+      particular number comes up changes with time. 
+    </DESCRIPTION>
+    <HINT>
+      You will find it useful to create a list with 11 entries.  Each one these entries should be used to count the number of times each value for the random variable appears.  It is important to remember as you do this that the random value can be equal to the integers 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 or 12.  However, due to our natural language of English, the elements in the list are numbered 1st, 2nd, 3rd, 4th, 5th, 6th and 7th.  In addition notice that the plotting tool you have will draw a bar chart for you.   
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"> </block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+    </TOOLBOX> 
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 2 || myplot.data.length != 13 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=i || myplot.data[i][1] &gt; 20 || myplot.data[i][1] &lt; 0 || myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0 ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      In the last exercise you should have plotted the number of times each of the random variables came up.  What I would now like you to do is to 
+      plot the fraction of times each of the random variables came up in the experiment.  If you do this correctly the sum of all the fractions will 
+      be equal to one.
+    </DESCRIPTION>
+    <HINT>
+      How can we turn the number of times each answer came up, which we generated in the last exercise, into the fraction of times a particular number came up?
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true; var sum=0;
+      if( prand != 2 || myplot.data.length != 13 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           sum += Number(myplot.data[i][1]);
+           if( myplot.data[i][0]!=i || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
+      }
+      if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       We are now going to repeat the exercise of calculating a histogram that we just performed but we are going to do the exercise for a normal random variable.
+       Divide the range between -4 and +4 into 20 intervals of length 0.4 and create a list with one scalar for each or the sub-ranges in this range.  Now use the 
+       blocks below to generate 20 random variables from a normal distribution with mean 0 and variance 1.  Use the list that you created to count the number of times
+       the random variable falls into each of the sub-ranges.  Once you have generated all the random variables plot a bar graph showing the fraction of times that the 
+       random variable fell into each of the intervals of interest on the $y$ axis and the value at the center of the sub-range on the $x$.  
+    </DESCRIPTION>
+    <HINT>
+       In the previous exercise we could use the value of the random variable to determine what element of the list we had to add one to to get our updated histogram.  We cannot do the same here as the random variables we generate are real numbers and not integers.  Notice, however, if we divide the random variable value we generate by 0.4 and if we then round down we do get an integer. Notice that the integer you get by doing so might be negative and that the indices you use to specify a position in the list always be greater than one. 
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+         <block type="normal_random"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0; 
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="standard normal random variable" ){ prand += 1; }
+      }
+      levelcomplete=true; var sum=0;
+      if( prand != 1 ||  myplot.data.length != 22 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           sum += Number(myplot.data[i][1]);
+           if( myplot.data[i][0] &lt; (-3.8+(i-2)*0.4-0.001) || myplot.data[i][0] &gt; (-3.8+(i-2)*0.4 +0.001) || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
+      }
+      if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; } 
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+       Lets add one final complication to add to the process and learn to deal with weighted data.  Repeat the previous exercise, however, now generate two normal
+       random variables, $X_i$ and $W_i$, between 0 and 1 during each of your 20 iterations.  The first of these variables, $X_i$, should be used as you used the normal random
+       variable in the previous exercise.  The second random variable, $W_i$, however, should be used as a weight for this particular variable.  You should thus compute 
+       the elements of a histogram, $\{h_j\}$, using $h_j = \frac{1}{\sum_{i=1}^N W_i } \sum_{i=1}^N W_i H( X_i - a_j ) \left[ 1 - H( X_i - a_{j+1} ) \right]$.
+       In this expression $N$ is the number of random variables you generate, $a_j$ is the lower bound for the $j$th bin of the histogram and $H(x)$ is a step function 
+       that equals one when $x \ge 0$ and that is zero otherwise. 
+    </DESCRIPTION>
+    <HINT>
+       The solution here should be similar to the solution to the previous exercise.  Now, however, rather than simply adding one to the total number of 
+       samples generated and the relevant bin of the histogram we add a random number to these accumulators.  This random number is itself a normal random variable
+       with zero mean and a variance of one.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+         <block type="normal_random"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="standard normal random variable" ){ prand += 1; }
+      }
+      levelcomplete=true; var sum=0;
+      if( prand != 2 || myplot.data.length != 22 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           sum += Number( myplot.data[i][1] );
+           if( myplot.data[i][0] &lt; (-3.8+(i-2)*0.4-0.001) || myplot.data[i][0] &gt; (-3.8+(i-2)*0.4+0.001) || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
+      }
+      if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
+    </FINISH>
+  </LEVEL>
+  <REVIEW>
+     In this exercise you have learnt how we use the central limit theorem and the law of large numbers to estimate probability mass functions and probability density functions from identically distributed and indepedent random variables.  You will need this knowledge in order to complete your project on lattice Hamiltonians. 
+  </REVIEW>
+</PAGE>

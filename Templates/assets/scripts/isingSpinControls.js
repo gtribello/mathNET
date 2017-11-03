@@ -108,7 +108,9 @@ function isingSpinControls(){
      if( n>=this.spins.length || n < 0 ){
          alert( "spin " + n + " does not exist" );
      }
-     if( this.spins[n]!=1 && this.spins[n]!=-1 ){
+     if( !this.potts & this.spins[n]!=1 && this.spins[n]!=-1 ){
+         alert( "spin " + n + " has illegal value");
+     } else if( this.potts && this.spins[n]!=0 && this.spins[n]!=1  && this.spins[n]!=2 && this.spins[n]!=3 ){
          alert( "spin " + n + " has illegal value");
      }
      return this.spins[n];

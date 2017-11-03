@@ -4,8 +4,7 @@
      <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
   </HEADER>
   <WELCOME>
-     In this exercse we are going to learn how to write programs that calculate the energy for particular microstates of 
-     some of the Hamiltonians that we will encounter in the remainder of this course.
+     In this exercse we are going to learn how to write programs that calculate the energy for particular microstates of some of the Hamiltonians that we will encounter in the remainder of this course.
   </WELCOME>
   <WORKSPACE>
     <table>
@@ -15,7 +14,7 @@
         </td>
         <td width="20px"> nbsp;nbsp; </td>
         <td>
-          <div id="blocklyDiv" style="height: 800px"></div>
+          <div id="blocklyDiv" style="height: 400px"></div>
         </td>
       </tr>
     </table>
@@ -93,25 +92,28 @@
              energy += -ising.spins[i-1]*ising.spins[i] - ising.magneticFieldStrength*ising.spins[i];
          }
       } else if( myApp.mylevel==3 ) {
-         meanfield = ising.magneticFieldStrength;
-         for(var i = 0; i &lt; ising.spins.length; i++){ meanfield += 2*ising.spins[i]; }
+         meanfield = 0; energy=0;
+         for(var i = 0; i &lt; ising.spins.length; i++){ meanfield += ising.spins[i]; }
+         meanfield = 2*meanfield / Number( ising.spins.length ) + ising.magneticFieldStrength;
          for(var i = 0; i &lt; ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
       } else if( myApp.mylevel==4 ) {
-         energy = 0;
-         meanfield = ising.magneticFieldStrength;
-         for(var i = 0; i &lt; ising.spins.length; i++){ meanfield += 2*ising.spins[i]; }
+         energy = 0; meanfield = 0;
+         for(var i = 0; i &lt; ising.spins.length; i++){ meanfield += ising.spins[i]; }
+         meanfield = meanfield / Number( ising.spins.length ) + ising.magneticFieldStrength;
          for(var i = 0; i &lt; ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
          energy += -ising.spins[0]*ising.spins[ising.spins.length-1];
          for(var i = 2; i &lt; ising.spins.length; i+=2) { energy += -ising.spins[i-1]*ising.spins[i]; }
       } else if( myApp.mylevel==5 ) {
          energy = 0; if( ising.spins[0]==ising.spins[ising.spins.length-1] ) energy = energy - 1; 
          for(var i = 1; i &lt; ising.spins.length; i++){ 
-             if( isings.spins[i-1]==ising.spins[i] ) energy = energy - 1;
+             if( ising.spins[i-1]==ising.spins[i] ) energy = energy - 1;
          }
       }
       if( energy != eng ){
           alert("mismatch for system energy expecting " + energy + " got " + eng );
           myApp.mismatchedEnergy = true;
+      } else {
+          myApp.mismatchedEnergy = false;
       }
       ctx.fillStyle = '#000000';
       ctx.font="20px Georgia";
@@ -120,7 +122,7 @@
   </SCRIPTS>
   <STARTUP>
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(20);
     ising.setMagneticField(3);
 
     for(var i = 0; i &lt; ising.spins.length; i++) { 
@@ -130,7 +132,7 @@
   </STARTUP>
   <LEVEL>
     <DESCRIPTION>
-      The segments of the wheel on the right indicate the values of 100 non-interacting spins in a magnetic field.  Use the blocks below to calculate 
+      The segments of the wheel on the right indicate the values of 20 non-interacting spins in a magnetic field.  Use the blocks below to calculate 
       the energy of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print_energy block. 
     </DESCRIPTION>
     <HINT> 
@@ -162,12 +164,12 @@
        for(var i=0; i &lt; ww.length; i++ ){
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
+      The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
       As is clear from the diagram the spins have a closed geometry.  Use the blocks below to calculate the energy of this microstate in atomic units.
       Once you have calculated this energy print it to screen using the print_energy block.
     </DESCRIPTION>
@@ -200,12 +202,12 @@
        for(var i=0; i &lt; ww.length; i++ ){
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
+      The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
       At variance with the previous exercise the spins now have an open geometry so the first and last spins no longer interact.  Use the blocks below to calculate the energy 
       of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print_energy block.
     </DESCRIPTION>
@@ -238,12 +240,12 @@
        for(var i=0; i &lt; ww.length; i++ ){
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
+      The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
       Once again the geoemtry is closed so the first and last spin interact.  Use the blocks below to calculate the energy of this microstate in atomic units.  This time, however,
       use a mean field model in which each spin interacts with the mean field due to its neighbors instead of the exact Hamiltonian.
       Once you have calculated this energy print it to screen using the print_energy block.
@@ -277,12 +279,12 @@
        for(var i=0; i &lt; ww.length; i++ ){
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      The segments of the wheel on the right indicate the values of 100 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
+      The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
       Once again the geoemtry is closed so the first and last spin interact.  Use the blocks below to calculate the energy of this microstate in atomic units.  This time, however,
       use a mean field model in which each pair of spins interacts with one of its neighbors through the exact Hamiltonian and with the mean field of its other neighbor instead 
       of the exact Hamiltonian.  Once you have calculated this energy print it to screen using the print_energy block.
@@ -316,12 +318,12 @@
        for(var i=0; i &lt; ww.length; i++ ){
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     </FINISH>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-      The segments of the wheel on the right indicate 100 sites for a Potts model in which each site can be in one of four states (0, 1, 2 or 3).  The colors of the sites 
+      The segments of the wheel on the right indicate 20 sites for a Potts model in which each site can be in one of four states (0, 1, 2 or 3).  The colors of the sites 
       are used to indicate the state.  Once again the geoemtry is closed so the first and last site interact.  Use the blocks below to calculate the energy of this microstate 
       in atomic units.  Once you have calculated this energy print it to screen using the print_energy block.
     </DESCRIPTION>
@@ -345,6 +347,10 @@
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
       </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
       <category name="Microstate">
          <block type="get_nspins"></block>
          <block type="get_field"></block>
@@ -358,9 +364,10 @@
        for(var i=0; i &lt; ww.length; i++ ){
            if( ww[i].toString().search("print energy") &gt;=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     </FINISH>
   </LEVEL>
   <REVIEW>
+    Congratulations you have implemented all the Hamiltonians.  Now take one particular Hamiltonian and perform the extend exercise to study the behavior of this particular system in depth.
   </REVIEW>
 </PAGE>

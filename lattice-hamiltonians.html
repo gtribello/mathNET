@@ -156,7 +156,7 @@
         </td>
         <td width="20px"> &nbsp;&nbsp; </td>
         <td>
-          <div id="blocklyDiv" style="height: 800px"/>
+          <div id="blocklyDiv" style="height: 400px"/>
         </td>
       </tr>
     </table>
@@ -405,7 +405,7 @@ myApp.init = function() {
   // Setup workspace for game
   
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(20);
     ising.setMagneticField(3);
 
     for(var i = 0; i < ising.spins.length; i++) { 
@@ -471,25 +471,28 @@ window.addEventListener('resize', myApp.resize);
              energy += -ising.spins[i-1]*ising.spins[i] - ising.magneticFieldStrength*ising.spins[i];
          }
       } else if( myApp.mylevel==3 ) {
-         meanfield = ising.magneticFieldStrength;
-         for(var i = 0; i < ising.spins.length; i++){ meanfield += 2*ising.spins[i]; }
+         meanfield = 0; energy=0;
+         for(var i = 0; i < ising.spins.length; i++){ meanfield += ising.spins[i]; }
+         meanfield = 2*meanfield / Number( ising.spins.length ) + ising.magneticFieldStrength;
          for(var i = 0; i < ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
       } else if( myApp.mylevel==4 ) {
-         energy = 0;
-         meanfield = ising.magneticFieldStrength;
-         for(var i = 0; i < ising.spins.length; i++){ meanfield += 2*ising.spins[i]; }
+         energy = 0; meanfield = 0;
+         for(var i = 0; i < ising.spins.length; i++){ meanfield += ising.spins[i]; }
+         meanfield = meanfield / Number( ising.spins.length ) + ising.magneticFieldStrength;
          for(var i = 0; i < ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
          energy += -ising.spins[0]*ising.spins[ising.spins.length-1];
          for(var i = 2; i < ising.spins.length; i+=2) { energy += -ising.spins[i-1]*ising.spins[i]; }
       } else if( myApp.mylevel==5 ) {
          energy = 0; if( ising.spins[0]==ising.spins[ising.spins.length-1] ) energy = energy - 1; 
          for(var i = 1; i < ising.spins.length; i++){ 
-             if( isings.spins[i-1]==ising.spins[i] ) energy = energy - 1;
+             if( ising.spins[i-1]==ising.spins[i] ) energy = energy - 1;
          }
       }
       if( energy != eng ){
           alert("mismatch for system energy expecting " + energy + " got " + eng );
           myApp.mismatchedEnergy = true;
+      } else {
+          myApp.mismatchedEnergy = false;
       }
       ctx.fillStyle = '#000000';
       ctx.font="20px Georgia";
@@ -497,7 +500,7 @@ window.addEventListener('resize', myApp.resize);
     };
   myApp.stuffToDoOnLevelLoad = function(n) {
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(20);
     ising.setMagneticField(3);
 
     for(var i = 0; i < ising.spins.length; i++) { 
@@ -552,45 +555,45 @@ case 5:
        for(var i=0; i < ww.length; i++ ){
            if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     break;case 1:
        levelcomplete = !myApp.mismatchedEnergy;
        peng=0; ww = myApp.workspace.getAllBlocks();
        for(var i=0; i < ww.length; i++ ){
            if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     break;case 2:
        levelcomplete = !myApp.mismatchedEnergy;
        peng=0; ww = myApp.workspace.getAllBlocks();
        for(var i=0; i < ww.length; i++ ){
            if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     break;case 3:
        levelcomplete = !myApp.mismatchedEnergy;
        peng=0; ww = myApp.workspace.getAllBlocks();
        for(var i=0; i < ww.length; i++ ){
            if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     break;case 4:
        levelcomplete = !myApp.mismatchedEnergy;
        peng=0; ww = myApp.workspace.getAllBlocks();
        for(var i=0; i < ww.length; i++ ){
            if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
+       if( peng!=1 ) levelcomplete=false;
     break;case 5:
        levelcomplete = !myApp.mismatchedEnergy;
        peng=0; ww = myApp.workspace.getAllBlocks();
        for(var i=0; i < ww.length; i++ ){
            if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
        }
-       if( peng==0 ) levelcomplete=false;
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+       if( peng!=1 ) levelcomplete=false;
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("    Congratulations you have implemented all the Hamiltonians.  Now take one particular Hamiltonian and perform the extend exercise to study the behavior of this particular system in depth.  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(20);
     ising.setMagneticField(3);
 
     for(var i = 0; i < ising.spins.length; i++) { 
@@ -599,7 +602,7 @@ case 5:
     }
          if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }       myApp.active[myApp.mylevel + 1] = true;       myApp.setLevel( myApp.mylevel + 1 );   } else {       alert("Your program is not quite right.  Have another go and see if you can fix it")
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(20);
     ising.setMagneticField(3);
 
     for(var i = 0; i < ising.spins.length; i++) { 

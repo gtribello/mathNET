@@ -4,9 +4,7 @@
      <script src="assets/scripts/isingSpinControls.js" type="text/javascript"> </script>
   </HEADER>
   <WELCOME>
-     In this exercse we are going to learn how to write programs that calculate a correlation function between 
-     two random variables.  We are going to do this by learning how to calculate a correlation function for a
-     one dimensional ising model.  In this exercise the one dimensional ising model will have a closed geometry.
+     In this exercse we are going to learn how to write programs that calculate a correlation function between two random variables.  We are going to do this by learning how to calculate a correlation function for a one dimensional ising model.  In this exercise the one dimensional ising model will have a closed geometry.
   </WELCOME>
   <WORKSPACE>
     <table>

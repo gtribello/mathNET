@@ -1,0 +1,74 @@
+\documentclass[a4paper]{article} 
+\usepackage{tcolorbox}
+\usepackage{amsmath,amsfonts,amsthm}
+\tcbuselibrary{skins}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\makeatletter
+\def\cornell{\@ifnextchar[{\@with}{\@without}}
+\def\@with[#1]#2#3{
+\begin{tcolorbox}[enhanced,colback=white!15,colframe=white,colupper=gray]
+\begin{tcolorbox}[enhanced,colback=gray,colframe=black,fonttitle=\large\bfseries\sffamily,sidebyside, nobeforeafter,colupper=black,
+righthand width=14cm,
+opacityframe=0,opacityback=0.3,opacitybacktitle=1, opacitytext=1,
+segmentation style={black!55,solid,opacity=0,line width=1pt},
+title=#1
+]
+%\begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+%width=\textwidth,nobeforeafter]#2\end{tcolorbox}%
+%\tcblower
+%\sffamily
+%\begin{tcolorbox}[colback=blue!05,width=\textwidth]
+% #3
+%\end{tcolorbox}
+\Huge {\bf  #2}
+\tcblower
+#3
+\end{tcolorbox}
+\end{tcolorbox}
+}
+\makeatother
+
+\title{
+\vspace{-3em}
+\begin{tcolorbox}
+\Huge\sffamily AMA4004 Statistical mechanics: Entropy in statistical mechanics   
+\end{tcolorbox}
+\vspace{-3em}
+}
+
+\date{}
+
+%\usepackage{background}
+%\SetBgScale{1}
+%\SetBgAngle{0}
+%\SetBgColor{red}
+%\SetBgContents{\rule[0em]{4pt}{\textheight}}
+%\SetBgHshift{-2.3cm}
+%\SetBgVshift{0cm}
+\usepackage{lipsum}% just to generate filler text for the example
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{lipsum}% just to generate dummy text for the example
+
+
+\begin{document}
+\maketitle
+
+In order to do this exercise you will need to work through the following topics:
+
+\begin{itemize}
+\item \href{http://gtribello.github.io/mathNET/GENERALIZED\_PARTITION\_FUNCTION.html}{http://gtribello.github.io/mathNET/GENERALIZED\_PARTITION\_FUNCTION.html}
+\item \href{http://gtribello.github.io/mathNET/CANONICAL\_ENSEMBLE.html}{http://gtribello.github.io/mathNET/CANONICAL\_ENSEMBLE.html}
+\item \href{http://gtribello.github.io/mathNET/LATTICE\_GAS.html}{http://gtribello.github.io/mathNET/LATTICE\_GAS.html}
+\end{itemize}
+
+In popular science entropy is commonly stated to be a measure of ``disorder."  Write an essay that uses what you know about the behaviour of lattice gasses systems and the definition of entropy within statistical mechanics to explain why this assertion is made and why it is problematic.  Within your essay you should explain:
+
+\begin{enumerate}
+\item How entropy is defined and the relation between entropy and information.  As you write this ask yourself the question: is disorder the opposite of information?
+\item You should discuss the behaviour of lattice gas systems composed of non-interacting particles. You should derive expressions for the partition function, the magnetisation and the entropy in such systems.
+\item You should discuss how one could construct a Hamiltonian for a system in which the particles sit on a lattice and in which the particles do not interact.  At variance with the normal lattice gas system, however, this system should not adopt a configuration with a high symmetry when the temperature is low.
+\end{enumerate}
+
+\end{document}

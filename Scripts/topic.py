@@ -11,6 +11,7 @@ class topic(object) :
 
   def readName(self):
      self.namewasread=1
+     print( "Reading " + self.name )
      tree = ET.parse( "Topics/" + self.name + ".xml" )
      self.label = tree.find("TITLE").text 
 
@@ -45,7 +46,7 @@ class topic(object) :
     resources, intro_table = tree.findall("RESOURCE"), ""
     for res in resources :
         res_obj = resource.resource( res )
-        if res_obj.ofModAndLevel( modname, ltype ) : 
+        if (res_obj.ofModAndLevel( modname, ltype )) & (res_obj.linkb not in reslist) : 
             reslist.append(res_obj.linkb) 
             intro_table += res_obj.getResourceHTML( pstyle )  
     return intro_table, reslist

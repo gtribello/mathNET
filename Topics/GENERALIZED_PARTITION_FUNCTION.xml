@@ -128,4 +128,26 @@ notes summarising all the important information you need to know about the gener
 A video demonstrating how some ensemble averages can be calculated by taking derivatives of the partition function.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> 2-level-exercise.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A writing exercise to consolidate everything you have learnt about ensembles and statistical mechanics. 
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE> 
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> ensembles-exercise.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise that involves writing about statistical mechanical ensembles.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

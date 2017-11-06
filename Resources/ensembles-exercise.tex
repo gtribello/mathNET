@@ -1,0 +1,98 @@
+\documentclass[a4paper]{article} 
+\usepackage{tcolorbox}
+\usepackage{amsmath,amsfonts,amsthm}
+\tcbuselibrary{skins}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\makeatletter
+\def\cornell{\@ifnextchar[{\@with}{\@without}}
+\def\@with[#1]#2#3{
+\begin{tcolorbox}[enhanced,colback=white!15,colframe=white,colupper=gray]
+\begin{tcolorbox}[enhanced,colback=gray,colframe=black,fonttitle=\large\bfseries\sffamily,sidebyside, nobeforeafter,colupper=black,
+righthand width=14cm,
+opacityframe=0,opacityback=0.3,opacitybacktitle=1, opacitytext=1,
+segmentation style={black!55,solid,opacity=0,line width=1pt},
+title=#1
+]
+%\begin{tcolorbox}[colback=red!05,colframe=red!25,sidebyside align=top,
+%width=\textwidth,nobeforeafter]#2\end{tcolorbox}%
+%\tcblower
+%\sffamily
+%\begin{tcolorbox}[colback=blue!05,width=\textwidth]
+% #3
+%\end{tcolorbox}
+\Huge {\bf  #2}
+\tcblower
+#3
+\end{tcolorbox}
+\end{tcolorbox}
+}
+\makeatother
+
+\title{
+\vspace{-3em}
+\begin{tcolorbox}
+\Huge\sffamily AMA4004 Statistical mechanics: Ensembles  
+\end{tcolorbox}
+\vspace{-3em}
+}
+
+\date{}
+
+%\usepackage{background}
+%\SetBgScale{1}
+%\SetBgAngle{0}
+%\SetBgColor{red}
+%\SetBgContents{\rule[0em]{4pt}{\textheight}}
+%\SetBgHshift{-2.3cm}
+%\SetBgVshift{0cm}
+\usepackage{lipsum}% just to generate filler text for the example
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{lipsum}% just to generate dummy text for the example
+
+
+\begin{document}
+\maketitle
+
+In order to do this exercise you will need to work through the following materials:
+
+\begin{itemize}
+\item \href{http://gtribello.github.io/mathNET/GENERALIZED\_PARTITION\_FUNCTION.html}{http://gtribello.github.io/mathNET/GENERALIZED\_PARTITION\_FUNCTION.html}
+\item \href{http://gtribello.github.io/mathNET/CANONICAL\_ENSEMBLE.html}{http://gtribello.github.io/mathNET/CANONICAL\_ENSEMBLE.html}
+\item \href{http://gtribello.github.io/mathNET/ISOTHERMAL\_ISOBARIC\_ENSEMBLE.html}{http://gtribello.github.io/mathNET/ISOTHERMAL\_ISOBARIC\_ENSEMBLE.html}
+\end{itemize}
+
+You must prepare a short report (no more than 3 pages) on one of the following six ensembles.  (I will tell you which you are to do)
+
+\begin{itemize}
+\item The canonical (NVT) ensmeble
+\item The canonical (NHT) ensemble - H being magnetic field strength
+\item The Isothermal-Isobaric (NPT) ensemble 
+\item The grand canonical ($\mu$VT) ensemble
+\item The grand canonical ($\mu$PT) ensemble
+\item The microcanonical ensemble
+\end{itemize}
+
+If your report is on any of the first five of the ensembles above you should:
+
+\begin{itemize}
+\item Write about which thermodynamic variables are constrained in this particular ensemble.
+\item Derive an expression for the probability of being in a microstate in this ensemble.
+\item Derive an expression that can be used to calculate the partition function.
+\item Show that certain ensemble averages can be calculated by taking suitable derivatives of the logarithm of the partition function.
+\item Explain how you can relate the logarithm of the partition function of this ensemble to a particular thermodynamic potential.
+\item Derive an expression that relates fluctuations in the value of a extensive quantity with a response function. 
+\end{itemize}
+
+If you report is on the microcanonical ensemble you should:
+
+\begin{itemize}
+\item Explain what the probability of being in a particular state is equal to for the microcanonical ensemble.
+\item Give an expression for the microcanonical partition function.
+\item Show how partition functions for all other ensembles can be calculated from the microcanonical partition function.
+\item Discuss how partition functions that incorporate constraints on microscopic coordinates can thus be calculated.
+\item Explain the meaning of the term ``Potential of mean force"
+\end{itemize}
+
+\end{document}

@@ -56,17 +56,35 @@
      <TITLE> Statistical mechanics applications </TITLE>
      <INTRO>
         <DESCRIPTION>
-           In this chapter you will learn about statistical thermodynamics.
+           In this chapter you will begin to learn about statistical mechanics.  Before delving too deeply into the theory you will do some computer programming 
+           exercises that will help you better understand the terminology and methods of statistical mechanics.  You will be introduced to a number of simple 
+           Hamiltonians for lattice systems and will learn how to calculate ensemble averages and partition functions for these systems using both analytic methods
+           and numerical methods.  The principle aim of these exercises is to get used to the notion of a microstate and the notion that the state of the system 
+           includes information on the probability of being in each microstate.
         </DESCRIPTION>
         <AIMS>
            <UL>
-              <LI> Something </LI>
+              <LI> You should be able to write computer programs to generate all possible microstates for a system consisting of particles on a lattice. </LI>
+              <LI> You should be able to write computer programs that evaluate the Hamiltonian for interacting and non-interacting particles on a lattice. </LI>
+              <LI> You should be able to evaluate the canonical partition function and the ensemble average of the energy for systems consisting of a small number of interacting or non-interacting particles on a lattice both by writing a computer program.  You should also be able to discuss why this approach fails when the number of particles in the system is large. </LI>
+              <LI> You should be able to write computer programs to evaluate histograms and correlation functions. </LI> 
+              <LI> You should be able to evaluate the partition function and ensemble average for a system of non-interacting particles on a lattice analytically. </LI>
+              <LI> You should be able to explain how mean field theories can be used to approximate the Hamiltonian for systems of interacting particles. </LI> 
            </UL>
         </AIMS>
      </INTRO>
      <PROJECT>
-        <TITLE> </TITLE>
+        <TITLE> Two dimensional Ising model </TITLE>
         <DESCRIPTION>
+            Write a function to evaluate the Hamiltonian for a two dimensional Ising model.  Use your function and what you have learnt from the exercises on the one-dimensional
+            lattice models to evaluate:
+              <UL>
+                <LI> The ensemble average of the energy as a function of temperature. </LI>
+                <LI> Two histograms showing the probability of having various values for the total magnetization at two temperatures </LI>
+                <LI> Two correlation functions that show how the correlation between pairs of spins changes with the distance between the two spins investigated.  You should do this exericse twice as you should calculate these correlation functions at two different temperatures. </LI>
+             </UL>
+            For the correlation function exercise remember that in two dimensions the number of spins at a distance $r$ from a central spin increases as you increase $r$.  
+            When you calculate your correlation function you will need to introduce suitable corrections for this effect.
         </DESCRIPTION>
      </PROJECT>
      <TOPIC> LATTICE_GAS </TOPIC>
@@ -78,17 +96,43 @@
      <TITLE> Statistical mechanics theory </TITLE>
      <INTRO>
         <DESCRIPTION>
-           In this chapter you will learn about statistical thermodynamics.
+           In this chapter you will learn the theoretical underpinnings of the statistical thermodynamics that you started to study in the previous chapter more rigorously.
+           You will learn about the principle of equal apriori probabilities that underpins this theory and about the relationship between the entropy in statistical 
+           mechanics and the information in information theory.  You will then learn how we can construct a generalized partition function by performing a constrained 
+           optimization of the information.  You will then see how we can use this generalized ensemble to construct thermodynamic ensembles that can be used to describe 
+           systems that are under a variety of different constraints on intensive and extensive quantities.  To consolidate all that you have learnt you will learn how we
+           can create models that describe interacting and non-interacting gases and adsorption of molecules on surfaces.  Lastly, you will learn about the statistical 
+           mechanics of first and second order phase transitions. 
         </DESCRIPTION>
         <AIMS>
            <UL>
-              <LI> Something </LI>
+              <LI> You should be able to state the principle of equal apriori probabilities. </LI>
+              <LI> You should be able to state Khinchines axioms for information theory and you should be able to use these axioms to derive an expression for the information content of a probability distribution. </LI>
+              <LI> You should be able to derive an expression for the probability of being in a particular microstate in the generalized ensemble by performing a constrained optimization of the information using Lagrange's method of undetermined multipliers. </LI>
+              <LI> You should be able to write out expressions for being in a microstate in the canonical, microcanonical, isothermal isobaric and grand canonical ensembles. </LI>
+              <LI> You should be able to derive the equation of state for an ideal gas by first calculating the canonical partition function.  You should also be able to explain the assumptions that are made about the particles of which the gas is composed in this model. </LI>
+              <LI> You should be able to explain the equipartition principle and when this partition can be applied. </LI>
+              <LI> You should be able to derive the Langmuir adsorption isotherm. </LI> 
+              <LI> You should be able to discuss how the microscopic coordinates of the particles behave when a system undergoes a phase transition. </LI>
            </UL>
         </AIMS>
      </INTRO>
      <PROJECT>
-        <TITLE> </TITLE>
+        <TITLE> Understanding phase transitions </TITLE>
         <DESCRIPTION>
+           We can introduce a very simple model for the transition between a fluid and a gas phase of some substance as follows.  $N$ indistinghisable particles are
+           allowed to move freedly on a two dimensional squarre lattice with $V$ sites (where $1 \ll N \ll V$).  The particles are subject to a short ranged attractive
+           interaction, which makes the energy of the system $E$ equal to $-\epsilon$ times the number of particle pairs of neighbouring lattice sites.  The kinetic energy
+           of the particles is completely neglected in this model. In the fluid phase the particles condense into a single connected block, while in the gas phase the particles
+           are distributed randomly on the lattice.
+
+           <UL>
+              <LI> Write a program to generate all the possible microstates for a version of this model with 16 lattice sites and 4 particles. Calculate the energies of all these microstates and hence draw a graph showing how the ensemble average of the energy changes with temperature. Discuss the behavior you observe. </LI>
+              <LI> Calculate the histogram showing the most likely configurations that this system will adopt at two distinct temperatures </LI>
+              <LI> Give a justification for why the free energy of the fluid and gas phases are -$2N\epsilon$ and $-k_B TN \ln \frac{V}{N}$ respectively.  Try to determine the temperature at which the transition between the fluid and the gas phase takes place. </LI>
+              <LI> Discuss how this system would behave if the interactions between particles where turned off.  </LI> 
+              <LI> Discuss how this model could be extended to provide a model of adsorbtion which, unlike the Langmuir adsorption isotherm, incorporates the interactions between adsorboed molecules.  Perform simulations to explore how such a system would behave for a range of different temperatures and chemical potentials. </LI>
+           </UL>
         </DESCRIPTION>
      </PROJECT>
      <TOPIC> PRINCIPLE_OF_EQUAL_APRIORI_PROBABILITIES </TOPIC>
@@ -98,6 +142,7 @@
      <TOPIC> PARTITION_FUNCTION_FOR_MOLECULES </TOPIC>
      <TOPIC> ISOTHERMAL_ISOBARIC_ENSEMBLE </TOPIC>
      <TOPIC> GRAND_CANONICAL_ENSEMBLE </TOPIC>
+     <TOPIC> ADSORPTION </TOPIC>
      <TOPIC> IDEAL_GAS </TOPIC>
      <TOPIC> PHASE_TRANSITIONS </TOPIC>
      <TOPIC> CLUSTER_EXPANSION </TOPIC>

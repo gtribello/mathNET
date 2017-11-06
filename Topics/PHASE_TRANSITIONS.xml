@@ -88,4 +88,26 @@ An explanation of the difference between first order and continuous phase transi
 A video discussing how the behavior of systems at phase transitions can be reconciled with the predictions of statistical thermodynamics.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> GEOGEBRA </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-ex-one </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Understanding the behavior of the magnetization for the mean-field, 1D Ising model
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MEAN_FIELD_MODELS </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> GEOGEBRA </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> mean-field-ex-two </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Understanding the free energy landscape for the mean-field, 1D Ising model
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

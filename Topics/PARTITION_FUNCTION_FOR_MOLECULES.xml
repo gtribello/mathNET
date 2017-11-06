@@ -53,4 +53,15 @@ $$
 A video describing how the partition function for a molecular gas can be decomposed in terms of translational, rotational and vibrational parts.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> PARTITION_FUNCTION_FOR_MOLECULES </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> molecular-partition-function.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise on deriving analytical expressions for the partition function of a harmonic oscillator and that introduces the notion of equipartition.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

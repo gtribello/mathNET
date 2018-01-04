@@ -1,0 +1,138 @@
+\documentclass[a4paper]{article}
+
+\usepackage[margin=2.5cm,headheight=50pt,includeheadfoot]{geometry}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{2pt}
+
+\usepackage{xcolor}
+
+\rhead{\includegraphics[width=5cm]{../../html/assets/img/logo.png}}
+\lhead{\Huge SOR3012: Tutorial week 9}
+
+\begin{document}
+
+\section{Aim}
+
+The aim of the tutorial this week is to look at some more problems on Markov chains in discrete time.
+
+\section{Bring}
+
+Please bring all your notes for this module as well as appropriate items of stationery.
+
+\section{Approach}
+
+You will work in groups of four.  Each group will try to work through as many of the problems below that they can for the first 20 minutes of the tutorial.  During the last 20 minutes of the tutorial 
+each group will then be asked to give a two minute presentation of the solution to one of the problems using the visualizer.  You will be told at the start of the tutorial what problem you are 
+presenting.  Remember, as you are presenting you should try to write out your solution neatly so that the other students can read what you have done.
+
+\subsection{Question 1}
+
+A discrete random variable, $X$, can take the values $X \in \{0,1,2\}$
+according to a discrete Markov Process described by the transition matrix:
+$$
+\mathbf{P} = \left(
+\begin{matrix}
+ 0.6 & 0.1 & 0.3 \\
+ 0.2 & 0.2 & 0.6 \\
+ 0 & 0 & 1
+\end{matrix}
+\right)
+\nonumber
+$$
+Find the hitting times for each of the transient states in this
+chain. That is find the expected number of steps required until absorption
+occurs.
+
+\subsection{Question 2}
+
+Consider a Markov chain with the following transition matrix.
+$$
+\mathbf{P} = \left(
+\begin{matrix}
+1/3 & 1/3 & 1/3 \\
+0 & 1/2 & 1/2 \\
+0 & 0 & 1
+\end{matrix}
+\right)
+$$
+Which of the states in this graph is
+absorbing and what is the expected time till absorption if my initial state is
+selected at random.
+
+\subsection{Question 3}
+
+A Markov chain, between the states $X=0,1,2,3,4$,
+ is  described by the following  transition matrix:
+$$
+\mathbf{P} = \left(
+  \begin{matrix}
+   1 & 0 & 0 & 0 &  0 \\
+   0.3 & 0.6 & 0 & 0 & 0.1 \\
+    0 & 0 & 1 & 0 & 0 \\
+    0 & 0 & 0 & 1 & 0 \\
+    0 & 0.2 & 0.3 & 0.3 & 0.2
+  \end{matrix}
+  \right)
+$$
+Draw the transition graph for this chain, and show that $X=0,2$ are transient states.
+Once you have done this Partition the transition matrix so that
+$$
+P =
+\left(
+\begin{matrix}
+Q & R \\
+0  & I \\
+\end{matrix}
+\right)
+\qquad ,
+$$
+with $Q$  connecting the transient states so that you can calculate the
+hitting probability matrix:
+$$
+h = (I-Q)^{-1}R \qquad ,
+$$
+and the hitting times.  These hitting times should tell you the expected number of steps
+starting from the transient states, until absorption occurs.
+
+\subsection{Question 4}
+
+
+A university introduces a new mathematics degree structure. The course is
+only two years long but students have to resit a year if they fail their final
+examinations.  Students also have the option to resit the first and second
+years if they feel they did particularly poorly during year 2.  In any given
+year students perform as follows in the two years:
+%
+\begin{center}
+\begin{tabular}{ c | c c c } 
+ & Fraction passed & Fraction failed & Fraction dropped out \\ \hline
+ Year 1 & 0.1 & 0.6 & 0.3 \\ 
+\end{tabular}
+
+\vspace{1cm}
+
+\begin{tabular}{ c | c c c c }
+  & Fraction passed & Fraction repeat year 1 & Fraction repeat year 2 \\ \hline
+Year 2 & 0.6 & 0.2 & 0.2 
+\end{tabular}
+\end{center}
+
+\noindent Calculate how long a student spends at university on average. 
+
+\subsection{Question 5}
+
+Consider a game of ladder climbing.  There are 5 levels in the game, level 1 is the lowest (bottom) and level 5 is the highest (top).  A player starts at the bottom and on each turn a 
+fair coin is tossed.  If the coin comes up heads the player moves up one level, while if it comes up tails the player moves down to level 1.  If the player is at the bottom and the coin turns up 
+tails they stay in level 1.  If it comes up heads, however, they move up one level.  If the players is in level five the player moves to level one if the coin comes up tails and stays in level 5 
+if the coin comes up heads.  123 competitors compete in the European championships of ladder climbing.  Calculate the number of competitors that you would expect to be in level 5 after all 
+competitors have tossed their coins 100 times.
+
+
+
+
+\end{document}

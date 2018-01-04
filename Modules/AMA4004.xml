@@ -17,7 +17,509 @@
      the exact solution for the partition function cannot be found for the majority of real systems of interest.  In the last
      part of the course we therefore discuss how approximate ensemble averages are found by exploiting approximations or numerical
      simulation techniques.
-  </DESCRIPTION>
+  </DESCRIPTION> 
+  <AIMS>
+     <UL>
+        <LI> You should be able to state the first and second laws of thermodynamics and the definitions of the various thermodynamic potentials.  From these definitions you should be able to derive the various Maxwell relations and inequalities that involve the response functions. </LI>
+        <LI> You should be able to state the principle of equal a priori probabilities and derive an expression for the generalized partition function by performing a constrained optimization of the information. </LI>
+        <LI> You should be able to write computer programs that can be used to calculate ensemble averages for systems composed of interacting and non-interacting particles sat on a lattice </LI>
+        <LI> You should be able to critically evaluate and summarise the content of scienfic articles on computer simulation techniques </LI>    
+     </UL>
+  </AIMS>
+  <LITURGY>
+     <ITEM>
+        <CALL> What is a thermodynamic variable? </CALL>
+        <RESPONSE> A thermodynamic variable is a quantity that describes the state of a macroscopic system.  Many of these quantities can be easily measured or controlled in experiments. </RESPONSE>
+     </ITEM>
+     <ITEM> 
+         <CALL> What property do extensive variables have? </CALL>
+         <RESPONSE> If the value of a thermodynamic variable depends on the size of the system then it is said to be an extensive quantity.  The values of extensive quantities depend on the number of atoms (mols) that are present in the system. </RESPONSE>
+      </ITEM>
+     <ITEM>
+         <CALL> What property do intensive variables have? </CALL>
+         <RESPONSE> If the value of a thermodynamic variable does not depend on the size of the system then it is said to be an intensive quantity.  The values of intensive quantities do not depend on the number of atoms (mols) that are present in the system.  The density of an extensive variable (e.g. Number of atoms in a volume) is an intensive quantity.  Quantities that are intrinsically intensive (i.e. not densities of extensive quantities) are also called {\bf fields.}  </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> List as many thermodynamic variables as you can, what symbols are used to represent these quantities, are they intensive or extensive and what pairs of variables are conjugate? </CALL>
+         <RESPONSE>  
+\begin{tabular}{ l | l }
+ {\bf Extensive} &amp; {\bf Intensive}  \\ \hline
+Volume (V) &amp; Pressure (-P) \\
+Strain ($\nu$) &amp; Strain ($\sigma$) \\
+Number of atoms of type $i$ ($N_i$) &amp; \emph{Chemical potential of species $i$ ($\mu_i$)} \\
+\emph{Entropy (S)} &amp; Temperature (T) \\
+Magnetization (M) &amp; Magnetic Field Strength (H) \\
+Polarization (P) &amp; Electric Field Strength (E) 
+\end{tabular}
+         </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What does it mean when we state that a system is in an equilibrium state? </CALL>
+         <RESPONSE>  A system is said to be at equilibrium if it does not change over macroscopic timescales.  At equilibrium extensive variables do not change in time and intensive variables take on a single, uniform value across the whole system.  Equilibrium states are completely characterised by a small set of thermodynamic variables. </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What is special about an isothermal transition? </CALL>
+         <RESPONSE> During an isothermal transition the temperature does not change. </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What is special about an isobaric transition? </CALL>
+         <RESPONSE> During an isobaric transition the pressure does not change </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What is special about an isochoric transition? </CALL>
+         <RESPONSE> During an isochoric transition the volume does not change </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What is special about an adiabatic transition? </CALL>
+         <RESPONSE> During an adiabatic transition the entropy does not change </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What do we mean by an isolated system? </CALL>
+         <RESPONSE> An isolated system cannot exchange heat, work or matter with its environment </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What do we mean by a closed system? </CALL>
+         <RESPONSE> A closed system cannot exchange matter with its environment.  It can, however, exchange both heat and/or work. </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What do we mean by an open system</CALL>
+         <RESPONSE> An open system can exchange heat, work or matter with its environment </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What are the properties of an exact differential? </CALL>
+         <RESPONSE> 
+            If a quantity $F(x)$ is an exact differential then the change in $F$ that occurs when one travels from state point $x_A$ to state point $x_B$ does not 
+            depend on the path taken between $x_A$ and $x_B$.
+         </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What does the first law of thermodynamics state? </CALL>
+         <RESPONSE>  The first law of thermodynamics states:
+                      \[
+\textrm{d}E = d\hspace{-0.75ex}\rule[1.25ex]{1.5mm}{0.4pt}q + d\hspace{-0.75ex}\rule[1.25ex]{1.5mm}{0.4pt}w 
+\]
+In other words we measure the change in internal energy by adding together the work done one the system and the heat absorbed by the system.
+         </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What does the second law of thermodynamics state? </CALL>
+         <RESPONSE>  The second law of thermodynamics states: 
+\[
+\Delta_{A\rightarrow B} S \ge \int_A^B \frac{\textrm{d}q}{T}
+\]
+The equality sign holds when the transition is reversible, the inequality holds when the transition is irreversible.  A consequence of this law is that the entropy of an isolated system can never decrease.
+     </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What is the combined statement of the first and second laws of thermodynamics? </CALL>
+         <RESPONSE>  When the first and second laws of thermodynamics are combined we arrive at the following expression for change in internal energy $\textrm{d}E = T\textrm{d}S - P\textrm{d}V$ </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> How is the enthalphy defined? </CALL>
+         <RESPONSE>  The enthaply, $H$, is equal to $H = E + PV$ </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> How is the Helmholtz free energy defined? </CALL>
+         <RESPONSE>  The Helmholtz free energy, $F$, is defined as $F = E - TS$ </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> How is the Gibbs free energy defined? </CALL>
+         <RESPONSE>  The Gibbs free energy, $G$, is defined as $G = E + PV - TS$ </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> What is the difference between a first order and a continuous phase transition? </CALL>
+         <RESPONSE>  In a first order phase transition there is a discontinuity in the first derivative of the thermodynamic potential at the phase boundary.  In a continous phase transition the first derivative of the thermodynamic potential is continuous but a discontinuity in one of the higher order derivatives still ensures that the change in the thermodynamic potenital cannot be expressed using a Taylor series if the transition crosses the phase boundary. </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> Explain the meanings of the terms microstate and phase space. </CALL>
+         <RESPONSE> Any physical system can adopt one of a number of microstates.  For a quantum system these are the various quantum levels.  For a classical system these are the various combinations of velocities and positions for the atoms in the system.   Phase space is the set of all possible microstates that a system can adopt.</RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> State the axioms of information theory and give an expression for the information. </CALL>
+         <RESPONSE>  
+We  define a quantity $I$ (the information) contained in a probability distribution by requiring that this quantity has the following properties (Khinchine)
+\begin{itemize}
+\item The information depends only on the probability distribution. 
+\item The uniform distribution contains the minimum information.
+\item If we enhance the sample space with impossible events the information does not increase.
+\item Information is additive.
+\end{itemize}
+It is possible to show, starting from these axioms, that the information contained in a probability distribution that has $N$ possible outcomes in the sample space, $\Omega$, that have probabilities given by the vector $\mathbf{p}$, is equal to:
+\[
+I(\mathbf{p}) = k \sum_{i=1}^N p_i \ln p_i
+\] 
+         </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> Describe the canonical ensemble </CALL>
+         <RESPONSE> 
+            In the canonical ensemble the number of atoms, the volume and the temperature are fixed.  The probability of being in a 
+            particular microstate is:
+$$
+p_i = \frac{ e^{-\beta E_i} }{ Z } 
+$$
+and the partition function is:
+$$
+Z = \sum_i e^{-\beta E_i}
+$$    
+         </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> Describe the isothermal isobaric ensemble </CALL>
+         <RESPONSE>  
+            In the isothermal isobaric ensemble the number of atoms, $N$, the pressure, $P$, and the temperature, $T$, are fixed.  The probability of being in a
+            particular microstate is:
+$$
+p_i = \frac{ e^{-\beta E_i} e^{\beta P V_i }}{ Z } 
+$$
+and the partition function is:
+$$
+Z = \sum_i e^{-\beta E_i}e^{-\beta PV_i}
+$$
+</RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> Describe the grand canonical ensemble </CALL>
+         <RESPONSE>  
+            In the grand canonical ensemble the chemical potential, $\mu$, the volume, $V$, and the temperature, $T$, are fixed.  The probability of being in a
+            particular microstate is:
+$$
+p_i = \frac{ e^{-\beta E_i} e^{+\beta \mu N_i }}{ Z }
+$$
+and the partition function is:
+$$
+Z = \sum_i e^{-\beta E_i}e^{+\beta \mu N_i}
+$$
+         </RESPONSE>
+     </ITEM>
+     <ITEM>
+         <CALL> Describe the microcanonical ensemble </CALL>
+         <RESPONSE>  
+            In the microcanonical ensemble the number of atoms, $N$, the volume, $V$, and the internal energy, $E$, are fixed.  The probability of being in a particular 
+            microstate is:
+$$
+p_i = \frac{ \delta(E_i-E)\delta(V_i-V)\delta(N_i-N) }{ \Omega }
+$$
+            The partition function, $\Omega$, for this ensemble is simply the total number of states that have energy $E$, volume $V$ and number of atoms $N$.  In other words:
+$$
+\Omega = \sum_i \delta(E_i-E)\delta(V_i-V)\delta(N_i-N)
+$$
+         </RESPONSE>
+     </ITEM>
+  </LITURGY>
+  <HANDBOOK>
+     <ASSESSMENT>
+        <DESCRIPTION> A 40 minute class test on classical thermodynamics </DESCRIPTION>
+        <WEIGHT> 10 </WEIGHT>
+        <WHEN> Friday of week 3 </WHEN>
+     </ASSESSMENT>
+     <ASSESSMENT>
+        <DESCRIPTION> One portfolio of work done during the semester </DESCRIPTION>
+        <WEIGHT> 20 </WEIGHT>
+        <WHEN> Tuesday of week 12 </WHEN>
+     </ASSESSMENT>
+     <ASSESSMENT>
+        <DESCRIPTION> One presentation and report on a scientific paper. </DESCRIPTION>
+        <WEIGHT> 20 </WEIGHT>
+        <WHEN> Fridays of weeks 10 and 12 </WHEN>
+     </ASSESSMENT>
+     <ASSESSMENT>
+        <DESCRIPTION> One three hour examination in which all questions on the paper must be answered </DESCRIPTION>
+        <WEIGHT> 50 </WEIGHT>
+        <WHEN> April exam period </WHEN>
+     </ASSESSMENT>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 2 </DUE>
+        </HANDIN>
+        <TRY>
+           Work through the first half of the videos on the mathsNET website.  Try to get to at least the video on the first and second law of thermodynamics.
+        </TRY>
+        <TUTORIAL> During the classes this week you will be asked to give presentations on topics that you will have studied elsewhere during your degree. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 3 </DUE>
+        </HANDIN>
+        <TRY>
+           By the end of the week you should have worked through all of the videos on the mathsNET website on thermodynamics.
+        </TRY>
+        <TUTORIAL> During the classes we will be working through problems on the Carnot cycle and the first and second laws of thermodynamics </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Class test on Friday of week 3 </ITEM>
+            <DUE>  During Friday class of week 3 </DUE>
+        </HANDIN>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 4 </DUE>
+        </HANDIN>
+        <TRY>
+           You should spend the week preparing for the class test.  The best way to do this would be to attempt one of the essays on the thermodynamic potentials.
+           This essay can then be handed in as part of your portfolio.
+        </TRY>
+        <TUTORIAL> During the classes we will work on problems involving response functions and Maxwell relations in preparation for the Friday test. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 5 </DUE>
+        </HANDIN>
+        <TRY>
+           By the end of the week you should have watched all the videos on the applications of statistical mechanics.  You should also begin to attempt the blockly
+           exercises that prepare you for the programming task.
+        </TRY>
+        <TUTORIAL> The classes are an opportunity for you to ask for help with the blockly exercises.  You will need to work through these to complete the assignment on lattice systems. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 6 </DUE>
+        </HANDIN>
+        <TRY>
+           You should have completed all the blockly exercises by early in the week.  During the remainder of the week you should focus on trying to write up your report 
+           on the lattice system. 
+        </TRY>
+        <TUTORIAL> Again the classes are primarily an opportunity for you to ask for help with the python/blockly exercises this week. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 7 </DUE>
+        </HANDIN>
+        <HANDIN>
+            <ITEM> One report on simulating a lattice system </ITEM>
+            <DUE>  (recommended) Friday of week 6 </DUE>
+        </HANDIN>
+        <TRY>
+           You should have completed your report on the lattice system by the end of the week.  Try to have this done by the end of week 6 even though it is not due till week 
+           12.  If you finish this early and you wish to try the final exercise on the two dimensional ising model please do so.
+        </TRY>
+        <TUTORIAL> Once again the classes are primarily an opportunity for you to ask for help with the python/blockly exercises this week. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 8 </DUE>
+        </HANDIN>
+       <HANDIN>
+            <ITEM> First essay on extend page in statistical mechanical theory chapter </ITEM>
+            <DUE>  (recommended) Friday of week 7 </DUE>
+        </HANDIN>
+        <TRY>
+           You should try to understand all the material on the generalised partition function by the end of the week.  To do this watch all the videos up to the one entitled
+           the partition function for molecular gasses.  I would then recommend that you try the first essay listed on the extend page for this chapter.  This essay can form
+           part of your portfolio.
+        </TRY>
+        <TUTORIAL> </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 9 </DUE>
+        </HANDIN>
+      <HANDIN>
+            <ITEM> Second essay on extend page in statistical mechanical theory chapter </ITEM>
+            <DUE>  (recommended) Friday of week 8 </DUE>
+        </HANDIN>
+        <TRY>
+          You should try to understand all the material on the various thermodynamic ensembles by the end of this week.  To do this watch the videos on the isothermal and isobaric 
+          ensemble that are in the videos on the understand page for this week.  In addition, try to rewatch the material on the canonical ensemble that were provided in 
+          the understand section for last week.  There are also some example problems on the canonical ensemble that you can try.  The best way to consolidate all these ideas
+          would be to attempt the second essay question listed on the extend page for this (theory) chapter.  Again this essay can form part of your portfolio. 
+        </TRY>
+        <TUTORIAL> </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 10 </DUE>
+        </HANDIN>
+        <HANDIN>
+            <ITEM> Third essay on extend page in statistical mechanical theory chapter </ITEM>
+            <DUE>  (recommended) Friday of week 9 </DUE>
+        </HANDIN>
+        <TRY>
+           You should try to understand all the material on the theory of statistical mechanics by the end of the week.  To do this watch the remaining videos on how 
+           to calculate partition functions for more complicated model systems.  A good way to test what you have understood is to try the exercises in the apply section.  
+           Lastly, attempt the third essay listed on the extend page for this (theory) chapter.  As always this essay can form part of your portfolio.
+        </TRY>
+        <TUTORIAL> </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 11 </DUE>
+        </HANDIN>
+        <TRY>
+           Watch the videos on Monte Carlo simulation and read the article that you have been assigned.  In addition, try to read some of the other papers that are in 
+           the assignment and try to see how those other papers relate to your article.  Try to identify the key idea that your paper contributed to the field.  This 
+           key idea is what I want you to present.  I would like you to explain why this idea is important and some of the context.  Do not get bogged down in the 
+           mathematics in your paper.
+        </TRY>
+        <TUTORIAL> </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Half page report for portfolio </ITEM>
+            <DUE>  16:00 on Tuesday of week 12 </DUE>
+        </HANDIN>
+        <TRY>
+           Start to write up your report on the paper.  As with the presentation your aim should be to explain the key idea that you paper contributed to the field, the papers
+           importance and some of the context.  Much as with the presentation you do not need to provide a lot of detail of the underlying mathematics.
+        </TRY>
+        <TUTORIAL> During the tutorials this week you will be giving presentations on your papers. </TUTORIAL>
+     </WEEK>
+     <WEEK>
+        <HANDIN>
+            <ITEM> Portfolio of work done during the semseter </ITEM>
+            <DUE>  16:00 on Tuesday of week 13 </DUE>
+        </HANDIN>
+        <HANDIN>
+            <ITEM> Final report on paper </ITEM>
+            <DUE>  16:00 on Tuesday of week 13 </DUE>
+        </HANDIN>
+        <TRY>
+           Finish your reports on the various scientific papers.
+        </TRY>
+        <TUTORIAL> The tutorial time this week can be used to look at reports and give critical feedback on the readability and understandability of the early drafts you are producing </TUTORIAL>
+     </WEEK>
+    </HANDBOOK> 
+    <PORTFOLIO>
+     <DESCRIPTION>
+        One of the components of the assessment for this module is a portfolio of work that you must produce over the course of the semester.  This portfolio counts for 20
+        percent of your final module mark.  It should contain:
+
+        \begin{itemize}
+        \item[(A)] 10 reports describing what you have worked on each week.  These reports are due by 16:00 on Tuesday in weeks 2 through 12 of the semester.
+            See the self study section of the markscheme below.
+
+        \item[(B)] A computer programming exercise on modelling a lattice system.  You can find the markscheme for this exercise online.
+
+        \item[(C)] Multiple essays on the theory parts of statistical mechanics.
+
+        \item[(D)] (optional) Some additional and more difficult programming exercises.
+        \end{itemize}
+
+        Notice that classes for this module are compulsory and that you will be awarded  a mark of zero for the portfolio project if you do not attend 70 percent
+        of the sessions for the module.  In addition, notice that your portfolio will be awarded a mark of zero if it does not contain 10 weekly reports, a
+        programming exercise on a lattice system (B) and three essays on statistical mechanical theory.  Notice also that additional marks are only given if you also try 
+        the optional but more difficult programming exercise.
+     </DESCRIPTION>
+     <COMPONENT>
+        <TITLE> Self study </TITLE>
+        <DESCRIPTION>
+            The first component of the assessment is based on how you have studied for the module.  You must hand in a report that is at least half a page in length every week in which you detail what, when and how you
+            intended to study during the week and what you actually achieved during the week.  You may choose to detail what resources you have used and what parts of the material you found
+            easy and what you found difficult.  You might also want to talk about any conversatiosn you had the lecturer/teaching assistants.  You should also explain what resources
+ you studied
+            from and what resources were particularly useful.  Lastly, you should demonstrate that you have thought about what you did this week and how you might study more effectively in the
+            future.
+        </DESCRIPTION>
+        <RANGE>
+           <CLASSIFICATION> Excellent </CLASSIFICATION>
+           <MARKS> 3 </MARKS>
+           <QUALITY>
+The student outlines a clear plan detailing what and when they will study each week.  There is evidence that the student thinks about how well their plan has worked at the end of each week and evidence that they have thought how to refine their plans in subsequent weeks.  They reflect well on their previous work and feedback and learn by evaluating both positive and negatives.  Excellent notes are kept and there is evidence that these are used in subsequent work.  They contribute fully to the group and offer peers an opportunity for improved performance.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Good </CLASSIFICATION>
+           <MARKS> 2 </MARKS> 
+           <QUALITY>
+The student outlines a clear plan detailing what and when they will study each week but evidence that they have thought about how well this plan is working is absent.  The student reflects on previous work and feedback and learns by evaluating both positive and negatives.  Notes are kept but there is no evidence that these have been used in subsequent work.  They contribute to the group but there is little evidence that they have responded to the feedback given.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Adequate </CLASSIFICATION>
+           <MARKS> 1 </MARKS> 
+           <QUALITY>
+Some evidence that the student plans what items to study each week.  There is some evidence to support reflection although there could be more reference to previous work.  Group contribution is inconsistent and offers little opportunity for improved performance.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Fail </CLASSIFICATION>
+           <MARKS> 0 </MARKS> 
+           <QUALITY>
+No evidence of regular self study.  No evidence of reflection.  Less than 75% attendance at tutorials and computer lab classes
+            </QUALITY>
+        </RANGE>
+     </COMPONENT>
+     <COMPONENT>
+        <TITLE> Statistical mechanics applications projects </TITLE>
+        <DESCRIPTION>
+           The second project of the assessment is based on some programming exercises that you must perform.  These exercises lead you some key ideas that we use to 
+           understand the simulations that we perform on physical systems.  You must produce python notebooks that contain the code that you used to solve these problems.
+           In addition, you should provide some short explanation as to what the code that you have written is doing within the notebook using the markup language.  You can 
+           find descriptions of the projects on the mathNET website.
+        </DESCRIPTION>
+        <RANGE>
+           <CLASSIFICATION> Excellent </CLASSIFICATION>
+           <MARKS> 9-10 </MARKS>
+           <QUALITY>
+              The student produces an assignment on the lattice system and also produces solutions to both of the two final projects on the mathNET website.  The solutions the student provides demonstrates an understanding of statistical mechanics that goes well beyond the module content and shows clear evidence of independent thought, originality and creative use of a wide range of learning resources
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Good work </CLASSIFICATION>
+           <MARKS> 5-8 </MARKS>
+           <QUALITY>
+The student produces an assignment on the lattice system and also makes an attempt at at least one of the two final projects on the mathNET website.  The student provides a partial solution of the problem in question that demonstrates a good understanding of the module content. 
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Adequate </CLASSIFICATION>
+           <MARKS> 5 </MARKS>
+           <QUALITY>
+Student produces an assignment on lattice system.  See markscheme for details of marking of these projects.  The mark from the mark scheme, which is out of 15, is divided by three.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Fail </CLASSIFICATION>
+           <MARKS> 0 </MARKS>
+           <QUALITY>
+              Student produces no programming work during semester
+            </QUALITY>
+        </RANGE>
+     </COMPONENT>
+     <COMPONENT>
+        <TITLE> Essays on statistical mechanics theory </TITLE> 
+        <DESCRIPTION>
+          The third component of the assessment is based on a number of longer form problems.  In answering these problems you will need to write continuous prose answers that have a substantial length.  These pieces of continuous prose will contain some mathematics but if your answers contain mathematics with no explanation you will be given a very low mark.  The principle aim in writing these essays is for you to demonstrate that you have some physical understanding of the equations that you are writing.  All essays should be typeset using latex.
+        </DESCRIPTION>
+        <RANGE>
+           <CLASSIFICATION> Excellent </CLASSIFICATION>
+           <MARKS> 6-7 </MARKS>
+           <QUALITY>
+The essay is extremely well argued and demonstrates that the student has a thorough and systematic understanding of the module content.  The student demonstrates an understanding of statistical mechanics that goes well beyond the module content and shows clear evidence of independent thought, originality and creative use of a wide range of learning resources.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Good work </CLASSIFICATION>
+           <MARKS> 3-5 </MARKS>
+           <QUALITY>
+The essay is well argued and demonstrates a good understanding of the module content.  There is evidence that resources other than those that were provided have been used.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Adequate </CLASSIFICATION>
+           <MARKS> 1-2 </MARKS>
+           <QUALITY>
+The essay gives a partial answer to the questions that were asked.  The essay is poorly argued and confused suggesting that the student has only a partial understanding of the module content.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Fail </CLASSIFICATION>
+           <MARKS> 0 </MARKS>
+           <QUALITY>
+The student hands in fewer than three essays on statistical mechanic theory during the course of the semester.  Essays are handed in that contain basic grammatical errors and/or spelling errors.  Essays are handed in that contain mathematical symbols that are undefined.
+            </QUALITY>
+        </RANGE>
+     </COMPONENT>
+  </PORTFOLIO>
   <AIMS> 
     <UL>
       <LI> You should be able to state the laws of thermodynamics and explain what physical consequences these laws have on the behavior of matter by deriving the Maxwell relations and inequalities involving response functions. </LI> 
@@ -30,11 +532,19 @@
      <TITLE> Classical thermodynamics </TITLE>
      <INTRO>
         <DESCRIPTION>
-           In this chapter you will learn about classical thermodynamics. 
+           In this chapter you will learn about classical thermodynamics.  You will learn about the extensive and intensive variables that we use to characterise 
+           the state of the system in this theory and about how can understand the ways these state functions change by using relatively simple partial differential
+           equations.  You will then learn about the laws of thermodynamics and how we can use these laws to construct thermodynamic potentials, Maxwell relations and
+           inequalities involving response functions.  These last inequalities are particularly important as these are the concrete predictions that allow us to test
+           whether or not this body of theory correctly describes reality.
         </DESCRIPTION> 
         <AIMS>
            <UL>
-              <LI> Something </LI>
+              <LI> You should be able to give a list of thermodynamic variables and state whether or not these variables are intensive or extensive by describing how such variables behave in a system at equilibrium. </LI>
+              <LI> You should be able to use Gibbs Phase Rule to determine the number of independent thermodynamic variables for a system in equilibrium based on a description of that system. </LI>
+              <LI> You should be able to give definitions for commonly used terms in thermodynamics such as adiabatic, isochoric, isobaric, isothermal, open, closed, isolated and diathermal. </LI>
+              <LI> You should be able to state the first and second laws of thermodynamics and then use these results and the definitions of the various thermodynamic potentials to derive Maxwell relations and inequalities involving the various reponse functions </LI>
+              <LI> You should be able to discuss how thermodynamic variables, response functions and thermodynamic potentials behave when a system undergoes 1st order phase transition and how this differs from the behavior of these quantities when the system undergoes a continuous phase transition. </LI>
            </UL> 
         </AIMS>
      </INTRO>
@@ -151,11 +661,19 @@
      <TITLE> Computer simulations </TITLE>
      <INTRO>
         <DESCRIPTION>
-           In this chapter you will learn about statistical thermodynamics.
+           This final chapter of the module gives you the opportunity to understand something about modern research on statistical mechanics.
+           The primary focus is on the field of atomistic simulation and the method known as molecular dynamics in particular.  We will, however, 
+           also discuss work in other fields that has been inspired by these recent developments in the simulation of atoms and molecules.  The 
+           organisation of this part of the module is different from the first three chapters.  Instead of having a set syllabus that you have to 
+           work through each of you will be given an article to read.  You are then expected to give a presentation on the content of the article 
+           and to write a report on the article.  The purpose of this approach is to give you some experience of how research work differs from 
+           undergraduate work and to encourage you to begin the process of having conversations about research papers with supervisors and with your
+           peers.  
         </DESCRIPTION>
         <AIMS>
            <UL>
-              <LI> Something </LI>
+              <LI> You should be able to use web of knowledge to determine what articles have cited a particular scientific paper. </LI>
+              <LI> You should be able to read scientific papers critically without getting waylaid by the mathematics. </LI>
            </UL>
         </AIMS>
      </INTRO>

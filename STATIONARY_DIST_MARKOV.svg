@@ -11,76 +11,76 @@
 <!-- STATIONARY_DIST_MARKOV -->
 <g id="node1" class="node"><title>STATIONARY_DIST_MARKOV</title>
 <g id="a_node1"><a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title=" Ergodic Markov chains " target="_top">
-<path fill="none" stroke="blue" stroke-width="2" d="M320,-108C320,-108 192,-108 192,-108 186,-108 180,-102 180,-96 180,-96 180,-84 180,-84 180,-78 186,-72 192,-72 192,-72 320,-72 320,-72 326,-72 332,-78 332,-84 332,-84 332,-96 332,-96 332,-102 326,-108 320,-108"/>
-<text text-anchor="start" x="188" y="-86.3" font-family="Times,serif" font-size="14.00"> Ergodic Markov chains </text>
+<path fill="none" stroke="blue" stroke-width="2" d="M246,-108C246,-108 118,-108 118,-108 112,-108 106,-102 106,-96 106,-96 106,-84 106,-84 106,-78 112,-72 118,-72 118,-72 246,-72 246,-72 252,-72 258,-78 258,-84 258,-84 258,-96 258,-96 258,-102 252,-108 246,-108"/>
+<text text-anchor="start" x="114" y="-86.3" font-family="Times,serif" font-size="14.00"> Ergodic Markov chains </text>
 </a>
 </g>
-</g>
-<!-- DETAILED_BALANCE -->
-<g id="node2" class="node"><title>DETAILED_BALANCE</title>
-<g id="a_node2"><a xlink:href="DETAILED_BALANCE.html" xlink:title=" Detailed balance " target="_top">
-<path fill="none" stroke="black" d="M224.25,-36C224.25,-36 133.75,-36 133.75,-36 127.75,-36 121.75,-30 121.75,-24 121.75,-24 121.75,-12 121.75,-12 121.75,-6 127.75,-0 133.75,-0 133.75,-0 224.25,-0 224.25,-0 230.25,-0 236.25,-6 236.25,-12 236.25,-12 236.25,-24 236.25,-24 236.25,-30 230.25,-36 224.25,-36"/>
-<text text-anchor="start" x="129.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Detailed balance </text>
-</a>
-</g>
-</g>
-<!-- STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE -->
-<g id="edge1" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE</title>
-<path fill="none" stroke="black" d="M236.966,-71.6966C227.455,-63.0503 215.793,-52.4486 205.43,-43.027"/>
-<polygon fill="black" stroke="black" points="207.569,-40.2413 197.815,-36.1043 202.86,-45.4209 207.569,-40.2413"/>
 </g>
 <!-- MONTE_CARLO -->
-<g id="node6" class="node"><title>MONTE_CARLO</title>
-<g id="a_node6"><a xlink:href="MONTE_CARLO.html" xlink:title=" Monte Carlo Simulation " target="_top">
-<path fill="none" stroke="black" d="M399.5,-36C399.5,-36 266.5,-36 266.5,-36 260.5,-36 254.5,-30 254.5,-24 254.5,-24 254.5,-12 254.5,-12 254.5,-6 260.5,-0 266.5,-0 266.5,-0 399.5,-0 399.5,-0 405.5,-0 411.5,-6 411.5,-12 411.5,-12 411.5,-24 411.5,-24 411.5,-30 405.5,-36 399.5,-36"/>
-<text text-anchor="start" x="262" y="-14.3" font-family="Times,serif" font-size="14.00"> Monte Carlo Simulation </text>
+<g id="node2" class="node"><title>MONTE_CARLO</title>
+<g id="a_node2"><a xlink:href="MONTE_CARLO.html" xlink:title=" Monte Carlo Simulation " target="_top">
+<path fill="none" stroke="black" d="M171.5,-36C171.5,-36 38.5,-36 38.5,-36 32.5,-36 26.5,-30 26.5,-24 26.5,-24 26.5,-12 26.5,-12 26.5,-6 32.5,-0 38.5,-0 38.5,-0 171.5,-0 171.5,-0 177.5,-0 183.5,-6 183.5,-12 183.5,-12 183.5,-24 183.5,-24 183.5,-30 177.5,-36 171.5,-36"/>
+<text text-anchor="start" x="34" y="-14.3" font-family="Times,serif" font-size="14.00"> Monte Carlo Simulation </text>
 </a>
 </g>
 </g>
 <!-- STATIONARY_DIST_MARKOV&#45;&gt;MONTE_CARLO -->
-<g id="edge6" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;MONTE_CARLO</title>
-<path fill="none" stroke="black" d="M275.034,-71.6966C284.545,-63.0503 296.207,-52.4486 306.57,-43.027"/>
-<polygon fill="black" stroke="black" points="309.14,-45.4209 314.185,-36.1043 304.431,-40.2413 309.14,-45.4209"/>
+<g id="edge1" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;MONTE_CARLO</title>
+<path fill="none" stroke="black" d="M162.966,-71.6966C153.455,-63.0503 141.793,-52.4486 131.43,-43.027"/>
+<polygon fill="black" stroke="black" points="133.569,-40.2413 123.815,-36.1043 128.86,-45.4209 133.569,-40.2413"/>
 </g>
-<!-- TRANSIENT_RECURRENT_STATES -->
-<g id="node3" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
-<g id="a_node3"><a xlink:href="TRANSIENT_RECURRENT_STATES.html" xlink:title=" Transient and recurrent states in Markov chains " target="_top">
-<path fill="none" stroke="black" d="M272,-252C272,-252 12,-252 12,-252 6,-252 0,-246 0,-240 0,-240 0,-228 0,-228 0,-222 6,-216 12,-216 12,-216 272,-216 272,-216 278,-216 284,-222 284,-228 284,-228 284,-240 284,-240 284,-246 278,-252 272,-252"/>
-<text text-anchor="start" x="8" y="-230.3" font-family="Times,serif" font-size="14.00"> Transient and recurrent states in Markov chains </text>
+<!-- DETAILED_BALANCE -->
+<g id="node6" class="node"><title>DETAILED_BALANCE</title>
+<g id="a_node6"><a xlink:href="DETAILED_BALANCE.html" xlink:title=" Detailed balance " target="_top">
+<path fill="none" stroke="black" d="M304.25,-36C304.25,-36 213.75,-36 213.75,-36 207.75,-36 201.75,-30 201.75,-24 201.75,-24 201.75,-12 201.75,-12 201.75,-6 207.75,-0 213.75,-0 213.75,-0 304.25,-0 304.25,-0 310.25,-0 316.25,-6 316.25,-12 316.25,-12 316.25,-24 316.25,-24 316.25,-30 310.25,-36 304.25,-36"/>
+<text text-anchor="start" x="209.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Detailed balance </text>
 </a>
 </g>
 </g>
-<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge2" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M140.641,-215.914C139.999,-196.649 141.729,-165.25 157,-144 166.563,-130.693 180.519,-120.41 194.952,-112.601"/>
-<polygon fill="black" stroke="black" points="196.614,-115.683 203.966,-108.053 193.461,-109.433 196.614,-115.683"/>
+<!-- STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE -->
+<g id="edge6" class="edge"><title>STATIONARY_DIST_MARKOV&#45;&gt;DETAILED_BALANCE</title>
+<path fill="none" stroke="black" d="M201.034,-71.6966C210.545,-63.0503 222.207,-52.4486 232.57,-43.027"/>
+<polygon fill="black" stroke="black" points="235.14,-45.4209 240.185,-36.1043 230.431,-40.2413 235.14,-45.4209"/>
 </g>
-<!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
-<g id="node5" class="node"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
-<g id="a_node5"><a xlink:href="TRANSITION_MATRIX_OF_MARKOV_CHAIN.html" xlink:title=" Markovian transition matrix " target="_top">
-<path fill="none" stroke="black" d="M333.25,-180C333.25,-180 178.75,-180 178.75,-180 172.75,-180 166.75,-174 166.75,-168 166.75,-168 166.75,-156 166.75,-156 166.75,-150 172.75,-144 178.75,-144 178.75,-144 333.25,-144 333.25,-144 339.25,-144 345.25,-150 345.25,-156 345.25,-156 345.25,-168 345.25,-168 345.25,-174 339.25,-180 333.25,-180"/>
-<text text-anchor="start" x="174.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Markovian transition matrix </text>
-</a>
-</g>
-</g>
-<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
 <!-- EIGENVECTORS -->
-<g id="node4" class="node"><title>EIGENVECTORS</title>
-<g id="a_node4"><a xlink:href="EIGENVECTORS.html" xlink:title=" Eigendecomposition " target="_top">
-<path fill="none" stroke="black" d="M430,-252C430,-252 318,-252 318,-252 312,-252 306,-246 306,-240 306,-240 306,-228 306,-228 306,-222 312,-216 318,-216 318,-216 430,-216 430,-216 436,-216 442,-222 442,-228 442,-228 442,-240 442,-240 442,-246 436,-252 430,-252"/>
-<text text-anchor="start" x="314" y="-230.3" font-family="Times,serif" font-size="14.00"> Eigendecomposition </text>
+<g id="node3" class="node"><title>EIGENVECTORS</title>
+<g id="a_node3"><a xlink:href="EIGENVECTORS.html" xlink:title=" Eigendecomposition " target="_top">
+<path fill="none" stroke="black" d="M124,-252C124,-252 12,-252 12,-252 6,-252 0,-246 0,-240 0,-240 0,-228 0,-228 0,-222 6,-216 12,-216 12,-216 124,-216 124,-216 130,-216 136,-222 136,-228 136,-228 136,-240 136,-240 136,-246 130,-252 124,-252"/>
+<text text-anchor="start" x="8" y="-230.3" font-family="Times,serif" font-size="14.00"> Eigendecomposition </text>
 </a>
 </g>
 </g>
 <!-- EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge3" class="edge"><title>EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M374.217,-215.854C373.611,-196.535 369.964,-165.086 354,-144 343.993,-130.782 329.701,-120.474 315.115,-112.609"/>
-<polygon fill="black" stroke="black" points="316.536,-109.406 306.032,-108.024 313.381,-115.655 316.536,-109.406"/>
+<g id="edge2" class="edge"><title>EIGENVECTORS&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<path fill="none" stroke="black" d="M66.6413,-215.914C65.9988,-196.649 67.7293,-165.25 83,-144 92.5629,-130.693 106.519,-120.41 120.952,-112.601"/>
+<polygon fill="black" stroke="black" points="122.614,-115.683 129.966,-108.053 119.461,-109.433 122.614,-115.683"/>
+</g>
+<!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
+<g id="node5" class="node"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
+<g id="a_node5"><a xlink:href="TRANSITION_MATRIX_OF_MARKOV_CHAIN.html" xlink:title=" Markovian transition matrix " target="_top">
+<path fill="none" stroke="black" d="M259.25,-180C259.25,-180 104.75,-180 104.75,-180 98.75,-180 92.75,-174 92.75,-168 92.75,-168 92.75,-156 92.75,-156 92.75,-150 98.75,-144 104.75,-144 104.75,-144 259.25,-144 259.25,-144 265.25,-144 271.25,-150 271.25,-156 271.25,-156 271.25,-168 271.25,-168 271.25,-174 265.25,-180 259.25,-180"/>
+<text text-anchor="start" x="100.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Markovian transition matrix </text>
+</a>
+</g>
+</g>
+<!-- EIGENVECTORS&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
+<!-- TRANSIENT_RECURRENT_STATES -->
+<g id="node4" class="node"><title>TRANSIENT_RECURRENT_STATES</title>
+<g id="a_node4"><a xlink:href="TRANSIENT_RECURRENT_STATES.html" xlink:title=" Transient and recurrent states in Markov chains " target="_top">
+<path fill="none" stroke="black" d="M430,-252C430,-252 170,-252 170,-252 164,-252 158,-246 158,-240 158,-240 158,-228 158,-228 158,-222 164,-216 170,-216 170,-216 430,-216 430,-216 436,-216 442,-222 442,-228 442,-228 442,-240 442,-240 442,-246 436,-252 430,-252"/>
+<text text-anchor="start" x="166" y="-230.3" font-family="Times,serif" font-size="14.00"> Transient and recurrent states in Markov chains </text>
+</a>
+</g>
+</g>
+<!-- TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV -->
+<g id="edge3" class="edge"><title>TRANSIENT_RECURRENT_STATES&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<path fill="none" stroke="black" d="M300.217,-215.854C299.611,-196.535 295.964,-165.086 280,-144 269.993,-130.782 255.701,-120.474 241.115,-112.609"/>
+<polygon fill="black" stroke="black" points="242.536,-109.406 232.032,-108.024 239.381,-115.655 242.536,-109.406"/>
 </g>
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV -->
 <g id="edge4" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M256,-143.697C256,-135.983 256,-126.712 256,-118.112"/>
-<polygon fill="black" stroke="black" points="259.5,-118.104 256,-108.104 252.5,-118.104 259.5,-118.104"/>
+<path fill="none" stroke="black" d="M182,-143.697C182,-135.983 182,-126.712 182,-118.112"/>
+<polygon fill="black" stroke="black" points="185.5,-118.104 182,-108.104 178.5,-118.104 185.5,-118.104"/>
 </g>
 </g>
 </svg>

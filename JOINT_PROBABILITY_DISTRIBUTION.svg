@@ -11,62 +11,62 @@
 <!-- JOINT_PROBABILITY_DISTRIBUTION -->
 <g id="node1" class="node"><title>JOINT_PROBABILITY_DISTRIBUTION</title>
 <g id="a_node1"><a xlink:href="JOINT_PROBABILITY_DISTRIBUTION.html" xlink:title=" Joint probability distribution " target="_top">
-<path fill="none" stroke="blue" stroke-width="2" d="M334.25,-108C334.25,-108 179.75,-108 179.75,-108 173.75,-108 167.75,-102 167.75,-96 167.75,-96 167.75,-84 167.75,-84 167.75,-78 173.75,-72 179.75,-72 179.75,-72 334.25,-72 334.25,-72 340.25,-72 346.25,-78 346.25,-84 346.25,-84 346.25,-96 346.25,-96 346.25,-102 340.25,-108 334.25,-108"/>
-<text text-anchor="start" x="175.5" y="-86.3" font-family="Times,serif" font-size="14.00"> Joint probability distribution </text>
+<path fill="none" stroke="blue" stroke-width="2" d="M294.25,-108C294.25,-108 139.75,-108 139.75,-108 133.75,-108 127.75,-102 127.75,-96 127.75,-96 127.75,-84 127.75,-84 127.75,-78 133.75,-72 139.75,-72 139.75,-72 294.25,-72 294.25,-72 300.25,-72 306.25,-78 306.25,-84 306.25,-84 306.25,-96 306.25,-96 306.25,-102 300.25,-108 294.25,-108"/>
+<text text-anchor="start" x="135.5" y="-86.3" font-family="Times,serif" font-size="14.00"> Joint probability distribution </text>
 </a>
 </g>
-</g>
-<!-- CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
-<g id="node2" class="node"><title>CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
-<g id="a_node2"><a xlink:href="CAUCHY_SCHWARTZ_INEQUALITY_STATS.html" xlink:title=" The Cauchy Schwartz Inequality in Statistics " target="_top">
-<path fill="none" stroke="black" d="M256.25,-36C256.25,-36 11.75,-36 11.75,-36 5.75,-36 -0.25,-30 -0.25,-24 -0.25,-24 -0.25,-12 -0.25,-12 -0.25,-6 5.75,-0 11.75,-0 11.75,-0 256.25,-0 256.25,-0 262.25,-0 268.25,-6 268.25,-12 268.25,-12 268.25,-24 268.25,-24 268.25,-30 262.25,-36 256.25,-36"/>
-<text text-anchor="start" x="7.5" y="-14.3" font-family="Times,serif" font-size="14.00"> The Cauchy Schwartz Inequality in Statistics </text>
-</a>
-</g>
-</g>
-<!-- JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
-<g id="edge1" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
-<path fill="none" stroke="black" d="M226.911,-71.8761C210.68,-62.6388 190.458,-51.1308 173.029,-41.2116"/>
-<polygon fill="black" stroke="black" points="174.627,-38.0941 164.205,-36.1898 171.165,-44.1779 174.627,-38.0941"/>
 </g>
 <!-- INDEPENDENT_RANDOM_VARIABLES -->
-<g id="node4" class="node"><title>INDEPENDENT_RANDOM_VARIABLES</title>
-<g id="a_node4"><a xlink:href="INDEPENDENT_RANDOM_VARIABLES.html" xlink:title=" Independent random variables " target="_top">
-<path fill="none" stroke="black" d="M463.25,-36C463.25,-36 298.75,-36 298.75,-36 292.75,-36 286.75,-30 286.75,-24 286.75,-24 286.75,-12 286.75,-12 286.75,-6 292.75,-0 298.75,-0 298.75,-0 463.25,-0 463.25,-0 469.25,-0 475.25,-6 475.25,-12 475.25,-12 475.25,-24 475.25,-24 475.25,-30 469.25,-36 463.25,-36"/>
-<text text-anchor="start" x="294.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Independent random variables </text>
+<g id="node3" class="node"><title>INDEPENDENT_RANDOM_VARIABLES</title>
+<g id="a_node3"><a xlink:href="INDEPENDENT_RANDOM_VARIABLES.html" xlink:title=" Independent random variables " target="_top">
+<path fill="none" stroke="black" d="M176.25,-36C176.25,-36 11.75,-36 11.75,-36 5.75,-36 -0.25,-30 -0.25,-24 -0.25,-24 -0.25,-12 -0.25,-12 -0.25,-6 5.75,-0 11.75,-0 11.75,-0 176.25,-0 176.25,-0 182.25,-0 188.25,-6 188.25,-12 188.25,-12 188.25,-24 188.25,-24 188.25,-30 182.25,-36 176.25,-36"/>
+<text text-anchor="start" x="7.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Independent random variables </text>
 </a>
 </g>
 </g>
 <!-- JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;INDEPENDENT_RANDOM_VARIABLES -->
-<g id="edge3" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;INDEPENDENT_RANDOM_VARIABLES</title>
-<path fill="none" stroke="black" d="M287.334,-71.8761C303.697,-62.6388 324.083,-51.1308 341.654,-41.2116"/>
-<polygon fill="black" stroke="black" points="343.562,-44.1536 350.55,-36.1898 340.121,-38.0579 343.562,-44.1536"/>
+<g id="edge2" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;INDEPENDENT_RANDOM_VARIABLES</title>
+<path fill="none" stroke="black" d="M186.911,-71.8761C170.68,-62.6388 150.458,-51.1308 133.029,-41.2116"/>
+<polygon fill="black" stroke="black" points="134.627,-38.0941 124.205,-36.1898 131.165,-44.1779 134.627,-38.0941"/>
 </g>
-<!-- RANDOM_VARIABLES -->
-<g id="node3" class="node"><title>RANDOM_VARIABLES</title>
-<g id="a_node3"><a xlink:href="RANDOM_VARIABLES.html" xlink:title=" Random variables " target="_top">
-<path fill="none" stroke="black" d="M229.25,-180C229.25,-180 130.75,-180 130.75,-180 124.75,-180 118.75,-174 118.75,-168 118.75,-168 118.75,-156 118.75,-156 118.75,-150 124.75,-144 130.75,-144 130.75,-144 229.25,-144 229.25,-144 235.25,-144 241.25,-150 241.25,-156 241.25,-156 241.25,-168 241.25,-168 241.25,-174 235.25,-180 229.25,-180"/>
-<text text-anchor="start" x="126.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Random variables </text>
+<!-- CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
+<g id="node4" class="node"><title>CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
+<g id="a_node4"><a xlink:href="CAUCHY_SCHWARTZ_INEQUALITY_STATS.html" xlink:title=" The Cauchy Schwartz Inequality in Statistics " target="_top">
+<path fill="none" stroke="black" d="M463.25,-36C463.25,-36 218.75,-36 218.75,-36 212.75,-36 206.75,-30 206.75,-24 206.75,-24 206.75,-12 206.75,-12 206.75,-6 212.75,-0 218.75,-0 218.75,-0 463.25,-0 463.25,-0 469.25,-0 475.25,-6 475.25,-12 475.25,-12 475.25,-24 475.25,-24 475.25,-30 469.25,-36 463.25,-36"/>
+<text text-anchor="start" x="214.5" y="-14.3" font-family="Times,serif" font-size="14.00"> The Cauchy Schwartz Inequality in Statistics </text>
 </a>
 </g>
 </g>
-<!-- RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION -->
-<g id="edge2" class="edge"><title>RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
-<path fill="none" stroke="black" d="M199.034,-143.697C208.545,-135.05 220.207,-124.449 230.57,-115.027"/>
-<polygon fill="black" stroke="black" points="233.14,-117.421 238.185,-108.104 228.431,-112.241 233.14,-117.421"/>
+<!-- JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS -->
+<g id="edge3" class="edge"><title>JOINT_PROBABILITY_DISTRIBUTION&#45;&gt;CAUCHY_SCHWARTZ_INEQUALITY_STATS</title>
+<path fill="none" stroke="black" d="M247.334,-71.8761C263.697,-62.6388 284.083,-51.1308 301.654,-41.2116"/>
+<polygon fill="black" stroke="black" points="303.562,-44.1536 310.55,-36.1898 300.121,-38.0579 303.562,-44.1536"/>
 </g>
 <!-- CONDITIONAL_PROBABILITY -->
-<g id="node5" class="node"><title>CONDITIONAL_PROBABILITY</title>
-<g id="a_node5"><a xlink:href="CONDITIONAL_PROBABILITY.html" xlink:title=" Conditional probability " target="_top">
-<path fill="none" stroke="black" d="M398.25,-180C398.25,-180 271.75,-180 271.75,-180 265.75,-180 259.75,-174 259.75,-168 259.75,-168 259.75,-156 259.75,-156 259.75,-150 265.75,-144 271.75,-144 271.75,-144 398.25,-144 398.25,-144 404.25,-144 410.25,-150 410.25,-156 410.25,-156 410.25,-168 410.25,-168 410.25,-174 404.25,-180 398.25,-180"/>
-<text text-anchor="start" x="267.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Conditional probability </text>
+<g id="node2" class="node"><title>CONDITIONAL_PROBABILITY</title>
+<g id="a_node2"><a xlink:href="CONDITIONAL_PROBABILITY.html" xlink:title=" Conditional probability " target="_top">
+<path fill="none" stroke="black" d="M203.25,-180C203.25,-180 76.75,-180 76.75,-180 70.75,-180 64.75,-174 64.75,-168 64.75,-168 64.75,-156 64.75,-156 64.75,-150 70.75,-144 76.75,-144 76.75,-144 203.25,-144 203.25,-144 209.25,-144 215.25,-150 215.25,-156 215.25,-156 215.25,-168 215.25,-168 215.25,-174 209.25,-180 203.25,-180"/>
+<text text-anchor="start" x="72.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Conditional probability </text>
 </a>
 </g>
 </g>
 <!-- CONDITIONAL_PROBABILITY&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION -->
-<g id="edge4" class="edge"><title>CONDITIONAL_PROBABILITY&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
-<path fill="none" stroke="black" d="M315.719,-143.697C306.085,-135.05 294.271,-124.449 283.773,-115.027"/>
-<polygon fill="black" stroke="black" points="285.839,-112.179 276.059,-108.104 281.164,-117.388 285.839,-112.179"/>
+<g id="edge1" class="edge"><title>CONDITIONAL_PROBABILITY&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
+<path fill="none" stroke="black" d="M159.034,-143.697C168.545,-135.05 180.207,-124.449 190.57,-115.027"/>
+<polygon fill="black" stroke="black" points="193.14,-117.421 198.185,-108.104 188.431,-112.241 193.14,-117.421"/>
+</g>
+<!-- RANDOM_VARIABLES -->
+<g id="node5" class="node"><title>RANDOM_VARIABLES</title>
+<g id="a_node5"><a xlink:href="RANDOM_VARIABLES.html" xlink:title=" Random variables " target="_top">
+<path fill="none" stroke="black" d="M344.25,-180C344.25,-180 245.75,-180 245.75,-180 239.75,-180 233.75,-174 233.75,-168 233.75,-168 233.75,-156 233.75,-156 233.75,-150 239.75,-144 245.75,-144 245.75,-144 344.25,-144 344.25,-144 350.25,-144 356.25,-150 356.25,-156 356.25,-156 356.25,-168 356.25,-168 356.25,-174 350.25,-180 344.25,-180"/>
+<text text-anchor="start" x="241.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Random variables </text>
+</a>
+</g>
+</g>
+<!-- RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION -->
+<g id="edge4" class="edge"><title>RANDOM_VARIABLES&#45;&gt;JOINT_PROBABILITY_DISTRIBUTION</title>
+<path fill="none" stroke="black" d="M275.719,-143.697C266.085,-135.05 254.271,-124.449 243.773,-115.027"/>
+<polygon fill="black" stroke="black" points="245.839,-112.179 236.059,-108.104 241.164,-117.388 245.839,-112.179"/>
 </g>
 </g>
 </svg>

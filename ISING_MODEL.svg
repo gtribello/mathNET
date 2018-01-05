@@ -11,49 +11,49 @@
 <!-- ISING_MODEL -->
 <g id="node1" class="node"><title>ISING_MODEL</title>
 <g id="a_node1"><a xlink:href="ISING_MODEL.html" xlink:title=" The Ising Model " target="_top">
-<path fill="none" stroke="blue" stroke-width="2" d="M245.5,-108C245.5,-108 154.5,-108 154.5,-108 148.5,-108 142.5,-102 142.5,-96 142.5,-96 142.5,-84 142.5,-84 142.5,-78 148.5,-72 154.5,-72 154.5,-72 245.5,-72 245.5,-72 251.5,-72 257.5,-78 257.5,-84 257.5,-84 257.5,-96 257.5,-96 257.5,-102 251.5,-108 245.5,-108"/>
-<text text-anchor="start" x="150" y="-86.3" font-family="Times,serif" font-size="14.00"> The Ising Model </text>
+<path fill="none" stroke="blue" stroke-width="2" d="M246.5,-108C246.5,-108 155.5,-108 155.5,-108 149.5,-108 143.5,-102 143.5,-96 143.5,-96 143.5,-84 143.5,-84 143.5,-78 149.5,-72 155.5,-72 155.5,-72 246.5,-72 246.5,-72 252.5,-72 258.5,-78 258.5,-84 258.5,-84 258.5,-96 258.5,-96 258.5,-102 252.5,-108 246.5,-108"/>
+<text text-anchor="start" x="151" y="-86.3" font-family="Times,serif" font-size="14.00"> The Ising Model </text>
 </a>
 </g>
-</g>
-<!-- MEAN_FIELD_MODELS -->
-<g id="node3" class="node"><title>MEAN_FIELD_MODELS</title>
-<g id="a_node3"><a xlink:href="MEAN_FIELD_MODELS.html" xlink:title=" The mean field approximation " target="_top">
-<path fill="none" stroke="black" d="M178.25,-36C178.25,-36 11.75,-36 11.75,-36 5.75,-36 -0.25,-30 -0.25,-24 -0.25,-24 -0.25,-12 -0.25,-12 -0.25,-6 5.75,-0 11.75,-0 11.75,-0 178.25,-0 178.25,-0 184.25,-0 190.25,-6 190.25,-12 190.25,-12 190.25,-24 190.25,-24 190.25,-30 184.25,-36 178.25,-36"/>
-<text text-anchor="start" x="7.5" y="-14.3" font-family="Times,serif" font-size="14.00"> The mean field approximation </text>
-</a>
-</g>
-</g>
-<!-- ISING_MODEL&#45;&gt;MEAN_FIELD_MODELS -->
-<g id="edge2" class="edge"><title>ISING_MODEL&#45;&gt;MEAN_FIELD_MODELS</title>
-<path fill="none" stroke="black" d="M174.314,-71.8761C160.712,-62.8083 143.828,-51.5523 129.139,-41.7592"/>
-<polygon fill="black" stroke="black" points="131.047,-38.8246 120.785,-36.1898 127.164,-44.649 131.047,-38.8246"/>
 </g>
 <!-- PHASE_TRANSITIONS -->
-<g id="node4" class="node"><title>PHASE_TRANSITIONS</title>
-<g id="a_node4"><a xlink:href="PHASE_TRANSITIONS.html" xlink:title=" The theory of phase transitions " target="_top">
-<path fill="none" stroke="black" d="M389.25,-36C389.25,-36 220.75,-36 220.75,-36 214.75,-36 208.75,-30 208.75,-24 208.75,-24 208.75,-12 208.75,-12 208.75,-6 214.75,-0 220.75,-0 220.75,-0 389.25,-0 389.25,-0 395.25,-0 401.25,-6 401.25,-12 401.25,-12 401.25,-24 401.25,-24 401.25,-30 395.25,-36 389.25,-36"/>
-<text text-anchor="start" x="216.5" y="-14.3" font-family="Times,serif" font-size="14.00"> The theory of phase transitions </text>
+<g id="node3" class="node"><title>PHASE_TRANSITIONS</title>
+<g id="a_node3"><a xlink:href="PHASE_TRANSITIONS.html" xlink:title=" The theory of phase transitions " target="_top">
+<path fill="none" stroke="black" d="M180.25,-36C180.25,-36 11.75,-36 11.75,-36 5.75,-36 -0.25,-30 -0.25,-24 -0.25,-24 -0.25,-12 -0.25,-12 -0.25,-6 5.75,-0 11.75,-0 11.75,-0 180.25,-0 180.25,-0 186.25,-0 192.25,-6 192.25,-12 192.25,-12 192.25,-24 192.25,-24 192.25,-30 186.25,-36 180.25,-36"/>
+<text text-anchor="start" x="7.5" y="-14.3" font-family="Times,serif" font-size="14.00"> The theory of phase transitions </text>
 </a>
 </g>
 </g>
 <!-- ISING_MODEL&#45;&gt;PHASE_TRANSITIONS -->
-<g id="edge3" class="edge"><title>ISING_MODEL&#45;&gt;PHASE_TRANSITIONS</title>
-<path fill="none" stroke="black" d="M225.686,-71.8761C239.288,-62.8083 256.172,-51.5523 270.861,-41.7592"/>
-<polygon fill="black" stroke="black" points="272.836,-44.649 279.215,-36.1898 268.953,-38.8246 272.836,-44.649"/>
+<g id="edge2" class="edge"><title>ISING_MODEL&#45;&gt;PHASE_TRANSITIONS</title>
+<path fill="none" stroke="black" d="M175.314,-71.8761C161.712,-62.8083 144.828,-51.5523 130.139,-41.7592"/>
+<polygon fill="black" stroke="black" points="132.047,-38.8246 121.785,-36.1898 128.164,-44.649 132.047,-38.8246"/>
+</g>
+<!-- MEAN_FIELD_MODELS -->
+<g id="node4" class="node"><title>MEAN_FIELD_MODELS</title>
+<g id="a_node4"><a xlink:href="MEAN_FIELD_MODELS.html" xlink:title=" The mean field approximation " target="_top">
+<path fill="none" stroke="black" d="M389.25,-36C389.25,-36 222.75,-36 222.75,-36 216.75,-36 210.75,-30 210.75,-24 210.75,-24 210.75,-12 210.75,-12 210.75,-6 216.75,-0 222.75,-0 222.75,-0 389.25,-0 389.25,-0 395.25,-0 401.25,-6 401.25,-12 401.25,-12 401.25,-24 401.25,-24 401.25,-30 395.25,-36 389.25,-36"/>
+<text text-anchor="start" x="218.5" y="-14.3" font-family="Times,serif" font-size="14.00"> The mean field approximation </text>
+</a>
+</g>
+</g>
+<!-- ISING_MODEL&#45;&gt;MEAN_FIELD_MODELS -->
+<g id="edge3" class="edge"><title>ISING_MODEL&#45;&gt;MEAN_FIELD_MODELS</title>
+<path fill="none" stroke="black" d="M226.686,-71.8761C240.288,-62.8083 257.172,-51.5523 271.861,-41.7592"/>
+<polygon fill="black" stroke="black" points="273.836,-44.649 280.215,-36.1898 269.953,-38.8246 273.836,-44.649"/>
 </g>
 <!-- CANONICAL_ENSEMBLE -->
 <g id="node2" class="node"><title>CANONICAL_ENSEMBLE</title>
 <g id="a_node2"><a xlink:href="CANONICAL_ENSEMBLE.html" xlink:title=" The canonical ensemble " target="_top">
-<path fill="none" stroke="black" d="M266,-180C266,-180 134,-180 134,-180 128,-180 122,-174 122,-168 122,-168 122,-156 122,-156 122,-150 128,-144 134,-144 134,-144 266,-144 266,-144 272,-144 278,-150 278,-156 278,-156 278,-168 278,-168 278,-174 272,-180 266,-180"/>
-<text text-anchor="start" x="130" y="-158.3" font-family="Times,serif" font-size="14.00"> The canonical ensemble </text>
+<path fill="none" stroke="black" d="M267,-180C267,-180 135,-180 135,-180 129,-180 123,-174 123,-168 123,-168 123,-156 123,-156 123,-150 129,-144 135,-144 135,-144 267,-144 267,-144 273,-144 279,-150 279,-156 279,-156 279,-168 279,-168 279,-174 273,-180 267,-180"/>
+<text text-anchor="start" x="131" y="-158.3" font-family="Times,serif" font-size="14.00"> The canonical ensemble </text>
 </a>
 </g>
 </g>
 <!-- CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL -->
 <g id="edge1" class="edge"><title>CANONICAL_ENSEMBLE&#45;&gt;ISING_MODEL</title>
-<path fill="none" stroke="black" d="M200,-143.697C200,-135.983 200,-126.712 200,-118.112"/>
-<polygon fill="black" stroke="black" points="203.5,-118.104 200,-108.104 196.5,-118.104 203.5,-118.104"/>
+<path fill="none" stroke="black" d="M201,-143.697C201,-135.983 201,-126.712 201,-118.112"/>
+<polygon fill="black" stroke="black" points="204.5,-118.104 201,-108.104 197.5,-118.104 204.5,-118.104"/>
 </g>
 </g>
 </svg>

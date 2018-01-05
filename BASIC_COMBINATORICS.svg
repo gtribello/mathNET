@@ -11,36 +11,36 @@
 <!-- BASIC_COMBINATORICS -->
 <g id="node1" class="node"><title>BASIC_COMBINATORICS</title>
 <g id="a_node1"><a xlink:href="BASIC_COMBINATORICS.html" xlink:title=" Combinatorics " target="_top">
-<path fill="none" stroke="blue" stroke-width="2" d="M252,-108C252,-108 172,-108 172,-108 166,-108 160,-102 160,-96 160,-96 160,-84 160,-84 160,-78 166,-72 172,-72 172,-72 252,-72 252,-72 258,-72 264,-78 264,-84 264,-84 264,-96 264,-96 264,-102 258,-108 252,-108"/>
-<text text-anchor="start" x="168" y="-86.3" font-family="Times,serif" font-size="14.00"> Combinatorics </text>
+<path fill="none" stroke="blue" stroke-width="2" d="M229,-108C229,-108 149,-108 149,-108 143,-108 137,-102 137,-96 137,-96 137,-84 137,-84 137,-78 143,-72 149,-72 149,-72 229,-72 229,-72 235,-72 241,-78 241,-84 241,-84 241,-96 241,-96 241,-102 235,-108 229,-108"/>
+<text text-anchor="start" x="145" y="-86.3" font-family="Times,serif" font-size="14.00"> Combinatorics </text>
 </a>
 </g>
-</g>
-<!-- ADSORPTION -->
-<g id="node2" class="node"><title>ADSORPTION</title>
-<g id="a_node2"><a xlink:href="ADSORPTION.html" xlink:title=" Statistical mechanics of adsorption " target="_top">
-<path fill="none" stroke="black" d="M202.25,-36C202.25,-36 11.75,-36 11.75,-36 5.75,-36 -0.25,-30 -0.25,-24 -0.25,-24 -0.25,-12 -0.25,-12 -0.25,-6 5.75,-0 11.75,-0 11.75,-0 202.25,-0 202.25,-0 208.25,-0 214.25,-6 214.25,-12 214.25,-12 214.25,-24 214.25,-24 214.25,-30 208.25,-36 202.25,-36"/>
-<text text-anchor="start" x="7.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Statistical mechanics of adsorption </text>
-</a>
-</g>
-</g>
-<!-- BASIC_COMBINATORICS&#45;&gt;ADSORPTION -->
-<g id="edge1" class="edge"><title>BASIC_COMBINATORICS&#45;&gt;ADSORPTION</title>
-<path fill="none" stroke="black" d="M186.314,-71.8761C172.712,-62.8083 155.828,-51.5523 141.139,-41.7592"/>
-<polygon fill="black" stroke="black" points="143.047,-38.8246 132.785,-36.1898 139.164,-44.649 143.047,-38.8246"/>
 </g>
 <!-- BINOMIAL_RANDOM_VARIABLE -->
-<g id="node3" class="node"><title>BINOMIAL_RANDOM_VARIABLE</title>
-<g id="a_node3"><a xlink:href="BINOMIAL_RANDOM_VARIABLE.html" xlink:title=" Binomial random variable " target="_top">
-<path fill="none" stroke="black" d="M388.5,-36C388.5,-36 245.5,-36 245.5,-36 239.5,-36 233.5,-30 233.5,-24 233.5,-24 233.5,-12 233.5,-12 233.5,-6 239.5,-0 245.5,-0 245.5,-0 388.5,-0 388.5,-0 394.5,-0 400.5,-6 400.5,-12 400.5,-12 400.5,-24 400.5,-24 400.5,-30 394.5,-36 388.5,-36"/>
-<text text-anchor="start" x="241" y="-14.3" font-family="Times,serif" font-size="14.00"> Binomial random variable </text>
+<g id="node2" class="node"><title>BINOMIAL_RANDOM_VARIABLE</title>
+<g id="a_node2"><a xlink:href="BINOMIAL_RANDOM_VARIABLE.html" xlink:title=" Binomial random variable " target="_top">
+<path fill="none" stroke="black" d="M155.5,-36C155.5,-36 12.5,-36 12.5,-36 6.5,-36 0.5,-30 0.5,-24 0.5,-24 0.5,-12 0.5,-12 0.5,-6 6.5,-0 12.5,-0 12.5,-0 155.5,-0 155.5,-0 161.5,-0 167.5,-6 167.5,-12 167.5,-12 167.5,-24 167.5,-24 167.5,-30 161.5,-36 155.5,-36"/>
+<text text-anchor="start" x="8" y="-14.3" font-family="Times,serif" font-size="14.00"> Binomial random variable </text>
 </a>
 </g>
 </g>
 <!-- BASIC_COMBINATORICS&#45;&gt;BINOMIAL_RANDOM_VARIABLE -->
-<g id="edge2" class="edge"><title>BASIC_COMBINATORICS&#45;&gt;BINOMIAL_RANDOM_VARIABLE</title>
-<path fill="none" stroke="black" d="M237.686,-71.8761C251.288,-62.8083 268.172,-51.5523 282.861,-41.7592"/>
-<polygon fill="black" stroke="black" points="284.836,-44.649 291.215,-36.1898 280.953,-38.8246 284.836,-44.649"/>
+<g id="edge1" class="edge"><title>BASIC_COMBINATORICS&#45;&gt;BINOMIAL_RANDOM_VARIABLE</title>
+<path fill="none" stroke="black" d="M163.314,-71.8761C149.712,-62.8083 132.828,-51.5523 118.139,-41.7592"/>
+<polygon fill="black" stroke="black" points="120.047,-38.8246 109.785,-36.1898 116.164,-44.649 120.047,-38.8246"/>
+</g>
+<!-- ADSORPTION -->
+<g id="node3" class="node"><title>ADSORPTION</title>
+<g id="a_node3"><a xlink:href="ADSORPTION.html" xlink:title=" Statistical mechanics of adsorption " target="_top">
+<path fill="none" stroke="black" d="M389.25,-36C389.25,-36 198.75,-36 198.75,-36 192.75,-36 186.75,-30 186.75,-24 186.75,-24 186.75,-12 186.75,-12 186.75,-6 192.75,-0 198.75,-0 198.75,-0 389.25,-0 389.25,-0 395.25,-0 401.25,-6 401.25,-12 401.25,-12 401.25,-24 401.25,-24 401.25,-30 395.25,-36 389.25,-36"/>
+<text text-anchor="start" x="194.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Statistical mechanics of adsorption </text>
+</a>
+</g>
+</g>
+<!-- BASIC_COMBINATORICS&#45;&gt;ADSORPTION -->
+<g id="edge2" class="edge"><title>BASIC_COMBINATORICS&#45;&gt;ADSORPTION</title>
+<path fill="none" stroke="black" d="M214.686,-71.8761C228.288,-62.8083 245.172,-51.5523 259.861,-41.7592"/>
+<polygon fill="black" stroke="black" points="261.836,-44.649 268.215,-36.1898 257.953,-38.8246 261.836,-44.649"/>
 </g>
 </g>
 </svg>

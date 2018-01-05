@@ -11,62 +11,62 @@
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
 <g id="node1" class="node"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
 <g id="a_node1"><a xlink:href="TRANSITION_MATRIX_OF_MARKOV_CHAIN.html" xlink:title=" Markovian transition matrix " target="_top">
-<path fill="none" stroke="blue" stroke-width="2" d="M292.25,-108C292.25,-108 137.75,-108 137.75,-108 131.75,-108 125.75,-102 125.75,-96 125.75,-96 125.75,-84 125.75,-84 125.75,-78 131.75,-72 137.75,-72 137.75,-72 292.25,-72 292.25,-72 298.25,-72 304.25,-78 304.25,-84 304.25,-84 304.25,-96 304.25,-96 304.25,-102 298.25,-108 292.25,-108"/>
-<text text-anchor="start" x="133.5" y="-86.3" font-family="Times,serif" font-size="14.00"> Markovian transition matrix </text>
+<path fill="none" stroke="blue" stroke-width="2" d="M256.25,-108C256.25,-108 101.75,-108 101.75,-108 95.75,-108 89.75,-102 89.75,-96 89.75,-96 89.75,-84 89.75,-84 89.75,-78 95.75,-72 101.75,-72 101.75,-72 256.25,-72 256.25,-72 262.25,-72 268.25,-78 268.25,-84 268.25,-84 268.25,-96 268.25,-96 268.25,-102 262.25,-108 256.25,-108"/>
+<text text-anchor="start" x="97.5" y="-86.3" font-family="Times,serif" font-size="14.00"> Markovian transition matrix </text>
 </a>
 </g>
-</g>
-<!-- CHAPMAN_KOLMOGOROV_RELATION -->
-<g id="node3" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
-<g id="a_node3"><a xlink:href="CHAPMAN_KOLMOGOROV_RELATION.html" xlink:title=" The Chapman Kolmogorov Relation " target="_top">
-<path fill="none" stroke="black" d="M211.5,-36C211.5,-36 12.5,-36 12.5,-36 6.5,-36 0.5,-30 0.5,-24 0.5,-24 0.5,-12 0.5,-12 0.5,-6 6.5,-0 12.5,-0 12.5,-0 211.5,-0 211.5,-0 217.5,-0 223.5,-6 223.5,-12 223.5,-12 223.5,-24 223.5,-24 223.5,-30 217.5,-36 211.5,-36"/>
-<text text-anchor="start" x="8" y="-14.3" font-family="Times,serif" font-size="14.00"> The Chapman Kolmogorov Relation </text>
-</a>
-</g>
-</g>
-<!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION -->
-<g id="edge2" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
-<path fill="none" stroke="black" d="M189.803,-71.8761C176.586,-62.8931 160.208,-51.7625 145.893,-42.0341"/>
-<polygon fill="black" stroke="black" points="147.532,-38.9159 137.293,-36.1898 143.597,-44.7055 147.532,-38.9159"/>
 </g>
 <!-- STATIONARY_DIST_MARKOV -->
-<g id="node4" class="node"><title>STATIONARY_DIST_MARKOV</title>
-<g id="a_node4"><a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title=" Ergodic Markov chains " target="_top">
-<path fill="none" stroke="black" d="M382,-36C382,-36 254,-36 254,-36 248,-36 242,-30 242,-24 242,-24 242,-12 242,-12 242,-6 248,-0 254,-0 254,-0 382,-0 382,-0 388,-0 394,-6 394,-12 394,-12 394,-24 394,-24 394,-30 388,-36 382,-36"/>
-<text text-anchor="start" x="250" y="-14.3" font-family="Times,serif" font-size="14.00"> Ergodic Markov chains </text>
+<g id="node3" class="node"><title>STATIONARY_DIST_MARKOV</title>
+<g id="a_node3"><a xlink:href="STATIONARY_DIST_MARKOV.html" xlink:title=" Ergodic Markov chains " target="_top">
+<path fill="none" stroke="black" d="M140,-36C140,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,-0 12,-0 12,-0 140,-0 140,-0 146,-0 152,-6 152,-12 152,-12 152,-24 152,-24 152,-30 146,-36 140,-36"/>
+<text text-anchor="start" x="8" y="-14.3" font-family="Times,serif" font-size="14.00"> Ergodic Markov chains </text>
 </a>
 </g>
 </g>
 <!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV -->
-<g id="edge3" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV</title>
-<path fill="none" stroke="black" d="M240.197,-71.8761C253.414,-62.8931 269.792,-51.7625 284.107,-42.0341"/>
-<polygon fill="black" stroke="black" points="286.403,-44.7055 292.707,-36.1898 282.468,-38.9159 286.403,-44.7055"/>
+<g id="edge2" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;STATIONARY_DIST_MARKOV</title>
+<path fill="none" stroke="black" d="M153.803,-71.8761C140.586,-62.8931 124.208,-51.7625 109.893,-42.0341"/>
+<polygon fill="black" stroke="black" points="111.532,-38.9159 101.293,-36.1898 107.597,-44.7055 111.532,-38.9159"/>
 </g>
-<!-- MARKOV_PROPERTY -->
-<g id="node2" class="node"><title>MARKOV_PROPERTY</title>
-<g id="a_node2"><a xlink:href="MARKOV_PROPERTY.html" xlink:title=" The Markov Property " target="_top">
-<path fill="none" stroke="black" d="M191.25,-180C191.25,-180 72.75,-180 72.75,-180 66.75,-180 60.75,-174 60.75,-168 60.75,-168 60.75,-156 60.75,-156 60.75,-150 66.75,-144 72.75,-144 72.75,-144 191.25,-144 191.25,-144 197.25,-144 203.25,-150 203.25,-156 203.25,-156 203.25,-168 203.25,-168 203.25,-174 197.25,-180 191.25,-180"/>
-<text text-anchor="start" x="68.5" y="-158.3" font-family="Times,serif" font-size="14.00"> The Markov Property </text>
+<!-- CHAPMAN_KOLMOGOROV_RELATION -->
+<g id="node4" class="node"><title>CHAPMAN_KOLMOGOROV_RELATION</title>
+<g id="a_node4"><a xlink:href="CHAPMAN_KOLMOGOROV_RELATION.html" xlink:title=" The Chapman Kolmogorov Relation " target="_top">
+<path fill="none" stroke="black" d="M381.5,-36C381.5,-36 182.5,-36 182.5,-36 176.5,-36 170.5,-30 170.5,-24 170.5,-24 170.5,-12 170.5,-12 170.5,-6 176.5,-0 182.5,-0 182.5,-0 381.5,-0 381.5,-0 387.5,-0 393.5,-6 393.5,-12 393.5,-12 393.5,-24 393.5,-24 393.5,-30 387.5,-36 381.5,-36"/>
+<text text-anchor="start" x="178" y="-14.3" font-family="Times,serif" font-size="14.00"> The Chapman Kolmogorov Relation </text>
 </a>
 </g>
 </g>
-<!-- MARKOV_PROPERTY&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
-<g id="edge1" class="edge"><title>MARKOV_PROPERTY&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
-<path fill="none" stroke="black" d="M152.517,-143.697C162.869,-134.965 175.586,-124.24 186.839,-114.75"/>
-<polygon fill="black" stroke="black" points="189.331,-117.227 194.719,-108.104 184.818,-111.876 189.331,-117.227"/>
+<!-- TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION -->
+<g id="edge3" class="edge"><title>TRANSITION_MATRIX_OF_MARKOV_CHAIN&#45;&gt;CHAPMAN_KOLMOGOROV_RELATION</title>
+<path fill="none" stroke="black" d="M204.197,-71.8761C217.414,-62.8931 233.792,-51.7625 248.107,-42.0341"/>
+<polygon fill="black" stroke="black" points="250.403,-44.7055 256.707,-36.1898 246.468,-38.9159 250.403,-44.7055"/>
 </g>
 <!-- MATRIX_INTRO -->
-<g id="node5" class="node"><title>MATRIX_INTRO</title>
-<g id="a_node5"><a xlink:href="MATRIX_INTRO.html" xlink:title=" Introduction to matrices " target="_top">
-<path fill="none" stroke="black" d="M364.25,-180C364.25,-180 233.75,-180 233.75,-180 227.75,-180 221.75,-174 221.75,-168 221.75,-168 221.75,-156 221.75,-156 221.75,-150 227.75,-144 233.75,-144 233.75,-144 364.25,-144 364.25,-144 370.25,-144 376.25,-150 376.25,-156 376.25,-156 376.25,-168 376.25,-168 376.25,-174 370.25,-180 364.25,-180"/>
-<text text-anchor="start" x="229.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Introduction to matrices </text>
+<g id="node2" class="node"><title>MATRIX_INTRO</title>
+<g id="a_node2"><a xlink:href="MATRIX_INTRO.html" xlink:title=" Introduction to matrices " target="_top">
+<path fill="none" stroke="black" d="M161.25,-180C161.25,-180 30.75,-180 30.75,-180 24.75,-180 18.75,-174 18.75,-168 18.75,-168 18.75,-156 18.75,-156 18.75,-150 24.75,-144 30.75,-144 30.75,-144 161.25,-144 161.25,-144 167.25,-144 173.25,-150 173.25,-156 173.25,-156 173.25,-168 173.25,-168 173.25,-174 167.25,-180 161.25,-180"/>
+<text text-anchor="start" x="26.5" y="-158.3" font-family="Times,serif" font-size="14.00"> Introduction to matrices </text>
 </a>
 </g>
 </g>
 <!-- MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
-<g id="edge4" class="edge"><title>MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
-<path fill="none" stroke="black" d="M278.236,-143.697C267.759,-134.965 254.889,-124.24 243.5,-114.75"/>
-<polygon fill="black" stroke="black" points="245.448,-111.817 235.525,-108.104 240.967,-117.195 245.448,-111.817"/>
+<g id="edge1" class="edge"><title>MATRIX_INTRO&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
+<path fill="none" stroke="black" d="M116.517,-143.697C126.869,-134.965 139.586,-124.24 150.839,-114.75"/>
+<polygon fill="black" stroke="black" points="153.331,-117.227 158.719,-108.104 148.818,-111.876 153.331,-117.227"/>
+</g>
+<!-- MARKOV_PROPERTY -->
+<g id="node5" class="node"><title>MARKOV_PROPERTY</title>
+<g id="a_node5"><a xlink:href="MARKOV_PROPERTY.html" xlink:title=" The Markov Property " target="_top">
+<path fill="none" stroke="black" d="M322.25,-180C322.25,-180 203.75,-180 203.75,-180 197.75,-180 191.75,-174 191.75,-168 191.75,-168 191.75,-156 191.75,-156 191.75,-150 197.75,-144 203.75,-144 203.75,-144 322.25,-144 322.25,-144 328.25,-144 334.25,-150 334.25,-156 334.25,-156 334.25,-168 334.25,-168 334.25,-174 328.25,-180 322.25,-180"/>
+<text text-anchor="start" x="199.5" y="-158.3" font-family="Times,serif" font-size="14.00"> The Markov Property </text>
+</a>
+</g>
+</g>
+<!-- MARKOV_PROPERTY&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN -->
+<g id="edge4" class="edge"><title>MARKOV_PROPERTY&#45;&gt;TRANSITION_MATRIX_OF_MARKOV_CHAIN</title>
+<path fill="none" stroke="black" d="M242.236,-143.697C231.759,-134.965 218.889,-124.24 207.5,-114.75"/>
+<polygon fill="black" stroke="black" points="209.448,-111.817 199.525,-108.104 204.967,-117.195 209.448,-111.817"/>
 </g>
 </g>
 </svg>

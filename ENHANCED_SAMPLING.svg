@@ -11,36 +11,36 @@
 <!-- ENHANCED_SAMPLING -->
 <g id="node1" class="node"><title>ENHANCED_SAMPLING</title>
 <g id="a_node1"><a xlink:href="ENHANCED_SAMPLING.html" xlink:title=" Enhanced sampling " target="_top">
-<path fill="none" stroke="blue" stroke-width="2" d="M250.25,-36C250.25,-36 143.75,-36 143.75,-36 137.75,-36 131.75,-30 131.75,-24 131.75,-24 131.75,-12 131.75,-12 131.75,-6 137.75,-0 143.75,-0 143.75,-0 250.25,-0 250.25,-0 256.25,-0 262.25,-6 262.25,-12 262.25,-12 262.25,-24 262.25,-24 262.25,-30 256.25,-36 250.25,-36"/>
-<text text-anchor="start" x="139.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Enhanced sampling </text>
+<path fill="none" stroke="blue" stroke-width="2" d="M230.25,-36C230.25,-36 123.75,-36 123.75,-36 117.75,-36 111.75,-30 111.75,-24 111.75,-24 111.75,-12 111.75,-12 111.75,-6 117.75,-0 123.75,-0 123.75,-0 230.25,-0 230.25,-0 236.25,-0 242.25,-6 242.25,-12 242.25,-12 242.25,-24 242.25,-24 242.25,-30 236.25,-36 230.25,-36"/>
+<text text-anchor="start" x="119.5" y="-14.3" font-family="Times,serif" font-size="14.00"> Enhanced sampling </text>
 </a>
 </g>
-</g>
-<!-- MOLECULAR_DYNAMICS -->
-<g id="node2" class="node"><title>MOLECULAR_DYNAMICS</title>
-<g id="a_node2"><a xlink:href="MOLECULAR_DYNAMICS.html" xlink:title=" Molecular dynamics simulation " target="_top">
-<path fill="none" stroke="black" d="M186,-108C186,-108 12,-108 12,-108 6,-108 0,-102 0,-96 0,-96 0,-84 0,-84 0,-78 6,-72 12,-72 12,-72 186,-72 186,-72 192,-72 198,-78 198,-84 198,-84 198,-96 198,-96 198,-102 192,-108 186,-108"/>
-<text text-anchor="start" x="8" y="-86.3" font-family="Times,serif" font-size="14.00"> Molecular dynamics simulation </text>
-</a>
-</g>
-</g>
-<!-- MOLECULAR_DYNAMICS&#45;&gt;ENHANCED_SAMPLING -->
-<g id="edge1" class="edge"><title>MOLECULAR_DYNAMICS&#45;&gt;ENHANCED_SAMPLING</title>
-<path fill="none" stroke="black" d="M122.973,-71.8761C135.55,-62.8931 151.132,-51.7625 164.752,-42.0341"/>
-<polygon fill="black" stroke="black" points="166.831,-44.8502 172.934,-36.1898 162.763,-39.1541 166.831,-44.8502"/>
 </g>
 <!-- MONTE_CARLO -->
-<g id="node3" class="node"><title>MONTE_CARLO</title>
-<g id="a_node3"><a xlink:href="MONTE_CARLO.html" xlink:title=" Monte Carlo Simulation " target="_top">
-<path fill="none" stroke="black" d="M361.5,-108C361.5,-108 228.5,-108 228.5,-108 222.5,-108 216.5,-102 216.5,-96 216.5,-96 216.5,-84 216.5,-84 216.5,-78 222.5,-72 228.5,-72 228.5,-72 361.5,-72 361.5,-72 367.5,-72 373.5,-78 373.5,-84 373.5,-84 373.5,-96 373.5,-96 373.5,-102 367.5,-108 361.5,-108"/>
-<text text-anchor="start" x="224" y="-86.3" font-family="Times,serif" font-size="14.00"> Monte Carlo Simulation </text>
+<g id="node2" class="node"><title>MONTE_CARLO</title>
+<g id="a_node2"><a xlink:href="MONTE_CARLO.html" xlink:title=" Monte Carlo Simulation " target="_top">
+<path fill="none" stroke="black" d="M145.5,-108C145.5,-108 12.5,-108 12.5,-108 6.5,-108 0.5,-102 0.5,-96 0.5,-96 0.5,-84 0.5,-84 0.5,-78 6.5,-72 12.5,-72 12.5,-72 145.5,-72 145.5,-72 151.5,-72 157.5,-78 157.5,-84 157.5,-84 157.5,-96 157.5,-96 157.5,-102 151.5,-108 145.5,-108"/>
+<text text-anchor="start" x="8" y="-86.3" font-family="Times,serif" font-size="14.00"> Monte Carlo Simulation </text>
 </a>
 </g>
 </g>
 <!-- MONTE_CARLO&#45;&gt;ENHANCED_SAMPLING -->
-<g id="edge2" class="edge"><title>MONTE_CARLO&#45;&gt;ENHANCED_SAMPLING</title>
-<path fill="none" stroke="black" d="M271.027,-71.8761C258.45,-62.8931 242.868,-51.7625 229.248,-42.0341"/>
-<polygon fill="black" stroke="black" points="231.237,-39.1541 221.066,-36.1898 227.169,-44.8502 231.237,-39.1541"/>
+<g id="edge1" class="edge"><title>MONTE_CARLO&#45;&gt;ENHANCED_SAMPLING</title>
+<path fill="none" stroke="black" d="M102.973,-71.8761C115.55,-62.8931 131.132,-51.7625 144.752,-42.0341"/>
+<polygon fill="black" stroke="black" points="146.831,-44.8502 152.934,-36.1898 142.763,-39.1541 146.831,-44.8502"/>
+</g>
+<!-- MOLECULAR_DYNAMICS -->
+<g id="node3" class="node"><title>MOLECULAR_DYNAMICS</title>
+<g id="a_node3"><a xlink:href="MOLECULAR_DYNAMICS.html" xlink:title=" Molecular dynamics simulation " target="_top">
+<path fill="none" stroke="black" d="M362,-108C362,-108 188,-108 188,-108 182,-108 176,-102 176,-96 176,-96 176,-84 176,-84 176,-78 182,-72 188,-72 188,-72 362,-72 362,-72 368,-72 374,-78 374,-84 374,-84 374,-96 374,-96 374,-102 368,-108 362,-108"/>
+<text text-anchor="start" x="184" y="-86.3" font-family="Times,serif" font-size="14.00"> Molecular dynamics simulation </text>
+</a>
+</g>
+</g>
+<!-- MOLECULAR_DYNAMICS&#45;&gt;ENHANCED_SAMPLING -->
+<g id="edge2" class="edge"><title>MOLECULAR_DYNAMICS&#45;&gt;ENHANCED_SAMPLING</title>
+<path fill="none" stroke="black" d="M251.027,-71.8761C238.45,-62.8931 222.868,-51.7625 209.248,-42.0341"/>
+<polygon fill="black" stroke="black" points="211.237,-39.1541 201.066,-36.1898 207.169,-44.8502 211.237,-39.1541"/>
 </g>
 </g>
 </svg>

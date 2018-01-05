@@ -11,7 +11,6 @@ class topic(object) :
 
   def readName(self):
      self.namewasread=1
-     print( "Reading " + self.name )
      tree = ET.parse( "Topics/" + self.name + ".xml" )
      self.label = tree.find("TITLE").text 
 

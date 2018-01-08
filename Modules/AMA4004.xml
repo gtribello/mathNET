@@ -549,8 +549,9 @@ The student hands in fewer than three essays on statistical mechanic theory duri
         </AIMS>
      </INTRO>
      <PROJECT>
-        <TITLE> </TITLE>
+        <TITLE> Class test </TITLE>
         <DESCRIPTION>
+           The final project for the section of the course on classical thermodynamics is a class test.
         </DESCRIPTION>
      </PROJECT>
      <TOPIC> THERMODYNAMIC_VARIABLES </TOPIC>

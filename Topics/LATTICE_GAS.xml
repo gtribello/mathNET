@@ -72,4 +72,15 @@ An exercise that will teach you how to write a program that enumerates all the m
 An exercise on understanding the statistical mechanics of two state systems.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> LATTICE_GAS </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> HTML </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> lattice-gas-project </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+EXAMPLE: project on numerical and analytical solution for lattice gas model
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

@@ -229,6 +229,8 @@ function initApi( interpreter, scope ) {
 
    // Add API functions for workspace functions
    
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
     // Add ising functions to API
     addIsingFunctionsToApi( interpreter, scope );
 
@@ -409,13 +411,9 @@ myApp.init = function() {
   // Setup workspace for game
   
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(10);
     ising.setMagneticField(3);
-
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    ising.generateRandomState();
    
 
   // Setup blockly
@@ -448,8 +446,32 @@ myApp.init = function() {
 window.addEventListener('load', myApp.init);
 window.addEventListener('resize', myApp.resize);
 
-    myApp.mismatchedEnergy = false;
-  
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
+
+    myApp.firstCorrelation = 0;
+    myApp.mismatchedEnergy = true;
+ 
+    myApp.calcCorrelation = function( r ){
+      // Calculate average spin
+      var average = 0; for(var i = 0; i < ising.spins.length; i++){ average += ising.spins[i]; }
+      average = average / ising.spins.length;
+      // Now calculate average correlation
+      var cor=0; var norm = 0;
+      for(var i = 0; i < ising.spins.length; i++){
+          cor += (ising.spins[i]-average)*(ising.spins[(i+r)%ising.spins.length]-average);
+          norm += (ising.spins[i]-average)*(ising.spins[i]-average);
+      }
+      return cor/norm;
+    }; 
+ 
     myApp.printEnergy = function( eng ){
       ctx = document.getElementById("myCanvas").getContext("2d");
       ctx.beginPath();
@@ -460,7 +482,14 @@ window.addEventListener('resize', myApp.resize);
       ctx.lineTo( 100,100 );
       ctx.closePath();
       ctx.fillStyle = '#FFFFFF';
-      ctx.fill();
+      ctx.fill(); myApp.mismatchedEnergy = false;
+      if( myApp.mylevel==0 ) { 
+          if( myApp.calcCorrelation(2) != eng ){ myApp.mismatchedEnergy = true; }
+      } else if( myApp.mylevel==1 ) {
+          if( (myApp.firstCorrelation + myApp.calcCorrelation(2)) != 2*eng ) { 
+               myApp.mismatchedEnergy = true; 
+          }
+      }
 
       ctx.fillStyle = '#000000';
       ctx.font="20px Georgia";
@@ -468,60 +497,40 @@ window.addEventListener('resize', myApp.resize);
     };
   myApp.stuffToDoOnLevelLoad = function(n) {
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(10);
     ising.setMagneticField(3);
-
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    ising.generateRandomState();
   switch( myApp.mylevel ){ 
 case 0:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
+      ising.generateRandomState();
     break; 
 case 1:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
+      ising.generateRandomState();
+      myApp.firstCorrelation = myApp.calcCorrelation( 2 );
     break; 
 case 2:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
-    break; 
-case 3:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
+      ising.generateRandomState();
     break; 
 }
 };myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
        levelcomplete = !myApp.mismatchedEnergy
     break;case 1:
+      levelcomplete = !myApp.mismatchedEnergy
+      if( myApp.firstCorrelation == 0 ){ levelcomplete = false; }
+      myApp.firstCorrelation = 0; 
     break;case 2:
-    break;case 3:
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+       myApp.mismatchedEnergy = false; 
+       for(var i=0; i < ising.spins.length/2; i++){
+           if( myplot.data[2+i][0]!=i || myApp.calcCorrelation(i) != myplot.data[2+i][1] ){ myApp.mismatchedEnergy = true; }
+       } 
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("     You should now be able to calculate the average correlation function for a set of microstates.  Essentially you do what you did     in the second level for all the elements of the vector that you calculated in the third level.  Furthermore, you can even calculate     a correlation function when the data is weighted by using what you learnt how to do in the histograms exercise with weighted data.  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(10);
     ising.setMagneticField(3);
-
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    ising.generateRandomState();
          if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }       myApp.active[myApp.mylevel + 1] = true;       myApp.setLevel( myApp.mylevel + 1 );   } else {       alert("Your program is not quite right.  Have another go and see if you can fix it")
     ising.radius=200;
-    ising.setNumberOfSpins(100);
+    ising.setNumberOfSpins(10);
     ising.setMagneticField(3);
-
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    ising.generateRandomState();
          myApp.stuffToDoOnLevelLoad( myApp.mylevel )   }};</script>

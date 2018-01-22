@@ -35,6 +35,13 @@ function addIsingFunctionsToApi( interpreter, scope ){
       return interpreter.createPrimitive(ising.getSpinValue(id));
     };
     interpreter.setProperty(scope, 'getSpinValue', interpreter.createNativeFunction(wrapper))
+
+    // Add API function for getting microstates 
+    var wrapper = function(id){
+      id = id ? id.toString() : '';
+      return interpreter.createPrimitive(ising.generateRandomState(id));
+    };
+    interpreter.setProperty(scope, 'generateRandomState', interpreter.createNativeFunction(wrapper))
 }
 
 function isingSpinControls(){
@@ -155,6 +162,14 @@ function isingSpinControls(){
 
    this.getTemperature=function() {
      return this.temperature;
+   };
+
+   this.generateRandomState = function() {
+     this.setNumberOfSpins( this.nspins );
+     for(var i = 0; i < this.spins.length; i++) {
+         if( Math.random() < 0.5 ) { this.setSpinValue(i,-1); }
+         else { this.setSpinValue(i,1); }
+     } 
    };
 }
 
@@ -300,6 +315,30 @@ Blockly.Python['set_spin'] = function(block) {
   var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
   var v = Blockly.Python.valueToCode(block, 'v', Blockly.Python.ORDER_ATOMIC) || '0';
   var code = 'spins[' + s + '] = ' + v + '\n';
+  return code;
+};
+
+Blockly.Blocks["generate_microstate"] = {
+  init: function() {
+    this.jsonInit({
+      "message0": "generate new microstate",
+      "inputsInline": true,
+      "nextStatement": null,
+      "previousStatement": null,
+      "colour": Blockly.Blocks.variables.HUE,
+      "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
+      "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
+    })
+  }
+};
+  
+Blockly.JavaScript['generate_microstate'] = function(block) {
+  var code='generateRandomState();\n';
+  return code;
+};
+
+Blockly.Python['generate_microstate'] = function(block) {
+  var code = 'for i in range(nspins) : \n \t u = numpy.random.uniform(0,1) \n \t if u<0.5 : spins[i] = -1 \n \t else spins[i] = 1 \n';
   return code;
 };
 

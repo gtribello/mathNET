@@ -56,6 +56,18 @@ def createVideoPage( ftype, name, tree, of ) :
     generate_pdf_worksheet( tree, name.replace(".xml","") )
 
 def createBlocklyPage( name, tree, of ) :
+   # Create modal objects to hold pop up videos
+   n = 0
+   for lev in tree.findall("LEVEL") :
+       if lev.find("VIDEO") is not None :
+          of.write('<div id="modl-vid' + str(n) + '" class="modal"> \n')
+          of.write('   <div class="modal-content"> \n')
+          of.write('        <iframe width="630" height="472" src="' + lev.find("VIDEO").text + '" seamless="" allowfullscreen></iframe> \n')
+          of.write('        <span id="modl-close' + str(n) + '"><h2>close</h2></span>')
+          of.write('   </div> \n')
+          of.write('</div> \n')
+       n+=1
+   # Now create blockly page
    of.write('<div id="content" class="container">')
    of.write('   <div class="panel panel-blue">')
    of.write('      <div class="panel-heading">')
@@ -90,6 +102,18 @@ def createBlocklyPage( name, tree, of ) :
    of.write('             <category name="Variables" custom="VARIABLE"></category>')
    of.write('             </xml>')
    of.write('<script> \n')
+   # Buttons to close pop up windows in this app
+   n = 0
+   for lev in tree.findall("LEVEL") :
+       if lev.find("VIDEO") is not None :
+          of.write('var span' + str(n) + ' = document.getElementById("modl-close' + str(n) + '");\n')
+          of.write('span' + str(n) + '.onclick = function() {\n')
+          of.write("    var modal = document.getElementById('modl-vid" + str(n) + "');\n")
+          of.write('    modal.style.display = "none";\n')
+          of.write("    var currentIframe = modal.querySelector('.modal-content > iframe');\n")
+          of.write("    currentIframe.src = currentIframe.src;\n");
+          of.write('}\n')
+       n += 1
    # Insert Blocks for this app
    of.write( tree.find("BLOCKS").text )
    # Now get the fixed parts of the app
@@ -117,20 +141,26 @@ def createBlocklyPage( name, tree, of ) :
    of.write('};')
    # Function of stuff to do on level end
    of.write('myApp.checkLevelEnd = function() {')
-   of.write('   levelcomplete = true;')
+   of.write('   levelcomplete = true; video=false;')
    of.write('   switch( myApp.mylevel ){')
    n = 0
    for lev in levels : 
        of.write("case " + str(n) + ":")
        of.write( lev.find("FINISH").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") )
+       if lev.find("VIDEO") is not None :
+          of.write("if( levelcomplete ) {")
+          of.write("var modal = document.getElementById('modl-vid" + str(n) + "');")
+          of.write('modal.style.display = "block";')
+          of.write('video=true;')
+          of.write("}") 
        of.write("break;")
        n += 1
    of.write('   }')
    of.write('   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){')
    of.write('       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );')
-   of.write('       alert("' + tree.find("REVIEW").text.replace("\n","") + '");')
+   of.write('       if( !video ) alert("' + tree.find("REVIEW").text.replace("\n","") + '");')
    of.write('   } else if( levelcomplete ){')
-   of.write('       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")')
+   of.write('       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")')
    of.write(        tree.find("STARTUP").text )
    of.write('       if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }')
    of.write('       myApp.active[myApp.mylevel + 1] = true;')

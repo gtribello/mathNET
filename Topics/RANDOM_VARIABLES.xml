@@ -140,4 +140,15 @@ Some notes on continuous random variables including descriptions of the uniform,
 Programming exercises involving generating various types of random variables
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-week1-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Gentle introduction to computer programming that explains how to generate and plot multiple Bernoulli random variables.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

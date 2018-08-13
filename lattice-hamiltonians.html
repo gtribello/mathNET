@@ -549,7 +549,7 @@ case 5:
       }
     break; 
 }
-};myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
+};myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
        levelcomplete = !myApp.mismatchedEnergy;
        peng=0; ww = myApp.workspace.getAllBlocks();
        for(var i=0; i < ww.length; i++ ){
@@ -591,7 +591,7 @@ case 5:
            if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
        }
        if( peng!=1 ) levelcomplete=false;
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("    Congratulations you have implemented all the Hamiltonians.  Now take one particular Hamiltonian and perform the extend exercise to study the behavior of this particular system in depth.  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("    Congratulations you have implemented all the Hamiltonians.  Now take one particular Hamiltonian and perform the extend exercise to study the behavior of this particular system in depth.  ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     ising.radius=200;
     ising.setNumberOfSpins(20);
     ising.setMagneticField(3);

@@ -470,7 +470,7 @@ case 10:
        myplot.plotGraph('graph','scatter');
     break; 
 }
-};myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
+};myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
@@ -580,7 +580,7 @@ case 10:
       for(var i=2; i < myplot.data.length; i++ ){
           if( Math.sin(4*myplot.data[i][0])-0.1 > myplot.data[i][1] || Math.sin(4*myplot.data[i][0])+0.1 < myplot.data[i][1]  ){ levelcomplete=false; }
       }
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("    If you have got here well done.  Now lets look at how we can use probability when we study problems involving geometry.   ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("    If you have got here well done.  Now lets look at how we can use probability when we study problems involving geometry.   ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.lines.length = 0;

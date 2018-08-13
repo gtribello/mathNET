@@ -572,7 +572,7 @@ window.addEventListener('resize', myApp.resize);
     myplot.plotGraph('graph','scatter');
   switch( myApp.mylevel ){ 
 }
-};myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
+};myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
        peng = 0; pmag = 0; levelcomplete=false;
        ww = myApp.workspace.getAllBlocks();
        for(var i=0; i < ww.length; i++ ){
@@ -608,7 +608,7 @@ window.addEventListener('resize', myApp.resize);
        for(var i=0; i < ising.spins.length; i++ ){
            if( ising.spins[i]!=-1 && ising.spins[i]!=1 ){ levelcomplete=false; }
        }
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("  ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     ising.radius=200;
     ising.setNumberOfSpins(ising.nspins);
     ising.setMagneticField(0);

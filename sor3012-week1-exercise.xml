@@ -1,0 +1,199 @@
+<PAGE>
+  <TITLE> Basics of computer programming </TITLE>
+  <HEADER>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     This exercise is going to teach you the basic computer programming ideas that we are going to be using during the remainder of this course on stochastic processes.  The exercises you will be doing using these ideas from computer programming will involve random variables, however. In particular you will learn how to generate and plot a sample of Bernoulli random variables.
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="graph" style="width: 400px"></div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td> 
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
+  </APIFUNCTIONS>
+  <BLOCKS>
+  </BLOCKS>
+  <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    } 
+  </SCRIPTS>
+  <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks to generate plot a point on the graph at the point $(1,2)$. 
+    </DESCRIPTION>
+    <HINT>
+       Under plotting you have a block that allows you to draw points on the graph and under program you have a block that allows you to specify particular numbers.  The exercise is just a matter of putting these blocks together like a jigsaw puzzle. 
+    </HINT>
+    <TOOLBOX>
+      <category name="Program">
+         <block type="math_number"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      levelcomplete=true;
+      if( myplot.data.length != 3 || myplot.data[2][0]!=1 || myplot.data[2][1]!=2 ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks below to create a variable, $X$, and set $X$ to some value of your chosing.  Once you have done so use the blocks to plot a point at $(X,2X)$. 
+    </DESCRIPTION>
+    <HINT>
+       You can now create variables using the blocks under the variables category.  Notice also that you can evaluate mathematical equations using the the arithmatic block that can be found under program.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      levelcomplete=true;
+      if( myplot.data.length &lt; 3 || myplot.data[2][1] != 2*myplot.data[2][0] ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks to generate a uniform random variable, $X$.  Plot a point on the graph at $(1,X)$.
+    </DESCRIPTION>
+    <HINT>
+       Under plotting you have a block that allows you to draw points on the graph and under random you have a block that will generate uniform random variables for you.
+    </HINT>
+    <TOOLBOX>
+      <category name="Program">
+         <block type="math_number"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length != 3 || myplot.data[2][0]!=1 ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks to generate a random variable, $Y$, from a bernoulli distribution with $p=0.75$.  Plot a point on the graph at $(1,Y)$.
+    </DESCRIPTION>
+    <HINT>
+       Notice that you now have some blocks under the logic category that allow you to only execute certain instructions if a condition is satisfied.  What instruction could you only excute if a uniform random variable is less than a certain target value to help you in this case?
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 &amp;&amp; myplot.data[i][1]!=1 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks below to create 10 Bernoulli random variables, $\{X_i\}$. Store all these random variables in a list use this list to plot a graph with points at $(i, X_i)$ where $i$ runs from 1 to 10.
+    </DESCRIPTION>
+    <HINT>
+       Notice that you now some blocks that allow you create and manipulate lists and that you also have a block that allows you repeat a set of actions multiple times.  Do not use the blocks to create a Bernoulli random variable 10 times.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_line_graph"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){ 
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 12 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 &amp;&amp; myplot.data[i][1]!=1 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+   <REVIEW>
+   </REVIEW>
+</PAGE>

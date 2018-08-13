@@ -264,7 +264,7 @@ Blockly.JavaScript['draw_point'] = function(block) {
 Blockly.Python['draw_point'] = function(block) {
   var x = Blockly.Python.valueToCode(block, 'X', Blockly.Python.ORDER_ATOMIC) || '0';
   var y = Blockly.Python.valueToCode(block, 'Y', Blockly.Python.ORDER_ATOMIC) || '0';
-  var code = 'addDataToGraph(' + x + ', ' + y + ')\n';
+  var code = 'matplotlib.pyplot.plot([' + x + '], [' + y + '])\n';
   return code;
 };
 

@@ -540,7 +540,7 @@ window.addEventListener('resize', myApp.resize);
     myplot.plotGraph('graph','scatter');
   switch( myApp.mylevel ){ 
 }
-};myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
+};myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
@@ -608,7 +608,7 @@ window.addEventListener('resize', myApp.resize);
       for(var i=2; i < myplot.data.length; i++ ){
            if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] < 0 || myplot.data[i][1] > 1  ){ levelcomplete=false; }
       }
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("     To consolidate what you have learnt write a python notebook to estimate the p parameter for a Bernoulli random variable that is equal to one when a sample mean calculated from 20 uniform random variables falls within the 90 % confidence limit of the true expectation for these random variables and that is zero otherwise.  In your code you should also calculate error bars that represent a 90 % confidence limit on your estimate of the parameter.  Estimate the size of these error bars from the sample variance.  Don't use the expression you know for the variance of the Bernoulli random variable.  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("     To consolidate what you have learnt write a python notebook to estimate the p parameter for a Bernoulli random variable that is equal to one when a sample mean calculated from 20 uniform random variables falls within the 90 % confidence limit of the true expectation for these random variables and that is zero otherwise.  In your code you should also calculate error bars that represent a 90 % confidence limit on your estimate of the parameter.  Estimate the size of these error bars from the sample variance.  Don't use the expression you know for the variance of the Bernoulli random variable.  ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.lines.length = 0;

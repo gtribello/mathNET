@@ -415,7 +415,7 @@ window.addEventListener('resize', myApp.resize);
     myplot.plotGraph('graph','scatter');
   switch( myApp.mylevel ){ 
 }
-};myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
+};myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
@@ -481,7 +481,7 @@ window.addEventListener('resize', myApp.resize);
                if( myplot.data[i][0] < myplot.data[i-1][0] ){ levelcomplete=false; }
            }
       }
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("     The exercise you have just performed has taught you the basics of simulating continuous time Markov chains.  You will need to use everything that you have learnt by performing      these exercises when you perform the final two pieces of coursework for this module.  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("     The exercise you have just performed has taught you the basics of simulating continuous time Markov chains.  You will need to use everything that you have learnt by performing      these exercises when you perform the final two pieces of coursework for this module.  ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.plotGraph('graph','scatter');

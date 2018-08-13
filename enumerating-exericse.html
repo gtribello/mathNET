@@ -460,7 +460,7 @@ window.addEventListener('resize', myApp.resize);
     ising.setMagneticField(0);
   switch( myApp.mylevel ){ 
 }
-};myApp.checkLevelEnd = function() {   levelcomplete = true;   switch( myApp.mylevel ){case 0:
+};myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
        levelcomplete=true;
        for(var i=0; i < ising.spins.length; i++ ){
            if( ising.spins[i]!=1 ){ levelcomplete=false; }
@@ -484,7 +484,7 @@ window.addEventListener('resize', myApp.resize);
        levelcomplete=true; prand = 0;
        if( myApp.mismatchedState || myApp.nchecks!=32 ){ levelcomplete = false; }
        myApp.nchecks=0;
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       alert("      Transfer what you have learnt by performing this exercise to a python notebook.  To extend this exercise see if you can generate all the microstates      for a system of 5 coordinates in which each of the coordinates can take a value of 0, 1 or 2.  When you use the python don't worry about drawing the       diagram of this spins as we did here.  Instead just output the microscopic coordinates of the particles in all the possible microstates.  ");   } else if( levelcomplete ){       alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("      Transfer what you have learnt by performing this exercise to a python notebook.  To extend this exercise see if you can generate all the microstates      for a system of 5 coordinates in which each of the coordinates can take a value of 0, 1 or 2.  When you use the python don't worry about drawing the       diagram of this spins as we did here.  Instead just output the microscopic coordinates of the particles in all the possible microstates.  ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     ising.radius=200;
     ising.setNumberOfSpins(5);
     ising.setMagneticField(0);

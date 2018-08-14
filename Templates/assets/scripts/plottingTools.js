@@ -16,7 +16,7 @@ function addGraphFunctionsToApi( interpreter, scope ){
       y = y ? y.toString() : '';
       return interpreter.createPrimitive(myplot.drawScatterGraphFromTable(x,y));
     };
-    interpreter.setProperty(scope, 'drawBarGraphFromTable', interpreter.createNativeFunction(wrapper));
+    interpreter.setProperty(scope, 'drawScatterGraphFromTable', interpreter.createNativeFunction(wrapper));
     // Add an API function for drawing the graph based on a table
     var wrapper = function(x,y) {
       x = x ? x.toString() : '';
@@ -264,7 +264,7 @@ Blockly.JavaScript['draw_point'] = function(block) {
 Blockly.Python['draw_point'] = function(block) {
   var x = Blockly.Python.valueToCode(block, 'X', Blockly.Python.ORDER_ATOMIC) || '0';
   var y = Blockly.Python.valueToCode(block, 'Y', Blockly.Python.ORDER_ATOMIC) || '0';
-  var code = 'matplotlib.pyplot.plot([' + x + '], [' + y + '])\n';
+  var code = 'matplotlib.pyplot.plot([' + x + '], [' + y + '], ".")\n';
   return code;
 };
 
@@ -309,7 +309,7 @@ Blockly.JavaScript['draw_list'] = function(block) {
 Blockly.Python['draw_list'] = function(block) {
   var x = Blockly.Python.valueToCode(block, 'X', Blockly.Python.ORDER_ATOMIC) || '0';
   var y = Blockly.Python.valueToCode(block, 'Y', Blockly.Python.ORDER_ATOMIC) || '0';
-  var code = 'matplotlib.pyplot.plot(' + x + ', ' + y + ')\nmatplotlib.pyplot.show()';
+  var code = 'matplotlib.pyplot.plot(' + x + ', ' + y + ', "." )\nmatplotlib.pyplot.show()';
   return code;
 };
 

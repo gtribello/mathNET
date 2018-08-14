@@ -66,6 +66,9 @@
     <DESCRIPTION>
        Use the blocks below to create a variable, $X$, and set $X$ to some value of your chosing.  Once you have done so use the blocks to plot a point at $(X,2X)$. 
     </DESCRIPTION>
+    <VID>
+       https://youtu.be/0KqCK0yG9T0
+    </VID>
     <HINT>
        You can now create variables using the blocks under the variables category.  Notice also that you can evaluate mathematical equations using the the arithmatic block that can be found under program.
     </HINT>
@@ -172,7 +175,7 @@
          <block type="uniform_random"></block>
       </category>
       <category name="Plotting">
-         <block type="draw_line_graph"></block>
+         <block type="draw_list"></block>
       </category>
       <category name="Lists">
          <block type="lists_repeat"></block>
@@ -192,8 +195,8 @@
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
       }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
   </LEVEL>
    <REVIEW>
+      Congratulations on completing whole exercise and on learning the basics of computer programming.  <a href="Images/sor3012-exercise-1.ipynb" download="sor3012-exericse1.ipynb">Click here</a> to download a python notebook that summarises the ideas that were covered in the exercise.  Study this notebook carefully before attempting any further exercise as <b>I would strongly recommended you to create notes like these as you work through the remaining blockly exercises.</b>
    </REVIEW>
 </PAGE>

@@ -67,6 +67,13 @@ def createBlocklyPage( name, tree, of ) :
           of.write('   </div> \n')
           of.write('</div> \n')
        n+=1
+   # Modal for final completion tag
+   of.write('<div id="modl-review" class="modal"> \n')
+   of.write('   <div class="modal-content"> \n')
+   of.write(         ET.tostring( tree.find("REVIEW"), encoding="unicode", method="xml" ).replace("<REVIEW>","").replace("</REVIEW>","") + '\n')
+   of.write('        <span id="modl-close-review"><h3>close</h3></span>')
+   of.write('   </div> \n')
+   of.write('</div> \n')
    # Now create blockly page
    of.write('<div id="content" class="container">')
    of.write('   <div class="panel panel-blue">')
@@ -114,6 +121,11 @@ def createBlocklyPage( name, tree, of ) :
           of.write("    currentIframe.src = currentIframe.src;\n");
           of.write('}\n')
        n += 1
+   of.write('var spanreview = document.getElementById("modl-close-review"); \n')
+   of.write('spanreview.onclick = function() {\n')
+   of.write('     var modal = document.getElementById("modl-review");\n')
+   of.write('     modal.style.display = "none"; \n')
+   of.write('}\n')
    # Insert Blocks for this app
    of.write( tree.find("BLOCKS").text )
    # Now get the fixed parts of the app
@@ -149,6 +161,7 @@ def createBlocklyPage( name, tree, of ) :
        of.write( lev.find("FINISH").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") )
        if lev.find("VIDEO") is not None :
           of.write("if( levelcomplete ) {")
+          of.write('alert("Congratulations! Your program is correct.  Close this window for more instructions");')
           of.write("var modal = document.getElementById('modl-vid" + str(n) + "');")
           of.write('modal.style.display = "block";')
           of.write('video=true;')
@@ -158,7 +171,9 @@ def createBlocklyPage( name, tree, of ) :
    of.write('   }')
    of.write('   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){')
    of.write('       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );')
-   of.write('       if( !video ) alert("' + tree.find("REVIEW").text.replace("\n","") + '");')
+   of.write('       var modal = document.getElementById("modl-review");')
+   of.write('       modal.style.display = "block";')
+   #of.write('       if( !video ) alert("' + ET.tostring( tree.find("REVIEW"), encoding="unicode", method="xml" ) + '");')
    of.write('   } else if( levelcomplete ){')
    of.write('       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")')
    of.write(        tree.find("STARTUP").text )

@@ -158,7 +158,13 @@ myApp.setLevel = function(n) {
    var desc = levels[n].getElementsByTagName("DESCRIPTION");
    // Load the contents of the level
    var g = document.getElementById("explanation");
-   g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+   if( levels[n].getElementsByTagName("VID").length==0 ) {
+       g.innerHTML = desc[0].childNodes[0].nodeValue;
+   } else {
+       var vid = levels[n].getElementsByTagName("VID");
+       var link = 'Click <a href="' + vid[0].childNodes[0].nodeValue + '" target="_blank">here</a> if you want to watch the explanatory video again.'
+       g.innerHTML = desc[0].childNodes[0].nodeValue + " " + link;
+   }
    // Typeset maths using mathJAX
    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
    // Load the new blockly toolbox

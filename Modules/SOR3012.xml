@@ -587,11 +587,10 @@ The student demonstrates an incomplete understanding of the problem.  A piece of
      <PROJECT>
         <TITLE> Investigating other random variables </TITLE>
         <DESCRIPTION>
-           Performing the exercises in the apply and extend parts of this project will teach you how to generate uniform, bernoulli, binomial, poisson, geometric and normal random variables.
+           Performing the exercises in the apply and extend parts of this project will teach you how to generate uniform, bernoulli, binomial, poisson, geometric, exponential and normal random variables.
            You will learn how to derive expressions for the expectations and variances of these different types of random variables from the random variables parameters.  Furthermore, you 
            will learn about the law of large numbers and how we can estimate expectations and probability distribution functions by repeatedly generating random variables from a particular 
-           distribution.  The final exercises listed below take these ideas a little further.  You will need to research these topics online and you may also want to discuss them with your 
-           lecturer.
+           distribution.  Some suggestions as to how to take your research in these ideas a little further are given below.  You may also want to discuss what you plan to research further with your lecturer.
 
            <UL>
               <LI> As part of your project on random variables you wrote a program to estimate the probability mass/density function for a particular random variable that worked by generating a large number of identically distributed random variables.  Now write a program to estimate the cumulative probability distribution function for the same kind of random variable you wrote your project on. </LI> 

@@ -77,15 +77,4 @@ A video explaining how the law of large numbers is used when calculating a histo
 Some notes on the law of large numbers and the central limit theorem. These notes include proofs for these two theorems.
 </DESCRIPTION>
 </RESOURCE>
-<RESOURCE>
-<TOPIC> LAW_OF_LARGE_NUMBERS </TOPIC>
-<LEVEL> BLOCKLY </LEVEL>
-<TYPE> XML </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> histograms-exercise </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise about estimating histograms by performing repeated experiments.
-</DESCRIPTION>
-</RESOURCE>
 </PAGE>

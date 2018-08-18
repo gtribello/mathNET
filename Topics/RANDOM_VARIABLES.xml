@@ -134,10 +134,10 @@ Some notes on continuous random variables including descriptions of the uniform,
 <LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> random-variables-exercise </LINK>
+<LINK> sor3012-week1-exercise </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-Programming exercises involving generating various types of random variables
+Gentle introduction to computer programming that explains how to generate and plot multiple Bernoulli random variables.
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>
@@ -145,10 +145,32 @@ Programming exercises involving generating various types of random variables
 <LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> sor3012-week1-exercise </LINK>
+<LINK> sor3012-week2-exercise </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-Gentle introduction to computer programming that explains how to generate and plot multiple Bernoulli random variables.
+Computer programming exercise on generating binomial and geometric random variables and on calculating summary statistics.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> RANDOM_VARIABLES </TOPIC>
+<LEVEL> BLOCKLY </LEVEL>
+<TYPE> XML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> sor3012-week3-exercise </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+Computer programming exercise on generating multinomial, poisson, exponential and normal random variables and on computing histograms.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+ <TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
+  <LEVEL> PYTHON </LEVEL>
+  <TYPE> LATEX </TYPE>
+  <MODULE> SOR3012 </MODULE>
+  <LINK> exponential-random-variable-project.tex </LINK>
+  <AUTHOR> G.~Tribello </AUTHOR>
+  <DESCRIPTION>
+   Writing a short project on exponential random variables that includes some small programming components.
+  </DESCRIPTION>
+  </RESOURCE>
 </PAGE>

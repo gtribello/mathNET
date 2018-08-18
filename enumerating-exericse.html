@@ -143,6 +143,16 @@
         </div>
 </div>
 <!-- === END HEADER === -->
+<div id="modl-review" class="modal"> 
+   <div class="modal-content"> 
+
+      Transfer what you have learnt by performing this exercise to a python notebook.  To extend this exercise see if you can generate all the microstates
+      for a system of 5 coordinates in which each of the coordinates can take a value of 0, 1 or 2.  When you use the python don't worry about drawing the 
+      diagram of this spins as we did here.  Instead just output the microscopic coordinates of the particles in all the possible microstates.
+  
+
+        <span id="modl-close-review"><h3>close</h3></span>   </div> 
+</div> 
 <div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Enumerating the states of a system : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
                  <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> 
                  <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button> 
@@ -163,6 +173,11 @@
   
                <div id="explanation"> </div> 
              <xml id="toolbox" style="display: none">             <category name="Variables" custom="VARIABLE"></category>             </xml><script> 
+var spanreview = document.getElementById("modl-close-review"); 
+spanreview.onclick = function() {
+     var modal = document.getElementById("modl-review");
+     modal.style.display = "none"; 
+}
 
     Blockly.Blocks["check_microstate"] = {
       init: function() {
@@ -366,7 +381,13 @@ myApp.setLevel = function(n) {
    var desc = levels[n].getElementsByTagName("DESCRIPTION");
    // Load the contents of the level
    var g = document.getElementById("explanation");
-   g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+   if( levels[n].getElementsByTagName("VID").length==0 ) {
+       g.innerHTML = desc[0].childNodes[0].nodeValue;
+   } else {
+       var vid = levels[n].getElementsByTagName("VID");
+       var link = 'Click <a href="' + vid[0].childNodes[0].nodeValue + '" target="_blank">here</a> if you want to watch the explanatory video again.'
+       g.innerHTML = desc[0].childNodes[0].nodeValue + " " + link;
+   }
    // Typeset maths using mathJAX
    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
    // Load the new blockly toolbox
@@ -484,7 +505,7 @@ window.addEventListener('resize', myApp.resize);
        levelcomplete=true; prand = 0;
        if( myApp.mismatchedState || myApp.nchecks!=32 ){ levelcomplete = false; }
        myApp.nchecks=0;
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("      Transfer what you have learnt by performing this exercise to a python notebook.  To extend this exercise see if you can generate all the microstates      for a system of 5 coordinates in which each of the coordinates can take a value of 0, 1 or 2.  When you use the python don't worry about drawing the       diagram of this spins as we did here.  Instead just output the microscopic coordinates of the particles in all the possible microstates.  ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     ising.radius=200;
     ising.setNumberOfSpins(5);
     ising.setMagneticField(0);

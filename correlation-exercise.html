@@ -143,6 +143,14 @@
         </div>
 </div>
 <!-- === END HEADER === -->
+<div id="modl-review" class="modal"> 
+   <div class="modal-content"> 
+
+    If you have got here well done.  Now lets look at how we can use probability when we study problems involving geometry. 
+  
+
+        <span id="modl-close-review"><h3>close</h3></span>   </div> 
+</div> 
 <div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Understanding correlation : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
                  <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> 
                  <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button> 
@@ -163,6 +171,11 @@
   
                <div id="explanation"> </div> 
              <xml id="toolbox" style="display: none">             <category name="Variables" custom="VARIABLE"></category>             </xml><script> 
+var spanreview = document.getElementById("modl-close-review"); 
+spanreview.onclick = function() {
+     var modal = document.getElementById("modl-review");
+     modal.style.display = "none"; 
+}
 
   // This puts everything we need into the API for the 
 // javascript interpreter
@@ -327,7 +340,13 @@ myApp.setLevel = function(n) {
    var desc = levels[n].getElementsByTagName("DESCRIPTION");
    // Load the contents of the level
    var g = document.getElementById("explanation");
-   g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+   if( levels[n].getElementsByTagName("VID").length==0 ) {
+       g.innerHTML = desc[0].childNodes[0].nodeValue;
+   } else {
+       var vid = levels[n].getElementsByTagName("VID");
+       var link = 'Click <a href="' + vid[0].childNodes[0].nodeValue + '" target="_blank">here</a> if you want to watch the explanatory video again.'
+       g.innerHTML = desc[0].childNodes[0].nodeValue + " " + link;
+   }
    // Typeset maths using mathJAX
    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
    // Load the new blockly toolbox
@@ -580,7 +599,7 @@ case 10:
       for(var i=2; i < myplot.data.length; i++ ){
           if( Math.sin(4*myplot.data[i][0])-0.1 > myplot.data[i][1] || Math.sin(4*myplot.data[i][0])+0.1 < myplot.data[i][1]  ){ levelcomplete=false; }
       }
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("    If you have got here well done.  Now lets look at how we can use probability when we study problems involving geometry.   ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.lines.length = 0;

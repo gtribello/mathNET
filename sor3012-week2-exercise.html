@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
         <!-- Title -->
-        <title>lattice-hamiltonians</title>
+        <title>sor3012-week2-exercise</title>
         <!-- Meta -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="">
@@ -143,15 +143,40 @@
         </div>
 </div>
 <!-- === END HEADER === -->
+<div id="modl-vid0" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close0"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid1" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close1"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid2" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close2"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid3" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close3"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid4" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close4"><h2>close</h2></span>   </div> 
+</div> 
 <div id="modl-review" class="modal"> 
    <div class="modal-content"> 
 
-    Congratulations you have implemented all the Hamiltonians.  Now take one particular Hamiltonian and perform the extend exercise to study the behavior of this particular system in depth.
-  
+       Congratulations on completing the exercise!  You should have made notes on what you did within a python notebook as you worked through the tasks.  Take a moment now to review your notes.  Make sure that all the python code you have copied works and that you have notes that explain what it all does.  It is important to do this now as we will be using the programs that you have just learnt to write during this exercise throughout the remainder of the module.  
+   
 
         <span id="modl-close-review"><h3>close</h3></span>   </div> 
 </div> 
-<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Understanding the lattice Hamiltonians : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Computer programming for statistics I : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
                  <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> 
                  <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button> 
                  <!-- <button onclick="myApp.save()" id="saveButton">Save workspace</button> 
@@ -160,55 +185,58 @@
     <table>
       <tr>
         <td>
-          <div id="visualization" style="width: 400px"> <canvas id="myCanvas" width="400" height="400"/> </div>
+          <div id="graph" style="width: 400px"/>
         </td>
-        <td width="20px"> &nbsp;&nbsp; </td>
-        <td>
-          <div id="blocklyDiv" style="height: 400px"/>
-        </td>
+        <td width="10px"> &nbsp;&nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td> 
       </tr>
     </table>
   
                <div id="explanation"> </div> 
              <xml id="toolbox" style="display: none">             <category name="Variables" custom="VARIABLE"></category>             </xml><script> 
+var span0 = document.getElementById("modl-close0");
+span0.onclick = function() {
+    var modal = document.getElementById('modl-vid0');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span1 = document.getElementById("modl-close1");
+span1.onclick = function() {
+    var modal = document.getElementById('modl-vid1');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span2 = document.getElementById("modl-close2");
+span2.onclick = function() {
+    var modal = document.getElementById('modl-vid2');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span3 = document.getElementById("modl-close3");
+span3.onclick = function() {
+    var modal = document.getElementById('modl-vid3');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span4 = document.getElementById("modl-close4");
+span4.onclick = function() {
+    var modal = document.getElementById('modl-vid4');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
 var spanreview = document.getElementById("modl-close-review"); 
 spanreview.onclick = function() {
      var modal = document.getElementById("modl-review");
      modal.style.display = "none"; 
 }
 
-    Blockly.Blocks["print_energy"] = {
-      init: function() {
-        this.jsonInit({
-          "message0": "print energy %1",
-          "args0": [
-            {
-              "type": "input_value",
-              "name": "n", 
-              "check": "Number"
-            }
-          ],
-          "inputsInline": true,
-          "nextStatement": null,
-          "previousStatement": null,
-          "colour": Blockly.Blocks.variables.HUE,
-          "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP,
-          "helpUrl": Blockly.Msg.VARIABLES_SET_HELPURL
-        })
-      }
-    };
-
-    Blockly.JavaScript['print_energy'] = function(block) {
-      var s = Blockly.JavaScript.valueToCode(block, 'n', Blockly.JavaScript.ORDER_ATOMIC) || '0';
-      var code = 'printEnergy(' + s + ');\n';
-      return code;
-    };
-
-    Blockly.Python['print_energy'] = function(block) {
-      var s = Blockly.Python.valueToCode(block, 'n', Blockly.Python.ORDER_ATOMIC) || '0';
-      var code = 'print("Energy equals",' + s + ')\n';
-      return code;
-    };
   // This puts everything we need into the API for the 
 // javascript interpreter
 function initApi( interpreter, scope ) {
@@ -238,15 +266,8 @@ function initApi( interpreter, scope ) {
 
    // Add API functions for workspace functions
    
-    // Add ising functions to API
-    addIsingFunctionsToApi( interpreter, scope );
-
-    // Add API function for printing energy
-    var wrapper = function(id){
-      id = id ? id.toString() : '';
-      return interpreter.createPrimitive(myApp.printEnergy(id));
-    };
-    interpreter.setProperty(scope, 'printEnergy', interpreter.createNativeFunction(wrapper));
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
   
 };
 
@@ -403,7 +424,7 @@ myApp.retrieveFromXML = function( str ) {
      xhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
   xhttp.overrideMimeType('text/xml');
-  xhttp.open("GET", "lattice-hamiltonians.xml", false);
+  xhttp.open("GET", "sor3012-week2-exercise.xml", false);
   xhttp.send(null);
   myApp.xmlLevelDoc = xhttp.responseXML;
   return myApp.xmlLevelDoc.getElementsByTagName( str );
@@ -423,14 +444,9 @@ myApp.resize = function() {
 myApp.init = function() {
   // Setup workspace for game
   
-    ising.radius=200;
-    ising.setNumberOfSpins(20);
-    ising.setMagneticField(3);
-
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
    
 
   // Setup blockly
@@ -463,169 +479,93 @@ myApp.init = function() {
 window.addEventListener('load', myApp.init);
 window.addEventListener('resize', myApp.resize);
 
-    myApp.mismatchedEnergy = false;
-  
-    myApp.printEnergy = function( eng ){
-      ctx = document.getElementById("myCanvas").getContext("2d");
-      ctx.beginPath();
-      ctx.moveTo( 100,100 );
-      ctx.lineTo( 100,300 );
-      ctx.lineTo( 300,300 );
-      ctx.lineTo( 300,100 );
-      ctx.lineTo( 100,100 );
-      ctx.closePath();
-      ctx.fillStyle = '#FFFFFF';
-      ctx.fill();
-      energy = 0; 
-      if( myApp.mylevel==0 ) { 
-         for(var i = 0; i < ising.spins.length; i++){ energy += -ising.magneticFieldStrength*ising.spins[i]; } 
-      } else if( myApp.mylevel==1 ) {
-         energy = -ising.spins[0]*ising.spins[ising.spins.length-1] - ising.spins[0]*ising.magneticFieldStrength;
-         for(var i = 1; i < ising.spins.length; i++){
-             energy += -ising.spins[i-1]*ising.spins[i] - ising.magneticFieldStrength*ising.spins[i];
-         }
-      } else if( myApp.mylevel==2 ) {
-         energy = - ising.spins[0]*ising.magneticFieldStrength;
-         for(var i = 1; i < ising.spins.length; i++){
-             energy += -ising.spins[i-1]*ising.spins[i] - ising.magneticFieldStrength*ising.spins[i];
-         }
-      } else if( myApp.mylevel==3 ) {
-         meanfield = 0; energy=0;
-         for(var i = 0; i < ising.spins.length; i++){ meanfield += ising.spins[i]; }
-         meanfield = 2*meanfield / Number( ising.spins.length ) + ising.magneticFieldStrength;
-         for(var i = 0; i < ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
-      } else if( myApp.mylevel==4 ) {
-         energy = 0; meanfield = 0;
-         for(var i = 0; i < ising.spins.length; i++){ meanfield += ising.spins[i]; }
-         meanfield = meanfield / Number( ising.spins.length ) + ising.magneticFieldStrength;
-         for(var i = 0; i < ising.spins.length; i++){ energy += -meanfield*ising.spins[i]; }
-         energy += -ising.spins[0]*ising.spins[ising.spins.length-1];
-         for(var i = 2; i < ising.spins.length; i+=2) { energy += -ising.spins[i-1]*ising.spins[i]; }
-      } else if( myApp.mylevel==5 ) {
-         energy = 0; if( ising.spins[0]==ising.spins[ising.spins.length-1] ) energy = energy - 1; 
-         for(var i = 1; i < ising.spins.length; i++){ 
-             if( ising.spins[i-1]==ising.spins[i] ) energy = energy - 1;
-         }
-      }
-      if( energy != eng ){
-          alert("mismatch for system energy expecting " + energy + " got " + eng );
-          myApp.mismatchedEnergy = true;
-      } else {
-          myApp.mismatchedEnergy = false;
-      }
-      ctx.fillStyle = '#000000';
-      ctx.font="20px Georgia";
-      ctx.fillText("Energy equals " + eng,110,180);
-    };
-  myApp.stuffToDoOnLevelLoad = function(n) {
-    ising.radius=200;
-    ising.setNumberOfSpins(20);
-    ising.setMagneticField(3);
+    myplot.data = [];
 
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    } 
+  myApp.stuffToDoOnLevelLoad = function(n) {
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
   switch( myApp.mylevel ){ 
-case 0:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
-    break; 
-case 1:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
-    break; 
-case 2:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
-    break; 
-case 3:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
-    break; 
-case 4:
-      for(var i = 0; i < ising.spins.length; i++) {
-          if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-          else { ising.setSpinValue(i,1); }
-      }
-    break; 
-case 5:
-      ising.potts = true;
-      for(var i = 0; i < ising.spins.length; i++) {
-          var randomv = Math.random();
-          if( randomv < 0.25 ) { ising.setSpinValue(i,0); }
-          else if( randomv < 0.5 ) { ising.setSpinValue(i,1); } 
-          else if( randomv < 0.75 ) { ising.setSpinValue(i,2); }
-          else { ising.setSpinValue(i,3); }
-      }
-    break; 
 }
 };myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
-       levelcomplete = !myApp.mismatchedEnergy;
-       peng=0; ww = myApp.workspace.getAllBlocks();
-       for(var i=0; i < ww.length; i++ ){
-           if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
-       }
-       if( peng!=1 ) levelcomplete=false;
-    break;case 1:
-       levelcomplete = !myApp.mismatchedEnergy;
-       peng=0; ww = myApp.workspace.getAllBlocks();
-       for(var i=0; i < ww.length; i++ ){
-           if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
-       }
-       if( peng!=1 ) levelcomplete=false;
-    break;case 2:
-       levelcomplete = !myApp.mismatchedEnergy;
-       peng=0; ww = myApp.workspace.getAllBlocks();
-       for(var i=0; i < ww.length; i++ ){
-           if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
-       }
-       if( peng!=1 ) levelcomplete=false;
-    break;case 3:
-       levelcomplete = !myApp.mismatchedEnergy;
-       peng=0; ww = myApp.workspace.getAllBlocks();
-       for(var i=0; i < ww.length; i++ ){
-           if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
-       }
-       if( peng!=1 ) levelcomplete=false;
-    break;case 4:
-       levelcomplete = !myApp.mismatchedEnergy;
-       peng=0; ww = myApp.workspace.getAllBlocks();
-       for(var i=0; i < ww.length; i++ ){
-           if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
-       }
-       if( peng!=1 ) levelcomplete=false;
-    break;case 5:
-       levelcomplete = !myApp.mismatchedEnergy;
-       peng=0; ww = myApp.workspace.getAllBlocks();
-       for(var i=0; i < ww.length; i++ ){
-           if( ww[i].toString().search("print energy") >=0 ){ peng +=1; }
-       }
-       if( peng!=1 ) levelcomplete=false;
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 12 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1]!=0 && myplot.data[i][1]!=1 ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
+      }
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid0');modal.style.display = "block";video=true;}break;case 1:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }    
+      levelcomplete=true;
+      if( prand != 1 && myplot.data.length < 3 ){ levelcomplete=false; }
+      if( myplot.data[2][1]!=0 && myplot.data[2][1]!=1 && myplot.data[2][1]!=2 && myplot.data[2][1]!=3 && myplot.data[2][1]!=4 && myplot.data[2][1]!=5 ){ levelcomplete=false; } 
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid1');modal.style.display = "block";video=true;}break;case 2:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      if( myplot.data[2][1]==0 || myplot.data[2][1]-Math.floor(myplot.data[2][1])!=0  ){ levelcomplete=false; }
+      if( myplot.data[2][0]!=1 ){ levelcomplete=false; }
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid2');modal.style.display = "block";video=true;}break;case 3:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1] < 0 || myplot.data[i][1] > 1  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid3');modal.style.display = "block";video=true;}break;case 4:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length != 3 myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; } 
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid4');modal.style.display = "block";video=true;}break;case 5:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length != 3 myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; } 
+    break;case 6:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][1] < 0 || myplot.data[i][1] > 1  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
     break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
-    ising.radius=200;
-    ising.setNumberOfSpins(20);
-    ising.setMagneticField(3);
-
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
          if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }       myApp.active[myApp.mylevel + 1] = true;       myApp.setLevel( myApp.mylevel + 1 );   } else {       alert("Your program is not quite right.  Have another go and see if you can fix it")
-    ising.radius=200;
-    ising.setNumberOfSpins(20);
-    ising.setMagneticField(3);
-
-    for(var i = 0; i < ising.spins.length; i++) { 
-        if( Math.random() < 0.5 ) { ising.setSpinValue(i,-1); }
-        else { ising.setSpinValue(i,1); }
-    }
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
          myApp.stuffToDoOnLevelLoad( myApp.mylevel )   }};</script>

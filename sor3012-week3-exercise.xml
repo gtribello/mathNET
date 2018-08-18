@@ -1,0 +1,259 @@
+<PAGE>
+  <TITLE> Computer Programming for statistics II </TITLE>
+  <HEADER>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     In the previous exercises you learnt how to generate samples from the uniform, bernoulli, binomial and geometric distributions.  In this exercise we are going to add to this by learning how to sample from the poisson, exponential and normal distributions.  In addition, we are going to learn how we can compute histograms and how we can thus generate an estimate of the probability distribution we are sampling from.  
+  </WELCOME>
+  <WORKSPACE>
+    <table>
+      <tr>
+        <td>
+          <div id="graph" style="width: 400px"></div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td> 
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
+  </APIFUNCTIONS>
+  <BLOCKS>
+  </BLOCKS>
+  <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    } 
+  </SCRIPTS>
+  <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks below to create 50 Bernoulli random variables, $\{X_i\}$. Count the number of successes that you obtain and the number of failures and draw a bar chart showing the fraction of failures and the fraction of successes that you obtained from these 50 trials.
+    </DESCRIPTION>
+    <HINT>
+       You will find it useful to create a list with 2 entries.  The first element of this list can be used to calculate the number of failures while the second can be used to calculate the number of failures. Notice that you now have a plotting tool that allows you to draw bar charts.  Also note that when the heights of the two bars are added together you should get one.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"> </block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 ||  myplot.data.length != 3 ){ levelcomplete=false; }
+      if( myplot.data[2][0]!=0 || myplot.data[3][0]!=1 || myplot.data[2][1]+myplot.data[3][1] &gt; 1.05 || myplot.data[2][1]+myplot.data[3][1] &lt; 0.95 ) { levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks below to generate 50 samples of a random variable with probability mass function $P(X=0)=0.2$, $P(X=1)=0.5$ and $P(X=2)=0.3$.  Count the number of 0, 1 and 2 values you get when you generate these random variables and hence plot a bar chart that shows the fraction of times 0 came up, the fraction of times 1 came up and the fraction of times the random variable was equal to 2. 
+    </DESCRIPTION>
+    <HINT>
+      Use what was covered in the video to generate the samples of the random variables.  Generating the histogram should be a matter of modifying what you did in the previous exercise. 
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category> 
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Lists"> 
+         <block type="lists_repeat"> </block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 ||  myplot.data.length != 4 ){ levelcomplete=false; }
+      if( myplot.data[2][0]!=0 || myplot.data[3][0]!=1 || myplot.data[4][0]!=2 || myplot.data[2][1]+myplot.data[3][1]+myplot.data[4][1] &gt; 1.05 || myplot.data[2][1]+myplot.data[3][1]+myplot.data[4][1] &lt; 0.95 ) { levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Use the blocks below as well as what you learnt from the video to generate 10 random variables, $\{X_i\}$, from a poisson distribution with $\lambda=2$.  You should plot each of these random variables on the graph.  The $i$th random variable you generate, $X_i$, should be at the coordinates $(i,X_i)$.  
+    </DESCRIPTION>
+    <VID>
+       https://youtu.be/0KqCK0yG9T0
+    </VID>
+    <HINT>
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_whileUntil"></block>
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_single"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0  ){ levelcomplete=false; }
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks to generate 10 random variables, $\{Y_i\}$, from an exponential distribution with $\lambda=4$.  You should plot each of these random variables on the graph.  The $i$th random variable you generate, $Y_i$, should be at the coordinates $(i,Y_i)$.  
+    </DESCRIPTION>
+    <HINT>
+       Notice that you have a block that allows you to calculate the logarithm of a random variable.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_single"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_list"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"> </block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
+      }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks to generate 50 normal random variables.  Use these 50 samples to calculate an estimate for the probabilty density function for the distribution that these random variables were sampled from.  To do this divide the range between -4 and +4 into 20 intervals of length 0.4 and create a list with one scalar for each or the sub-ranges in this range.  When you generate your random variables use the list that you created to count the number of times the random variable falls into each of the sub-ranges.  Once you have generated all the random variables plot a bar graph showing the fraction of times that the random variable fell into each of the intervals of interest on the $y$ axis and the value at the center of the sub-range on the $x$.
+    </DESCRIPTION>
+    <HINT>
+      In previous exercises we could use the value of the random variable to determine what element of the list we had to add one to to get our updated histogram.  We cannot do the same here as the random variables we generate are real numbers and not integers.  Notice, however, if we divide the random variable value we generate by 0.4 and if we then round down we do get an integer. Notice that the integer you get by doing so might be negative and that the indices you use to specify a position in the list always be greater than one.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_round"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+         <block type="normal_random"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="standard normal random variable" ){ prand += 1; }
+      }
+      levelcomplete=true; var sum=0;
+      if( prand != 1 &amp;&amp; myplot.data.length != 22 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           sum += myplot.data[i][1]
+           if( myplot.data[i][0]!=(-3.8+(i-2)*0.4) || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
+      }
+      if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+   <REVIEW>
+       Congratulations on completing the exercise!  You should have made notes on what you did within a python notebook as you worked through the tasks.  Take a moment now to review your notes.  Make sure that all the python code you have copied works and that you have notes that explain what it all does.  It is important to do this now as we will be using the programs that you have just learnt to write during this exercise throughout the remainder of the module.  In addition, you should now have all the programming knowledge that you need in order to complete the first assignment for this module.  
+   </REVIEW>
+</PAGE>

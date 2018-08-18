@@ -145,28 +145,31 @@
 <!-- === END HEADER === -->
 <div id="modl-vid0" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/DdBM740lMpo " seamless="" allowfullscreen></iframe> 
         <span id="modl-close0"><h2>close</h2></span>   </div> 
 </div> 
 <div id="modl-vid1" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/1ATU98fSTEg " seamless="" allowfullscreen></iframe> 
         <span id="modl-close1"><h2>close</h2></span>   </div> 
 </div> 
 <div id="modl-vid2" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/WJcuKYJK6rw " seamless="" allowfullscreen></iframe> 
         <span id="modl-close2"><h2>close</h2></span>   </div> 
 </div> 
 <div id="modl-vid3" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/Jn45JDFkLsI " seamless="" allowfullscreen></iframe> 
         <span id="modl-close3"><h2>close</h2></span>   </div> 
 </div> 
-<div id="modl-vid4" class="modal"> 
+<div id="modl-review" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
-        <span id="modl-close4"><h2>close</h2></span>   </div> 
+
+      Congratulations on completing whole exercise and on learning the basics of computer programming.  <a href="Images/sor3012-exercise-1.ipynb" download="sor3012-exericse1.ipynb">Click here</a> to download a python notebook that summarises the ideas that were covered in the exercise.  Study this notebook carefully before attempting any further exercise as <b>I would strongly recommended you to create notes like these as you work through the remaining blockly exercises.</b>
+   
+
+        <span id="modl-close-review"><h3>close</h3></span>   </div> 
 </div> 
 <div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Basics of computer programming : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
                  <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> 
@@ -216,12 +219,10 @@ span3.onclick = function() {
     var currentIframe = modal.querySelector('.modal-content > iframe');
     currentIframe.src = currentIframe.src;
 }
-var span4 = document.getElementById("modl-close4");
-span4.onclick = function() {
-    var modal = document.getElementById('modl-vid4');
-    modal.style.display = "none";
-    var currentIframe = modal.querySelector('.modal-content > iframe');
-    currentIframe.src = currentIframe.src;
+var spanreview = document.getElementById("modl-close-review"); 
+spanreview.onclick = function() {
+     var modal = document.getElementById("modl-review");
+     modal.style.display = "none"; 
 }
 
   // This puts everything we need into the API for the 
@@ -387,7 +388,13 @@ myApp.setLevel = function(n) {
    var desc = levels[n].getElementsByTagName("DESCRIPTION");
    // Load the contents of the level
    var g = document.getElementById("explanation");
-   g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+   if( levels[n].getElementsByTagName("VID").length==0 ) {
+       g.innerHTML = desc[0].childNodes[0].nodeValue;
+   } else {
+       var vid = levels[n].getElementsByTagName("VID");
+       var link = 'Click <a href="' + vid[0].childNodes[0].nodeValue + '" target="_blank">here</a> if you want to watch the explanatory video again.'
+       g.innerHTML = desc[0].childNodes[0].nodeValue + " " + link;
+   }
    // Typeset maths using mathJAX
    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
    // Load the new blockly toolbox
@@ -478,17 +485,17 @@ window.addEventListener('resize', myApp.resize);
 };myApp.checkLevelEnd = function() {   levelcomplete = true; video=false;   switch( myApp.mylevel ){case 0:
       levelcomplete=true;
       if( myplot.data.length != 3 || myplot.data[2][0]!=1 || myplot.data[2][1]!=2 ){ levelcomplete=false; }
-    if( levelcomplete ) {var modal = document.getElementById('modl-vid0');modal.style.display = "block";video=true;}break;case 1:
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid0');modal.style.display = "block";video=true;}break;case 1:
       levelcomplete=true;
       if( myplot.data.length < 3 || myplot.data[2][1] != 2*myplot.data[2][0] ){ levelcomplete=false; }
-    if( levelcomplete ) {var modal = document.getElementById('modl-vid1');modal.style.display = "block";video=true;}break;case 2:
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid1');modal.style.display = "block";video=true;}break;case 2:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
       if( prand != 1 || myplot.data.length != 3 || myplot.data[2][0]!=1 ){ levelcomplete=false; }
-    if( levelcomplete ) {var modal = document.getElementById('modl-vid2');modal.style.display = "block";video=true;}break;case 3:
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid2');modal.style.display = "block";video=true;}break;case 3:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
@@ -499,7 +506,7 @@ window.addEventListener('resize', myApp.resize);
            if( myplot.data[i][1]!=0 && myplot.data[i][1]!=1 ){ levelcomplete=false; }
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
       }
-    if( levelcomplete ) {var modal = document.getElementById('modl-vid3');modal.style.display = "block";video=true;}break;case 4:
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid3');modal.style.display = "block";video=true;}break;case 4:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){ 
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
@@ -510,7 +517,7 @@ window.addEventListener('resize', myApp.resize);
            if( myplot.data[i][1]!=0 && myplot.data[i][1]!=1 ){ levelcomplete=false; }
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
       }
-    if( levelcomplete ) {var modal = document.getElementById('modl-vid4');modal.style.display = "block";video=true;}break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("   ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.plotGraph('graph','scatter');

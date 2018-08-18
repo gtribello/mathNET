@@ -60,12 +60,13 @@
       levelcomplete=true;
       if( myplot.data.length != 3 || myplot.data[2][0]!=1 || myplot.data[2][1]!=2 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/DdBM740lMpo </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
        Use the blocks below to create a variable, $X$, and set $X$ to some value of your chosing.  Once you have done so use the blocks to plot a point at $(X,2X)$. 
     </DESCRIPTION>
+    <VID> https://youtu.be/DdBM740lMpo </VID>
     <HINT>
        You can now create variables using the blocks under the variables category.  Notice also that you can evaluate mathematical equations using the the arithmatic block that can be found under program.
     </HINT>
@@ -83,12 +84,13 @@
       levelcomplete=true;
       if( myplot.data.length &lt; 3 || myplot.data[2][1] != 2*myplot.data[2][0] ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/1ATU98fSTEg </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
        Use the blocks to generate a uniform random variable, $X$.  Plot a point on the graph at $(1,X)$.
     </DESCRIPTION>
+    <VID> https://youtu.be/1ATU98fSTEg </VID>
     <HINT>
        Under plotting you have a block that allows you to draw points on the graph and under random you have a block that will generate uniform random variables for you.
     </HINT>
@@ -111,12 +113,13 @@
       levelcomplete=true;
       if( prand != 1 || myplot.data.length != 3 || myplot.data[2][0]!=1 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/WJcuKYJK6rw </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
        Use the blocks to generate a random variable, $Y$, from a bernoulli distribution with $p=0.75$.  Plot a point on the graph at $(1,Y)$.
     </DESCRIPTION>
+    <VID> https://youtu.be/WJcuKYJK6rw </VID>
     <HINT>
        Notice that you now have some blocks under the logic category that allow you to only execute certain instructions if a condition is satisfied.  What instruction could you only excute if a uniform random variable is less than a certain target value to help you in this case?
     </HINT>
@@ -148,12 +151,13 @@
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
       }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/Jn45JDFkLsI </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
        Use the blocks below to create 10 Bernoulli random variables, $\{X_i\}$. Store all these random variables in a list use this list to plot a graph with points at $(i, X_i)$ where $i$ runs from 1 to 10.
     </DESCRIPTION>
+    <VID> https://youtu.be/Jn45JDFkLsI </VID>
     <HINT>
        Notice that you now some blocks that allow you create and manipulate lists and that you also have a block that allows you repeat a set of actions multiple times.  Do not use the blocks to create a Bernoulli random variable 10 times.
     </HINT>
@@ -172,7 +176,7 @@
          <block type="uniform_random"></block>
       </category>
       <category name="Plotting">
-         <block type="draw_line_graph"></block>
+         <block type="draw_list"></block>
       </category>
       <category name="Lists">
          <block type="lists_repeat"></block>
@@ -192,8 +196,8 @@
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
       }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
   </LEVEL>
    <REVIEW>
+      Congratulations on completing whole exercise and on learning the basics of computer programming.  <a href="Images/sor3012-exercise-1.ipynb" download="sor3012-exericse1.ipynb">Click here</a> to download a python notebook that summarises the ideas that were covered in the exercise.  Study this notebook carefully before attempting any further exercise as <b>I would strongly recommended you to create notes like these as you work through the remaining blockly exercises.</b>
    </REVIEW>
 </PAGE>

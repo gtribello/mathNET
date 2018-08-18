@@ -143,6 +143,14 @@
         </div>
 </div>
 <!-- === END HEADER === -->
+<div id="modl-review" class="modal"> 
+   <div class="modal-content"> 
+
+     The exercise you have just performed has taught you how to simulate the markov chain known as the Ehrenfest urn.  This Markov chain has a stationary distribution and one of the things I would like you to do now is to try to work through the derivation of the analytical expression for the limiting probability of being in each state of the chain.  In addition, and in order to consolidate what you have just learnt, write a python notebook that contains programs to simulate this Markov chain.  Run a simulation of this chain and calculate a histogram for the random variable that tells you the number of balls in container A from the time series for this random variable that this random variable estimates.  Try to calculate suitable error bars around your estimates for these probabilities.  Notice when you do this, however, that this is not simply a matter of applying the usual procedure because of a particular feature of the random variables that you have generated that makes analysing them using ideas based on the central limit theorem not very sensible.  Hence, in order to calculate these error bars you are going to have to do a little bit of research online.
+  
+
+        <span id="modl-close-review"><h3>close</h3></span>   </div> 
+</div> 
 <div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Ehrenfest urns and stationary Markov chains : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
                  <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> 
                  <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button> 
@@ -163,6 +171,11 @@
   
                <div id="explanation"> </div> 
              <xml id="toolbox" style="display: none">             <category name="Variables" custom="VARIABLE"></category>             </xml><script> 
+var spanreview = document.getElementById("modl-close-review"); 
+spanreview.onclick = function() {
+     var modal = document.getElementById("modl-review");
+     modal.style.display = "none"; 
+}
 
   // This puts everything we need into the API for the 
 // javascript interpreter
@@ -327,7 +340,13 @@ myApp.setLevel = function(n) {
    var desc = levels[n].getElementsByTagName("DESCRIPTION");
    // Load the contents of the level
    var g = document.getElementById("explanation");
-   g.innerHTML = levels[n].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue;
+   if( levels[n].getElementsByTagName("VID").length==0 ) {
+       g.innerHTML = desc[0].childNodes[0].nodeValue;
+   } else {
+       var vid = levels[n].getElementsByTagName("VID");
+       var link = 'Click <a href="' + vid[0].childNodes[0].nodeValue + '" target="_blank">here</a> if you want to watch the explanatory video again.'
+       g.innerHTML = desc[0].childNodes[0].nodeValue + " " + link;
+   }
    // Typeset maths using mathJAX
    MathJax.Hub.Queue(["Typeset",MathJax.Hub,"explanation"]);
    // Load the new blockly toolbox
@@ -451,7 +470,7 @@ window.addEventListener('resize', myApp.resize);
                if( Math.abs( myplot.data[i][1]-myplot.data[i-1][1] ) != 1 ){ levelcomplete=false; }
            } 
       }
-    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       if( !video ) alert("     The exercise you have just performed has taught you how to simulate the markov chain known as the Ehrenfest urn.  This Markov chain has a stationary distribution and one of the things I would like you to do now is to try to work through the derivation of the analytical expression for the limiting probability of being in each state of the chain.  In addition, and in order to consolidate what you have just learnt, write a python notebook that contains programs to simulate this Markov chain.  Run a simulation of this chain and calculate a histogram for the random variable that tells you the number of balls in container A from the time series for this random variable that this random variable estimates.  Try to calculate suitable error bars around your estimates for these probabilities.  Notice when you do this, however, that this is not simply a matter of applying the usual procedure because of a particular feature of the random variables that you have generated that makes analysing them using ideas based on the central limit theorem not very sensible.  Hence, in order to calculate these error bars you are going to have to do a little bit of research online.  ");   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.plotGraph('graph','scatter');

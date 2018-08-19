@@ -83,12 +83,13 @@
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; } 
       }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/RNQFAH2wCos </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
       Use the blocks below to modify the code that you have written so that it generates a single binomial random variable, $X$, with parameters $p=0.5$ and $N=5$.  Plot the value of this binomial random variable at the point $(1,X)$.
     </DESCRIPTION>
+    <VID> https://www.youtube.com/watch?v=RNQFAH2wCos </VID>
     <HINT>
       When generating each binomial random variable we need to do repeated bernoulli trials.
     </HINT>
@@ -119,15 +120,13 @@
       if( prand != 1 &amp;&amp; myplot.data.length &lt; 3 ){ levelcomplete=false; }
       if( myplot.data[2][1]!=0 &amp;&amp; myplot.data[2][1]!=1 &amp;&amp; myplot.data[2][1]!=2 &amp;&amp; myplot.data[2][1]!=3 &amp;&amp; myplot.data[2][1]!=4 &amp;&amp; myplot.data[2][1]!=5 ){ levelcomplete=false; } 
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/fna3ysWxP0E </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
       Now use the blocks below to write a code that generates a single geometric random variable, $Y$, with parameter $p=0.6$.  Plot the value fo this geometric random variable at the point $(1,Y)$
     </DESCRIPTION>
-    <VID>
-       https://youtu.be/0KqCK0yG9T0
-    </VID>
+    <VID> https://www.youtube.com/watch?v=fna3ysWxP0E </VID>
     <HINT>
        Notice that you have a new block under the program category that will allow you to repeat a set of instructions until a condition is satisfied.
     </HINT>
@@ -160,12 +159,13 @@
       if( myplot.data[2][1]==0 || myplot.data[2][1]-Math.floor(myplot.data[2][1])!=0  ){ levelcomplete=false; }
       if( myplot.data[2][0]!=1 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/UbVJU08Vb5o </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
        Use the blocks to generate a sample of 50 uniform random variables.  Draw a graph showing how the value of the sample mean changes as you increase the number of random variables in your sample.
     </DESCRIPTION>
+    <VID> https://www.youtube.com/watch?v=UbVJU08Vb5o </VID>
     <HINT>
        Remember the sample mean, $\mu$, for a sample of $N$ random variables, $\{X_i\}$, is just $\mu = \frac{1}{N} \sum_{i=1}^N X_i$.
     </HINT>
@@ -200,12 +200,13 @@
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
       }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/v7KfyPQ3_Jc </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
        Use the blocks to generate a sample of 51 uniform random variables.  Calculate the median, $\phi$, for your sample of random variables and plot a point on the graph at $(1,\phi)$.  You should draw a $y$ error bar around this point that starts at the 10th percentile and that finishes at the 90th percentile.   
     </DESCRIPTION>
+    <VID> https://www.youtube.com/watch?v=v7KfyPQ3_Jc </VID>
     <HINT>
        Notice that you have been given a block that allows you to sort a list.
     </HINT>
@@ -238,12 +239,13 @@
       if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
       if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length != 3 myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; } 
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/Z-aAZoiihEM </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
        Use the blocks to generate a sample of 50 uniform random variables. Calculate the sample mean, $\mu$, for your sample of random variables and the sample variance, $\sigma^2$.  Draw a point on the graph at $(1,\mu$)$.  Draw a $y$ error bar around this point that starts at $\mu - \sigma$ and that finishes at $\mu + \sigma$.
     </DESCRIPTION>
+    <VID> https://www.youtube.com/watch?v=Z-aAZoiihEM </VID>
     <HINT>
        Remember that the sample variance, $\sigma^2$, for a sample of $N$ random variables, $\{X_i\}$, is given by $\sigma^2 = \frac{1}{N-1} \sum_{i=1}^N ( X_i - \mu)^2$.  Further recall that we can also write this quantity as $\sigma^2 = \frac{N}{N-1} \left[ \frac{1}{N} \sum_{i=1}^N X_i^2 - \mu^2 \right]$
     </HINT>
@@ -280,6 +282,7 @@
     <DESCRIPTION>
        Use the blocks below to create a function that generates and returns the value of a bernoulli random variable.  Use this function to generate a sample of bernoulli random variables and then use what you have learnt in the exercises that involved generating uniform random variables to draw a graph showing how the sample mean changes as you increase the number of bernoulli random variables in your sample.
     </DESCRIPTION>
+    <VID> https://youtu.be/0KqCK0yG9T0 </VID>
     <HINT>
        You use the blocks under function to create a function in blockly.  Your function will contain the part that generates the bernoulli random variable.  Once you have this function it should be easy to modify the code that you used to do this exercise with uniform random variables.  It is simply a matter of changing the name of the function that is called when you generate the random variables. 
     </HINT>

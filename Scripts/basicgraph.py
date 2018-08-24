@@ -88,10 +88,10 @@ class basicgraph:
                  graphstr += "edge[style=invis];\n"
                  graphstr += backnodes[len(backnodes)-2] + " -> " + self.nodes[j] + '\n'
              backnodes.append(self.nodes[j])
-      for i in range(0,math.floor(len(forwardnodes)/2)+1) :
+      for i in range(0,int(math.floor(len(forwardnodes)/2)+1)) :
           if len(forwardnodes)>2*i+2 :  
              graphstr += "{ rank=same; " + forwardnodes[2*i] + ";" + forwardnodes[2*i+1] + "; } \n" 
-      for i in range(0,math.floor(len(backnodes)/2)+1) :
+      for i in range(0,int(math.floor(len(backnodes)/2)+1)) :
           if len(backnodes)>2*i+2 : 
              graphstr += "{ rank=same; " + backnodes[2*i] + ";" + backnodes[2*i+1] + "; } \n"
       graphstr += "}" 

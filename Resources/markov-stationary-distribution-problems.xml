@@ -190,7 +190,7 @@ $$
       <QUESTION>
 A double glazing firm employs staff to cold call clients and try to sell
 them new windows for their home. There are three levels of staff pay: Level 1
-(£50), Level 2 (£75) or Level 3 (£100).  The amount a
+(\pounds~50), Level 2 (\pounds~75) or Level 3 (\pounds~100).  The amount a
 person is paid in a given evening is determined by their performance
 that evening and their performance on the previous evening.  A staff member who
 was paid at level 1 on the previous day is moved to level 2 if they are

@@ -15,7 +15,7 @@ LEARNINGOUTCOMES:
 
 - You should be able to calculate expectations and variances directly, using the moment generating function and by using the conditional expectation theorem.  You should also be able to explain what predictions can be made given the expectation and/or the variance.
 
-- You should be able to recognise which type of random variable is appropriate for modelling a given phenomenon, identify the assumptions that they have made in constructing this model and critically assess their validity. 
+- You should be able to recognise which type of random variable is appropriate for modelling a given phenomenon, identify the assumptions that they have made in constructing this model and critically assess their validity.  
 
 - You should be able to explain what it means when we state that a time dependent process has independent and stationary increments and how this differs from a Markov process.  By using your understanding of this distinction you should be able to construct probabilistic models for time dependent phenomena, explain the assumptions that have been made in the constructing these models and critically assess their validity.
 

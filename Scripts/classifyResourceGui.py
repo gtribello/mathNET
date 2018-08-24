@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from topic import topiclist
 import os 
 from PyQt4.QtGui import *

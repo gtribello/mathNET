@@ -47,7 +47,7 @@
 \newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
 \newcommand{\vek}[1]{\mbox{\boldmath $  #1$}}
 \newcommand{\ex}[1]{\ensuremath {\mathbb{E}} \left[ #1 \right]}
-\newcommand{\var}[1]{\ensuremath{{\rm var}\left[ #1 \right]}}
+\newcommand{\var}[1]{\ensuremath{{\mathrm var}\left[ #1 \right]}}
 
 \title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
 Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
@@ -69,7 +69,7 @@ Regardless this event occurs with a probablilty of $p$.  If the event transpires
 holding.  If it does not transpire you loose your stake and are thus left with $a - x$ pounds.  
 
 The ideas in this first paragraph have been covered in the videos on the gamblers video and in the programming exercise.  We have shown how we can describe the above process using a Markov chain, 
-what the transition graph is for this chain and what the associated one-step transition probability matrix is for this discrete Markov chain.  {\bf Before attempting this exercise make sure you are 
+what the transition graph is for this chain and what the associated one-step transition probability matrix is for this discrete Markov chain.  {\bfseries Before attempting this exercise make sure you are 
 familiar with these ideas and that you can thus do the following items:}
 
 \begin{enumerate}
@@ -80,7 +80,7 @@ familiar with these ideas and that you can thus do the following items:}
 you start with $k$ pounds and where $p$ and $q$ are the probabiltiy of winning when you place each stake.
 \end{enumerate}
 
-{\bf If you cannot do all of the above things watch the video on gamblers ruin again.  If you are unable to do the above you will not understand the remainder of this exercise.}
+{\bfseries If you cannot do all of the above things watch the video on gamblers ruin again.  If you are unable to do the above you will not understand the remainder of this exercise.}
 
 The purpose of this exercise is to find an exact expression for the conditional probability of ruin given that you start with exactly $k$ pounds, $\pi_k$.
 
@@ -103,7 +103,7 @@ solutions we find - so for example if we find two solutions, $\theta_1$ and $\th
 \[
  \phi_k = A \theta_1^k + B \theta_2^k
 \]
-{\bf Insert the trial solution $\pi_k = \theta^k$ into the homogenous difference equation above remebering that $\phi_{k+1}=\theta^{k+1}$.  Factorise the resulting equation and hence show that:
+{\bfseries Insert the trial solution $\pi_k = \theta^k$ into the homogenous difference equation above remebering that $\phi_{k+1}=\theta^{k+1}$.  Factorise the resulting equation and hence show that:
 
 \begin{equation}
  \pi_k = A + B \left( \frac{q}{p}\right)^k
@@ -112,11 +112,11 @@ solutions we find - so for example if we find two solutions, $\theta_1$ and $\th
 
 where $A$ and $B$ are as yet unknown parameters.}
 
-\item Think about what the quantity $\pi_k$ represents.  This is the probability of ruin given that you start with exactly $k$ pounds to your name.  Given the meaning of this quantity, $\pi_k$, {\bf 
+\item Think about what the quantity $\pi_k$ represents.  This is the probability of ruin given that you start with exactly $k$ pounds to your name.  Given the meaning of this quantity, $\pi_k$, {\bfseries 
 what are the values of $\pi_0$ and $\pi_n$.}  Notice that here $n$ is the target amount of money the gambler wants to win.  
 
 \item If you insert the values of $\pi_0$ and $\pi_n$ into the left hand side of equation \ref{eqn:soln} and the corresponding values of $k$ into the right hand side you get two simulaltaneous 
-equation with two unknowns $A$ and $B$.  {\bf Solve this set of simultaneous equations and find values for $A$ and $B$.}  Hence, show that:
+equation with two unknowns $A$ and $B$.  {\bfseries Solve this set of simultaneous equations and find values for $A$ and $B$.}  Hence, show that:
 \[
  \pi_k = \frac{ \left( \frac{q}{p} \right)^k - \left( \frac{q}{p} \right)^n }{ 1 - \left( \frac{q}{p} \right)^n }
 \]

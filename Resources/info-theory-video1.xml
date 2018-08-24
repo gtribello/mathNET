@@ -3,7 +3,7 @@
   <VIDEO>https://www.youtube.com/embed/xdo1t6_so20</VIDEO>
   <UL>
     <LI> Explain the meaning of the term functional</LI>
-    <LI> State Khitchine’s four axioms for the information</LI>
+    <LI> State Khitchine's four axioms for the information</LI>
     <LI> Explain what we mean when we state that a function or functional is monotonically decreasing.</LI>
     <LI> Now explain why the information in a uniform distribution decreases monotonically with the size of the sample space.</LI>
     <LI> If the uniform probability distribution $p$ has a sample space with $m$ outcomes and the probability distribution $q$ has a sample space with $n$ outcomes. How many outcomes are there in the sample space for the joint probability distribution $p \otimes q$. N.B. $p$ and $q$ are independent.</LI>

@@ -143,6 +143,16 @@
         </div>
 </div>
 <!-- === END HEADER === -->
+<div id="modl-vid0" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/fEISNB5bpeA " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close0"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid1" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/DAphDLpMtZE " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close1"><h2>close</h2></span>   </div> 
+</div> 
 <div id="modl-review" class="modal"> 
    <div class="modal-content"> 
 
@@ -171,6 +181,20 @@
   
                <div id="explanation"> </div> 
              <xml id="toolbox" style="display: none">             <category name="Variables" custom="VARIABLE"></category>             </xml><script> 
+var span0 = document.getElementById("modl-close0");
+span0.onclick = function() {
+    var modal = document.getElementById('modl-vid0');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span1 = document.getElementById("modl-close1");
+span1.onclick = function() {
+    var modal = document.getElementById('modl-vid1');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
 var spanreview = document.getElementById("modl-close-review"); 
 spanreview.onclick = function() {
      var modal = document.getElementById("modl-review");
@@ -505,7 +529,7 @@ window.addEventListener('resize', myApp.resize);
       for(var i=2; i < myplot.data.length; i++ ){
            if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] < 0 || myplot.data[i][1] > 1  ){ levelcomplete=false; }
       }
-    break;case 1:
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid0');modal.style.display = "block";video=true;}break;case 1:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
@@ -515,7 +539,7 @@ window.addEventListener('resize', myApp.resize);
       for(var i=2; i < myplot.data.length; i++ ){
            if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] < 0 || myplot.data[i][1] > 1  ){ levelcomplete=false; }
       }
-    break;case 2:
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid1');modal.style.display = "block";video=true;}break;case 2:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }

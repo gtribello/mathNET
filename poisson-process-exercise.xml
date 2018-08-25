@@ -78,6 +78,7 @@
            if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
       }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dGsXWwGS7Go </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
@@ -85,6 +86,7 @@
     </DESCRIPTION>
     <HINT>
     </HINT>
+    <VID> https://youtu.be/dGsXWwGS7Go </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -119,6 +121,7 @@
            }
       }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/yNiRRfkPLYA </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -127,6 +130,7 @@
     <HINT>
        Notice that in a compound poisson process the total spend increases when an event occurs is a random variable.  In a poisson process the total number of events just increases by one when an event occurs.  
     </HINT>
+    <VID> https://youtu.be/yNiRRfkPLYA </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -162,14 +166,15 @@
            }
       }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/1WdNr_LCyXw </VIDEO>
   </LEVEL>
    <LEVEL>
     <DESCRIPTION>
        Use the blocks below to write a program to model the ammount of time it takes to transition from the intial state to the final state for the sucessive states model that was discussed in the video.  Generate 10 samples from this distribution and then calculate a sample mean and 80% confidence limits on your estimate of the mean.  Draw an error bar showing centered on the mean that shows the 80% confidence limit.
     </DESCRIPTION>
-    <VID> https://youtu.be/4XBwnGKhyiE </VID>
     <HINT>
     </HINT>
+    <VID> https://youtu.be/1WdNr_LCyXw </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -203,13 +208,13 @@
       if( prand != 2 || myplot.data.length != 3 ){ levelcomplete=false; }
       if( myplot.error.length!=myplot.data.length-1 || myplot.data[i][2] &lt; 0 || myplot.data[i][2] &gt; 1 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/EYclL5pvVHE </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>  
        Use the blocks below to write a program to model the ammount of time it takes to transition from the intial state to the final state for the parallel transitions model that was discussed in the video.  Generate 10 samples from this distribution and then calculate a sample mean and 80% confidence limits on your estimate of the mean.  Draw an error bar showin g centered on the mean that shows the 80% confidence limit.
     </DESCRIPTION>
-    <VID> https://youtu.be/4XBwnGKhyiE </VID>
+    <VID> https://youtu.be/EYclL5pvVHE </VID>
     <HINT>
        I have deliberately not given you a block for sorting your samples.  I have given you, however, a block for computing the inverse of the cumulative probility distribution function for a normal random variable.
     </HINT>
@@ -246,13 +251,13 @@
       if( prand != 3 || myplot.data.length != 3 ){ levelcomplete=false; }
       if( myplot.error.length!=myplot.data.length-1 || myplot.data[i][2] &lt; 0 || myplot.data[i][2] &gt; 1 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/c16Nc5AQJt0 </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>              
        Use the blocks below to write a program to simulate any three state continuous time Markov chain with a stationary distirbution.  Draw a histogram showing the fraction of time that is spent in each of the two states in this chain.
     </DESCRIPTION>
-    <VID> https://youtu.be/4XBwnGKhyiE </VID>
+    <VID> https://youtu.be/c16Nc5AQJt0 </VID>
     <HINT>
     </HINT>
     <TOOLBOX>
@@ -288,13 +293,13 @@
       }
       if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/12XbrjiZ1FA </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
        Use the blocks below to write a program that simulates an M/M/1 queue.  Calculate the total ammount of time each person spends waiting in the queue and getting served and plot a histogram showing this distribution of service times.             
     </DESCRIPTION>
-    <VID> https://youtu.be/4XBwnGKhyiE </VID>
+    <VID> https://youtu.be/12XbrjiZ1FA </VID>
     <HINT>
        If you have forgotten how to compute a histogram for samples of a continuous random variable look back at the exercise that you completed in week 3 on the normal distribution.
     </HINT>
@@ -330,7 +335,6 @@
       }
       if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
   </LEVEL>
   <REVIEW>
      The exercise you have just performed has taught you the basics of simulating continuous time Markov chains.  You will need to use everything that you have learnt by performing 

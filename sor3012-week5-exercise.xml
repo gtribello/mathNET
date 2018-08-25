@@ -137,6 +137,7 @@
            if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
       }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/fEISNB5bpeA </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
@@ -147,6 +148,7 @@
     <HINT>
       The code to calculate a sample is similar to the code for calculating a sample mean.  You just need to make sure you accumulate both the sum of all the random variables and the sum of the squares of the random variables.  Be careful with the Bessel correction!
     </HINT>
+    <VID> https://youtu.be/fEISNB5bpeA </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -181,6 +183,7 @@
            if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
       }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/DAphDLpMtZE </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
@@ -192,6 +195,7 @@
     <HINT>
       You should now not be plotting a point every time you generate a new random variable.
     </HINT>
+    <VID> https://youtu.be/DAphDLpMtZE </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -229,6 +233,7 @@
     <HINT>
       Notice that I have given you a block for plotting points with error bars.
     </HINT>
+    <VID> </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">

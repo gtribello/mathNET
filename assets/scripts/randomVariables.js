@@ -9,6 +9,19 @@ function addRandomVariablesApi( interpreter, scope ){
      return interpreter.createPrimitive(random.normalRandom(id));
    };
    interpreter.setProperty(scope, 'normalRandom', interpreter.createNativeFunction(wrapper));
+   // Add an API function for cumulative probability distribution function
+   var wrapper = function(id) {
+     id = id ? id.toString() : '';
+     return interpreter.createPrimitive(myApp.erf(id));
+   };
+   interpreter.setProperty(scope, 'erf', interpreter.createNativeFunction(wrapper));
+
+   // Add an API function for inverse cumulative probability distribution function
+   var wrapper = function(id) {
+     id = id ? id.toString() : '';
+     return interpreter.createPrimitive(myApp.NormSInv(id));
+   };
+   interpreter.setProperty(scope, 'NormSInv', interpreter.createNativeFunction(wrapper));
 }
 
 function randomVariablesClass(){
@@ -71,5 +84,57 @@ Blockly.JavaScript['normal_random'] = function(block) {
 
 Blockly.Python['normal_random'] = function(block) {
   var code = 'numpy.random.normal()'; 
+  return [code, Blockly.Python.ORDER_ATOMIC];
+};
+
+// Define a custom block to do the mathematics of the standard normal distribution
+Blockly.Blocks["math_normal"] = {
+  // take input and plot it on y
+  init: function() {
+    this.jsonInit({
+      "message0": "%1 of cumulative distribution for standard normal random variable at %2",
+      "args0": [
+         {
+           "type": "field_dropdown",
+           "name": "OP",
+           "options":
+             [['value', 'VALUE'],
+             ['value of inverse', 'INVERSE']]
+         },
+         {
+           "type": "input_value",
+           "name": "NUM",
+           "check": "Number"
+         }
+      ],
+      "output": "Number",
+      "inputsInline": true,
+      "colour": Blockly.Blocks.variables.HUE,
+      "tooltip": Blockly.Msg.VARIABLES_SET_TOOLTIP
+    })
+  }
+};
+
+Blockly.JavaScript['math_normal'] = function(block) {
+  var code; var ftype = block.getFieldValue('OP');
+  var x = Blockly.JavaScript.valueToCode(block, 'NUM', Blockly.JavaScript.ORDER_ATOMIC) || '0';
+  switch(ftype){
+  case("VALUE") :
+     code = 'erf(' + x  + ')'; break;
+  case("INVERSE") :
+     code = 'NormSInv(' + x + ')'; break;
+  }
+  return [code, Blockly.JavaScript.ORDER_ATOMIC];
+};
+
+Blockly.Python['math_normal'] = function(block) {
+  var code; var ftype = block.getFieldValue('OP');
+  var x = Blockly.Python.valueToCode(block, 'NUM', Blockly.Python.ORDER_ATOMIC) || '0';
+  switch(ftype){
+  case("VALUE") :
+     code = 'scipi.stats.norm.cdf(' + x + ')'; break;
+  case("INVERSE") :
+     code = 'scipi.stats.norm.ppf(' + x + ')'; break;
+  }
   return [code, Blockly.Python.ORDER_ATOMIC];
 };

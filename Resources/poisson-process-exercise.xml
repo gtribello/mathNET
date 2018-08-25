@@ -1,11 +1,10 @@
 <PAGE>
-  <TITLE> Understanding the poisson process </TITLE>
+  <TITLE> Markov chains in continuous time </TITLE>
   <HEADER>
      <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
   </HEADER>
   <WELCOME>
-     In this exercise we are going to learn how to model poisson, exponential and compound poisson processes.  This should prepare you for the exercises on modelling queues
-     and other continuous time Markov chains.
+     In this exercise we are going to learn how to simulate some Markov chains in continuous time so that you can extend on these ideas as you work on the extend exercises. 
   </WELCOME>
   <WORKSPACE>
     <table>
@@ -44,108 +43,7 @@
   </STARTUP>
   <LEVEL>
     <DESCRIPTION>
-      This first exercise should largely be revision.  We are going to look at one way of generating a Poisson process.  The way this method works is that 
-      we model fixed increments in time, $t$.  The random number that tells us how many Poisson events occur in a fixed increment of time, $t$, is given by 
-      a Poisson random variable with parameter $\lambda t$.  Given this information use the blocks below to generate a Poisson process with $\lambda=1$ by 
-      simulating a set of discrete time intervals of with length $t=1$.  Simulate at least 20 of these intervals and use the blocks to plot the total number 
-      of events that have occured as a function of time.
-    </DESCRIPTION>
-    <HINT>
-       You learnt how to generate Poisson random variables in the first blockly exercise you did for this module on generating random variables.
-    </HINT>
-    <TOOLBOX>
-      <category name="Variables" custom="VARIABLE"></category>
-      <category name="Program">
-         <block type="controls_whileUntil"></block>
-         <block type="controls_repeat_ext"></block>
-         <block type="math_arithmetic"></block>
-         <block type="math_number"></block>
-         <block type="math_single"></block>
-      </category>
-      <category name="Logic">
-        <block type="controls_if"></block>
-        <block type="logic_compare"></block>
-      </category>
-      <category name="Random">
-         <block type="uniform_random"></block>
-      </category>
-      <category name="Plotting">
-         <block type="draw_point"></block>
-      </category>
-    </TOOLBOX>
-    <FINISH>
-      prand = 0;
-      for(var i=0; i &lt; ww.length; i++ ){
-           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }
-      levelcomplete=true;
-      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
-      for(var i=2; i &lt; myplot.data.length; i++ ){
-           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0 ){ levelcomplete=false; }
-           if( i>2 ){
-               if( myplot.data[i-1][1] &gt; myplot.data[i][1] ){ levelcomplete=false; }
-           }
-           if( myplot.data[i][0]!=(i-1) ){ levelcomplete=false; }
-      }
-    </FINISH>
-  </LEVEL> 
-  <LEVEL>
-    <DESCRIPTION>
-      The previous exercise did not tell us exactly when each of the events occured.  We can gather this information, however, by recalling that if 1 event occurs 
-      in a time window of length $t$ the conditional probability density for the time of occurance has a uniform probability density over the time interval
-      in question.  With this information in mind adjust the blocks and generate the times at which each of the events occurs.  Then adjust the blocks that you wrote in 
-      the previous exercise so that the graph only shows an increase in the number of events at exactly the times at which the random events occur.  
-    </DESCRIPTION>
-    <HINT>
-      Lets suppose that you have generated a Poisson variable and thus determined that 3 events occur in time window of length 1.  What the description here tells you is that we can determine times at which these events occur by generating 3 uniform random variables between 0 and 1.  In other words, you can generate times at which these events occured by generating 3 random variables in a list and then sorting this list so that the times are in ascending order  
-    </HINT>
-    <TOOLBOX>
-      <category name="Variables" custom="VARIABLE"></category>
-      <category name="Program">
-         <block type="controls_whileUntil"></block>
-         <block type="controls_repeat_ext"></block>
-         <block type="math_arithmetic"></block>
-         <block type="math_number"></block>
-         <block type="math_single"></block>
-      </category>
-      <category name="Logic">
-        <block type="controls_if"></block>
-        <block type="logic_compare"></block>
-      </category>
-      <category name="Random">
-         <block type="uniform_random"></block>
-      </category>
-      <category name="Lists">
-         <block type="lists_repeat"> </block>
-         <block type="lists_sort"> </block>
-         <block type="lists_getIndex"></block>
-         <block type="lists_setIndex"></block>
-      </category>
-      <category name="Plotting">
-         <block type="draw_point"></block>
-      </category>
-    </TOOLBOX> 
-    <FINISH>
-      prand = 0;
-      for(var i=0; i &lt; ww.length; i++ ){
-           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }    
-      levelcomplete=true;
-      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
-      for(var i=2; i &lt; myplot.data.length; i++ ){ 
-           if( myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0 ){ levelcomplete=false; }
-           if( i>2 ){
-               if( myplot.data[i][1]-myplot.data[i-1][1] != 1 ){ levelcomplete=false; }
-               if( myplot.data[i][0] &lt; myplot.data[i-1][0] ){ levelcomplete=false; }
-           }
-      } 
-    </FINISH>
-  </LEVEL> 
-  <LEVEL>
-    <DESCRIPTION>
-      Let's now change tack slightly.  See if you can use the blocks below to generate an exponentially distributed random variable with parameter $\lambda=1$.  Generate
-      50 such random variables, $X_i$, and draw a graph showing in which each of your random variables is plotted at $(i,X_i)$.  Each of the $i$s here should just be one of 
-      the set of integers between 1 and 50.
+      Use the blocks below to generate an exponentially distributed random variable with parameter $\lambda=1$.  Generate 10 such random variables, $X_i$, and draw a graph showing in which each of your random variables is plotted at $(i,X_i)$.  Each of the $i$s here should just be one of the set of integers between 1 and 50.  This should be revision.
     </DESCRIPTION>
     <HINT>
       To do this you generate a uniform random variable between 0 and 1.  You then invert the cumulative probability distribution function for this variable and calculate the value of this inverse function for the random variable you generated.
@@ -183,13 +81,9 @@
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-      It is possible to show that the distribution of the times between the adjacent arrivals for a Poisson process with parameter $\lambda$ is given by an 
-      exponentially distributed random variable with parameter $\lambda$.  Use this information and the blocks below to write a program that can simulate a 
-      poisson process.  Use the plotting tools to show the number of events that occur as a function of time.  Your program should work in a manner that is 
-      different from the program that you wrote in earlier exercises to simulate the Poisson process. 
+      Use the information from the video and the blocks below to write a program that can simulate a poisson process.  Use the plotting tools to show the number of events that occur as a function of time.  
     </DESCRIPTION>
     <HINT>
-      This is a matter of using what you learnt about generating exponential random vairables in the previous exercise to generate a collection of events.  They key phrase from the question is that the time between each pair of events should be given by an exponentially distributed random variable.  
     </HINT>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
@@ -228,8 +122,7 @@
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-       The ammount of money spent in a particular 24-hour shop can be modelled using a Compound Poisson process with parameters $\lambda=5$, $\mu=4$ and $\sigma^2=1$.
-       Use the blocks below to draw a graph that shows the result from a simulation that models how the ammount of money spent in this shop changes as a function of time. 
+       The ammount of money spent in a particular 24-hour shop can be modelled using a Compound Poisson process with parameters $\lambda=5$, $\mu=4$ and $\sigma^2=1$.  Use the blocks below to draw a graph that shows the result from a simulation that models how the ammount of money spent in this shop changes as a function of time. 
     </DESCRIPTION>
     <HINT>
        Notice that in a compound poisson process the total spend increases when an event occurs is a random variable.  In a poisson process the total number of events just increases by one when an event occurs.  
@@ -269,6 +162,175 @@
            }
       }
     </FINISH>
+  </LEVEL>
+   <LEVEL>
+    <DESCRIPTION>
+       Use the blocks below to write a program to model the ammount of time it takes to transition from the intial state to the final state for the sucessive states model that was discussed in the video.  Generate 10 samples from this distribution and then calculate a sample mean and 80% confidence limits on your estimate of the mean.  Draw an error bar showing centered on the mean that shows the 80% confidence limit.
+    </DESCRIPTION>
+    <VID> https://youtu.be/4XBwnGKhyiE </VID>
+    <HINT>
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_single"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_error_bar"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+         <block type="lists_sort"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0; 
+      for(var i=0; i &lt; ww.length; i++ ){
+          if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      if( prand != 2 || myplot.data.length != 3 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || myplot.data[i][2] &lt; 0 || myplot.data[i][2] &gt; 1 ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>  
+       Use the blocks below to write a program to model the ammount of time it takes to transition from the intial state to the final state for the parallel transitions model that was discussed in the video.  Generate 10 samples from this distribution and then calculate a sample mean and 80% confidence limits on your estimate of the mean.  Draw an error bar showin g centered on the mean that shows the 80% confidence limit.
+    </DESCRIPTION>
+    <VID> https://youtu.be/4XBwnGKhyiE </VID>
+    <HINT>
+       I have deliberately not given you a block for sorting your samples.  I have given you, however, a block for computing the inverse of the cumulative probility distribution function for a normal random variable.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_single"></block>
+         <block type="math_normal"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_error_bar"></block> 
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0; 
+      for(var i=0; i &lt; ww.length; i++ ){ 
+          if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      if( prand != 3 || myplot.data.length != 3 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || myplot.data[i][2] &lt; 0 || myplot.data[i][2] &gt; 1 ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>              
+       Use the blocks below to write a program to simulate any three state continuous time Markov chain with a stationary distirbution.  Draw a histogram showing the fraction of time that is spent in each of the two states in this chain.
+    </DESCRIPTION>
+    <VID> https://youtu.be/4XBwnGKhyiE </VID>
+    <HINT>
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_single"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_bar_chart"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      levelcomplete=true; var sum=0;
+      if( myplot.data.length != 5 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           sum += myplot.data[i][1]
+           if( myplot.data[i][0] != (i-1) || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
+      }
+      if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+       Use the blocks below to write a program that simulates an M/M/1 queue.  Calculate the total ammount of time each person spends waiting in the queue and getting served and plot a histogram showing this distribution of service times.             
+    </DESCRIPTION>
+    <VID> https://youtu.be/4XBwnGKhyiE </VID>
+    <HINT>
+       If you have forgotten how to compute a histogram for samples of a continuous random variable look back at the exercise that you completed in week 3 on the normal distribution.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block> 
+         <block type="math_single"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_line_graph"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      levelcomplete=true; var sum=0;
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           sum += myplot.data[i][1]
+           if( myplot.data[i][0] &lt; 0 || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
+      }
+      if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
+    </FINISH>
+    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
   </LEVEL>
   <REVIEW>
      The exercise you have just performed has taught you the basics of simulating continuous time Markov chains.  You will need to use everything that you have learnt by performing 

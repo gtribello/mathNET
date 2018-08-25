@@ -1,0 +1,264 @@
+<PAGE>
+  <TITLE> Understanding the central limit theorem </TITLE>
+  <HEADER>
+     <script src="assets/scripts/plottingTools.js" type="text/javascript"> </script>
+  </HEADER>
+  <WELCOME>
+     This exercise is going to teach you about the central limit theorem and confidence limits.  Use all your notes on these types of random variables and all the resources you can find online as you work through this exercise.  Also make sure that you look at the working python code that is generated from the blocks as ultimately you will want to use this code in your own programs.  
+  </WELCOME>
+  <WORKSPACE>
+   <table>
+      <tr>
+        <td>
+          <div id="graph" style="width: 400px"></div>
+        </td>
+        <td width="10px"> nbsp;nbsp; </td>
+        <td rowspan="2">
+          <div id="blocklyDiv" style="height: 400px"> </div>
+        </td>
+      </tr>
+    </table>
+  </WORKSPACE>
+  <APIFUNCTIONS>
+    // Add graph functions to API
+    addGraphFunctionsToApi( interpreter, scope );
+  </APIFUNCTIONS>
+  <BLOCKS>
+  </BLOCKS>
+  <SCRIPTS>
+    myplot.data = [];
+
+    // Load the Google Chart Tools Visualization API and the chart package.
+    if (typeof google == 'object') {
+      google.load('visualization', '1', {packages: ['corechart']});
+    } else {
+      alert('Unable to load Google\'s chart API.\n' +
+            'Are you connected to the Internet?');
+    }
+
+    myApp.erf = function(to) {
+      // save the sign of x
+      var sign = (x >= 0) ? 1 : -1;
+      x = Math.abs(x);
+
+      // constants
+      var a1 =  0.254829592;
+      var a2 = -0.284496736;
+      var a3 =  1.421413741;
+      var a4 = -1.453152027;
+      var a5 =  1.061405429;
+      var p  =  0.3275911;
+
+      // A and S formula 7.1.26
+      var t = 1.0/(1.0 + p*x);
+      var y = 1.0 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
+      return sign * y;
+    };
+
+    myApp.NormSInv = function(p) {
+        var a1 = -39.6968302866538, a2 = 220.946098424521, a3 = -275.928510446969;
+        var a4 = 138.357751867269, a5 = -30.6647980661472, a6 = 2.50662827745924;
+        var b1 = -54.4760987982241, b2 = 161.585836858041, b3 = -155.698979859887;
+        var b4 = 66.8013118877197, b5 = -13.2806815528857, c1 = -7.78489400243029E-03;
+        var c2 = -0.322396458041136, c3 = -2.40075827716184, c4 = -2.54973253934373;
+        var c5 = 4.37466414146497, c6 = 2.93816398269878, d1 = 7.78469570904146E-03;
+        var d2 = 0.32246712907004, d3 = 2.445134137143, d4 = 3.75440866190742;
+        var p_low = 0.02425, p_high = 1 - p_low;
+        var q, r;
+        var retVal;
+
+        if ((p &lt; 0) || (p &gt; 1))
+        {
+            alert("NormSInv: Argument out of range.");
+            retVal = 0;
+        }
+        else if (p &lt; p_low)
+        {
+            q = Math.sqrt(-2 * Math.log(p));
+            retVal = (((((c1 * q + c2) * q + c3) * q + c4) * q + c5) * q + c6) / ((((d1 * q + d2) * q + d3) * q + d4) * q + 1);
+        }
+        else if (p &lt;= p_high)
+        {
+            q = p - 0.5;
+            r = q * q;
+            retVal = (((((a1 * r + a2) * r + a3) * r + a4) * r + a5) * r + a6) * q / (((((b1 * r + b2) * r + b3) * r + b4) * r + b5) * r + 1);
+        }
+        else
+        {
+            q = Math.sqrt(-2 * Math.log(1 - p));
+            retVal = -(((((c1 * q + c2) * q + c3) * q + c4) * q + c5) * q + c6) / ((((d1 * q + d2) * q + d3) * q + d4) * q + 1);
+        }
+        return retVal;
+    };
+  </SCRIPTS>
+  <STARTUP>
+    myplot.data.length = 0;
+    myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.lines.length = 0;
+    myplot.error.length = 0;
+    if( myApp.mylevel==4 || myApp.mylevel==5 ){ myplot.error.unshift(0); }
+    myplot.plotGraph('graph','scatter');
+  </STARTUP>
+  <LEVEL>
+    <DESCRIPTION>
+      This exercise should be revision: Use the blocks below to generate 50 uniform random variables.  Plot points on the graph 
+      at $(i,\frac{1}{i}\sum_{j=1}^i X_j)$.  There should be 50 such points as $i$ should take values from 1 to 50 and the sum should run over the random variables generated.  
+    </DESCRIPTION>
+    <HINT>
+      You did something similar to this exercise in the week 2 blockly exercise on calculating summary statistics.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_list"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category> 
+    </TOOLBOX> 
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      This exercise should also be revision: Use the blocks below to generate 50 uniform random variables Plot points on the graph at  
+      $(n, \frac{1}{n-1} \left[ \sum_{i=1}^n X_i^2 - \frac{1}{n} \left( \sum_{i=1}^n X_i \right)^2 \right]$).  There should be 49 such points as $n$ should run from 2 up to 
+      the number of variables generated.
+    </DESCRIPTION>
+    <HINT>
+      The code to calculate a sample is similar to the code for calculating a sample mean.  You just need to make sure you accumulate both the sum of all the random variables and the sum of the squares of the random variables.  Be careful with the Bessel correction!
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_list"></block>
+      </category>
+      <category name="Lists">
+         <block type="lists_repeat"></block>
+         <block type="lists_getIndex"></block>
+         <block type="lists_setIndex"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 || myplot.data[2][1]!=0 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL>
+  <LEVEL>
+    <DESCRIPTION>
+      Lets investigate if the values for $\mu_j=\frac{1}{n}\sum_{i=1}^n X_i$ that we generate for a particular value of $n$ have the same value.
+      Use the blocks to generate 10 values for $\mu_j=\frac{1}{n}\sum_{i=1}^n X_i$.  Each of these 10 values of $\mu_j$ should
+      be generated by adding together 10 uniform random variables.  Plot each of these 10 points at $(j, \mu_j)$.  Are all the values of $\mu_j$ that 
+      you obtain the same? 
+    </DESCRIPTION>
+    <HINT>
+      You should now not be plotting a point every time you generate a new random variable.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 || myplot.data.length &gt; 12 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Now repeat the last but one exercise in which generated 10 values of $\mu_j=\frac{1}{n}\sum_{i=1}^n X_i$ by adding together $n=10$ uniform random variables.
+      Also estimate the sample variance from each of these sets of $n$ data points using 
+      $\sigma_j^2 = \frac{1}{n-1} \left[ \sum_{i=1}^n X_i^2 - \frac{1}{n} \left( \sum_{i=1}^n X_i \right)^2 \right]$ and hence calculate the 90 % confidence limit 
+      around each of your estimates of the sample mean.  Draw 10 points on the graph at each of the coordinates $(j,\mu_j)$ and illustrate the confidence limit around
+      your estimate of the sample variance using an error bar.
+    </DESCRIPTION>
+    <HINT>
+      Notice that I have given you a block for plotting points with error bars.
+    </HINT>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+         <block type="math_single"></block>
+         <block type="math_normal"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+         <block type="draw_error_bar"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length &lt; 3 || myplot.data.length &gt; 12 ){ levelcomplete=false; }
+      for(var i=2; i &lt; myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1  ){ levelcomplete=false; }
+      }
+    </FINISH>
+  </LEVEL>
+  <REVIEW>
+     To consolidate what you have learnt write a python notebook to estimate the p parameter for a Bernoulli random variable that is equal to one when a sample mean calculated from 20 uniform random variables falls within the 90 % confidence limit of the true expectation for these random variables and that is zero otherwise.  In your code you should also calculate error bars that represent a 90 % confidence limit on your estimate of the parameter.  Estimate the size of these error bars from the sample variance.  Don't use the expression you know for the variance of the Bernoulli random variable.
+  </REVIEW>
+</PAGE>

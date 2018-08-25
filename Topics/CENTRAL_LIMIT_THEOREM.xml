@@ -92,10 +92,10 @@ Video explaining how statistical error bars should be calculated and interprette
 <LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> geometric-probability </LINK>
+<LINK> sor3012-week4-exercise </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-A programming exercises on estimating probabilities using geometric arguments.
+An introduction to Monte Carlo sampling.
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>
@@ -103,7 +103,7 @@ A programming exercises on estimating probabilities using geometric arguments.
 <LEVEL> BLOCKLY </LEVEL>
 <TYPE> XML </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> central-limit-theorem-exercise </LINK>
+<LINK> sor3012-week5-exercise </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
 Programming exercise to explain the central limit theorem to you.

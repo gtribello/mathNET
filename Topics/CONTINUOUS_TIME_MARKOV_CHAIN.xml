@@ -94,15 +94,4 @@ A video introducing the theory of Markov chains in continuous time.
 Problems involving simple continuous time Markov chains
 </DESCRIPTION>
 </RESOURCE>
-<RESOURCE>
-  <TOPIC> CONTINUOUS_TIME_MARKOV_CHAIN </TOPIC>
-  <LEVEL> PYTHON </LEVEL>
-  <TYPE> LATEX </TYPE>
-  <MODULE> SOR3012 </MODULE>
-  <LINK> medical-markov-chains-project.tex </LINK>
-  <AUTHOR> G.~Tribello </AUTHOR>
-  <DESCRIPTION>
-   Writing a short project on using continuous time Markov chains to model medical conditions that includes some small programming components.
-  </DESCRIPTION>
-  </RESOURCE>
 </PAGE>

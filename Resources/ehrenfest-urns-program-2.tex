@@ -1,0 +1,90 @@
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+\usepackage[T1]{fontenc}
+%\usepackage{fourier}
+
+\usepackage[english]{babel}
+\usepackage[protrusion=true,expansion=true]{microtype}	
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[pdftex]{graphicx}	
+\usepackage{url}
+\usepackage{makecell,pict2e}
+\usepackage{comment}
+\usepackage{color}
+\usepackage{hyperref}
+
+\renewcommand\theadfont{\large}
+\newcommand{\gt}[1]{{\color{blue}#1}}
+\newcommand{\red}[1]{{\color{red}#1}}
+
+\renewcommand\theadfont{\large}
+
+%%% Custom sectioning
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\scshape}
+
+\includecomment{answers}
+% \excludecomment{answers}
+
+\usepackage[margin=2cm]{geometry}
+\setlength{\topmargin}{-2.cm}
+\setlength{\headheight}{1cm}
+
+%%% Custom headers/footers (fancyhdr package)
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead{}
+\fancyfoot[L]{}
+\fancyfoot[C]{}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\setlength{\headheight}{13.6pt}
+
+%%% Equation and float numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%%% Maketitle metadata
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}}
+\newcommand{\vek}[1]{\mbox{\boldmath $  #1$}}
+\newcommand{\ex}[1]{\ensuremath {\mathbb{E}} \left[ #1 \right]}
+\newcommand{\var}[1]{\ensuremath{{\rm var}\left[ #1 \right]}}
+
+\title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
+Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
+\huge Programming the ehrenfest urn problem \\
+\horrule{2pt} \\[0.25cm]
+}
+\author{ \normalfont
+\normalsize
+        Gareth Tribello \\[-3pt] \normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+We can construct a Markov chain by doing the following experiment:
+
+\begin{quotation}
+Suppose that you have two cups a pink one and a blue one and that you also have six numbered balls.  Suppose that three of these balls are in the blue cup and that
+the remaining three balls are in the pink cup.  You next roll a roll a fair dice to generate a random number $X$ that is between 1 and 6.  Having rolled an $X$ you then
+take the $X$th ball and if it is in the blue cup you move it to the pink cup.  If by contrast the $X$th ball is in the pink cup you move it to the blue cup.
+\end{quotation}
+
+Draw the transition graph for this Markov chain and write a program to simulate how the number of balls in the blue cup changes with time.  Use your program to calculate
+the probablity mass function for the random variable $X(n)$ that tells you how many balls are in the blue cup on step $n$ by calculating a histogram based on the behavior 
+of the chain.  Try to calculate confidence limits on the elements of your probablity mass function using resampling and explain why these confidence limits cannot be calculated 
+using the methods based on bootstrapping or the central limit theorem that you have learnt about in the other parts of the course. 
+
+Next calculate the eigenvalues and eigenvectors of the one step transition matrix by using the linear algebra tools that form part of the numpy package.  
+Discuss, given the eigenvalues and eigenvectors you obtain, whether the probablity mass function that you calculated is a limiting stationary distribution for this chain and how 
+the chain behave in the long time limit?  Discuss how you can modify the chain and thereby ensure that the distribution has a limiting stationary distribution and confirm that your
+modified chain does indeed have a limiting stationary distribution.  In doing this exercise you may find it useful to consider the periodicity of each of the states in the 
+Markov chain and to learn something about the eigenvalues of bipartite graphs.
+
+
+\end{document}

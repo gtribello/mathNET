@@ -98,21 +98,10 @@ A video explaining the gamblers ruin problem and the derivation of the differenc
 <LEVEL> PYTHON </LEVEL>
 <TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> gamblers-ruin-program.tex </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-Some more advanced exercises about writing programs to simulate one dimensional random walks.
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> GAMBLERS_RUIN </TOPIC>
-<LEVEL> PYTHON </LEVEL>
-<TYPE> LATEX </TYPE>
-<MODULE> SOR3012 </MODULE>
 <LINK> gamblers-ruin-probability.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-Deriving the probability of ruin in gamblers ruin
+(Level 0) Deriving the probability of ruin in gamblers ruin
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>
@@ -123,7 +112,18 @@ Deriving the probability of ruin in gamblers ruin
 <LINK> gamblers-ruin-expectation.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-Deriving the expected length of the game in the gamblers ruin problem
+(Level 0) Deriving the expected length of the game in the gamblers ruin problem
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> GAMBLERS_RUIN </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> gamblers-ruin-program.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+(Level 1) A programming exercise on simulating a one dimensional random walk.
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>

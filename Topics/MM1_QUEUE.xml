@@ -134,10 +134,32 @@ Some exercises involving the M/M/1 Queue
 <LEVEL> PYTHON </LEVEL>
 <TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> queues-project.tex </LINK>
+<LINK> queues-project-1.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-  Writing a short project on queues that includes some small programming components.
+  (Level 1) Simulating the average wait time in a queue. 
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MM1_QUEUE </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> queues-project-2.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  (Level 2) Simulating the average length of a queue.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> MM1_QUEUE </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> queues-project-3.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+  (Level 3) Simulating a system of queues.
 </DESCRIPTION>
 </RESOURCE>
 </PAGE>

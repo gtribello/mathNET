@@ -10,7 +10,6 @@
 \usepackage{makecell,pict2e}
 \usepackage{comment}
 \usepackage{color}
-\usepackage{hyperref}
 
 \renewcommand\theadfont{\large}
 \newcommand{\gt}[1]{{\color{blue}#1}}
@@ -54,7 +53,7 @@
 
 \title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
 Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
-\huge Bertrand Paradox \\
+\huge Systems of queues \\
 \horrule{2pt} \\[0.25cm]
 }
 \author{ \normalfont
@@ -67,18 +66,17 @@ Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm]
 \begin{document}
 \maketitle
 
-An interesting problem in probability theory is the so-called Betrand Paradox, which you can read about here:
+For this project I would like you to consider the way patients are treated in a hospital.
 
-\href{https://en.wikipedia.org/wiki/Bertrand\_paradox\_(probability)}{https://en.wikipedia.org/wiki/Bertrand\_paradox\_(probability)}
+\begin{enumerate}
+\item Patients arrive into accident and emergency with a rate $\lambda$ per minute.
+\item Each patient waits to be seen by a triage nurse who then takes takes an average of $\frac{1}{2\lambda}$ minutes to deal with each patient.
+\item One third of the patients that the triage nurse sees are then sent to clinic A where they wait for an appointment with a doctor.  On average a doctor in clinic A takes $\frac{3}{2\lambda}$ minutes to deal with a patient.
+\item The remaining two thirds of the customers, i.e. those that were not sent to clinic A, are sent to clinic B where doctors take an average of $\frac{4}{3\lambda}$ minutes to deal with them. 
+\end{enumerate}
 
-As the article explains the Betrand paradox concerns an equilateral triangle inscribed in a circle. A chord of the circle is chosen at random
-and we are asked to determine the probability that the chord is longer than a side of the triangle.  The interesting thing about this problem
-is that the answer we get for the probability depends on the manner in which the chord is randomly selected.  
-
-Write a project for your portfolio on the Betrand paradox in which you confirm that the different methods for generating the chords give different estimates 
-for the probability.  To do this I would like you to write Monte Carlo codes that generate random chords and that estimate the probability that will be similar 
-to those that you have written for estimating $\pi$ and for calculating the area of the Mandelbrot set.  Discuss how your degree of certainty that you are 
-sampling from different distributions when you generate chords in different ways depends on the number of samples that you take from the distributions.
-
+Use the information in the description above to write a program that simulates the passage of patients through the hospital.  Use your program to estimate the average 
+ammount of time a customer spends in hospital from their arrival in accident and emergency to their departure from clinic A/B after having been seen by a doctor.  Calculate
+appropriate confidence limits on your estimate of this mean.
 
 \end{document}

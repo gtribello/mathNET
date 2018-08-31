@@ -10,7 +10,6 @@
 \usepackage{makecell,pict2e}
 \usepackage{comment}
 \usepackage{color}
-\usepackage{hyperref}
 
 \renewcommand\theadfont{\large}
 \newcommand{\gt}[1]{{\color{blue}#1}}
@@ -54,7 +53,7 @@
 
 \title{\usefont{OT1}{bch}{b}{n} \normalfont \normalsize \textsc{SOR3012:
 Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm] 
-\huge Bertrand Paradox \\
+\huge M/M/1 queue (level 2) \\
 \horrule{2pt} \\[0.25cm]
 }
 \author{ \normalfont
@@ -67,18 +66,14 @@ Stochastic Processes} \\ [25pt] \horrule{0.5pt} \\[0.4cm]
 \begin{document}
 \maketitle
 
-An interesting problem in probability theory is the so-called Betrand Paradox, which you can read about here:
-
-\href{https://en.wikipedia.org/wiki/Bertrand\_paradox\_(probability)}{https://en.wikipedia.org/wiki/Bertrand\_paradox\_(probability)}
-
-As the article explains the Betrand paradox concerns an equilateral triangle inscribed in a circle. A chord of the circle is chosen at random
-and we are asked to determine the probability that the chord is longer than a side of the triangle.  The interesting thing about this problem
-is that the answer we get for the probability depends on the manner in which the chord is randomly selected.  
-
-Write a project for your portfolio on the Betrand paradox in which you confirm that the different methods for generating the chords give different estimates 
-for the probability.  To do this I would like you to write Monte Carlo codes that generate random chords and that estimate the probability that will be similar 
-to those that you have written for estimating $\pi$ and for calculating the area of the Mandelbrot set.  Discuss how your degree of certainty that you are 
-sampling from different distributions when you generate chords in different ways depends on the number of samples that you take from the distributions.
+In the final task of blockly exercise for the chapter on Markov Chains in continuous time you learnt how we can perform a simulation of an M/M/1 queue and how 
+you can thus calculate the total time that each customer spends within the queuing system.  For this project I would like you to reproduce the programs that 
+you learnt to write in the exericse and that simulate the queue within a python notebook.  I would then like you to extend these programs so as to calculate
+a histogram that gives the probablity that the queue contains a particular number of customers at any given time and a numerical estimate for the average number
+of custeroms in the queue.  Calculate confidence limits for all the averages that you compute in your report and make sure that you compare all the numerical results
+you obtain against the results that can be obtained by inserting the parameters of your numerical model into the analytical expressions that are in the notes.
+You do not need to include derivations for any the analytical results that you have used.  Also set the parameters of your model so that the rate of arrivals, $\lambda$, 
+is less than the rate of service, $\mu$.
 
 
 \end{document}

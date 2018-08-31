@@ -114,10 +114,32 @@ Programming exercise to explain the central limit theorem to you.
 <LEVEL> PYTHON </LEVEL>
 <TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
+<LINK> central-limit-theorem-proof.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+(Level 1) An exercise on proving the central limit theorem
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
 <LINK> estimating-pi-project.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-Extended programming exercise on estimating $\pi$ using random variables.
+(Level 1) Extended programming exercise on estimating $\pi$ using random variables.
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> mandelbrot-set.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+(Level 2) Extended programming exercise on determining the area of the Mandelbrot set.
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>
@@ -128,18 +150,7 @@ Extended programming exercise on estimating $\pi$ using random variables.
 <LINK> betrand-paradox-project.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-Extended programming exercise on the Bertrand paradox and systematic and random error.
-</DESCRIPTION>
-</RESOURCE>
-<RESOURCE>
-<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
-<LEVEL> PYTHON </LEVEL>
-<TYPE> LATEX </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> central-limit-theorem-proof.tex </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-An exercise on proving the central limit theorem
+(Level 3) Extended programming exercise on the Bertrand paradox and systematic and random error.
 </DESCRIPTION>
 </RESOURCE>
 </PAGE>

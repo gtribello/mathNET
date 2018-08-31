@@ -103,13 +103,13 @@ A video explaining why the limiting stationary distribution of an ergodic markov
 </RESOURCE>
 <RESOURCE>
 <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
-<LEVEL> BLOCKLY </LEVEL>
-<TYPE> XML </TYPE>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> ehrenfest-urns-exercise </LINK>
+<LINK> ehrenfest-urns-program-1.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-A programming exercise on simulating an ergodic markov chain.
+(Level 2) A programming exercise on simulating an ergodic Markov chain.
 </DESCRIPTION>
 </RESOURCE>
 <RESOURCE>
@@ -117,10 +117,10 @@ A programming exercise on simulating an ergodic markov chain.
 <LEVEL> PYTHON </LEVEL>
 <TYPE> LATEX </TYPE>
 <MODULE> SOR3012 </MODULE>
-<LINK> ehrenfest-urns-program.tex </LINK>
+<LINK> ehrenfest-urns-program-2.tex </LINK>
 <AUTHOR> G.~Tribello </AUTHOR>
 <DESCRIPTION>
-A programming exercise on simulating an ergodic markov chain.
+(Level 3) A programming exercise that involves investigating a periodic Markov chain (this is a harder version of the level 2 problem).
 </DESCRIPTION>
 </RESOURCE>
 </PAGE>

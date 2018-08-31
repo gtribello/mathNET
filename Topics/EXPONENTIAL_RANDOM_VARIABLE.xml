@@ -116,15 +116,4 @@ Notes on the derivation of the exponenitial random variable.
 Problems involving the exponential random variable
 </DESCRIPTION>
 </RESOURCE>
-<RESOURCE>
-<TOPIC> EXPONENTIAL_RANDOM_VARIABLE </TOPIC>
-<LEVEL> PYTHON </LEVEL>
-<TYPE> HTML </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> exponential-random-variable-notebook </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-EXAMPLE: project on exponential random variables
-</DESCRIPTION>
-</RESOURCE>
 </PAGE>

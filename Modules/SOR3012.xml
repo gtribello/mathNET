@@ -31,7 +31,14 @@
         </RESPONSE>
      </ITEM>
      <ITEM>
-        <CALL> What difference between discrete and continuous random variables? </CALL>
+        <CALL> Give three properties that all cumulative probability distribution functions must have? </CALL>
+        <RESPONSE>
+            The cumulative probability distribution must have the following three properties: $\lim_{x\rightarrow -\infty} P(X\le x ) = 0$,
+            $\lim_{x\rightarrow +\infty} P(X\le x ) = 1$ and $\lim_{\epsilon \rightarrow 0} P(X\le (x+\epsilon) ) = P( X \le x )$
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What is the difference between discrete and continuous random variables? </CALL>
         <RESPONSE> 
            Discrete random variables cannot take any real value on the real axis.  They can only take particular (usually integer) values.
            Continuous random variables can take any real value in a particular range. 
@@ -62,6 +69,20 @@
         <RESPONSE>
            The expectation of a continuous random variable is equal to the integral over all possible $x$ values of $x$ multiplied by the probability 
            density function, $f_X(x)$.  In other words, $\mathbb{E}[X] = \int_{-\infty}^{\infty} x f_X(x) \textrm{d}x$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How do you calculate the variance of a random variable? </CALL>
+        <RESPONSE>
+           The variance of a random variable, $X$, can be calculated by taking the expectation of $[X-\mathbb{E}(X)]^2$ or by computing the expectation 
+           of the square of the random variable, $\mathbb{E}(X^2)$, and by subtracting $\mathbb{E}(X)^2$. 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How is the moment generating function calculated and explain how one can calculate moments if one is given this function </CALL>
+        <RESPONSE>
+           The moment generating function, $M_X(t)$ for a random variable, $X$, is $M_X(t) = \mathbb{E}(e^{tX})$.  If one evaluates the $n$th derivatives 
+           of this function at $t=0$ one gets the $n$th moment of the distribution
         </RESPONSE>
      </ITEM>
      <ITEM>
@@ -97,6 +118,12 @@
            $$
              P(X=3|Y=2) = \frac{ P(X=3 \wedge Y=2) }{ P(Y=2) }
            $$ 
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> What does Bayes theorem state? </CALL>
+        <RESPONSE>
+           Bayes theorem states that $P(X=x|Y=y)P(Y=y) = P(Y=y|X=x)P(X=x)$
         </RESPONSE>
      </ITEM>
      <ITEM>
@@ -172,6 +199,20 @@
         </RESPONSE>
      </ITEM>
      <ITEM>
+        <CALL> What does the joint probability mass function, $f_{XY}(x,y)$, measure? </CALL>
+        <RESPONSE>
+          The joint probability mass function $f_{XY}(x,y)$ measures the probability that the random variable $X$ is equal to $x$ and the random variable $Y$ equals
+          $y$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
+        <CALL> How do we calculate the covariance of a pair of random variables? </CALL>
+        <RESPONSE>
+          The covariance of a pair of random variables $X$ and $Y$, is calculated as $\mathbb{E}\{[X-\mathbb{E}(X)][Y-\mathbb{E}(Y)]\}$ or as
+          $\mathbb{E}(XY) - \mathbb{E}(Y)\mathbb{E}(Y)$.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
         <CALL> What is a stochastic process? </CALL>
         <RESPONSE>
           A stochastic process is a time series of random variables. 
@@ -227,6 +268,17 @@
         </RESPONSE>
      </ITEM>
      <ITEM>
+        <CALL> What does the ergodic theorem state and when does it hold? </CALL>
+        <RESPONSE>
+           The ergodic theorem states that
+           $$
+           \lim_{n \rightarrow \infty} \frac{M_k(n)}{n} = \frac{1}{\mathbb{E}(T_k)}
+           $$
+           where $M_k(n)$ is the number of visits the system makes to the $k$th state in a $n$ step chain and where $\mathbb{E}(T_k)$ is the expected return time to state $k$.
+           This theorem holds for Markov chains that have a finite number of recurrent states.
+        </RESPONSE>
+     </ITEM>
+     <ITEM>
         <CALL> What is the Kolmogorov equation? </CALL>
         <RESPONSE> 
            The Kolmogorov equation is a differential equation that is at the heart of the theory of Markov chains in continuous time.  The Kolmogorov equation 
@@ -249,18 +301,13 @@
         <WHEN> 16:00 Tuesday Week 4 </WHEN>
      </ASSESSMENT>
      <ASSESSMENT>
-        <DESCRIPTION> One two page report on continuous time Markov chains </DESCRIPTION>
-        <WEIGHT> 10 </WEIGHT>
-        <WHEN> 16:00 Tuesday 19th December </WHEN>
-     </ASSESSMENT>
-     <ASSESSMENT>
         <DESCRIPTION> One portfolio of work done during the semester </DESCRIPTION>
-        <WEIGHT> 20 </WEIGHT>
+        <WEIGHT> 45 </WEIGHT>
         <WHEN> 16:00 Tuesday Week 13 (1st week of second semester) </WHEN>
      </ASSESSMENT>
      <ASSESSMENT>
         <DESCRIPTION> One three hour examination in which all questions on the paper must be answered </DESCRIPTION>
-        <WEIGHT> 60 </WEIGHT>
+        <WEIGHT> 45 </WEIGHT>
         <WHEN> April exam period </WHEN>
      </ASSESSMENT>
      <WEEK>
@@ -270,7 +317,7 @@
         </HANDIN>
         <TRY> 
             Read notes and watch all videos on random variables in content and understanding sections of website.  Use comprehension exercises to make notes on this material.    
-            Attempt programming exercises on random variables in apply section.
+            Attempt all blockly exercises in apply section.  Aim to at least complete the first blockly exercise before the computer class on Monday of week 2.
         </TRY>
         <TUTORIAL> No tutorial this week.  Ensure you know which tutorial you will attend next week. </TUTORIAL>
      </WEEK>
@@ -280,8 +327,9 @@
             <DUE>  16:00 on Tuesday of week 3 </DUE>
         </HANDIN>        
         <TRY> 
-            Finish programming exercises on random variables in apply section.  Transfer what you have learnt about generating random variables from exercises in apply section
-            to a python notebook by performing exercises on random variable in extend section.  Begin writing first draft of random variable project.
+            Continue working on blockly exercises on random variables in apply section.  Try to transfer what you have learnt about generating random variables and on
+            calculating summary statistics and histograms from exercises in apply section to a python notebook by performing exercises on random variable in extend section.  
+            Begin writing first draft of random variable project and try to have as much of this done by the Monday computer class as possible.
         </TRY>
         <TUTORIAL> Bring mulitple copies of the report that you wrote for your portfolio.  We will be doing small group discussions that start by you reading each others reports on what aspects of the module you are finding easy/difficult. </TUTORIAL>
      </WEEK>
@@ -295,7 +343,7 @@
             <DUE>  16:00 on Tuesday of week 4 </DUE>
         </HANDIN>
         <TRY>
-            Finish random variable project and try the final projects on random variables.
+            Finish random variable project and try the final projects on random variables if you have time.
         </TRY>
         <TUTORIAL> 
             Bring a draft of your random variable report to the tutorial.  We will be doing small group discussions that start by you reading each others reports on 
@@ -307,9 +355,14 @@
             <ITEM> Half page report for portfolio </ITEM>
             <DUE>  16:00 on Tuesday of week 5 </DUE>
         </HANDIN>
+        <HANDIN>
+            <ITEM> Draft project on estimating $\pi$. </ITEM>
+            <DUE>  Friday week 4 </DUE>
+        </HANDIN>
         <TRY>
             Read notes and watch all videos on the central limit theorem in content and understanding sections of website.  Use comprehension exercises to make notes on this 
-            material.  Attempt programming exercises on the central limit theorem from the apply section.
+            material.  Attempt blockly programming exercises in apply section.  Transfer what you have learnt from doing these exercises to a python notebook.  Give this to 
+            me for feedback so we can make a decision on what you should try next.  Remember your draft report does not have to be perfect.
         </TRY>
         <TUTORIAL> 
             You will be attempting some short problems on the central limit theorem in groups during the tutorial.  Please make sure that you can state the central limit theorem
@@ -322,8 +375,10 @@
             <DUE>  16:00 on Tuesday of week 6 </DUE>
         </HANDIN>
         <TRY>
-            Finish programming exercises on central limit theorem in apply section.  Transfer what you have learnt about the central limit theorem from exercises in 
-            apply section to a python notebook by performing exercises on the central limit theorem in the extend section.  
+            If you struggled with the blockly exercises and with transferring what you learnt from the blockly exercise to a python notebook please ensure that you have 
+            solved all your problems with this material by the end of the computer class on Monday on 5th week so that you can focus on completing a good report on this
+            material by the end of week 6.  If you managed to send me a draft on esimtating $\pi$ by the end of week 4 attempt some of the harder exercises on the extend 
+            and final project pages.  Start work on these projects before the computer class so that you have time to ask for help. 
         </TRY>
         <TUTORIAL> 
             Please bring your random variables report and the feedback that I wrote about your random variable report.  In class you will be doing a discussion exercise with
@@ -336,12 +391,13 @@
             <DUE>  16:00 on Tuesday of week 7 </DUE>
         </HANDIN>
         <TRY>
-            Attempt to finish at least one of the projects from the extend section of the section of the website about the central limit theorem.  Attempt the problem on 
-            estimating the area of the Mandelbrot set.
+           This is the final week during which we will be working on the central limit theorem projects.  You should thus attempt to finish off all the outstanding work that you 
+           have to do on any of the projects that you tried.  If you do not manage to finish any projects then make a note on what needs to be done in order to finish your project 
+           off.  I do not want to see anyone working on the problems associated with the central limit theorem during the computer class on Monday of week 7.
         </TRY>        
         <TUTORIAL>  
-            Bring your ideas and notes on how to solve the final project for the central limit theorem.  To be clear the project in question is the one about determining the area 
-            of the Mandelbrot set. 
+            You will be attempting some short problems on Bayes theorem in groups during the tutorial.  Please make sure that you can state Bayes theorem and that you can use 
+            this theorem to calculate conditional probabilities correctly.
         </TUTORIAL>
      </WEEK>
      <WEEK>
@@ -349,9 +405,14 @@
             <ITEM> Half page report for portfolio </ITEM>
             <DUE>  16:00 on Tuesday of week 8 </DUE>
         </HANDIN>
+        <HANDIN>
+            <ITEM> Draft project on either ehrenfest urns or gamblers ruin </ITEM>
+            <DUE>  Friday week 7 </DUE>
+        </HANDIN>
         <TRY>
             Read notes and watch all videos on Markov chains in discrete time in content and understanding sections of website.  Use comprehension exercises to make notes on this
-            material.  Attempt programming exercises on the Markov chains in discrete time from the apply section.
+            material.  Attempt blockly programming exercises on the Markov chains in discrete time in the apply section.  Transfer what you have learnt from doing these exercises 
+            to a python notebook.  Give this to me for feedback so we can make a decision on what you should try next.  Remember your draft report does not have to be perfect.
         </TRY>        
         <TUTORIAL> 
             You will be attempting some short problems on Markov chains in discrete time during the tutorial.  Please make sure that you can state the Markov property, use
@@ -364,8 +425,10 @@
             <DUE>  16:00 on Tuesday of week 9 </DUE>
         </HANDIN>
         <TRY>
-            Finish programming exercises on Markov chains in discrete time in apply section.  Transfer what you have learnt about Markov chains in discrete time from exercises in 
-            apply section to a python notebook by performing exercises on Markov chains in discrete time in extend section. 
+            If you struggled with the blockly exercises and with transferring what you learnt from the blockly exercise to a python notebook please ensure that you have
+            solved all your problems with this material by the end of the computer class on Monday on 8th week so that you can focus on completing a good report on this
+            material by the end of week 9.  If you managed to send me a draft on gamblers ruin or the ehrenfest urns by the end of week 7 attempt some of the harder exercises 
+            on the extend and final project pages.  Start work on these projects before the computer class so that you have time to ask for help.
         </TRY>        
         <TUTORIAL> 
            You will be attempting some short problems on Markov chains in discrete time during the tutorial.  Please make sure that you can state the Markov property, use 
@@ -381,12 +444,13 @@
             <DUE>  16:00 on Tuesday of week 10 </DUE>
         </HANDIN>
         <TRY>
-            Finish programming exercises on Markov chains in discrete time in extend section.  These are more difficult than the projects in previous weeks so you may not have 
-            time to do the final project on Markov chains in discrete time.  If you have the time, however, you should definitely attempt it. 
+           This is the final week during which we will be working on the Markov chain in discrete time projects.  You should thus attempt to finish off all the outstanding work 
+           that you have to do on any of the projects that you tried.  If you do not manage to finish any projects then make a note on what needs to be done in order to finish 
+           your project off.  I do not want to see anyone working on the problems associated with Markov chains in discrete time during the computer class on Monday of week 10.
         </TRY>        
         <TUTORIAL> 
-            You will be attempting some problems on Gamblers ruin and the Ehrenfest urns.  You should thus have familiarised yourself with these problems by performing the 
-            associated programming exercises in the extend section of the section of the website on Markov chains in discrete time. 
+           You will be attempting some problems on Gamblers ruin and the Ehrenfest urns.  You should thus have familiarised yourself with these problems by performing the 
+           associated programming exercises in the extend section of the section of the website on Markov chains in discrete time. 
         </TUTORIAL>
      </WEEK>
      <WEEK>
@@ -394,9 +458,14 @@
             <ITEM> Half page report for portfolio </ITEM>
             <DUE>  16:00 on Tuesday of week 11 </DUE>
         </HANDIN>
+        <HANDIN>
+            <ITEM> Draft project on queues </ITEM>
+            <DUE>  Friday week 7 </DUE>
+        </HANDIN>
         <TRY>
             Read notes and watch all videos on Markov chains in continuous time in content and understanding sections of website.  Use comprehension exercises to make notes on this
-            material.  Attempt programming exercises on the Markov chains in continuous time from the apply section.
+            material.  Attempt blockly programming exercises on Markov chains in continuous time from the apply section.  Transfer what you have learnt from doing these exercises
+            to a python notebook.  Give this to me for feedback so we can make a decision on what you should try next.  Remember your draft report does not have to be perfect.
         </TRY>        
         <TUTORIAL> 
             You will be attempting some short problems on the Poisson process during the tutorial.  You will do the questions under exam conditions but you will be allowed to use 
@@ -411,13 +480,13 @@
             <DUE>  16:00 on Tuesday of week 12 </DUE>
         </HANDIN>
         <TRY>
-            Finish programming exercises on the Markov chains in continuous time from the apply section.  Transfer what you have learnt about Markov chains in continuous time
-            from exercises in apply section to a python notebook by performing exercises on random variable in extend section.  Begin writing first draft of project on 
-            Markov chains in continuuous time.
+           If you struggled with the blockly exercises and with transferring what you learnt from the blockly exercise to a python notebook please ensure that you have
+           solved all your problems with this material by the end of the computer class on Monday on 11th week so that you can focus on completing a good report on this
+           material by the end of week 12.  If you managed to send me a draft on queues by the end of week 10 attempt some of the harder exercises
+           on the extend and final project pages.  Start work on these projects before the computer class so that you have time to ask for help.
         </TRY>        
         <TUTORIAL> 
-            Bring a draft of your Markov chains in continuous time report to the tutorial.  We will be doing small group discussions that start by you reading each others reports on
-            Markov chains in continuous time.
+            Bring a draft of your best portfolio report to the tutorial.  We will be doing small group discussions that start by you reading each others reports.
         </TUTORIAL>
      </WEEK>
      <WEEK>
@@ -425,13 +494,9 @@
             <ITEM> Two best reports for portfolio - please hand in as a single document </ITEM>
             <DUE>  16:00 on Tuesday of week 13 (i.e. first week of second semester) </DUE>
         </HANDIN>
-        <HANDIN>
-            <ITEM> Report on continuous time Markov chains </ITEM>
-            <DUE>  16:00 on Tuesday 19th December </DUE>
-        </HANDIN>
         <TRY>
-            Finish report on Markov chains in continuous time.  Attempt final project on Markov chains in continuous time and gather the two reports (which should by this stage 
-            already be written) to hand in for portfolio.
+            This is the final week of the semester.  You should thus use the computer class to ensure that you have the information that you need in order to complete your three
+            portfolio reports during the break. 
         </TRY>        
         <TUTORIAL> 
            Drop in session for you to ask for advice about what to hand in for your portfolio.
@@ -440,25 +505,26 @@
   </HANDBOOK>
   <PORTFOLIO>
      <DESCRIPTION>
-        One of the components of the assessment for this module is a portfolio of work that you must produce over the course of the semester.  This portfolio counts for 20 
+        One of the components of the assessment for this module is a portfolio of work that you must produce over the course of the semester.  This portfolio counts for 45 
         percent of your final module mark.  It should contain:
 
         \begin{itemize}
         \item[(A)] 10 reports describing what you have worked on each week.  These reports are due by 16:00 on Tuesday in weeks 2 through 12 of the semester.  
             See the self study section of the markscheme below. 
         
-        \item[(B)] Two attempts at the projects detailed in either the extend or final project sections of the module pages.  You should attempt as many of these projects as you can
-            over the course of the semester and hand in the two that you felt were your best attempts by 16:00 on the Tuesday of week 13.  You should not hand in the project 
-            on random variables that you produced in week 4 for this assessment or the project on continuous time Markov chains that you produced for week 12 to be reassessed 
-            as these projects are already assessed as part of a different module component.  Furthermore, top marks will only be awarded unless if you hand in the more difficult 
-            projects from the final project section of the module.  To be clear, however, a weak attempt at one of these more difficult projects will be given a lower
-            mark than a good attempt at one of the easier projects.  For more details on the marking criteria see the sections entitled Research and Quality.  Also note that you 
-            can (and are encouraged to) hand in practise attempts at the projects for feedback during the course of the semester. 
+        \item[(B)] Three attempts at the projects detailed in either the extend or final project sections of the module pages.  You should attempt as many of these projects 
+            as you can over the course of the semester and hand in the three that you felt were your best attempts by 16:00 on the Tuesday of week 13.  You should not hand in 
+            the project on random variables that you produced in week 4 for this assessment to be reassessed as this project is already assessed as part of a different module 
+            component.  On my website you will notice that each project has been ascribed a level of difficulty that ranges from 1 to 4.  As explained below the level acts as 
+            a guide on the maximum mark that you can get by handing in that particular project.  If you choose to submit level 1 projects for instance you can score a maximum 
+            of 24/40.  To be clear, however, this does not mean you should not attempt the easier projects.  You should in fact ALWAYS start with an attempt on the level 1 
+            projects before moving on to the harder projects as poor attempts on the harder projects will most likely fail.  In short, I would rather see good attempts at the 
+            easier projects than bad attempts at the harder projects.     
         \end{itemize}
 
         Notice that tutorials and the computer classes are compulsory and that you will be awarded a mark of zero for the portfolio project if you do not attend 70 percent 
         of the tutorials and computer classes.  In addition, notice that your portfolio will be awarded a mark of zero if it does not contain all of the components detailed 
-        above (10 weekly reports and 2 project attempts).
+        above (10 weekly reports and 3 projects).
      </DESCRIPTION>
      <COMPONENT>
         <TITLE> Self study </TITLE>
@@ -471,26 +537,28 @@
         </DESCRIPTION>
         <RANGE> 
            <CLASSIFICATION> Excellent </CLASSIFICATION>
-           <MARKS> 5-6 </MARKS>
+           <MARKS> 4-5 </MARKS>
            <QUALITY> 
               The student outlines a clear plan detailing what and when they will study each week.  There is evidence that the student thinks about 
               how well their plan has worked at the end of each week and evidence that they have though how to refine their plans in subsequent weeks.
-              They reflect well on their previous work and feedback and learn by evaluating both positive and negatives.  Excellent notes are kept and there 
-              evidence that these are used in subsequent work.  They contribute fully to the group and offer peers an opportunity for improved performance.
+              They reflect well on their previous work and feedback and learn by evaluating both positive and negatives.  
            </QUALITY>
         </RANGE>
        <RANGE>
            <CLASSIFICATION> Good work </CLASSIFICATION>
-           <MARKS> 3-4 </MARKS>
+           <MARKS> 2 </MARKS>
            <QUALITY> 
-               The student outlines a clear plan detailing what and when they will study each week but evidence that they have though about how well this plan is working is absent.  The student reflects on previous work and feedback and learns by evaluating both positive and negatives.  Notes are kept but there is no evidence that these have been used in subsequent work.  They contribute to the group but there is little evidence that they have responded to the feedback given. 
+               The student outlines a clear plan detailing what and when they will study each week but evidence that they have though about how well this plan is working is absent.
+               The student reflects on previous work and feedback and evaluates both positive and negatives.  There is, however, little evidence that they are refining how they are 
+               studying as the semester progresses, however.
            </QUALITY>
         </RANGE>
        <RANGE>
            <CLASSIFICATION> Adequate </CLASSIFICATION>
-           <MARKS> 1-2 </MARKS>
+           <MARKS> 1 </MARKS>
            <QUALITY>
-               Some evidence that the student plans what items to study each week.  There is some evidence to support reflection although there could be more reference to previous work.  Group contribution is inconsistent and offers little opportunity for improved performance.
+               Some evidence that the student plans what items to study each week.  There is some evidence to support reflection although there could be more reference 
+               to previous work.  A discussion that has a no balance between discussing of what has worked and what has not worked is absent. 
            </QUALITY>
         </RANGE>
        <RANGE>
@@ -502,66 +570,99 @@
         </RANGE>
      </COMPONENT>
      <COMPONENT>
-        <TITLE> Research </TITLE>
-        <DESCRIPTION> 
-            For each of the projects you are expected to discuss the process that you went through in researching for the project.
-            In this document you should discuss what resources you used, any discussions you had with colleagues/the lecturer/the teaching assistants and how these various components 
-            helped.
+        <TITLE> Mark capping for projects </TITLE>
+        <DESCRIPTION>
+            As discussed above each project has an associated level of difficulty and the marks that you will receive will be capped based on the level of difficulty of the 
+            projects you attempt.  To be clear, the expectation is that you attempt A LOT of the projects and that you decide what you can and cannot do yourself.  In other
+            words, attempt the projects at levels 1, 2 and 3 before attempting the projects at level 4.  Please do not feel pressured to attempt projects that you do not 
+            understand in order to get a higher mark.  If you do so you will most likely get a very poor mark as I would rather see the easier projects done to a high standard
+            than the harder projects completed to a very low standard.  Also note that I would like to see you attempt projects from all the chapters of the module.  Please do 
+            not submit level 1, level 2 and level 3 projects that are all on the central limit theorem.  If you do this your portfolio will be given a very low mark. 
         </DESCRIPTION>
         <RANGE>
-           <CLASSIFICATION> Excellent </CLASSIFICATION>
-           <MARKS> 6-7 </MARKS>
-           <QUALITY> The student provides evidence that their research went beyond the material provided. </QUALITY>
+           <CLASSIFICATION> Level 4 (high first) </CLASSIFICATION>
+           <MARKS> Max 40 </MARKS>
+           <QUALITY> This will be the projects that appear on the final project page.  To score marks this high you are expected to find a problem to solve yourself and to develop a strategy to solve the problem you thought of using the material you have learnt.  You can also design your own problem without using the prompts on the final project pages but please discuss what you would like to do with me first. </QUALITY>
         </RANGE>
        <RANGE>
-           <CLASSIFICATION> Good work </CLASSIFICATION>
-           <MARKS> 3-5 </MARKS>
-           <QUALITY> The student demonstrates that they have worked through all the preparatory exercises for this project and that they have mastered the concepts that were introduced. </QUALITY>
+           <CLASSIFICATION> Level 3 (low first) </CLASSIFICATION>
+           <MARKS> Max 32 </MARKS>
+           <QUALITY> These projects appear on the extend pages and are marked level 3.  These projects ask you to use material that you will learn by doing the blockly exercise together with material that you have learnt about in other parts of the maths course to solve a problem that has some marked difference from the one you encountered in the blockly exercises.  You will need to use many of the ideas that were introduced in the blockly exercise to solve the new problem, however. </QUALITY>
         </RANGE>
        <RANGE>
-           <CLASSIFICATION> Adequate </CLASSIFICATION>
-           <MARKS> 1-2 </MARKS>
-           <QUALITY> The student demonstrates that they have only worked through a fraction of the preparatory exercises. </QUALITY>
+           <CLASSIFICATION> Level 2 (2.1) </CLASSIFICATION>
+           <MARKS> Max 28 </MARKS>
+           <QUALITY> These projects appear on the extend pages and are marked level 2.  These problems will involve the material that you have learnt about by doing the blockly exercises to solve a problem that is similar to the problem you worked on in the blockly exercise. </QUALITY>
         </RANGE>
        <RANGE>
-           <CLASSIFICATION> Fail </CLASSIFICATION>
-           <MARKS> 0 </MARKS>
-           <QUALITY> No evidence of any research work is provided.  Less than 75 \% attendance at tutorials and computer lab classes. </QUALITY>
+           <CLASSIFICATION> Level 1 (2.2) </CLASSIFICATION>
+           <MARKS> Max 24 </MARKS>
+           <QUALITY> These projects appear on the extend pages and are marked level 1.  Essentially what you are asked to do for these projects is to transfer what you learnt to do by performing the blockly exercise to a python notebook. </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Level 0 (3) </CLASSIFICATION>
+           <MARKS> Max 16 </MARKS>
+           <QUALITY> These projects appear on the extend pages and are marked level 0.  These projects involve no programming and involve you simply finding a mathematical derivation that is in the notes and reproducing it in your own words. </QUALITY>
         </RANGE>
      </COMPONENT>
     <COMPONENT>
-        <TITLE> Quality </TITLE>
+        <TITLE> Final mark </TITLE>
         <DESCRIPTION>
-            This part of the mark is for your final attempt at the project.  Notice that you get the majority of the marks in the quality section and the research section by 
-            demonstrating your process.  It is not so important to have a "correct" solution.  It is more important to clearly articulate the process you went through in producing
-            your solution.
+           When marking a project I will award the first 16 marks if your project does not contain grevious errors.  To be clear the expectation for project work is that all 
+           the mathematics in your report should be correct.  Your report will then be given a mark out of 8 using the scale below.  This mark will then be multiplied by a 1 
+           if the project is level 1, 1.5 if the project is level 2, 2 if the project is level 3 and 3 if the project is level 4.  If the project is level 0 you will get a maximum
+           of 16 marks.
+
+           Your final mark portfolio mark is the arithmetic mean of the marks that you obtain for the three projects.  Remember, however, that you you must submit three projects 
+           from three different chapters of the module and that penalties will be applied if you submit more than one project on the same chapter.  For example if you submit a 
+           level one and level four project on the same chapter the level four project will be marked as if it is a level 1 project. 
         </DESCRIPTION>
         <RANGE>
+           <CLASSIFICATION> Outstanding </CLASSIFICATION>
+           <MARKS> 7-8 </MARKS>
+           <QUALITY>
+              A piece of software that solves the problem is provided and error bars for all averages are quoted.  The explanation as to what work has been done is 
+              clear, concise and transparent.  
+            </QUALITY>
+        </RANGE>
+        <RANGE>
            <CLASSIFICATION> Excellent </CLASSIFICATION>
-           <MARKS> 6-7 </MARKS>
-           <QUALITY> 
-               A piece of working software has been designed that fully solves the problem that was introduced in the brief.  The student explains how the information they researched was used when writing the software.  The highest marks are reserved for students who extend the project by going beyond the brief. 
+           <MARKS> 5-6 </MARKS>
+           <QUALITY>
+              A piece of software that solves the problem is provided and in addition error bars are quoted for all the averages that have been computed.  What has been 
+              done is explained reasonably clearly although it lacks precision in places.
             </QUALITY>
         </RANGE>
        <RANGE>
            <CLASSIFICATION> Good work </CLASSIFICATION>
-           <MARKS> 3-5 </MARKS>
+           <MARKS> 3-4 </MARKS>
            <QUALITY> 
-              The student provides a working piece of software that addresses most aspects of the problem.  The student only provides a partial explanation as to how the information they researched was used when writing the software.
+              A piece of software that solves the problem is provided together with a partial explaination of how the code works that lacks precision in places.  Importantly, 
+              the report contains no careless presentation errors although error bars on some of the averages that have been computed might be absent.
            </QUALITY>
         </RANGE>
        <RANGE>
            <CLASSIFICATION> Adequate </CLASSIFICATION>
            <MARKS> 1-2 </MARKS>
            <QUALITY> 
-The student demonstrates an incomplete understanding of the problem.  A piece of software that only partially works is provided. There is relatively little explanation as to how the ideas that were investigated as part of the research work have been used in the writing of the software.
-               </QUALITY>
+              The student demonstrates an incomplete understanding of the problem.  A piece of software that only partially works is provided. There is little to no 
+              explanation as to how the code operates.  The report contains careless presentation errors such as unlabelled axis in graphs or undefined symbols in equations. 
+           </QUALITY>
+        </RANGE>
+       <RANGE>
+           <CLASSIFICATION> Pass </CLASSIFICATION>
+           <MARKS> 0 </MARKS>
+           <QUALITY>
+              To be clear a pass here means that you are awarded 16 marks for your project only.  Anything better than a pass is awarded these 16 marks plus the mark for that 
+              level of work (see above) multiplied by the appropriate scaling factor for the project difficulty.  A pass mark will be awarded unless there are grevious mistakes
+              in the work that you produce.  This is the maximum mark you can obtain by doing a level 0 project that involves no programming.   
+           </QUALITY>
         </RANGE>
        <RANGE>
            <CLASSIFICATION> Fail </CLASSIFICATION>
            <MARKS> 0 </MARKS>
            <QUALITY>
-               The student makes no reference to the research work that they performed before writing the software.  The student does not complete all of the projects.  Less than 75 \% attendance at tutorials and computer lab classes.
+              Students attends less than 70 percent of the tutorials and computer classes.  Student fails to hand in all the work that is required for the portfolio.
            </QUALITY>
         </RANGE>
      </COMPONENT>
@@ -631,43 +732,14 @@ The student demonstrates an incomplete understanding of the problem.  A piece of
         </AIMS>
      </INTRO>
      <PROJECT>
-        <TITLE> Understanding fractals with random variables </TITLE>
+        <TITLE> Monte Carlo Integration </TITLE>
         <DESCRIPTION>
-           <table>
-           <tr> <td> 
-           The figure on the left of this slide shows an image of the Mandelbrot set.  This set contains all the complex numbers, $c$, for which the orbit of 0 under 
-           iteration of the quadratic map:
-           $$
-           z_{n+1} = z_n^2 + c
-           $$ 
-           remains bounded.  The python script below gives a method for calculating the area of the Mandelbrot set.  Discuss how this code works and try to extend it 
-           so that is also outputs confidence limits on the estimate of the area.  Then try and see if you can write a piece of software to esimtate the fractal 
-           dimension of the Mandelbrot set.
-           </td> <td> <img src="Images/1280px-Mandel_zoom_00_mandelbrot_set.jpg"/> </td> </tr> 
-           </table>
-           <br/>
-           <div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">cmath</span>
-
-<span class="n">npoints</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">maxiter</span> <span class="o">=</span> <span class="mi">10000</span>
-
-<span class="n">noutside</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">npoints</span><span class="p">)</span> <span class="p">:</span>
-    <span class="n">trialp</span> <span class="o">=</span> <span class="nb">complex</span><span class="p">(</span><span class="o">-</span><span class="mf">2.0</span> <span class="o">+</span> <span class="mf">2.5</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="mf">1.125</span><span class="o">*</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">zn1</span> <span class="o">=</span> <span class="n">trialp</span>
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">maxiter</span><span class="p">)</span> <span class="p">:</span>
-        <span class="n">zn1</span> <span class="o">=</span> <span class="n">zn1</span><span class="o">*</span><span class="n">zn1</span> <span class="o">+</span> <span class="n">trialp</span>
-        <span class="n">r</span><span class="p">,</span> <span class="n">thet</span> <span class="o">=</span> <span class="n">cmath</span><span class="o">.</span><span class="n">polar</span><span class="p">(</span><span class="n">zn1</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">r</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="p">:</span>
-            <span class="n">noutside</span> <span class="o">=</span> <span class="n">noutside</span> <span class="o">+</span> <span class="mi">1</span>
-            <span class="k">break</span>
-
-<span class="n">ninside</span> <span class="o">=</span> <span class="n">npoints</span> <span class="o">-</span> <span class="n">noutside</span>
-<span class="n">area</span> <span class="o">=</span> <span class="mf">2.0</span><span class="o">*</span><span class="p">(</span><span class="mf">2.5</span><span class="o">*</span><span class="mf">1.125</span><span class="p">)</span> <span class="o">*</span> <span class="n">ninside</span> <span class="o">/</span> <span class="n">npoints</span>
-
-<span class="nb">print</span><span class="p">(</span> <span class="n">ninside</span><span class="p">,</span> <span class="n">area</span> <span class="p">)</span>
-</pre></div>
+           The method that we have been focussing on using during the blockly and python exercises this week is known as Monte Carlo integration or sometimes importance sampling.
+           As I eluded to in the exercises this technique is used a wide variety of different fields of mathematics to calculate integrals.  In all the exercises, however, we have 
+           only ever used this method to calculate the expectation of a Bernoulli random variable.  Try to write a python notebook in which you estimate the value of some ofther  
+           integral by using Monte Carlo sampling.  This integral might be the expectation/variance of some particularly complicated random variable or it might be some integral 
+           that is easy to compute analytically.  To do this you will need to perform some research online on this particular method.  Lastly, note that for whatever integral you 
+           choose to perform ensure that you must provide suitable error bars on the numerical estimate that you obtain by Monte Carlo sampling.  
         </DESCRIPTION>
      </PROJECT>
      <TOPIC> CONDITIONAL_PROBABILITY </TOPIC>
@@ -696,23 +768,21 @@ The student demonstrates an incomplete understanding of the problem.  A piece of
         </AIMS>
      </INTRO>
      <PROJECT>
-       <TITLE> Teaching with Markov chains </TITLE>
+       <TITLE> Metropolis sampling </TITLE>
        <DESCRIPTION>
-          For each of the four projects that you will perform in this course you will find a graph indicating the connectivity between the various topics that we are studying
-          in those weeks if you click on menu item content.  Pick one of these graphs and write a program to simulate a discrete time Markov chain that has this particular connectivity between its states.
-          Discuss whether each of the topics in the graph is transient or recurrent and whether or not the graphs have a stationary distribution.  If the chains do not have a stationary
-          distributon calculate the hitting times and hitting probabilities for the adsorbing states in the chain.  Once you have done this modify the transition graph and add connections so 
-          that the Markov chain does have a stationary distribution. Calculate the elements of this stationary distribution.  Discuss how graphs and Markov chains might be used to understand how 
-          people learn and understand new ideas and how we can use these ideas to categorize information. 
+         A number of important techniques for calculating integrals are based on the Metropolis sampling algorithm.  Research how this algorithm works and write a program
+         to calculate an integral using this technique.  Remember to quote error bars on any estimate that is extracted by calculating a sample mean.  Notice that 
+         I will award a higher mark if you explain why the integral you have chosen to perform is useful to calculate.  With this in mind some fields where the Metropolis
+         algorithm is used that you might choose to investigate include statistical mechanics (physics) and Bayesian statistics.
        </DESCRIPTION>
      </PROJECT>
      <TOPIC> MARKOV_PROPERTY </TOPIC>
      <TOPIC> TRANSITION_MATRIX_OF_MARKOV_CHAIN </TOPIC>
      <TOPIC> CHAPMAN_KOLMOGOROV_RELATION </TOPIC>
+     <TOPIC> GAMBLERS_RUIN </TOPIC>
      <TOPIC> TRANSIENT_RECURRENT_STATES </TOPIC>
      <TOPIC> STATIONARY_DIST_MARKOV </TOPIC>
      <TOPIC> HITTING_PROBABILITIES </TOPIC>
-     <TOPIC> GAMBLERS_RUIN </TOPIC> 
   </CHAPTER>
   <CHAPTER> 
      <TITLE> Markov chains in continuous time </TITLE>
@@ -736,7 +806,7 @@ The student demonstrates an incomplete understanding of the problem.  A piece of
        <DESCRIPTION>
           Glaucoma is a disease of the eyes that affects old people.  One of the symptoms of this disease is a loss of periferal vision and a narrowing of the patients 
           field of vision.  Patients who have Glaucoma thus undergo regular visual field tests in order to monitor the progress of the disease.  When a person undergoes 
-          a field test their head is placed in a machine like that shown in the image on the right here with one eye blindfolded.  The patient stares at an led in the center
+          a field test their head is placed in a machine that resembles a urinal with one eye blindfolded.  The patient stares at an led in the center
           of the machine, while short and sharp burst appear at various points in the remainder of the machine.  The patient must then push a button whenever s/he sees one of these
           bursts of light.
 

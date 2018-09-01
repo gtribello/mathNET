@@ -75,6 +75,7 @@
            if( myplot.data[i][0]!=(i-2) || myplot.data[i][1]!=(i+3) ){ levelcomplete=false; }
       } 
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/QlwATPnVESU </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
@@ -86,6 +87,7 @@
     <HINT>
       Now we need a random component our program.  The problem is still very simple though. 
     </HINT>
+    <VID> https://youtu.be/QlwATPnVESU </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -118,6 +120,7 @@
            }
       }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/WCCV7lXhnUI </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
@@ -131,6 +134,7 @@
     <HINT>
       Notice that I have given you a block to create a while loop and a logic block that allows you to check if statement A AND statement B is true.  
     </HINT>
+    <VID> https://youtu.be/WCCV7lXhnUI </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -162,6 +166,7 @@
       if( myplot.data[2][1]!=1 &amp;&amp; myplot.data[2][1]!=0 ){ levelcomplete=false; }
     </FINISH>
   </LEVEL> 
+  <VIDEO> https://www.youtube.com/embed/Pf_mHHYzsks </VIDEO>
   <LEVEL>
     <DESCRIPTION>
       Lets add one final complication.  We are going to suppose that the probability our drunk walker moves towards his home is proportional to the distance he is 
@@ -175,6 +180,7 @@
        The code for this exercise will be similar to the code that you wrote for the previous exercise.  There will be some differences in the way you generate the Bernoulli 
        random variables, however.
     </HINT>
+    <VID> https://youtu.be/Pf_mHHYzsks </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">

@@ -63,15 +63,4 @@ Problems on Bayes theorem
 Kahn academy video on bayes theorem.
 </DESCRIPTION>
 </RESOURCE>
-<RESOURCE>
-<TOPIC> BAYES_THEOREM </TOPIC>
-<LEVEL> BLOCKLY </LEVEL>
-<TYPE> XML </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> bayes-theorem-exercise </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise that will help you understand Bayes theorem and conditional probability.
-</DESCRIPTION>
-</RESOURCE>
 </PAGE>

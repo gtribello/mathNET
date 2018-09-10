@@ -68,15 +68,4 @@ Exercises involving joint probability distributions
 A description of joint probability functions including a derivation of the Cauchy Schwartz inequality.
 </DESCRIPTION>
 </RESOURCE>
-<RESOURCE>
-<TOPIC> JOINT_PROBABILITY_DISTRIBUTION </TOPIC>
-<LEVEL> BLOCKLY </LEVEL>
-<TYPE> XML </TYPE>
-<MODULE> SOR3012 </MODULE>
-<LINK> correlation-exercise </LINK>
-<AUTHOR> G.~Tribello </AUTHOR>
-<DESCRIPTION>
-A programming exercise in which geometry is used to better understand what it means when we say random variables are correlated.
-</DESCRIPTION>
-</RESOURCE>
 </PAGE>

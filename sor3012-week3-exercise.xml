@@ -77,7 +77,7 @@
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 ||  myplot.data.length != 3 ){ levelcomplete=false; }
+      if( prand != 1 ||  myplot.data.length != 4 ){ levelcomplete=false; }
       if( myplot.data[2][0]!=0 || myplot.data[3][0]!=1 || myplot.data[2][1]+myplot.data[3][1] &gt; 1.05 || myplot.data[2][1]+myplot.data[3][1] &lt; 0.95 ) { levelcomplete=false; }
     </FINISH>
     <VIDEO> https://www.youtube.com/embed/2w7OTQ5vYPc </VIDEO>
@@ -119,14 +119,14 @@
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 ||  myplot.data.length != 4 ){ levelcomplete=false; }
+      if( prand != 1 ||  myplot.data.length != 5 ){ levelcomplete=false; }
       if( myplot.data[2][0]!=0 || myplot.data[3][0]!=1 || myplot.data[4][0]!=2 || myplot.data[2][1]+myplot.data[3][1]+myplot.data[4][1] &gt; 1.05 || myplot.data[2][1]+myplot.data[3][1]+myplot.data[4][1] &lt; 0.95 ) { levelcomplete=false; }
     </FINISH>
     <VIDEO> https://www.youtube.com/embed/DfElR4r85SY </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-      Use the blocks below as well as what you learnt from the video to generate 10 random variables, $\{X_i\}$, from a poisson distribution with $\lambda=2$.  You should plot each of these random variables on the graph.  The $i$th random variable you generate, $X_i$, should be at the coordinates $(i,X_i)$.  
+      Use the blocks below as well as what you learnt from the video to generate a random variable, $X$, from a poisson distribution with $\lambda=2$.  Plot a point on the graph at $(1,X)$.   
     </DESCRIPTION>
     <VID> https://youtu.be/DfElR4r85SY </VID>
     <HINT>
@@ -167,7 +167,7 @@
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-       Use the blocks to generate 10 random variables, $\{Y_i\}$, from an exponential distribution with $\lambda=4$.  You should plot each of these random variables on the graph.  The $i$th random variable you generate, $Y_i$, should be at the coordinates $(i,Y_i)$.  
+       Use the blocks to generate an exponential random variable, $Y$, from an exponential distribution with $\lambda=4$.  Plot a point on the graph at $(1,Y)$.    
     </DESCRIPTION>
     <VID> https://youtu.be/Ce_tWXEPTtY </VID>
     <HINT>
@@ -248,11 +248,10 @@
       if( prand != 1 &amp;&amp; myplot.data.length != 22 ){ levelcomplete=false; }
       for(var i=2; i &lt; myplot.data.length; i++ ){
            sum += myplot.data[i][1]
-           if( myplot.data[i][0]!=(-3.8+(i-2)*0.4) || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
+           if( myplot.data[i][0] &lt; (-4.0+(i-2)*0.4) || myplot.data[i][0] &gt; (-4.0+(i-1)*0.4) || myplot.data[i][1] &gt; 1.0 || myplot.data[i][1] &lt; 0 ){ levelcomplete=false; }
       }
       if( sum &gt; 1.05 || sum &lt; 0.95 ){ levelcomplete=false; }
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/dEzLR-tReEY </VIDEO>
   </LEVEL>
    <REVIEW>
        Congratulations on completing the exercise!  You should have made notes on what you did within a python notebook as you worked through the tasks.  Take a moment now to review your notes.  Make sure that all the python code you have copied works and that you have notes that explain what it all does.  It is important to do this now as we will be using the programs that you have just learnt to write during this exercise throughout the remainder of the module.  In addition, you should now have all the programming knowledge that you need in order to complete the first assignment for this module.  

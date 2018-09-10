@@ -163,11 +163,6 @@
         <iframe width="630" height="472" src=" https://www.youtube.com/embed/4XBwnGKhyiE " seamless="" allowfullscreen></iframe> 
         <span id="modl-close3"><h2>close</h2></span>   </div> 
 </div> 
-<div id="modl-vid4" class="modal"> 
-   <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/dEzLR-tReEY " seamless="" allowfullscreen></iframe> 
-        <span id="modl-close4"><h2>close</h2></span>   </div> 
-</div> 
 <div id="modl-review" class="modal"> 
    <div class="modal-content"> 
 
@@ -220,13 +215,6 @@ span2.onclick = function() {
 var span3 = document.getElementById("modl-close3");
 span3.onclick = function() {
     var modal = document.getElementById('modl-vid3');
-    modal.style.display = "none";
-    var currentIframe = modal.querySelector('.modal-content > iframe');
-    currentIframe.src = currentIframe.src;
-}
-var span4 = document.getElementById("modl-close4");
-span4.onclick = function() {
-    var modal = document.getElementById('modl-vid4');
     modal.style.display = "none";
     var currentIframe = modal.querySelector('.modal-content > iframe');
     currentIframe.src = currentIframe.src;
@@ -500,7 +488,7 @@ window.addEventListener('resize', myApp.resize);
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 ||  myplot.data.length != 3 ){ levelcomplete=false; }
+      if( prand != 1 ||  myplot.data.length != 4 ){ levelcomplete=false; }
       if( myplot.data[2][0]!=0 || myplot.data[3][0]!=1 || myplot.data[2][1]+myplot.data[3][1] > 1.05 || myplot.data[2][1]+myplot.data[3][1] < 0.95 ) { levelcomplete=false; }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid0');modal.style.display = "block";video=true;}break;case 1:
       prand = 0;
@@ -508,7 +496,7 @@ window.addEventListener('resize', myApp.resize);
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 ||  myplot.data.length != 4 ){ levelcomplete=false; }
+      if( prand != 1 ||  myplot.data.length != 5 ){ levelcomplete=false; }
       if( myplot.data[2][0]!=0 || myplot.data[3][0]!=1 || myplot.data[4][0]!=2 || myplot.data[2][1]+myplot.data[3][1]+myplot.data[4][1] > 1.05 || myplot.data[2][1]+myplot.data[3][1]+myplot.data[4][1] < 0.95 ) { levelcomplete=false; }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid1');modal.style.display = "block";video=true;}break;case 2:
       prand = 0;
@@ -540,10 +528,10 @@ window.addEventListener('resize', myApp.resize);
       if( prand != 1 && myplot.data.length != 22 ){ levelcomplete=false; }
       for(var i=2; i < myplot.data.length; i++ ){
            sum += myplot.data[i][1]
-           if( myplot.data[i][0]!=(-3.8+(i-2)*0.4) || myplot.data[i][1] > 1.0 || myplot.data[i][1] < 0 ){ levelcomplete=false; }
+           if( myplot.data[i][0] < (-4.0+(i-2)*0.4) || myplot.data[i][0] > (-4.0+(i-1)*0.4) || myplot.data[i][1] > 1.0 || myplot.data[i][1] < 0 ){ levelcomplete=false; }
       }
       if( sum > 1.05 || sum < 0.95 ){ levelcomplete=false; }
-    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid4');modal.style.display = "block";video=true;}break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
+    break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
     myplot.plotGraph('graph','scatter');

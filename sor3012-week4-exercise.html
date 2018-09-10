@@ -5,7 +5,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
 <head>
         <!-- Title -->
-        <title>gamblers-ruin-exercise</title>
+        <title>sor3012-week4-exercise</title>
         <!-- Meta -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="">
@@ -145,34 +145,44 @@
 <!-- === END HEADER === -->
 <div id="modl-vid0" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/QlwATPnVESU " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/mtHBKU_rUQo " seamless="" allowfullscreen></iframe> 
         <span id="modl-close0"><h2>close</h2></span>   </div> 
 </div> 
 <div id="modl-vid1" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/WCCV7lXhnUI " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/64oys2TFaHQ " seamless="" allowfullscreen></iframe> 
         <span id="modl-close1"><h2>close</h2></span>   </div> 
 </div> 
 <div id="modl-vid2" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/Pf_mHHYzsks " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/wz3K_7t2spU " seamless="" allowfullscreen></iframe> 
         <span id="modl-close2"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid3" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/0ISUsHEPxSY " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close3"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid4" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/505vxcAewqM " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close4"><h2>close</h2></span>   </div> 
 </div> 
 <div id="modl-review" class="modal"> 
    <div class="modal-content"> 
 
-     The exercise you have just performed has taught you how we can generate the two random variables that are at the heart of problem of the gamblers ruin with absorbing boundary conditions.  In the language of the exercise we have just performed these random variables are: a bernoulli random variable that tells us whether the walker arrives in the pub or at home and a discrete random variable that tells us how many steps the walker will take before arriving at either the pub or at home.  For the 1D random walk that you will study further by doing the python exercises and by going through the relevant chapters of the notes the probability of taking a step forward does not depend on where you are.  What you are thus asked to simulate is a situation that you simulated for the penultimate task of this exercise.  The final task is still useful, however, as it has hopefully allowed you to think about how we might go about simulating more complicated Markov chains.  
-  
+       Congratulations on completing the exercise!  You should have made notes on what you did within a python notebook as you worked through the tasks.  Take a moment now to review your notes.  Make sure that all the python code you have copied works and that you have notes that explain what it all does.  Furthermore, <b> please note that when you apply the Monte Carlo integration, resampling and bootstrapping techniques you should use many more samples than we did in this exercise when calculating means and characterising the distribution.</b> Take a look at some of exercises on the extend page for this section of the module now and see if you can work out how to apply what you have just learnt to these problems.   
+   
 
         <span id="modl-close-review"><h3>close</h3></span>   </div> 
 </div> 
-<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> Gamblers ruin and Markov chains : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
+<div id="content" class="container">   <div class="panel panel-blue">      <div class="panel-heading">         <div class="row">              <h1 class="panel-title"> An introduction to Monte Carlo integration : Blockly exercise </h1>         </div>      </div>   </div>   <div class="row margin-vert-30">      <div class="panel panel-primary">         <div class="panel-heading">            <h4 class="panel-title">              Use the blocks in the toolbox to solve the problems described below the exercise            </h4>         </div>         <div class="panel-body">            <div class="row" id="appPanel">               <div class="col-md-6">                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> 
                  <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> 
                  <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button> 
                  <!-- <button onclick="myApp.save()" id="saveButton">Save workspace</button> 
                  <button onclick="myApp.load()" id="loadButton">Load solution</button> --> 
                </div>                 <div class="col-md-6">                 <div id="levelIndicator" class="w3-center w3-section w3-large w3-text-black w3-display-topleft" style="width:60%; height:100px" align="right"> </div>               </div>               <br/><br/>
-   <table>
+    <table>
       <tr>
         <td>
           <div id="graph" style="width: 400px"/>
@@ -180,7 +190,7 @@
         <td width="10px"> &nbsp;&nbsp; </td>
         <td rowspan="2">
           <div id="blocklyDiv" style="height: 400px"> </div>
-        </td>
+        </td> 
       </tr>
     </table>
   
@@ -203,6 +213,20 @@ span1.onclick = function() {
 var span2 = document.getElementById("modl-close2");
 span2.onclick = function() {
     var modal = document.getElementById('modl-vid2');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span3 = document.getElementById("modl-close3");
+span3.onclick = function() {
+    var modal = document.getElementById('modl-vid3');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span4 = document.getElementById("modl-close4");
+span4.onclick = function() {
+    var modal = document.getElementById('modl-vid4');
     modal.style.display = "none";
     var currentIframe = modal.querySelector('.modal-content > iframe');
     currentIframe.src = currentIframe.src;
@@ -400,7 +424,7 @@ myApp.retrieveFromXML = function( str ) {
      xhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
   xhttp.overrideMimeType('text/xml');
-  xhttp.open("GET", "gamblers-ruin-exercise.xml", false);
+  xhttp.open("GET", "sor3012-week4-exercise.xml", false);
   xhttp.send(null);
   myApp.xmlLevelDoc = xhttp.responseXML;
   return myApp.xmlLevelDoc.getElementsByTagName( str );
@@ -463,7 +487,7 @@ window.addEventListener('resize', myApp.resize);
     } else {
       alert('Unable to load Google\'s chart API.\n' +
             'Are you connected to the Internet?');
-    }
+    } 
   myApp.stuffToDoOnLevelLoad = function(n) {
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
@@ -474,24 +498,29 @@ window.addEventListener('resize', myApp.resize);
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }    
+      }
       levelcomplete=true;
-      if( prand != 0 || myplot.data.length < 3 || myplot.data[2][1]!=5 ){ levelcomplete=false; }
-      for(var i=2; i < myplot.data.length; i++ ){ 
-           if( myplot.data[i][0]!=(i-2) || myplot.data[i][1]!=(i+3) ){ levelcomplete=false; }
-      } 
+      if( prand != 2 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][0] < 0 || myplot.data[i][1] < 0 || myplot.data[i][0] > 1 || myplot.data[i][1] > 1 ){ levelcomplete=false; }
+      }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid0');modal.style.display = "block";video=true;}break;case 1:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }   
+      }
       levelcomplete=true;
-      if( prand != 1 || myplot.data.length < 3 || myplot.data[2][1]!=5 ){ levelcomplete=false; }
-      for(var i=2; i < myplot.data.length; i++ ){
-           if( myplot.data[i][0]!=(i-2) || myplot.data[i][1]-Math.floor(myplot.data[i][1])!=0  ){ levelcomplete=false; }
-           if( i>2 ){
-               if( Math.abs( myplot.data[i][1]-myplot.data[i-1][1] ) != 1 ){ levelcomplete=false; }
-           }
+      if( prand != 0 ||  myplot.data.length != 27 ){ levelcomplete=false; }
+      for(var i=0; i < 5; i++ ) {
+          var xval = 0.1 + i*0.2;
+          for(var j=0; j < 5; j++ ) {
+              var yval = 0.1 + j*0.2; var found=false;
+              for(var k=2; k < myplot.data.length; k++ ) {
+                  if( (xval-0.005) < myplot.data[i][0] && (xval+0.005) > myplot.data[i][0] &&
+                      (yval-0.005) < myplot.data[i][1] && (yval+0.005) > myplot.data[i][1] ) { found=true; break; }
+              }
+              if( !found ){ levelcomplete=false; }
+          }
       }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid1');modal.style.display = "block";video=true;}break;case 2:
       prand = 0;
@@ -499,18 +528,47 @@ window.addEventListener('resize', myApp.resize);
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 || myplot.data.length < 3 || myplot.data.length > 5 ){ levelcomplete=false; }
-      if( myplot.data[2][0]!=1 || myplot.data[3][0]!=2 ){ levelcomplete=false; }
-      if( myplot.data[2][1]!=1 && myplot.data[2][1]!=0 ){ levelcomplete=false; }
+      if( prand != 0 ||  myplot.data.length != 27 ){ levelcomplete=false; }
+      for(var i=0; i < 5; i++ ) {
+          var xval = 0.1 + i*0.2;
+          for(var j=0; j < 5; j++ ) {
+              var yval = 0.1 + j*0.2; 
+              if( xval*xval + yval*yval < 1.0 ) {
+                  var found=false;
+                  for(var k=2; k < myplot.data.length; k++ ) {
+                      if( (xval-0.005) < myplot.data[i][0] && (xval+0.005) > myplot.data[i][0] &&
+                          (yval-0.005) < myplot.data[i][1] && (yval+0.005) > myplot.data[i][1] ) { found=true; break; }
+                  }
+                  if( !found ){ levelcomplete=false; }
+              }
+          }
+      }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid2');modal.style.display = "block";video=true;}break;case 3:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 || myplot.data.length < 3 || myplot.data.length > 5 ){ levelcomplete=false; }
-      if( myplot.data[2][0]!=1 || myplot.data[3][0]!=2 ){ levelcomplete=false; }
-      if( myplot.data[2][1]!=1 && myplot.data[2][1]!=0 ){ levelcomplete=false; }
+      if( prand != 2 || myplot.data.length < 3 ){ levelcomplete=false; }
+      for(var i=2; i < myplot.data.length; i++ ){
+           if( myplot.data[i][0]!=(i-1) || myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; }
+      }
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid3');modal.style.display = "block";video=true;}break;case 4:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || prand != 2 || myplot.data.length != 3 myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; }
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid4');modal.style.display = "block";video=true;}break;case 5:
+      prand = 0;
+      for(var i=0; i < ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true; 
+      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; } 
+      if( myplot.error.length!=myplot.data.length-1 || prand != 3 || myplot.data.length != 3 myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; }
     break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);

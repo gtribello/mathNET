@@ -75,6 +75,7 @@
            if( myplot.data[i][0]!=(i-2) || myplot.data[i][1]!=(i+3) ){ levelcomplete=false; }
       } 
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/QlwATPnVESU </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
@@ -86,6 +87,7 @@
     <HINT>
       Now we need a random component our program.  The problem is still very simple though. 
     </HINT>
+    <VID> https://youtu.be/QlwATPnVESU </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -118,10 +120,11 @@
            }
       }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/WCCV7lXhnUI </VIDEO>
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-      Consider our drunk walker once more.  The pub at which s/he did her/his night of drinking is at the origin and his home is a mere 20 m from the pub.  Use the blocks 
+      Consider our drunk walker once more.  The pub at which s/he did her/his night of drinking is at the origin and his home is a mere 10 m from the pub.  Use the blocks 
       below to generate an instance of a random walk once more.  This time, however, the walk should only stop once the walker has arrived back at the pub or at his home.  As
       in the previous questions assume that his/her walk begins at a point that is 5 metres from the origin.  Output two random variables from your program.  The first of these
       two random variables, $X$, should equal 0 if the walker finishes at home and 1 if the walker finishes at the pub and should be plotted at the coordinate $(1,X)$.  The second 
@@ -131,6 +134,7 @@
     <HINT>
       Notice that I have given you a block to create a while loop and a logic block that allows you to check if statement A AND statement B is true.  
     </HINT>
+    <VID> https://youtu.be/WCCV7lXhnUI </VID>
     <TOOLBOX>
       <category name="Variables" custom="VARIABLE"></category>
       <category name="Program">
@@ -161,10 +165,54 @@
       if( myplot.data[2][0]!=1 || myplot.data[3][0]!=2 ){ levelcomplete=false; }
       if( myplot.data[2][1]!=1 &amp;&amp; myplot.data[2][1]!=0 ){ levelcomplete=false; }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/Pf_mHHYzsks </VIDEO>
   </LEVEL> 
+  <LEVEL>
+    <DESCRIPTION>
+      Lets add one final complication.  We are going to suppose that the probability our drunk walker moves towards his home is proportional to the distance he is 
+      from the pub.  In particular, we will suppose that if he is $x$ meters from the pub his probablity of walking towards the home is $\frac{x}{10}$.  Modify the code that
+      code that you wrote for the previous exercise to take these revised probablities into account.  Once again you should output two random variables from your program.  
+      The first of these two random variables, $X$, should equal 0 if the walker finishes at home and 1 if the walker finishes at the pub and should be plotted at the 
+      coordinate $(1,X)$.  The second of the random variables, $Y$, should be equal to the number of steps the walker took before arriving at either the pub or at his/her home.  
+      This random variable should be plotted at $(2,Y)$.   
+    </DESCRIPTION>
+    <HINT>
+       The code for this exercise will be similar to the code that you wrote for the previous exercise.  There will be some differences in the way you generate the Bernoulli 
+       random variables, however.
+    </HINT>
+    <VID> https://youtu.be/Pf_mHHYzsks </VID>
+    <TOOLBOX>
+      <category name="Variables" custom="VARIABLE"></category>
+      <category name="Program">
+         <block type="controls_whileUntil"></block>
+         <block type="controls_repeat_ext"></block>
+         <block type="math_arithmetic"></block>
+         <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="logic_operation"></block>
+      </category>
+      <category name="Random">
+         <block type="uniform_random"></block>
+      </category>
+      <category name="Plotting">
+         <block type="draw_point"></block>
+      </category>
+    </TOOLBOX>
+    <FINISH>
+      prand = 0;
+      for(var i=0; i &lt; ww.length; i++ ){
+           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
+      }
+      levelcomplete=true;
+      if( prand != 1 || myplot.data.length &lt; 3 || myplot.data.length &gt; 5 ){ levelcomplete=false; }
+      if( myplot.data[2][0]!=1 || myplot.data[3][0]!=2 ){ levelcomplete=false; }
+      if( myplot.data[2][1]!=1 &amp;&amp; myplot.data[2][1]!=0 ){ levelcomplete=false; }
+    </FINISH>
+  </LEVEL>
   <REVIEW>
-     The exercise you have just performed has taught you how we can generate the two random variables that are at the heart of problem of the gamblers ruin with absorbing boundary conditions.  In the language of the exercise we have just performed these random variables are: a bernoulli random variable that tells us whether the walker arrives in the pub or at home and a discrete random variable that tells us how many steps the walker will take before arriving at either the pub or at home.  
-
-To consolidate what you have learnt write a python notebook that generates multiple instances of the two random variables in this problem.  Use the data that you obtain to estimate the expectations for these two random variables and to give a 90 % confidence limit on your estimates of these expectation values.  Go through the exercises on the analytical solution to this problem and compare the values that you obtain from this numerical procedure with the analytic values for these quantities.  As a final (programming) exercise calculate an estimate for the probability mass function for the random variables that measures how many steps the walker will take before arriving at either the pub or at home.
+     The exercise you have just performed has taught you how we can generate the two random variables that are at the heart of problem of the gamblers ruin with absorbing boundary conditions.  In the language of the exercise we have just performed these random variables are: a bernoulli random variable that tells us whether the walker arrives in the pub or at home and a discrete random variable that tells us how many steps the walker will take before arriving at either the pub or at home.  For the 1D random walk that you will study further by doing the python exercises and by going through the relevant chapters of the notes the probability of taking a step forward does not depend on where you are.  What you are thus asked to simulate is a situation that you simulated for the penultimate task of this exercise.  The final task is still useful, however, as it has hopefully allowed you to think about how we might go about simulating more complicated Markov chains.  
   </REVIEW>
 </PAGE>

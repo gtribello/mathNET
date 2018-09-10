@@ -165,8 +165,8 @@
       if( myplot.data[2][0]!=1 || myplot.data[3][0]!=2 ){ levelcomplete=false; }
       if( myplot.data[2][1]!=1 &amp;&amp; myplot.data[2][1]!=0 ){ levelcomplete=false; }
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/Pf_mHHYzsks </VIDEO>
   </LEVEL> 
-  <VIDEO> https://www.youtube.com/embed/Pf_mHHYzsks </VIDEO>
   <LEVEL>
     <DESCRIPTION>
       Lets add one final complication.  We are going to suppose that the probability our drunk walker moves towards his home is proportional to the distance he is 

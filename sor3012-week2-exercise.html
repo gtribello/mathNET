@@ -165,8 +165,13 @@
 </div> 
 <div id="modl-vid4" class="modal"> 
    <div class="modal-content"> 
-        <iframe width="630" height="472" src=" https://www.youtube.com/embed/Z-aAZoiihEM " seamless="" allowfullscreen></iframe> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/xvRWQ2eERp0 " seamless="" allowfullscreen></iframe> 
         <span id="modl-close4"><h2>close</h2></span>   </div> 
+</div> 
+<div id="modl-vid5" class="modal"> 
+   <div class="modal-content"> 
+        <iframe width="630" height="472" src=" https://www.youtube.com/embed/Z-aAZoiihEM " seamless="" allowfullscreen></iframe> 
+        <span id="modl-close5"><h2>close</h2></span>   </div> 
 </div> 
 <div id="modl-review" class="modal"> 
    <div class="modal-content"> 
@@ -227,6 +232,13 @@ span3.onclick = function() {
 var span4 = document.getElementById("modl-close4");
 span4.onclick = function() {
     var modal = document.getElementById('modl-vid4');
+    modal.style.display = "none";
+    var currentIframe = modal.querySelector('.modal-content > iframe');
+    currentIframe.src = currentIframe.src;
+}
+var span5 = document.getElementById("modl-close5");
+span5.onclick = function() {
+    var modal = document.getElementById('modl-vid5');
     modal.style.display = "none";
     var currentIframe = modal.querySelector('.modal-content > iframe');
     currentIframe.src = currentIframe.src;
@@ -446,6 +458,8 @@ myApp.init = function() {
   
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
    
 
@@ -479,7 +493,6 @@ myApp.init = function() {
 window.addEventListener('load', myApp.init);
 window.addEventListener('resize', myApp.resize);
 
-    myplot.data = [];
 
     // Load the Google Chart Tools Visualization API and the chart package.
     if (typeof google == 'object') {
@@ -491,6 +504,8 @@ window.addEventListener('resize', myApp.resize);
   myApp.stuffToDoOnLevelLoad = function(n) {
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
   switch( myApp.mylevel ){ 
 }
@@ -540,7 +555,7 @@ window.addEventListener('resize', myApp.resize);
       }
       levelcomplete=true;
       if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
-      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length != 3 || myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; } 
+      if( myplot.error.length!=2 || prand != 1 || myplot.data.length != 3 || myplot.data[2][1] < 0 || myplot.data[2][1] > 1 ){ levelcomplete=false; } 
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid4');modal.style.display = "block";video=true;}break;case 5:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
@@ -548,8 +563,8 @@ window.addEventListener('resize', myApp.resize);
       }
       levelcomplete=true;
       if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
-      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length != 3 || myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; } 
-    break;case 6:
+      if( myplot.error.length!=2 || prand != 1 || myplot.data.length != 3 || myplot.data[2][1] < 0 || myplot.data[2][1] > 1 ){ levelcomplete=false; } 
+    if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid5');modal.style.display = "block";video=true;}break;case 6:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
@@ -563,9 +578,13 @@ window.addEventListener('resize', myApp.resize);
     break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
          if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }       myApp.active[myApp.mylevel + 1] = true;       myApp.setLevel( myApp.mylevel + 1 );   } else {       alert("Your program is not quite right.  Have another go and see if you can fix it")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
          myApp.stuffToDoOnLevelLoad( myApp.mylevel )   }};</script>

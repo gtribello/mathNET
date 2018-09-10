@@ -26,7 +26,6 @@
   <BLOCKS>
   </BLOCKS>
   <SCRIPTS>
-    myplot.data = [];
 
     // Load the Google Chart Tools Visualization API and the chart package.
     if (typeof google == 'object') {
@@ -39,6 +38,8 @@
   <STARTUP>
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
   </STARTUP>
   <LEVEL>
@@ -204,7 +205,7 @@
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-       Use the blocks to generate a sample of 51 uniform random variables.  Calculate the median, $\phi$, for your sample of random variables and plot a point on the graph at $(1,\phi)$.  You should draw a $y$ error bar around this point that starts at the 10th percentile and that finishes at the 90th percentile.   
+       Use the blocks to generate a sample of 51 uniform random variables.  Calculate the median, $\phi$, for your sample of random variables and plot a point on the graph at $(1,\phi)$.  You should draw a $y$ error bar around this point.  To get the width of this error bar calculate the 10th and 90th percentiles and determine, which of these two quantities is further from the median.  Use the distance between the further away percentile and the median as the width of the error bar.  
     </DESCRIPTION>
     <VID> https://www.youtube.com/watch?v=v7KfyPQ3_Jc </VID>
     <HINT>
@@ -215,7 +216,7 @@
       <category name="Program">
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
-         <block type="math_number"></block>
+         <block type="math_number"></block> 
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
@@ -237,15 +238,15 @@
       }
       levelcomplete=true;
       if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
-      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length != 3 || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; } 
+      if( myplot.error.length!=2 || prand != 1 || myplot.data.length != 3 || myplot.data[2][1] &lt; 0 || myplot.data[2][1] &gt; 1 ){ levelcomplete=false; } 
     </FINISH>
-    <VIDEO> https://www.youtube.com/embed/Z-aAZoiihEM </VIDEO>
+    <VIDEO> https://www.youtube.com/embed/xvRWQ2eERp0 </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-       Use the blocks to generate a sample of 50 uniform random variables. Calculate the sample mean, $\mu$, for your sample of random variables and the sample variance, $\sigma^2$.  Draw a point on the graph at $(1,\mu$)$.  Draw a $y$ error bar around this point that starts at $\mu - \sigma$ and that finishes at $\mu + \sigma$.
+       Use the blocks to generate a sample of 50 uniform random variables. Calculate the sample mean, $\mu$, for your sample of random variables and the sample variance, $\sigma^2$.  Draw a point on the graph at $(1,\mu)$.  Draw a $y$ error bar around this point that starts at $\mu - \sigma$ and that finishes at $\mu + \sigma$.
     </DESCRIPTION>
-    <VID> https://www.youtube.com/watch?v=Z-aAZoiihEM </VID>
+    <VID> https://youtu.be/xvRWQ2eERp0 </VID>
     <HINT>
        Remember that the sample variance, $\sigma^2$, for a sample of $N$ random variables, $\{X_i\}$, is given by $\sigma^2 = \frac{1}{N-1} \sum_{i=1}^N ( X_i - \mu)^2$.  Further recall that we can also write this quantity as $\sigma^2 = \frac{N}{N-1} \left[ \frac{1}{N} \sum_{i=1}^N X_i^2 - \mu^2 \right]$
     </HINT>
@@ -255,6 +256,7 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+         <block type="math_single"></block>
       </category>
       <category name="Random">
          <block type="uniform_random"></block>
@@ -275,14 +277,15 @@
       }
       levelcomplete=true;
       if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
-      if( myplot.error.length!=myplot.data.length-1 || prand != 1 || myplot.data.length != 3 || myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; } 
+      if( myplot.error.length!=2 || prand != 1 || myplot.data.length != 3 || myplot.data[2][1] &lt; 0 || myplot.data[2][1] &gt; 1 ){ levelcomplete=false; } 
     </FINISH>
+    <VIDEO> https://www.youtube.com/embed/Z-aAZoiihEM </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
        Use the blocks below to create a function that generates and returns the value of a bernoulli random variable.  Use this function to generate a sample of bernoulli random variables and then use what you have learnt in the exercises that involved generating uniform random variables to draw a graph showing how the sample mean changes as you increase the number of bernoulli random variables in your sample.
     </DESCRIPTION>
-    <VID> https://youtu.be/0KqCK0yG9T0 </VID>
+    <VID> https://youtu.be/Z-aAZoiihEM </VID>
     <HINT>
        You use the blocks under function to create a function in blockly.  Your function will contain the part that generates the bernoulli random variable.  Once you have this function it should be easy to modify the code that you used to do this exercise with uniform random variables.  It is simply a matter of changing the name of the function that is called when you generate the random variables. 
     </HINT>
@@ -292,6 +295,10 @@
          <block type="controls_repeat_ext"></block>
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
+      </category>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
       </category>
       <category name="Random">
          <block type="uniform_random"></block>

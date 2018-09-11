@@ -446,6 +446,8 @@ myApp.init = function() {
   
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
    
 
@@ -491,6 +493,8 @@ window.addEventListener('resize', myApp.resize);
   myApp.stuffToDoOnLevelLoad = function(n) {
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
   switch( myApp.mylevel ){ 
 }
@@ -505,30 +509,21 @@ window.addEventListener('resize', myApp.resize);
            if( myplot.data[i][0] < 0 || myplot.data[i][1] < 0 || myplot.data[i][0] > 1 || myplot.data[i][1] > 1 ){ levelcomplete=false; }
       }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid0');modal.style.display = "block";video=true;}break;case 1:
-      prand = 0;
-      for(var i=0; i < ww.length; i++ ){
-           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }
       levelcomplete=true;
-      if( prand != 0 ||  myplot.data.length != 27 ){ levelcomplete=false; }
+      if( myplot.data.length != 27 ){ levelcomplete=false; }
       for(var i=0; i < 5; i++ ) {
           var xval = 0.1 + i*0.2;
           for(var j=0; j < 5; j++ ) {
               var yval = 0.1 + j*0.2; var found=false;
               for(var k=2; k < myplot.data.length; k++ ) {
-                  if( (xval-0.005) < myplot.data[i][0] && (xval+0.005) > myplot.data[i][0] &&
-                      (yval-0.005) < myplot.data[i][1] && (yval+0.005) > myplot.data[i][1] ) { found=true; break; }
+                  if( (xval-0.005) < myplot.data[k][0] && (xval+0.005) > myplot.data[k][0] &&
+                      (yval-0.005) < myplot.data[k][1] && (yval+0.005) > myplot.data[k][1] ) { found=true; break; }
               }
               if( !found ){ levelcomplete=false; }
           }
       }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid1');modal.style.display = "block";video=true;}break;case 2:
-      prand = 0;
-      for(var i=0; i < ww.length; i++ ){
-           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }
       levelcomplete=true;
-      if( prand != 0 ||  myplot.data.length != 27 ){ levelcomplete=false; }
       for(var i=0; i < 5; i++ ) {
           var xval = 0.1 + i*0.2;
           for(var j=0; j < 5; j++ ) {
@@ -536,8 +531,8 @@ window.addEventListener('resize', myApp.resize);
               if( xval*xval + yval*yval < 1.0 ) {
                   var found=false;
                   for(var k=2; k < myplot.data.length; k++ ) {
-                      if( (xval-0.005) < myplot.data[i][0] && (xval+0.005) > myplot.data[i][0] &&
-                          (yval-0.005) < myplot.data[i][1] && (yval+0.005) > myplot.data[i][1] ) { found=true; break; }
+                      if( (xval-0.005) < myplot.data[k][0] && (xval+0.005) > myplot.data[k][0] &&
+                          (yval-0.005) < myplot.data[k][1] && (yval+0.005) > myplot.data[k][1] ) { found=true; break; }
                   }
                   if( !found ){ levelcomplete=false; }
               }
@@ -559,22 +554,26 @@ window.addEventListener('resize', myApp.resize);
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; }
-      if( myplot.error.length!=myplot.data.length-1 || prand != 2 || myplot.data.length != 3 myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; }
+      if( prand != 2 || myplot.data.length < 3 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || myplot.data.length != 3 || myplot.data[2][1] < 0 || myplot.data[2][1] > 1 ){ levelcomplete=false; }
     if( levelcomplete ) {alert("Congratulations! Your program is correct.  Close this window for more instructions");var modal = document.getElementById('modl-vid4');modal.style.display = "block";video=true;}break;case 5:
       prand = 0;
       for(var i=0; i < ww.length; i++ ){
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true; 
-      if( prand != 1 || myplot.data.length < 3 ){ levelcomplete=false; } 
-      if( myplot.error.length!=myplot.data.length-1 || prand != 3 || myplot.data.length != 3 myplot.data[i][1] < 0 || myplot.data[i][1] > 1 ){ levelcomplete=false; }
+      if( prand != 3 || myplot.data.length < 3 ){ levelcomplete=false; } 
+      if( myplot.error.length!=myplot.data.length-1 || myplot.data.length != 3 || myplot.data[2][1] < 0 || myplot.data[2][1] > 1 ){ levelcomplete=false; }
     break;   }   if( levelcomplete && (myApp.mylevel+1)==myApp.active.length ){       myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) );       var modal = document.getElementById("modl-review");       modal.style.display = "block";   } else if( levelcomplete ){       if( !video ) alert("Congratulations! Your program is correct.  Now see if you can modify your blocks to get through the next level")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
          if( !myApp.active[myApp.mylevel + 1] ){ myApp.answers.push( Blockly.Xml.workspaceToDom(myApp.workspace) ); }       myApp.active[myApp.mylevel + 1] = true;       myApp.setLevel( myApp.mylevel + 1 );   } else {       alert("Your program is not quite right.  Have another go and see if you can fix it")
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
          myApp.stuffToDoOnLevelLoad( myApp.mylevel )   }};</script>

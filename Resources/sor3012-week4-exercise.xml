@@ -39,6 +39,8 @@
   <STARTUP>
     myplot.data.length = 0;
     myplot.data.unshift(['x', 'y'], [0, 0]);
+    myplot.error.length = 0;
+    myplot.error.unshift(0);
     myplot.plotGraph('graph','scatter');
   </STARTUP>
   <LEVEL>
@@ -91,27 +93,20 @@
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
       </category>
-      <category name="Random">
-         <block type="uniform_random"></block> 
-      </category>
       <category name="Plotting">
          <block type="draw_point"></block>
       </category>
     </TOOLBOX>
     <FINISH>
-      prand = 0;
-      for(var i=0; i &lt; ww.length; i++ ){
-           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }
       levelcomplete=true;
-      if( prand != 0 ||  myplot.data.length != 27 ){ levelcomplete=false; }
+      if( myplot.data.length != 27 ){ levelcomplete=false; }
       for(var i=0; i &lt; 5; i++ ) {
           var xval = 0.1 + i*0.2;
           for(var j=0; j &lt; 5; j++ ) {
               var yval = 0.1 + j*0.2; var found=false;
               for(var k=2; k &lt; myplot.data.length; k++ ) {
-                  if( (xval-0.005) &lt; myplot.data[i][0] &amp;&amp; (xval+0.005) &gt; myplot.data[i][0] &amp;&amp;
-                      (yval-0.005) &lt; myplot.data[i][1] &amp;&amp; (yval+0.005) &gt; myplot.data[i][1] ) { found=true; break; }
+                  if( (xval-0.005) &lt; myplot.data[k][0] &amp;&amp; (xval+0.005) &gt; myplot.data[k][0] &amp;&amp;
+                      (yval-0.005) &lt; myplot.data[k][1] &amp;&amp; (yval+0.005) &gt; myplot.data[k][1] ) { found=true; break; }
               }
               if( !found ){ levelcomplete=false; }
           }
@@ -121,7 +116,7 @@
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-       Use the blocks below to generate 25 points on the graph shown on the right.  These points should again be at $(0.1 + i*0.2, 0.1 + j*0.2)$ with $i \in \{0,1,2,3,4\}$ and $j \in \{0,1,2,3,4\}$.  Now though I only want you to display the points red if they lie within a circle of radius one that is centered on the origin.
+       Use the blocks below to generate 25 points on the graph shown on the right.  These points should again be at $(0.1 + i*0.2, 0.1 + j*0.2)$ with $i \in \{0,1,2,3,4\}$ and $j \in \{0,1,2,3,4\}$.  Now though I only want you to display the points if they lie within a circle of radius one that is centered on the origin.
     </DESCRIPTION>
     <VID> https://youtu.be/64oys2TFaHQ </VID>
     <HINT>
@@ -133,20 +128,16 @@
          <block type="math_arithmetic"></block>
          <block type="math_number"></block>
       </category>
-      <category name="Random">
-         <block type="uniform_random"></block>
+      <category name="Logic">
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
       </category>
       <category name="Plotting">
          <block type="draw_point"></block>
       </category>
     </TOOLBOX>
     <FINISH>
-      prand = 0;
-      for(var i=0; i &lt; ww.length; i++ ){
-           if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
-      }
       levelcomplete=true;
-      if( prand != 0 ||  myplot.data.length != 27 ){ levelcomplete=false; }
       for(var i=0; i &lt; 5; i++ ) {
           var xval = 0.1 + i*0.2;
           for(var j=0; j &lt; 5; j++ ) {
@@ -154,8 +145,8 @@
               if( xval*xval + yval*yval &lt; 1.0 ) {
                   var found=false;
                   for(var k=2; k &lt; myplot.data.length; k++ ) {
-                      if( (xval-0.005) &lt; myplot.data[i][0] &amp;&amp; (xval+0.005) &gt; myplot.data[i][0] &amp;&amp;
-                          (yval-0.005) &lt; myplot.data[i][1] &amp;&amp; (yval+0.005) &gt; myplot.data[i][1] ) { found=true; break; }
+                      if( (xval-0.005) &lt; myplot.data[k][0] &amp;&amp; (xval+0.005) &gt; myplot.data[k][0] &amp;&amp;
+                          (yval-0.005) &lt; myplot.data[k][1] &amp;&amp; (yval+0.005) &gt; myplot.data[k][1] ) { found=true; break; }
                   }
                   if( !found ){ levelcomplete=false; }
               }
@@ -166,7 +157,7 @@
   </LEVEL> 
   <LEVEL>
     <DESCRIPTION>
-       Let's now reintroduce the random variables.  Select a random point $(X,Y)$ by generating two uniform random variables between 0 and 1, $X$ and $Y$, and determine whether the point you selected is within a circle of radius one that is centred on the origin.  Set the bernoulli random variable $Z$ equal to one if $(X,Y)$ is within the circle and zero otherwise.  Use the blocks below to generate a sample of $Z$ values and draw a graph showing how the sample mean, $\mu_n = \frac{1}{n} \sum_{i=1}^n Z_i for the random variable $Z$ changes as the number of indepedent random variables in the sample (the number of $Z_i$ values) increases.  In other words, plot a graph with points at $(n,\mu_n)$ for $n$ values between 0 and 20.  
+       Let's now reintroduce the random variables.  Select a random point $(X,Y)$ by generating two uniform random variables between 0 and 1, $X$ and $Y$, and determine whether the point you selected is within a circle of radius one that is centred on the origin.  Set the bernoulli random variable $Z$ equal to one if $(X,Y)$ is within the circle and zero otherwise.  Use the blocks below to generate a sample of $Z$ values and draw a graph showing how the sample mean, $\mu_n = \frac{1}{n} \sum_{i=1}^n Z_i$ for the random variable $Z$ changes as the number of indepedent random variables in the sample (the number of $Z_i$ values) increases.  In other words, plot a graph with points at $(n,\mu_n)$ for $n$ values between 0 and 20.  
     </DESCRIPTION>
     <VID> https://youtu.be/wz3K_7t2spU </VID>
     <HINT>
@@ -210,7 +201,7 @@
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-       Compute a set of 10 samples of the integral that you computed during the last exercise.  Calculate each estimate of the sample mean by generating 5 $Z$ values.  Use the plotting to display the mean of your 10 samples of the integral together with an error bar indicating the 90% confidence limit on your estimate for the integral.
+       Compute a set of 10 samples of the integral that you computed during the last exercise.  Calculate each estimate of the sample mean by generating 5 $Z$ values.  Use the plotting to display the mean of your 10 samples of the integral together with an error bar indicating the 90% confidence limit on your estimate for the integral.  Use the distance between the further away percentile and the median as the width of the error bar.
     </DESCRIPTION>
     <VID> https://youtu.be/0ISUsHEPxSY </VID>
     <HINT>
@@ -246,14 +237,14 @@
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true;
-      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
-      if( myplot.error.length!=myplot.data.length-1 || prand != 2 || myplot.data.length != 3 myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; }
+      if( prand != 2 || myplot.data.length &lt; 3 ){ levelcomplete=false; }
+      if( myplot.error.length!=myplot.data.length-1 || myplot.data.length != 3 || myplot.data[2][1] &lt; 0 || myplot.data[2][1] &gt; 1 ){ levelcomplete=false; }
     </FINISH>
     <VIDEO> https://www.youtube.com/embed/505vxcAewqM </VIDEO>
   </LEVEL>
   <LEVEL>
     <DESCRIPTION>
-       Compute the integral that you computed during the last exercise by sampling only once.  Calculate the 80% confidence limits on your sample by bootstrapping and display your estimate of the integral together with an error bar indicating the 90% confidence limit on your estimate for the integral.  
+       Compute the integral that you computed during the last exercise by sampling only once.  Calculate the 80% confidence limits on your sample by bootstrapping and display your estimate of the integral together with an error bar indicating the 80% confidence limit on your estimate for the integral.  Use the distance between the further away percentile and the median as the width of the error bar.
     </DESCRIPTION>
     <VID> https://youtu.be/505vxcAewqM </VID>
     <HINT>
@@ -289,8 +280,8 @@
            if( ww[i]=="uniform random variable between 0 and 1" ){ prand += 1; }
       }
       levelcomplete=true; 
-      if( prand != 1 || myplot.data.length &lt; 3 ){ levelcomplete=false; } 
-      if( myplot.error.length!=myplot.data.length-1 || prand != 3 || myplot.data.length != 3 myplot.data[i][1] &lt; 0 || myplot.data[i][1] &gt; 1 ){ levelcomplete=false; }
+      if( prand != 3 || myplot.data.length &lt; 3 ){ levelcomplete=false; } 
+      if( myplot.error.length!=myplot.data.length-1 || myplot.data.length != 3 || myplot.data[2][1] &lt; 0 || myplot.data[2][1] &gt; 1 ){ levelcomplete=false; }
     </FINISH>
   </LEVEL>
    <REVIEW>

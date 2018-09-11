@@ -153,4 +153,26 @@ Programming exercise to explain the central limit theorem to you.
 (Level 3) Extended programming exercise on the Bertrand paradox and systematic and random error.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> HTML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> error-bar-experiments </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+EXAMPLE: A not particularly good level 4 portfolio project.  
+</DESCRIPTION>
+</RESOURCE>
+<RESOURCE>
+<TOPIC> CENTRAL_LIMIT_THEOREM </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> HTML </TYPE>
+<MODULE> SOR3012 </MODULE>
+<LINK> estimating-histograms-and-errors </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+EXAMPLE: A good level 4 portfolio project.  Notice this example report contains information that may proove useful for doing other projects.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

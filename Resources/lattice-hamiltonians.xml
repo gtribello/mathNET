@@ -133,7 +133,7 @@
   <LEVEL>
     <DESCRIPTION>
       The segments of the wheel on the right indicate the values of 20 non-interacting spins in a magnetic field.  Use the blocks below to calculate 
-      the energy of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print_energy block. 
+      the energy of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print energy block. 
     </DESCRIPTION>
     <HINT> 
       The Hamiltonian for $N$ non-interacting spins is $H = -\sum_{i=1}^N H s_i$.
@@ -171,7 +171,7 @@
     <DESCRIPTION>
       The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
       As is clear from the diagram the spins have a closed geometry.  Use the blocks below to calculate the energy of this microstate in atomic units.
-      Once you have calculated this energy print it to screen using the print_energy block.
+      Once you have calculated this energy print it to screen using the print energy block.
     </DESCRIPTION>
     <HINT>
       Use your notes to look up what the Hamiltonian for an Ising model in a closed geomtry is equal to.
@@ -209,7 +209,7 @@
     <DESCRIPTION>
       The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.  
       At variance with the previous exercise the spins now have an open geometry so the first and last spins no longer interact.  Use the blocks below to calculate the energy 
-      of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print_energy block.
+      of this microstate in atomic units.  Once you have calculated this energy print it to screen using the print energy block.
     </DESCRIPTION>
     <HINT>
       The answer to this question is very similar to the answer to the last question you will just need to make one small change. 
@@ -248,7 +248,7 @@
       The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
       Once again the geoemtry is closed so the first and last spin interact.  Use the blocks below to calculate the energy of this microstate in atomic units.  This time, however,
       use a mean field model in which each spin interacts with the mean field due to its neighbors instead of the exact Hamiltonian.
-      Once you have calculated this energy print it to screen using the print_energy block.
+      Once you have calculated this energy print it to screen using the print energy block.
     </DESCRIPTION>
     <HINT>
       Look up how the mean field theory operates from your notes.
@@ -287,7 +287,7 @@
       The segments of the wheel on the right indicate the values of 20 spins in a magnetic field that interact with each other in a manner described by the 1D Ising Model.
       Once again the geoemtry is closed so the first and last spin interact.  Use the blocks below to calculate the energy of this microstate in atomic units.  This time, however,
       use a mean field model in which each pair of spins interacts with one of its neighbors through the exact Hamiltonian and with the mean field of its other neighbor instead 
-      of the exact Hamiltonian.  Once you have calculated this energy print it to screen using the print_energy block.
+      of the exact Hamiltonian.  Once you have calculated this energy print it to screen using the print energy block.
     </DESCRIPTION>
     <HINT>
       Look at some of the example questions on the mean field theory from elsewhere in the website.
@@ -325,7 +325,7 @@
     <DESCRIPTION>
       The segments of the wheel on the right indicate 20 sites for a Potts model in which each site can be in one of four states (0, 1, 2 or 3).  The colors of the sites 
       are used to indicate the state.  Once again the geoemtry is closed so the first and last site interact.  Use the blocks below to calculate the energy of this microstate 
-      in atomic units.  Once you have calculated this energy print it to screen using the print_energy block.
+      in atomic units.  Once you have calculated this energy print it to screen using the print energy block.
     </DESCRIPTION>
     <HINT>
       Look at the example questions and you will find the Hamiltonian for a Potts model.

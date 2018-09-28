@@ -96,6 +96,7 @@ def createBlocklyPage( name, tree, of ) :
    of.write('                 <button onclick="myApp.parseCode(myApp.workspace, initApi)">Show Code </button> \n')
    of.write('                 <button onclick="myApp.runCode()" id="runButton" disabled="disabled">Run Code </button> \n')
    of.write('                 <button onclick="myApp.showAnswer()" id="answerButton">Show answer</button> \n')
+   of.write('                 <a href="' + name.replace(".xml",".pdf") + '" class="btn btn-default" target="_blank"> Show all levels </a> \n')
    of.write('                 <!-- <button onclick="myApp.save()" id="saveButton">Save workspace</button> \n')
    of.write('                 <button onclick="myApp.load()" id="loadButton">Load solution</button> --> \n')
    of.write('               </div>')
@@ -140,7 +141,7 @@ def createBlocklyPage( name, tree, of ) :
    of.write( tree.find("SCRIPTS").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") )
    # Script of stuff to do on level load
    of.write('myApp.stuffToDoOnLevelLoad = function(n) {')
-   n, levels = 0, tree.findall("LEVEL")
+   n, levels, python_notes = 0, tree.findall("LEVEL"), ""
    of.write( tree.find("STARTUP").text )
    of.write("switch( myApp.mylevel ){ \n")
    for lev in levels :
@@ -148,9 +149,17 @@ def createBlocklyPage( name, tree, of ) :
           of.write( "case " + str(n) + ":")
           of.write( lev.find("STARTUP").text.replace("&lt;","<").replace("&gt;",">").replace("&amp;","&") )
           of.write( "break; \n" )
+       # Write python instructions in pdf file
+       python_notes += "\\subsection{Level " + str(n+1) + "} \n\n"
+       if lev.find("VID") is not None :
+          python_notes += lev.find("DESCRIPTION").text + "Click \\href{" + lev.find("VID").text.replace(" ","") + "}{here} if you want to watch the explanatory video."
+       else :
+          python_notes += lev.find("DESCRIPTION").text
        n += 1
    of.write( "}\n")
    of.write('};')
+   # Build a pdf containing the exercise instructions so students can do everything with just python
+   generate_pdf_document( name.replace(".xml",""), tree.find("TITLE").text, python_notes )
    # Function of stuff to do on level end
    of.write('myApp.checkLevelEnd = function() {')
    of.write('   levelcomplete = true; video=false;')
@@ -239,25 +248,30 @@ def exampleToHTML( iq, of, child ) :
     pageelements.printPanel( of, "default", 'collapse-' + str(iq), question, answer )
 
 def generate_pdf_worksheet( tree, infile ):
-    # Read in latex template file
-    g = open( 'Templates/latex-template.tex', 'r')
-    worksheet = g.read();
-    g.close()
-    # Generate the latex worksheet 
-    worksheet = worksheet.replace( "INSERT TOPIC TITLE", tree.find('TITLE').text )
+    # Get the questions in the latex
     latex_questions = "\\begin{itemize}\n"
     for child in tree.find("UL") :
         latex_questions += "\\item "
         latex_questions += ET.tostring( child, encoding="unicode", method="xml" ).replace("<b>","{\\bf").replace("</b>","}").replace("<LI>","").replace("</LI>","").replace("&gt;",">").replace("&lt;","<")
         latex_questions += "\\vspace{4.5cm}\n"
     latex_questions += "\\end{itemize}\n"
-    worksheet = worksheet.replace("INSERT QUESTIONS", latex_questions )
+    # And generate a pdf
+    generate_pdf_document( infile, tree.find('TITLE').text, latex_questions ) 
+
+def generate_pdf_document( infile, title, qtext ) :
+    # Read in latex template file
+    g = open( 'Templates/latex-template.tex', 'r')
+    worksheet = g.read();
+    g.close()
+    # Generate the latex worksheet 
+    worksheet = worksheet.replace( "INSERT TOPIC TITLE", title )
+    worksheet = worksheet.replace("INSERT QUESTIONS", qtext )
     # And output a latex file  
     g = open('latex/' + infile + '.tex', 'w' )
     g.write( worksheet )
     g.close()
     # Run latex to generate pdf files
-    pageelements.create_pdf_from_latex( infile )
+    pageelements.create_pdf_from_latex( infile ) 
 
 def buildPage( fname ) :
   tree = ET.parse( "Resources/" + fname )

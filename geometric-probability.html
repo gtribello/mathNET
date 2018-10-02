@@ -407,7 +407,7 @@ myApp.init = function() {
   var levdesc = "";
   var nlev = myApp.retrieveFromXML("LEVEL").length;
   for(var i=0;i<nlev;i++){
-    myApp.active.push(false); 
+    myApp.active.push(true); 
     levdesc += '<span class="w3-badge demo w3-border w3-transparent w3-hover-black" onclick="myApp.clearAndSetLevel(' + i + ')"></span>\n'
   }
   // This bit creates the level indicator

@@ -187,7 +187,7 @@
         <RESPONSE>
           An exponential random variable is a continuous random variable that can be used to model the process of waiting for something to happen.  
           This random variable is unique in that it has no memory.  The cumulative probability distribution function for this random variable is 
-          equal to $1-e^{-\lambda t}$ The expectation of this random variable is $\lambda$ and the variance is $1/\lambda^2$.
+          equal to $1-e^{-\lambda t}$ The expectation of this random variable is $1/\lambda$ and the variance is $1/\lambda^2$.
         </RESPONSE>
      </ITEM>
      <ITEM>

@@ -292,4 +292,29 @@ student completes the course is equal to $\frac{3}{15}$ and that on average each
 </SOLUTION>
     </EXAMPLE>
   </QUESTION_GROUP>
+<QUESTION_GROUP>
+  <EXAMPLE>
+    <QUESTION>
+     The Markov chain with the one step transition matrix given below contains two recurrent classes.  The first of these $R_1$ includes states 1 and 2 while $R_2$ includes states 5,6 and 7.  Draw the transition graph for this chain and discuss the limiting behaviour of this chain.  Then, assuming $X_0=3$, find the probability that the chain gets adsorbed in $R_1$.
+
+$$
+\mathbf{A} = 
+\left(
+\begin{matrix}
+0.5 &amp; 0.5 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \\
+0.5 &amp; 0 &amp; 0 &amp; 0.5 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0.25 &amp; 0.25 &amp; 0 &amp; 0.5 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp;  1 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.5 &amp; 0 &amp; 0.5
+\end{matrix}
+\right)
+$$   
+    </QUESTION>
+    <SOLUTION>
+      $\frac{5}{7}$
+    </SOLUTION>
+  </EXAMPLE>
+</QUESTION_GROUP>
 </PAGE>

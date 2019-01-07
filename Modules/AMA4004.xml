@@ -269,10 +269,11 @@ $$
             <DUE>  16:00 on Tuesday of week 5 </DUE>
         </HANDIN>
         <TRY>
-           By the end of the week you should have watched all the videos on the applications of statistical mechanics.  You should also begin to attempt the blockly
-           exercises that prepare you for the programming task.
+           By the end of the week you should have watched all the videos on the applications of statistical mechanics.  You should also begin to attempt the 
+           the programming task.  By the end of the week you should be able (at a minimum) enumerate all the states of your lattice system, caculate the partition function and 
+           calculate the ensemble average fr the energy.
         </TRY>
-        <TUTORIAL> The classes are an opportunity for you to ask for help with the blockly exercises.  You will need to work through these to complete the assignment on lattice systems. </TUTORIAL>
+        <TUTORIAL> The classes are an opportunity for you to ask for help with the programming exercises.  You will need to work through these to complete the assignment on lattice systems. </TUTORIAL>
      </WEEK>
      <WEEK>
         <HANDIN>
@@ -280,8 +281,8 @@ $$
             <DUE>  16:00 on Tuesday of week 6 </DUE>
         </HANDIN>
         <TRY>
-           You should have completed all the blockly exercises by early in the week.  During the remainder of the week you should focus on trying to write up your report 
-           on the lattice system. 
+           You should continue to work on the programming task.  Try to write up your report on the lattice system as you work through the various tasks.  By the end of the week you should 
+           have (at a minimum) completed everything up to including calculating the histograms.
         </TRY>
         <TUTORIAL> Again the classes are primarily an opportunity for you to ask for help with the python/blockly exercises this week. </TUTORIAL>
      </WEEK>
@@ -296,7 +297,7 @@ $$
         </HANDIN>
         <TRY>
            You should have completed your report on the lattice system by the end of the week.  Try to have this done by the end of week 6 even though it is not due till week 
-           12.  If you finish this early and you wish to try the final exercise on the two dimensional ising model please do so.
+           12.  If you finish this early and you wish to try some of the other programming problems on the website or a programming project or your own design please do so.
         </TRY>
         <TUTORIAL> Once again the classes are primarily an opportunity for you to ask for help with the python/blockly exercises this week. </TUTORIAL>
      </WEEK>
@@ -400,24 +401,25 @@ $$
         \item[(B)] A computer programming exercise on modelling a lattice system.  You can find the markscheme for this exercise online.
 
         \item[(C)] Multiple essays on the theory parts of statistical mechanics.
-
-        \item[(D)] (optional) Some additional and more difficult programming exercises.
         \end{itemize}
 
         Notice that classes for this module are compulsory and that you will be awarded  a mark of zero for the portfolio project if you do not attend 70 percent
         of the sessions for the module.  In addition, notice that your portfolio will be awarded a mark of zero if it does not contain 10 weekly reports, a
-        programming exercise on a lattice system (B) and three essays on statistical mechanical theory.  Notice also that additional marks are only given if you also try 
-        the optional but more difficult programming exercise.
+        programming exercise on a lattice system (B) and three essays on statistical mechanical theory.  
      </DESCRIPTION>
      <COMPONENT>
         <TITLE> Self study </TITLE>
         <DESCRIPTION>
-            The first component of the assessment is based on how you have studied for the module.  You must hand in a report that is at least half a page in length every week in which you detail what, when and how you
-            intended to study during the week and what you actually achieved during the week.  You may choose to detail what resources you have used and what parts of the material you found
-            easy and what you found difficult.  You might also want to talk about any conversatiosn you had the lecturer/teaching assistants.  You should also explain what resources
- you studied
-            from and what resources were particularly useful.  Lastly, you should demonstrate that you have thought about what you did this week and how you might study more effectively in the
-            future.
+            The first component of the assessment is based on how you have studied for the module.  Each week you must use this report to answer the following questions:
+
+            \begin{itemize}
+            \item To what extent did you achieve the aims that you set for yourself in the previous week?  If you did not achieve your aims what went wrong and what are you going to do differently this week?
+
+            \item What am I aiming to work through this week?  If you achieved all your aims last week how have you made your aims more ambitious this week?
+            \end{itemize}
+
+            The report should be about {\bf half an a4 page} in length.  Please do not give a narative account of what you read/watched/solved during the week.  Notice, finally, that I may also email you with 
+            specific questions to answer in your report in certain weeks.  
         </DESCRIPTION>
         <RANGE>
            <CLASSIFICATION> Excellent </CLASSIFICATION>
@@ -449,33 +451,34 @@ No evidence of regular self study.  No evidence of reflection.  Less than 75% at
         </RANGE>
      </COMPONENT>
      <COMPONENT>
-        <TITLE> Statistical mechanics applications projects </TITLE>
+        <TITLE> Statistical mechanics applications project </TITLE>
         <DESCRIPTION>
-           The second project of the assessment is based on some programming exercises that you must perform.  These exercises lead you some key ideas that we use to 
+           The second project of the assessment is based on some programming exercises that you must perform.  This exercise leads you through some key ideas that we use to 
            understand the simulations that we perform on physical systems.  You must produce python notebooks that contain the code that you used to solve these problems.
            In addition, you should provide some short explanation as to what the code that you have written is doing within the notebook using the markup language.  You can 
-           find descriptions of the projects on the mathNET website.
+           find descriptions and markschemes for the projects on the mathNET website.  This assignment is marked out of five and the expectation is that you should all be 
+           getting close to full marks as getting a high mark in this exercise is mostly a question of following the instructions that are given.
         </DESCRIPTION>
         <RANGE>
-           <CLASSIFICATION> Excellent </CLASSIFICATION>
-           <MARKS> 9-10 </MARKS>
-           <QUALITY>
-              The student produces an assignment on the lattice system and also produces solutions to both of the two final projects on the mathNET website.  The solutions the student provides demonstrates an understanding of statistical mechanics that goes well beyond the module content and shows clear evidence of independent thought, originality and creative use of a wide range of learning resources
-            </QUALITY>
-        </RANGE>
-        <RANGE>
            <CLASSIFICATION> Good work </CLASSIFICATION>
-           <MARKS> 5-8 </MARKS>
+           <MARKS> 5 </MARKS>
            <QUALITY>
-The student produces an assignment on the lattice system and also makes an attempt at at least one of the two final projects on the mathNET website.  The student provides a partial solution of the problem in question that demonstrates a good understanding of the module content. 
+            The student produces everything that is asked for in the description of the assignment.
             </QUALITY>
         </RANGE>
         <RANGE>
            <CLASSIFICATION> Adequate </CLASSIFICATION>
-           <MARKS> 5 </MARKS>
+           <MARKS> 4 </MARKS>
            <QUALITY>
-Student produces an assignment on lattice system.  See markscheme for details of marking of these projects.  The mark from the mark scheme, which is out of 15, is divided by three.
+            A few small details are missing in the assignment or the discussion of the theory is limited. 
             </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Poor </CLASSIFICATION>
+           <MARKS> 1-3 </MARKS>
+           <QUALITY>
+           The student is unable to follow instructions or does not ask for things to be clarified if he/she does not understand.
+           </QUALITY>
         </RANGE>
         <RANGE>
            <CLASSIFICATION> Fail </CLASSIFICATION>
@@ -488,27 +491,39 @@ Student produces an assignment on lattice system.  See markscheme for details of
      <COMPONENT>
         <TITLE> Essays on statistical mechanics theory </TITLE> 
         <DESCRIPTION>
-          The third component of the assessment is based on a number of longer form problems.  In answering these problems you will need to write continuous prose answers that have a substantial length.  These pieces of continuous prose will contain some mathematics but if your answers contain mathematics with no explanation you will be given a very low mark.  The principle aim in writing these essays is for you to demonstrate that you have some physical understanding of the equations that you are writing.  All essays should be typeset using latex.
+          The third component of the assessment is based on a number of longer form problems.  In answering these problems you will need to write continuous prose answers that have a substantial length.  
+          These pieces of continuous prose will contain some mathematics but if your answers contain mathematics with no explanation you will be given a very low mark.  The principle aim in writing 
+          these essays is for you to demonstrate that you have some physical understanding of the equations that you are writing.  All essays should be typeset using latex.
         </DESCRIPTION>
         <RANGE>
-           <CLASSIFICATION> Excellent </CLASSIFICATION>
-           <MARKS> 6-7 </MARKS>
+           <CLASSIFICATION> Outstanding </CLASSIFICATION>
+           <MARKS> 11-12 </MARKS>
            <QUALITY>
-The essay is extremely well argued and demonstrates that the student has a thorough and systematic understanding of the module content.  The student demonstrates an understanding of statistical mechanics that goes well beyond the module content and shows clear evidence of independent thought, originality and creative use of a wide range of learning resources.
+Student writes an essay on an aspect of statistical mechanics that he/she has investigated independently.  The essay is properly referenced and factually correct.  Please discuss any topic that you would like to 
+investigate with me beforehand.  Furthermore, please note that a poorly argued and pooly structured essay on something that is outside the module content will get a very low mark.  In other words, high marks are not 
+automatically awareded for investigating something that was not covered in class.  For the highest marks there is an expectation that you use what you have learnt from your self study to solve a problem that you have 
+identified yourself.  If you simply reproduce standard derivations that can be found in a textbook this will get a mark of around 8-9.
+            </QUALITY>
+        </RANGE>
+        <RANGE>
+           <CLASSIFICATION> Excellent </CLASSIFICATION>
+           <MARKS> 9-10 </MARKS>
+           <QUALITY>
+The student writes a properly referenced essay that is based on one of the worksheets on the mathNET website.  Within this essay the hard parts of the questions are answered concisely and with precision.
             </QUALITY>
         </RANGE>
         <RANGE>
            <CLASSIFICATION> Good work </CLASSIFICATION>
-           <MARKS> 3-5 </MARKS>
+           <MARKS> 4-8 </MARKS>
            <QUALITY>
-The essay is well argued and demonstrates a good understanding of the module content.  There is evidence that resources other than those that were provided have been used.
+The student writes a properly referenced essay that is based on one of the worksheets on the mathNET website.  The student either does not attempt the hard parts of the questions or fails to answer these questions with sufficient precision.
             </QUALITY>
         </RANGE>
         <RANGE>
            <CLASSIFICATION> Adequate </CLASSIFICATION>
-           <MARKS> 1-2 </MARKS>
+           <MARKS> 1-3 </MARKS>
            <QUALITY>
-The essay gives a partial answer to the questions that were asked.  The essay is poorly argued and confused suggesting that the student has only a partial understanding of the module content.
+The student manages to answer the easy parts of the questions on the worksheet on the mathNET website.   The referencing within the essay is poor, however, and suggests that the student has only consulted the mathsNET website. 
             </QUALITY>
         </RANGE>
         <RANGE>
@@ -585,17 +600,8 @@ The student hands in fewer than three essays on statistical mechanic theory duri
         </AIMS>
      </INTRO>
      <PROJECT>
-        <TITLE> Two dimensional Ising model </TITLE>
+        <TITLE> </TITLE>
         <DESCRIPTION>
-            Write a function to evaluate the Hamiltonian for a two dimensional Ising model.  Use your function and what you have learnt from the exercises on the one-dimensional
-            lattice models to evaluate:
-              <UL>
-                <LI> The ensemble average of the energy as a function of temperature. </LI>
-                <LI> Two histograms showing the probability of having various values for the total magnetization at two temperatures </LI>
-                <LI> Two correlation functions that show how the correlation between pairs of spins changes with the distance between the two spins investigated.  You should do this exericse twice as you should calculate these correlation functions at two different temperatures. </LI>
-             </UL>
-            For the correlation function exercise remember that in two dimensions the number of spins at a distance $r$ from a central spin increases as you increase $r$.  
-            When you calculate your correlation function you will need to introduce suitable corrections for this effect.
         </DESCRIPTION>
      </PROJECT>
      <TOPIC> LATTICE_GAS </TOPIC>
@@ -629,21 +635,8 @@ The student hands in fewer than three essays on statistical mechanic theory duri
         </AIMS>
      </INTRO>
      <PROJECT>
-        <TITLE> Understanding phase transitions </TITLE>
+        <TITLE> </TITLE>
         <DESCRIPTION>
-           We can introduce a very simple model for the transition between a fluid and a gas phase of some substance as follows.  $N$ indistinghisable particles are
-           allowed to move freedly on a two dimensional squarre lattice with $V$ sites (where $1 \ll N \ll V$).  The particles are subject to a short ranged attractive
-           interaction, which makes the energy of the system $E$ equal to $-\epsilon$ times the number of particle pairs of neighbouring lattice sites.  The kinetic energy
-           of the particles is completely neglected in this model. In the fluid phase the particles condense into a single connected block, while in the gas phase the particles
-           are distributed randomly on the lattice.
-
-           <UL>
-              <LI> Write a program to generate all the possible microstates for a version of this model with 16 lattice sites and 4 particles. Calculate the energies of all these microstates and hence draw a graph showing how the ensemble average of the energy changes with temperature. Discuss the behavior you observe. </LI>
-              <LI> Calculate the histogram showing the most likely configurations that this system will adopt at two distinct temperatures </LI>
-              <LI> Give a justification for why the free energy of the fluid and gas phases are -$2N\epsilon$ and $-k_B TN \ln \frac{V}{N}$ respectively.  Try to determine the temperature at which the transition between the fluid and the gas phase takes place. </LI>
-              <LI> Discuss how this system would behave if the interactions between particles where turned off.  </LI> 
-              <LI> Discuss how this model could be extended to provide a model of adsorbtion which, unlike the Langmuir adsorption isotherm, incorporates the interactions between adsorboed molecules.  Perform simulations to explore how such a system would behave for a range of different temperatures and chemical potentials. </LI>
-           </UL>
         </DESCRIPTION>
      </PROJECT>
      <TOPIC> PRINCIPLE_OF_EQUAL_APRIORI_PROBABILITIES </TOPIC>

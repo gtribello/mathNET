@@ -83,4 +83,15 @@ to relate all the thermodynamic variables to partial derivatives of thermodynami
 An introduction to the notion of a reservoir and the thermodynamic potentials that we use to describe the state of a system in contact with a reservoir.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> THERMODYNAMIC_POTENTIALS </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> thermodynamic-potentials.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+An exercise that involves writing about thermodynamic potentials.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

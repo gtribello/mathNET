@@ -150,4 +150,15 @@ A writing exercise to consolidate everything you have learnt about ensembles and
 An exercise that involves writing about statistical mechanical ensembles.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> GENERALIZED_PARTITION_FUNCTION </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> phase-transition.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A programming exercise that involves studying a phase transition in a model system.
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>

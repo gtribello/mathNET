@@ -51,4 +51,15 @@ $$
 An exercise involving the derivation of the Langmuir adsorption isotherm.
 </DESCRIPTION>
 </RESOURCE>
+<RESOURCE>
+<TOPIC> ADSORPTION </TOPIC>
+<LEVEL> PYTHON </LEVEL>
+<TYPE> LATEX </TYPE>
+<MODULE> AMA4004 </MODULE>
+<LINK> adsorption-exercise.tex </LINK>
+<AUTHOR> G.~Tribello </AUTHOR>
+<DESCRIPTION>
+A writing exercise on the Langmuir adsorption isotherm
+</DESCRIPTION>
+</RESOURCE>
 </PAGE>
